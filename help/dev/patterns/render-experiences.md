@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 18f070005685699e2d1feb12a31802faa17e35f3
+source-git-commit: ca3a3e5b8272c0db9e355abd2d16896251594b43
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1080'
 ht-degree: 5%
 
 ---
@@ -16,6 +16,10 @@ ht-degree: 5%
 # Renderizar experiências
 
 Siga as etapas na guia *Renderizar experiências* diagrama para garantir que todas as tarefas necessárias para renderizar experiências sejam executadas na sequência correta.
+
+>[!NOTE]
+>
+>Se você ativou a Solicitação automática de carregamento de página durante o [Configurar etapa automática de solicitação de carregamento de página](/help/dev/patterns/initialize-sdk.md#automatic) in *Inicializar SDKS* No entanto, você pode ignorar essa atividade, a menos que queira chamar o SDK da Adobe Target para renderizar experiências adicionais usando uma solicitação de local regional.
 
 >[!TIP]
 >
@@ -58,7 +62,7 @@ Adicionar itens promovidos e controlar seu posicionamento no Recommendations do 
 
 **Parâmetros de entidade obrigatórios**
 
-* O atributo de item em promoções deve ser transmitido ao usar a opção &quot;promover por atributo&quot;.
+* Os atributos de item em promoções devem ser passados ao usar a opção &quot;promover por atributo&quot;.
 
 +++
 
@@ -90,7 +94,7 @@ Faça recomendações com base no conteúdo do carrinho do usuário.
 
 ## 3.3: Critérios baseados na popularidade {#popularity}
 
-Faça recomendações com base na popularidade geral de um item em todo o site ou na popularidade de itens na categoria, marca, gênero e assim por diante favoritas ou mais visualizadas de um usuário.
+Faça recomendações com base na popularidade geral de um item em todo o site ou na popularidade de itens na categoria, marca, gênero e assim por diante favoritas ou mais visualizadas de um visitante.
 
 +++Ver detalhes
 
@@ -107,7 +111,7 @@ Faça recomendações com base na popularidade geral de um item em todo o site o
 **Parâmetros de entidade obrigatórios**
 
 * `entity.categoryId` ou o atributo de item para popularidade com base no critério do atributo atual ou do item.
-* Nada deve ser passado para Mais visualizados/Principais vendidos no site.
+* Nada deve ser passado para Mais visualizados/Mais vendidos no site.
 
 **Leituras**
 
@@ -168,7 +172,7 @@ Faça recomendações com base no comportamento do usuário.
 
 ## 3.6: Critérios personalizados {#custom}
 
-Fazer recomendações com base em um arquivo personalizado que você carregou
+Fazer recomendações com base em um arquivo personalizado que você carregou.
 
 +++Ver detalhes
 
@@ -222,7 +226,7 @@ Transmita IDs de entidade para entidades que você deseja excluir de suas recome
 
 * [Atributos da entidade](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-Também é possível realizar essa etapa criando feeds de produto usando o [!DNL Target] Interface para atualizar o catálogo de produtos para [!DNL Recommendations].
+Também é possível realizar essa etapa criando [feeds de produto](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} usando o [!DNL Target] Interface para atualizar o catálogo de produtos para [!DNL Recommendations].
 
 +++
 
@@ -244,7 +248,7 @@ Forneça os atributos de perfil usados como chaves para as regras de inclusão e
 
 ## 3.11: Acionar solicitação de carregamento de página {#fire}
 
-Essa etapa aciona um [!DNL Delivery API] chamar com `execute` > `pageLoad` carga na solicitação. A variável `getOffers()` O método busca a experiência e `applyOffers()` renderiza a experiência na página. A solicitação pageLoad é necessária para renderizar experiências criadas no [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
+Essa etapa aciona um [!DNL Delivery API] chamar com `execute` > `pageLoad` carga na solicitação. A variável `getOffers()` O método busca a experiência e `applyOffers()` renderiza a experiência na página. A variável `pageLoad` é necessária para renderizar experiências criadas no [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
 
 +++Ver detalhes
 
