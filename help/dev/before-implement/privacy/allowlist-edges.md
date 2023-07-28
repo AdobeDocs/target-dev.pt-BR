@@ -4,10 +4,10 @@ description: Incluir na lista de permissões Exibir uma lista de hosts para ajud
 title: Como Incluir na lista de permissões? [!DNL Target] Nós de borda?
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
-source-git-commit: 55deb12a59dc228ec7dcec17fc0ecb43e2900613
+source-git-commit: 3f4147d521b1fb3ee12e879e52a48d459f6b24b9
 workflow-type: tm+mt
-source-wordcount: '525'
-ht-degree: 5%
+source-wordcount: '516'
+ht-degree: 6%
 
 ---
 
@@ -27,11 +27,7 @@ Incluir na lista de permissões Você pode mudar a imagem [!DNL Target] nós de 
 >
 >[!DNL Adobe Target] A infraestrutura do está sendo atualizada e os clientes que desejam atualizar endereços de inclui na lista de permissões do devem usar ambos os conjuntos de IPs. Se isso não for feito, os clientes que usam implementações do lado do servidor ou híbridas nas quais as chamadas da API do Target para busca de experiências são originadas de uma rede atrás de um firewall configurado para usar um incluo na lista de permissões.
 >
->Essa atualização está sendo feita de acordo com o seguinte agendamento:
->
->* 22 a 26 de maio: Europa, Oriente Médio e África (EMEA)
->* 22-26 de maio: Ásia-Pacífico (APAC)
->* 6 a 10 de junho: região das Américas
+>Todas as Bordas4 *x* os endereços listados nas duas tabelas abaixo estão programados para serem atualizados em 9 de agosto de 2023.
 
 ## NAT (Network Address Translation, tradução de endereço de rede) de endereços IP [!DNL Target] bordas
 
