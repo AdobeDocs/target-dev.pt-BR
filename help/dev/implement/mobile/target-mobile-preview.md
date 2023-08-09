@@ -4,20 +4,16 @@ description: Use os links de visualização móvel para realizar tarefas complet
 title: Como usar o link de visualização móvel no [!DNL Target] Dispositivo móvel?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: cf39b35e208a99114b3f97df2e9ef7eb8a46e153
 workflow-type: tm+mt
-source-wordcount: '617'
-ht-degree: 68%
+source-wordcount: '554'
+ht-degree: 57%
 
 ---
 
 # [!DNL Target] visualização móvel
 
 Use o link de visualização móvel para realizar facilmente tarefas completas de controle da qualidade e participar de experiências diferentes diretamente do dispositivo, sem dispositivos de teste especiais.
-
->[!NOTE]
->
->O recurso de visualização móvel exige que você baixe e instale a versão 4.14 (ou posterior) apropriada do SDK do Adobe Mobile.
 
 ## Visão geral
 
@@ -27,69 +23,24 @@ A funcionalidade visualização móvel permite que você teste completamente sua
 
 1. **Use uma versão suportada do SDK:** o recurso visualização móvel exige que você baixe e instale a versão 4.14 (ou posterior) apropriada do SDK do Adobe Mobile em seus aplicativos correspondentes.
 
-   Para instruções de como baixar o SDK apropriado, consulte:
-
-   * **iOS:** [Antes de começar](https://experienceleague.adobe.com/docs/mobile-services/ios/getting-started-ios/requirements.html) no *Ajuda do Mobile Services para iOS*.
-   * **Android:** [Antes de começar](https://experienceleague.adobe.com/docs/mobile-services/android/getting-started-android/requirements.html) no *Ajuda do Mobile Services para Android*.
+   Para obter instruções sobre como baixar o SDK apropriado, consulte [Versões atuais do SDK](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} no *[!DNL Adobe Experience Platform Mobile SDK]* documentação.
 
 1. **Defina um esquema de URL:** o link de visualização usa um esquema de URL para abrir seu aplicativo. Você deve especificar um esquema de URL único para a visualização.
 
-   A ilustração a seguir é um exemplo no iOS:
+   Para obter mais informações, consulte [Visualização visual](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* no *[!DNL Adobe Experience Platform Mobile SDK]* documentação.
 
-   ![imagem alt](assets/mobile-preview-url-scheme-ios.png)
+   Os links a seguir contêm mais informações:
 
-   A ilustração a seguir é um exemplo no Android:
+   * **iOs**: para obter mais informações sobre como configurar esquemas de URL para o iOS, consulte [Definição de um esquema de URL personalizado para seu aplicativo](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} no site Apple Developer.
+   * **Android**: para obter mais informações sobre como configurar esquemas de URL para o Android, consulte [Criar deep links para conteúdo do aplicativo](https://developer.android.com/training/app-links/deep-linking){target=_blank} no site de desenvolvedores do Android.
 
-   ![imagem alt](assets/Android_Deeplink.png)
+1. **Configurar `collectLaunchInfo` API**
 
-1. **Rastrear Adobe DeepLink**
-
-   **iOS:** no delegar do aplicativo, chame `[ADBMobile trackAdobeDeepLink:url` quando o delegar pedir para abrir o recurso com o esquema de URL que foi especificado no passo anterior.
-
-   O fragmento de código a seguir é um exemplo:
-
-   ```javascript {line-numbers="true"}
-   - (BOOL) application:(UIApplication *)app openURL:(NSURL *)url 
-                options:(NSDictionary<NSString *,id> *)options { 
-   
-       if ([[url scheme] isEqualToString:@"com.adobe.targetmobile"]) { 
-           [ADBMobile trackAdobeDeepLink:url]; 
-           return YES; 
-       } 
-       return NO; 
-   } 
-   ```
-
-   **Android:** no aplicativo, chame `Config.trackAdobeDeepLink(URL);`; quando o chamado pedir para abrir o recurso com o esquema de URL que foi especificado no passo anterior.
-
-   ```javascript {line-numbers="true"}
-    private Boolean shouldOpenDeeplinkUrl() { 
-        Intent appLinkIntent = getIntent(); 
-        String appLinkAction = appLinkIntent.getAction(); 
-        Uri appLinkData = appLinkIntent.getData; 
-        if (appLinkData.toString().startsWith("com.adobe.targetmobile")) { 
-            Config.trackAdobeDeepLink(appLinkData); 
-            return true; 
-        } 
-        return false; 
-     }
-   ```
-
-   Para fazer a visualização móvel funcionar no Android, você também deve adicionar o seguinte trecho de código no AndroidManifest.xml, se estiver usando a versão 5 do SDK do Adobe Mobile:
-
-   ```javascript {line-numbers="true"}
-   <activity android:name="com.adobe.marketing.mobile.FullscreenMessageActivity" />
-   ```
-
-   Se você estiver usando a versão 4 do SDK do Adobe Mobile, use o seguinte trecho de código:
-
-   ```javascript {line-numbers="true"}
-   <activity android:name="com.adobe.mobile.MessageFullScreenActivity" />
-   ```
+   Para obter mais informações, consulte [Visualização visual](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* no *[!DNL Adobe Experience Platform Mobile SDK]* documentação.
 
 ## Gerar um link de visualização
 
-1. No [!DNL Target] clique no link **[!UICONTROL Mais opções]** (três elipses verticais), selecione **[!UICONTROL Criar visualização móvel]**.
+1. No [!DNL Target] clique no link **[!UICONTROL Mais opções]** (as reticências verticais) e selecione **[!UICONTROL Criar visualização móvel]**.
 
    ![imagem alt](assets/mobile-preview-create.png)
 
