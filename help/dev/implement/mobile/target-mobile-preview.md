@@ -4,10 +4,10 @@ description: Use os links de visualização móvel para realizar tarefas complet
 title: Como usar o link de visualização móvel no [!DNL Target] Dispositivo móvel?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: cf39b35e208a99114b3f97df2e9ef7eb8a46e153
+source-git-commit: b678b69624963b4bdbce230a05a0355da96469f1
 workflow-type: tm+mt
-source-wordcount: '554'
-ht-degree: 57%
+source-wordcount: '552'
+ht-degree: 51%
 
 ---
 
@@ -21,7 +21,7 @@ A funcionalidade visualização móvel permite que você teste completamente sua
 
 ## Pré-requisitos
 
-1. **Use uma versão suportada do SDK:** o recurso visualização móvel exige que você baixe e instale a versão 4.14 (ou posterior) apropriada do SDK do Adobe Mobile em seus aplicativos correspondentes.
+1. **Usar uma versão compatível do SDK:** O recurso de visualização móvel exige que você baixe e instale a versão apropriada do SDK do Adobe Mobile em seus aplicativos correspondentes.
 
    Para obter instruções sobre como baixar o SDK apropriado, consulte [Versões atuais do SDK](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} no *[!DNL Adobe Experience Platform Mobile SDK]* documentação.
 
