@@ -4,10 +4,10 @@ description: Saiba como [!DNL Adobe Target] está em conformidade com as leis de
 title: Como o Target lida com problemas de privacidade, incluindo PII?
 feature: Privacy & Security
 exl-id: 4330e034-2483-4a25-9c87-48dbef6fc9de
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 88bde40aa6dfb96e1d53e4db6ba5547d38dbbb99
 workflow-type: tm+mt
-source-wordcount: '716'
-ht-degree: 58%
+source-wordcount: '790'
+ht-degree: 53%
 
 ---
 
@@ -38,6 +38,12 @@ As seguintes configurações estão disponíveis no [!DNL Target] Navegando até
   ![obfuscate-ip-options](assets/obfuscate-ip.png)
 
 [!DNL Target] recebe o endereço IP completo e o ofusca (se estiver definido como Último octeto ou IP inteiro) conforme especificado. [!DNL Target] em seguida, mantém o endereço IP ofuscado na memória somente durante a sessão atual.
+
+### Ofuscação de IP no nível de fluxo de dados ao usar o [!DNL Adobe Experience Platform Web SDK] {#aep}
+
+Ao usar o [!DNL Platform Web SDK] (versão 23.4 ou posterior), a configuração de ofuscação de IP no nível do fluxo de dados tem precedência sobre qualquer opção de ofuscação de IP definida em [!DNL Target]. Por exemplo, se a opção de ofuscação de IP no nível de fluxo de dados estiver definida como [!UICONTROL Completo] e a variável [!DNL Target] A opção de ofuscação de IP está definida como [!UICONTROL Ofuscação do último octeto], [!DNL Target] recebe um IP totalmente ofuscado.
+
+Para obter mais informações, consulte [!UICONTROL Ofuscação de IP] in [Configurar um fluxo de dados](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html){target=_blank} no *[!DNL Adobe Experience Platfrom]Guia de fluxos de dados*.
 
 ## GeoSegmentation 
 
