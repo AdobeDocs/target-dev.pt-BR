@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: c4b9dfed19e5e4a56bfeae26c4310b997a2d617e
+source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
 workflow-type: tm+mt
-source-wordcount: '145'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,10 @@ Observe que os números na imagem não indicam a sequência de operações:
 
 Cada padrão consiste em diferentes partes. Cada parte corresponde a um requisito crítico de implementação para sua [!DNL Target] execução.
 
-Cada parte é explicada em uma página separada neste guia. Por exemplo, a variável [!DNL Target] padrão de implementação contém as seguintes páginas:
+Cada parte é explicada em uma página separada neste guia. Por exemplo, a variável [[!DNL Recommendations] padrão de implementação usando at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md) contém as seguintes páginas:
 
 * Inicializar SDK
-* Enriquecer perfil
+* Configurar coleção de dados
 * Renderizar experiências
 * Notificar [!DNL Target]
 
