@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 7a79eb1d263cf42529a5a1b1ca1f9de4db218a49
+source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 1%
@@ -35,7 +35,7 @@ Esta etapa ajuda a garantir que todos os eventos que devem ser enviados para o [
 
 +++Ver detalhes
 
-![Acionar diagrama da API de rastreamento do Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram.png){width="300" zoomable="yes"}
+![Acionar diagrama da API de rastreamento do Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram.png){width="400" zoomable="yes"}
 
 Você envia os atributos de conversão do pedido conforme mencionado na *Pré-requisitos* abaixo. O nome da mbox não importa, mas a conversão é usar `orderConfirmPage`.
 
