@@ -4,9 +4,9 @@ description: Exibir os detalhes sobre as alterações em cada versão do [!DNL A
 title: O que está incluído em cada versão da at.js?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: dc7831e4c3eb7dfc4a11d440e55b3a116b6e28fc
+source-git-commit: 0bdbeebc07bc4e1dd0dc34171fbf2476db5c256f
 workflow-type: tm+mt
-source-wordcount: '4603'
+source-wordcount: '4635'
 ht-degree: 73%
 
 ---
@@ -25,7 +25,12 @@ Detalhes sobre alterações em cada versão da biblioteca at.js de JavaScript do
 >
 >Você deve atualizar para as versões mais recentes do 1.*x* ou 2.*x* para obter correções de erros e patches de segurança para problemas descobertos em qualquer versão secundária anterior da versão principal correspondente.
 
-Tags em [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) são o método preferido para atualizar o at.js. Os desenvolvedores de extensão adicionam continuamente novos recursos a suas extensões e corrigem erros com frequência. Essas atualizações são colocadas em novas versões de uma extensão e disponibilizadas no catálogo da Adobe Experience Platform como atualizações. Para obter mais informações, consulte [Atualizações de extensão](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) no *Visão geral das tags* guia.
+Tags em [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) são o método preferido para atualizar o at.js. Os desenvolvedores de extensão adicionam continuamente novos recursos a suas extensões e corrigem erros com frequência. Essas atualizações são colocadas em novas versões de uma extensão e disponibilizadas no catálogo da Adobe Experience Platform como atualizações. Para obter mais informações, consulte [Atualizações de extensão](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) no *Visão geral das tags* guia.6+
+
+## at.js versão 2.10.3 (12 de setembro de 2023)
+
+* Correção de um problema que acionava incorretamente a variável `at-content-rendering-succeeded` evento personalizado quando nenhuma oferta é renderizada. O evento correto, `at-content-rendering-no-offers`, agora é acionado.
+* Adicionado `eventToken` e `responseTokens` ao objeto de erro para o `at-content-rendering-failed` evento personalizado.
 
 ## at.js versão 2.10.2 (7 de março de 2023)
 
