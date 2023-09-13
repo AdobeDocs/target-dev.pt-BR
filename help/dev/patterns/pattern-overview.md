@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: ff9f626fcc8f4bfaa3305d6c8c8ba890c1b7e47f
+source-git-commit: 8707fb55d66cb7a28d311a03c749acb1a1d79cf8
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '311'
 ht-degree: 0%
 
 ---
@@ -21,53 +21,41 @@ O seguinte padrão está disponível no momento:
 
 * [[!DNL Recommendations] padrão de implementação usando at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
 
-## Sugerir ideias para novos padrões
+## Sugerir ideias para novos padrões ou correções para padrões existentes
 
-A variável [!DNL Target] a equipe planeja criar padrões de implementação para várias estruturas, plataformas e integrações.
+A variável [!DNL Target] a equipe planeja criar padrões de implementação para várias estruturas, plataformas e integrações. A equipe também recebe sugestões de melhorias nos padrões existentes.
 
-Para sugerir um novo padrão, use o **Opções de feedback** na parte inferior deste artigo.
+Para ajudar a equipe a criar novos padrões ou melhorar os padrões existentes, use o **Opções de feedback** recurso na parte inferior de todos os artigos no *[!DNL Adobe Experience League]*.
 
-1. Role até a parte inferior deste artigo para exibir o modal Opções de feedback.
+1. Para sugerir ideias para novos padrões, role até a parte inferior deste artigo para exibir o modal Opções de feedback.
+
+   ou
+
+   Para sugerir melhorias ou correções para os padrões existentes, role até a parte inferior do artigo apropriado para exibir o modal Opções de feedback.
 
    ![Modelo de opções de feedback no Experience League](/help/dev/patterns/assets/feedback-options.png)
 
-1. Clique em **[!UICONTROL Opções de feedback detalhadas]** e, em seguida, clique em **[!UICONTROL Relatar um problema]**.
+   >[!TIP]
+   >
+   >Você deve estar conectado `github.com` para abrir um problema no [!DNL Experience League]. Revise as diretrizes de contribuição e as instruções do código de conduta se esta for a primeira vez que você abre um problema.
 
-   Você deve estar conectado `github.com` para abrir um problema no [!DNL Experience League]. Revise as diretrizes de contribuição e as instruções do código de conduta se esta for a primeira vez que você abre um problema.
+1. (Condicional) Para sugerir uma ideia para um novo padrão ou melhorias nos padrões existentes, clique em **[!UICONTROL Opções de feedback detalhadas]** e, em seguida, clique em **[!UICONTROL Relatar um problema]**.
 
-1. Forneça um título para seu feedback e use a caixa de texto para sugerir um novo padrão.
+   1. Forneça um título e digite seus comentários na caixa de texto.
 
-1. Clique em **[!UICONTROL Enviar novo problema]** quando terminar.
+   1. Clique em **[!UICONTROL Enviar novo problema]** quando terminar.
 
-A variável [!DNL Target] A equipe do pode se comunicar com você usando esse recurso para coletar informações adicionais ou obter mais esclarecimentos, se necessário.
+1. (Condicional) Para editar um artigo para um padrão existente, clique em **[!UICONTROL Sugerir uma edição]** e, em seguida, clique na guia **[!UICONTROL Editar]** (o ícone de lápis).
 
->[!NOTE]
->
->Interno [!DNL Adobe] os funcionários podem usar o *Padrões de implementação para o [!DNL Adobe Target] Implementação* wiki para obter mais informações sobre como contribuir com padrões de design. Siga as instruções acima e a [!DNL Target] A equipe do pode fornecer um link para o wiki.
+   1. Faça edições usando a sintaxe de marcação.
 
-## Ajudar a melhorar os padrões existentes
+   1. Clique em **[!UICONTROL Confirmar alterações]** quando terminar.
 
-Para sugerir melhorias ou correções para os padrões existentes, use o **Opções de feedback** na parte inferior do artigo em questão no [!DNL Experience League].
-
-1. Role até a parte inferior do artigo apropriado para exibir o modal Opções de feedback.
-
-   ![Modal de opções de feedback no Experience League](/help/dev/patterns/assets/feedback-options-2.png)
-
-1. Clique em **[!UICONTROL Opções de feedback detalhadas]** e, em seguida, clique em **[!UICONTROL Relatar um problema]**.
-
-   Você deve estar conectado `github.com` para abrir um problema no [!DNL Experience League]. Revise as diretrizes de contribuição e as instruções do código de conduta se esta for a primeira vez que você abre um problema.
-
-1. Forneça um título para o seu feedback e, em seguida, use a caixa de texto para sugerir uma melhoria ou correção do artigo.
-
-1. (Condicional) Você também pode clicar em **[!UICONTROL Sugerir uma edição]**, em seguida, clique no ícone Editar (o ícone de lápis) para editar a página diretamente.
-
-1. Clique em **[!UICONTROL Enviar novo problema]** quando terminar.
-
-A variável [!DNL Target] A equipe do pode revisar as edições antes de publicar.
+A variável [!DNL Target] A equipe do pode revisar seus comentários ou edições e se comunicar com você usando esse recurso para coletar informações adicionais ou obter mais esclarecimentos, se necessário.
 
 >[!NOTE]
 >
->Interno [!DNL Adobe] os funcionários podem usar o *Padrões de implementação para o [!DNL Adobe Target] Implementação* wiki para obter mais informações sobre como editar padrões de design. Siga as instruções acima e a [!DNL Target] A equipe do pode fornecer um link para o wiki.
+>[!DNL Adobe] os funcionários podem usar o *Padrões de implementação para o [!DNL Adobe Target] Implementação* wiki para obter mais informações sobre como contribuir com padrões de design. Siga as instruções acima e solicite o link e a [!DNL Target] A equipe do pode fornecer um link para o painel [!DNL Adobe] wiki.
 
 
 
