@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 6cd78f8e3cbdd97a09b0cb6ca3af55994e85f819
+source-git-commit: 8fae7e18f555e6b549e0b9c486be73e3483dac86
 workflow-type: tm+mt
 source-wordcount: '335'
 ht-degree: 1%
@@ -29,13 +29,13 @@ O número da etapa na ilustração a seguir corresponde à seção abaixo.
 
 ![Notificar diagrama de destino](/help/dev/patterns/recs-atjs/assets/diagram-notify-target.png){width="600" zoomable="yes"}
 
-## Fogo [!DNL Adobe Target] Rastrear API
+## 4.1: Incêndio [!DNL Adobe Target] Rastrear API
 
 Esta etapa ajuda a garantir que todos os eventos que devem ser enviados para o [!DNL Target] são enviados usando o `trackEvent` método.
 
 +++Ver detalhes
 
-![Acionar diagrama da API de rastreamento do Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram.png){width="400" zoomable="yes"}
+![Acionar diagrama da API de rastreamento do Adobe Target](/help/dev/patterns/recs-atjs/assets/fire-adobe-target-track-api-diagram-combined.png){width="400" zoomable="yes"}
 
 Você envia os atributos de conversão do pedido conforme mencionado na *Pré-requisitos* abaixo. O nome da mbox não importa, mas a conversão é usar `orderConfirmPage`.
 
