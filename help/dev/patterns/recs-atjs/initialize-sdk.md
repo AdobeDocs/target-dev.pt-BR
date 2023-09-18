@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 60b986b4d956972714cb485057484ee5d6eed2bb
+source-git-commit: a87f9a13fc1feb12c62f1b772975958541f7523a
 workflow-type: tm+mt
-source-wordcount: '1791'
+source-wordcount: '1790'
 ht-degree: 8%
 
 ---
@@ -179,7 +179,7 @@ Essa etapa ajuda a garantir que todos os dados que devem ser enviados para o [!D
 
 +++Ver detalhes
 
-![Diagrama de mapeamento de dados](/help/dev/patterns/recs-atjs/assets/data-mapping.png){width="400" zoomable="yes"}
+![Diagrama de mapeamento de dados](/help/dev/patterns/recs-atjs/assets/data-mapping-combined.png){width="400" zoomable="yes"}
 
 **Pré-requisitos**
 
@@ -399,7 +399,7 @@ Essa etapa garante que todos os dados que devem ser enviados para o [!DNL Target
 
 +++Ver detalhes
 
-![Diagrama de mapeamento de dados remoto](/help/dev/patterns/recs-atjs/assets/remote-data-mapping.png){width="400" zoomable="yes"}
+![Diagrama de mapeamento de dados remoto](/help/dev/patterns/recs-atjs/assets/remote-data-mapping-combined.png){width="400" zoomable="yes"}
 
 **Pré-requisitos**
 
@@ -427,7 +427,7 @@ Esta etapa garante que a biblioteca de JavaScript at.js do seja carregada e inic
 
 +++Ver detalhes
 
-![Carregar diagrama do SDK da Web do Adobe Target](/help/dev/patterns/recs-atjs/assets/load-web-sdk.png){width="400" zoomable="yes"}
+![Carregar diagrama at.js do Adobe Target](/help/dev/patterns/recs-atjs/assets/load-atjs-combined.png){width="400" zoomable="yes"}
 
 **Pré-requisitos**
 
