@@ -6,7 +6,7 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: a3644cd06c01d7b0d996aabbcb67272e1712b70c
+source-git-commit: 60b986b4d956972714cb485057484ee5d6eed2bb
 workflow-type: tm+mt
 source-wordcount: '1791'
 ht-degree: 8%
@@ -117,7 +117,7 @@ Esta etapa permite que a at.js busque todas as experiências que devem ser rende
 
 +++Ver detalhes
 
-![Configurar solicitação automática de carregamento de página](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request.png){width="400" zoomable="yes"}
+![Configurar solicitação automática de carregamento de página](/help/dev/patterns/recs-atjs/assets/configure-automatic-page-request-combined.png){width="400" zoomable="yes"}
 
 **Pré-requisitos**
 
@@ -146,7 +146,7 @@ Essa etapa ajuda a garantir que não haja cintilação da página ao fornecer ex
 
 +++Ver detalhes
 
-![Configurar diagrama de manipulação de cintilação](/help/dev/patterns/recs-atjs/assets/flicker-handling.png){width="400" zoomable="yes"}
+![Configurar diagrama de manipulação de cintilação](/help/dev/patterns/recs-atjs/assets/flicker-handling-combined.png){width="400" zoomable="yes"}
 
 **Pré-requisitos**
 
