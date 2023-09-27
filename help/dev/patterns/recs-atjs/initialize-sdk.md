@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: a87f9a13fc1feb12c62f1b772975958541f7523a
+source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
 workflow-type: tm+mt
-source-wordcount: '1790'
+source-wordcount: '1814'
 ht-degree: 8%
 
 ---
@@ -25,7 +25,9 @@ Siga as etapas na guia *Inicializar SDK* diagrama para garantir que todas as tar
 
 Para aplicativos de várias páginas, esse fluxo ocorre sempre que a página é recarregada ou o visitante navega para uma nova página no site.
 
-Os números de etapa na ilustração a seguir correspondem às seções abaixo.
+>[!NOTE]
+>
+>Os números de etapa na ilustração a seguir correspondem às seções abaixo. Os números das etapas não estão em uma ordem específica e não refletem a ordem das etapas realizadas no [!DNL Target] Interface ao criar a atividade.
 
 ![Inicializar diagrama de SDKs](/help/dev/patterns/recs-atjs/assets/diagram-initiaze-sdk.png){width="600" zoomable="yes"}
 

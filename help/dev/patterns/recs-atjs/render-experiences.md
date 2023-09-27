@@ -6,9 +6,9 @@ level: Experienced
 role: Developer
 hide: true
 hidefromtoc: true
-source-git-commit: 85af1bad244dc0aa7665e2fbb627d82f6fabbf88
+source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
 workflow-type: tm+mt
-source-wordcount: '1080'
+source-wordcount: '1104'
 ht-degree: 7%
 
 ---
@@ -29,7 +29,9 @@ Siga as etapas na guia *Renderizar experiências* diagrama para garantir que tod
 
 O tratamento automático de cintilação pronto para uso disponível com a at.js só faz sentido quando você [!UICONTROL Solicitação automática de carregamento de página] ativado. Essa opção oculta todo o corpo do HTML enquanto busca as experiências do [!DNL Target]. Nesse caso, é sua responsabilidade lidar com a cintilação. Procure por padrões de implementação disponíveis para tratamento de cintilação para obter orientação.
 
-Os números de etapa na ilustração a seguir correspondem às seções abaixo.
+>[!NOTE]
+>
+>Os números de etapa na ilustração a seguir correspondem às seções abaixo. Os números das etapas não estão em uma ordem específica e não refletem a ordem das etapas realizadas no [!DNL Target] Interface ao criar a atividade.
 
 ![Renderizar diagrama de experiências](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 
