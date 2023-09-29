@@ -3,10 +3,10 @@ title: Inicialize o SDK do Java usando o método de criação
 description: Saiba como usar o método de criação para inicializar o SDK do Java e instanciar o [!UICONTROL TargetClient] para fazer chamadas para [!DNL Adobe Target] para experimentos e experiências personalizadas.
 feature: APIs/SDKs
 exl-id: 0e0ddead-7de8-4549-b81c-e72598558e4b
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 1d080b5e402e5d55039bf06611b44678cc6c36de
 workflow-type: tm+mt
-source-wordcount: '401'
-ht-degree: 18%
+source-wordcount: '462'
+ht-degree: 17%
 
 ---
 
@@ -44,6 +44,9 @@ ClientConfigBuilder ClientConfig.builder()
 | socketTimeout | Número | Não | 10000 | Tempo limite do soquete para todas as solicitações em milissegundos |
 | maxConnectionsPerHost | Número | Não | 100 | Máximo de Conexões por [!DNL Target] host |
 | maxConnectionsTotal | Número | Não | 200 | Máximo de conexões, incluindo todas [!DNL Target] hosts |
+| connectionTtlMs | Número | Não | -1 | O TTL (Total time to live) define o tempo máximo de vida das conexões persistentes em milissegundos. Por padrão, as conexões serão mantidas ativas indefinidamente |
+| idleConnectionValidationMs | Número | Não | 1000 | Período de inatividade em milissegundos após o qual as conexões persistentes são revalidadas antes de serem reutilizadas |
+| evictIdleConnectionsAfterSecs | Número | Não | 20 | O tempo em segundos para remover conexões ociosas do pool de conexões |
 | enableRetries | Booleano | Não | true | Tentativas automáticas para tempos limite de soquete (máx. 4) |
 | logRequests | Booleano | Não | false | Log [!DNL Target] solicitações e respostas na depuração |
 | logRequestStatus | Booleano | Não | false | Log [!DNL Target] tempo de resposta, status e URL |
