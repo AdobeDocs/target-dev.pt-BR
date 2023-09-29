@@ -4,11 +4,9 @@ description: Verifique se todas as etapas necessárias para carregar o [!DNL Ado
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '1814'
+source-wordcount: '1820'
 ht-degree: 8%
 
 ---
@@ -448,6 +446,8 @@ Incorpore o arquivo at.js em todas as páginas da Web em que experimentação, o
 +++
 
 [Retorne ao diagrama na parte superior desta página.](#diagram)
+
+Vá para a Etapa 2: [Configurar coleção de dados](/help/dev/patterns/recs-atjs/data-collection.md).
 
 
 

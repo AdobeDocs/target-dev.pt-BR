@@ -4,11 +4,9 @@ description: Verifique se todas as etapas necessárias para renderizar experiên
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 266a8670a906e5be70f11bb05301b708f61a57d6
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1124'
 ht-degree: 7%
 
 ---
@@ -52,7 +50,7 @@ Clique nos links a seguir para navegar até as seções desejadas:
 
 ## 3.1: Promoção {#promotion}
 
-Adicionar itens promovidos e controlar seu posicionamento no Recommendations do Target [designs](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}.
+Adicione itens promovidos e controle o posicionamento nos designs de recomendações escolhendo Promoções principais ou secundárias na [!DNL Target] Interface ao criar a atividade.
 
 +++Ver detalhes
 
@@ -65,6 +63,10 @@ Adicionar itens promovidos e controlar seu posicionamento no Recommendations do 
 **Parâmetros de entidade obrigatórios**
 
 * Os atributos de item em promoções devem ser passados ao usar a opção &quot;promover por atributo&quot;.
+
+**Leituras**
+
+* [Adicionar promoções](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -297,3 +299,5 @@ Essa etapa aciona um [!DNL Delivery API] chamar com `execute` > `mboxes` carga �
 +++
 
 [Retorne ao diagrama na parte superior desta página.](#diagram)
+
+Vá para a Etapa 4: [Notificar Destino](/help/dev/patterns/recs-atjs/notify-target.md).

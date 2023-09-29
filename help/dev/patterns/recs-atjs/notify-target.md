@@ -4,11 +4,9 @@ description: Garantir que todos os eventos que precisam ser rastreados pelo [!DN
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-hide: true
-hidefromtoc: true
-source-git-commit: 013a49b92357cfb5d45f7e595b46b1b12ce91c65
+source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
 workflow-type: tm+mt
-source-wordcount: '335'
+source-wordcount: '359'
 ht-degree: 1%
 
 ---
@@ -49,6 +47,10 @@ Não é necessário incluir os atributos de conversão de pedido nesta chamada. 
    * `productPurchaseId`: IDs de produto que foram compradas como parte do pedido. Separe vários produtos usando vírgulas.
    * `orderTotal`: total do pedido da compra.
    * `orderId`: ID do pedido da compra.
+
+  A ilustração a seguir mostra uma [regra para [!DNL tags] in [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} que deve ser acionado somente no [!UICONTROL Confirmação] página.
+
+  ![Página Configuração de ação](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
 * Se você estiver rastreando um evento para adição ao carrinho, envie `cartIds` como parâmetro. Uma lista separada por vírgulas de IDs de produtos pode ser passada para `cardIds`.
 
