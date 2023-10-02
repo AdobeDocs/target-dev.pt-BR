@@ -4,9 +4,9 @@ description: Entender como usar os padrões de implementação
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+source-git-commit: 09dafc7c85ea7f3600fceac4e673e8f1901771a4
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ O seguinte padrão está disponível no momento:
 
 * [[!DNL Recommendations] padrão de implementação usando at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
 
-Esses padrões de implementação têm como objetivo focar no que fazer, quando fazer e onde fazer isso, em vez de como fazer isso. Os diagramas de fluxo detalhados ajudam você a entender a sequência de operações e os links para a documentação relevante fornecem instruções contextuais e passo a passo.
+Esses padrões de implementação se concentram no que fazer, quando fazer e onde fazer. Os diagramas de fluxo detalhados ajudam você a entender a sequência de operações e os links para a documentação relevante fornecem instruções contextuais e passo a passo.
 
 ## Sugerir ideias para novos padrões ou correções para padrões existentes
 
