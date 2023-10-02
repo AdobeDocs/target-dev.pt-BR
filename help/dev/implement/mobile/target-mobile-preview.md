@@ -1,46 +1,44 @@
 ---
 keywords: controle de qualidade, visualização, link de visualização, dispositivo móvel, visualização móvel
-description: Use os links de visualização móvel para realizar tarefas completas de controle da qualidade para atividades de aplicativos móveis. Você pode se inscrever em experiências diferentes sem dispositivos de teste especiais.
-title: Como usar o link de visualização móvel no [!DNL Target] Dispositivo móvel?
+description: Use os links de visualização móvel para realizar tarefas completas de controle da qualidade para atividades de aplicativos móveis.
+title: Como usar links de visualização móvel no [!DNL Adobe Target] Dispositivo móvel?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: 97c96e63f9121793a83b445ad3dc33c5d094509a
+source-git-commit: 0bcfa16cb79644e7ce10e33daf6c8385104c197f
 workflow-type: tm+mt
-source-wordcount: '555'
-ht-degree: 51%
+source-wordcount: '548'
+ht-degree: 27%
 
 ---
 
 # [!DNL Target] visualização móvel
 
-Use o link de visualização móvel para realizar facilmente tarefas completas de controle da qualidade e participar de experiências diferentes diretamente do dispositivo, sem dispositivos de teste especiais.
+Use os links de visualização móvel para realizar facilmente tarefas completas de controle da qualidade e participar de experiências diferentes usando seu dispositivo sem dispositivos de teste especiais.
 
-## Visão geral
-
-A funcionalidade visualização móvel permite que você teste completamente suas atividades no aplicativo móvel antes de inicializá-las.
+A funcionalidade de visualização móvel permite que você teste completamente suas atividades no aplicativo móvel antes de inicializá-las.
 
 ## Pré-requisitos
 
-1. **Usar uma versão compatível do SDK:** O recurso de visualização móvel exige que você baixe e instale a versão apropriada do SDK do Adobe Mobile em seus aplicativos correspondentes.
+1. **Usar uma versão compatível do SDK:** O recurso de visualização móvel exige que você baixe e instale a versão apropriada da [!DNL Adobe Mobile SDK] nos aplicativos correspondentes.
 
    Para obter instruções sobre como baixar o SDK apropriado, consulte [Versões atuais do SDK](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} no *[!DNL Adobe Experience Platform Mobile SDK]* documentação.
 
-1. **Defina um esquema de URL:** o link de visualização usa um esquema de URL para abrir seu aplicativo. Você deve especificar um esquema de URL único para a visualização.
+1. **Defina um esquema de URL:** o link de visualização usa um esquema de URL para abrir seu aplicativo. Especifique um esquema de URL exclusivo para a visualização.
 
-   Para obter mais informações, consulte [Visualização visual](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* no *[!DNL Adobe Experience Platform Mobile SDK]* documentação.
+   Para obter mais informações, consulte [Visualização visual](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Configurar a extensão do Target na interface da conexão de dados* no *[!DNL Mobile SDK]* documentação.
 
    Os links a seguir contêm mais informações:
 
-   * **iOs**: para obter mais informações sobre como configurar esquemas de URL para o iOS, consulte [Definição de um esquema de URL personalizado para seu aplicativo](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} no site Apple Developer.
-   * **Android**: para obter mais informações sobre como configurar esquemas de URL para o Android, consulte [Criar deep links para conteúdo do aplicativo](https://developer.android.com/training/app-links/deep-linking){target=_blank} no site de desenvolvedores do Android.
+   * **iOs**: para obter mais informações sobre como configurar esquemas de URL para o iOS, consulte [Definição de um esquema de URL personalizado para seu aplicativo](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} no *Desenvolvedor do Apple* site.
+   * **Android**: para obter mais informações sobre como configurar esquemas de URL para o Android, consulte [Criar deep links para conteúdo do aplicativo](https://developer.android.com/training/app-links/deep-linking){target=_blank} no *Desenvolvedores do Android* site.
 
-1. **Configurar `collectLaunchInfo` API (somente i0S)**
+1. **Configurar o `collectLaunchInfo` API (somente i0S)**
 
-   Para obter mais informações, consulte [Visualização visual](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Adobe Target* no *[!DNL Adobe Experience Platform Mobile SDK]* documentação.
+   Para obter mais informações, consulte [Visualização visual](https://developer.adobe.com/client-sdks/documentation/adobe-target/#visual-preview){target=_blank} in *Configurar a extensão do Target na interface da conexão de dados* no *[!DNL Mobile SDK]* documentação.
 
 ## Gerar um link de visualização
 
-1. No [!DNL Target] clique no link **[!UICONTROL Mais opções]** (as reticências verticais) e selecione **[!UICONTROL Criar visualização móvel]**.
+1. No [!DNL Target] clique no link **[!UICONTROL Mais opções]** (as reticências verticais) e selecione **[!UICONTROL Criar link de visualização móvel]**.
 
    ![imagem alt](assets/mobile-preview-create.png)
 
@@ -48,13 +46,13 @@ A funcionalidade visualização móvel permite que você teste completamente sua
 
    >[!NOTE]
    >
-   >Somente atividades baseadas em formulário AB e XT podem ser selecionadas.
+   >Você pode selecionar somente Baseado em formulário [!UICONTROL Teste A/B] e [!UICONTROL Direcionamento de experiência] (XT) Atividades.
 
    ![imagem alt](assets/mobile-preview-select-activities.png)
 
 1. Especifique o esquema de URL do seu aplicativo.
 
-   Isso precisa ser o mesmo que está presente no seu aplicativo iOS ou Android. Repita este processo separadamente para iOS e Android, se necessário.
+   O esquema de URL deve ser o mesmo que o presente no aplicativo iOS ou Android. Repita esse processo separadamente para iOS e Android, se necessário.
 
    ![imagem alt](assets/mobile-preview-enter-url-scheme.png)
 
@@ -64,15 +62,15 @@ A funcionalidade visualização móvel permite que você teste completamente sua
 
 ## Visualizar no seu dispositivo
 
-Abra o link em um navegador móvel em um dispositivo onde você tem seu aplicativo instalado. Este aplicativo pode ser o aplicativo de produção que você baixou da App store da Apple ou Google Play. Ele não precisa ser uma versão especial. Se você tem um link de visualização ativo, você poderá ver as experiência em seu dispositivo.
+Abra o link em um navegador móvel em um dispositivo onde você tem seu aplicativo instalado. Este aplicativo pode ser o aplicativo de produção que você baixou do [!DNL Apple App Store] ou o [!DNL Google Play Store]. O aplicativo não precisa ser uma build especial. Se você tiver um link de visualização ativo, poderá visualizar as experiências no dispositivo.
 
 1. Abra o link no seu navegador móvel.
 
-   Compartilhar o link copiado na etapa anterior do [!DNL Target] Use a interface do usuário do seu dispositivo móvel de maneira conveniente, por exemplo, usando texto, email ou Slack.
+   Compartilhar o link copiado na seção anterior da [!DNL Target] para o seu dispositivo móvel de forma conveniente, por exemplo, usando texto, email ou [!DNL Slack].
 
    |![link direto da visualização 1](assets/mobile-preview-open-deeplink.png)|![link direto da visualização 2](assets/mobile-preview-open-app.png)|
 
-   Seu aplicativo abre e inicia o [!DNL Target] Modo de visualização móvel.
+   Seu aplicativo abre e inicia o [!DNL Target] [!UICONTROL Modo de visualização móvel].
 
 1. Selecione a combinação de experiências que deseja ver e clique em **[!UICONTROL Executar experiências]**.
 
