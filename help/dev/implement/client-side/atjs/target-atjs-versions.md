@@ -4,9 +4,9 @@ description: Exibir os detalhes sobre as alterações em cada versão do [!DNL A
 title: O que está incluído em cada versão da at.js?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: 0bdbeebc07bc4e1dd0dc34171fbf2476db5c256f
+source-git-commit: 45b5c44370476f27bba7077d5379d7742e87a90a
 workflow-type: tm+mt
-source-wordcount: '4635'
+source-wordcount: '4662'
 ht-degree: 73%
 
 ---
@@ -26,6 +26,11 @@ Detalhes sobre alterações em cada versão da biblioteca at.js de JavaScript do
 >Você deve atualizar para as versões mais recentes do 1.*x* ou 2.*x* para obter correções de erros e patches de segurança para problemas descobertos em qualquer versão secundária anterior da versão principal correspondente.
 
 Tags em [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) são o método preferido para atualizar o at.js. Os desenvolvedores de extensão adicionam continuamente novos recursos a suas extensões e corrigem erros com frequência. Essas atualizações são colocadas em novas versões de uma extensão e disponibilizadas no catálogo da Adobe Experience Platform como atualizações. Para obter mais informações, consulte [Atualizações de extensão](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) no *Visão geral das tags* guia.6+
+
+## at.js versão 2.11.0 (10 de outubro de 2023)
+
+* Adição de suporte para configuração personalizada [!DNL Adobe Experience Platform] (AEP) `sandboxId` e `sandboxName` in `targetGlobalSettings`, que é passado para a API de entrega em `getOffer/getOffers` chamadas.
+* Correção de DOM de sombra para encadeamento `:eq()` em seletores.
 
 ## at.js versão 2.10.3 (12 de setembro de 2023)
 
