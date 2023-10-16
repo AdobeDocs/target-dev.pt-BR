@@ -5,16 +5,14 @@ description: Como implementar e administrar o  [!DNL Adobe Target]  e trabalhar 
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 063d0574ee380bf76130fb0f17db89cd09efdb7d
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '479'
 ht-degree: 14%
 
 ---
 
 # Guia do desenvolvedor do [!DNL Adobe Target]
-
-![Imagem de banner do Adobe Target](/help/dev/assets/target-home-banner-simple.png)
 
 **([Exibir [!DNL Target] atualizações de documentação](https://experienceleague.adobe.com/docs/target/using/release-notes/doc-change.html){target=_blank})**
 
@@ -36,7 +34,7 @@ Este *[!DNL Adobe Target]Guia do desenvolvedor* O fornece recursos e guias para 
 
 ## Implementação do lado do cliente
 
-[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk.md): A variável [!DNL Adobe Experience Platform Web SDK] permite interagir com os vários serviços na [!DNL Experience Cloud] (incluindo [!DNL Target]) por meio da [!UICONTROL Adobe Experience Edge Network].
+[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk.md): A variável [!DNL Adobe Experience Platform Web SDK] permite interagir com os vários serviços na [!DNL Experience Cloud] (incluindo [!DNL Target]) por meio da [!UICONTROL Rede de borda da Adobe Experience].
 
 [**Biblioteca JavaScript at.js do Target**](/help/dev/implement/client-side/overview.md): A biblioteca JavaScript at.js do melhora os tempos de carregamento de página de implementações da Web, melhora a segurança e fornece opções de implementações melhores para aplicativos de página única.
 
