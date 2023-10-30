@@ -4,10 +4,10 @@ description: Exibir os detalhes sobre as alterações em cada versão do [!DNL A
 title: O que está incluído em cada versão da at.js?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: 45b5c44370476f27bba7077d5379d7742e87a90a
+source-git-commit: c5d1f477a2561a59efb3250e35563b48822fbe59
 workflow-type: tm+mt
-source-wordcount: '4662'
-ht-degree: 73%
+source-wordcount: '4697'
+ht-degree: 72%
 
 ---
 
@@ -26,6 +26,14 @@ Detalhes sobre alterações em cada versão da biblioteca at.js de JavaScript do
 >Você deve atualizar para as versões mais recentes do 1.*x* ou 2.*x* para obter correções de erros e patches de segurança para problemas descobertos em qualquer versão secundária anterior da versão principal correspondente.
 
 Tags em [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) são o método preferido para atualizar o at.js. Os desenvolvedores de extensão adicionam continuamente novos recursos a suas extensões e corrigem erros com frequência. Essas atualizações são colocadas em novas versões de uma extensão e disponibilizadas no catálogo da Adobe Experience Platform como atualizações. Para obter mais informações, consulte [Atualizações de extensão](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) no *Visão geral das tags* guia.6+
+
+## at.js versão 2.11.2 (26 de outubro de 2023)
+
+* Correção de um problema que causava inconsistências nos tokens de resposta enviados em eventos personalizados.
+
+## at.js versão 2.11.1 (13 de outubro de 2023)
+
+* Correção de um problema que causava erros não detectados enquanto uma página que executava a at.js estava no modo quirks.
 
 ## at.js versão 2.11.0 (10 de outubro de 2023)
 
