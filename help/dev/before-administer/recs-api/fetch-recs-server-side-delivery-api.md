@@ -6,9 +6,9 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-source-git-commit: ba53161b2ec51af3d90994773034790feb51099c
+source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
 workflow-type: tm+mt
-source-wordcount: '1507'
+source-wordcount: '1520'
 ht-degree: 1%
 
 ---
@@ -97,22 +97,22 @@ Os recursos a seguir fornecem exemplos de várias implementações não focadas 
 
 Na maioria das vezes, as recomendações são configuradas na interface do usuário do Adobe Target e, em seguida, usadas ou acessadas por meio das APIs do Target, por motivos como os mencionados nas seções acima. Essa coordenação UI-API é comum. No entanto, às vezes os usuários podem querer executar todas as ações por meio das APIs, tanto a configuração quanto o uso dos resultados. Embora seja muito menos comum, os usuários podem configurar, executar e *e* Aproveite os resultados das recomendações totalmente usando as APIs.
 
-Aprendemos em um [seção anterior](manage-catalog.md) como gerenciar entidades do Adobe Target Recommendations e fornecê-las no lado do servidor. Do mesmo modo, a [Console do Adobe Developer](https://developer.adobe.com/console/home) O permite gerenciar critérios, promoções, coleções e modelos de design sem precisar fazer logon no Adobe Target. Uma lista completa de todas as APIs do Recommendations pode ser encontrada [aqui](http://developers.adobetarget.com/api/recommendations/), mas aqui está um resumo para referência.
+Aprendemos em um [seção anterior](manage-catalog.md) como gerenciar entidades do Adobe Target Recommendations e fornecê-las no lado do servidor. Do mesmo modo, a [Console do Adobe Developer](https://developer.adobe.com/console/home) O permite gerenciar critérios, promoções, coleções e modelos de design sem precisar fazer logon no Adobe Target. Uma lista completa de todas as APIs do Recommendations pode ser encontrada [aqui](https://developer.adobe.com/target/administer/recommendations-api/), mas aqui está um resumo para referência.
 
 | Recurso | Detalhes |
 | --- | --- |
-| [Coleções](http://developers.adobetarget.com/api/recommendations/#tag/Collections) | Liste, crie, obtenha, edite e exclua coleções. |
-| [Critérios](http://developers.adobetarget.com/api/recommendations/#tag/Criteria) | Listar e obter critérios. |
-| [Designs](http://developers.adobetarget.com/api/recommendations/#tag/Designs) | Liste, crie, obtenha, edite, exclua e valide designs. |
-| [Entidades](http://developers.adobetarget.com/api/recommendations/#tag/Entities) | Salvar, excluir e obter entidades. |
-| [Promoções](http://developers.adobetarget.com/api/recommendations/#tag/Promotions) | Liste, crie, obtenha, edite e exclua promoções. |
-| [Critérios da categoria](http://developers.adobetarget.com/api/recommendations/#tag/Category-Criteria) | Liste, crie, obtenha, edite e exclua critérios de categoria. |
-| [Critérios personalizados](http://developers.adobetarget.com/api/recommendations/#tag/Custom-Criteria) | Liste, crie, obtenha, edite e exclua critérios personalizados. |
-| [Critérios de item](http://developers.adobetarget.com/api/recommendations/#tag/Item-Criteria) | Listar, criar, obter, editar e excluir critérios de item. |
-| [Critério de popularidade](http://developers.adobetarget.com/api/recommendations/#tag/Popularity-Criteria) | Liste, crie, obtenha, edite e exclua critérios de popularidade. |
-| [Critérios de atributo de perfil](http://developers.adobetarget.com/api/recommendations/#tag/Profile-Attribute-Criteria) | Liste, crie, obtenha, edite e exclua critérios de atributo de perfil. |
-| [Critério recente](http://developers.adobetarget.com/api/recommendations/#tag/Recent-Criteria) | Listar, criar, obter, editar e excluir critérios recentes. |
-| [Critérios de sequência](http://developers.adobetarget.com/api/recommendations/#tag/Sequence-Criteria) | Liste, crie, obtenha, edite e exclua critérios de sequência. |
+| [Coleções](https://developer.adobe.com/target/administer/recommendations-api/#tag/Collections) | Liste, crie, obtenha, edite e exclua coleções. |
+| [Critérios](https://developer.adobe.com/target/administer/recommendations-api/#tag/Criteria) | Listar e obter critérios. |
+| [Designs](https://developer.adobe.com/target/administer/recommendations-api/#tag/Designs) | Liste, crie, obtenha, edite, exclua e valide designs. |
+| [Entidades](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities) | Salvar, excluir e obter entidades. |
+| [Promoções](https://developer.adobe.com/target/administer/recommendations-api/#tag/Promotions) | Liste, crie, obtenha, edite e exclua promoções. |
+| [Critérios da categoria](https://developer.adobe.com/target/administer/recommendations-api/#tag/Category-Criteria) | Liste, crie, obtenha, edite e exclua critérios de categoria. |
+| [Critérios personalizados](https://developer.adobe.com/target/administer/recommendations-api/#tag/Custom-Criteria) | Liste, crie, obtenha, edite e exclua critérios personalizados. |
+| [Critérios de item](https://developer.adobe.com/target/administer/recommendations-api/#tag/Item-Criteria) | Listar, criar, obter, editar e excluir critérios de item. |
+| [Critério de popularidade](https://developer.adobe.com/target/administer/recommendations-api/#tag/Popularity-Criteria) | Liste, crie, obtenha, edite e exclua critérios de popularidade. |
+| [Critérios de atributo de perfil](https://developer.adobe.com/target/administer/recommendations-api/#tag/Profile-Attribute-Criteria) | Liste, crie, obtenha, edite e exclua critérios de atributo de perfil. |
+| [Critério recente](https://developer.adobe.com/target/administer/recommendations-api/#tag/Recent-Criteria) | Listar, criar, obter, editar e excluir critérios recentes. |
+| [Critérios de sequência](https://developer.adobe.com/target/administer/recommendations-api/#tag/Sequence-Criteria) | Liste, crie, obtenha, edite e exclua critérios de sequência. |
 
 ## Documentação de referência
 
