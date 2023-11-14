@@ -3,9 +3,9 @@ title: Como configurar a autenticação para o [!DNL Adobe Target] APIs
 description: Como faço para gerar os tokens de autenticação necessários para interagir com êxito com o [!DNL Adobe Target] APIs?
 feature: APIs/SDKs, Administration & Configuration
 exl-id: fc67363c-6527-40aa-aff1-350b5af884ab
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '1941'
+source-wordcount: '1942'
 ht-degree: 2%
 
 ---
@@ -36,7 +36,7 @@ Estas são as etapas preliminares necessárias para gerar os tokens de autentica
 | Recurso | Detalhes |
 | --- | --- |
 | Postman | Para concluir essas etapas com êxito, obtenha o [aplicativo Postman](https://www.postman.com/downloads/) para o seu sistema operacional. O Postman Basic é gratuito com a criação da conta. Embora não seja necessário para usar o [!DNL Adobe Target] APIs em geral, o Postman facilita os fluxos de trabalho de API e [!DNL Adobe Target] O fornece várias coleções do Postman para ajudar a executar suas APIs e saber como elas operam. O restante deste guia pressupõe conhecimento prático do Postman. Para obter ajuda, consulte [Documentação do Postman](https://learning.getpostman.com/). |
-| Referências | Familiaridade com os seguintes recursos é presumida no restante deste guia:<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Documentação da API de administrador e perfil do Target](../administer/admin-api/admin-api-overview-new.md)</li><li>[Documentação da API do Recommendations](https://developers.adobetarget.com/api/recommendations/)</li></ul> |
+| Referências | Familiaridade com os seguintes recursos é presumida no restante deste guia:<ul><li>[Adobe I/O Github](https://github.com/adobeio)</li><li>[Documentação da API de administrador e perfil do Target](../administer/admin-api/admin-api-overview-new.md)</li><li>[Documentação da API do Recommendations](https://developer.adobe.com/target/administer/recommendations-api/)</li></ul> |
 
 ## Criar um projeto Adobe I/O
 
@@ -89,7 +89,7 @@ Nesta seção, você acessará o [!DNL Adobe Developer Console] e criar um proje
 
 ## Exportar detalhes do projeto
 
-Agora que você tem um projeto Adobe, pode usar para acessar [!DNL Target], você precisa enviar os detalhes desse projeto junto com as solicitações da API Adobe. Esses detalhes são necessários para interagir com várias APIs de Adobe, incluindo várias [!DNL Target] APIs. Por exemplo, os detalhes da integração incluem informações de autorização e autenticação exigidas pelo [!DNL Target] APIs de administrador. Portanto, para usar as APIs com o Postman, é necessário obter esses detalhes no Postman.
+Agora que você tem um projeto Adobe, pode usar para acessar o [!DNL Target], você precisa enviar os detalhes desse projeto junto com as solicitações da API Adobe. Esses detalhes são necessários para interagir com várias APIs de Adobe, incluindo várias [!DNL Target] APIs. Por exemplo, os detalhes da integração incluem informações de autorização e autenticação exigidas pelo [!DNL Target] APIs de administrador. Portanto, para usar as APIs com o Postman, é necessário obter esses detalhes no Postman.
 
 Há várias maneiras de especificar os detalhes do seu projeto no Postman, mas nesta seção, aproveitamos alguns recursos e coleções pré-criados. Primeiro (nesta seção), você exportará os detalhes da sua integração em um ambiente do Postman. Em seguida (na seção a seguir), você gerará um token de acesso do portador para conceder acesso aos recursos de Adobe necessários.
 

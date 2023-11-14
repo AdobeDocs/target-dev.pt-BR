@@ -4,9 +4,9 @@ description: Saiba como implementar o [!UICONTROL Recommendations] atividades no
 title: Como implementar o [!UICONTROL Recommendations] Atividades?
 feature: Recommendations
 exl-id: af1e8b60-6dbb-451b-aa4f-e167d1800d1c
-source-git-commit: 1e1bfb556005f7ea998caf97685c834825372bd6
+source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
 workflow-type: tm+mt
-source-wordcount: '1460'
+source-wordcount: '1461'
 ht-degree: 29%
 
 ---
@@ -45,7 +45,7 @@ Para fornecer recomendações de alta qualidade, [!UICONTROL Target] O deve sabe
 | Método | O que é | Quando usar | Informações adicionais |
 | --- | --- | --- | --- |
 | Feed do catálogo | Programe um feed (CSV, XML do produto do Google ou Classificações do produto Analytics) para ser carregado e assimilado diariamente. | Para enviar informações sobre vários itens de cada vez. Para enviar informações que são alteradas com pouca frequência. | Consulte [Feeds](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html). |
-| API de entidades | Chame uma API para enviar atualizações de minuto para um único item. | Para enviar atualizações que ocorrem sobre um item de cada vez. Para enviar informações que mudam com frequência (por exemplo, preço, nível de estoque/estoque). | Consulte a [Documentação do desenvolvedor da API de entidades](https://developers.adobetarget.com/api/recommendations/#tag/Entities). |
+| API de entidades | Chame uma API para enviar atualizações de minuto para um único item. | Para enviar atualizações que ocorrem sobre um item de cada vez. Para enviar informações que mudam com frequência (por exemplo, preço, nível de estoque/estoque). | Consulte a [Documentação do desenvolvedor da API de entidades](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities). |
 | Enviar atualizações na página | Envie atualizações de minuto a minuto para um único item usando JavaScript na página ou usando a API de entrega. | Para enviar atualizações que ocorrem sobre um item de cada vez. Para enviar informações que mudam com frequência (por exemplo, preço, nível de estoque/estoque). | Consulte [Exibições de item/páginas de produto](#item-views-or-product-pages) abaixo. |
 
 A maioria dos clientes deve implementar pelo menos um feed. Em seguida, você pode optar por complementar seu feed com atualizações para atributos ou itens alterados com frequência usando a API de entidades ou o método na página.
