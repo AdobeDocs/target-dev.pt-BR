@@ -4,7 +4,7 @@ description: Obter dados em [!DNL Target] usando a API de atualização de perfi
 title: Como posso obter dados no [!DNL Target] Usando a API de atualização de perfil em massa?
 feature: Implementation
 exl-id: 654b13b7-1683-4c44-80e6-7557b9d29f66
-source-git-commit: 3ae2391dea9994c0ddc1df39d74cccf6e067c1a4
+source-git-commit: 773f8a2f22cfbf740a5ce68809b38b33b621f3b5
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 59%
@@ -42,7 +42,7 @@ Os atributos de perfil são enviados via site e podem ser atualizados pela API e
 
 O tamanho do arquivo em lote deve ser menor que 50 MB. Além disso, o número total de linhas não deve ultrapassar 500.000 por carregamento.
 
-As atualizações geralmente ocorrem em menos de uma hora, mas podem levar até 24 horas para serem refletidas
+As atualizações geralmente ocorrem em menos de uma hora, mas podem levar até 24 horas para serem refletidas.
 
 Não há limite em relação ao número ou linhas que você pode carregar em um período de 24 horas em lotes subsequentes. No entanto, o processo de ingestão pode ter o fluxo controlado em horário comercial, para garantir que outros processos sejam executados com eficiência.
 
