@@ -2,10 +2,10 @@
 user-guide-title: Guia do desenvolvedor do Adobe Target
 breadcrumb-title: Guia do desenvolvedor do Target
 user-guide-description: Saiba como definir e personalizar a experiência de seus clientes para que você possa maximizar a receita em sites da Web e móveis, aplicativos, mídia social e outros canais digitais.
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
 workflow-type: tm+mt
 source-wordcount: '729'
-ht-degree: 54%
+ht-degree: 55%
 
 ---
 
@@ -209,9 +209,9 @@ ht-degree: 54%
 + Padrões de implementação {#implementation-patterns}
    + [Visão geral dos padrões de implementação](/help/dev/patterns/pattern-overview.md)
    + Padrão de implementação do Recommendations usando at.js {#atjs}
-      + [Padrão de implementação do Recommendations usando a visão geral da at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+      + [Visão geral do padrão de implementação do Recommendations com o uso da at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [Inicializar SDKs](/help/dev/patterns/recs-atjs/initialize-sdk.md)
-      + [Configurar coleção de dados](/help/dev/patterns/recs-atjs/data-collection.md)
+      + [Configurar a coleção de dados](/help/dev/patterns/recs-atjs/data-collection.md)
       + [Renderizar experiências](/help/dev/patterns/recs-atjs/render-experiences.md)
       + [Notificar Destino](/help/dev/patterns/recs-atjs/notify-target.md)
 

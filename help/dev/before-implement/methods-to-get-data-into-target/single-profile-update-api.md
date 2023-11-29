@@ -4,10 +4,10 @@ description: Obter dados em [!DNL Target] usando a API de atualização de perfi
 title: Como posso obter dados no [!DNL Target] Usando a API de atualização de perfil único?
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
-source-git-commit: 3ae2391dea9994c0ddc1df39d74cccf6e067c1a4
+source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
 workflow-type: tm+mt
 source-wordcount: '204'
-ht-degree: 35%
+ht-degree: 15%
 
 ---
 
@@ -17,7 +17,7 @@ Quase idêntico ao [!UICONTROL API de atualização de perfil em massa] in [!DNL
 
 ## Formato
 
-O visitante deve ser identificado por meio do valor [!DNL Target]mboxPC do ou valor de `mbox3rdPartyId`. A Experience Cloud ID (ECID) não é suportada.
+O visitante deve ser identificado por meio da variável [!DNL Target] `mboxPC` value ou `mbox3rdPartyId` valor. A variável [!UICONTROL ID do Experience Cloud] (ECID) não é compatível.
 
 ## Exemplo de casos de uso
 
@@ -25,17 +25,14 @@ Você deseja atualizar o perfil de um único visitante que executa alguma ação
 
 ## Benefícios do método
 
-Nenhum limite sobre o número de atributos de perfil.
-
-Os atributos de perfil são enviados via site e podem ser atualizados pela API e vice-versa.
+* Nenhum limite sobre o número de atributos de perfil.*
+* Os atributos de perfil enviados pelo site podem ser atualizados por meio da API e do oposto.
 
 ## Avisos
 
-Limite de 1.000.000 de chamadas de API (1 milhão) por 24 horas
-
-Perfis de atualização somente. Não é possível criar um perfil para um usuário potencial [!DNL Target] ainda não viu.
-
-As atualizações geralmente ocorrem em menos de uma hora, mas podem levar até 24 horas para serem refletidas.
+* Limite de 1.000.000 de chamadas de API (1 milhão) por 24 horas.
+* Perfis de atualização somente. Não é possível criar um perfil para um usuário potencial [!DNL Target] ainda não viu.
+* As atualizações geralmente ocorrem em menos de uma hora, mas podem levar até 24 horas para serem refletidas.
 
 ## Exemplos de código
 
