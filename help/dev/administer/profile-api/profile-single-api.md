@@ -3,18 +3,32 @@ title: API de atualização de perfil único do Adobe Target
 description: Saiba como usar o [!DNL Adobe Target] [!UICONTROL API de atualização de perfil único] para enviar dados de perfil de um único visitante para o [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 6f7d9875e3b73352ead3a55e40a4b2f81f3d4400
+source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 2%
+source-wordcount: '349'
+ht-degree: 4%
 
 ---
 
 # [!DNL Adobe Target Single Profile Update API]
 
-A variável [!DNL Adobe Target] [!UICONTROL API de atualização de perfil único] permite enviar uma atualização de perfil para um único usuário. A variável [!UICONTROL API de atualização de perfil único] e geralmente é usado quando uma atualização deve ocorrer em relação a uma transação que ocorre em um canal que não implementou [!DNL Target].
+A variável [!DNL Adobe Target] [!UICONTROL API de atualização de perfil único] permite enviar uma atualização de perfil para um único usuário. A variável [!UICONTROL API de atualização de perfil único] é quase idêntica à [!UICONTROL API de atualização de perfil em massa], mas um perfil de visitante é atualizado de cada vez, em linha com a chamada da API em vez de com um arquivo .cvs.
 
-A variável [!UICONTROL API de atualização de perfil único] O está limitado à execução de 1 milhão de atualizações em qualquer período contínuo de 24 horas. As atualizações geralmente ocorrem em menos de uma hora, mas podem levar até 24 horas para serem refletidas. Se precisar enviar mais atualizações ou solicitar que as atualizações sejam processadas em prazos mais curtos, considere enviar atualizações de perfil transacional por atualização do lado do cliente (preferencial) ou pelo [!DNL Adobe Target] lado do servidor [API de entrega](/help/dev/implement/delivery-api/overview.md).
+A variável [!UICONTROL API de atualização de perfil único] e geralmente é usado quando uma atualização deve ocorrer em relação a uma transação que ocorre em um canal que não implementou [!DNL Target]. Por exemplo, você deseja atualizar o perfil de um único visitante que executa alguma ação offline. As ações podem incluir alcançar uma central de atendimento, um empréstimo é financiado, usar um cartão de fidelidade na loja, acessar um quiosque e assim por diante.
+
+Benefícios do [!UICONTROL API de atualização de perfil único] incluem:
+
+* Nenhum limite sobre o número de atributos de perfil.
+* Os atributos de perfil enviados pelo site podem ser atualizados por meio da API e do oposto.
+
+## Avisos
+
+* A variável [!UICONTROL API de atualização de perfil único] O está limitado à execução de 1 milhão de atualizações em qualquer período contínuo de 24 horas.
+* As atualizações geralmente ocorrem em menos de uma hora, mas podem levar até 24 horas para serem refletidas.
+
+  Se precisar enviar mais atualizações ou solicitar que as atualizações sejam processadas em prazos mais curtos, considere enviar atualizações de perfil transacional por atualização do lado do cliente (preferencial) ou pelo [!DNL Adobe Target] lado do servidor [API de entrega](/help/dev/implement/delivery-api/overview.md).
+
+## Formato
 
 Especificar os parâmetros do perfil no formato `profile.paramName=value`.
 

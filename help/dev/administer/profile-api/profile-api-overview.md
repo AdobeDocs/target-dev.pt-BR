@@ -4,9 +4,9 @@ description: Saiba como usar as APIs de perfil do Adobe Target para enviar dados
 contributors: https://github.com/icaraps
 exl-id: 482a4175-1d02-47e9-a5c0-dd00e8560773
 feature: APIs/SDKs
-source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
+source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
 workflow-type: tm+mt
-source-wordcount: '213'
+source-wordcount: '216'
 ht-degree: 1%
 
 ---
@@ -17,9 +17,9 @@ Um perfil de usuário contém informações demográficas e comportamentais de u
 
 As informações de perfil de cada visitante são armazenadas em cookies ou em aplicativos de terceiros.
 
-Se a página da Web implementar o código do Target ([at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md) ou o [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk.md)), as informações de perfil dos cookies são passadas para [!DNL Target] usando parâmetros de perfil. [!DNL Target] identifica cada visitante exclusivamente por meio de um `pcID` que gera os cookies do visitante. No entanto, você pode passar parâmetros de perfil de um aplicativo externo por meio de chamadas mbox usando `mbox3rdPartyIds`.
+Se a página da Web implementar a variável [!DNL Target] código ([at.js](/help/dev/implement/client-side/atjs/how-atjs-works/overview.md) ou o [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk.md)), as informações de perfil dos cookies são passadas para [!DNL Target] usando parâmetros de perfil. [!DNL Target] identifica cada visitante exclusivamente por meio de um `pcID` que ele gera nos cookies do visitante. No entanto, você pode passar parâmetros de perfil de um aplicativo externo por meio de chamadas mbox usando `mbox3rdPartyIds`.
 
-Use o [!DNL Adobe Target] APIs de perfil quando você tem dados de perfil sobre seus visitantes para enviar [!DNL Target] que você não pode ou não quer enviar como parte de sua integração baseada em página com o [!DNL Target]. Podem ser dados de um sistema de CRM (Customer Relationship Management, gerenciamento de relacionamento com o cliente) ou de POS (Point of Sale, ponto de venda) que não estão disponíveis na página ou dados de natureza mais confidencial que não fazem sentido serem transmitidos na página.
+Use o [!DNL Adobe Target] APIs de perfil quando você tem dados de perfil sobre seus visitantes para enviar [!DNL Target] que você não pode ou não quer enviar como parte de sua integração baseada em página com o [!DNL Target]. Podem ser dados de um sistema de CRM (relacionamento com o cliente) ou de POS (ponto de venda) que não está disponível na página. Ou esses dados podem ser de natureza mais sensível que não faz sentido passar na página.
 
 Há duas maneiras de atualizar perfis por meio da API:
 
