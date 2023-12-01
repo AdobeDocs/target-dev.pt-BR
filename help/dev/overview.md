@@ -5,10 +5,10 @@ description: Como implementar e administrar o  [!DNL Adobe Target]  e trabalhar 
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
 exl-id: 655cff9b-fc04-45cf-9068-5c6c32b70d79
-source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
+source-git-commit: a72d3ee76b25702b186565e86ec6b0e67c9d5d1b
 workflow-type: tm+mt
-source-wordcount: '481'
-ht-degree: 14%
+source-wordcount: '477'
+ht-degree: 15%
 
 ---
 
@@ -76,7 +76,7 @@ Este *[!DNL Adobe Target]Guia do desenvolvedor* O fornece recursos e guias para 
 
 [**[!DNL Target Admin API]**](administer/admin-api/admin-api-overview-new.md): Use o [!DNL Adobe Target] API de administração para gerenciar propriedades, atividades, públicos, ofertas, propriedades, relatórios, mboxes, hosts, ambientes e muito mais.
 
-[**[!DNL Target Profile API]**](https://developers.adobetarget.com/api/#profiles): Recuperar [!DNL Adobe Target] informações de perfil do usuário.
+[**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profile-api-overview.md): Recuperar [!DNL Adobe Target] informações de perfil do usuário.
 
 [**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): Recuperar [!UICONTROL Teste A/B] e [!UICONTROL Automated Personalization] dados do relatório de atividades.
 
