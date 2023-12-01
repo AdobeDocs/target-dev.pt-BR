@@ -2,10 +2,10 @@
 user-guide-title: Guia do desenvolvedor do Adobe Target
 breadcrumb-title: Guia do desenvolvedor do Target
 user-guide-description: Saiba como definir e personalizar a experiência de seus clientes para que você possa maximizar a receita em sites da Web e móveis, aplicativos, mídia social e outros canais digitais.
-source-git-commit: 734bda64915a08f2edba37cbbb66b2de581c2237
+source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
 workflow-type: tm+mt
-source-wordcount: '729'
-ht-degree: 55%
+source-wordcount: '740'
+ht-degree: 54%
 
 ---
 
@@ -193,7 +193,10 @@ ht-degree: 55%
    + API de administração {#admin-api}
       + [Visão geral da API de administração](before-administer/admin-api-overview/admin-api-overview.md)
       + [API de administração do Adobe Target](/help/dev/administer/admin-api/admin-api-overview-new.md)
-   + [API de perfis](/help/dev/administer/profile-api/profile-api-overview.md)
+   + APIs de perfil {#profile-apis}
+      + [Visão geral das APIs de perfis](/help/dev/administer/profile-api/profile-api-overview.md)
+      + [API de atualização de perfil único](/help/dev/administer/profile-api/profile-single-api.md)
+      + [API de atualização de perfil em massa](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [API de relatórios](/help/dev/administer/reporting-api/reporting-api.md)
    + API do Recommendations {#recommendations-api}
       + [Visão geral da API do Recommendations](before-administer/recs-api/overview.md)
