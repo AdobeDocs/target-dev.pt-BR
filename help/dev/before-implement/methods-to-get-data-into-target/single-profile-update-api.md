@@ -4,10 +4,10 @@ description: Obter dados em [!DNL Target] usando a API de atualização de perfi
 title: Como posso obter dados no [!DNL Target] Usar o [!UICONTROL API de atualização de perfil único]?
 feature: Implementation
 exl-id: e6c394cb-74a3-4991-b656-5ae601f2d5e2
-source-git-commit: 81bff85a9d1fe28ca267c471a470da95568fd06d
+source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
 workflow-type: tm+mt
-source-wordcount: '153'
-ht-degree: 2%
+source-wordcount: '150'
+ht-degree: 0%
 
 ---
 
@@ -17,7 +17,7 @@ A variável [!DNL Adobe Target] [!UICONTROL API de atualização de perfil únic
 
 A variável [!UICONTROL API de atualização de perfil único] e geralmente é usado quando uma atualização deve ocorrer em relação a uma transação que ocorre em um canal que não implementou [!DNL Target]. Por exemplo, você deseja atualizar o perfil de um único visitante que executa alguma ação offline. As ações podem incluir alcançar uma central de atendimento, um empréstimo é financiado, usar um cartão de fidelidade na loja, acessar um quiosque e assim por diante.
 
-Para obter mais informações, consulte:
+## Recursos:
 
 * [[!DNL Adobe Target Profile APIs overview]](/help/dev/administer/profile-api/profile-api-overview.md)
 * [[!DNL Adobe Target Single Profile Update API]](/help/dev/administer/profile-api/profile-single-api.md)

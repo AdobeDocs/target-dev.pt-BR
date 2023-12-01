@@ -3,9 +3,9 @@ title: API de atualização de perfil em massa do Adobe Target
 description: Saiba como usar o [!DNL Adobe Target] [!UICONTROL API de atualização de perfil em massa] para enviar os dados de perfil de vários visitantes para [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: 6f7d9875e3b73352ead3a55e40a4b2f81f3d4400
+source-git-commit: 43f4fb8345a77ccb0e112fe196e7e0944cc468c9
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '722'
 ht-degree: 9%
 
 ---
@@ -24,6 +24,11 @@ Usar o [!UICONTROL API de atualização de perfil em massa], você pode enviar d
 >[!NOTE]
 >
 >A versão 2 (v2) do [!UICONTROL API de atualização de perfil em massa] é a versão atual. No entanto, [!DNL Target] ainda suporta a versão 1 (v1).
+
+## Benefícios da API de atualização do perfil em massa
+
+* Nenhum limite sobre o número de atributos de perfil.
+* Os atributos de perfil enviados pelo site podem ser atualizados por meio da API e do oposto.
 
 ## Avisos
 
