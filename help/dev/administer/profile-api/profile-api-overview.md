@@ -4,9 +4,9 @@ description: Saiba como usar as APIs de perfil do Adobe Target para enviar dados
 contributors: https://github.com/icaraps
 exl-id: 482a4175-1d02-47e9-a5c0-dd00e8560773
 feature: APIs/SDKs
-source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
+source-git-commit: 289299a52e5611c0da341f313aa4a447fcf3666a
 workflow-type: tm+mt
-source-wordcount: '226'
+source-wordcount: '215'
 ht-degree: 1%
 
 ---
@@ -25,5 +25,3 @@ Há duas maneiras de atualizar perfis por meio da API:
 
 * [API de atualização de perfil único](/help/dev/administer/profile-api/profile-single-api.md)
 * [Atualização de perfil em massa por lote](/help/dev/administer/profile-api/profile-bulk-api.md)
-
-A documentação da API de perfis herdada pode ser encontrada aqui: [https://developers.adobetarget.com/api/#profiles](https://developers.adobetarget.com/api/#profiles){target=_blank}
