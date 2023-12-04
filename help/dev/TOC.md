@@ -2,10 +2,10 @@
 user-guide-title: Guia do desenvolvedor do Adobe Target
 breadcrumb-title: Guia do desenvolvedor do Target
 user-guide-description: Saiba como definir e personalizar a experiência de seus clientes para que você possa maximizar a receita em sites da Web e móveis, aplicativos, mídia social e outros canais digitais.
-source-git-commit: af9db32d59bdf32f2b9fade267922803250377dd
+source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
 workflow-type: tm+mt
-source-wordcount: '740'
-ht-degree: 54%
+source-wordcount: '744'
+ht-degree: 45%
 
 ---
 
@@ -36,7 +36,7 @@ ht-degree: 54%
       + [API de atualização de perfil único](before-implement/methods-to-get-data-into-target/single-profile-update-api.md)
       + [Atributos do cliente](before-implement/methods-to-get-data-into-target/customer-attributes.md)
       + [Configurações da API de perfil](before-implement/methods-to-get-data-into-target/profile-api-settings.md)
-   + [Target visão geral de segurança](before-implement/target-security-overview.md)
+   + [Visão geral da segurança no Target](before-implement/target-security-overview.md)
    + [Navegadores compatíveis](before-implement/supported-browsers.md)
    + [Alterações na criptografia do TLS (Transport Layer Security)](before-implement/tls-transport-layer-security-encryption.md)
    + [CNAME e Adobe Target](before-implement/implement-cname-support-in-target.md)
@@ -107,7 +107,7 @@ ht-degree: 54%
       + [Segmentos do AAM](implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md)
    + Decisão no dispositivo {#on-device-decisioning}
       + [Visão geral da decisão no dispositivo](implement/server-side/sdk-guides/on-device-decisioning/overview.md)
-      + Artefato de regra {#rule-artifact}
+      + Artefato da regra {#rule-artifact}
          + [Visão geral do artefato da regra](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)
          + [Baixar via Adobe Target SDK](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-sdk.md)
          + [Baixar via carga JSON](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-json.md)
@@ -132,7 +132,7 @@ ht-degree: 54%
    + Referência do SDK Java {#java}
       + [Visão geral do SDK do Java](implement/server-side/java/overview.md)
       + [Instalar o SDK do Java](implement/server-side/java/install-sdk.md)
-      + [Inicializar o SDK Java](implement/server-side/java/initialize-sdk.md)
+      + [Inicializar o SDK do Java](implement/server-side/java/initialize-sdk.md)
       + [Obter ofertas (Java)](implement/server-side/java/get-offers.md)
       + [Obter atributos (Java)](implement/server-side/java/get-attributes.md)
       + [Enviar notificações (Java)](implement/server-side/java/send-notifications.md)
@@ -154,7 +154,7 @@ ht-degree: 54%
    + Referência do Python SDK {#python}
       + [Visão geral do Python SDK](implement/server-side/python/overview.md)
       + [Instalar o Python SDK](implement/server-side/python/install-sdk.md)
-      + [Inicializar o SDK do Python](implement/server-side/python/initialize-sdk.md)
+      + [Inicializar o Python SDK](implement/server-side/python/initialize-sdk.md)
       + [Obter Ofertas (Python)](implement/server-side/python/get-offers.md)
       + [Obter atributos (Python)](implement/server-side/python/get-attributes.md)
       + [Enviar notificações (Python)](implement/server-side/python/send-notifications.md)
@@ -168,7 +168,7 @@ ht-degree: 54%
    + [Visualização do Target Mobile](implement/mobile/target-mobile-preview.md)
    + [Usar serviço de localização](implement/mobile/use-location-service.md)
    + [Perguntas frequentes sobre o Target para aplicativos móveis](implement/mobile/mobile-faq.md)
-   + [Implementação do Target com o SDK móvel da AEP em um aplicativo nativo com visualizações da Web](/help/dev/implement/mobile/native-app.md)
+   + [Implementar o Target com o SDK do AEP Mobile em um aplicativo nativo com visualizações da Web](/help/dev/implement/mobile/native-app.md)
 + Implementação de email {#implement-email}
    + [Email: implementação da visão geral do Target](implement/email/overview.md)
    + [Criar uma AdBox para uma imagem](implement/email/testing-content-with-the-adbox.md)
@@ -193,8 +193,10 @@ ht-degree: 54%
    + API de administração {#admin-api}
       + [Visão geral da API de administração](before-administer/admin-api-overview/admin-api-overview.md)
       + [API de administração do Adobe Target](/help/dev/administer/admin-api/admin-api-overview-new.md)
-   + APIs de perfil {#profile-apis}
-      + [Visão geral das APIs de perfis](/help/dev/administer/profile-api/profile-api-overview.md)
+   + API de perfil {#profile-apis}
+      + [Visão geral da API de perfis](/help/dev/administer/profile-api/profiles-api.md)
+      + [Buscar perfis](/help/dev/administer/profile-api/profile-fetch.md)
+      + [Atualizar perfis](/help/dev/administer/profile-api/profile-api-overview.md)
       + [API de atualização de perfil único](/help/dev/administer/profile-api/profile-single-api.md)
       + [API de atualização de perfil em massa](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [API de relatórios](/help/dev/administer/reporting-api/reporting-api.md)
@@ -212,9 +214,9 @@ ht-degree: 54%
 + Padrões de implementação {#implementation-patterns}
    + [Visão geral dos padrões de implementação](/help/dev/patterns/pattern-overview.md)
    + Padrão de implementação do Recommendations usando at.js {#atjs}
-      + [Visão geral do padrão de implementação do Recommendations com o uso da at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
+      + [Padrão de implementação do Recommendations usando a visão geral da at.js](/help/dev/patterns/recs-atjs/recs-implementation-pattern-atjs.md)
       + [Inicializar SDKs](/help/dev/patterns/recs-atjs/initialize-sdk.md)
-      + [Configurar a coleção de dados](/help/dev/patterns/recs-atjs/data-collection.md)
+      + [Configurar coleção de dados](/help/dev/patterns/recs-atjs/data-collection.md)
       + [Renderizar experiências](/help/dev/patterns/recs-atjs/render-experiences.md)
       + [Notificar Destino](/help/dev/patterns/recs-atjs/notify-target.md)
 

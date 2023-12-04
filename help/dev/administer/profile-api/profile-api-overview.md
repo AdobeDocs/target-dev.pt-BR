@@ -1,17 +1,17 @@
 ---
-title: Visão geral das APIs de perfil do Adobe Target
+title: Atualizar perfis
 description: Saiba como usar as APIs de perfil do Adobe Target para enviar dados do visitante para o [!DNL Target].
 contributors: https://github.com/icaraps
 exl-id: 482a4175-1d02-47e9-a5c0-dd00e8560773
 feature: APIs/SDKs
-source-git-commit: 1a1c3d96cf6ef5c337a63fdec8c700da695ff5d1
+source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '226'
 ht-degree: 1%
 
 ---
 
-# [!DNL Adobe Target Profile APIs overview]
+# Atualizar perfis
 
 Um perfil de usuário contém informações demográficas e comportamentais de um visitante da página da Web, como idade, gênero, produtos comprados, última visita e assim por diante. [!DNL Adobe Target] O usa essas informações para personalizar o conteúdo disponibilizado a cada visitante.
 
