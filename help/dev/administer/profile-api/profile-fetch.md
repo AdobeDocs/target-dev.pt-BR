@@ -3,7 +3,7 @@ title: Buscar perfis
 description: Saiba como usar as APIs de perfil do Adobe Target para buscar dados do visitante para usar no [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: 9707680ddcf0c373c635aa9f3cb5ba1b74cf90a3
+source-git-commit: e5a1c38d448cb7446b7b26cd0dc882976ba94dd3
 workflow-type: tm+mt
 source-wordcount: '262'
 ht-degree: 0%
@@ -39,13 +39,13 @@ Consulte [Atualizar perfis](/help/dev/administer/profile-api/profile-api-overvie
 O exemplo a seguir mostra o formato da solicitação para buscar um perfil usando um `thirdPartyId`:
 
 ```
-https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?<your-client-code>
+https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?client=<your-client-code>
 ```
 
 Substituir `<your-client-code>` e `your-thirdpartyid` e acione uma solicitação do GET. Este é um exemplo de chamada de busca de perfil usando um [!UICONTROL thirdpartyid]:
 
 ```
-http://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
+https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
 ```
 
 Quando esta chamada for feita, [!DNL Target] O tenta localizar o perfil primeiro no cluster anotado na solicitação de borda ou onde o perfil estiver localizado e retornar o conteúdo. O conteúdo do perfil é retornado no formato JSON.
