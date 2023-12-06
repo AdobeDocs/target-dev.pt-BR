@@ -3,16 +3,28 @@ title: Buscar perfis
 description: Saiba como usar as APIs de perfil do Adobe Target para buscar dados do visitante para usar no [!DNL Target].
 contributors: https://github.com/icaraps
 feature: APIs/SDKs
-source-git-commit: ee53a8f0210480d9b70dc77a3a5cd8d92d2f2e3d
+source-git-commit: 49acf92bbe06dbcee36fef2b7394acd7ce37baad
 workflow-type: tm+mt
-source-wordcount: '262'
+source-wordcount: '293'
 ht-degree: 0%
 
 ---
 
 # Atualizar perfis
 
-A [!DNL Target] O perfil do pode ser obtido de duas maneiras: usando uma `tntid` ou um `thirdPartyId`.
+A [!DNL Target] O perfil do pode ser obtido de três maneiras: usando uma `[!DNL Experience Cloud Visitor ID]` (`ECID`), `tntid` ou `thirdPartyId`.
+
+## Uso de um [!DNL Experience Cloud Visitor ID] (ECID)
+
+Você pode buscar um perfil com base na variável `ECID`. O método HTTP deve ser GET.
+
+O URL é semelhante ao seguinte exemplo:
+
+```
+https://<clientCode>.tt.omtrdc.net/rest/v1/profiles/marketingCloudVisitorId/<ECID>?client=<clientCode>
+```
+
+Substituir `<clientCode>` com o seu [!DNL Target] [!UICONTROL Código do cliente] e `<ECID>` com o seu [!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID]).
 
 ## Uso de um tntid
 
@@ -24,7 +36,7 @@ O exemplo a seguir mostra o formato da solicitação para buscar um perfil usand
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/your-tnt-id?client=<your-client-code>
 ```
 
-Substituir `<your-client-code>` e `your-tnt-id` e acione uma solicitação do GET. Este é um exemplo de chamada de busca de perfil usando um `tntid`;
+Substituir `<your-client-code>` e `your-tnt-id` e acione uma solicitação do GET. Este é um exemplo de chamada de busca de perfil usando um `tntid`:
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046?client=<your-client-code>
