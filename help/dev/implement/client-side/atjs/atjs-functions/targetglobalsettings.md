@@ -4,10 +4,10 @@ description: Use o [!UICONTROL targetGlobalSettings()] para a [!DNL Adobe Target
 title: Como usar o [!UICONTROL targetGlobalSettings()] Função?
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
-source-git-commit: d5d25c6a559dafe446d26cca6c03d8e693cbd508
+source-git-commit: 12cf430b65695d38d1651f2a97df418d82d231f3
 workflow-type: tm+mt
-source-wordcount: '2521'
-ht-degree: 70%
+source-wordcount: '2568'
+ht-degree: 58%
 
 ---
 
@@ -18,6 +18,18 @@ ht-degree: 70%
 ## Configurações
 
 É possível anular pelas seguintes configurações:
+
+### aepSandboxId
+
+* **Tipo**: String
+* **Valor padrão**: nulo
+* **Descrição**: parâmetro opcional usado para enviar [!DNL Adobe Experience Platform] ID da sandbox a ser compartilhada [!DNL Adobe Experience Platform] destinos criados na sandbox não padrão com o [!DNL Target]. Se `aepSandboxId` é não nulo, `aepSandboxName` também devem ser fornecidas.
+
+### aepSandboxName
+
+* **Tipo**: String
+* **Valor padrão**: nulo
+* **Descrição**: parâmetro opcional usado para enviar [!DNL Adobe Experience Platform] nome da sandbox para compartilhar [!DNL Adobe Experience Platform] destinos criados na sandbox não padrão com o [!DNL Target]. Se `aepSandboxName` é não nulo, `aepSandboxId` também devem ser fornecidas.
 
 ### artifactLocation
 
@@ -90,11 +102,11 @@ ht-degree: 70%
 
   Somente no lado do servidor é o método de decisão padrão definido imediatamente quando a at.js 2.5+ é implementada e implantada em suas propriedades da Web.
 
-  Usar somente no lado do servidor como configuração padrão significa que todas as decisões são tomadas na rede de borda do [!DNL Target], o que envolve uma chamada de servidor de bloqueio. Essa abordagem pode apresentar latência incremental, mas também oferece benefícios significativos, como a capacidade de aplicar [!DNL Target]Os recursos de aprendizado de máquina do que incluem [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) e [Direcionamento automático](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) atividades.
+  Usar somente no lado do servidor como configuração padrão significa que todas as decisões são tomadas no [!DNL Target] rede de borda, que envolve uma chamada de servidor de bloqueio. Essa abordagem pode apresentar latência incremental, mas também oferece benefícios significativos, como a capacidade de aplicar [!DNL Target]Os recursos de aprendizado de máquina do que incluem [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) e [Direcionamento automático](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html) atividades.
 
   Além disso, aprimorar suas experiências personalizadas usando [!DNL Target]O perfil de usuário do, que é mantido em sessões e canais, pode fornecer resultados significativos para sua empresa.
 
-  Por fim, somente no lado do servidor permite usar a Adobe Experience Cloud e refinar públicos-alvo que podem ser direcionados por meio de segmentos do Audience Manager e do Adobe Analytics.
+  Por fim, somente no lado do servidor permite usar a Adobe Experience Cloud e refinar públicos-alvo que podem ser direcionados por meio de segmentos Audience Manager e Adobe Analytics.
 
   **Somente no dispositivo**:
 
@@ -110,7 +122,7 @@ ht-degree: 70%
 
   O método de decisão híbrido é o que deve ser definido na at.js 2.5+, quando a tomada de decisão no dispositivo e as atividades que exigem uma chamada de rede para o [!DNL Adobe Target] A rede de borda deve ser executada.
 
-  Ao gerenciar atividades de decisão no dispositivo e atividades no lado do servidor, você pode achar complicado e cansativo pensar em como implantar e provisionar o [!DNL Target] em suas páginas. Com o método de decisão híbrido, o [!DNL Target] sabe quando deve fazer uma chamada de servidor para a rede de borda do , no caso de atividades que exigem execução no lado do servidor, e quando deve apenas executar decisões no dispositivo.[!DNL Adobe Target]
+  Ao gerenciar atividades de decisão no dispositivo e atividades no lado do servidor, você pode achar complicado e cansativo pensar em como implantar e provisionar o [!DNL Target] em suas páginas. Com o método de decisão híbrido, [!DNL Target] O sabe quando deve fazer uma chamada de servidor para o [!DNL Adobe Target] Rede de borda para atividades que exigem execução no lado do servidor e também quando executar apenas decisões no dispositivo.
 
   O artefato de regras JSON inclui metadados para informar à at.js se uma mbox tem uma atividade do lado do servidor em execução ou uma atividade de decisão no dispositivo. Esse método de decisão garante que as atividades que você pretende entregar rapidamente sejam realizadas por meio de decisões no dispositivo e, para atividades que exigem personalização mais avançada orientada por aprendizado de máquina, essas atividades são realizadas por meio da [!DNL Adobe Target] Rede de borda.
 
@@ -166,7 +178,7 @@ ht-degree: 70%
 
 * **Tipo**: Booleano
 * **Valor padrão**: falso
-* **Descrição**[!DNL Target]: indica se o deve chamar a função `isOptedOut()` da API de visitante. Isso é parte da ativação do gráfico de dispositivos.
+* **Descrição**: indica se [!DNL Target] deve chamar a API do visitante `isOptedOut()` função. Isso é parte da ativação do gráfico de dispositivos.
 
 ### overrideMboxEdgeServer
 
@@ -214,7 +226,7 @@ ht-degree: 70%
 
 * **Tipo**: String
 * **Valor padrão**: valor definido pela interface do usuário.
-* **Descrição**[!DNL Target]: representa o servidor de borda do 
+* **Descrição**: representa o [!DNL Target] servidor de borda.
 
 ### serverState
 
@@ -304,7 +316,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-Após at.js processar `window.targetGlobalSettings.dataProviders`[!DNL Target], a solicitação do conterá um novo parâmetro: `t1=1`.
+Após at.js processos `window.targetGlobalSettings.dataProviders`, o [!DNL Target] conterá um novo parâmetro: `t1=1`.
 
 Veja a seguir um exemplo de se os parâmetros que você deseja adicionar à variável [!DNL Target] As solicitações de são buscadas de um serviço de terceiros, como Bluekai, Demandbase e assim por diante:
 
@@ -327,7 +339,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-Após at.js processar `window.targetGlobalSettings.dataProviders`[!DNL Target], a solicitação do conterá novos parâmetros: `t1=1`, `t2=2` e `t3=3`.
+Após at.js processos `window.targetGlobalSettings.dataProviders`, o [!DNL Target] A solicitação conterá parâmetros adicionais: `t1=1`, `t2=2` e `t3=3`.
 
 O exemplo a seguir usa provedores de dados para coletar dados da API de tempo e enviá-los como parâmetros em uma [!DNL Target] solicitação. A variável [!DNL Target] terá parâmetros adicionais, como `country` e `weatherCondition`.
 
@@ -398,11 +410,11 @@ window.targetGlobalSettings = {
 ...
 ```
 
-Depois que as configurações `cspScriptNonce` e `cspStyleNonce` são especificadas, a at.js 2.3.0+ as define como atributos nonce em todas as tags SCRIPT e STYLE inseridas no DOM ao aplicar ofertas do [!DNL Target]
+Depois `cspScriptNonce` e `cspStyleNonce` forem especificadas, a at.js 2.3.0+ as definirá como atributos nonce em todas as tags SCRIPT e STYLE inseridas no DOM ao aplicar [!DNL Target] ofertas.
 
 ## Personalização híbrida
 
-O `serverState`[!DNL Target] é uma configuração disponível na at.js v2.2+ que pode ser usada para otimizar o desempenho da página quando uma integração híbrida do é implementada. A integração híbrida significa que você está usando a at.js v2.2+ no lado do cliente e a API de entrega ou uma [!DNL Target] SDK no lado do servidor para fornecer experiências. O `serverState` fornece ao at.js v2.2+ a capacidade de aplicar experiências diretamente de conteúdo buscado no lado do servidor e retornado ao cliente como parte da página que está sendo veiculada.
+`serverState` O é uma configuração disponível na at.js v2.2+ que pode ser usada para otimizar o desempenho da página quando uma integração híbrida do [!DNL Target] está implementado. A integração híbrida significa que você está usando a at.js v2.2+ no lado do cliente e a API de entrega ou uma [!DNL Target] SDK no lado do servidor para fornecer experiências. O `serverState` fornece ao at.js v2.2+ a capacidade de aplicar experiências diretamente de conteúdo buscado no lado do servidor e retornado ao cliente como parte da página que está sendo veiculada.
 
 ### Pré-requisitos
 
@@ -525,13 +537,13 @@ Considere o seguinte ao usar `serverState`:
    * Atividades criadas pelo VEC que são executadas no carregamento da página.
    * Exibições pré-buscadas.
 
-     No caso de aplicativos de página única que usam Exibições do [!DNL Target] e `triggerView()` na API da at.js, a at.js v2.2 armazena em cache o conteúdo de todas as exibições pré-buscadas no lado do servidor e as aplica assim que cada exibição é acionada por meio do `triggerView()`, novamente sem disparar chamadas adicionais de busca de conteúdo para o [!DNL Target].
+     No caso do SPA, utilizar [!DNL Target] Exibições e `triggerView()` na API da at.js, a at.js v2.2 armazena em cache o conteúdo de todas as exibições pré-buscadas no lado do servidor e as aplica assim que cada exibição é acionada por meio do `triggerView()`, novamente sem disparar chamadas adicionais de busca de conteúdo para o [!DNL Target].
 
    * **Observação**: Atualmente, as mboxes recuperadas no lado do servidor não são compatíveis com o `serverState`.
 
-* Ao aplicar as ofertas `serverState`, a at.js considera as configurações `pageLoadEnabled` e `viewsEnabled`, por exemplo, as ofertas de carregamento de página não serão aplicadas se a configuração `pageLoadEnabled` for definida como falso.
+* Ao aplicar `serverState` ofertas, a at.js considera `pageLoadEnabled` e `viewsEnabled` configurações, por exemplo, as ofertas de Carregamento de página não serão aplicadas se a variável `pageLoadEnabled` é falso.
 
-  Para ativar essas configurações, habilite a alternância em **Administração > Implementação > Edição > Carregamento de página ativado**.
+  Para ativar essas configurações, habilite a alternância no **Administração > Implementação > Editar > Carregamento de página ativado**.
 
   ![Configurações do carregamento de página ativado](../../assets/page-load-enabled-setting.png)
 
