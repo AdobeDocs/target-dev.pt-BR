@@ -3,7 +3,8 @@ title: API de atualização de perfil em massa do Adobe Target
 description: Saiba como usar o [!DNL Adobe Target] [!UICONTROL API de atualização de perfil em massa] para enviar os dados de perfil de vários visitantes para [!DNL Target] para uso no direcionamento.
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
-source-git-commit: a6f47c99cfc419771c1a6674990c415a2035ab4e
+exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
+source-git-commit: 32a6d14c911b977aea96b0fb6832929892d70d5d
 workflow-type: tm+mt
 source-wordcount: '828'
 ht-degree: 8%
@@ -18,8 +19,8 @@ Usar o [!UICONTROL API de atualização de perfil em massa], você pode enviar d
 
 | Versão  | Exemplo de URL | Recursos |
 | --- | --- | --- |
-| v1 | `http://CLIENTCODE.tt.omtrdc.net/m2/ CLIENTCODE/profile/batchUpdate` | Suporte somente para atualização de perfil em massa. |
-| v2 | `http://CLIENTCODE.tt.omtrdc.net/m2/ CLIENTCODE/v2/profile/batchUpdate` | <ul><li>Caso não seja encontrado, criar perfil.</li><li>Atualização de status por linha.</li></ul> |
+| v1 | `http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/profile/batchUpdate` | Suporte somente para atualização de perfil em massa. |
+| v2 | `http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate` | <ul><li>Caso não seja encontrado, criar perfil.</li><li>Atualização de status por linha.</li></ul> |
 
 >[!NOTE]
 >
