@@ -4,9 +4,9 @@ description: Saiba como usar o [!DNL Adobe Target] [!UICONTROL API de atualizaç
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 32a6d14c911b977aea96b0fb6832929892d70d5d
+source-git-commit: 3d90616b0a920abea380d4cfcd1227eafde86adb
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '846'
 ht-degree: 8%
 
 ---
@@ -34,6 +34,7 @@ Usar o [!UICONTROL API de atualização de perfil em massa], você pode enviar d
 ## Avisos
 
 * O tamanho do arquivo em lote deve ser menor que 50 MB. Além disso, o número total de linhas não deve ultrapassar 500.000 por carregamento.
+* As atualizações geralmente ocorrem em menos de uma hora, mas podem levar até 24 horas para serem refletidas.
 * Não há limite para o número ou as linhas que você pode fazer upload por um período de 24 horas em lotes subsequentes. No entanto, o processo de ingestão pode ter o fluxo controlado em horário comercial, para garantir que outros processos sejam executados com eficiência.
 * As chamadas de atualização em lote v2 consecutivas sem chamadas da mbox entre as mesmas thirdPartyIds substituindo as propriedades atualizadas na primeira chamada de atualização em lote.
 * [!DNL Adobe] A não garante que 100% dos dados do perfil do lote sejam integrados e retidos no Target e, portanto, estejam disponíveis para uso no direcionamento. No design atual, há a possibilidade de uma pequena porcentagem de dados (até 0,1% de grandes lotes de produção) não ser integrada ou retida.
