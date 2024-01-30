@@ -3,9 +3,9 @@ title: Solução de problemas da decisão no dispositivo
 description: Saiba como solucionar problemas [!UICONTROL decisão no dispositivo]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 1d892d4d4d6f370f7772d0308ee0dd0d5c12e700
 workflow-type: tm+mt
-source-wordcount: '1161'
+source-wordcount: '1177'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ Habilitar rastreamentos resultará em informações adicionais de [!DNL Adobe Ta
 
 ## 3. Verifique se o [!UICONTROL decisão no dispositivo] *artefato de regra* foi recuperado e armazenado em cache de acordo com o intervalo de sondagem definido.
 
-1. Aguarde a duração do intervalo de sondagem (o padrão é 5 minutos) e verifique se o artefato está sendo buscado pelo SDK. Os mesmos logs de terminal serão gerados.
+1. Aguarde a duração do intervalo de pesquisa (o padrão é 20 minutos) e verifique se o artefato está sendo buscado pelo SDK. Os mesmos logs de terminal serão gerados.
 
    Além disso, as informações do[!DNL Target]O rastreamento deve ser enviado para o terminal com detalhes sobre o artefato da regra.
 
