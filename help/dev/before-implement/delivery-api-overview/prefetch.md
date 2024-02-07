@@ -4,9 +4,9 @@ description: Como usar a pré-busca no [!UICONTROL API de entrega do Adobe Targe
 keywords: api de entrega
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 91592a86957770c4d189115fd3ebda61ed52dd38
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '553'
 ht-degree: 0%
 
 ---
@@ -121,6 +121,51 @@ No prazo de `prefetch` adicione um ou mais `mboxes` você deseja realizar uma bu
 ```
 
 Na resposta, você verá o `content` campo que contém a experiência a ser mostrada ao usuário para um determinado `mbox`. Isso é muito útil quando armazenado em cache no servidor, para que, quando um usuário interagir com o aplicativo da Web ou móvel em uma sessão e visitar um `mbox` em qualquer página específica do aplicativo, a experiência pode ser entregue do cache em vez de criar outra [!UICONTROL API de entrega do Adobe Target] chame. No entanto, quando uma experiência é entregue ao usuário pelo `mbox`, um `notification` serão enviados por uma chamada da API de entrega para que o registro de impressões ocorra. Isso ocorre porque a resposta do `prefetch` chamadas são armazenadas em cache, o que significa que o usuário não viu as experiências no momento em que `prefetch` ocorre a chamada. Para saber mais sobre a `notification` processo, consulte [Notificação](notifications.md).
+
+## Buscar previamente mboxes com métricas clickTrack ao usar [!UICONTROL Analytics for Target] (A4T)
+
+[[!UICONTROL Adobe Analytics para Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} O (A4T) é uma integração entre soluções que permite criar atividades com base no [!DNL Analytics] métricas de conversão e segmentos de público-alvo.
+
+O trecho de código a seguir permite realizar uma busca prévia por uma mbox contendo `clickTrack` métricas para notificar [!DNL Analytics] que uma oferta foi clicada:
+
+```
+{
+  "prefetch": {
+    "mboxes": [
+      {
+        "index": 0,
+        "name": "<mboxName>",
+        "options": [
+           ...
+        ],
+        "metrics": [
+          {
+            "type": "click",
+            "eventToken": "<eventToken>",
+             "analytics": {
+               "payload": {
+                 "pe": "tnt",
+                 "tnta": "..."
+               }
+             }
+          },
+          }
+        ],
+        "analytics": {
+          "payload": {
+            "pe": "tnt",
+            "tnta": "347565:1:0|2,347565:1:0|1"
+          }
+        }
+      }
+    ]
+  }
+}
+```
+
+>[!NOTE]
+>
+>A pré-busca de uma mbox contém a variável [!DNL Analytics] carga útil somente para atividades qualificadas. A busca prévia de métricas de sucesso para atividades ainda não qualificadas gera inconsistências de relatório.
 
 ## Visualizações de pré-busca
 
