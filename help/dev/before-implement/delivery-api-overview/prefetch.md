@@ -4,9 +4,9 @@ description: Como usar a pré-busca no [!UICONTROL API de entrega do Adobe Targe
 keywords: api de entrega
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 91592a86957770c4d189115fd3ebda61ed52dd38
+source-git-commit: 803723d95d50cc39101d1646232446fbb0254385
 workflow-type: tm+mt
-source-wordcount: '553'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
@@ -126,7 +126,7 @@ Na resposta, você verá o `content` campo que contém a experiência a ser most
 
 [[!UICONTROL Adobe Analytics para Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} O (A4T) é uma integração entre soluções que permite criar atividades com base no [!DNL Analytics] métricas de conversão e segmentos de público-alvo.
 
-O trecho de código a seguir permite realizar uma busca prévia por uma mbox contendo `clickTrack` métricas para notificar [!DNL Analytics] que uma oferta foi clicada:
+O trecho de código a seguir é uma resposta de uma busca prévia por uma mbox que contém `clickTrack` métricas para notificar [!DNL Analytics] que uma oferta foi clicada:
 
 ```
 {
