@@ -4,28 +4,28 @@ description: Como usar a pré-busca no [!UICONTROL API de entrega do Adobe Targe
 keywords: api de entrega
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 9a3068b0765c238daa2f9af904c0f6f15b57cc24
+source-git-commit: 901b56a91c69c9c5a2bd322aa999d45c47058a5e
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
 
 # Pré-busca
 
-A pré-busca permite que clientes como aplicativos e servidores móveis busquem conteúdo para várias mboxes ou exibições em uma solicitação, armazenem em cache localmente e notifiquem posteriormente [!DNL Target] quando o usuário visita essas mboxes ou visualizações.
+A pré-busca permite que clientes como aplicativos e servidores móveis busquem conteúdo para várias mboxes ou exibições em uma solicitação, armazenem em cache localmente e notifiquem posteriormente [!DNL Target] quando o visitante visita essas mboxes ou visualizações.
 
-Ao utilizar a busca prévia, é importante se familiarizar com os seguintes termos:
+Ao usar a busca prévia, é importante se familiarizar com os seguintes termos:
 
 | Nome do campo | Descrição |
 | --- | --- |
-| `prefetch` | Lista de mboxes e exibições que devem ser buscadas, mas não devem ser marcadas como visitadas. A variável [!DNL Target] Edge retorna um `eventToke`n para cada mbox ou exibição existente na matriz de busca prévia. |
+| `prefetch` | Lista de mboxes e exibições que devem ser buscadas, mas não devem ser marcadas como visitadas. A variável [!DNL Target] Edge retorna um `eventToken` para cada mbox ou exibição existente na matriz de busca prévia. |
 | `notifications` | Lista de mboxes e exibições que foram previamente buscadas e devem ser marcadas como visitadas. |
 | `eventToken` | Um token criptografado com hash que é retornado quando o conteúdo é buscado previamente. Este token deve ser enviado de volta para [!DNL Target] no `notifications` matriz. |
 
 ## Buscar previamente mboxes
 
-Clientes como aplicativos e servidores móveis podem realizar uma busca prévia por várias mboxes para um determinado usuário em uma sessão e armazená-las em cache para evitar várias chamadas para o [!UICONTROL API de entrega do Adobe Target].
+Os clientes, como aplicativos e servidores móveis, podem realizar a busca prévia de várias mboxes para um determinado visitante em uma sessão e armazená-las em cache para evitar várias chamadas para o [!UICONTROL API de entrega do Adobe Target].
 
 ```
 curl -X POST \
@@ -69,7 +69,7 @@ curl -X POST \
 }'
 ```
 
-No prazo de `prefetch` adicione um ou mais `mboxes` você deseja realizar uma busca prévia de uma só vez para um usuário em uma sessão. Depois de realizar a busca prévia para eles `mboxes` você receberá a seguinte resposta:
+No prazo de `prefetch` adicione um ou mais `mboxes` você deseja realizar uma busca prévia pelo menos uma vez para um visitante em uma sessão. Depois de realizar a busca prévia para esses `mboxes`, você receberá a seguinte resposta:
 
 ```
 {
@@ -120,9 +120,9 @@ No prazo de `prefetch` adicione um ou mais `mboxes` você deseja realizar uma bu
 }
 ```
 
-Na resposta, você verá o `content` campo que contém a experiência a ser mostrada ao usuário para um determinado `mbox`. Isso é muito útil quando armazenado em cache no servidor, para que, quando um usuário interagir com o aplicativo da Web ou móvel em uma sessão e visitar um `mbox` em qualquer página específica do aplicativo, a experiência pode ser entregue do cache em vez de criar outra [!UICONTROL API de entrega do Adobe Target] chame. No entanto, quando uma experiência é entregue ao usuário pelo `mbox`, um `notification` serão enviados por uma chamada da API de entrega para que o registro de impressões ocorra. Isso ocorre porque a resposta do `prefetch` chamadas são armazenadas em cache, o que significa que o usuário não viu as experiências no momento em que `prefetch` ocorre a chamada. Para saber mais sobre a `notification` processo, consulte [Notificação](notifications.md).
+Na resposta, você verá o `content` campo que contém a experiência a ser mostrada ao visitante para um determinado `mbox`. Isso é muito útil quando armazenado em cache no servidor, para que, quando um visitante interagir com o aplicativo da Web ou móvel em uma sessão e visitar um `mbox` em qualquer página específica do aplicativo, a experiência pode ser entregue do cache em vez de criar outra [!UICONTROL API de entrega do Adobe Target] chame. No entanto, quando uma experiência é entregue ao visitante pelo `mbox`, um `notification` é enviado por meio de uma chamada da API de entrega para que ocorra o registro de impressões. Isso ocorre porque a resposta do `prefetch` As chamadas de são armazenadas em cache, o que significa que o visitante não viu as experiências no momento em que `prefetch` ocorre a chamada. Para saber mais sobre o `notification` processo, consulte [Notificação](notifications.md).
 
-## Buscar previamente mboxes com métricas clickTrack ao usar [!UICONTROL Analytics for Target] (A4T)
+## Buscar previamente mboxes com `clickTrack` métricas ao usar [!UICONTROL Analytics for Target] (A4T)
 
 [[!UICONTROL Adobe Analytics para Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} O (A4T) é uma integração entre soluções que permite criar atividades com base no [!DNL Analytics] métricas de conversão e segmentos de público-alvo.
 
