@@ -4,9 +4,9 @@ description: Como usar a pré-busca no [!UICONTROL API de entrega do Adobe Targe
 keywords: api de entrega
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-source-git-commit: 901b56a91c69c9c5a2bd322aa999d45c47058a5e
+source-git-commit: 4ff2746b8b485fe3d845337f06b5b0c1c8d411ad
 workflow-type: tm+mt
-source-wordcount: '547'
+source-wordcount: '549'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Ao usar a busca prévia, é importante se familiarizar com os seguintes termos:
 
 Os clientes, como aplicativos e servidores móveis, podem realizar a busca prévia de várias mboxes para um determinado visitante em uma sessão e armazená-las em cache para evitar várias chamadas para o [!UICONTROL API de entrega do Adobe Target].
 
-```
+```shell shell-session
 curl -X POST \
 'https://demo.tt.omtrdc.net/rest/v1/delivery?client=demo&sessionId=7abf6304b2714215b1fd39a870f01afc#1555632114' \
 -H 'Content-Type: application/json' \
@@ -71,7 +71,7 @@ curl -X POST \
 
 No prazo de `prefetch` adicione um ou mais `mboxes` você deseja realizar uma busca prévia pelo menos uma vez para um visitante em uma sessão. Depois de realizar a busca prévia para esses `mboxes`, você receberá a seguinte resposta:
 
-```
+```JSON {line-numbers="true"}
 {
     "status": 200,
     "requestId": "5efee0d8-3779-4b12-a74e-e04848faf191",
@@ -128,7 +128,7 @@ Na resposta, você verá o `content` campo que contém a experiência a ser most
 
 O trecho de código a seguir é uma resposta de uma busca prévia de uma mbox que contém `clickTrack` métricas para notificar [!DNL Analytics] que uma oferta foi clicada:
 
-```
+```JSON {line-numbers="true"}
 {
   "prefetch": {
     "mboxes": [
@@ -169,9 +169,9 @@ O trecho de código a seguir é uma resposta de uma busca prévia de uma mbox qu
 
 ## Visualizações de pré-busca
 
-As exibições são compatíveis com Aplicativos de página única (SPA) e aplicativos móveis com mais facilidade. As exibições podem ser vistas como um grupo lógico de elementos visuais que, juntos, constituem uma experiência de SPA ou móvel. Agora, por meio da API de entrega, o VEC criou atividades AB &amp; XT com modificações no [Visualizações para SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) O agora pode ser buscado previamente.
+As exibições são compatíveis com Aplicativos de página única (SPA) e aplicativos móveis com mais facilidade. As exibições podem ser vistas como um grupo lógico de elementos visuais que, juntos, constituem uma experiência de SPA ou móvel. Agora, por meio da API de entrega, o VEC [[!UICONTROL Teste A/B]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} and [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T atividades com modificações em [Visualizações para SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) O agora pode ser buscado previamente.
 
-```
+```shell  {line-numbers="true"}
 curl -X POST \
   'https://demo.tt.omtrdc.net/rest/v1/delivery?client=demo&sessionId=a3e7368c62d944c0855d424cd7a03ab0' \
   -H 'Content-Type: application/json' \
@@ -199,9 +199,9 @@ curl -X POST \
 }'
 ```
 
-O exemplo de chamada acima buscará previamente todas as exibições criadas pelo VEC do SPA para atividades AB e XT para exibição na Web `channel`. Observe na chamada que queremos buscar previamente todas as exibições das atividades AB ou XT com as quais um visitante `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` que está visitando o `url`:`https://target.enablementadobe.com/react/demo/#/` qualifica para.
+A chamada de exemplo acima busca previamente todas as exibições criadas pelo VEC do SPA para [!UICONTROL Teste A/B] e atividades de XT para exibir na Web `channel`. Observe que a chamada busca previamente todas as exibições da [!UICONTROL Teste A/B] ou atividades XT que um visitante com `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` que está visitando o `url`:`https://target.enablementadobe.com/react/demo/#/` qualifica para.
 
-```
+```JSON  {line-numbers="true"}
 {
     "status": 200,
     "requestId": "14ce028e-d2d2-4504-b3da-32740fa8dd61",
@@ -280,4 +280,4 @@ O exemplo de chamada acima buscará previamente todas as exibições criadas pel
 }
 ```
 
-No `content` da resposta, observe metadados como `type`, `selector`, `cssSelector`, e `content`, que são usados para renderizar a experiência para o usuário final quando um usuário visita sua página. Observe que `prefetched` o conteúdo pode ser armazenado em cache e renderizado para o usuário quando necessário.
+No `content` da resposta, observe metadados como `type`, `selector`, `cssSelector`, e `content`, que são usados para renderizar a experiência para o seu visitante quando um usuário visita sua página. Observe que `prefetched` o conteúdo pode ser armazenado em cache e renderizado para o usuário quando necessário.
