@@ -4,10 +4,10 @@ description: Use os links de visualização móvel para realizar tarefas complet
 title: Como usar links de visualização móvel no [!DNL Adobe Target] Dispositivo móvel?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: 0bcfa16cb79644e7ce10e33daf6c8385104c197f
+source-git-commit: 15e42d0fb049f9243ff5468ff5f22a8e79c55c79
 workflow-type: tm+mt
-source-wordcount: '548'
-ht-degree: 27%
+source-wordcount: '508'
+ht-degree: 23%
 
 ---
 
@@ -38,15 +38,15 @@ A funcionalidade de visualização móvel permite que você teste completamente 
 
 ## Gerar um link de visualização
 
-1. No [!DNL Target] clique no link **[!UICONTROL Mais opções]** (as reticências verticais) e selecione **[!UICONTROL Criar link de visualização móvel]**.
+1. No [!DNL Target] clique no link **[!UICONTROL More Options]** (as reticências verticais) e selecione **[!UICONTROL Create Mobile Preview Link]**.
 
    ![imagem alt](assets/mobile-preview-create.png)
 
-1. Selecione as atividades que deseja visualizar e clique em **[!UICONTROL Gerar link de visualização móvel]**.
+1. Selecione as atividades que deseja visualizar e clique em **[!UICONTROL Generate Mobile Preview Link]**.
 
    >[!NOTE]
    >
-   >Você pode selecionar somente Baseado em formulário [!UICONTROL Teste A/B] e [!UICONTROL Direcionamento de experiência] (XT) Atividades.
+   >Você pode selecionar somente Baseado em formulário [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] (XT) Atividades.
 
    ![imagem alt](assets/mobile-preview-select-activities.png)
 
@@ -56,7 +56,7 @@ A funcionalidade de visualização móvel permite que você teste completamente 
 
    ![imagem alt](assets/mobile-preview-enter-url-scheme.png)
 
-1. Clique em **[!UICONTROL Gerar link de visualização móvel]**, depois copie o link.
+1. Clique em **[!UICONTROL Generate Mobile Preview Link]**, depois copie o link.
 
    ![imagem alt](assets/mobile-preview-generate-and-copy.png)
 
@@ -70,14 +70,14 @@ Abra o link em um navegador móvel em um dispositivo onde você tem seu aplicati
 
    |![link direto da visualização 1](assets/mobile-preview-open-deeplink.png)|![link direto da visualização 2](assets/mobile-preview-open-app.png)|
 
-   Seu aplicativo abre e inicia o [!DNL Target] [!UICONTROL Modo de visualização móvel].
+   Seu aplicativo abre e inicia o [!DNL Target] [!UICONTROL Mobile Preview Mode].
 
-1. Selecione a combinação de experiências que deseja ver e clique em **[!UICONTROL Executar experiências]**.
+1. Selecione a combinação de experiências que deseja ver e clique em **[!UICONTROL Launch Experiences]**.
 
    |![visualização móvel 1](assets/mobile-preview-experience-selection-1.png)|![visualização móvel 2](assets/mobile-preview-experience-result-1-france.png)|![visualização móvel 3](assets/mobile-preview-experience-result-1-shipfree.png)|
 |![visualização móvel 4](assets/mobile-preview-experience-selection-2.png)|![visualização móvel 5](assets/mobile-preview-experience-result-2-aus.png)|![visualização móvel 6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## Limitações
 
-* A visualização deve carregar novamente para que o novo conteúdo seja exibido após o botão **[!UICONTROL Executar experiências]** é clicado. O modo mais fácil é mudar para uma tela diferente e voltar para a tela onde você esperava a mudança acontecer.
+* A visualização deve ser carregada novamente para que o novo conteúdo seja exibido após a **[!UICONTROL Launch Experiences]** é clicado. O modo mais fácil é mudar para uma tela diferente e voltar para a tela onde você esperava a mudança acontecer.
 * A visualização móvel não é suportada em versões do Android anteriores a API-19 (KitKat).
