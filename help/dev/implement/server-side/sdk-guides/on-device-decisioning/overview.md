@@ -1,31 +1,31 @@
 ---
 keywords: lado do servidor, lado do servidor, sdk, sdks, no dispositivo, decisão, no dispositivo, ondevice, latência zero, latência, próximo a zero, node.js, lado do servidor3
-description: Saiba como usar o [!UICONTROL [!UICONTROL decisão no dispositivo]] para armazenar em cache o [!DNL Target] Atividades A/B e MVT no servidor para executar a decisão na memória com latência próxima a zero.
+description: Saiba como usar o [!UICONTROL [!UICONTROL on-device decisioning]] para armazenar em cache o [!DNL Target] Atividades A/B e MVT no servidor para executar a decisão na memória com latência próxima a zero.
 title: O que é a Decisão no dispositivo?
 feature: Implement Server-side
 exl-id: 22ed3072-56f0-4075-9d1a-d642afe3b649
-source-git-commit: 79ffa3f58d780f587fe1202b82d3860395504dfe
+source-git-commit: ff0becf3fe3a6fd6694e13243b6a93b910316434
 workflow-type: tm+mt
-source-wordcount: '1214'
-ht-degree: 8%
+source-wordcount: '1022'
+ht-degree: 9%
 
 ---
 
 # Visão geral da decisão no dispositivo
 
-A próxima geração [!DNL Adobe Target] Os SDKs agora oferecem [!UICONTROL decisão no dispositivo], que oferece a capacidade de armazenar em cache suas campanhas A/B e de Direcionamento de experiência (XT) em seu servidor e executar decisões na memória com latência próxima a zero, sem bloquear solicitações de rede para [!DNL Adobe Target]Rede de borda da.
+A próxima geração [!DNL Adobe Target] Os SDKs agora oferecem [!UICONTROL on-device decisioning], que oferece a capacidade de armazenar em cache suas campanhas A/B e de Direcionamento de experiência (XT) em seu servidor e executar decisões na memória com latência próxima a zero, sem bloquear solicitações de rede para [!DNL Adobe Target]Rede de borda da.
 
-[!DNL Adobe Target] O também oferece a flexibilidade de fornecer a experiência mais relevante e atualizada de suas campanhas de experimentação e personalização orientadas por aprendizado de máquina por meio de uma chamada de servidor em tempo real. Em outras palavras, quando o desempenho é mais importante, você pode optar por utilizar o [!UICONTROL decisão no dispositivo], mas quando a experiência mais relevante e atualizada for necessária, uma chamada de servidor poderá ser feita. Consulte [quando usar a decisão no dispositivo e na borda](../../sdk-guides/on-device-decisioning/supported-features.md) para saber mais sobre casos de uso que justificam o uso de um em detrimento do outro.
+[!DNL Adobe Target] O também oferece a flexibilidade de fornecer a experiência mais relevante e atualizada de suas campanhas de experimentação e personalização orientadas por aprendizado de máquina por meio de uma chamada de servidor em tempo real. Em outras palavras, quando o desempenho é mais importante, você pode optar por utilizar o [!UICONTROL on-device decisioning], mas quando a experiência mais relevante e atualizada for necessária, uma chamada de servidor poderá ser feita. Consulte [quando usar a decisão no dispositivo e na borda](../../sdk-guides/on-device-decisioning/supported-features.md) para saber mais sobre casos de uso que justificam o uso de um em detrimento do outro.
 
 >[!NOTE]
 >
->A decisão no dispositivo está disponível para implementações do lado do cliente e do lado do servidor. Este artigo descreve [!UICONTROL decisão no dispositivo] para o lado do servidor. Para obter informações sobre [!UICONTROL decisão no dispositivo] para obter informações sobre o cliente, consulte a documentação de implementação do cliente. [aqui](../../../client-side/atjs/on-device-decisioning/on-device-decisioning.md).
+>A decisão no dispositivo está disponível para implementações do lado do cliente e do lado do servidor. Este artigo descreve [!UICONTROL on-device decisioning] para o lado do servidor. Para obter informações sobre [!UICONTROL on-device decisioning] para obter informações sobre o cliente, consulte a documentação de implementação do cliente. [aqui](../../../client-side/atjs/on-device-decisioning/on-device-decisioning.md).
 
 ## Como funciona?
 
-Ao instalar e inicializar um [!DNL Adobe Target] SDK com [!UICONTROL decisão no dispositivo] habilitado, uma *artefato de regra* O é baixado e armazenado em cache localmente no servidor, a partir do Akamai CDN mais próximo ao servidor. Quando uma solicitação para recuperar um [!DNL Adobe Target] A experiência do é tomada no aplicativo do lado do servidor, a decisão sobre qual conteúdo retornar é tomada na memória, com base nos metadados codificados no artefato de regra em cache, que define todas as [!UICONTROL decisão no dispositivo] Atividades A/B e XT.
+Ao instalar e inicializar um [!DNL Adobe Target] SDK com [!UICONTROL on-device decisioning] habilitado, uma *artefato de regra* O é baixado e armazenado em cache localmente no servidor, a partir do Akamai CDN mais próximo ao servidor. Quando uma solicitação para recuperar um [!DNL Adobe Target] A experiência do é tomada no aplicativo do lado do servidor, a decisão sobre qual conteúdo retornar é tomada na memória, com base nos metadados codificados no artefato de regra em cache, que define todas as [!UICONTROL on-device decisioning] Atividades A/B e XT.
 
-O diagrama a seguir mostra as [!UICONTROL decisão no dispositivo] arquitetura. Clique em para expandir a imagem.
+O diagrama a seguir mostra as [!UICONTROL on-device decisioning] arquitetura. Clique em para expandir a imagem.
 
 (Clique na imagem para expandir até a largura total.)
 
@@ -44,8 +44,8 @@ O diagrama a seguir mostra as [!UICONTROL decisão no dispositivo] arquitetura. 
 
 A decisão no dispositivo é compatível com os seguintes tipos de atividades criadas pelo [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html):
 
-* [!UICONTROL Teste A/B]
-* [!UICONTROL Direcionamento de experiência] (XT)
+* [!UICONTROL A/B Test]
+* [!UICONTROL Experience Targeting] (XT)
 
 ### Método de Alocação
 
@@ -71,13 +71,13 @@ A decisão no dispositivo é compatível com as seguintes regras de público-alv
 | [Intervalo de tempo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | Sim |
 | [Públicos do Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Públicos-alvo da Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager | Não |
 
-## Como provisionar meu cliente para usar [!UICONTROL decisão no dispositivo]?
+## Como provisionar meu cliente para usar [!UICONTROL on-device decisioning]?
 
-A decisão no dispositivo está disponível para todos [!DNL Adobe Target] clientes que usam [!DNL Adobe Target] SDKs do lado do servidor. Para ativar esse recurso, navegue até **[!UICONTROL Administração]** > **[!UICONTROL Implementação]** > **[!UICONTROL Detalhes da conta]** no [!DNL Adobe Target] e habilite a **[!UICONTROL Decisão no dispositivo]** alternar.
+A decisão no dispositivo está disponível para todos [!DNL Adobe Target] clientes que usam [!DNL Adobe Target] SDKs do lado do servidor. Para ativar esse recurso, navegue até **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** no [!DNL Adobe Target] e habilite a **[!UICONTROL On-Device Decisioning]** alternar.
 
 >[!NOTE]
 >
->Você precisa ter um Administrador ou Aprovador *função do usuário* para ativar ou desativar o [!UICONTROL Decisão no dispositivo] alternar.
+>Você precisa ter um Administrador ou Aprovador *função do usuário* para ativar ou desativar o [!UICONTROL On-Device Decisioning] alternar.
 
 ![imagem alt](assets/asset-odd-toggle.png)
 
@@ -85,33 +85,33 @@ Depois de ativar a opção On-Device Decisioning, [!DNL Adobe Target] começará
 
 >[!NOTE]
 >
->Certifique-se de ativar o botão de alternância antes de inicializar o [!DNL Adobe Target] SDK a ser usado [!UICONTROL decisão no dispositivo]. Os artefatos da regra precisarão primeiro ser gerados e propagados para os CDNs do Akamai para que o [!UICONTROL decisão no dispositivo] para trabalhar.
+>Certifique-se de ativar o botão de alternância antes de inicializar o [!DNL Adobe Target] SDK a ser usado [!UICONTROL on-device decisioning]. Os artefatos da regra precisarão primeiro ser gerados e propagados para os CDNs do Akamai para que o [!UICONTROL on-device decisioning] para trabalhar.
 
-### Incluir todos os existentes [!UICONTROL decisão no dispositivo] atividades qualificadas no alternador de artefato
+### Incluir todos os existentes [!UICONTROL on-device decisioning] atividades qualificadas no alternador de artefato
 
-Alternar este item **em** quando você quiser tudo em tempo real [!DNL Target] atividades qualificadas para [!UICONTROL decisão no dispositivo] para ser incluído automaticamente no artefato.
+Alternar este item **em** quando você quiser tudo em tempo real [!DNL Target] atividades qualificadas para [!UICONTROL on-device decisioning] para ser incluído automaticamente no artefato.
 
-Deixando esta alternância **desligado** significa que será necessário recriar e ativar qualquer [!UICONTROL decisão no dispositivo] para que sejam incluídas no artefato de regras gerado.
+Deixando esta alternância **desligado** significa que será necessário recriar e ativar qualquer [!UICONTROL on-device decisioning] para que sejam incluídas no artefato de regras gerado.
 
-## Como faço para saber se uma atividade está [!UICONTROL decisão no dispositivo] capaz?
+## Como faço para saber se uma atividade está [!UICONTROL on-device decisioning] capaz?
 
-Depois de criar uma atividade, um rótulo chamado **[!UICONTROL Método de decisão]**, visível na página de detalhes da atividade, indica se a atividade é [!UICONTROL decisão no dispositivo] capaz.
+Depois de criar uma atividade, um rótulo chamado **[!UICONTROL Decisioning Method]**, visível na página de detalhes da atividade, indica se a atividade é [!UICONTROL on-device decisioning] capaz.
 
 ![imagem alt](assets/asset-odd9.png)
 
-Você também pode ver todas as atividades [!UICONTROL decisão no dispositivo] capaz no **[!UICONTROL Atividades]** adicionando a coluna **[!UICONTROL Método de decisão]** à lista de atividades.
+Você também pode ver todas as atividades [!UICONTROL on-device decisioning] capaz no **[!UICONTROL Activities]** adicionando a coluna **[!UICONTROL Decisioning Method]** à lista de atividades.
 
 ![imagem alt](assets/asset-odd7.png)
 
 >[!NOTE]
 >
->Depois de criar e ativar uma atividade que é [!UICONTROL decisão no dispositivo] Compatível, pode levar de 5 a 10 minutos antes de ser incluído no artefato de regras que é gerado e propagado para os PoPs do Akamai CDN.
+>Depois de criar e ativar uma atividade que é [!UICONTROL on-device decisioning] Compatível, pode levar até 20 minutos antes de ser incluído no artefato de regras que é gerado e propagado para os PoPs do Akamai CDN.
 
-## Qual é o resumo das etapas que preciso seguir para garantir minha [!UICONTROL decisão no dispositivo] As atividades do são entregues com sucesso através do [!DNL Adobe Target]SDK do lado do servidor do?
+## Qual é o resumo das etapas que preciso seguir para garantir minha [!UICONTROL on-device decisioning] As atividades do são entregues com sucesso através do [!DNL Adobe Target]SDK do lado do servidor do?
 
-1. Acesse o [!DNL Adobe Target] e navegue até **[!UICONTROL Administração]** > **[!UICONTROL Implementação]** > **[!UICONTROL Detalhes da conta]** para habilitar o **[!UICONTROL Decisão no dispositivo]** alternar.
-1. Ativar o **[!UICONTROL Incluir todos os existentes [!UICONTROL decisão no dispositivo] atividades qualificadas no artefato]** alternar.
-1. Crie e ative um tipo de atividade compatível com o [!UICONTROL decisão no dispositivo]e verificar se o **[!UICONTROL Método de decisão]** é **[!UICONTROL Decisão no dispositivo]** para essa atividade.
+1. Acesse o [!DNL Adobe Target] e navegue até **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** para habilitar o **[!UICONTROL On-Device Decisioning]** alternar.
+1. Ativar o **[!UICONTROL Include all existing [!UICONTROL on-device decisioning] qualified activities in the artifact]** alternar.
+1. Crie e ative um tipo de atividade compatível com o [!UICONTROL on-device decisioning]e verificar se o **[!UICONTROL Decisioning Method]** é **[!UICONTROL On-Device Decisioning]** para essa atividade.
 1. Instalar e inicializar o [Node.js](../../node-js/overview.md) ou [Java](../../java/overview.md) SDK com `decisioningMethod = on-device`.
 1. Implementar `getOffers()` ou `getAttributes()` no código para recuperar uma experiência no dispositivo.
 1. Implante seu código.
@@ -132,14 +132,14 @@ Neste webinário gravado, [!DNL Adobe Target] especialistas em produtos discutem
 
 ### Tutorial: decisão no dispositivo
 
-[!DNL Adobe Target] [!UICONTROL decisão no dispositivo] permite a entrega de conteúdo com latência próxima a zero.
+[!DNL Adobe Target] [!UICONTROL on-device decisioning] permite a entrega de conteúdo com latência próxima a zero.
 
 Este vídeo de 7 minutos:
 
-* Descreve [!UICONTROL decisão no dispositivo]incluindo a sua comparação com outros métodos de [!DNL Target] implementação
-* Demonstra como ativar [!UICONTROL decisão no dispositivo] no Target
+* Descreve [!UICONTROL on-device decisioning]incluindo a sua comparação com outros métodos de [!DNL Target] implementação
+* Demonstra como ativar [!UICONTROL on-device decisioning] no Target
 * Examina uma amostra de atividade de compositor baseada em formulário que foi configurada com conteúdo JSON
-* Mostra o exemplo de código SDK Node.JS contendo a configuração de chave necessária para [!UICONTROL decisão no dispositivo]
+* Mostra o exemplo de código SDK Node.JS contendo a configuração de chave necessária para [!UICONTROL on-device decisioning]
 * Demonstra resultados em um navegador
 
 >[!VIDEO](https://video.tv.adobe.com/v/329032/?quality=12)
