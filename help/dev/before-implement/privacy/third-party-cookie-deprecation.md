@@ -3,7 +3,7 @@ keywords: Visão geral e referência, cookies, primários, de terceiros, primár
 description: Saiba mais sobre o impacto da descontinuação de cookies de terceiros no [!DNL Adobe Target] (at.js)
 title: O impacto da desativação de cookies de terceiros em [!DNL Adobe Target] (at.js)
 feature: at.js
-source-git-commit: 54647001c4e5dc5ce208430c7fea103a720b0980
+source-git-commit: 705b94d60690a6e32185908c4bc53d8a3cee70bb
 workflow-type: tm+mt
 source-wordcount: '77'
 ht-degree: 0%
