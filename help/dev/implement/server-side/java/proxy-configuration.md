@@ -3,9 +3,9 @@ title: Implementar configuração de proxy no [!DNL Adobe Target] SDK do Java
 description: Saiba como definir a configuração de proxy do TargetClient no [!DNL Adobe Target] SDK do Java.
 feature: APIs/SDKs
 exl-id: 32e8277d-3bba-4621-b9c7-3a49ac48a466
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 59ab3f53e2efcbb9f7b1b2073060bbd6a173e380
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '170'
 ht-degree: 1%
 
 ---
@@ -41,3 +41,17 @@ ClientConfig clientConfig = ClientConfig.builder()
     .build();
 TargetClient targetClient = TargetClient.create(clientConfig);
 ```
+
+## Decisão no dispositivo
+
+Para solicitações de busca do artefato de regras, o proxy deve ser configurado para não armazenar a resposta em cache. No entanto, se não for possível configurar o mecanismo de cache do proxy para essa solicitação, use uma opção de configuração como solução alternativa para ignorar o cache em nível de proxy. Essa solução alternativa adiciona o `Authorization` com um valor de string vazio para a solicitação de regras, o que deve indicar ao proxy que a resposta não deve ser armazenada em cache.
+
+Para habilitar essa solução alternativa, defina o seguinte:
+
+```java {line-numbers="true"}
+ClientConfig.builder()
+    .shouldArtifactRequestBypassProxyCache(true)
+    .build();
+```
+
+
