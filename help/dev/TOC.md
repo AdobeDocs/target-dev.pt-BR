@@ -90,12 +90,12 @@ ht-degree: 45%
       + [Usar uma mbox global por meio de uma implementação herdada](implement/client-side/atjs/global-mbox/mbox-global-target-standard.md)
       + [Envio de parâmetros para uma mbox global](implement/client-side/atjs/global-mbox/pass-parameters-to-global-mbox.md)
       + [Perguntas frequentes sobre a mbox global](implement/client-side/atjs/global-mbox/global-mbox-faq.md)
-+ Implementação no servidor {#server-side}
++ Implementação do lado do servidor {#server-side}
    + [Lado do servidor: implementar a visão geral do Target](implement/server-side/server-side-overview.md)
    + [Introdução aos SDKs do Target](implement/server-side/sdk-guides/getting-started/getting-started.md)
    + [Aplicativos de exemplo](implement/server-side/sdk-guides/sample-apps/sample-apps.md)
    + [Transição de APIs herdadas do Target para o Adobe I/O](implement/server-side/transition-from-target-classic-apis.md)
-   + Princípios fundamentais {#core-principles}
+   + Princípios principais {#core-principles}
       + [Visão geral dos princípios principais](implement/server-side/sdk-guides/core-principles/overview.md)
       + [ID de usuário e segmentação](implement/server-side/sdk-guides/core-principles/user-identification-and-bucketing.md)
       + [Direcionamento de público](implement/server-side/sdk-guides/core-principles/audience-targeting.md)
@@ -108,7 +108,7 @@ ht-degree: 45%
       + [Segmentos do AAM](implement/server-side/sdk-guides/integration-with-experience-cloud/aam-segments.md)
    + Decisão no dispositivo {#on-device-decisioning}
       + [Visão geral da decisão no dispositivo](implement/server-side/sdk-guides/on-device-decisioning/overview.md)
-      + Artefato da regra {#rule-artifact}
+      + Artefato de regra {#rule-artifact}
          + [Visão geral do artefato da regra](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md)
          + [Baixar via Adobe Target SDK](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-sdk.md)
          + [Baixar via carga JSON](implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-json.md)
@@ -120,7 +120,7 @@ ht-degree: 45%
       + [Visão geral dos recursos compatíveis](implement/server-side/sdk-guides/on-device-decisioning/supported-features.md)
       + [Solução de problemas da decisão no dispositivo](implement/server-side/sdk-guides/on-device-decisioning/troubleshooting.md)
       + [Práticas recomendadas](implement/server-side/sdk-guides/best-practices/best-practices.md)
-   + Referência do SDK do Node.js {#node-js}
+   + Referência de SDK do Node.js {#node-js}
       + [Visão geral do SDK do Node.js](implement/server-side/node-js/overview.md)
       + [Instalar o SDK do Node.js](implement/server-side/node-js/install-sdk.md)
       + [Inicializar o SDK do Node.js](implement/server-side/node-js/initialize-sdk.md)
@@ -152,7 +152,7 @@ ht-degree: 45%
       + [Enviar Notificações (.NET)](implement/server-side/net/send-notifications.md)
       + [Eventos do SDK (.NET)](implement/server-side/net/sdk-events.md)
       + [Solicitações Assíncronas (.NET)](implement/server-side/net/asynchronous-requests.md)
-   + Referência do Python SDK {#python}
+   + Referência de Python SDK {#python}
       + [Visão geral do Python SDK](implement/server-side/python/overview.md)
       + [Instalar o Python SDK](implement/server-side/python/install-sdk.md)
       + [Inicializar o Python SDK](implement/server-side/python/initialize-sdk.md)
@@ -176,7 +176,7 @@ ht-degree: 45%
    + [Criar uma AdBox para uma imagem](implement/email/testing-content-with-the-adbox.md)
    + [Testar uma Adbox de imagem de email](implement/email/testing-email-image-adbox.md)
    + [Trabalhar com redirecionadores](implement/email/working-with-redirectors.md)
-+ Guias da API {#api}
++ Guias de API {#api}
    + [Visão geral da API do Target](/help/dev/before-administer/target-api-overview.md)
    + [Configurar autenticação para APIs do Target](/help/dev/before-administer/configure-authentication.md)
    + Guia da API de entrega {#delivery-api}
@@ -202,13 +202,13 @@ ht-degree: 45%
       + [API de atualização de perfil único](/help/dev/administer/profile-api/profile-single-api.md)
       + [API de atualização de perfil em massa](/help/dev/administer/profile-api/profile-bulk-api.md)
    + [API de relatórios](/help/dev/administer/reporting-api/reporting-api.md)
-   + API do Recommendations {#recommendations-api}
+   + API DO Recommendations {#recommendations-api}
       + [Visão geral da API do Recommendations](before-administer/recs-api/overview.md)
       + [Gerencie seu catálogo com APIs](before-administer/recs-api/manage-catalog.md)
       + [Gerenciar critérios personalizados](before-administer/recs-api/manage-custom-criteria.md)
       + [Usar a API de entrega com o Recommendations](before-administer/recs-api/fetch-recs-server-side-delivery-api.md)
       + [API do Recommendations](/help/dev/administer/recommendations-api/recommendations-api.md)
-   + API de modelos {#models-api}
+   + API de Modelos {#models-api}
       + [Visão geral da API de modelos (Incluir na lista de bloqueios)](before-administer/models-api.md)
       + [API de modelos](/help/dev/administer/models-api/models-api-overview.md)
    + [APIs do Adobe Admin Console](/help/dev/before-implement/delivery-api-overview/adobe-console-api.md)

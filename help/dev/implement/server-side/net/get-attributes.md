@@ -1,12 +1,12 @@
 ---
-title: Usar getAttributes no [!DNL Adobe Target] com o SDK do .NET
-description: Saiba como usar getAttributes() para buscar experimentação e experiências personalizadas de [!DNL Target] e extrair valores de atributo.
+title: Usar getAttributes em  [!DNL Adobe Target]  com o SDK do .NET
+description: Saiba como usar getAttributes() para buscar experimentação e experiências personalizadas de [!DNL Target]  e extrair valores de atributo.
 feature: APIs/SDKs
 exl-id: 808da83d-3077-468b-a2ad-e35c25905f7d
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
 source-wordcount: '211'
-ht-degree: 10%
+ht-degree: 9%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 10%
 
 ## Descrição
 
-`GetAttributes()` O é usado para buscar experiências e experiências personalizadas de [!DNL Target] e extrair valores de atributo.
+`GetAttributes()` é usado para buscar experimentação e experiências personalizadas de [!DNL Target] e extrair valores de atributos.
 
 ## Método
 
@@ -28,16 +28,16 @@ TargetAttributes TargetClient.GetAttributes(TargetDeliveryRequest targetRequest,
 
 | Nome | Tipo | Obrigatório | Padrão | Descrição |
 | --- | --- | --- | --- | --- |
-| targetRequest | TargetDeliveryRequest | Não | null | O mesmo [!DNL Target] solicitação conforme usada para [Obter ofertas&#x200B;](get-offers.md) |
-| mboxNames | string de parâmetros[] | Não | null | Uma matriz de parâmetros de nomes de mbox |
+| targetRequest | TargetDeliveryRequest | Não | null | A mesma solicitação [!DNL Target] usada para [Obter Ofertas&#x200B;](get-offers.md) |
+| mboxNames | cadeia de caracteres de parâmetros[] | Não | null | Uma matriz de parâmetros de nomes de mbox |
 
 ## Resultado
 
-A `TargetAttributes` o objeto é retornado de `TargetClient.GetAttributes()` que tem as seguintes propriedades e métodos:
+Um objeto `TargetAttributes` é retornado de `TargetClient.GetAttributes()` que tem as seguintes propriedades e métodos:
 
 | Propriedade/Método | Tipo de retorno | Descrição |
 | --- | --- | --- |
-| Resposta | TargetDeliveryResponse | Retorna o objeto de resposta normalmente retornado por [Obter ofertas](get-offers.md) |
+| Resposta | TargetDeliveryResponse | Retorna o objeto de resposta normalmente retornado por [Obter Ofertas](get-offers.md) |
 | ToDictionary | IReadOnlyDictionary | Retorna um dicionário de dicionários com pares de valores chave agrupados por nomes de mbox |
 | ToMboxDictionary(mboxName) | IReadOnlyDictionary | Retorna um dicionário com os pares de chave-valor da mbox fornecida |
 | GetBoolean(mboxName, chave, defaultValue) | bool | Retorna o valor de um nome de mbox e uma chave de atributo especificados |

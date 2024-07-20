@@ -6,8 +6,8 @@ feature: at.js
 role: Developer
 source-git-commit: 34e8625798121e236a04646dfcf049f9c2b6f9d0
 workflow-type: tm+mt
-source-wordcount: '1596'
-ht-degree: 60%
+source-wordcount: '1580'
+ht-degree: 53%
 
 ---
 
@@ -23,13 +23,13 @@ Consulte também [Excluir o cookie do Target](/help/dev/before-implement/privacy
 
 ## Quando utilizar cookies próprios ou de terceiros
 
-A configuração do site determina quais cookies você deseja utilizar. É útil saber como o Target funciona ao tentar entender cookies próprios e de terceiros. Consulte [Funcionamento do Adobe Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) para obter mais informações.
+A configuração do site determina quais cookies você deseja utilizar. É útil saber como o Target funciona ao tentar entender cookies próprios e de terceiros. Consulte [Como o Adobe Target funciona](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) para obter mais informações.
 
 Há três casos de uso principais de cookies:
 
 1. Um domínio.
 
-   Todos os seus testes ocorrem em um domínio de nível superior (`www.domain.com`, `store.domain.com`, `anysub.domain.com`e assim por diante).
+   Todos os seus testes são feitos no domínio de primeiro nível (`www.domain.com`, `store.domain.com`, `anysub.domain.com` e assim por diante).
 
    Abordagem: usar somente cookies primários (o padrão).
 
@@ -41,7 +41,7 @@ Há três casos de uso principais de cookies:
    * Habilitar somente cookies de terceiros (raro, mas tem a vantagem de manter o cookie da mbox fora do seu domínio).
    * Permitir apenas cookies próprios e enviar o parâmetro `mboxSession` ao atravessar domínios.
 
-     A variável `mboxSession` deve ser enviado para uma página inicial e referenciado da biblioteca do JavaScript (Adobe Experience Platform Web SDK ou at.js). Uma página intermediária de redirecionador não pode ser utilizada.
+     O parâmetro `mboxSession` deve ser passado para uma página inicial e referenciado da biblioteca do JavaScript (Adobe Experience Platform Web SDK ou at.js). Uma página intermediária de redirecionador não pode ser utilizada.
 
 1. Você somente está utilizando adboxes ou Flashboxes em um site de terceiros.
 
@@ -57,9 +57,9 @@ Há três casos de uso principais de cookies:
 
 ## Comportamento do cookie próprio
 
-O cookie próprio é armazenado em clientdomain.com, onde `clientdomain` é o seu domínio.
+O cookie próprio é armazenado em clientdomain.com, onde `clientdomain` é seu domínio.
 
-A biblioteca do JavaScript gera um `mboxSession ID` e o armazena no cookie do Target. A primeira resposta de mbox contém a oferta e o JavaScript armazena a variável `mboxPC ID` gerado pelo aplicativo, no cookie da mbox.
+A biblioteca do JavaScript gera um `mboxSession ID` e o armazena no cookie do Target. A primeira resposta de mbox contém a oferta e a JavaScript armazena o `mboxPC ID` gerado pelo aplicativo, no cookie da mbox.
 
 >[!NOTE]
 >
@@ -67,9 +67,9 @@ A biblioteca do JavaScript gera um `mboxSession ID` e o armazena no cookie do Ta
 
 ## Comportamento do cookie de terceiros
 
-O cookie de terceiros é armazenado em clientcode.tt.omtrdc.net e o cookie próprio é armazenado em clientdomain.com, onde `clientdomain` é o seu domínio.
+O cookie de terceiros é armazenado em clientcode.tt.omtrdc.net e o cookie próprio é armazenado em clientdomain.com, onde `clientdomain` é seu domínio.
 
-A biblioteca do JavaScript gera um `mboxSession ID`. A primeira solicitação de local retorna cabeçalhos HTTP de resposta que tentam instalar cookies de terceiros chamados `mboxSession` e `mboxPC`. Uma solicitação de redirecionamento é enviada de volta com um parâmetro extra (`mboxXDomainCheck=true`).
+A biblioteca JavaScript gera um `mboxSession ID`. A primeira solicitação de local retorna cabeçalhos HTTP de resposta que tentam instalar cookies de terceiros chamados `mboxSession` e `mboxPC`. Uma solicitação de redirecionamento é enviada de volta com um parâmetro extra (`mboxXDomainCheck=true`).
 
 Se o navegador aceitar cookies de terceiros, a solicitação de redirecionamento vai inclui-los, e a oferta será retornada.
 
@@ -81,13 +81,13 @@ Se o navegador rejeita cookies de terceiros, a solicitação de redirecionamento
 
 ## Comportamento do cookie próprio e de terceiros
 
-O cookie de terceiros é armazenado em clientcode.tt.omtrdc.net e o cookie próprio é armazenado em clientdomain.com, onde `clientdomain` é o seu domínio.
+O cookie de terceiros é armazenado em clientcode.tt.omtrdc.net e o cookie próprio é armazenado em clientdomain.com, onde `clientdomain` é seu domínio.
 
-A biblioteca do JavaScript gera um `mboxSession ID`. A primeira solicitação de local retorna cabeçalhos HTTP de resposta que tentam instalar cookies de terceiros chamados `mboxSession` e `mboxPC`. Uma solicitação de redirecionamento é enviada de volta com um parâmetro extra (`mboxXDomainCheck=true`).
+A biblioteca JavaScript gera um `mboxSession ID`. A primeira solicitação de local retorna cabeçalhos HTTP de resposta que tentam instalar cookies de terceiros chamados `mboxSession` e `mboxPC`. Uma solicitação de redirecionamento é enviada de volta com um parâmetro extra (`mboxXDomainCheck=true`).
 
 Se o navegador aceitar cookies de terceiros, a solicitação de redirecionamento vai inclui-los, e a oferta será retornada.
 
-Alguns navegadores rejeitam cookies de terceiros. Se o cookie de terceiros for bloqueado, o cookie próprio ainda funcionará. O Target tenta instalar o cookie de terceiros e, caso não seja possível, poderá somente rastrear o domínio específico do cliente. O rastreamento entre domínios não funciona se o cookie de terceiros estiver bloqueado, a menos que a variável `mboxSession` está anexado no link que cruza domínios. Nesse caso, outro cookie próprio é instalado e sincronizado com o cookie próprio do domínio anterior.
+Alguns navegadores rejeitam cookies de terceiros. Se o cookie de terceiros for bloqueado, o cookie próprio ainda funcionará. O Target tenta instalar o cookie de terceiros e, caso não seja possível, poderá somente rastrear o domínio específico do cliente. O rastreamento de domínio cruzado não funciona se o cookie de terceiros estiver bloqueado, a menos que `mboxSession` esteja anexado no link que cruza domínios. Nesse caso, outro cookie próprio é instalado e sincronizado com o cookie próprio do domínio anterior.
 
 ## Configurações de cookie
 
@@ -130,11 +130,11 @@ Da Apple:
 |--- |--- |
 | Intelligent tracking prevention (Prevenção inteligente de rastreamento) | Para obter mais informações, consulte [Intelligent Tracking Prevention](https://webkit.org/blog/7675/intelligent-tracking-prevention/) no site WebKit Open Source Web Browser Engine. |
 | Cookies | Como o Safari gerencia cookies:<ul><li>Cookies de terceiros que não estão em um domínio que o usuário acessa diretamente nunca são salvos. Esse comportamento não é novo. Cookies de terceiros já não são suportados no Safari.</li><li>Cookies de terceiros definidos em um domínio que o usuário acessa diretamente são removidos após 24 horas.</li><li>Os cookies próprios são removidos após 30 dias se o domínio próprio for classificado como rastreamento de usuários em todos os sites. Esse problema pode se aplicar a grandes empresas que enviam usuários para domínios diferentes online. A Apple não deixou claro como exatamente esses domínios são classificados ou como um domínio pode determinar se foram classificados como usuários de rastreamento entre sites.</li></ul> |
-| Aprendizagem de máquina para identificar domínios que estão em todos os sites | Da Apple:<br />Classificador de aprendizagem de máquina: um modelo de aprendizagem de máquina é usado para classificar os principais domínios controlados de forma privada que podem controlar o usuário em todos os sites, com base nas estatísticas coletadas. Das várias estatísticas coletadas, três vetores mostraram forte sinal de classificação com base nas práticas de rastreamento atuais: sub-origem em número de domínios únicos, subestrutura em número de domínios únicos e número de domínios únicos redirecionados. Toda a coleta e classificação de dados acontece no dispositivo.<br />No entanto, se o usuário interagir com `example.com` como o domínio principal, geralmente chamado de domínio próprio, a Intelligent Tracking Prevention considera um sinal de que o usuário está interessado no site e ajusta temporariamente seu comportamento, conforme demonstrado na linha do tempo:<br />Se o usuário interagiu com `example.com` nas últimas 24 horas, os cookies estarão disponíveis quando `example.com` O é um terceiro. Esta prática permite cenários de login &quot;Fazer login com minha conta X em Y&quot;.<ul><li>Os domínios visitados como domínio de nível superior não são afetados. Sites como o OKTA, por exemplo</li><li>Identifica domínios que são subdomínios ou subestruturas da página atual em vários domínios únicos.</li></ul> |
+| Aprendizagem de máquina para identificar domínios que estão em todos os sites | No Apple:<br />Classificador de Aprendizado de Máquina: um modelo de aprendizado de máquina é usado para classificar os principais domínios controlados de forma privada que podem rastrear o usuário em todos os sites, com base nas estatísticas coletadas. Das várias estatísticas coletadas, três vetores mostraram forte sinal de classificação com base nas práticas de rastreamento atuais: sub-origem em número de domínios únicos, subestrutura em número de domínios únicos e número de domínios únicos redirecionados. Toda a coleta e classificação de dados acontece no dispositivo.<br />No entanto, se o usuário interagir com `example.com` como o domínio principal, geralmente chamado de domínio próprio, a Intelligent Tracking Prevention considera um sinal de que o usuário está interessado no site e ajusta temporariamente seu comportamento, conforme demonstrado na linha do tempo:<br />Se o usuário interagiu com `example.com` as últimas 24 horas, seus cookies estarão disponíveis quando `example.com` for um terceiro. Esta prática permite cenários de login &quot;Fazer login com minha conta X em Y&quot;.<ul><li>Os domínios visitados como domínio de nível superior não são afetados. Sites como o OKTA, por exemplo</li><li>Identifica domínios que são subdomínios ou subquadros da página atual em vários domínios exclusivos.</li></ul> |
 
 **Como o Adobe é afetado?**
 
 | Funcionalidade afetada | Detalhes |
 |--- |--- |
 | Suporte para cancelamento | As alterações de rastreamento do WebKit da Apple interrompem o suporte ao cancelamento.<br />O cancelamento do Target usa um cookie no domínio `clientcode.tt.omtrdc.net`. Para obter mais detalhes, consulte [Privacidade](/help/dev/before-implement/privacy/privacy.md).<br />O Target suporta dois cancelamentos:<ul><li>Um por cliente (o cliente gerencia o link para opção de não participação).</li><li>Um via Adobe que cancela o usuário em todas as funcionalidades do Target para todos os clientes.</li></ul>Ambos os métodos usam o cookie de terceiros. |
-| Atividades do Target | Os clientes podem escolher seus  [duração do perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) para suas contas Target (até 90 dias). A preocupação é que, se a duração do perfil da conta for superior a 30 dias, e o cookie próprio for limpo porque o domínio do cliente foi marcado como usuários de rastreamento entre sites, o comportamento dos visitantes do Safari será afetado nas seguintes áreas no Target:<br />**[!UICONTROL Relatórios do Target ]**: se um usuário do Safari entrar em uma atividade, retornar após 30 dias e depois se converter, ele será contado como dois visitantes e uma conversão.<br />Esse comportamento é o mesmo para atividades que usam o Analytics como fonte de geração de relatórios (A4T).<br />**[!UICONTROL Associação de perfil e atividade]**:<ul><li>Dados do perfil são apagados quando o cookie próprio expira.</li><li>Associação de atividade é apagada quando o cookie próprio expira.</li><li> O Target não funciona no Safari para contas que usam uma implementação de cookies de terceiros ou uma implementação de cookies próprios e de terceiros. Esse comportamento não é novo. O Safari não permite cookies de terceiros por um tempo.</li></ul><br />**[!UICONTROL Sugestões ]**: se houver uma preocupação de que o domínio do cliente possa ser marcado como uma sessão cruzada de visitantes de rastreamento, é mais seguro definir a duração do perfil para 30 dias ou menos no Target. Esse limite garante que os usuários sejam rastreados de forma semelhante no Safari e em todos os outros navegadores. |
+| Atividades do Target | Os clientes podem escolher sua [duração do perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) para suas contas do Target (até 90 dias). A preocupação é que, se a duração do perfil da conta for superior a 30 dias, e o cookie próprio for limpo porque o domínio do cliente foi marcado como usuários de rastreamento entre sites, o comportamento dos visitantes do Safari será afetado nas seguintes áreas no Target:<br />**[!UICONTROL Target reports]**: Se um usuário do Safari entrar em uma atividade, retornar após 30 dias e depois se converter, o usuário contará como dois visitantes e uma conversão.<br />Este comportamento é o mesmo para atividades que usam o Analytics como fonte de relatórios (A4T).<br />**[!UICONTROL Profile & activity membership]**:<ul><li>Dados do perfil são apagados quando o cookie próprio expira.</li><li>Associação de atividade é apagada quando o cookie próprio expira.</li><li> O Target não funciona no Safari para contas que usam uma implementação de cookies de terceiros ou uma implementação de cookies próprios e de terceiros. Esse comportamento não é novo. O Safari não permite cookies de terceiros por um tempo.</li></ul><br />**[!UICONTROL Suggestions]**: se houver uma preocupação de que o domínio do cliente possa ser marcado como uma sessão cruzada de visitantes de rastreamento, é mais seguro definir a duração do perfil para 30 dias ou menos no Target. Esse limite garante que os usuários sejam rastreados de forma semelhante no Safari e em todos os outros navegadores. |

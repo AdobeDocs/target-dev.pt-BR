@@ -1,11 +1,11 @@
 ---
-title: Inicializar o [!DNL Adobe Target] SDK Java para registrar solicitações
-description: Saiba como registrar solicitações no [!DNL Adobe Target] SDK do Java.
+title: Inicialize o SDK do Java  [!DNL Adobe Target]  para registrar solicitações
+description: Saiba como registrar solicitações no  [!DNL Adobe Target] SDK do Java.
 feature: APIs/SDKs
 exl-id: 85d1a6ef-0b08-4948-8133-740b7d6141dd
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '118'
 ht-degree: 4%
 
 ---
@@ -14,18 +14,18 @@ ht-degree: 4%
 
 ## Descrição
 
-Quando [inicialização do SDK](initialize-sdk.md), há várias opções no `ClientConfig` objeto, que pode ser definido para registrar solicitações.
+Ao [inicializar o SDK](initialize-sdk.md), há várias opções no objeto `ClientConfig`, que podem ser definidas para solicitações de log.
 
 | Opção | Descrição |
 | --- | --- |
 | `logRequests` | Registra todo o corpo da solicitação, bem como o corpo da resposta. |
 | `logRequestStatus` | Registra o URL da solicitação, o status e o tempo de resposta. |
 
-[!DNL Target] Usos do SDK do Java `slf4j` fazendo logon. Você precisa fornecer a implementação do logger, como `java.util.logging`, `logback`, e `log4j`. Consulte [http://www.slf4j.org/manual.html](http://www.slf4j.org/manual.html) para obter mais informações. Todos os logs serão impressos em `debug`.
+O SDK Java [!DNL Target] usa o log `slf4j`. Você precisa fornecer sua implementação do agente de log, como `java.util.logging`, `logback` e `log4j`. Consulte [http://www.slf4j.org/manual.html](http://www.slf4j.org/manual.html) para obter mais informações. Todos os logs serão impressos em `debug`.
 
 ## Exemplo
 
-Adicione o `slf4j` dependência.
+Adicione a dependência `slf4j`.
 
 >[!BEGINTABS]
 
@@ -49,7 +49,7 @@ compile 'org.slf4j:slf4j-simple:2.0.0-alpha0'
 
 >[!ENDTABS]
 
-Ativar o `DEBUG` logs com base em sua implementação e marcar os sinalizadores de log de solicitação.
+Habilite os logs do `DEBUG` com base na sua implementação e marque os sinalizadores de log de solicitação.
 
 ### Depurar
 

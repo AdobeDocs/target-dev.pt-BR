@@ -8,14 +8,14 @@ author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
 source-git-commit: d98c7b890f7456de0676cadce5d6c70bc62d6140
 workflow-type: tm+mt
-source-wordcount: '1520'
+source-wordcount: '1374'
 ht-degree: 1%
 
 ---
 
 # Busca do Recommendations com a API de entrega
 
-As APIs do Adobe Target e do Adobe Target Recommendations podem ser usadas para fornecer respostas a páginas da Web, mas também podem ser usadas em experiências não baseadas em HTML, incluindo aplicativos, telas, consoles, emails, quiosques e outros dispositivos de exibição. Em outras palavras, quando bibliotecas do Target e JavaScript não puderem ser usadas, a variável [API de entrega do Target](/help/dev/implement/delivery-api/overview.md) O ainda permite o acesso à gama completa de funcionalidades do Target, para fornecer experiências personalizadas.
+As APIs do Adobe Target e do Adobe Target Recommendations podem ser usadas para fornecer respostas a páginas da Web, mas também podem ser usadas em experiências não baseadas em HTML, incluindo aplicativos, telas, consoles, emails, quiosques e outros dispositivos de exibição. Em outras palavras, quando as bibliotecas do Target e o JavaScript não podem ser usados, a [API de entrega do Target](/help/dev/implement/delivery-api/overview.md) ainda habilita o acesso à gama completa de funcionalidades do Target, para oferecer experiências personalizadas.
 
 >[!NOTE]
 >
@@ -23,7 +23,7 @@ As APIs do Adobe Target e do Adobe Target Recommendations podem ser usadas para 
 
 Para recuperar recomendações, envie uma chamada de POST da API de entrega do Adobe Target com as informações contextuais apropriadas, que podem incluir uma ID de usuário (para uso com recomendações específicas do perfil, como os itens visualizados recentemente pelo usuário), nome da mbox relevante, parâmetros da mbox, parâmetros do perfil ou outros atributos. A resposta incluirá entity.ids recomendado (e pode incluir outros dados de entidade) no formato JSON ou HTML, que pode então ser exibido no dispositivo.
 
-A variável [API de entrega](/help/dev/implement/delivery-api/overview.md) Para o Adobe Target, expõe todos os recursos existentes que uma solicitação padrão do Target fornece.
+A [API de Entrega](/help/dev/implement/delivery-api/overview.md) para o Adobe Target expõe todos os recursos existentes fornecidos por uma solicitação padrão do Target.
 
 A API de entrega:
 
@@ -38,40 +38,40 @@ Para usar a API de entrega para fornecer experiências do Target, incluindo reco
 1. Crie uma atividade do Target (A/B, XT, AP ou Recommendations) usando o Criador baseado em formulário (não o Visual Experience Composer).
 1. Use a API de entrega para obter uma resposta para as solicitações geradas pela atividade do Target que você acabou de criar.
 
-&lt;!— P: Por que ambas as etapas são necessárias para isso? Se você tiver uma recomendação baseada em formulário definida para uma mbox, qual é o ponto/benefício de TAMBÉM ter a etapa da API de entrega na para recuperar resultados? Por que você não pode apenas ter o Rec baseado em formulário entregar os resultados no dispositivo de destino...? R: Veja o caso de uso abaixo... é quando você deseja &quot;interceptar&quot; os resultados pendentes para fazer mais coisas antes de exibir os resultados. Coisas como comparações em tempo real com níveis de inventário. --->
+&lt;!— P: Por que ambas as etapas são necessárias para isso? Se você tiver uma recomendação baseada em formulário definida para uma mbox, qual é o ponto/benefício de TAMBÉM ter a etapa da API de entrega na para recuperar resultados? Por que você não pode apenas ter o Rec baseado em formulário entregar os resultados no dispositivo de destino...? R: Veja o caso de uso abaixo... é quando você deseja &quot;interceptar&quot; os resultados pendentes para fazer mais coisas antes de exibir os resultados. Coisas como comparações em tempo real com níveis de inventário. —>
 
 ## Criar uma recomendação usando o Experience Composer baseado em formulário
 
-Para criar recomendações que podem ser usadas com a API de entrega, use o [Compositor baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
+Para criar recomendações que podem ser usadas com a API de entrega, use o [Criador baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 
-1. Primeiro, crie e salve um design baseado em JSON para usar em sua recomendação. Para obter exemplos de JSON, mais informações de segundo plano sobre como as respostas JSON podem ser retornadas ao configurar uma atividade baseada em formulário, consulte a documentação em [Criação de Designs de Recomendação](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html). Neste exemplo, o design é nomeado como *JSON simples.*
+1. Primeiro, crie e salve um design baseado em JSON para usar em sua recomendação. Para obter informações de JSON de exemplo, além de informações de plano de fundo sobre como as respostas JSON podem ser retornadas ao configurar uma atividade baseada em formulário, consulte a documentação em [Criação de Designs de Recomendação](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html). Neste exemplo, o nome do design é *Simple JSON.*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
-1. No Target, navegue até **[!UICONTROL Atividades]** > **[!UICONTROL Criar atividade]** > **[!UICONTROL Recommendations]** e selecione **[!UICONTROL Formulário]**.
+1. No Target, navegue até **[!UICONTROL Activities]** > **[!UICONTROL Create Activity]** > **[!UICONTROL Recommendations]** e selecione **[!UICONTROL Form]**.
 
    ![server-side-create-recs.png](assets/server-side-create-recs.png)
 
-1. Selecione uma Propriedade e clique em **[!UICONTROL Próxima]**.
-1. Defina o local em que você deseja que os usuários recebam a resposta da recomendação. O exemplo abaixo usa um local chamado *api_charter*. Selecione o design baseado em JSON, criado anteriormente, chamado *JSON simples.*
+1. Selecione uma Propriedade e clique em **[!UICONTROL Next]**.
+1. Defina o local em que você deseja que os usuários recebam a resposta da recomendação. O exemplo abaixo usa um local denominado *api_charter*. Selecione seu design baseado em JSON, criado anteriormente, chamado *JSON Simples.*
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
-1. Salve e ative a recomendação. Ele gerará resultados. [Quando os resultados estiverem prontos](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html), você pode usar a API de entrega para recuperá-los.
+1. Salve e ative a recomendação. Ele gerará resultados. [Quando os resultados estiverem prontos](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html), você poderá usar a API de Entrega para recuperá-los.
 
 ## Usar a API de entrega
 
-A sintaxe para a variável [API de entrega](/help/dev/implement/delivery-api/overview.md) é:
+A sintaxe da [API de Entrega](/help/dev/implement/delivery-api/overview.md) é:
 
 `POST https://{{CLIENT_CODE}}.tt.omtrdc.net/rest/v1/delivery`
 
-1. Observe que o código de cliente é obrigatório. Como lembrete, o código de cliente pode ser encontrado no Adobe Target navegando até **[!UICONTROL Recommendations]** > **[!UICONTROL Configurações]**. Observe que **Código do cliente** valor no **Token da API de recomendação** seção.
+1. Observe que o código de cliente é obrigatório. Lembrando que o código de cliente pode ser encontrado no Adobe Target navegando até **[!UICONTROL Recommendations]** > **[!UICONTROL Settings]**. Anote o valor de **Código do cliente** na seção **Token de API do Recommendation**.
    ![client-code.png](assets/client-code.png)
-1. Depois de ter o código de cliente, crie a chamada da API de entrega. O exemplo abaixo começa com **[!UICONTROL Chamada da API de entrega de mboxes em lote na Web]** fornecido na [Coleção de Postman da API de entrega](../../implement/delivery-api/overview.md/#section/Getting-Started/Postman-Collection), fazendo as modificações relevantes. Por exemplo:
-   * o **navegador** e **endereço** objetos foram removidos do **Corpo**, já que não são necessários para casos de uso que não sejam de HTML
+1. Depois de ter o código de cliente, crie a chamada da API de entrega. O exemplo abaixo começa com a **[!UICONTROL Web Batched Mboxes Delivery API Call]** fornecida na [coleção Postman da API de entrega](../../implement/delivery-api/overview.md/#section/Getting-Started/Postman-Collection), fazendo modificações relevantes. Por exemplo:
+   * os objetos **browser** e **address** foram removidos do **Body**, pois não são necessários para casos de uso que não sejam de HTML
    * *api_charter* está listado como o nome do local neste exemplo
    * entity.id está especificada, pois esta recomendação se baseia na Similaridade de Conteúdo, que requer que uma chave de item atual seja passada para o Target.
-     ![server-side-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
-Lembre-se de configurar os parâmetros de consulta corretamente. Por exemplo, especifique `{{CLIENT_CODE}}` conforme necessário. &lt;!— P: Na sintaxe de chamada atualizada, entity.id é listado como um profileParameter em vez de um mboxParameter como nas versões mais antigas. ---> &lt;!— Q: Imagem antiga ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Antigo texto de acompanhamento: &quot;Observe que esta recomendação se baseia nos produtos Content Similares baseados no entity.id enviado via mboxParameters.&quot; —>
-     ![client-code3](assets/client-code3.png)
-1. Envie a solicitação. Isso é executado em relação ao *api_charter* O local, que tem uma recomendação ativa em execução, definido com seu design JSON que gerará uma lista de entidades recomendadas.
+     ![lado do servidor-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
+Lembre-se de configurar os parâmetros de consulta corretamente. Por exemplo, certifique-se de especificar `{{CLIENT_CODE}}` conforme necessário. &lt;!— P: Na sintaxe de chamada atualizada, entity.id é listado como um profileParameter em vez de um mboxParameter como nas versões mais antigas. —> &lt;!— P: Imagem antiga ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Texto de acompanhamento antigo: &quot;Observe que esta recomendação é baseada em Produtos de conteúdo semelhantes baseados em entity.id enviado via mboxParameters.&quot; —>
+     ![código-cliente3](assets/client-code3.png)
+1. Envie a solicitação. Isso é executado com base no local *api_charter*, que tem uma recomendação ativa em execução, definido com seu design JSON que gerará uma lista de entidades recomendadas.
 1. Receba uma resposta com base no design JSON.
    ![server-side-create-recs-json-response2.png](assets/server-side-create-recs-json-response2.png)
 A resposta inclui a ID de chave, bem como as IDs de entidade das entidades recomendadas.
@@ -86,18 +86,18 @@ Os recursos a seguir fornecem exemplos de várias implementações não focadas 
 
 | Recurso | Detalhes |
 | --- | --- |
-| [Adobe Target em qualquer lugar - Implementar o Server Side ou na IoT](https://expleague.azureedge.net/labs/L733/index.html) | Laboratório Adobe Summit 2019 que oferece experiência prática para um aplicativo React que usa APIs do lado do servidor Adobe Target. |
+| [Adobe Target em Qualquer Lugar - Implementar o Server Side ou na IoT](https://expleague.azureedge.net/labs/L733/index.html) | Laboratório Adobe Summit 2019 que oferece experiência prática para um aplicativo React que usa APIs do lado do servidor Adobe Target. |
 | [Adobe Target em um aplicativo móvel sem o SDK do Adobe](https://community.tealiumiq.com/t5/Universal-Data-Hub/Adobe-Target-in-a-Mobile-App-Without-the-Adobe-SDK/ta-p/26753) | Este guia mostra como configurar o Adobe Target no aplicativo móvel sem instalar o SDK do Adobe. Essa solução usa a visualização da Web do SDK do Tealium e o módulo de Comandos remotos para enviar e receber solicitações para a API de visitante do Adobe (Experience Cloud) e para a API do Adobe Target. |
-| [Configuração da extensão do Target no Experience Platform Launch e implementação das APIs do Target](https://developer.adobe.com/client-sdks/documentation/adobe-target/) | Etapas para configurar a extensão do Target no Experience Platform Launch, adicionar a extensão do Target ao seu aplicativo e implementar APIs do Target para solicitar atividades, realizar uma busca prévia por ofertas e entrar no modo de visualização visual. |
-| [Cliente de nó Adobe Target](https://www.npmjs.com/package/@adobe/target-nodejs-sdk) | SDK v1.0 da Target Node.js de código aberto |
-| [Visão geral do lado do servidor](../../implement/server-side/server-side-overview.md) | Informações sobre APIs de entrega do lado do servidor do Adobe Target, APIs de entrega em lote do servidor, SDK do Node.js e APIs do Adobe Target Recommendations. |
-| [Recommendations de conteúdo do Adobe Campaign no email](https://medium.com/adobetech/adobe-campaign-content-recommendations-in-email-b51ced771d7f) | Blog que descreve como aproveitar as recomendações de conteúdo em emails por meio do Adobe Target e do Adobe I/O Runtime no Adobe Campaign. |
+| [Configurando a extensão do Target no Experience Platform Launch e implementando APIs do Target](https://developer.adobe.com/client-sdks/documentation/adobe-target/) | Etapas para configurar a extensão do Target no Experience Platform Launch, adicionar a extensão do Target ao seu aplicativo e implementar APIs do Target para solicitar atividades, realizar uma busca prévia por ofertas e entrar no modo de visualização visual. |
+| [Cliente de Nó Adobe Target](https://www.npmjs.com/package/@adobe/target-nodejs-sdk) | SDK v1.0 da Target Node.js de código aberto |
+| [Visão geral do Server Side](../../implement/server-side/server-side-overview.md) | Informações sobre APIs de entrega do lado do servidor do Adobe Target, APIs de entrega em lote do servidor, SDK do Node.js e APIs do Adobe Target Recommendations. |
+| [Recommendations de Conteúdo Adobe Campaign no Email](https://medium.com/adobetech/adobe-campaign-content-recommendations-in-email-b51ced771d7f) | Blog que descreve como aproveitar as recomendações de conteúdo em emails por meio do Adobe Target e do Adobe I/O Runtime no Adobe Campaign. |
 
 ## Gerenciamento da configuração do Recommendations com APIs
 
-Na maioria das vezes, as recomendações são configuradas na interface do usuário do Adobe Target e, em seguida, usadas ou acessadas por meio das APIs do Target, por motivos como os mencionados nas seções acima. Essa coordenação UI-API é comum. No entanto, às vezes os usuários podem querer executar todas as ações por meio das APIs, tanto a configuração quanto o uso dos resultados. Embora seja muito menos comum, os usuários podem configurar, executar e *e* Aproveite os resultados das recomendações totalmente usando as APIs.
+Na maioria das vezes, as recomendações são configuradas na interface do usuário do Adobe Target e, em seguida, usadas ou acessadas por meio das APIs do Target, por motivos como os mencionados nas seções acima. Essa coordenação UI-API é comum. No entanto, às vezes os usuários podem querer executar todas as ações por meio das APIs, tanto a configuração quanto o uso dos resultados. Embora seja muito menos comum, os usuários podem configurar, executar, *e* de forma absoluta, aproveitar os resultados das recomendações usando inteiramente as APIs.
 
-Aprendemos em um [seção anterior](manage-catalog.md) como gerenciar entidades do Adobe Target Recommendations e fornecê-las no lado do servidor. Do mesmo modo, a [Console do Adobe Developer](https://developer.adobe.com/console/home) O permite gerenciar critérios, promoções, coleções e modelos de design sem precisar fazer logon no Adobe Target. Uma lista completa de todas as APIs do Recommendations pode ser encontrada [aqui](https://developer.adobe.com/target/administer/recommendations-api/), mas aqui está um resumo para referência.
+Aprendemos em uma [seção anterior](manage-catalog.md) a gerenciar entidades do Adobe Target Recommendations e entregá-las no lado do servidor. Da mesma forma, o [Adobe Developer Console](https://developer.adobe.com/console/home) permite gerenciar critérios, promoções, coleções e modelos de design sem precisar fazer logon no Adobe Target. Uma lista completa de todas as APIs do Recommendations pode ser encontrada [aqui](https://developer.adobe.com/target/administer/recommendations-api/), mas aqui está um resumo para referência.
 
 | Recurso | Detalhes |
 | --- | --- |
@@ -106,13 +106,13 @@ Aprendemos em um [seção anterior](manage-catalog.md) como gerenciar entidades 
 | [Designs](https://developer.adobe.com/target/administer/recommendations-api/#tag/Designs) | Liste, crie, obtenha, edite, exclua e valide designs. |
 | [Entidades](https://developer.adobe.com/target/administer/recommendations-api/#tag/Entities) | Salvar, excluir e obter entidades. |
 | [Promoções](https://developer.adobe.com/target/administer/recommendations-api/#tag/Promotions) | Liste, crie, obtenha, edite e exclua promoções. |
-| [Critérios da categoria](https://developer.adobe.com/target/administer/recommendations-api/#tag/Category-Criteria) | Liste, crie, obtenha, edite e exclua critérios de categoria. |
+| [Critério de Categoria](https://developer.adobe.com/target/administer/recommendations-api/#tag/Category-Criteria) | Liste, crie, obtenha, edite e exclua critérios de categoria. |
 | [Critérios personalizados](https://developer.adobe.com/target/administer/recommendations-api/#tag/Custom-Criteria) | Liste, crie, obtenha, edite e exclua critérios personalizados. |
-| [Critérios de item](https://developer.adobe.com/target/administer/recommendations-api/#tag/Item-Criteria) | Listar, criar, obter, editar e excluir critérios de item. |
+| [Critério de Item](https://developer.adobe.com/target/administer/recommendations-api/#tag/Item-Criteria) | Listar, criar, obter, editar e excluir critérios de item. |
 | [Critério de popularidade](https://developer.adobe.com/target/administer/recommendations-api/#tag/Popularity-Criteria) | Liste, crie, obtenha, edite e exclua critérios de popularidade. |
 | [Critérios de atributo de perfil](https://developer.adobe.com/target/administer/recommendations-api/#tag/Profile-Attribute-Criteria) | Liste, crie, obtenha, edite e exclua critérios de atributo de perfil. |
-| [Critério recente](https://developer.adobe.com/target/administer/recommendations-api/#tag/Recent-Criteria) | Listar, criar, obter, editar e excluir critérios recentes. |
-| [Critérios de sequência](https://developer.adobe.com/target/administer/recommendations-api/#tag/Sequence-Criteria) | Liste, crie, obtenha, edite e exclua critérios de sequência. |
+| [Critérios recentes](https://developer.adobe.com/target/administer/recommendations-api/#tag/Recent-Criteria) | Listar, criar, obter, editar e excluir critérios recentes. |
+| [Critério de sequência](https://developer.adobe.com/target/administer/recommendations-api/#tag/Sequence-Criteria) | Liste, crie, obtenha, edite e exclua critérios de sequência. |
 
 ## Documentação de referência
 

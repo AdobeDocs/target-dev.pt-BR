@@ -1,30 +1,30 @@
 ---
 title: Rastreamento de eventos
-description: Uso [!DNL Adobe Target]Os recursos de rastreamento de eventos do para medir com eficiência as métricas mais importantes para sua empresa e casos de uso.
+description: Use os recursos de rastreamento de eventos do  [!DNL Adobe Target] para medir com eficiência as métricas mais importantes para sua empresa e casos de uso.
 exl-id: a47fa692-c633-4c53-82da-878b1e451a3f
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
 source-wordcount: '527'
-ht-degree: 2%
+ht-degree: 1%
 
 ---
 
 # Rastreamento de eventos
 
-Uso [!DNL Adobe Target]Os recursos de rastreamento de eventos do para medir com eficiência as métricas mais importantes para sua empresa e casos de uso. O rastreamento de eventos é fundamental para medir o sucesso de suas atividades de experimentação ou personalização, pois eles informam qual variação ou experiência está ganhando ou perdendo. Compreender isso ajudará você a entender como seus usuários estão se envolvendo com seu produto ou evoluindo em um cenário em constante mudança.
+Use os recursos de rastreamento de eventos do [!DNL Adobe Target] para medir com eficiência as métricas mais importantes para sua empresa e casos de uso. O rastreamento de eventos é fundamental para medir o sucesso de suas atividades de experimentação ou personalização, pois eles informam qual variação ou experiência está ganhando ou perdendo. Compreender isso ajudará você a entender como seus usuários estão se envolvendo com seu produto ou evoluindo em um cenário em constante mudança.
 
-Para rastrear eventos até [!DNL Adobe Target]Siga este processo de duas etapas dos SDKs do:
+Para rastrear eventos através dos SDKs do [!DNL Adobe Target], siga este processo de duas etapas:
 
-1. Instale o SDK e implante o código que envia eventos para o [!DNL Adobe Target].
+1. Instale o SDK e implante o código que envia eventos para [!DNL Adobe Target].
 
-1. Criar e ativar um [!DNL Adobe Target] atividade do com uma métrica de meta na interface do usuário.
+1. Crie e ative uma atividade [!DNL Adobe Target] com uma métrica de meta na interface do usuário.
 
-   ![imagem alt](./assets/report-settings.png)
+   ![alt imagem](./assets/report-settings.png)
 
 ## Métricas e eventos de meta
 
-A tabela a seguir define a combinação de metas e eventos que você pode definir e medir com um [!DNL Target] atividade usando [!DNL Target]Recursos de relatórios do:
+A tabela a seguir define a combinação de metas e eventos que você pode definir e medir com uma atividade [!DNL Target] usando os recursos de relatórios de [!DNL Target]:
 
 | Meta primária | Evento |
 | --- | --- |
@@ -34,7 +34,7 @@ A tabela a seguir define a combinação de metas e eventos que você pode defini
 
 ## Como as impressões são acionadas
 
-Os SDKs do Target chamam o subjacente [API de entrega](/help/dev/implement/delivery-api/overview.md). Quando um objeto execute com parâmetros obrigatórios está dentro da própria solicitação, a impressão é incrementada automaticamente para atividades qualificadas. Os métodos do SDK que incrementam uma impressão automaticamente são:
+Os SDKs do Target chamam a [API de entrega](/help/dev/implement/delivery-api/overview.md) subjacente. Quando um objeto execute com parâmetros obrigatórios está dentro da própria solicitação, a impressão é incrementada automaticamente para atividades qualificadas. Os métodos do SDK que incrementam uma impressão automaticamente são:
 
 * getOffers()
 * getAttributes()
@@ -43,7 +43,7 @@ Os SDKs do Target chamam o subjacente [API de entrega](/help/dev/implement/deliv
 >
 >Quando um objeto de pré-busca é transmitido na solicitação, a impressão não é automaticamente aumentada para as atividades com mboxes no objeto de pré-busca.
 
-A variável `sendNotifications` pode ser usado para enviar eventos manualmente para [!DNL Adobe Target] e acionar uma impressão.
+O método `sendNotifications` pode ser usado para enviar eventos manualmente para [!DNL Adobe Target] e acionar uma impressão.
 
 >[!BEGINTABS]
 
@@ -69,11 +69,11 @@ Os exemplos de código a seguir funcionam para todos os tipos de métricas de me
 
 Este exemplo primeiro obtém uma oferta de mbox de destino usando `getOffers`. Em seguida, constrói uma solicitação com uma notificação baseada nessa oferta de mbox.
 
-A notificação `type` propriedade está definida como `display`.
+A propriedade `type` da notificação está definida como `display`.
 
 Para indicar que uma página foi visualizada, é importante especificar o objeto do endereço na carga de notificação. Defina o URL de acordo.
 
-Para mboxes, você deve definir a propriedade mbox no objeto de notificação e fornecer uma matriz de tokens com base na matriz de opções no `targetResult`.
+Para mboxes, você deve definir a propriedade mbox no objeto de notificação e fornecer uma matriz de tokens com base na matriz de opções em `targetResult`.
 
 >[!BEGINTABS]
 
@@ -186,9 +186,9 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 Este exemplo primeiro obtém uma oferta de mbox de destino usando `getOffers`. Em seguida, constrói uma solicitação com uma notificação baseada nessa oferta de mbox.
 
-A notificação `type` propriedade está definida como `click`.
+A propriedade `type` da notificação está definida como `click`.
 
-Você deve definir o `mbox` no objeto de notificação e forneça uma matriz de tokens com base na matriz de métricas na variável `targetResult`.
+Você deve definir a propriedade `mbox` no objeto de notificação e fornecer uma matriz de tokens com base na matriz de métricas no `targetResult`.
 
 >[!BEGINTABS]
 
@@ -304,11 +304,11 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 ### Visualizou uma visualização
 
-Esse exemplo primeiro obtém visualizações de destino usando `getOffers`. Em seguida, constrói uma solicitação com uma notificação com base nessas exibições.
+Primeiro, esta amostra obtém visualizações de destino usando `getOffers`. Em seguida, constrói uma solicitação com uma notificação com base nessas exibições.
 
-A notificação `type` propriedade está definida como `display`.
+A propriedade `type` da notificação está definida como `display`.
 
-Para exibições, você deve definir o `view` no objeto de notificação e forneça uma matriz de tokens com base na matriz de opções em targetResult.
+Para exibições, você deve definir a propriedade `view` no objeto de notificação e fornecer uma matriz de tokens com base na matriz de opções em targetResult.
 
 >[!BEGINTABS]
 
@@ -414,11 +414,11 @@ targetJavaClient.sendNotifications(notificationRequest);
 
 ### Clicou em uma Exibição
 
-Esse exemplo primeiro obtém visualizações de destino usando `getOffers`. Em seguida, constrói uma solicitação com notificações baseadas nessas exibições.
+Primeiro, esta amostra obtém visualizações de destino usando `getOffers`. Em seguida, constrói uma solicitação com notificações baseadas nessas exibições.
 
-A notificação `type` propriedade está definida como `click`.
+A propriedade `type` da notificação está definida como `click`.
 
-Você deve definir o `view` no objeto de notificação e forneça uma matriz de tokens com base na matriz de métricas no targetResult.
+Você deve definir a propriedade `view` no objeto de notificação e fornecer uma matriz de tokens com base na matriz de métricas no targetResult.
 
 >[!BEGINTABS]
 

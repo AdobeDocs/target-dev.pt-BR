@@ -1,6 +1,6 @@
 ---
-title: Como usar solicitações assíncronas no [!DNL Adobe Target] SDK do Java
-description: Saiba como [!DNL Target] O SDK do Java é compatível com solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
+title: Como usar solicitações assíncronas no  [!DNL Adobe Target] SDK do Java
+description: Saiba como o  [!DNL Target] SDK do Java oferece suporte a solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
 feature: APIs/SDKs
 exl-id: e11f8d16-76f6-4d39-822a-34a1cf7f623f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
@@ -14,7 +14,7 @@ ht-degree: 3%
 
 ## Descrição
 
-Um benefício da integração do lado do servidor é que você pode aproveitar a grande largura de banda e os recursos de computação disponíveis no lado do servidor usando o paralelismo. [!DNL Target] O SDK do Java é compatível com solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
+Um benefício da integração do lado do servidor é que você pode aproveitar a grande largura de banda e os recursos de computação disponíveis no lado do servidor usando o paralelismo. O SDK do Java [!DNL Target] oferece suporte a solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
 
 ## Métodos suportados
 
@@ -28,7 +28,7 @@ CompletableFuture<Attributes> getAttributesAsync(TargetDeliveryRequest targetReq
 
 ## Exemplo
 
-Uma amostra `Spring` O Application Controller pode ser semelhante a:
+Um controlador de aplicativo `Spring` de exemplo pode ser semelhante a:
 
 ### Controlador de amostra
 
@@ -73,6 +73,6 @@ public class TargetRestController {
 }
 ```
 
-Este exemplo pressupõe que você tenha [inicializou o SDK](initialize-sdk.md) como um feijão de primavera e que você tem [métodos de utilitário](utility-methods.md) disponíveis.
+Este exemplo supõe que você tenha [inicializado o SDK](initialize-sdk.md) como um bean de mola e que você tenha [métodos de utilitário](utility-methods.md) disponíveis.
 
-A variável [!DNL Target] a solicitação é acionada antes de `simulateIO` e, quando for executado, o resultado do target também deverá estar pronto. Mesmo que não seja, você terá uma economia significativa na maioria dos casos.
+A solicitação [!DNL Target] é acionada antes de `simulateIO` e, quando for executada, o resultado alvo também deve estar pronto. Mesmo que não seja, você terá uma economia significativa na maioria dos casos.

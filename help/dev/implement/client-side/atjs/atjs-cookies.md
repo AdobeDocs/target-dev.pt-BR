@@ -1,13 +1,13 @@
 ---
 keywords: at.js, 2.0, 1.x, cookies
-description: Detalhes sobre como [!DNL Adobe Target] A at.js 2.x e a at.js 1.x lidam com cookies
+description: Detalhes sobre como a at.js 2.x e a at.js 1.x lidam com cookies. [!DNL Adobe Target]
 title: Cookies do at.js
 feature: at.js
 exl-id: 154a844a-6855-4af7-8aed-0719b4c389f5
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1711'
-ht-degree: 83%
+source-wordcount: '1716'
+ht-degree: 72%
 
 ---
 
@@ -17,11 +17,11 @@ Informações sobre a at.js 2.x e a at.js 1.*x* comportamento de cookie.
 
 ## Comportamento de cookie da at.js 2.x
 
-Para a versão 2.x da at.js (até, mas não incluindo, a versão 2.10.0), *somente os cookies próprios são suportados*. Exatamente como no at.js 1.*x*, o cookie próprio, &quot;mbox&quot; é armazenado em `clientdomain.com`, onde `clientdomain` é seu domínio.
+Para a versão 2.x da at.js (até, mas não incluindo, a versão 2.10.0), *somente os cookies primários são suportados*. Exatamente como no at.js 1.*x*, o cookie próprio, &quot;mbox&quot; está armazenado em `clientdomain.com`, onde `clientdomain` é seu domínio.
 
 O at.js gera uma ID da sessão e a armazena no cookie. A primeira resposta contém informações de atividade, bem como a `TNT` ou`PC ID` gerada pelos [!DNL Target] servidores. O at.js grava o `TNT/PC ID` para o cookie.
 
-A variável `AMCV_###@AdobeOrg` cookie próprio é sempre definido pelo Serviço da Experience Cloud ID, embora a variável `ECID` é transmitido [!DNL Target] solicitações.
+O cookie próprio `AMCV_###@AdobeOrg` sempre é definido pelo Serviço de ID de Experience Cloud, embora o `ECID` seja passado em [!DNL Target] solicitações.
 
 >[!NOTE]
 >
@@ -36,13 +36,13 @@ O rastreamento entre domínios possibilita visualizar sessões em dois sites rel
 >Para as versões 2.10.0 e posteriores da at.js, há suporte para cookies de terceiros e rastreamento entre domínios.
 
 
-## at.js 1.*x*   comportamento de cookie
+## at.js 1.Comportamento de cookie *x*
 
 Para versões do at.js 1.*x*, o comportamento de cookie depende de se é um cookie próprio, um cookie de terceiros com um cookie próprio ou um cookie de terceiros.
 
 ### Quando utilizar cookies próprios ou de terceiros
 
-A configuração do site determina quais cookies você deseja utilizar. É útil compreender como [!DNL Target] O funciona ao tentar entender cookies próprios e de terceiros. Consulte [Como [!DNL Adobe Target] funciona](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) para obter mais informações.
+A configuração do site determina quais cookies você deseja utilizar. É útil entender como o [!DNL Target] funciona ao tentar entender cookies próprios e de terceiros. Consulte [Como [!DNL Adobe Target] funciona](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html) para obter mais informações.
 
 Há três casos de uso principais de cookies:
 
@@ -82,7 +82,7 @@ O at.js gera um `mboxSession ID` e o armazena no cookie. A primeira resposta con
 
 >[!NOTE]
 >
->A variável `AMCV_###@AdobeOrg` O cookie próprio sempre é definido com a ID do visitante do Experience Cloud.
+>O cookie próprio `AMCV_###@AdobeOrg` sempre é definido com a ID do visitante do Experience Cloud.
 
 ### Comportamento de cookie de terceiros
 
@@ -113,7 +113,7 @@ O cookie possui várias configurações padrão. Você pode alterar essas config
 | Nome do cookie | mbox. |
 | Domínio do cookie | Domínio de primeiro e segundo nível a partir de onde o conteúdo será disponibilizado. O cookie é sempre um cookie próprio porque é disponibilizado pelo domínio de sua companhia. Exemplo: `mycompany.com`. |
 | Domínio do servidor | `clientcode.tt.omtrdc.net`, utilizando o código de cliente de sua conta. |
-| Duração do cookie | O cookie permanece no navegador do visitante por dois anos a partir de seu último logon.<P>A variável `deviceIdLifetime` a configuração é substituível em [at.js versão 2.3.1 ou posterior](../atjs/target-atjs-versions.md). Para obter mais informações, consulte [targetGlobalSettings()](../../../implement/client-side/atjs/atjs-functions/targetglobalsettings.md). |
+| Duração do cookie | O cookie permanece no navegador do visitante por dois anos a partir de seu último logon.<P>A configuração `deviceIdLifetime` pode ser substituída na [at.js versão 2.3.1 ou posterior](../atjs/target-atjs-versions.md). Para obter mais informações, consulte [targetGlobalSettings()](../../../implement/client-side/atjs/atjs-functions/targetglobalsettings.md). |
 | Política P3P | O cookie é publicado com a política P3P, conforme requerido pela configuração padrão na maioria dos navegadores. Uma política P3P indica ao navegador quem está disponibilizando o cookie e como as informações serão utilizadas. |
 
 O cookie mantém uma série de valores para gerenciar a experiência de seus visitantes nas campanhas:
@@ -129,12 +129,12 @@ O cookie mantém uma série de valores para gerenciar a experiência de seus vis
 
 Lembre-se do seguinte:
 
-### Como o [!DNL Adobe Target] Rastreamento do trabalho?
+### Como funciona o Rastreamento do [!DNL Adobe Target]?
 
 | Cookies | Detalhes |
 |--- |--- |
 | Domínios próprios | Esta é a implementação padrão para [!DNL Target] clientes.  Os cookies &quot;mbox&quot; são definidos no domínio do cliente. |
-| Rastreamento de terceiros | O rastreamento de terceiros é importante para anunciar e segmentar casos de uso no [!DNL Target] e no [!DNL Adobe Audience Manager] (AAM)  O rastreamento de terceiros requer técnicas de script entre sites.  [!DNL Target]O usa dois cookies, &quot;mboxSession&quot; e &quot;mboxPC&quot; configurados no domínio `clientcode.tt.omtrd.net`. |
+| Rastreamento de terceiros | O rastreamento de terceiros é importante para anunciar e segmentar casos de uso em [!DNL Target] e em [!DNL Adobe Audience Manager] (AAM).  O rastreamento de terceiros requer técnicas de script entre sites.  [!DNL Target] usa dois cookies, &quot;mboxSession&quot; e &quot;mboxPC&quot; configurados no domínio `clientcode.tt.omtrd.net`. |
 
 ### Qual é a abordagem da Apple?
 
@@ -148,11 +148,11 @@ Da Apple:
 |--- |--- |
 | Intelligent tracking prevention (Prevenção inteligente de rastreamento) | Para obter mais informações, consulte [Intelligent Tracking Prevention](https://webkit.org/blog/7675/intelligent-tracking-prevention/) no site WebKit Open Source Web Browser Engine. |
 | Cookies | Como o Safari gerencia cookies:<ul><li>Cookies de terceiros que não estão em um domínio que o usuário acessa diretamente nunca são salvos. Esse comportamento não é novo. Cookies de terceiros já não são suportados no Safari.</li><li>Cookies de terceiros definidos em um domínio que o usuário acessa diretamente são removidos após 24 horas.</li><li>Os cookies próprios são removidos após 30 dias se o domínio próprio for classificado como rastreamento de usuários em todos os sites. Esse problema pode se aplicar a grandes empresas que enviam usuários para domínios diferentes online. A Apple não deixou claro como exatamente esses domínios serão classificados, ou como um domínio pode determinar se eles foram classificados como usuários de rastreamento entre sites.</li></ul> |
-| Aprendizagem de máquina para identificar domínios que estão em todos os sites | Da Apple:<P>Classificador de aprendizagem de máquina: um modelo de aprendizagem de máquina é usado para classificar os principais domínios controlados de forma privada que podem controlar o usuário em todos os sites, com base nas estatísticas coletadas. Das várias estatísticas coletadas, três vetores mostraram forte sinal de classificação com base nas práticas de rastreamento atuais: sub-origem em número de domínios únicos, subestrutura em número de domínios únicos e número de domínios únicos redirecionados. Toda a coleta e classificação de dados acontece no dispositivo.<P>No entanto, se o usuário interagir com example.com como o principal domínio, geralmente chamado de domínio próprio, o Intelligent Tracking Prevention considera um sinal de que o usuário tem interesse no website e ajusta temporariamente seu comportamento conforme descrito nesta linha do tempo:<P>Se o usuário interagiu com nas últimas 24 horas, seus cookies estarão disponíveis quando `example.com`example.com for de terceiros. Isso permite cenários de login &quot;Fazer login com minha conta X em Y&quot;.<ul><li>Os domínios visitados como domínio de nível superior não serão afetados. Sites como o OKTA, por exemplo</li><li>Identifica domínios que são subdomínios ou subestruturas da página atual em vários domínios únicos.</li></ul> |
+| Aprendizagem de máquina para identificar domínios que estão em todos os sites | Da Apple:<P>Classificador de aprendizagem de máquina: um modelo de aprendizagem de máquina é usado para classificar os principais domínios controlados de forma privada que podem controlar o usuário em todos os sites, com base nas estatísticas coletadas. Das várias estatísticas coletadas, três vetores mostraram forte sinal de classificação com base nas práticas de rastreamento atuais: sub-origem em número de domínios únicos, subestrutura em número de domínios únicos e número de domínios únicos redirecionados. Toda a coleta e classificação de dados acontece no dispositivo.<P>No entanto, se o usuário interagir com example.com como o domínio principal, geralmente chamado de domínio próprio, a Intelligent Tracking Prevention considera um sinal de que o usuário está interessado no site e ajusta temporariamente seu comportamento, conforme demonstrado na linha do tempo:<P>Se o usuário interagiu com example.com nas últimas 24 horas, seus cookies estarão disponíveis quando `example.com` for um terceiro. Isso permite cenários de login &quot;Fazer login com minha conta X em Y&quot;.<ul><li>Os domínios visitados como domínio de nível superior não serão afetados. Sites como o OKTA, por exemplo</li><li>Identifica domínios que são subdomínios ou subquadros da página atual em vários domínios exclusivos.</li></ul> |
 
 ### Como a Adobe será afetada?
 
 | Funcionalidade afetada | Detalhes |
 |--- |--- |
-| Suporte para cancelamento | As alterações de rastreamento do WebKit da Apple interrompem o suporte ao cancelamento.<P>[!DNL Target]O cancelamento do usa um cookie no domínio `clientcode.tt.omtrdc.net`. Para obter mais detalhes, consulte [Privacidade](/help/dev/before-implement/privacy/privacy.md).<P>[!DNL Target] O aceita dois cancelamentos:<ul><li>Um por cliente (o cliente gerencia o link para opção de não participação).</li><li>Um via Adobe que desativa o usuário [!DNL Target] funcionalidade para todos os clientes.</li></ul>Ambos os métodos usam o cookie de terceiros. |
-| [!DNL Target] atividades | Os clientes podem escolher seus [duração do perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) para seus [!DNL Target] contas - até 90 dias. A preocupação é que, se o ciclo de vida do perfil da conta for superior a 30 dias e o cookie próprio for removido porque o domínio do cliente foi marcado como rastreamento de usuários entre sites, o comportamento dos visitantes do Safari será afetado nas seguintes áreas no [!DNL Target]:<P>**[!DNL Target]Relatórios**: se um usuário do Safari entrar em uma atividade, retornar após 30 dias e depois se converter, ele será contado como dois visitantes e uma conversão.<P>Esse comportamento é o mesmo para atividades que usam [!DNL Analytics] como fonte de relatórios (A4T).<P>**Associação de perfil e atividade**:<ul><li>Dados do perfil são apagados quando o cookie próprio expira.</li><li>Associação de atividade é apagada quando o cookie próprio expira.</li><li> [!DNL Target]O não funciona no Safari para contas que usam uma implementação de cookies de terceiros ou uma implementação de cookies próprios e de terceiros. Observe que esse comportamento não é novo. O Safari não permite cookies de terceiros por algum tempo.</li></ul><P>**Sugestões:** se houver uma preocupação de que o domínio do cliente possa ser marcado como uma sessão cruzada de visitantes de rastreamento, é mais seguro definir a duração do perfil para 30 dias ou menos no [!DNL Target]. Isso garante que os usuários sejam rastreados de forma semelhante no Safari e em todos os outros navegadores. |
+| Suporte para cancelamento | As alterações de rastreamento do WebKit da Apple interrompem o suporte ao cancelamento.<P>A opção de não participação de [!DNL Target] usa um cookie no domínio `clientcode.tt.omtrdc.net`. Para obter mais detalhes, consulte [Privacidade](/help/dev/before-implement/privacy/privacy.md).<P>[!DNL Target] aceita dois cancelamentos:<ul><li>Um por cliente (o cliente gerencia o link para opção de não participação).</li><li>Um via Adobe que exclui o usuário de todas as funcionalidades do [!DNL Target] para todos os clientes.</li></ul>Ambos os métodos usam o cookie de terceiros. |
+| [!DNL Target] atividades | Os clientes podem escolher sua [duração do perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html) para suas contas do [!DNL Target]: até 90 dias. A preocupação é que, se a duração do perfil da conta for superior a 30 dias, e o cookie próprio for limpo porque o domínio do cliente foi marcado como usuários de rastreamento entre sites, o comportamento dos visitantes do Safari será afetado nas seguintes áreas em [!DNL Target]:<P>**[!DNL Target]Relatórios**: se um usuário do Safari entrar em uma atividade, retornar após 30 dias e depois se converter, esse usuário contará como dois visitantes e uma conversão.<P>Esse comportamento é o mesmo para atividades que usam [!DNL Analytics] como fonte de relatórios (A4T).<P>**Associação de Perfil e Atividade**:<ul><li>Dados do perfil são apagados quando o cookie próprio expira.</li><li>Associação de atividade é apagada quando o cookie próprio expira.</li><li> [!DNL Target] não funciona no Safari para contas que usam uma implementação de cookies de terceiros ou uma implementação de cookies próprios e de terceiros. Observe que esse comportamento não é novo. O Safari não permite cookies de terceiros por algum tempo.</li></ul><P>**Sugestões**: se houver uma preocupação de que o domínio do cliente possa ser marcado como uma sessão cruzada de visitantes de rastreamento, é mais seguro definir a duração do perfil para 30 dias ou menos em [!DNL Target]. Isso garante que os usuários sejam rastreados de forma semelhante no Safari e em todos os outros navegadores. |

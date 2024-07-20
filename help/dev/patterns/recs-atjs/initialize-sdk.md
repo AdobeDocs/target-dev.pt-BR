@@ -1,19 +1,20 @@
 ---
 title: Inicializar SDKs
-description: Verifique se todas as etapas necessárias para carregar o [!DNL Adobe Target] A biblioteca JavaScript at.js é executada na sequência correta.
+description: Verifique se todas as etapas necessárias para carregar a biblioteca JavaScript do at.js [!DNL Adobe Target] foram executadas na sequência correta.
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: 250a8382-1fdd-4a70-b712-a25af5adad71
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '1820'
-ht-degree: 8%
+source-wordcount: '1558'
+ht-degree: 5%
 
 ---
 
 # Inicializar SDKs
 
-Siga as etapas na guia *Inicializar SDK* diagrama para garantir que todas as tarefas necessárias para carregar o [!DNL Adobe Target] A biblioteca JavaScript at.js é executada na sequência correta.
+Siga as etapas do diagrama *Inicializar SDK* para garantir que todas as tarefas necessárias para carregar a biblioteca at.js de JavaScript [!DNL Adobe Target] sejam executadas na sequência correta.
 
 >[!TIP]
 >
@@ -25,9 +26,9 @@ Para aplicativos de várias páginas, esse fluxo ocorre sempre que a página é 
 
 >[!NOTE]
 >
->Os números de etapa na ilustração a seguir correspondem às seções abaixo. Os números das etapas não estão em uma ordem específica e não refletem a ordem das etapas realizadas no [!DNL Target] Interface ao criar a atividade.
+>Os números de etapa na ilustração a seguir correspondem às seções abaixo. Os números de etapa não estão em uma ordem específica e não refletem a ordem das etapas realizadas na interface do usuário [!DNL Target] ao criar a atividade.
 
-![Inicializar diagrama de SDKs](/help/dev/patterns/recs-atjs/assets/diagram-initiaze-sdk.png){width="600" zoomable="yes"}
+![Inicializar o diagrama de SDKs](/help/dev/patterns/recs-atjs/assets/diagram-initiaze-sdk.png){width="600" zoomable="yes"}
 
 Clique nos links a seguir para navegar até as seções desejadas:
 
@@ -50,35 +51,35 @@ Clique nos links a seguir para navegar até as seções desejadas:
 
 ## 1.1: Carregar SDK da API do visitante {#load}
 
-Essa etapa ajuda a garantir que o `VisitorAPI.js` A biblioteca do é carregada, configurada e inicializada corretamente.
+Esta etapa ajuda a garantir que a biblioteca `VisitorAPI.js` seja carregada, configurada e inicializada corretamente.
 
 +++Ver detalhes
 
-![Carregar diagrama do SDK da API do visitante](/help/dev/patterns/recs-atjs/assets/load-visitor-combined.png){width="400" zoomable="yes"}
+![Carregar diagrama do SDK da API de Visitante](/help/dev/patterns/recs-atjs/assets/load-visitor-combined.png){width="400" zoomable="yes"}
 
 **Pré-requisitos**
 
-* Para usar o Serviço de ID/API do visitante, a empresa deve estar habilitada para o [!DNL Adobe Experience Cloud] e ter uma [!UICONTROL ID da organização]. Para obter mais informações, consulte [Requisitos de Experience Cloud: ID da organização](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank} no *Ajuda do Serviço de identidade* guia.
-* Você precisa do `VisitorAPI.js` arquivo. Você já deve ter esse arquivo se tiver [!DNL Adobe Analytics] implementado. Esse arquivo também pode ser adicionado por meio da [[!DNL Adobe Experience Platform] extensão de tags](https://experienceleague.adobe.com/docs/tags.html){target=_blank} or can be downloaded from the [Adobe Analytics Code Manager](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank}.
+* Para usar a ID de visitante/API Service, sua empresa deve estar habilitada para o [!DNL Adobe Experience Cloud] e ter um [!UICONTROL Organization ID]. Para obter mais informações, consulte [Requisitos de Experience Cloud: ID da Organização](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?){target=_blank} no guia *Ajuda do Serviço de Identidade*.
+* Você precisa do arquivo `VisitorAPI.js`. Você já deve ter este arquivo se tiver o [!DNL Adobe Analytics] implementado. Este arquivo também pode ser adicionado por meio da [[!DNL Adobe Experience Platform] extensão de tags](https://experienceleague.adobe.com/docs/tags.html){target=_blank} ou pode ser baixado do [Gerenciador de Códigos Adobe Analytics](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html){target=_blank}.
 
-**Configure e consulte VisitorAPI.js**
+**Configurar e consultar VisitorAPI.js**
 
-Para obter mais informações, consulte [Implementar o serviço Experience Cloud para Target](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html){target=_blank}.
+Para obter mais informações, consulte [Implementar o Serviço Experience Cloud para Target](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html){target=_blank}.
 
 **Leituras**
 
-* [Visão geral do serviço de identidade do Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html){target=_blank}
-* [Sobre o serviço de ID](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html){target=_blank}
-* [Cookies e o serviço de identidade da Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html){target=_blank}
-* [Como o serviço de identidade do Experience Cloud solicita e define IDs](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html){target=_blank}
-* [Como entender a sincronização de ID e as taxas de correspondência](https://experienceleague.adobe.com/docs/id-service/using/intro/match-rates.html){target=_blank}
+* [visão geral do Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html){target=_blank}
+* [Sobre o Serviço de ID](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html){target=_blank}
+* [Cookies e o Serviço de Identidade Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html){target=_blank}
+* [Como o Serviço de Identidade do Experience Cloud solicita e define IDs](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html){target=_blank}
+* [Entendendo a sincronização de ID e as taxas de correspondência](https://experienceleague.adobe.com/docs/id-service/using/intro/match-rates.html){target=_blank}
 
 **Ações**
 
-* Incorpore o `VisitorAPI.js` em suas páginas da Web.
-* Leia sobre o [configurações disponíveis para o Serviço de ID/API do visitante](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html){target=_blank}.
-* Depois que a variável `VisitorAPI.js` arquivo for carregado, use o `Visitor.getInstance` para inicializar usando as configurações necessárias.
-* Familiarize-se com o [métodos disponíveis](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html){target=_blank}.
+* Incorpore o arquivo `VisitorAPI.js` às suas páginas da Web.
+* Leia sobre as [configurações disponíveis para o Serviço de ID/API do Visitante](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html){target=_blank}.
+* Depois que o arquivo `VisitorAPI.js` for carregado, use o método `Visitor.getInstance` para inicializar usando as configurações necessárias.
+* Familiarize-se com os [métodos disponíveis](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/get-set.html){target=_blank}.
 
 +++
 
@@ -86,17 +87,17 @@ Para obter mais informações, consulte [Implementar o serviço Experience Cloud
 
 ## 1.2: Definir ID do cliente {#set}
 
-Essa etapa ajuda a garantir que as IDs conhecidas dos visitantes (CRM ID, ID de usuário e assim por diante) sejam vinculadas à ID anônima do [!DNL Adobe] para personalização entre dispositivos.
+Essa etapa ajuda a garantir que as IDs conhecidas dos seus visitantes (CRM ID, ID de usuário e assim por diante) sejam vinculadas à ID anônima do [!DNL Adobe] para personalização entre dispositivos.
 
 +++Ver detalhes
 
-![Definir ID do cliente](/help/dev/patterns/recs-atjs/assets/set-customer-id-combined.png){width="400" zoomable="yes"}
+![Definir ID do Cliente](/help/dev/patterns/recs-atjs/assets/set-customer-id-combined.png){width="400" zoomable="yes"}
 
 **Pré-requisitos**
 
 * A ID conhecida dos visitantes deve estar disponível na camada de dados.
 
-**Definir ID do cliente**
+**Definir ID do Cliente**
 Para obter mais informações, consulte [setCustomerIDs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html){target=_blank}.
 
 **Leituras**
@@ -105,7 +106,7 @@ Para obter mais informações, consulte [setCustomerIDs](https://experienceleagu
 
 **Ações**
 
-* Uso `visitor.setCustomerIDs` para definir a ID de visitante conhecida.
+* Use `visitor.setCustomerIDs` para definir a ID conhecida do visitante.
 
 +++
 
@@ -113,7 +114,7 @@ Para obter mais informações, consulte [setCustomerIDs](https://experienceleagu
 
 ## 1.3: Configurar solicitação automática de carregamento de página {#automatic}
 
-Esta etapa permite que a at.js busque todas as experiências que devem ser renderizadas na página ao carregar o arquivo da biblioteca at.js de JavaScript.
+Essa etapa permite que a at.js busque todas as experiências que devem ser renderizadas na página ao carregar o arquivo da biblioteca JavaScript at.js.
 
 +++Ver detalhes
 
@@ -121,8 +122,8 @@ Esta etapa permite que a at.js busque todas as experiências que devem ser rende
 
 **Pré-requisitos**
 
-* Nem todos os dados na camada de dados devem ser enviados para [!DNL Target]. Consulte sua equipe de negócios (equipe de marketing digital) para determinar quais dados são valiosos para experimentação, otimização e personalização. Somente esses dados devem ser enviados para [!DNL Target].
-* Certifique-se de não enviar dados de Informações pessoais identificáveis (PII) para o [!DNL Target].
+* Nem todos os dados na camada de dados devem ser enviados para [!DNL Target]. Consulte sua equipe de negócios (equipe de marketing digital) para determinar quais dados são valiosos para experimentação, otimização e personalização. Somente estes dados devem ser enviados para [!DNL Target].
+* Certifique-se de não enviar dados de Informações de Identificação Pessoal (PII) para [!DNL Target].
 
 **Configurar solicitação automática de carregamento de página**
 
@@ -130,11 +131,11 @@ Para obter mais informações, consulte [targetGlobalSettings()](/help/dev/imple
 
 **Leituras**
 
-Saiba mais sobre o `pageLoadEnabled` configuração em [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
+Saiba mais sobre a configuração `pageLoadEnabled` em [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 
 **Ações**
 
-* Modifique o `window.targetGlobalSettings` para habilitar solicitações automáticas de carregamento de página.
+* Modifique o objeto `window.targetGlobalSettings` para habilitar solicitações automáticas de carregamento de página.
 
 +++
 
@@ -152,13 +153,13 @@ Essa etapa ajuda a garantir que não haja cintilação da página ao fornecer ex
 
 * Discussões com a equipe responsável pelo desempenho da página da Web sobre os prós e contras do controle da cintilação usando o método padrão usado pela at.js. Pesquise por padrões de design que permitam usar a solução personalizada de manipulação de cintilação, como a animação de carregador. Se não encontrar um padrão, você poderá solicitar um novo padrão.
 
-**Configurar o tratamento de cintilação**
+**Configurar tratamento de cintilação**
 
 Para obter mais informações, consulte [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 
-Configuração `bodyHidingEnabled` para `true` oculta o corpo inteiro da página enquanto a solicitação de carregamento de página está em andamento. Se você não tiver ativado a solicitação automática de carregamento de página por qualquer motivo (dados que depois não estarão prontos, por exemplo), é melhor definir essa configuração como `false`.
+A configuração de `bodyHidingEnabled` como `true` oculta o corpo inteiro da página enquanto a solicitação de carregamento de página está em andamento. Se você não tiver habilitado a solicitação automática de carregamento de página por qualquer motivo (dados não prontos posteriormente, por exemplo), é melhor definir essa configuração como `false`.
 
-Se você tiver desativado `bodyHidingEnabled` como você não deseja acionar a APLR e deseja acionar a solicitação de página posteriormente ou porque não precisa do tratamento de cintilação, você deve implementar seu próprio tratamento de cintilação. Você pode lidar com a cintilação de duas maneiras: ocultando as seções em teste ou mostrando um ladrão nas seções em teste.
+Se você desabilitou o `bodyHidingEnabled` porque não deseja acionar a APLR e deseja acionar a solicitação de página mais tarde, ou não precisa do tratamento de cintilação, você deve implementar seu próprio tratamento de cintilação. Você pode lidar com a cintilação de duas maneiras: ocultando as seções em teste ou mostrando um ladrão nas seções em teste.
 
 **Leituras**
 
@@ -167,7 +168,7 @@ Se você tiver desativado `bodyHidingEnabled` como você não deseja acionar a A
 
 **Ações**
 
-* Modifique o `window.targetGlobalSettings` objeto a ser definido `bodyHiddenStyle` e `bodyHidingEnabled`.
+* Modifique o objeto `window.targetGlobalSettings` para definir `bodyHiddenStyle` e `bodyHidingEnabled`.
 
 +++
 
@@ -175,7 +176,7 @@ Se você tiver desativado `bodyHidingEnabled` como você não deseja acionar a A
 
 ## 1.5: Configurar mapeamento de dados {#data-mapping}
 
-Essa etapa ajuda a garantir que todos os dados que devem ser enviados para o [!DNL Target] está definido.
+Esta etapa ajuda a garantir que todos os dados que devem ser enviados para [!DNL Target] sejam definidos.
 
 +++Ver detalhes
 
@@ -183,14 +184,14 @@ Essa etapa ajuda a garantir que todos os dados que devem ser enviados para o [!D
 
 **Pré-requisitos**
 
-* A camada de dados deve estar pronta com todos os dados que devem ser enviados para o [!DNL Target].
+* A camada de dados deve estar pronta com todos os dados que devem ser enviados para [!DNL Target].
 * Recommendations: enriqueça o perfil.
-   * Aprovado `entity.id` para capturar dados de critérios e itens visualizados recentemente com base em critérios baseados no último produto visualizado.
-   * Aprovado `entity.id` para capturar dados para critérios de popularidade com base na categoria favorita.
+   * Envie `entity.id` para capturar dados de critérios e itens visualizados recentemente com base em critérios baseados no último produto visualizado.
+   * Envie `entity.id` para capturar dados para critérios de popularidade com base na categoria favorita.
    * Passe o atributo de perfil se os critérios personalizados se basearem nele ou se forem usados na filtragem da regra de inclusão em qualquer critério.
 * Recommendations: assimilar dados do produto.
-   * Outros parâmetros de entidade (reservados e personalizados) podem ser passados para assimilar ou atualizar o catálogo de produtos no [!DNL Recommendations].
-   * O catálogo de produtos também pode ser atualizado usando feeds de entidade com o [!DNL Target] Interface do usuário ou API.
+   * Outros parâmetros de entidade (reservados e personalizados) podem ser passados para assimilar ou atualizar o catálogo de produtos em [!DNL Recommendations].
+   * O catálogo de produtos também pode ser atualizado usando feeds de entidade com a interface ou a API [!DNL Target].
 
 **Mapear dados para[!DNL Target]**
 
@@ -204,7 +205,7 @@ Para obter mais informações, consulte [targetPageParams()](/help/dev/implement
 
 **Ações**
 
-* Use o `targetPageParams()` para definir todos os dados necessários que devem ser enviados para o [!DNL Target].
+* Use a função `targetPageParams()` para definir todos os dados necessários que devem ser enviados para [!DNL Target].
 
 +++
 
@@ -212,7 +213,7 @@ Para obter mais informações, consulte [targetPageParams()](/help/dev/implement
 
 ## 1.6: Promoção {#promotion}
 
-Adicione itens promovidos e controle seu posicionamento no [!DNL Target Recommendations] [designs](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}.
+Adicione itens promovidos e controle o posicionamento nos [!DNL Target Recommendations] [designs](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html){target=_blank}.
 
 +++Ver detalhes
 
@@ -222,7 +223,7 @@ Adicione itens promovidos e controle seu posicionamento no [!DNL Target Recommen
 * [Promover por coleção](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
 * [Promover por atributo](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-**Parâmetros de entidade obrigatórios**
+**Parâmetros de entidade necessários**
 
 * O atributo de item na promoção deve ser passado ao usar a opção &quot;promover por atributo&quot;.
 
@@ -238,11 +239,11 @@ Faça recomendações com base no conteúdo do carrinho do usuário.
 
 **Critérios disponíveis**
 
-* [!UICONTROL Pessoas que visualizaram isto, visualizaram aquilo]
-* [!UICONTROL Pessoas que visualizaram e compraram essas]
-* [!UICONTROL Pessoas que compraram isto, compraram aquilo]
+* [!UICONTROL People Who Viewed These, Viewed Those]
+* [!UICONTROL People Who Viewed These, Bought Those]
+* [!UICONTROL People Who Bought These, Bought Those]
 
-**Parâmetros de entidade obrigatórios**
+**Parâmetros de entidade necessários**
 
 * cartIds
 
@@ -262,22 +263,22 @@ Faça recomendações com base na popularidade geral de um item em todo o site o
 
 **Critérios disponíveis**
 
-* [!UICONTROL Mais visualizados no site]
-* [!UICONTROL Mais visualizados por categoria]
-* [!UICONTROL Mais visualizados pelo atributo de item]
-* [!UICONTROL Mais vendidos em todo o site]
-* [!UICONTROL Mais vendidos por categoria]
-* [!UICONTROL Mais Vendidos por Atributo de Item]
-* [!UICONTROL Comece pela métrica do Analytics]
+* [!UICONTROL Most Viewed Across the Site]
+* [!UICONTROL Most Viewed by Category]
+* [!UICONTROL Most Viewed by Item Attribute]
+* [!UICONTROL Top Sellers Across the Site]
+* [!UICONTROL Top Sellers by Category]
+* [!UICONTROL Top Sellers by Item Attribute]
+* [!UICONTROL Top by Analytics Metric]
 
-**Parâmetros de entidade obrigatórios**
+**Parâmetros de entidade necessários**
 
 * `entity.categoryId` ou o atributo de item para popularidade com base no critério do item atual ou no atributo de item.
 * Nada deve ser passado para Mais visualizados/Principais vendidos no site.
 
 **Leituras**
 
-* [Baseado em popularidade](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Com base em popularidade](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -291,12 +292,12 @@ Fazer recomendações com base na localização de itens semelhantes a um item q
 
 **Critérios disponíveis**
 
-* [!UICONTROL Pessoas que visualizaram isto, visualizaram aquilo]
-* [!UICONTROL Pessoas que visualizaram isto, compraram aquilo]
-* [!UICONTROL Pessoas que compraram isto, compraram aquilo]
-* [!UICONTROL Itens com atributos similares]
+* [!UICONTROL People Who Viewed This, Viewed That]
+* [!UICONTROL People Who Viewed This, Bought That]
+* [!UICONTROL People Who Bought This, Bought That]
+* [!UICONTROL Items with Similar Attributes]
 
-**Parâmetros de entidade obrigatórios**
+**Parâmetros de entidade necessários**
 
 * `entity.id` ou qualquer atributo de perfil usado como uma chave
 
@@ -316,10 +317,10 @@ Faça recomendações com base no comportamento do usuário.
 
 **Critérios disponíveis**
 
-* [!UICONTROL Itens visualizados recentemente ]
-* [!UICONTROL Recomendado para você]
+* [!UICONTROL Recently Viewed Items]
+* [!UICONTROL Recommended for You]
 
-**Parâmetros de entidade obrigatórios**
+**Parâmetros de entidade necessários**
 
 * `entity.id`
 
@@ -339,9 +340,9 @@ Fazer recomendações com base em um arquivo personalizado que você carregou.
 
 **Critérios disponíveis**
 
-* [!UICONTROL Algoritmo personalizado]
+* [!UICONTROL Custom algorithm]
 
-**Parâmetros de entidade obrigatórios**
+**Parâmetros de entidade necessários**
 
 `entity.id` ou o atributo usado como uma chave para o algoritmo personalizado
 
@@ -359,7 +360,7 @@ Fazer recomendações com base em um arquivo personalizado que você carregou.
 
 **Leituras**
 
-* [Uso das regras de inclusão estática e dinâmica](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
+* [Usar regras de inclusão estática e dinâmica](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -379,9 +380,9 @@ Transmita IDs de entidade para entidades que você deseja excluir de suas recome
 
 [Retorne ao diagrama na parte superior desta página.](#diagram)
 
-## 1.14: Passe o `entity.event.detailsOnly=true` parâmetro {#true}
+## 1.14: Passar o parâmetro `entity.event.detailsOnly=true` {#true}
 
-Use atributos de entidade para passar informações do produto ou conteúdo para o [!DNL Target Recommendations].
+Use atributos de entidade para passar informações sobre o produto ou conteúdo para [!DNL Target Recommendations].
 
 +++Ver detalhes
 
@@ -395,7 +396,7 @@ Use atributos de entidade para passar informações do produto ou conteúdo para
 
 ## 1.15: Configurar mapeamento de dados remotos (remoto)
 
-Essa etapa garante que todos os dados que devem ser enviados para o [!DNL Target] está definido.
+Esta etapa garante que todos os dados que devem ser enviados para [!DNL Target] sejam definidos.
 
 +++Ver detalhes
 
@@ -403,7 +404,7 @@ Essa etapa garante que todos os dados que devem ser enviados para o [!DNL Target
 
 **Pré-requisitos**
 
-* A camada de dados deve estar pronta com todos os dados que devem ser enviados para o [!DNL Target].
+* A camada de dados deve estar pronta com todos os dados que devem ser enviados para [!DNL Target].
 
 **Configurar provedores de dados**
 
@@ -415,7 +416,7 @@ Para obter mais informações, consulte [Provedores de dados](/help/dev/implemen
 
 **Ações**
 
-Use o `targetPageParams()` para definir todos os dados necessários que devem ser enviados para o [!DNL Target].
+Use a função `targetPageParams()` para definir todos os dados necessários que devem ser enviados para [!DNL Target].
 
 +++
 
@@ -423,7 +424,7 @@ Use o `targetPageParams()` para definir todos os dados necessários que devem se
 
 ## 1.16: Carregar at.js {#web}
 
-Esta etapa garante que a biblioteca de JavaScript at.js do seja carregada e inicializada.
+Essa etapa garante que a biblioteca JavaScript at.js seja carregada e inicializada.
 
 +++Ver detalhes
 
@@ -431,7 +432,7 @@ Esta etapa garante que a biblioteca de JavaScript at.js do seja carregada e inic
 
 **Pré-requisitos**
 
-* Baixe ou peça à sua equipe de marketing digital para o `at.js 2.*x*` Arquivo da biblioteca JavaScript.
+* Baixe ou peça o arquivo da biblioteca JavaScript `at.js 2.*x*` à sua equipe de marketing digital.
 
 *Leituras*
 
@@ -447,33 +448,4 @@ Incorpore o arquivo at.js em todas as páginas da Web em que experimentação, o
 
 [Retorne ao diagrama na parte superior desta página.](#diagram)
 
-Vá para a Etapa 2: [Configurar coleção de dados](/help/dev/patterns/recs-atjs/data-collection.md).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Vá para a Etapa 2: [Configurar a coleta de dados](/help/dev/patterns/recs-atjs/data-collection.md).

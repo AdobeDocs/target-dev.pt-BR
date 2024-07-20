@@ -1,31 +1,31 @@
 ---
 keywords: cintilação, at.js, implementação, assíncrono, assíncrono, síncrono, síncrono, $8
-description: Saiba como a at.js e [!DNL Target] evite a cintilação (o conteúdo padrão é exibido momentaneamente antes de ser substituído pelo conteúdo da atividade) durante o carregamento da página ou do aplicativo.
+description: Saiba como a at.js e o  [!DNL Target] evitam a cintilação (o conteúdo padrão é exibido momentaneamente antes de ser substituído pelo conteúdo da atividade) durante o carregamento da página ou do aplicativo.
 title: Como a at.js gerencia a cintilação?
 feature: at.js
 exl-id: 8aacf254-ec3d-4831-89bb-db7f163b3869
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 63%
+source-wordcount: '699'
+ht-degree: 57%
 
 ---
 
 # Como a at.js gerencia a cintilação
 
-Informações sobre como o [!DNL Adobe Target] A biblioteca JavaScript at.js impede a cintilação durante o carregamento de página ou aplicativo.
+Informações sobre como a biblioteca de JavaScript at.js do [!DNL Adobe Target] impede a cintilação durante o carregamento de página ou aplicativo.
 
 A cintilação ocorre quando o conteúdo padrão é exibido momentaneamente aos visitantes, antes de ele ser substituído pelo conteúdo da atividade. A cintilação é indesejável porque pode ser confusa para os visitantes.
 
 ## Uso de uma mbox global criada automaticamente
 
-Se você ativar a configuração [Criar mbox global automaticamente](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) ao configurar o at.js, o at.js gerenciará a cintilação alterando a configuração de opacidade, à medida que a página é carregada. Ao carregar o at.js, é alterada a configuração de opacidade do `<body>` elemento para &quot;0&quot;, tornando a página invisível inicialmente para os visitantes. Após uma resposta de [!DNL Target] for recebido — ou se um erro com a variável [!DNL Target] for detectada—a at.js redefine a opacidade para &quot;1&quot;. Isso garante que o visitante veja a página somente depois que o conteúdo de suas atividades for aplicado.
+Se você ativar a configuração [Criar mbox global automaticamente](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) ao configurar o at.js, o at.js gerenciará a cintilação alterando a configuração de opacidade, à medida que a página é carregada. Quando o at.js for carregado, a configuração de opacidade do elemento `<body>` será alterada para &quot;0&quot;, tornando a página invisível inicialmente para os visitantes. Após receber uma resposta de [!DNL Target], ou se for detectado um erro com a solicitação [!DNL Target], a at.js redefine a opacidade para &quot;1&quot;. Isso garante que o visitante veja a página somente depois que o conteúdo de suas atividades for aplicado.
 
-Se a configuração for ativada ao definir a at.js, a at.js definirá a opacidade do estilo HTML BODY para 0. Após uma resposta de [!DNL Target] for recebida, a at.js redefinirá a opacidade do HTML para 1.
+Se a configuração for ativada ao definir a at.js, a at.js definirá a opacidade do estilo HTML BODY para 0. Após receber uma resposta de [!DNL Target], a at.js redefine a opacidade de HTML para 1.
 
 A opacidade definida para 0 mantém o conteúdo da página oculto para evitar cintilação, mas o navegador ainda renderiza a página e carrega todos os recursos necessários, como CSS, imagens, etc.
 
-Se `opacity: 0` não funcionar na implementação, você também poderá gerenciar a cintilação personalizando `bodyHiddenStyle` e defina-o como `body {visibility:hidden !important}`. Você pode usar `body {opacity:0 !important}` ou `body {visibility:hidden !important}`, o que funcionar melhor para a circunstância específica.
+Se o `opacity: 0` não funcionar na sua implementação, você também poderá gerenciar a cintilação personalizando o `bodyHiddenStyle` e definindo-a como `body {visibility:hidden !important}`. Você pode usar `body {opacity:0 !important}` ou `body {visibility:hidden !important}`, o que funcionar melhor para a circunstância específica.
 
 A ilustração a seguir mostra as chamadas Ocultar corpo e Mostrar corpo no at.js 1.*x* e at.js 2.x.
 
@@ -33,13 +33,13 @@ A ilustração a seguir mostra as chamadas Ocultar corpo e Mostrar corpo no at.j
 
 (Clique na imagem para expandir até a largura total.)
 
-![Fluxo do Target: Solicitação de carregamento de página da at.js](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Fluxo do Target: Solicitação de carregamento de página da at.js"){zoom=&quot;yes&quot;}
+![Fluxo do Target: Solicitação de carregamento de página da at.js](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Fluxo do Target: Solicitação de carregamento de página da at.js"){zoomable="yes"}
 
 **at.js 1.*x***  
 
 (Clique na imagem para expandir até a largura total.)
 
-![Fluxo do Target: mbox global criada automaticamente](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png "Fluxo do Target: mbox global criada automaticamente"){zoom=&quot;yes&quot;}
+![Fluxo do Target: Mbox global criada automaticamente](/help/dev/implement/client-side/atjs/how-atjs-works/assets/target-flow2.png "Fluxo do Target: Mbox global criada automaticamente"){zoomable="yes"}
 
 Para obter mais informações sobre `bodyHiddenStyle` a substituição, consulte [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 
@@ -47,7 +47,7 @@ Para obter mais informações sobre `bodyHiddenStyle` a substituição, consulte
 
 Carregar a at.js de forma assíncrona é uma ótima maneira de evitar o bloqueio de renderização do navegador. No entanto, essa técnica pode levar à cintilação na página da Web.
 
-Você pode evitar a cintilação usando um trecho oculto previamente, que ficará visível após a personalização dos elementos HTML relevantes pelo Target.
+Você pode evitar a cintilação usando um trecho oculto previamente, que ficará visível após a personalização dos elementos de HTML relevantes pelo Target.
 
 A at.js pode ser carregada de forma assíncrona, diretamente incorporada à página ou por meio de um gerenciador de tags (por exemplo, Adobe Experience Platform Launch).
 

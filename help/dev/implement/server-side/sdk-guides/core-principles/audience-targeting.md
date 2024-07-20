@@ -1,12 +1,12 @@
 ---
 title: Direcionamento de público
-description: Os públicos podem ser usados para direcionar suas atividades de experimentação e personalização. [!DNL Adobe Target] O oferece suporte a uma variedade de recursos avançados de direcionamento de público-alvo imediatamente.
+description: Os públicos podem ser usados para direcionar suas atividades de experimentação e personalização.O  [!DNL Adobe Target] oferece suporte a vários recursos avançados de direcionamento de público-alvo prontos para uso.
 exl-id: df1bd856-e848-452c-90a0-abf29e7a2313
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '967'
-ht-degree: 21%
+source-wordcount: '702'
+ht-degree: 26%
 
 ---
 
@@ -14,11 +14,12 @@ ht-degree: 21%
 
 ## Visão geral
 
-Os públicos podem ser usados para direcionar suas atividades de experimentação e personalização. [!DNL Adobe Target] O oferece suporte a uma variedade de recursos avançados de direcionamento de público-alvo imediatamente. Os seguintes atributos estão disponíveis para [direcionamento de público](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html):
+Os públicos podem ser usados para direcionar suas atividades de experimentação e personalização. O [!DNL Adobe Target] oferece suporte a uma variedade de recursos avançados de direcionamento de público pronto para uso. Os seguintes atributos estão disponíveis para o [direcionamento de público](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/create-audience.html):
 
-### [!DNL Target] Biblioteca
+### Biblioteca [!DNL Target]
 
-Para obter mais informações, consulte [[!DNL Target] Biblioteca](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html). &#x200B;
+Para obter mais informações, consulte [[!DNL Target] Biblioteca](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-library.html).
+&#x200B;
 * Referenciado do Bing
 * Chrome
 * Firefox
@@ -35,7 +36,7 @@ Para obter mais informações, consulte [[!DNL Target] Biblioteca](https://exper
 
 ### Geografia  
 
-Para obter mais informações, consulte [Geográfico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html).
+Para obter mais informações, consulte [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html).
 &#x200B;&#x200B;
 * País/Região
 * Estado
@@ -76,7 +77,7 @@ Para obter mais informações, consulte [Parâmetros personalizados](https://exp
 
 ### Sistema operacional
 
-Para obter mais informações, consulte [Sistema operacional](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html).
+Para obter mais informações, consulte [Sistema Operacional](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/operating-system.html).
 
 * Linux
 * Macintosh
@@ -119,17 +120,17 @@ Para obter mais informações, consulte [Fontes de tráfego](https://experiencel
 
 ### Intervalo de tempo
 
-Para obter mais informações, consulte [Intervalo de tempo.](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html)
+Para obter mais informações, consulte [Intervalo de tempo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html).
 
 * Data de Início / Data Final
 
 ## Client Hints
 
-[!DNL Adobe Target] O requer Client Hints para a segmentação correta de atributos de navegador, sistema operacional e público-alvo móvel, bem como determinadas instâncias de Scripts de perfil. Para obter mais informações, consulte [User Agent e Client Hints](../../../client-side/atjs/user-agent-and-client-hints.md).
+O [!DNL Adobe Target] requer Client Hints para a segmentação correta de atributos de Navegador, Sistema Operacional e Público-alvo móvel, bem como determinadas instâncias de Scripts de Perfil. Para obter mais informações de plano de fundo, consulte [User Agent e Client Hints](../../../client-side/atjs/user-agent-and-client-hints.md).
 
 ### Como passar as Client Hints para o [!DNL Adobe Target]
 
-A partir do Node.js SDK v2.4.0 e do Java SDK v2.3.0, as Client Hints podem ser enviadas para o [!DNL Target] via `getOffers()` chamadas. As Client Hints devem ser incluídas no `request.context` objeto, juntamente com o Agente do usuário.
+A partir do Node.js SDK v2.4.0 e do Java SDK v2.3.0, as Client Hints podem ser enviadas para [!DNL Target] por meio de chamadas `getOffers()`. As Client Hints devem ser incluídas no objeto `request.context`, juntamente com o Agente do Usuário.
 
 >[!BEGINTABS]
 
@@ -162,7 +163,7 @@ targetClient.getOffers({
 });
 ```
 
->[!TAB SDK do Java]
+>[!TAB SDK Java]
 
 ```javascript {line-numbers="true"}
 import com.adobe.target.delivery.v1.model.ClientHints; 
@@ -206,11 +207,11 @@ A tabela a seguir indica quais regras de público-alvo são ou não compatíveis
 | [Perfil do visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | Não |
 | [Fontes de Tráfego](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | Não |
 | [Intervalo de tempo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | Sim |
-| [Públicos do Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Públicos-alvo da Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager | Não |
+| [Públicos-alvo do Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (públicos-alvo do Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager | Não |
 
 ### Direcionamento geográfico para decisão no dispositivo
 
-Para manter latência próxima de zero para atividades de decisão no dispositivo com públicos baseados em localização geográfica, a Adobe recomenda que você forneça os valores geográficos na chamada para `getOffers`. Faça isso configurando o `Geo` objeto no `Context` do pedido. Isso significa que seu servidor precisará de uma maneira de determinar a localização de cada usuário final. Por exemplo, o servidor pode executar uma pesquisa de IP para Geo usando um serviço configurado por você. Alguns provedores de hospedagem, como o Google Cloud, fornecem essa funcionalidade por meio de cabeçalhos personalizados em cada `HttpServletRequest`.
+Para manter uma latência próxima de zero para atividades de decisão no dispositivo com públicos baseados em localização geográfica, a Adobe recomenda que você mesmo forneça os valores geográficos na chamada para `getOffers`. Faça isso definindo o objeto `Geo` no `Context` da solicitação. Isso significa que seu servidor precisará de uma maneira de determinar a localização de cada usuário final. Por exemplo, o servidor pode executar uma pesquisa de IP para Geo usando um serviço configurado por você. Alguns provedores de hospedagem, como a Google Cloud, fornecem essa funcionalidade por meio de cabeçalhos personalizados em cada `HttpServletRequest`.
 
 >[!BEGINTABS]
 
@@ -243,7 +244,7 @@ targetClient.getOffers({
 })
 ```
 
->[!TAB SDK do Java]
+>[!TAB SDK Java]
 
 ```javascript {line-numbers="true"}
 public class TargetRequestUtils {
@@ -269,7 +270,7 @@ public class TargetRequestUtils {
 
 >[!ENDTABS]
 
-No entanto, se você não tiver a capacidade de executar pesquisas de IP para Geografia no servidor, mas ainda quiser executar decisões no dispositivo para `getOffers` que contêm públicos com base geográfica, isso também é compatível. A desvantagem dessa abordagem é que ela usará uma pesquisa remota de IP para Geo, o que adicionará latência a cada `getOffers` chame. Essa latência deve ser menor que uma latência remota `getOffers` chamada, já que ela atinge um CDN localizado próximo ao seu servidor. Você deve **somente** fornecer a `ipAddress` no campo `Geo` objeto no `Context` de sua solicitação, para que o SDK recupere a localização geográfica do endereço IP do usuário. Se qualquer outro campo além do campo `ipAddress` for fornecida, a variável [!DNL Target] O SDK não buscará os metadados de localização geográfica para resolução.
+No entanto, se você não tiver a capacidade de executar pesquisas de IP para Geografia no servidor, mas ainda quiser executar decisões no dispositivo para solicitações `getOffers` que contenham públicos com base geográfica, isso também será suportado. A desvantagem dessa abordagem é que ela usará uma pesquisa remota de IP para Geo, o que adicionará latência a cada chamada `getOffers`. Essa latência deve ser menor que uma chamada remota `getOffers`, pois atinge um CDN localizado próximo ao seu servidor. Você deve **somente** fornecer o campo `ipAddress` no objeto `Geo` em `Context` de sua solicitação para que o SDK recupere a localização geográfica do endereço IP de seu usuário. Se qualquer outro campo além de `ipAddress` for fornecido, o SDK [!DNL Target] não buscará os metadados de localização geográfica para resolução.
 
 >[!BEGINTABS]
 
@@ -298,7 +299,7 @@ targetClient.getOffers({
 })
 ```
 
->[!TAB SDK do Java]
+>[!TAB SDK Java]
 
 ```javascript {line-numbers="true"}
 public class TargetRequestUtils {
@@ -333,4 +334,4 @@ A tabela a seguir indica quais regras de público-alvo são ou não compatíveis
 | [Perfil do visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html) | Sim |
 | [Fontes de Tráfego](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html) | Sim |
 | [Intervalo de tempo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html) | Sim |
-| [Públicos do Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (Públicos-alvo da Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager | Sim |
+| [Públicos-alvo do Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html) (públicos-alvo do Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager | Sim |

@@ -2,17 +2,17 @@
 title: APIs do Adobe Admin Console
 description: Saiba como usar as APIs do Adobe Admin Console.
 keywords: API do Console Adobe;console;api
-exl-id: 18fb9c75-aa71-4902-bcb8-3ead9d2d087d
+exl-id: 515cb851-6553-42af-a1a9-e72c8952e210
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '58'
+source-wordcount: '50'
 ht-degree: 0%
 
 ---
 
 # APIs do Adobe Admin Console
 
-Gerenciar usuários e direitos de produto por meio do [!UICONTROL Gerenciamento de usuários do Adobe] e [!UICONTROL API de sincronização de usuários]s
+Gerencie usuários e direitos de produto por meio do [!UICONTROL Adobe User Management] e [!UICONTROL User Sync API]s.
 
-Para obter mais informações, consulte [Gerenciar usuários e direitos de produto, o jeito da API](https://developer.adobe.com/umapi/){target=_blank} no *Adobe Developer* site.
+Para obter mais informações, consulte [Gerenciar Usuários e Direitos de Produto, o caminho da API](https://developer.adobe.com/umapi/){target=_blank} no site do *Adobe Developer*.

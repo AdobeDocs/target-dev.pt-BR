@@ -1,19 +1,19 @@
 ---
 keywords: Implementação, at.js não javascript, adbox, redirecionador, mbox
-description: Saiba como implementar o [!DNL Adobe Target] em cenários que não utilizam JavaScript, como uma AdBox ou Redirecionador.
-title: Como implementar o [!DNL Target] para e-mail?
+description: Saiba como implementar o [!DNL Adobe Target] em cenários que não sejam do JavaScript, como o uso de uma AdBox ou um Redirecionador.
+title: Como implementar o  [!DNL Target] for Email?
 feature: Implement Email
 exl-id: dda00b75-5d58-4405-ae58-75e7883a30ed
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '436'
-ht-degree: 69%
+source-wordcount: '429'
+ht-degree: 63%
 
 ---
 
-# Email: implementação [!DNL Target]
+# Email: implementação de [!DNL Target]
 
-Informações sobre a implementação do [!DNL Target] em cenários que não utilizam JavaScript, como uma AdBox ou Redirecionador.
+Informações sobre como implementar o [!DNL Target] em cenários que não sejam da JavaScript, como o uso de uma AdBox ou Redirecionador.
 
 É possível rastrear as visitas aos anúncios e a outros conteúdos externos. Também é possível identificar a entrada e saída do mesmo usuário em seu site e fornecer uma experiência web consistente. Usando um único URL, a AdBox permite testes sem necessidade de JavaScript ou at.js.
 
@@ -28,7 +28,7 @@ Anúncios AdBox e Redirecionador podem ser usados com qualquer tipo de atividade
 
 ## Práticas recomendadas de segurança
 
-Observe que, com o Redirecionador, você pode ser exposto a um risco de vulnerabilidade de redirecionamento aberto. Para evitar o uso não autorizado de links redirecionadores por terceiros, recomendamos que você use &quot;hosts autorizados&quot; para incluir na lista de permissões os domínios de URL de redirecionamento padrão. [!DNL Target]O usa hosts para a lista de permissões de domínios aos quais você deseja permitir redirecionamentos. Para obter mais informações, consulte [Criar lista de permissões que especificam hosts autorizados a enviar chamadas de mbox para o  [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) em *Hosts*.
+Observe que, com o Redirecionador, você pode ser exposto a um risco de vulnerabilidade de redirecionamento aberto. Para evitar o uso não autorizado de links redirecionadores por terceiros, recomendamos que você use &quot;hosts autorizados&quot; para incluir na lista de permissões os domínios de URL de redirecionamento padrão. [!DNL Target] usa hosts para incluir na lista de permissões domínios aos quais você deseja permitir redirecionamentos. Para obter mais informações, consulte [Criar Listas de permissões que especificam hosts autorizados a enviar chamadas de mbox para [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) em *Hosts*.
 
 ## Limitações
 

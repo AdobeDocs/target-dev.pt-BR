@@ -1,13 +1,13 @@
 ---
 keywords: adobe.target.applyOffers, applyOffers, applyoffers, aplicar ofertas, at.js, funções, função,
-description: Use o [!UICONTROL adobe.target.applyOffers()] para a [!DNL Adobe Target] Biblioteca JavaScript at.js para aplicar várias ofertas na resposta do. (at.js 2.x)
-title: Como usar o [!UICONTROL adobe.target.applyOffers()] Função?
+description: Use a função [!UICONTROL adobe.target.applyOffers()] da biblioteca JavaScript do at.js  [!DNL Adobe Target]  para aplicar várias ofertas na resposta. (at.js 2.x)
+title: Como faço para usar a função [!UICONTROL adobe.target.applyOffers()]?
 feature: at.js
 exl-id: c391e3f4-fdf1-4e33-8dcb-6bf46e390538
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '813'
-ht-degree: 85%
+source-wordcount: '808'
+ht-degree: 80%
 
 ---
 
@@ -21,14 +21,14 @@ Essa função permite aplicar mais de uma oferta que foi recuperada por `adobe.t
 
 | Chave | Tipo | Obrigatório? | Descrição |
 | --- | --- | --- | --- |
-| selector | String    | Não | Elemento HTML ou seletor CSS usado para identificar o elemento HTML, onde [!DNL Target] deve colocar o conteúdo da oferta. Se um seletor não for fornecido, [!DNL Target] O presume que o elemento de HTML a ser usado é HTML HEAD. |
+| selector | String    | Não | Elemento HTML ou seletor CSS usado para identificar o elemento HTML, onde [!DNL Target] deve colocar o conteúdo da oferta. Se um seletor não for fornecido, [!DNL Target] presume que o elemento HTML a ser usado é HTML HEAD. |
 | Resposta | Objeto | Sim | Objeto response de `getOffers()`.<br />Consulte Tabela de solicitações abaixo. |
 
 ## Resposta
 
 >[!NOTE]
 >
->Consulte o [Documentação da API de entrega](/help/dev/implement/delivery-api/overview.md) para obter informações sobre os tipos aceitáveis para todos os campos listados abaixo.
+>Consulte a [Documentação da API de entrega](/help/dev/implement/delivery-api/overview.md) para obter informações sobre os tipos aceitáveis para todos os campos listados abaixo.
 
 | Nome do campo | Descrição |
 | --- | --- |
@@ -36,7 +36,7 @@ Essa função permite aplicar mais de uma oferta que foi recuperada por `adobe.t
 | resposta > pré-busca > exibições > opções > tipo | Tipo de opção. Reflete o tipo de campo &quot;conteúdo&quot;. O tipo suportado é ações. |
 | resposta > pré-busca > exibições > estado | Um token de estado de exibição opaco que deve ser encaminhado com a notificação de visualização para a exibição |
 | resposta > pré-busca > exibições > opções > responseTokens | Contém o mapa de `responseTokens` que foi coletado quando a opção atual estava sendo processada. |
-| resposta > pré-busca > exibições > analytics > carga | [!DNL Analytics]A carga do para integração no lado do cliente que deve ser enviada para o depois que a exibição for aplicada.[!DNL Analytics] |
+| resposta > pré-busca > exibições > analytics > carga | A carga [!DNL Analytics] para integração no lado do cliente que deve ser enviada para [!DNL Analytics] após a aplicação da exibição. |
 | resposta > pré-busca > exibições > rastreamento | O objeto que contém todos os dados de rastreamento da chamada de pré-busca por exibição.<br />O objeto de rastreamento também incluirá uma versão para o rastreamento.<br />O objeto de rastreamento também incluirá detalhes da exibição atual. |
 | resposta > pré-busca > exibições > opções > eventToken | O registro em log de eventos é feito por opção. Para cada opção aplicada, o respectivo token de evento deve ser adicionado à lista de tokens de notificação. Observe que uma Exibição é composta por várias opções. Se todas as opções tiverem sido aplicadas e visualizadas, todos `eventTokens` precisam ser incluídos na notificação. |
 | resposta > pré-busca > exibições > nome | O nome de exibição legível. |
@@ -61,16 +61,16 @@ Essa função permite aplicar mais de uma oferta que foi recuperada por `adobe.t
 | resposta > executar > mboxes > mbox > métricas | Contém a lista de `clickThrough` métricas. |
 | resposta > executar > mboxes > mbox > mbox | O nome da mbox. |
 | resposta > executar > mboxes > mbox > índice | Indica que a resposta é para a mbox com este índice da solicitação. |
-| resposta > executar > mboxes > mbox > analytics > carga | [!DNL Analytics]A carga do para integração no lado do cliente que deve ser enviada para o após a aplicação da mbox. [!DNL Analytics] (Consulte a seção Campanhas habilitadas para A4T.) |
+| resposta > executar > mboxes > mbox > analytics > carga | A carga [!DNL Analytics] para integração no lado do cliente que deve ser enviada para [!DNL Analytics] após a aplicação da mbox. (Consulte a seção Campanhas habilitadas para A4T.) |
 | resposta > executar > mboxes | Lista de mboxes executadas. |
 | resposta > executar > carga > opções > conteúdo | Observe que o conteúdo da &quot;opção&quot; não está bem definido e depende diretamente da estrutura de tipo/modelo de opção. |
 | resposta > executar > carga > opções > tipo | Tipo de opção. Reflete o tipo de campo &quot;conteúdo&quot;. Os tipos suportados são: html, redirecionamento, JSON, dinâmico e ações. |
 | resposta > executar > carga > opções | Opções que não são agrupadas por exibições (target-global-mbox + opções de atividades com exibições não agrupadas por exibições). |
 | resposta > executar > carga > métricas | Métricas de clique que não foram definidas para pertencer a uma exibição específica. |
 | resposta > executar > carga > rastreamento | O objeto que contém todos os dados de rastreamento da solicitação de carga. |
-| resposta > executar > carga > analytics > carga | [!DNL Analytics]A carga do para integração no lado do do cliente que deve ser enviada para o após a aplicação do conteúdo de carregamento da página. [!DNL Analytics] (Consulte a seção Campanhas habilitadas para A4T.) |
+| resposta > executar > carga > analytics > carga | A carga [!DNL Analytics] para integração no lado do cliente que deve ser enviada para [!DNL Analytics] após a aplicação do conteúdo de carregamento da página. (Consulte a seção Campanhas habilitadas para A4T.) |
 
-## Exemplo [!UICONTROL applyOffers()] chamar
+## Exemplo de chamada [!UICONTROL applyOffers()]
 
 ```javascript {line-numbers="true"}
 adobe.target.applyOffers({response:{
@@ -107,7 +107,7 @@ adobe.target.applyOffers({response:{
 }});
 ```
 
-## Exemplo de chamadas de encadeamento de Promessa com `[!UICONTROL getOffers()]` e `[!UICONTROL applyOffers()]`, porque essas funções são baseadas em Promessa
+## Exemplo de chamadas de encadeamento de Promessa com `[!UICONTROL getOffers()]` e `[!UICONTROL applyOffers()]`, pois essas funções são baseadas em Promessa
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({...})
@@ -116,7 +116,7 @@ adobe.target.getOffers({...})
 .catch(error => console.log("Error", error));
 ```
 
-Para obter mais exemplos sobre como usar getOffers(), consulte as getOffers [documentação](adobe-target-getoffers-atjs-2.md)
+Para obter mais exemplos sobre como usar getOffers(), consulte a [documentação](adobe-target-getoffers-atjs-2.md) de getOffers
 
 ### Exemplo de solicitação de carregamento de página
 

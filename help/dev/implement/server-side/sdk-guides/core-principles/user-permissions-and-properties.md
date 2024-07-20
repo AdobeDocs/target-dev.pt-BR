@@ -1,18 +1,18 @@
 ---
 title: Permissões e propriedades do usuário
-description: A variável [!DNL Target] Os SDKs incluem suporte para permissões e propriedades de usuários.
+description: Os  [!DNL Target] SDKs incluem suporte para permissões e propriedades de usuário.
 exl-id: 612faf1a-e8f9-4321-b831-90fba69ead3a
 feature: Implement Server-side
 source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
 workflow-type: tm+mt
-source-wordcount: '122'
-ht-degree: 9%
+source-wordcount: '114'
+ht-degree: 0%
 
 ---
 
 # Permissões e propriedades do usuário
 
-A variável [!DNL Target] Os SDKs incluem suporte para permissões e propriedades de usuários. Se você não estiver familiarizado com a [!DNL Adobe Target] lida com permissões empresariais por meio de espaços de trabalho e propriedades, você pode ler mais sobre isso em [Permissões de usuário empresarial](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=pt-BR).
+Os SDKs do [!DNL Target] incluem suporte para permissões e propriedades de usuário. Se você não estiver familiarizado com a maneira como o [!DNL Adobe Target] lida com permissões da empresa por meio de espaços de trabalho e propriedades, poderá ler mais sobre ele em [Permissões de usuário da empresa](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=pt-BR).
 
 O cliente pode usar um token de propriedade de uma das duas formas a seguir.
 
@@ -50,7 +50,7 @@ TargetClient targetClient = TargetClient.create(clientConfig);
 
 ## Token de propriedade incidental na chamada getOffers
 
-Um token de propriedade também pode ser especificado em um `getOffers` chame. Isso é feito adicionando um objeto de propriedade à solicitação. Um token de propriedade especificado dessa maneira tem precedência sobre um conjunto na configuração.
+Um token de propriedade também pode ser especificado em uma chamada `getOffers` individual. Isso é feito adicionando um objeto de propriedade à solicitação. Um token de propriedade especificado dessa maneira tem precedência sobre um conjunto na configuração.
 
 >[!BEGINTABS]
 

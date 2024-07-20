@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # Segmentos do AAM
 
-[!DNL Adobe Audience Manager] segmentos podem ser aproveitados via [!DNL Adobe Target] SDKs. Para aproveitar os segmentos do AAM, os seguintes campos precisam ser fornecidos:
+[!DNL Adobe Audience Manager] segmentos podem ser aproveitados por meio de [!DNL Adobe Target] SDKs. Para aproveitar os segmentos do AAM, os seguintes campos precisam ser fornecidos:
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ ht-degree: 4%
 | `marketingCloudVisitorId` | Sim | ID de visitante da Marketing Cloud |
 | `blob` | Sim | AAM Blob é usado para enviar dados adicionais para o AAM. Não pode estar em branco e seu tamanho &lt;= 1024. |
 
-O SDK preencherá automaticamente esses campos para você ao fazer uma `getOffers` chamada do método, mas será necessário garantir que um cookie de visitante válido seja fornecido. Para obter esse cookie, você precisa implementar VisitorAPI.js no navegador.
+O SDK preencherá automaticamente esses campos para você ao fazer uma chamada do método `getOffers`, mas será necessário garantir que um cookie de visitante válido seja fornecido. Para obter esse cookie, você precisa implementar VisitorAPI.js no navegador.
 
 ## Guia de implementação
 
@@ -35,21 +35,21 @@ Os cookies são usados para correlacionar [!DNL Adobe Audience Manager] solicita
 
 | Cookie | Nome | Descrição |
 | --- | --- | --- |
-| cookie de visitante | `AMCVS_XXXXXXXXXXXXXXXXXXXXXXXX%40AdobeOrg` | Este cookie é definido por `VisitorAPI.js` quando é inicializado com `visitorState` do público alvo `getOffers` resposta. |
-| cookie do target | `mbox` | Seu servidor Web deve definir este cookie usando o nome e o valor de `targetCookie` do público alvo `getOffers` resposta. |
+| cookie de visitante | `AMCVS_XXXXXXXXXXXXXXXXXXXXXXXX%40AdobeOrg` | Este cookie é definido por `VisitorAPI.js` quando é inicializado com `visitorState` da resposta de destino `getOffers`. |
+| cookie do target | `mbox` | Seu servidor Web deve definir este cookie usando o nome e o valor de `targetCookie` da resposta de destino `getOffers`. |
 
 ### Visão geral das etapas
 
 Suponha que um usuário insira um URL em um navegador que envie uma solicitação para o servidor Web. Ao atender a essa solicitação:
 
 1. O servidor lê os cookies de visitante e de destino da solicitação.
-1. O servidor faz uma chamada para a variável `getOffers` método do [!DNL Target] SDK, especificando os cookies de visitante e de destino, se disponíveis.
-1. Quando a variável `getOffers` chamada for atendida, os valores de `targetCookie` e `visitorState` da resposta são usadas.
-   1. Um cookie é definido na resposta com valores obtidos de `targetCookie`. Isso é feito usando o `Set-Cookie` cabeçalho de resposta, que instrui o navegador a manter o cookie do target.
-   1. É preparada uma resposta de HTML que inicializa `VisitorAPI.js` e passa para dentro `visitorState` da resposta do target.
+1. O servidor faz uma chamada para o método `getOffers` do SDK [!DNL Target], especificando os cookies de visitante e de destino, se disponíveis.
+1. Quando a chamada `getOffers` é atendida, os valores para `targetCookie` e `visitorState` da resposta são usados.
+   1. Um cookie é definido na resposta com valores obtidos de `targetCookie`. Isso é feito usando o cabeçalho de resposta `Set-Cookie`, que instrui o navegador a manter o cookie do público-alvo.
+   1. É preparada uma resposta HTML que inicializa `VisitorAPI.js` e passa `visitorState` da resposta de destino.
 1. A resposta do HTML é carregada no navegador...
    1. `VisitorAPI.js` está incluído no cabeçalho do documento.
-   1. VisitorAPI é inicializado com `visitorState` do `getOffers` Resposta do SDK. Isso fará com que o cookie do visitante seja definido no navegador para que seja enviado ao servidor em solicitações subsequentes.
+   1. VisitorAPI foi inicializado com `visitorState` da resposta do SDK `getOffers`. Isso fará com que o cookie do visitante seja definido no navegador para que seja enviado ao servidor em solicitações subsequentes.
 
 ### Exemplo de código
 
@@ -175,7 +175,7 @@ app.listen(3000, function () {
 
 #### Java
 
-Esta amostra usa [spring, uma estrutura web Java](https://spring.io/).
+Este exemplo usa [spring, um framework da Web Java](https://spring.io/).
 
 >[!BEGINTABS]
 
@@ -298,4 +298,4 @@ public class TargetClientService {
 
 >[!ENDTABS]
 
-Para obter mais informações sobre `TargetRequestUtils.java`, consulte [Métodos de utilitário (Java)](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html){target=_blank}
+Para obter mais informações sobre `TargetRequestUtils.java`, consulte [Métodos de Utilidade (Java)](https://experienceleague.adobe.com/docs/target-dev/developer/server-side/java/utility-methods.html){target=_blank}

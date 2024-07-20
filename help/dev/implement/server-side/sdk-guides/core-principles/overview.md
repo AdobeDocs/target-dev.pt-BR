@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Visão geral dos princípios principais
 
-[!DNL Adobe Target] O opera de acordo com vários princípios básicos, que são importantes para entender a fim de executar atividades eficazes de experimentação ou personalização. Esses princípios são:
+O [!DNL Adobe Target] opera de acordo com vários princípios básicos, que são importantes de entender para executar atividades eficazes de experimentação ou personalização. Esses princípios são:
 
 * [Identificação e segmentação do usuário](user-identification-and-bucketing.md)
 

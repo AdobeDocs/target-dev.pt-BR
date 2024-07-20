@@ -1,19 +1,19 @@
 ---
 keywords: adobe.target.sendNotifications, sendNotifications, sendnotifications, enviar notificações, notificações, at.js, funções, função, $9
-description: Uso [!UICONTROL adobe.target.sendNotifications()] para que a at.js envie notificações para o [!DNL Target] borda quando uma experiência é renderizada, sem usar [!UICONTROL applyOffer]s). (at.js.2.1 +)
+description: Use o [!UICONTROL adobe.target.sendNotifications()] for at.js para enviar notificações ao  [!DNL Target] edge quando uma experiência for renderizada sem usar o [!UICONTROL applyOffer]. (at.js.2.1 +)
 title: Como usar a função adobe.target.sendNotifications()?
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '627'
-ht-degree: 84%
+source-wordcount: '640'
+ht-degree: 83%
 
 ---
 
 # [!UICONTROL adobe.target.sendNotifications(options)]
 
-Esta função envia uma notificação para [!DNL Target] borda quando uma experiência é renderizada sem usar `[!UICONTROL adobe.target.applyOffer()]` ou `[!UICONTROL adobe.target.applyOffers()]`.
+Esta função envia uma notificação para a borda [!DNL Target] quando uma experiência é renderizada sem usar `[!UICONTROL adobe.target.applyOffer()]` ou `[!UICONTROL adobe.target.applyOffers()]`.
 
 >[!NOTE]
 >
@@ -56,7 +56,7 @@ Esta função envia uma notificação para [!DNL Target] borda quando uma experi
 | Request > notifications > view > key | String | Não | `<=` 512 caracteres. | Chave da exibição. A chave definida para a exibição por meio da API. |
 | Request > notifications > view > state | String | Não |  | Token de estado da exibição. |
 
-**Nota**: os seguintes caracteres são *não* permitido para `Request > notifications > mbox > name`:
+**Observação**: os seguintes caracteres *não* são permitidos para `Request > notifications > mbox > name`:
 
 ```
 - '-, ./=`:;&!@#$%^&*()+|?~[]{}'
@@ -118,4 +118,4 @@ adobe.target.getOffers({
 
 >[!NOTE]
 >
->Se você estiver usando [!DNL Adobe Analytics], `[!UICONTROL getOffers()]` com busca prévia somente e `[!UICONTROL sendNotifications()]`, o [!DNL Analytics] a solicitação deve ser disparada depois de `[!UICONTROL sendNotifications()]` é executado. O objetivo disso é garantir que a SDID gerada pela `[!UICONTROL sendNotifications()]` corresponde à SDID enviada para o [!DNL Analytics] e [!DNL Target].
+>Se você estiver usando [!DNL Adobe Analytics], `[!UICONTROL getOffers()]` com busca prévia somente e `[!UICONTROL sendNotifications()]`, a solicitação [!DNL Analytics] deverá ser disparada após a execução de `[!UICONTROL sendNotifications()]`. A finalidade disso é garantir que a SDID gerada por `[!UICONTROL sendNotifications()]` corresponda à SDID enviada para [!DNL Analytics] e [!DNL Target].

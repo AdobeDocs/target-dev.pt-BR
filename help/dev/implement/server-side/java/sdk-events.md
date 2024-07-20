@@ -1,12 +1,12 @@
 ---
-title: Inscrever-se em eventos no [!DNL Adobe Target] SDK do Java
-description: Saiba como assinar vários eventos que ocorrem no SDK do Java usando o [!UICONTROL OnDeviceDecisioningHandler] objeto.
+title: Assinar eventos no  [!DNL Adobe Target] SDK Java
+description: Saiba como assinar vários eventos que ocorrem no SDK do Java usando o objeto [!UICONTROL OnDeviceDecisioningHandler].
 feature: APIs/SDKs
 exl-id: f2d56762-6bf7-4c6b-9c14-fb20e5cfd60d
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '142'
-ht-degree: 4%
+source-wordcount: '135'
+ht-degree: 5%
 
 ---
 
@@ -14,17 +14,17 @@ ht-degree: 4%
 
 ## Descrição
 
-Quando [inicialização do SDK](initialize-sdk.md), um opcional `OnDeviceDecisioningHandler` o objeto pode ser fornecido no `ClientConfig` objeto. Ele pode ser usado para assinar vários eventos que ocorrem no SDK. Por exemplo, a variável `onDeviceDecisioningReady` O evento pode ser usado com uma função de retorno de chamada que será invocada quando o SDK estiver pronto para chamadas de método.
+Ao [inicializar o SDK](initialize-sdk.md), um objeto `OnDeviceDecisioningHandler` opcional pode ser fornecido no objeto `ClientConfig`. Ele pode ser usado para assinar vários eventos que ocorrem no SDK. Por exemplo, o evento `onDeviceDecisioningReady` pode ser usado com uma função de retorno de chamada que será invocada quando o SDK estiver pronto para chamadas de método.
 
 ## Eventos 
 
-A variável `OnDeviceDecisioningHandler` contém os seguintes retornos de chamada, chamados para determinados eventos:
+O objeto `OnDeviceDecisioningHandler` contém os seguintes retornos de chamada, que são chamados para determinados eventos:
 
 | Nome | Argumentos | Descrição |
 | --- | --- | --- |
-| onDeviceDecisioningReady | None | Chamado apenas uma vez na primeira vez que o cliente estiver pronto para [!UICONTROL decisão no dispositivo] |
-| artifactDownloadSucceeded | byte[] conteúdo do arquivo de artefato | Chamado sempre que um [!UICONTROL decisão no dispositivo] o artefato é baixado |
-| artifactDownloadFailed | Exceção | Chamado sempre que houver uma falha ao baixar um [!UICONTROL decisão no dispositivo] artefato |
+| onDeviceDecisioningReady | None | Chamado apenas uma vez na primeira vez que o cliente estiver pronto para [!UICONTROL on-device decisioning] |
+| artifactDownloadSucceeded | byte[] conteúdo do arquivo de artefato | Chamado sempre que um artefato [!UICONTROL on-device decisioning] é baixado |
+| artifactDownloadFailed | Exceção | Chamado sempre que há uma falha ao baixar um artefato [!UICONTROL on-device decisioning] |
 
 ## Exemplo
 

@@ -1,13 +1,13 @@
 ---
 keywords: registerExtension, registerextension, extensão de registro, at.js, funções, função, clientCode, serverDomain, globalMboxName, globalMboxAutoCreate, tempo limite, registerExtension2
-description: Use o [!UICONTROL registerExtension()] para a [!DNL Adobe Target] Biblioteca JavaScript at.js para registrar uma extensão específica. (at.js 1.x)
-title: Como usar o [!UICONTROL registerExtension()] Função?
+description: Use a função [!UICONTROL registerExtension()] da biblioteca JavaScript at.js  [!DNL Adobe Target]  para registrar uma extensão específica. (at.js 1.x)
+title: Como faço para usar a função [!UICONTROL registerExtension()]?
 feature: at.js
 exl-id: 71decf00-84c5-4914-b0cd-bb061fa6265f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '269'
-ht-degree: 76%
+source-wordcount: '265'
+ht-degree: 69%
 
 ---
 
@@ -32,7 +32,7 @@ Notas:
 * Se um dos parâmetros não for fornecido, uma exceção será lançada.
 * Se a matriz de módulos estiver vazia, uma exceção será lançada.
 
-Para mais informações e exemplos de como usar `[!UICONTROL registerExtension]`, consulte a página [Adobe Experience Cloud Target atjs Extensions](https://github.com/Adobe-Marketing-Cloud/target-atjs-extensions) no GitHub.
+Para obter mais informações e exemplos de como usar o `[!UICONTROL registerExtension]`, consulte a página [Adobe Experience Cloud Target atjs Extensions](https://github.com/Adobe-Marketing-Cloud/target-atjs-extensions) no GitHub.
 
 ## Métodos de módulo de configurações
 

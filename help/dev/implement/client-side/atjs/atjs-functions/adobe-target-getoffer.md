@@ -1,19 +1,19 @@
 ---
 keywords: adobe.target.getOffer, getOffer, getoffer, obter oferta, at.js, funções, função, $8
-description: Use o [!UICONTROL adobe.target.getOffer()] e suas opções para a função [!DNL Adobe Target] Biblioteca at.js para disparar solicitações para obter um [!DNL Target] oferta.
-title: Como usar o [!UICONTROL adobe.target.getOffer()] Função?
+description: Use a função [!UICONTROL adobe.target.getOffer()] e suas opções para a biblioteca at.js  [!DNL Adobe Target]  para acionar solicitações para obter uma oferta  [!DNL Target] .
+title: Como faço para usar a função [!UICONTROL adobe.target.getOffer()]?
 feature: at.js
 exl-id: 7b917d42-06e8-4838-a09d-0c4872c9beaa
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '470'
-ht-degree: 81%
+source-wordcount: '460'
+ht-degree: 79%
 
 ---
 
 # [!DNL adobe.target.getOffer(options)]
 
-Esta função envia uma solicitação para obter uma [!DNL Target] oferta.
+Esta função envia uma solicitação para obter uma oferta [!DNL Target].
 
 Use com `[!UICONTROL adobe.target.applyOffer()]` para processar a resposta ou use sua própria manipulação de sucesso. O parâmetro de opções é obrigatório e tem a seguinte estrutura:
 
@@ -22,12 +22,12 @@ Use com `[!UICONTROL adobe.target.applyOffer()]` para processar a resposta ou us
 | mbox | String | Sim | Nome da mbox |
 | params | Objeto | Não | Parâmetros de mbox. Um objeto de pares de valores-chave que tem a seguinte estrutura:<P>`{ "param1": "value1", "param2": "value2"}` |
 | success | Função | Sim | Retorno de chamada para execução quando recebemos uma resposta do servidor. A função de retorno de chamada bem-sucedida receberá um único parâmetro que represente uma variedade de objetos em oferta. Este é um exemplo de retorno de chamada:<P>`function handleSuccess(response){......}`<P>Veja as respostas abaixo para obter mais informações. |
-| error | Função | Sim | Retorno de chamada para execução quando recebemos um erro. Há alguns casos que são considerados errôneos:<ul><li>Código do status de HTTP diferente de 200 OK</li><li>Não foi possível analisar a resposta. Por exemplo, nós mal construímos JSON ou HTML ao invés de JSON.</li><li>A resposta contém a tecla &quot;erro&quot;. Por exemplo, uma exceção foi lançada no Edge e não foi possível processar a solicitação apropriadamente. Podemos receber um erro quando uma mbox está bloqueada e não é possível recuperar o conteúdo dela, etc. A função de retorno de chamada de erro receberá dois parâmetros: status e erro. Veja um exemplo de retorno de chamada de erro:  `function handleError(status, error){......}`</li></ul>Veja as respostas com erro abaixo para obter mais informações. |
-| timeout | Número | Não | Tempo limite em milissegundos. Se não especificado, o tempo limite padrão em at.js será utilizado.<P>O tempo limite padrão pode ser definido no [!DNL Target] IU em [!UICONTROL Administração] > [!UICONTROL Implementação]. |
+| error | Função | Sim | Retorno de chamada para execução quando recebemos um erro. Há alguns casos que são considerados errôneos:<ul><li>Código do status de HTTP diferente de 200 OK</li><li>Não foi possível analisar a resposta. Por exemplo, nós mal construímos JSON ou HTML ao invés de JSON.</li><li>A resposta contém a tecla &quot;erro&quot;. Por exemplo, uma exceção foi lançada no Edge e não foi possível processar a solicitação apropriadamente. Podemos receber um erro quando uma mbox está bloqueada e não é possível recuperar o conteúdo dela, etc. A função de retorno de chamada de erro receberá dois parâmetros: status e erro. Este é um exemplo de retorno de chamada: `function handleError(status, error){......}`</li></ul>Veja as respostas com erro abaixo para obter mais informações. |
+| timeout | Número | Não | Tempo limite em milissegundos. Se não especificado, o tempo limite padrão em at.js será utilizado.<P>O tempo limite padrão pode ser definido na interface do usuário do [!DNL Target] em [!UICONTROL Administration] > [!UICONTROL Implementation]. |
 
 ## Exemplos
 
-Adicionar parâmetros com [!UICONTROL getOffer()] e usando [!UICONTROL applyOffer()] para manipulação bem-sucedida:
+Adicionando parâmetros com [!UICONTROL getOffer()] e usando [!UICONTROL applyOffer()] para manipulação com sucesso:
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   
@@ -48,7 +48,7 @@ adobe.target.getOffer({
 });
 ```
 
-Adicionar parâmetros e parâmetros de perfil com o [!UICONTROL getOffer()] e usando [!UICONTROL applyOffer()] para manipulação bem-sucedida:
+Adicionando parâmetros e parâmetros de perfil com [!UICONTROL getOffer()] e usando [!UICONTROL applyOffer()] para manipulação com sucesso:
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   
@@ -71,7 +71,7 @@ adobe.target.getOffer({
 });
 ```
 
-Usar tempo limite personalizado e manipulação personalizada de sucesso com o [!UICONTROL getOffer()]:
+Usando tempo limite personalizado e tratamento bem-sucedido personalizado com [!UICONTROL getOffer()]:
 
 &quot;YOUR_OWN_CUSTOM_HANDLING_FUNCTION&quot; é um placeholder para uma função que o cliente definiria.
 
@@ -126,5 +126,5 @@ Os parâmetros &quot;status&quot; e &quot;erro&quot; passados para o retorno de 
 
 | Nome | Tipo | Descrição |
 |--- |--- |--- |
-| status | String | Representa o status do erro. Este parâmetro pode ter os seguintes valores:<ul><li>timeout: Indica que o tempo limite para a solicitação foi excedido.</li><li>parseerror: Indica que a resposta não pôde ser analisada, por exemplo, se recebermos um texto HTML ou sem formatação em vez de JSON.</li><li>error: Indica um erro geral, como o recebimento do status HTTP diferente de 200 OK</li></ul> |
+| status | String | Representa o status do erro. Este parâmetro pode ter os seguintes valores:<ul><li>timeout: Indica que o tempo limite da solicitação expirou.</li><li>parseerror: Indica que a resposta não pôde ser analisada, por exemplo, se recebermos um texto HTML ou sem formatação em vez de JSON.</li><li>error: Indica um erro geral, como o recebimento do status HTTP diferente de 200 OK</li></ul> |
 | error | String | Contém dados adicionais, como mensagem de exceção ou qualquer outra coisa que possa ser útil para solução de problemas. |

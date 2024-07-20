@@ -7,14 +7,14 @@ exl-id: 332f90bd-4079-4653-aa38-b35837631c94
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
 
 # Permissões de usuário (Premium)
 
-[!DNL Adobe] O permite que os clientes gerenciem permissões para seus usuários ao usar o Adobe Target. A fim de obter êxito [!UICONTROL API de entrega do Adobe Target] chamada, um token com as permissões certas deve ser transmitido na chamada de API. Para saber mais sobre as permissões do usuário e como recuperar a visita ao token [esta documentação](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
+O [!DNL Adobe] permite que os clientes gerenciem permissões para seus usuários ao usar o Adobe Target. Para fazer uma chamada [!UICONTROL Adobe Target Delivery API] bem-sucedida, um token com as permissões certas deve ser passado na chamada de API. Para saber mais sobre as permissões de usuário e como recuperar a visita ao token, [esta documentação](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
 
 ```
 curl -X POST \
@@ -49,7 +49,7 @@ curl -X POST \
     }'
 ```
 
-Depois de ter o token correspondente, passe-o para `property` -> `token` para cada chamada de API feita. Se a variável `property` -> `token` não for transmitido em todas as chamadas à API, você não receberá nenhuma `content` do Adobe Target.
+Depois de ter o token correspondente, passe-o para `property` -> `token` para cada chamada de API feita. Se o `property` -> `token` não for transmitido em cada chamada de API, você não receberá nenhum `content` de volta da Adobe Target.
 
 ```
 {
@@ -71,4 +71,4 @@ Depois de ter o token correspondente, passe-o para `property` -> `token` para ca
 }
 ```
 
-Como você pode ver acima, sem passar pelo `property` -> `token`, você não receberá nenhum conteúdo de volta. Se você espera conteúdo da sua chamada de API, mas não está recuperando nenhum da resposta, é provável que seja porque  `property` -> `token` não é fornecido ou está sendo transmitido sem as permissões corretas.
+Como você pode ver acima, sem passar a `property` -> `token`, você não receberá nenhum conteúdo de volta. Se você espera conteúdo da sua chamada à API, mas não está recuperando nenhum conteúdo da resposta, é provável que o `property` -> `token` não tenha sido fornecido ou que esteja sendo passado sem as permissões corretas.

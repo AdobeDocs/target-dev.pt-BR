@@ -1,11 +1,11 @@
 ---
-title: Usar getOffers() no [!DNL Adobe Target] ao usar o SDK do .NET
-description: Saiba como usar getOffers() para executar uma decisão e recuperar uma experiência de [!DNL Adobe Target].
+title: Usar getOffers() em [!DNL Adobe Target] ao usar o SDK do .NET
+description: Saiba como usar getOffers() para executar uma decisão e recuperar uma experiência do  [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 4d1d1cbd-c7e5-4146-9fea-08e01923874d
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '569'
 ht-degree: 13%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 13%
 
 ## Método
 
-`TargetClient.GetOffers` assinatura de método.
+Assinatura do método `TargetClient.GetOffers`.
 
 ## \.NET
 
@@ -36,59 +36,59 @@ TargetDeliveryRequest.Builder TargetDeliveryRequest.Builder()
 
 ## Parâmetros
 
-A variável `TargetDeliveryRequest.Builder` tem a seguinte estrutura:
+O objeto `TargetDeliveryRequest.Builder` tem a seguinte estrutura:
 
 | Nome | Tipo | Obrigatório | Descrição |
 | --- | --- | --- | --- |
 | contexto | Contexto | Sim | Especifica o contexto da solicitação |
-| sessionId | String | Não | Usado para vincular vários [!DNL Target] solicitações |
+| sessionId | String | Não | Usado para vincular várias solicitações [!DNL Target] |
 | thirdPartyId | String | Não | O identificador de sua empresa para o usuário que você pode enviar com cada chamada |
-| cookies | Listar | Não | Lista de cookies retornados no anterior [!DNL Target] solicitação do mesmo usuário. |
+| cookies | Lista | Não | Lista de cookies retornados na solicitação [!DNL Target] anterior do mesmo usuário. |
 | customerIds | Mapa | Não | IDs de cliente em formato compatível com VisitorId |
 | executar | ExecuteRequest | Não | Solicitação de PageLoad ou mboxes para execução. Será avaliado no lado do servidor imediatamente |
 | pré-busca | PrefetchRequest | Não | Exibições, Carregamento de página ou solicitação de mboxes para realizar a busca prévia. Retorna com o token de notificação a ser retornado na conversão. |
-| notificações | Listar | Não | Usado para enviar notificações sobre qual conteúdo previamente buscado era exibido |
+| notificações | Lista | Não | Usado para enviar notificações sobre qual conteúdo previamente buscado era exibido |
 | requestId | String | Não | A ID da solicitação que será retornada na resposta. Gerado automaticamente se não estiver presente. |
 | impressionId | String | Não | Se presentes, a segunda e as solicitações subsequentes com a mesma id não incrementarão impressões para atividades/métricas. Gerado automaticamente se não estiver presente. |
 | environmentId | Longo | Não | ID de ambiente de cliente válida. Se não for especificado, o host será determinado com base no host fornecido. |
 | propriedade | Propriedade | Não | Especifica at_property por meio do campo de token. Ela pode ser usada para controlar o escopo do delivery. |
 | trace | Trace | Não | Habilita o rastreamento para a API de Entrega. |
 | qaMode | QAMode | Não | Use esse objeto para ativar o modo de QA na solicitação. |
-| locationHint | String | Não | [!DNL Target] dica de local do cluster de borda. Usado para direcionar determinado cluster de borda para esta solicitação. |
+| locationHint | String | Não | Dica de local do cluster de borda [!DNL Target]. Usado para direcionar determinado cluster de borda para esta solicitação. |
 | visitante | Visitante | Não | Usado para fornecer o objeto de API do visitante personalizado. |
 | id | VisitorId | Não | Objeto que contém os identificadores do visitante. P. ex. tntId, thirdParyId, mcId, customerIds. |
 | experienceCloud | Experience Cloud | Não | Especifica integrações com o Audience Manager e o Analytics. Preenchido automaticamente usando cookies, se não fornecido. |
-| tntId | String | Não | Identificador principal em [!DNL Target] para um usuário. Obtido de targetCookies. Gerado automaticamente se não fornecido. |
+| tntId | String | Não | Identificador principal em [!DNL Target] de um usuário. Obtido de targetCookies. Gerado automaticamente se não fornecido. |
 | mcId | String | Não | Usado para mesclar e compartilhar dados entre diferentes soluções de Adobe (ECID). Obtido de targetCookies. Gerado automaticamente se não fornecido. |
-| trackingServer | String | Não | O servidor do Adobe Analytics para [!DNL Adobe Target] e [!DNL Adobe Analytics] para compilar corretamente os dados. |
-| trackingServerSecure | String | Não | A variável [!UICONTROL Adobe Analytics Secure Server] para [!DNL Adobe Target] e [!DNL Adobe Analytics] para compilar corretamente os dados. |
+| trackingServer | String | Não | O Servidor do Adobe Analytics para que [!DNL Adobe Target] e [!DNL Adobe Analytics] unam corretamente os dados. |
+| trackingServerSecure | String | Não | O [!UICONTROL Adobe Analytics Secure Server] para que [!DNL Adobe Target] e [!DNL Adobe Analytics] unam corretamente os dados. |
 | decisioningMethod | DecisioningMethod | Não | Pode ser usado para definir explicitamente o método de decisão ON_DEVICE ou HYBRID para a decisão no dispositivo |
 
-Os valores de cada campo devem estar em conformidade com [API de entrega do Target](/help/dev/implement/delivery-api/overview.md) especificação da solicitação.
+Os valores de cada campo devem estar em conformidade com a especificação de solicitação da [API de entrega do Target](/help/dev/implement/delivery-api/overview.md).
 
 ## Resposta
 
-A variável `TargetDeliveryResponse` retornado por `TargetClient.GetOffers()` tem a seguinte estrutura:
+O `TargetDeliveryResponse` retornado por `TargetClient.GetOffers()` tem a seguinte estrutura:
 
 | Nome | Tipo | Descrição |
 | --- | --- | --- |
-| Solicitação | TargetDeliveryRequest&#x200B; | [API de entrega do Target](/help/dev/implement/delivery-api/overview.md) solicitação |
-| Resposta | DeliveryResponse &#x200B; | [API de entrega do Target](/help/dev/implement/delivery-api/overview.md)* resposta |
+| Solicitação | TargetDeliveryRequest&#x200B; | Solicitação da [API de entrega do Target](/help/dev/implement/delivery-api/overview.md) |
+| Resposta | DeliveryResponse &#x200B; | [Resposta da API de Entrega do Target](/help/dev/implement/delivery-api/overview.md)* |
 | Status | HttpStatusCode | Código de status HTTP de resposta |
 | Mensagem | string | Mensagem de status de resposta ou mensagem de erro |
-| Localizações | Localizações | [!DNL Target] nomes de locais, incluindo nome global da mbox e mboxes/exibições para as quais somente a decisão remota está disponível |
-| GetCookies | Dicionário | Retorna um dicionário de metadados da sessão para este usuário. Isso precisa ser passado no próximo [!DNL Target] solicitação para este usuário. |
+| Localizações | Localizações | [!DNL Target] nomes de locais, incluindo nome de mbox global e mboxes/modos de exibição para os quais somente a decisão remota está disponível |
+| GetCookies | Dicionário | Retorna um dicionário de metadados da sessão para este usuário. Isto precisa ser passado na próxima solicitação [!DNL Target] para este usuário. |
 | VisitorState | IDictionary | Estado do visitante a ser definido no lado do cliente para a inicialização da biblioteca JavaScript da API do visitante |
 
-A variável `TargetCookie` o objeto usado para salvar dados para a sessão do usuário tem a seguinte estrutura:
+O objeto `TargetCookie` usado para salvar dados para a sessão de usuário tem a seguinte estrutura:
 
 | Nome | Tipo | Descrição |
 | --- | --- | --- |
 | Nome | string | Nome do cookie |
 | Valor | string | Valor do cookie |
-| MaxAge | int | A variável `MaxAge` é uma conveniência para definir Expira em relação ao tempo atual em segundos |
+| MaxAge | int | A opção `MaxAge` é uma conveniência para definir Expira em relação ao tempo atual em segundos |
 
-Você não precisa se preocupar em expirar os cookies. [!DNL Target] alças `MaxAge` no SDK.
+Você não precisa se preocupar em expirar os cookies. [!DNL Target] manipula `MaxAge` dentro do SDK.
 
 ## Exemplo
 

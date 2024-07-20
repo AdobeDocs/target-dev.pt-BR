@@ -1,19 +1,19 @@
 ---
 keywords: política de segurança de conteúdo, csp, at.js, lista de permissões, incluir na lista de permissões, cintilação, pré-ocultar, pré-ocultação, pré-ocultação, política de segurança de conteúdo, iFrame, iframe
-description: Saiba mais sobre as diretivas de Política de segurança de conteúdo (CSP) que devem ser adicionadas ao usar o [!DNL Adobe Target].
+description: Saiba mais sobre as diretivas de Política de Segurança de Conteúdo (CSP) que devem ser adicionadas ao usar o  [!DNL Adobe Target].
 title: Como o  [!DNL Target]  lida com as Políticas de segurança de conteúdo (CSP)?
 feature: Privacy & Security
 exl-id: ec6942e5-36d8-4f88-b3d6-47f9eaca03a8
 source-git-commit: c43c79b29768694eac534e22047b5ee6a3d0ccd5
 workflow-type: tm+mt
-source-wordcount: '600'
-ht-degree: 29%
+source-wordcount: '589'
+ht-degree: 28%
 
 ---
 
 # Diretivas da Política de segurança de conteúdo (CSP)
 
-Se você estiver usando a variável [Política de segurança de conteúdo](https://en.wikipedia.org/wiki/Content_Security_Policy) (CSP) para o seu [!DNL Adobe Target] implementação, você deve adicionar as seguintes diretivas da CSP ao usar [at.js 2.1 ou posterior](../../implement/client-side/atjs/target-atjs-versions.md):
+Se você estiver usando a [Política de Segurança de Conteúdo](https://en.wikipedia.org/wiki/Content_Security_Policy) (CSP) para a implementação do [!DNL Adobe Target], deverá adicionar as seguintes diretivas da CSP ao usar o [at.js 2.1 ou posterior](../../implement/client-side/atjs/target-atjs-versions.md):
 
 * `connect-src` com o `*.tt.omtrdc.net` na lista de permissões. Necessário para permitir a solicitação de rede para a borda do [!DNL Target].
 * `style-src unsafe-inline`. Necessário para controle de pré-ocultação e cintilação.
@@ -25,19 +25,19 @@ Consulte as seguintes perguntas frequentes sobre políticas de segurança:
 
 ### O CORS (Compartilhamento de recursos entre origens) e as políticas entre domínios do Flash apresentam problemas de segurança?
 
-A maneira recomendada de implementar a política CORS é permitir o acesso apenas a origens confiáveis que o exijam por meio de uma lista de permissões de domínios confiáveis. O mesmo pode ser dito para a política entre domínios do Flash. Alguns [!DNL Target] Os clientes do estão preocupados com o uso de caracteres curingas para domínios no Target. A preocupação é que, se um usuário estiver conectado a um aplicativo e visitar um domínio permitido pela política, qualquer conteúdo mal-intencionado em execução nesse domínio poderá recuperar conteúdo confidencial do aplicativo e realizar ações dentro do contexto de segurança do usuário conectado. Essa situação é comumente chamada de CSRF (Falsificação de solicitação entre sites).
+A maneira recomendada de implementar a política CORS é permitir o acesso apenas a origens confiáveis que o exijam por meio de uma lista de permissões de domínios confiáveis. O mesmo pode ser dito para a política entre domínios do Flash. Alguns clientes do [!DNL Target] estão preocupados com o uso de caracteres curingas para domínios no Target. A preocupação é que, se um usuário estiver conectado a um aplicativo e visitar um domínio permitido pela política, qualquer conteúdo mal-intencionado em execução nesse domínio poderá recuperar conteúdo confidencial do aplicativo e realizar ações dentro do contexto de segurança do usuário conectado. Essa situação é comumente chamada de CSRF (Falsificação de solicitação entre sites).
 
-Em um [!DNL Target] no entanto, essas políticas não devem representar um problema de segurança.
+No entanto, em uma implementação [!DNL Target], essas políticas não devem representar um problema de segurança.
 
 “adobe.tt.omtrdc.net” é um domínio de propriedade da Adobe. O [!DNL Adobe Target] é uma ferramenta de teste e personalização e espera-se que o [!DNL Target] possa receber e processar solicitações de qualquer lugar sem exigir autenticação. Essas solicitações contêm pares de chave/valor usados para testes A/B, recomendações ou personalização de conteúdo.
 
-O Adobe não armazena informações pessoais identificáveis (PII) ou outras informações confidenciais no [!DNL Adobe Target] servidores de borda, para os quais &quot;adobe.tt.omtrdc.net&quot; aponta.
+O Adobe não armazena informações pessoais identificáveis (PII) ou outras informações confidenciais nos servidores de borda do [!DNL Adobe Target], para os quais &quot;adobe.tt.omtrdc.net&quot; aponta.
 
 Espera-se que o [!DNL Target] possa ser acessado de qualquer domínio por meio de chamadas JavaScript. A única maneira de permitir esse acesso é aplicando &quot;Access-Control-Allow-Origin&quot; com um curinga.
 
 ### Como permitir ou impedir que meu site seja incorporado como um iFrame em domínios estrangeiros?
 
-Para permitir que o [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC) para incorporar o site em um iFrame, a CSP (se definida) deve ser alterada na configuração do servidor Web. [!DNL Adobe] os domínios devem estar na lista de permissões e configurados.
+Para permitir que o [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC) incorpore seu site em um iFrame, o CSP (se definido) deve ser alterado na configuração do servidor Web. [!DNL Adobe] domínios devem estar na lista de permissões e configurados.
 
 Por motivos de segurança, talvez você queira impedir que seu site seja incorporado como um iFrame em domínios estrangeiros.
 
@@ -45,7 +45,7 @@ As seções a seguir explicam como permitir ou impedir que o VEC incorpore seu s
 
 #### Permitir que o VEC incorpore o site em um iFrame
 
-A solução mais fácil para habilitar o VEC para incorporar seu site em um iFrame é permitir `*.adobe.com`, que é o curinga mais amplo.
+A solução mais fácil para habilitar o VEC para incorporar o site em um iFrame é permitir `*.adobe.com`, que é o curinga mais amplo.
 
 Por exemplo:
 
@@ -56,7 +56,7 @@ Como na ilustração a seguir (clique para ampliar):
 
 ![CSP com curinga mais amplo](/help/dev/before-implement/privacy/assets/csp-adobe.png){width="600" zoomable="yes"}
 
-Talvez você queira permitir somente o [!DNL Adobe] serviço. Este cenário pode ser alcançado utilizando `*.experiencecloud.adobe.com + https://experiencecloud.adobe.com`.
+Talvez você queira permitir somente o serviço [!DNL Adobe] real. Este cenário pode ser alcançado usando `*.experiencecloud.adobe.com + https://experiencecloud.adobe.com`.
 
 Por exemplo:
 
@@ -64,9 +64,9 @@ Por exemplo:
 
 Como na ilustração a seguir (clique para ampliar):
 
-![CSP com escopo do Experience Cloud](/help/dev/before-implement/privacy/assets/csp-experiencecloud.png){width="600" zoomable="yes"}
+![CSP com escopo de ExperienceCloud](/help/dev/before-implement/privacy/assets/csp-experiencecloud.png){width="600" zoomable="yes"}
 
-O acesso mais restritivo à conta de uma empresa pode ser obtido usando `https://<Client Code>.experiencecloud.adobe.com https://experience.adobe.com`, onde `<Client Code>` representa o código de cliente específico.
+O acesso mais restritivo à conta de uma empresa pode ser obtido usando o `https://<Client Code>.experiencecloud.adobe.com https://experience.adobe.com`, em que `<Client Code>` representa seu código de cliente específico.
 
 Por exemplo:
 
@@ -78,7 +78,7 @@ Como na ilustração a seguir (clique para ampliar):
 
 >[!NOTE]
 >
->Se você tiver [Launch/Tag](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) implementado, também deve ser desbloqueado.
+>Se você tiver o [Launch/Tag](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) implementado, ele também deverá ser desbloqueado.
 >
 >Por exemplo:
 >

@@ -6,8 +6,8 @@ feature: at.js
 exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1208'
-ht-degree: 74%
+source-wordcount: '1162'
+ht-degree: 72%
 
 ---
 
@@ -175,7 +175,7 @@ As seções a seguir contêm mais informações sobre como enviar as Client Hint
 
 ### at.js versão 2.9.0 (ou posterior)
 
-A partir da at.js 2.9.0, as User Agent Client Hints serão coletadas automaticamente do navegador e enviadas para o Target quando `getOffer/getOffers()` é chamado. Por padrão, a at.js coleta apenas Client Hints de baixa entropia. Se estiver executando a segmentação de público ou usando scripts de perfil com base em dados da categoria de alta entropia descrita nas seções anteriores, será necessário configurar o at.js para coletar Client Hints de alta entropia do navegador em `targetGlobalSettings`.
+A partir da at.js 2.9.0, as User Agent Client Hints serão coletadas automaticamente do navegador e enviadas para o Target quando `getOffer/getOffers()` for chamado. Por padrão, a at.js coleta apenas Client Hints de baixa entropia. Se estiver executando a segmentação de público ou usando scripts de perfil com base em dados da categoria de alta entropia descrita nas seções anteriores, será necessário configurar o at.js para coletar Client Hints de alta entropia do navegador em `targetGlobalSettings`.
 
 ```
 window.targetGlobalSettings = { allowHighEntropyClientHints: true };
@@ -183,4 +183,4 @@ window.targetGlobalSettings = { allowHighEntropyClientHints: true };
 
 ### SDKs do lado do servidor
 
-Para obter mais informações sobre como passar Client Hints por meio de SDKs do lado do servidor, consulte [Client Hints](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints) em Documentação de implementação do lado do servidor.
+Para obter mais informações sobre como passar Client Hints por meio de SDKs do lado do servidor, consulte [Client Hints](../../server-side/sdk-guides/core-principles/audience-targeting.md#client-hints) na Documentação de implementação do lado do servidor.

@@ -1,30 +1,30 @@
 ---
 title: Dicas do cliente da API de entrega do Adobe Target
-description: Como usar as Client Hints na [!DNL Adobe Target] API de entrega?
+description: Como faço para usar as Client Hints na API de entrega do  [!DNL Adobe Target] ?
 exl-id: 317b9d7d-5b98-464e-9113-08b899ee1455
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '272'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
 
-# Client Hints e o [!UICONTROL API de entrega do Adobe Target]
+# Client Hints e o [!UICONTROL Adobe Target Delivery API]
 
-As Client Hints devem ser enviadas para o [!DNL Adobe Target] sobre a solicitação de ofertas.
+As Client Hints devem ser enviadas para [!DNL Adobe Target] na solicitação de ofertas.
 
-Geralmente, é recomendável enviar todas as Client Hints disponíveis para o [!DNL Target]. Para obter mais informações, consulte [User-agent e Client Hints](/help/dev/implement/client-side/atjs/user-agent-and-client-hints.md) no [Implementação do cliente](../../implement/client-side/overview.md) seção.
+Geralmente, é recomendável enviar todas as Client Hints disponíveis para [!DNL Target]. Para obter mais informações, consulte [User-agent e Client Hints](/help/dev/implement/client-side/atjs/user-agent-and-client-hints.md) na seção [Implementação do lado do cliente](../../implement/client-side/overview.md).
 
 ## Chamadas diretas da API de entrega
 
 ### No navegador
 
-Nesse caso, o navegador enviará Client Hints de baixa entropia para o [!DNL Target] automaticamente por meio de cabeçalhos de solicitação. Mas há algumas limitações no nível do navegador com essa implementação. Primeiro - nenhum cabeçalho de Client Hints será enviado do navegador do, a menos que a solicitação esteja sendo feita em https. Segunda - as Client Hints não serão enviadas na primeira solicitação para o [!DNL Target] na página. Os cabeçalhos de Client Hints serão enviados somente na segunda solicitação e em todas as solicitações a partir de então. Isso significa que a segmentação e a personalização do público-alvo não podem ser executadas pelo [!DNL Target] na primeira visita de página. Para contornar essas duas limitações, recomendamos usar a API User Agent Client Hints no navegador para coletar as Client Hints diretamente e enviá-las na carga da solicitação.
+Nesse caso, o navegador enviará Client Hints de baixa entropia para [!DNL Target] automaticamente por meio de cabeçalhos de solicitação. Mas há algumas limitações no nível do navegador com essa implementação. Primeiro - nenhum cabeçalho de Client Hints será enviado do navegador do, a menos que a solicitação esteja sendo feita em https. Segunda - As Client Hints não serão enviadas na primeira solicitação para [!DNL Target] na página. Os cabeçalhos de Client Hints serão enviados somente na segunda solicitação e em todas as solicitações a partir de então. Isso significa que a segmentação e a personalização do público-alvo não podem ser realizadas por [!DNL Target] na primeira visita à página. Para contornar essas duas limitações, recomendamos usar a API User Agent Client Hints no navegador para coletar as Client Hints diretamente e enviá-las na carga da solicitação.
 
 ### De um servidor
 
-Nesse caso, as Client Hints devem ser encaminhadas manualmente do navegador para o [!DNL Target] na solicitação da API de entrega.
+Nesse caso, as Client Hints devem ser encaminhadas manualmente do navegador para [!DNL Target] na solicitação da API de Entrega.
 
 ```
 curl -X POST 'http://mboxedge28.tt.omtrdc.net/rest/v1/delivery?client=myClientCode&sessionId=abcdefghijkl00014' -d '{

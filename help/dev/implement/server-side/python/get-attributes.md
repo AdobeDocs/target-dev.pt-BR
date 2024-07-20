@@ -1,12 +1,12 @@
 ---
-title: Como usar solicitações assíncronas no [!DNL Adobe Target] Python SDK
-description: Saiba como [!DNL Target] O Python SDK é compatível com solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
+title: Como usar solicitações assíncronas no  [!DNL Adobe Target] Python SDK
+description: Saiba como o  [!DNL Target] Python SDK oferece suporte a solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
 feature: APIs/SDKs
 exl-id: fafb9e28-5ac5-41c1-8e7f-f40550b6749f
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 14%
+source-wordcount: '123'
+ht-degree: 16%
 
 ---
 
@@ -14,7 +14,7 @@ ht-degree: 14%
 
 ## Descrição
 
-`get_attributes()` O é usado para buscar experiências e experiências personalizadas de [!DNL Target] e extrair valores de atributo.
+`get_attributes()` é usado para buscar experimentação e experiências personalizadas de [!DNL Target] e extrair valores de atributos.
 
 
 ## Método
@@ -30,11 +30,11 @@ target_client_instance.get_attributes(mbox_names, options)
 | Nome | Tipo | Obrigatório | Padrão | Descrição |
 | --- | --- | --- | --- | --- |
 | mbox_names | lista[str] | Sim | None | Uma lista de nomes de mbox |
-| opções | dict | Não | None | As mesmas opções usadas para [Obter ofertas](get-offers.md) |
+| opções | dict | Não | None | As mesmas opções usadas para [Obter Ofertas](get-offers.md) |
 
 ## AttributesProvider
 
-A variável `AttributesProvider` retornado por `target_client.get_attributes()` O tem os seguintes métodos:
+O `AttributesProvider` retornado por `target_client.get_attributes()` tem os seguintes métodos:
 
 | Método | Tipo de retorno | Descrição |
 | --- | --- | --- |

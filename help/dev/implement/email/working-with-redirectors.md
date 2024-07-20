@@ -1,13 +1,13 @@
 ---
 keywords: Implementação, mbox.js sem JavaScript, redirecionador, custos por clique, receita por clique
-description: Saiba como usar Redirecionadores em implementações de email, de forma semelhante a como você usa uma mbox no seu [!DNL Adobe Target] atividades.
+description: Saiba como usar Redirecionadores em implementações de email, de forma semelhante a como você usa uma mbox em suas atividades de  [!DNL Adobe Target] .
 title: Como trabalho com redirecionadores?
 feature: Implement Email
 exl-id: 072368ff-9f17-4709-ac2d-c9e1f0d888bb
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '693'
-ht-degree: 69%
+source-wordcount: '668'
+ht-degree: 64%
 
 ---
 
@@ -17,7 +17,7 @@ Utilize o Redirecionador de forma similar a uma mbox em seus testes.
 
 Redirecionadores são criados com um URL de Redirecionador especial, que carrega a mbox do Redirecionador na conta. Utilize o Redirecionador de forma similar a uma mbox em seus testes. Envie o URL de Redirecionador para sua Rede de publicidade como o link de destino do anúncio.
 
-Use o Redirecionador para  faça o seguinte:
+Use o redirecionador para fazer o seguinte:
 
 * Acompanhar cliques dos seus anúncios de exibição para o seu site
 * Criar um relatório único e centralizado para rastrear os cliques para exibir anúncios em várias redes de anúncios
@@ -27,7 +27,7 @@ Use o Redirecionador para  faça o seguinte:
 
 * Descobrir qual página de aterrissagem leva ao maior número de conversões
 
-Para obter ajuda em decidir a configuração correta, consulte  [Implementações não baseadas em JavaScript](/help/dev/implement/email/overview.md).
+Para obter ajuda para decidir a configuração correta, consulte [Implementações não baseadas em JavaScript](/help/dev/implement/email/overview.md).
 
 ## Criar um redirecionador
 
@@ -44,7 +44,7 @@ Antes de utilizar um redirecionador, você deve criá-lo.
 
    * Onde `yourclientcode` é o código de cliente da sua empresa. O código de cliente de sua empresa tem todos os caracteres em minúsculas e sem caracteres especiais.
 
-     Seu código de cliente está disponível na parte superior do **[!UICONTROL Administração]** > **[!UICONTROL Implementação]** página do [!DNL Target] interface.
+     O código de cliente está disponível na parte superior da página **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** da interface [!DNL Target].
 
    * `redirectorlink_456` é o nome do Redirecionador mbox que aparece em sua conta para ser usado em campanhas e testes.
 
@@ -52,14 +52,14 @@ Antes de utilizar um redirecionador, você deve criá-lo.
 
    * Onde `http%3A%2F%2Fwww%2Eyourcompany%2Ecom%2Fusualdestination%2Ehtm` é o destino padrão.
 
-     Isso deve ser codificado no URL e uma referência absoluta. Você pode usar o [Referência de codificação de URL do HTML](https://www.w3schools.com/tags/ref_urlencode.asp) para codificar rapidamente os URLs.
+     Isso deve ser codificado no URL e uma referência absoluta. Você pode usar a [Referência de codificação de URL do HTML](https://www.w3schools.com/tags/ref_urlencode.asp) para codificar rapidamente suas URLs.
 
    >[!WARNING]
    >
-   >Observe que, com o Redirecionador, você pode ser exposto ao risco de uma vulnerabilidade de redirecionamento aberto. Para evitar o uso não autorizado de links redirecionadores por terceiros, a Adobe recomenda que você use &quot;hosts autorizados&quot; para incluir na lista de permissões os domínios de URL de redirecionamento padrão. [!DNL Target]O usa hosts para a lista de permissões de domínios aos quais você deseja permitir redirecionamentos. Para obter mais informações, consulte [Criar lista de permissões que especificam hosts autorizados a enviar chamadas de mbox para o  [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) em *Hosts*.
+   >Observe que, com o Redirecionador, você pode ser exposto ao risco de uma vulnerabilidade de redirecionamento aberto. Para evitar o uso não autorizado de links redirecionadores por terceiros, a Adobe recomenda que você use &quot;hosts autorizados&quot; para incluir na lista de permissões os domínios de URL de redirecionamento padrão. [!DNL Target] usa hosts para incluir na lista de permissões domínios aos quais você deseja permitir redirecionamentos. Para obter mais informações, consulte [Criar Listas de permissões que especificam hosts autorizados a enviar chamadas de mbox para [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) em *Hosts*.
 
 1. Valide o redirecionador.
-   1. *Prática recomendada de segurança* incluir na lista de permissões : verifique se o domínio usado no Redirecionador é exibido, conforme indicado acima. Incluir na lista de permissões Se você usar um domínio que não seja ➡, o Adobe bloqueará qualquer chamada para esse domínio para impedir que agentes mal-intencionados usem o Redirecionador para redirecionar para domínios potencialmente mal-intencionados.
+   1. incluir na lista de permissões *Prática recomendada de segurança*: certifique-se de que o domínio usado no Redirecionador seja ativado, conforme indicado acima. Incluir na lista de permissões Se você usar um domínio que não seja ➡, o Adobe bloqueará qualquer chamada para esse domínio para impedir que agentes mal-intencionados usem o Redirecionador para redirecionar para domínios potencialmente mal-intencionados.
    2. Insira o URL do redirecionador no navegador e atualize a página.
    3. Efetue logon em sua conta, atualize a lista de mbox e verifique se o novo redirecionador está indicado como uma mbox.
 1. Se você vai testar destinos diferentes para um anúncio, crie [Ofertas de redirecionamento](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html) para cada versão.
@@ -80,7 +80,7 @@ Antes de utilizar um redirecionador, você deve criá-lo.
 
    >[!NOTE]
    >
-   >Redirecionadores não são suportados pela Visualização de oferta ou Procurar por mbox. Visualize as experiências diretamente em um navegador. Além disso, `mboxDebug` não funciona com Redirecionadores.
+   >Redirecionadores não são suportados pela Visualização de oferta ou Procurar por mbox. Visualizar experiências diretamente em um navegador. Além disso, `mboxDebug` não funciona com Redirecionadores.
 
 1. Envie o URL completo do Redirecionador para sua rede de publicidade como destino do anúncio.
 
@@ -94,7 +94,7 @@ Use o redirecionador para passar os custos por clique.
 
 >[!NOTE]
 >
->A prática recomendada é determinar o valor de custo usando o **[!UICONTROL Pontuação por visita]** métrica de envolvimento.
+>A prática recomendada é determinar o valor de custo usando a métrica de envolvimento **[!UICONTROL Score per visit]**.
 
 Adicione `&mboxPageValue=-value` à URL. Observe o valor negativo.
 
@@ -111,7 +111,7 @@ Use o redirecionador para passar a receita por clique.
 
 >[!NOTE]
 >
->A prática recomendada é determinar o valor de receita usando o **[!UICONTROL Pontuação por visita]** métrica de envolvimento.
+>A prática recomendada é determinar o valor de receita usando a métrica de envolvimento **[!UICONTROL Score per visit]**.
 
 Adicione `&mboxPageValue=value` à URL.
 

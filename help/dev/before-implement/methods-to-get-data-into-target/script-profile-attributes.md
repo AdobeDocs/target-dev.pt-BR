@@ -1,25 +1,25 @@
 ---
 keywords: implementar, implementar, configurar, configurar, criar script de atributos de perfil
-description: Obter dados em [!DNL Target] usando atributos de perfil de script.
-title: Como posso obter dados no [!DNL Target] Usar atributos de perfil de script?
+description: Obter dados em  [!DNL Target] usando atributos de perfil de script.
+title: Como Obter Dados no  [!DNL Target] Usando Atributos de Perfil de Script?
 feature: Implementation
 exl-id: ba11f1de-e68b-4505-8e3e-cd4d46ef59a2
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '294'
-ht-degree: 69%
+source-wordcount: '283'
+ht-degree: 74%
 
 ---
 
 # Atributos de perfil de script
 
-Os atributos do perfil de script são pares de nome/valor definidos no [!DNL Adobe Target] solução. O valor é determinado na execução de um snippet do JavaScript no servidor Target, a cada chamada do servidor.
+Os atributos do perfil de script são pares de nome/valor definidos na solução [!DNL Adobe Target]. O valor é determinado na execução de um snippet do JavaScript no servidor Target, a cada chamada do servidor.
 
 Os usuários gravam pequenos snippets de código que são executados de acordo com a chamada de mbox e antes de um visitante ser avaliado para associação de público-alvo e atividade.
 
 ## Formato
 
-Os atributos de perfil do script são criados na seção Públicos-alvo do Target. Qualquer nome de atributo é válido, e o valor é o resultado de uma função JavaScript gravada pelo [!DNL Target] usuário. O nome do atributo é automaticamente pré-fixado pelo &quot;usuário. &quot; em [!DNL Target] para diferenciá-los dos atributos de perfil na página.
+Os atributos de perfil do script são criados na seção Públicos-alvo do Target. Qualquer nome de atributo é válido, e o valor é o resultado de uma função JavaScript gravada pelo usuário [!DNL Target]. O nome do atributo é automaticamente pré-fixado pelo &quot;usuário. &quot; em [!DNL Target] para diferenciá-los dos atributos de perfil na página.
 
 O snippet de código é gravado em linguagem Rhino JS e podem fazer referência a tokens e outros valores.
 

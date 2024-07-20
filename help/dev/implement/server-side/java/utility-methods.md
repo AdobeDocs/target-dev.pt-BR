@@ -1,5 +1,5 @@
 ---
-title: Use métodos de utilitário na [!DNL Adobe Target] SDK do Java
+title: Usar métodos de utilitário no  [!DNL Adobe Target] SDK Java
 description: Saiba como usar métodos auxiliares, que são reutilizáveis nas controladoras e podem ser movidos para uma classe de utilitários separada.
 feature: APIs/SDKs
 exl-id: 19418126-c4d8-4e6b-bb84-036b7fe0e6ec

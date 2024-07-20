@@ -1,11 +1,11 @@
 ---
-title: Inscrever-se em eventos no [!DNL Adobe Target] Python SDK
-description: Saiba como se inscrever em vários eventos que ocorrem no Python SDK usando o [!UICONTROL OnDeviceDecisioningHandler] objeto.
+title: Inscrever-se em eventos no  [!DNL Adobe Target] Python SDK
+description: Saiba como assinar vários eventos que ocorrem no Python SDK usando o objeto [!UICONTROL OnDeviceDecisioningHandler].
 feature: APIs/SDKs
 exl-id: 4e32e3b5-6072-4703-b09d-abb467aa1304
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '175'
+source-wordcount: '165'
 ht-degree: 3%
 
 ---
@@ -14,9 +14,9 @@ ht-degree: 3%
 
 ## Descrição
 
-Quando [inicialização do SDK](initialize-sdk.md), o `options["events"]` dict é um objeto opcional com chaves de nome de evento e valores de função de retorno de chamada. Ele pode ser usado para assinar vários eventos que ocorrem no SDK. Por exemplo, a variável `client_ready` O evento pode ser usado com uma função de retorno de chamada que será invocada quando o SDK estiver pronto para chamadas de método.
+Ao [inicializar o SDK](initialize-sdk.md), o dict `options["events"]` é um objeto opcional com chaves de nome de evento e valores de função de retorno de chamada. Ele pode ser usado para assinar vários eventos que ocorrem no SDK. Por exemplo, o evento `client_ready` pode ser usado com uma função de retorno de chamada que será invocada quando o SDK estiver pronto para chamadas de método.
 
-Quando a variável `callback` for chamada, um objeto de evento será transmitido. Cada evento tem um `type` correspondente ao nome do evento, e alguns eventos incluem propriedades adicionais com informações pertinentes.
+Quando a função `callback` é chamada, um objeto de evento é transmitido. Cada evento tem um `type` correspondente ao nome do evento, e alguns eventos incluem propriedades adicionais com informações pertinentes.
 
 ## Eventos 
 

@@ -6,18 +6,18 @@ feature: APIs/SDKs
 exl-id: b422ae68-49b3-4d60-9ea4-0fa67b6934b0
 source-git-commit: b8ccfdcaff6aa17a325727df0a9ffd716e44519b
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '290'
 ht-degree: 0%
 
 ---
 
 # Buscar perfis
 
-A [!DNL Target] O perfil do pode ser obtido de três maneiras: usando uma `[!DNL Experience Cloud Visitor ID]` (`ECID`), `tntid` ou `thirdPartyId`.
+Um perfil [!DNL Target] pode ser obtido de três maneiras: usando um `[!DNL Experience Cloud Visitor ID]` (`ECID`), `tntid` ou `thirdPartyId`.
 
-## Uso de um [!DNL Experience Cloud Visitor ID] (ECID)
+## Usando um [!DNL Experience Cloud Visitor ID] (ECID)
 
-Você pode buscar um perfil com base na variável `ECID`. O método HTTP deve ser GET.
+Você pode buscar um perfil com base no `ECID`. O método HTTP deve ser GET.
 
 O URL é semelhante ao seguinte exemplo:
 
@@ -25,19 +25,19 @@ O URL é semelhante ao seguinte exemplo:
 https://<clientCode>.tt.omtrdc.net/rest/v1/profiles/marketingCloudVisitorId/<ECID>?client=<clientCode>
 ```
 
-Substituir `<clientCode>` com o seu [!DNL Target] [!UICONTROL Código do cliente] e `<ECID>` com o seu [!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID]).
+Substitua `<clientCode>` por [!DNL Target] [!UICONTROL Client Code] e `<ECID>` por [!DNL Experience Cloud Visitor ID] ([!DNL Marketing Cloud Visitor ID]).
 
 ## Uso de um tntid
 
-[!DNL Target] atribui automaticamente um `tntid` para cada solicitação.
+[!DNL Target] atribui automaticamente `tntid` para cada solicitação.
 
-O exemplo a seguir mostra o formato da solicitação para buscar um perfil usando um `tntid`:
+O exemplo a seguir mostra o formato de solicitação para buscar um perfil usando um `tntid`:
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/your-tnt-id?client=<your-client-code>
 ```
 
-Substituir `<your-client-code>` e `your-tnt-id` e acione uma solicitação do GET. Este é um exemplo de chamada de busca de perfil usando um `tntid`:
+Substitua `<your-client-code>` e `your-tnt-id` e acione uma solicitação GET. Este é um exemplo de chamada de busca de perfil usando um `tntid`:
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046?client=<your-client-code>
@@ -45,27 +45,27 @@ https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/111492025094307-353046
 
 ## Uso de um thirdPartyId
 
-[!DNL Adobe Target] os perfis podem ser aumentados com seu próprio identificador (por exemplo: ID de CRM, `uuid`, número de associação e assim por diante).
+[!DNL Adobe Target] perfis podem ser aumentados com seu próprio identificador (por exemplo: ID do CRM, `uuid`, número de associação e assim por diante).
 
 Consulte [Atualizar perfis](/help/dev/administer/profile-api/profile-api-overview.md) para saber como anexar um `thirdPartyId` ao seu perfil.
 
-O exemplo a seguir mostra o formato da solicitação para buscar um perfil usando um `thirdPartyId`:
+O exemplo a seguir mostra o formato de solicitação para buscar um perfil usando um `thirdPartyId`:
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/your-thirdpartyid?client=<your-client-code>
 ```
 
-Substituir `<your-client-code>` e `your-thirdpartyid` e acione uma solicitação do GET. Este é um exemplo de chamada de busca de perfil usando um [!UICONTROL thirdpartyid]:
+Substitua `<your-client-code>` e `your-thirdpartyid` e acione uma solicitação GET. Este é um exemplo de chamada de busca de perfil usando um [!UICONTROL thirdpartyid]:
 
 ```
 https://<your-client-code>.tt.omtrdc.net/rest/v1/profiles/thirdPartyId/a1-mbox3rdPartyId?client=<your-client-code>
 ```
 
-Quando esta chamada for feita, [!DNL Target] O tenta localizar o perfil primeiro no cluster anotado na solicitação de borda ou onde o perfil estiver localizado e retornar o conteúdo. O conteúdo do perfil é retornado no formato JSON.
+Quando esta chamada é feita, o [!DNL Target] tenta localizar o perfil primeiro no cluster anotado na solicitação de borda, ou onde quer que o perfil esteja localizado e retornar o conteúdo. O conteúdo do perfil é retornado no formato JSON.
 
 ## Autenticação
 
-A variável [!DNL Target Profile API] pode ser protegido ativando a autenticação a partir do [!DNL Target] Interface do usuário conforme descrito aqui. Quando a autenticação estiver ativada, todas as solicitações de API de perfil devem ter o token de autenticação de perfil definido nos cabeçalhos da solicitação. O token pode ser gerado usando o [!DNL Target] ou usando as etapas explicadas acima na variável [Token de autenticação de perfil](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank} seção.
+O [!DNL Target Profile API] pode ser protegido ativando a autenticação na interface do usuário do [!DNL Target], conforme descrito aqui. Quando a autenticação estiver ativada, todas as solicitações de API de perfil devem ter o token de autenticação de perfil definido nos cabeçalhos da solicitação. O token pode ser gerado usando a interface do usuário [!DNL Target] ou as etapas explicadas acima, na seção [Token de Autenticação de Perfil](https://developers.adobetarget.com/api/#authentication-tokens){target=_blank}.
 
 ## Medição
 
@@ -73,7 +73,7 @@ Essas chamadas não contam para suas chamadas da mbox.
 
 ## Tratamento de erros
 
-No caso de uma chamada para `/thirdPartyId` com um inválido ou um expirado `thirdPartyId` especificado:
+No caso de uma chamada para `/thirdPartyId` com um `thirdPartyId` inválido ou expirado especificado:
 
 ```
 {"status" : 404, "message" : "No profile found for client <client_code> with third party id=<third_party_id>"}

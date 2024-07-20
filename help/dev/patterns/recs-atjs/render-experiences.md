@@ -4,20 +4,21 @@ description: Verifique se todas as etapas necessárias para renderizar experiên
 feature: APIs/SDKs
 level: Experienced
 role: Developer
-source-git-commit: 723bb2f33a011995757009193ee9c48757ae1213
+exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
+source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
 workflow-type: tm+mt
-source-wordcount: '1124'
-ht-degree: 7%
+source-wordcount: '908'
+ht-degree: 4%
 
 ---
 
 # Renderizar experiências
 
-Siga as etapas na guia *Renderizar experiências* diagrama para garantir que todas as tarefas necessárias para renderizar experiências sejam executadas na sequência correta.
+Siga as etapas do diagrama *Renderizar experiências* para garantir que todas as tarefas necessárias para renderizar experiências sejam executadas na sequência correta.
 
 >[!NOTE]
 >
->Se você ativou a Solicitação automática de carregamento de página durante o [Configurar etapa automática de solicitação de carregamento de página](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic) in *Inicializar SDKS* No entanto, você pode ignorar essa atividade, a menos que queira chamar o SDK da Adobe Target para renderizar experiências adicionais usando uma solicitação de local regional.
+>Se você tiver habilitado a Solicitação Automática de Carregamento de Página durante a [etapa Configurar a Solicitação Automática de Carregamento de Página](/help/dev/patterns/recs-atjs/initialize-sdk.md#automatic) em *Inicializar SDKS* , ignore esta atividade, a menos que queira chamar o Adobe Target SDK para renderizar experiências adicionais usando uma solicitação de local regional.
 
 >[!TIP]
 >
@@ -25,11 +26,11 @@ Siga as etapas na guia *Renderizar experiências* diagrama para garantir que tod
 
 ## Renderizar diagrama de experiências {#diagram}
 
-O tratamento automático de cintilação pronto para uso disponível com a at.js só faz sentido quando você [!UICONTROL Solicitação automática de carregamento de página] ativado. Essa opção oculta todo o corpo do HTML enquanto busca as experiências do [!DNL Target]. Nesse caso, é sua responsabilidade lidar com a cintilação. Procure por padrões de implementação disponíveis para tratamento de cintilação para obter orientação.
+O tratamento automático de cintilação pronto para uso disponível com a at.js só faz sentido quando o [!UICONTROL Automatic Page Load Request] está habilitado. Esta opção oculta todo o corpo do HTML ao buscar as experiências de [!DNL Target]. Nesse caso, é sua responsabilidade lidar com a cintilação. Procure por padrões de implementação disponíveis para tratamento de cintilação para obter orientação.
 
 >[!NOTE]
 >
->Os números de etapa na ilustração a seguir correspondem às seções abaixo. Os números das etapas não estão em uma ordem específica e não refletem a ordem das etapas realizadas no [!DNL Target] Interface ao criar a atividade.
+>Os números de etapa na ilustração a seguir correspondem às seções abaixo. Os números de etapa não estão em uma ordem específica e não refletem a ordem das etapas realizadas na interface do usuário [!DNL Target] ao criar a atividade.
 
 ![Renderizar diagrama de experiências](/help/dev/patterns/recs-atjs/assets/diagram-render-experiences-new.png){width="600" zoomable="yes"}
 
@@ -50,7 +51,7 @@ Clique nos links a seguir para navegar até as seções desejadas:
 
 ## 3.1: Promoção {#promotion}
 
-Adicione itens promovidos e controle o posicionamento nos designs de recomendações escolhendo Promoções principais ou secundárias na [!DNL Target] Interface ao criar a atividade.
+Adicione itens promovidos e controle seu posicionamento no design de recomendações escolhendo promoções Frente ou Voltar na interface do usuário [!DNL Target] ao criar a atividade.
 
 +++Ver detalhes
 
@@ -60,7 +61,7 @@ Adicione itens promovidos e controle o posicionamento nos designs de recomendaç
 * [Promover por coleção](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
 * [Promover por atributo](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-**Parâmetros de entidade obrigatórios**
+**Parâmetros de entidade necessários**
 
 * Os atributos de item em promoções devem ser passados ao usar a opção &quot;promover por atributo&quot;.
 
@@ -80,11 +81,11 @@ Faça recomendações com base no conteúdo do carrinho do usuário.
 
 **Critérios disponíveis**
 
-* [!UICONTROL Pessoas que visualizaram isto, visualizaram aquilo]
-* [!UICONTROL Pessoas que visualizaram e compraram essas]
-* [!UICONTROL Pessoas que compraram isto, compraram aquilo]
+* [!UICONTROL People Who Viewed These, Viewed Those]
+* [!UICONTROL People Who Viewed These, Bought Those]
+* [!UICONTROL People Who Bought These, Bought Those]
 
-**Parâmetros de entidade obrigatórios**
+**Parâmetros de entidade necessários**
 
 * cartIds
 
@@ -104,22 +105,22 @@ Faça recomendações com base na popularidade geral de um item em todo o site o
 
 **Critérios disponíveis**
 
-* [!UICONTROL Mais visualizados no site]
-* [!UICONTROL Mais visualizados por categoria]
-* [!UICONTROL Mais visualizados pelo atributo de item]
-* [!UICONTROL Mais vendidos em todo o site]
-* [!UICONTROL Mais vendidos por categoria]
-* [!UICONTROL Mais Vendidos por Atributo de Item]
-* [!UICONTROL Comece pela métrica do Analytics]
+* [!UICONTROL Most Viewed Across the Site]
+* [!UICONTROL Most Viewed by Category]
+* [!UICONTROL Most Viewed by Item Attribute]
+* [!UICONTROL Top Sellers Across the Site]
+* [!UICONTROL Top Sellers by Category]
+* [!UICONTROL Top Sellers by Item Attribute]
+* [!UICONTROL Top by Analytics Metric]
 
-**Parâmetros de entidade obrigatórios**
+**Parâmetros de entidade necessários**
 
-* `entity.categoryId` ou o atributo de item para popularidade com base no critério do atributo atual ou do item.
+* `entity.categoryId` ou o atributo de item para popularidade com base no critério atual ou no atributo de item.
 * Nada deve ser passado para Mais visualizados/Mais vendidos no site.
 
 **Leituras**
 
-* [Baseado em popularidade](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Com base em popularidade](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -133,12 +134,12 @@ Fazer recomendações com base na localização de itens semelhantes a um item q
 
 **Critérios disponíveis**
 
-* [!UICONTROL Pessoas que visualizaram isto, visualizaram aquilo]
-* [!UICONTROL Pessoas que visualizaram isto, compraram aquilo]
-* [!UICONTROL Pessoas que compraram isto, compraram aquilo]
-* [!UICONTROL Itens com atributos similares]
+* [!UICONTROL People Who Viewed This, Viewed That]
+* [!UICONTROL People Who Viewed This, Bought That]
+* [!UICONTROL People Who Bought This, Bought That]
+* [!UICONTROL Items with Similar Attributes]
 
-**Parâmetros de entidade obrigatórios**
+**Parâmetros de entidade necessários**
 
 * `entity.id`
 * Se qualquer atributo de perfil for usado como uma chave
@@ -159,10 +160,10 @@ Faça recomendações com base no comportamento do usuário.
 
 **Critérios disponíveis**
 
-* [!UICONTROL Itens visualizados recentemente ]
-* [!UICONTROL Recomendado para você]
+* [!UICONTROL Recently Viewed Items]
+* [!UICONTROL Recommended for You]
 
-**Parâmetros de entidade obrigatórios**
+**Parâmetros de entidade necessários**
 
 * `entity.id`
 
@@ -182,9 +183,9 @@ Fazer recomendações com base em um arquivo personalizado que você carregou.
 
 **Critérios disponíveis**
 
-* [!UICONTROL Algoritmo personalizado]
+* [!UICONTROL Custom algorithm]
 
-**Parâmetros de entidade obrigatórios**
+**Parâmetros de entidade necessários**
 
 `entity.id` ou o atributo usado como uma chave para o algoritmo personalizado
 
@@ -202,7 +203,7 @@ Fazer recomendações com base em um arquivo personalizado que você carregou.
 
 **Leituras**
 
-* [Uso das regras de inclusão estática e dinâmica](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
+* [Usar regras de inclusão estática e dinâmica](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -222,7 +223,7 @@ Transmita IDs de entidade para entidades que você deseja excluir de suas recome
 
 [Retorne ao diagrama na parte superior desta página.](#diagram)
 
-## 3.9: Fornecer atributos de entidade para atualizar o catálogo de produtos do [!DNL Recommendations] {#entity-attributes}
+## 3.9: Fornecer atributos de entidade para atualizar o catálogo de produtos para [!DNL Recommendations] {#entity-attributes}
 
 +++Ver detalhes
 
@@ -230,7 +231,7 @@ Transmita IDs de entidade para entidades que você deseja excluir de suas recome
 
 * [Atributos da entidade](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-Também é possível realizar essa etapa criando [feeds de produto](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} usando o [!DNL Target] Interface para atualizar o catálogo de produtos para [!DNL Recommendations].
+Você também pode realizar esta etapa criando [feeds de produtos](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} usando a interface do usuário [!DNL Target] para atualizar o catálogo de produtos para [!DNL Recommendations].
 
 +++
 
@@ -252,15 +253,15 @@ Forneça os atributos de perfil usados como chaves para as regras de inclusão e
 
 ## 3.11: Acionar solicitação de carregamento de página {#fire}
 
-Essa etapa aciona um [!DNL Delivery API] chamar com `execute` > `pageLoad` carga na solicitação. A variável `getOffers()` O método busca a experiência e `applyOffers()` renderiza a experiência na página. A variável `pageLoad` é necessária para renderizar experiências criadas no [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
+Esta etapa aciona uma chamada [!DNL Delivery API] com carga `execute` > `pageLoad` na solicitação. O método `getOffers()` busca a experiência e `applyOffers()` renderiza a experiência na página. A solicitação `pageLoad` é necessária para renderizar experiências criadas no [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
 
 +++Ver detalhes
 
-![Acionar diagrama de solicitação de carregamento de página](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
+![Acionar o diagrama de solicitação de carregamento de página](/help/dev/patterns/recs-atjs/assets/fire-page-load-request-combined.png){width="400" zoomable="yes"}
 
 **Pré-requisitos**
 
-* Todo o mapeamento de dados deve ser feito usando o `targetPageParams` função.
+* Todo o mapeamento de dados deve ser feito usando a função `targetPageParams`.
 
 **Leituras**
 
@@ -269,7 +270,7 @@ Essa etapa aciona um [!DNL Delivery API] chamar com `execute` > `pageLoad` carga
 
 **Ações**
 
-* Use o `getOffers` e `applyOffers` métodos para buscar a experiência do usando uma chamada da API Solicitação de carregamento de página.
+* Use os métodos `getOffers` e `applyOffers` para buscar a experiência usando uma chamada da API de solicitação de carregamento de página.
 
 +++
 
@@ -277,15 +278,15 @@ Essa etapa aciona um [!DNL Delivery API] chamar com `execute` > `pageLoad` carga
 
 ## 3.12: Acionar solicitação de localização regional (#location)
 
-Essa etapa aciona um [!DNL Delivery API] chamar com `execute` > `mboxes` carga útil na sua solicitação. A variável `getOffers` O método busca a experiência e `applyOffers` renderiza a experiência para a página. Você pode enviar mais de uma mbox no `execute` > `mboxes` carga útil.
+Esta etapa aciona uma chamada [!DNL Delivery API] com carga `execute` > `mboxes` em sua solicitação. O método `getOffers` busca a experiência e `applyOffers` renderiza a experiência para a página. Você pode enviar mais de uma mbox na carga `execute` > `mboxes`.
 
 +++Ver detalhes
 
-![Acionar diagrama de solicitação de localização regional](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request-combined.png){width="400" zoomable="yes"}
+![Acionar o diagrama de solicitação de localização regional](/help/dev/patterns/recs-atjs/assets/fire-regional-location-request-combined.png){width="400" zoomable="yes"}
 
 **Pré-requisitos**
 
-* Todo o mapeamento de dados deve ser feito usando o `targetPageParams` função.
+* Todo o mapeamento de dados deve ser feito usando a função `targetPageParams`.
 
 **Leituras**
 
@@ -294,7 +295,7 @@ Essa etapa aciona um [!DNL Delivery API] chamar com `execute` > `mboxes` carga �
 
 **Ações**
 
-* Use o `getOffers` e `applyOffers` métodos para buscar a experiência do usando uma chamada da API Solicitação de carregamento de página.
+* Use os métodos `getOffers` e `applyOffers` para buscar a experiência usando uma chamada da API de solicitação de carregamento de página.
 
 +++
 

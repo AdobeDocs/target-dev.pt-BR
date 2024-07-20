@@ -1,13 +1,13 @@
 ---
 keywords: perguntas frequentes da at.js, perguntas frequentes da at.js, perguntas frequentes, cintilação, carregador, carregador de página, domínio cruzado, tamanho do arquivo, tamanho do arquivo, domínio x, at.js e mbox.js, somente x, domínio cruzado, safari, aplicativo de página única, seletores ausentes, seletores, aplicativo de página única, tt.omtrdc.net, spa, Adobe Experience Manager, AEM, endereço ip, httponly, HttpOnly, seguro, ip, cookie domínio
-description: Leia respostas das perguntas frequentes sobre o [!DNL Adobe Target] Biblioteca JavaScript at.js.
+description: Leia respostas das perguntas frequentes sobre a biblioteca de JavaScript at.js do  [!DNL Adobe Target] .
 title: Quais são as perguntas e respostas comuns sobre a at.js?
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
 source-git-commit: 448c43c0c10e22ad054f4ee98bfc282f8c96cdcb
 workflow-type: tm+mt
-source-wordcount: '2938'
-ht-degree: 66%
+source-wordcount: '2923'
+ht-degree: 67%
 
 ---
 
@@ -25,7 +25,7 @@ O diagrama a seguir ilustra o desempenho do carregamento de página usando a mbo
 
 (Clique na imagem para expandir até a largura total.)
 
-![Diagrama de desempenho da página que compara a mbox.js com a at.js](/help/dev/implement/client-side/atjs/assets/atjs_versus_mboxjs.png "Diagrama de desempenho da página que compara a mbox.js com a at.js"){zoom=&quot;yes&quot;}
+![Diagrama de desempenho da página comparando a mbox.js com a at.js](/help/dev/implement/client-side/atjs/assets/atjs_versus_mboxjs.png "Diagrama de desempenho da página comparando a mbox.js com a at.js"){zoomable="yes"}
 
 Como ilustrado acima, ao usar a mbox.js, o conteúdo da página não inicia o carregamento até que a chamada do [!DNL Target] seja concluída. Usando a at.js, o conteúdo da página inicia o carregamento ao iniciar a chamada do [!DNL Target] e não espera até que ela seja concluída.
 
@@ -33,7 +33,7 @@ Como ilustrado acima, ao usar a mbox.js, o conteúdo da página não inicia o ca
 
 Muitos clientes e consultores querem saber o impacto da at.js e da mbox.js nos tempos de carregamento de página, especialmente no contexto de usuários novos e recorrentes. Infelizmente, é difícil medir e fornecer números concretos sobre como a at.js ou a mbox.js influenciam o tempo de carregamento de página devido à implementação de cada cliente.
 
-No entanto, se a API de visitante estiver presente na página, [!DNL Target] O pode entender melhor como a at.js e a mbox.js influenciam o tempo de carregamento de página.
+No entanto, se a API de visitante estiver presente na página, o [!DNL Target] pode entender melhor como a at.js e a mbox.js influenciam o tempo de carregamento de página.
 
 >[!NOTE]
 >
@@ -48,9 +48,9 @@ As seções a seguir descrevem a sequência de ações para visitantes novos e r
 1. Se a criação automática da mbox global estiver acionada, a biblioteca JavaScript do [!DNL Target]:
 
    * Iniciará o objeto do visitante.
-   * A variável [!DNL Target] A biblioteca do tenta recuperar os dados de ID de visitante do Experience Cloud.
+   * A biblioteca [!DNL Target] tenta recuperar os dados da ID de visitante do Experience Cloud.
    * Como esse é um novo visitante, a API de visitante irá disparar uma solicitação de domínio cruzado para demdex.net.
-   * Depois que os dados de ID de visitante do Experience Cloud forem recuperados, uma solicitação para [!DNL Target] foi acionado.
+   * Depois que os dados da ID de visitante do Experience Cloud forem recuperados, uma solicitação para [!DNL Target] será acionada.
 
 ### Visitantes que retornam
 
@@ -59,30 +59,30 @@ As seções a seguir descrevem a sequência de ações para visitantes novos e r
 1. Se a criação automática da mbox global estiver acionada, a biblioteca JavaScript do [!DNL Target]:
 
    * Iniciará o objeto do visitante.
-   * A variável [!DNL Target] A biblioteca do tenta recuperar os dados de ID de visitante do Experience Cloud.
+   * A biblioteca [!DNL Target] tenta recuperar os dados da ID de visitante do Experience Cloud.
    * A API de visitante recuperará os dados dos cookies.
-   * Depois que os dados de ID de visitante do Experience Cloud forem recuperados, uma solicitação para [!DNL Target] foi acionado.
+   * Depois que os dados da ID de visitante do Experience Cloud forem recuperados, uma solicitação para [!DNL Target] será acionada.
 
 >[!NOTE]
 >
->Para novos visitantes, quando a API de visitante estiver presente, [!DNL Target] precisa transmitir as informações várias vezes para garantir que [!DNL Target] contêm dados de ID de visitante do Experience Cloud. Para os visitantes recorrentes, o [!DNL Target] transmitirá as informações apenas para o [!DNL Target] recuperar o conteúdo personalizado.
+>Para novos visitantes, quando a API de visitante estiver presente, o [!DNL Target] precisará transmitir as informações várias vezes para garantir que as solicitações do [!DNL Target] contenham os dados da ID de visitante do Experience Cloud. Para os visitantes recorrentes, o [!DNL Target] transmitirá as informações apenas para o [!DNL Target] recuperar o conteúdo personalizado.
 
 ## Por que parece que vejo tempos de resposta mais lentos após a atualização de uma versão anterior da at.js para a versão 1.0.0?
 
 A at.js versão 1.0.0 e posteriores acionam todas as solicitações paralelamente. As versões anteriores executam as solicitações sequencialmente, o que significa que elas são colocadas em uma fila e o [!DNL Target] aguarda até que a primeira seja concluída antes de passar para a próxima solicitação.
 
-A forma como as versões anteriores da at.js executam as solicitações é susceptível ao chamado &quot;bloqueio do topo da linha&quot;. Em at.js 1.0.0 e posterior, [!DNL Target] alternado para execução de solicitação paralela.
+A forma como as versões anteriores da at.js executam as solicitações é susceptível ao chamado &quot;bloqueio do topo da linha&quot;. Na at.js 1.0.0 e posteriores, [!DNL Target] alternou para a execução de solicitação paralela.
 
-Por exemplo, se você verificar a cascata da guia de rede para a at.js 0.9.1, verá que a próxima [!DNL Target] A solicitação do não é iniciada até que a anterior tenha terminado. Isso não ocorre com a at.js 1.0.0 e posteriores, pois nestas versões as solicitações são iniciadas basicamente ao mesmo tempo.
+Por exemplo, se você verificar a cascata da guia de rede para a at.js 0.9.1, verá que a próxima solicitação [!DNL Target] não será iniciada até que a anterior tenha terminado. Isso não ocorre com a at.js 1.0.0 e posteriores, pois nestas versões as solicitações são iniciadas basicamente ao mesmo tempo.
 
 Da perspectiva de tempo de resposta, matematicamente, essa sequência pode ser resumida assim
 
 <ul class="simplelist"> 
- <li> at.js 0.9.1: tempo de resposta de todos [!DNL Target] solicitações = soma do tempo de resposta das solicitações </li> 
- <li> at.js 1.0.0 e posteriores: tempo de resposta de todos [!DNL Target] solicitações = tempo máximo de resposta das solicitações </li> 
+ <li> at.js 0.9.1: tempo de resposta de todas as [!DNL Target] solicitações = soma do tempo de resposta das solicitações </li> 
+ <li> at.js 1.0.0 e posteriores: tempo de resposta de todas as [!DNL Target] solicitações = tempo máximo de resposta das solicitações </li> 
 </ul>
 
-A versão 1.0.0 da biblioteca at.js conclui as solicitações mais rapidamente. Além disso, as solicitações da at.js são assíncronas, [!DNL Target] O não bloqueia a renderização da página. Mesmo que as solicitações levem alguns segundos para serem concluídas, você ainda verá a página renderizada, mas apenas algumas partes da página ficarão em branco até que o [!DNL Target] receba uma resposta da borda do [!DNL Target].
+A versão 1.0.0 da biblioteca at.js conclui as solicitações mais rapidamente. Além disso, as solicitações da at.js são assíncronas, por isso o [!DNL Target] não bloqueia a renderização da página. Mesmo que as solicitações levem alguns segundos para serem concluídas, você ainda verá a página renderizada, mas apenas algumas partes da página ficarão em branco até que o [!DNL Target] receba uma resposta da borda do [!DNL Target].
 
 ## Posso carregar a biblioteca do [!DNL Target] de forma assíncrona?
 
@@ -110,7 +110,7 @@ Carregar a at.js de forma assíncrona é uma ótima maneira de evitar o bloqueio
 
 Você pode evitar a cintilação usando um snippet de pré-ocultação que oculta a página (ou partes especificadas), exibindo-a após o carregamento completo da at.js e da solicitação global. O trecho deve ser adicionado antes de carregar a at.js.
 
-Se estiver implantando a at.js por meio de uma interface [!UICONTROL Adobe Experience Platform] implementação, certifique-se de incluir o trecho pré-ocultação diretamente nas páginas, antes da opção Implementar [!DNL Target] usar [!UICONTROL Adobe Experience Platform] Incorporar código.
+Se estiver implantando a at.js por meio de uma implementação assíncrona da [!UICONTROL Adobe Experience Platform], certifique-se de incluir o snippet de pré-ocultação diretamente nas páginas antes de implementar o [!DNL Target] usando o código de inserção da [!UICONTROL Adobe Experience Platform].
 
 Se estiver implantando a at.js por meio de uma implementação DTM síncrona, o snippet de pré-ocultação pode ser adicionado por uma regra de Carregamento de página acionada na parte superior da página.
 
@@ -118,11 +118,11 @@ Para obter mais informações, consulte [Como o at.js gerencia a cintilação](/
 
 ## A at.js é compatível com a integração do [!DNL Adobe Experience Manager] (Experience Manager)?
 
-[!DNL Adobe Experience Manager] O 6.2 com FP-11577 (ou posterior) agora é compatível com implementações da at.js com o [!UICONTROL Adobe Target Cloud Service] integração.
+O [!DNL Adobe Experience Manager] 6.2 com FP-11577 (ou posterior) agora é compatível com implementações da at.js com sua integração [!UICONTROL Adobe Target Cloud Services].
 
 ## Como posso evitar a cintilação de carregamento de página usando a at.js?
 
-[!DNL Target] O fornece várias maneiras de evitar a cintilação de carregamento de página. Para obter mais informações, consulte [Como evitar a cintilação com o at.js](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
+[!DNL Target] fornece várias maneiras de evitar a cintilação de carregamento de página. Para obter mais informações, consulte [Impedindo a cintilação com a at.js](/help/dev/implement/client-side/atjs/how-atjs-works/manage-flicker-with-atjs.md).
 
 ## Qual é o tamanho do arquivo da at.js?
 
@@ -162,7 +162,7 @@ Sim, o mesmo que ocorre com a mbox.js.
 
 Os [!DNL Target] clientes do, às vezes, usam instâncias baseadas em nuvem com o [!DNL Target] para testes ou fins de prova de conceito simples. Esses domínios e muitos outros fazem parte da [Lista de sufixos públicos](https://publicsuffix.org/list/public_suffix_list.dat).
 
-Se estiver usando esses domínios, os navegadores modernos não salvarão os cookies, a menos que você personalize a configuração de `cookieDomain` usando targetGlobalSettings(). Para obter mais informações, consulte [Usar instâncias baseadas em nuvem com o [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md).
+Se estiver usando esses domínios, os navegadores modernos não salvarão os cookies, a menos que você personalize a configuração de `cookieDomain` usando targetGlobalSettings(). Para obter mais informações, consulte [Usando Instâncias Baseadas em Nuvem com [!DNL Target]](/help/dev/implement/client-side/target-debugging-atjs/targeting-using-cloud-based-instances.md).
 
 ## Os endereços IP podem ser usados como o domínio de cookie ao usar a at.js?
 
@@ -206,11 +206,11 @@ Caso veja esta mensagem de aviso, as possíveis causas raiz podem ser as seguint
 * A página subjacente faz parte de um Aplicativo de página única (SPA) ou a página contém elementos que são exibidos mais abaixo e o &quot;mecanismo de buscas do seletor&quot; da at.js não consegue encontrá-los. Aumentar o `selectorsPollingTimeout` pode ajudar. Para obter mais informações, consulte [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 * Todas as métricas de rastreamento de cliques tentam se adicionar a cada página, independentemente do URL em que a métrica foi configurada. Embora inofensiva, essa situação faz com que muitas dessas mensagens sejam exibidas.
 
-  Para obter melhores resultados, baixe e use o [versão mais recente da at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md). Para obter mais informações sobre como baixar a at.js, consulte a [Baixe a at.js usando o [!DNL Target] interface](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) na seção [*Como implantar a at.js* > *Implementar [!DNL Target] sem um gerenciador de tags*](how-to-deployatjs/implement-target-without-a-tag-manager.md) artigo.
+  Para obter melhores resultados, baixe e use a [versão mais recente da at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md). Para obter mais informações sobre como baixar a at.js, consulte o artigo [Baixar a at.js usando a  [!DNL Target] interface](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) em [*Como implantar a at.js* > *Implementar a [!DNL Target] sem um gerenciador de tags*](how-to-deployatjs/implement-target-without-a-tag-manager.md).
 
 ## O que é o domínio tt.omtrdc.net para o qual as chamadas de servidor do [!DNL Target] são direcionadas?
 
-tt.omtrdc.net é o nome de domínio para a rede Adobe EDGE, usada para receber todas as chamadas de servidor para [!DNL Target].
+tt.omtrdc.net é o nome de domínio para a rede Adobe EDGE, usada para receber todas as chamadas do servidor para [!DNL Target].
 
 ## Por que a at.js nem sempre usa os sinalizadores de cookies HttpOnly e Seguro?
 
@@ -222,7 +222,7 @@ Para garantir que o [!DNL Target] possa rastrear os usuários adequadamente e, c
 
 ## Como a at.js lida com problemas de segurança como ataques XSS e MITM?
 
-A comunicação com a rede do Adobe Edge, habilitada pela at.js, acontece somente por HTTPS, desde que a `secureOnly` está definida como true na função targetGlobalSettings() ([targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)), caso contrário, a at.js poderá alternar entre HTTP e HTTPS com base no protocolo da página.
+A comunicação com a rede Adobe Edge, habilitada por at.js, ocorre somente por HTTPS, desde que a opção `secureOnly` esteja definida como verdadeira na função targetGlobalSettings() ([targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)), caso contrário, a at.js tem permissão para alternar entre HTTP e HTTPS com base no protocolo da página.
 
 Os seguintes cabeçalhos são aplicados por padrão:
 * HTTP Strict Transport Security (HSTS)
@@ -239,12 +239,12 @@ Observe que para tokens de resposta e IDs de sessão transmitidos nessas solicit
 * Eles rastreiam sessões de comunicação
 * Eles são compostos de caracteres aleatórios
 * As IDs de sessão são válidas por 30 minutos
-* Os tokens de resposta podem ser desativados ([Tokens de resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html))
+* Os tokens de resposta podem ser desabilitados ([Tokens de resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html))
 * Eles são úteis somente no ambiente de soluções Adobe.
 
-Espera-se que o `Access-Control-Allow-Origin` cabeçalho com valor &quot;*&quot; nas solicitações at.js, como são públicas, a autenticação não é necessária e a Rede Adobe Edge precisa ser acessada de qualquer domínio por meio de chamadas JavaScript.
+Espera-se ver o cabeçalho `Access-Control-Allow-Origin` com o valor &quot;*&quot; nas solicitações de at.js, pois são públicas, a autenticação não é necessária e a Rede Adobe Edge precisa ser acessada de qualquer domínio por meio de chamadas JavaScript.
 
-No entanto, a Política de segurança de conteúdo (CSP) precisa ser aplicada na página. Para obter mais informações sobre os requisitos da CSP para a at.js, consulte [Política de segurança de conteúdo](/help/dev/before-implement/privacy/content-security-policy.md) e [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
+No entanto, a Política de segurança de conteúdo (CSP) precisa ser aplicada na página. Para obter mais informações sobre os requisitos da CSP para o at.js, consulte [Política de segurança de conteúdo](/help/dev/before-implement/privacy/content-security-policy.md) e [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 
 ## Com que frequência a at.js dispara uma solicitação de rede? 
 
@@ -300,4 +300,4 @@ O doctype HTML 5 garante que a página carregue no modo padrão. Ao carregar no 
 
 ## A at.js funciona em um ambiente de aplicativo Iônico.
 
-Essa implementação nunca foi testada, pois a at.js não tinha a intenção de funcionar em um ambiente que não fosse da Web. [!DNL Adobe] recomenda que [SDKs para implementações móveis](/help/dev/implement/mobile/overview.md).
+Essa implementação nunca foi testada, pois a at.js não tinha a intenção de funcionar em um ambiente que não fosse da Web. A [!DNL Adobe] recomenda seus [SDKs para implementações móveis](/help/dev/implement/mobile/overview.md).

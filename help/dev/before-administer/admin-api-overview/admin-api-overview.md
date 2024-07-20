@@ -1,36 +1,36 @@
 ---
 title: Visão geral da API de administração do Adobe Target
-description: Visão geral do [!DNL Adobe Target Admin API]
+description: Visão geral do  [!DNL Adobe Target Admin API]
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '1365'
-ht-degree: 3%
+source-wordcount: '1312'
+ht-degree: 2%
 
 ---
 
 # Visão geral da API de administração do Target
 
-Este artigo fornece uma visão geral das informações de referência necessárias para entender e usar o [!DNL Adobe Target Admin API]s com êxito. O conteúdo a seguir pressupõe que você entende como [configurar autenticação](../configure-authentication.md) para [!DNL Adobe Target Admin API]s
+Este artigo fornece uma visão geral das informações de referência necessárias para entender e usar o [!DNL Adobe Target Admin API]s com êxito. O conteúdo a seguir pressupõe que você entende como [configurar a autenticação](../configure-authentication.md) para [!DNL Adobe Target Admin API]s.
 
 >[!NOTE]
 >
->Se desejar administrar [!DNL Target] por meio da interface, consulte a [seção de administração do *Guia do profissional de negócios do Adobe Target*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
+>Se você deseja administrar [!DNL Target] por meio da interface, consulte a [seção de administração do *Guia do Profissional de Negócios do Adobe Target*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
 >
->As APIs de administrador e APIs de perfil geralmente são mencionadas coletivamente (&quot;APIs de administrador e perfil&quot;), mas também podem ser mencionadas separadamente (&quot;APIs de administrador&quot; e &quot;APIs de perfil&quot;). A API do Recommendations é uma implementação específica de um [!DNL Target] API de administração.
+>As APIs de administrador e APIs de perfil geralmente são mencionadas coletivamente (&quot;APIs de administrador e perfil&quot;), mas também podem ser mencionadas separadamente (&quot;APIs de administrador&quot; e &quot;APIs de perfil&quot;). A API do Recommendations é uma implementação específica de uma API de administração [!DNL Target].
 
 ## Antes de começar 
 
-Em todos os exemplos de código fornecidos para o [APIs de administrador](../../administer/admin-api/admin-api-overview-new.md), substituir {tenant} com seu valor de locatário, `your-bearer-token` com o token de acesso gerado com o JWT e `your-api-key` com sua chave de API no [Console do Adobe Developer](https://developer.adobe.com/console/home). Para obter mais informações sobre locatários e JWTs, consulte o artigo sobre como [configurar autenticação](../configure-authentication.md) para Adobe [!DNL Target] APIs de administrador.
+Em todos os exemplos de código fornecidos para as [APIs de administrador](../../administer/admin-api/admin-api-overview-new.md), substitua {tenant} pelo seu valor de locatário, `your-bearer-token` pelo token de acesso gerado com seu JWT e `your-api-key` pela sua chave de API da [Adobe Developer Console](https://developer.adobe.com/console/home). Para obter mais informações sobre locatários e JWTs, consulte o artigo sobre como [configurar a autenticação](../configure-authentication.md) para APIs de administrador do Adobe [!DNL Target].
 
 ## Controle de versão
 
 Todas as APIs têm uma versão associada. É importante fornecer a versão correta da API que você deseja usar.
 
-Se a solicitação tiver uma carga (POST ou PUT), a variável `Content-Type` o cabeçalho da solicitação é usado para especificar a versão.
+Se a solicitação tiver uma carga (POST ou PUT), o cabeçalho `Content-Type` da solicitação será usado para especificar a versão.
 
-Se a solicitação não contiver uma carga (GET, DELETE ou OPTIONS), a variável `Accept` o cabeçalho é usado para especificar a versão.
+Se a solicitação não contiver uma carga (GET, DELETE ou OPTIONS), o cabeçalho `Accept` será usado para especificar a versão.
 
 Se uma versão não for fornecida, a chamada assumirá V1 como padrão (application/vnd.adobe.target.v1+json).
 
@@ -56,7 +56,7 @@ Mensagem de erro para recursos sem suporte
 
 Admin Postman Collection
 
-O Postman é um aplicativo que facilita o acionamento de chamadas de API. Este [Coleção de Postman da API de administração do Target](https://developers.adobetarget.com/api/#admin-postman-collection) contém todas as chamadas da API de administração do Target que exigem autenticação usando Atividades, Públicos, Ofertas, Relatórios, Mboxes e Ambientes
+O Postman é um aplicativo que facilita o acionamento de chamadas de API. Esta [Coleção do Postman da API de administração do Target](https://developers.adobetarget.com/api/#admin-postman-collection) contém todas as chamadas da API de administração do Target que exigem autenticação usando Atividades, Públicos, Ofertas, Relatórios, Mboxes e Ambientes
 
 ## Códigos de resposta
 
@@ -68,7 +68,7 @@ Estes são os códigos de resposta comuns para as APIs de administrador do Targe
 | 400 | [Solicitação inválida](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.1) | Solicitação inválida. Provavelmente, os dados fornecidos na solicitação são inválidos. |  |
 | 401 | [Não autorizado](https://www.rfc-editor.org/rfc/rfc7235#section-3.1) | O usuário não tem permissão para executar esta operação. |  |
 | 403 | [Proibido](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.3) | O acesso a este recurso é proibido. |  |
-| 404 | [Não encontrada](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | O recurso referenciado não foi encontrado. |  |
+| 404 | [Não encontrado](https://www.rfc-editor.org/rfc/rfc7231#section-6.5.4) | O recurso referenciado não foi encontrado. |  |
 
 ## Atividades
 
@@ -92,7 +92,7 @@ Empilhe várias chamadas de API e execute-as em um único lote.
 
 O agrupamento em lotes permite passar instruções para várias operações em uma única solicitação HTTP. Você também pode especificar dependências entre operações relacionadas (descritas em uma seção abaixo). O TNT processará cada uma de suas operações independentes (possivelmente em paralelo) e processará suas operações dependentes sequencialmente. Depois que todas as operações forem concluídas, uma resposta consolidada será enviada de volta e a conexão HTTP será fechada.
 
-A API de lote recebe uma matriz de solicitações HTTP lógicas representadas como matrizes JSON - cada solicitação tem um método (correspondente ao método HTTP GET/PUT/POST/DELETE etc.), um relativeUrl (a parte do URL após admin/rest/), matriz de cabeçalhos opcionais (correspondente a cabeçalhos HTTP) e um corpo opcional (para solicitações POST e PUT). A API de lote retorna uma matriz de respostas HTTP lógicas representadas como matrizes JSON - cada resposta tem um código de status, uma matriz de cabeçalhos opcionais e um corpo opcional (que é uma sequência de caracteres codificada em JSON). Para fazer solicitações em lote, crie um objeto JSON que descreve cada operação individual a ser executada. O número máximo de operações permitidas é de 256 (de 0 a 255).
+A API de lote recebe uma matriz de solicitações HTTP lógicas representadas como matrizes JSON - cada solicitação tem um método (correspondente ao método HTTP GET/PUT/POST/DELETE etc.), um relativeUrl (a parte do URL após admin/rest/), matriz de cabeçalhos opcionais (correspondente a cabeçalhos HTTP) e um corpo opcional (para solicitações POST e PUT). A API de lote retorna uma matriz de respostas HTTP lógicas representadas como matrizes JSON - cada resposta tem um código de status, uma matriz de cabeçalhos opcionais e um corpo opcional (que é uma cadeia de caracteres codificada em JSON). Para fazer solicitações em lote, crie um objeto JSON que descreve cada operação individual a ser executada. O número máximo de operações permitidas é de 256 (de 0 a 255).
 
 Especificando dependências entre operações na solicitação Por padrão, as operações especificadas na solicitação da API em lote são independentes - elas podem ser executadas em ordem arbitrária no servidor e um erro em uma operação não afeta a execução de outras operações.
 
@@ -110,7 +110,7 @@ O processamento em lote é concluído quando todas as operações são concluíd
 
 | Atributo | Descrição | Limites | Padrão |
 | --- | --- | --- | --- |
-| body | corpo para operação em lote de HTTP. será ignorado para todas as ações, exceto POST e PUT. pode se referir a IDs de ações em lote anteriores, por exemplo: &quot;offerId&quot;: &quot;{operationIdResponse:0}&quot;, &quot;segmentId&quot;: &quot;{operationIdResponse:1}&quot; | deve ser um JSON válido; caso faça referência a um operationIdResponse, a resposta do operationId referenciada deve ser um ID válido e o método dessa ação deve ser POST | objeto vazio {} |  |
+| corpo | corpo para operação em lote de HTTP. será ignorado para todas as ações, exceto POST e PUT. pode fazer referência a IDs de ações em lote anteriores, por exemplo: &quot;offerId&quot;: &quot;{operationIdResponse:0}&quot;, &quot;segmentId&quot;: &quot;{operationIdResponse:1}&quot; | deve ser um JSON válido; caso faça referência a um operationIdResponse, a resposta do operationId referenciada deve ser um ID válido e o método dessa ação deve ser POST | objeto vazio {} |  |
 | dependsOnOperationIds | lista de IDs de restrição que garantirá que a operação atual será executada somente se as operações especificadas forem concluídas com êxito. Pode ser usado para encadear operações. | são permitidas no máximo 255 operações; somente valores únicos são permitidos; deve apontar para uma operationId válida na matriz; dependências cíclicas não são permitidas |  |  |
 | cabeçalhos | matriz de cabeçalhos de valor-chave a serem enviados com uma operação específica. Caso a autenticação para a API em lote tenha sido executada por meio do cabeçalho de Autorização, ela também será copiada para operações individuais. | o número máximo de cabeçalhos na matriz permitida é 50 | Tipo de conteúdo: application/json |  |
 | cabeçalhos->nome | nome do cabeçalho | deve ser exclusivo entre outros nomes de cabeçalho. os cabeçalhos não diferenciam maiúsculas de minúsculas por rfc, caso contrário, os valores se substituirão. |  |  |
@@ -154,7 +154,7 @@ O processamento em lote é concluído quando todas as operações são concluíd
 | cabeçalhos | matriz de cabeçalhos de valor-chave a ser enviada como resposta para uma operação específica. |  |
 | cabeçalhos->nome | nome do cabeçalho |  |
 | cabeçalhos->valor | valor do cabeçalho |  |
-| body | corpo para operação de resposta em lote HTTP |  |
+| corpo | corpo para operação de resposta em lote HTTP |  |
 
 #### Exemplo de objeto de resposta
 

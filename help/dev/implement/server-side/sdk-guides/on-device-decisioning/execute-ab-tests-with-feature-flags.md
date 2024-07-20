@@ -5,7 +5,7 @@ feature: APIs/SDKs
 exl-id: abf66e00-742d-4d40-9b6e-9bd71638c31a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '772'
+source-wordcount: '726'
 ht-degree: 0%
 
 ---
@@ -14,8 +14,8 @@ ht-degree: 0%
 
 ## Resumo das etapas
 
-1. Ativar [!UICONTROL decisão no dispositivo] para sua organização
-1. Criar um [!UICONTROL Teste A/B] atividade
+1. Habilitar [!UICONTROL on-device decisioning] para sua organização
+1. Criar uma atividade [!UICONTROL A/B Test]
 1. Defina seus A e B
 1. Adicionar um público
 1. Definir alocação de tráfego
@@ -27,46 +27,46 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Suponha que você queira determinar se o novo design com tema de outono da sua página inicial seria bem recebido pelos seus usuários. Você decide testá-lo executando um experimento A/B no [!DNL Adobe Target]. Você também quer garantir que o experimento seja entregue com ótimo desempenho para que uma experiência do usuário negativa ou lenta não distorça os resultados.
+>Suponha que você queira determinar se o novo design com tema de outono da sua página inicial seria bem recebido pelos seus usuários. Você decide testá-lo executando um experimento A/B em [!DNL Adobe Target]. Você também quer garantir que o experimento seja entregue com ótimo desempenho para que uma experiência do usuário negativa ou lenta não distorça os resultados.
 
-## 1. Ativar [!UICONTROL decisão no dispositivo] para sua organização
+## 1. Habilitar [!UICONTROL on-device decisioning] para sua organização
 
-A ativação da decisão no dispositivo garante que uma atividade A/B seja executada com latência próxima a zero. Para ativar esse recurso, navegue até **[!UICONTROL Administração]** > **[!UICONTROL Implementação]** > **[!UICONTROL Detalhes da conta]** in [!DNL Adobe Target]e habilite o **[!UICONTROL Decisão no dispositivo]** alternar.
+A ativação da decisão no dispositivo garante que uma atividade A/B seja executada com latência próxima a zero. Para habilitar este recurso, navegue até **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** em [!DNL Adobe Target] e habilite a alternância **[!UICONTROL On-Device Decisioning]**.
 
 &lt;!— Inserir image-ímpar4.png —>
-![imagem alt](assets/asset-odd-toggle.png)
+![alt imagem](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->Você precisa ter um Administrador ou Aprovador [função do usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para ativar ou desativar a opção Decisão no dispositivo.
+>Você deve ter a [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) de Administrador ou Aprovador para habilitar ou desabilitar a opção On-Device Decisioning.
 
-Depois de ativar o **[!UICONTROL Decisão no dispositivo]** alternar, [!DNL Adobe Target] O começa a gerar artefatos de regra para o seu cliente.
+Depois de habilitar a alternância **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] começa a gerar artefatos de regra para o seu cliente.
 
-## 2. Criar um [!UICONTROL Teste A/B] atividade
+## 2. Criar uma atividade [!UICONTROL A/B Test]
 
-Entrada [!DNL Adobe Target], navegue até o **[!UICONTROL Atividades]** e selecione **[!UICONTROL Criar atividade]** > **[!UICONTROL Teste A/B]**.
+Em [!DNL Adobe Target], navegue até a página **[!UICONTROL Activities]** e selecione **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**.
 
-![imagem alt](assets/asset-ab.png)
+![alt imagem](assets/asset-ab.png)
 
-No **[!UICONTROL Criar atividade de teste A/B]** modal, deixe o padrão **[!UICONTROL Web]** selecionada (1), selecione **[!UICONTROL Formulário]** como compositor de experiências (2), selecione **[!UICONTROL Espaço de trabalho padrão]** com Não **[!UICONTROL Restrições de propriedade]** (3) e clique em **[!UICONTROL Próxima]** (4).
+No modal **[!UICONTROL Create A/B Test Activity]**, deixe a opção padrão **[!UICONTROL Web]** selecionada (1), selecione **[!UICONTROL Form]** como compositor de experiência (2), selecione **[!UICONTROL Default Workspace]** sem **[!UICONTROL Property Restrictions]** (3) e clique em **[!UICONTROL Next]** (4).
 
-![imagem alt](assets/asset-form.png)
+![alt imagem](assets/asset-form.png)
 
 ## 3. Defina seus A e B
 
-1. No **[!UICONTROL Experiências]** etapa de criação da atividade, forneça um nome para a atividade (1) e adicione uma segunda experiência, Experiência B, clicando no link **[!UICONTROL Adicionar experiência]** (2) botão. Informe o nome do local (3) no aplicativo em que deseja executar o teste A/B. No exemplo mostrado abaixo, a página inicial é o local definido para a Experiência A. (Também é o local definido para a Experiência B.)
+1. Na etapa de criação da atividade **[!UICONTROL Experiences]**, forneça um nome para a atividade (1) e adicione uma segunda experiência, Experiência B, clicando no botão **[!UICONTROL Add Experience]** (2). Informe o nome do local (3) no aplicativo em que deseja executar o teste A/B. No exemplo mostrado abaixo, a página inicial é o local definido para a Experiência A. (Também é o local definido para a Experiência B.)
 
    A Experiência A define o controle, que é o design da página inicial atual.
 
-   ![imagem alt](assets/asset-exp-a.png)
+   ![alt imagem](assets/asset-exp-a.png)
 
    A Experiência B define o desafiante, que representará uma página inicial reprojetada. Clique em para alterar o conteúdo padrão (1).
 
-   ![imagem alt](assets/asset-exp-b.png)
+   ![alt imagem](assets/asset-exp-b.png)
 
-1. Na Experiência B, clique para alterar o conteúdo de **[!UICONTROL Conteúdo padrão]** ao conteúdo reprojetado selecionando **[!UICONTROL Criar oferta JSON]** conforme indicado abaixo (1).
+1. Na Experiência B, clique para alterar o conteúdo de **[!UICONTROL Default Content]** para o conteúdo reprojetado selecionando **[!UICONTROL Create JSON Offer]** como mostrado abaixo (1).
 
-   ![imagem alt](assets/asset-offer.png)
+   ![alt imagem](assets/asset-offer.png)
 
 1. Defina o JSON com atributos que serão utilizados como sinalizadores para permitir que sua lógica comercial renderize a página inicial recém-reprojetada, em vez da página inicial atual em produção.
 
@@ -75,41 +75,41 @@ No **[!UICONTROL Criar atividade de teste A/B]** modal, deixe o padrão **[!UICO
    >
    >Quando [!DNL Adobe Target] agrupa um usuário para ver a Experiência B (a página inicial reprojetada), o JSON com os atributos definidos no exemplo será retornado. Em seu código, você precisará verificar os valores do atributo para decidir se executa a lógica de negócios para renderizar a página inicial reprojetada. Você pode definir os nomes, os valores e o número de atributos nesta resposta JSON.
 
-   ![imagem alt](assets/asset-homepage.png)
+   ![alt imagem](assets/asset-homepage.png)
 
 ## 4. Adicionar um público-alvo
 
 Suponha que você queira primeiro testar o redesign em seus clientes fiéis, que você pode identificar com base em se eles estão ou não conectados.
 
-1. No **[!UICONTROL Direcionamento]** clique em para substituir a variável **[!UICONTROL Todos os visitantes]** público-alvo, conforme mostrado.
+1. Na etapa **[!UICONTROL Targeting]**, clique em para substituir o público-alvo **[!UICONTROL All Visitors]**, conforme mostrado.
 
-   ![imagem alt](assets/asset-all-audiences.png)
+   ![alt imagem](assets/asset-all-audiences.png)
 
-1. No **[!UICONTROL Criar público-alvo]** modal, defina uma regra personalizada onde `logged-in = true`. Isso define o grupo de usuários que estão conectados. Use esse público-alvo na sua atividade.
+1. No modal **[!UICONTROL Create Audience]**, defina uma regra personalizada onde `logged-in = true`. Isso define o grupo de usuários que estão conectados. Use esse público-alvo na sua atividade.
 
-   ![imagem alt](assets/asset-audience.png)
+   ![alt imagem](assets/asset-audience.png)
 
 ## 5. Definir a alocação de tráfego
 
 Defina a porcentagem de usuários conectados com base na qual você deseja testar o novo design da página inicial. Em outras palavras, para que porcentagem de seus usuários você deseja implantar esse teste? Neste exemplo, para implantar este teste para todos os usuários conectados, mantenha a alocação de tráfego em 100%.
 
-![imagem alt](assets/asset-allocation.png)
+![alt imagem](assets/asset-allocation.png)
 
 ## 6. Definir a distribuição do tráfego para variações
 
 Defina a porcentagem de usuários conectados que visualizarão o design atual da página inicial ou o novo design. Neste exemplo, mantenha a distribuição do tráfego dividida em 50/50 entre as Experiências A e B.
 
-![imagem alt](assets/asset-traffic-distribution.png)
+![alt imagem](assets/asset-traffic-distribution.png)
 
 ## 7. Configurar relatórios
 
-No **[!UICONTROL Metas e configurações]** etapa, escolha **[!UICONTROL Adobe Target]** como o **[!UICONTROL Fonte dos relatórios]** para exibir os resultados da atividade no [!DNL Adobe Target] ou escolha **[!UICONTROL Adobe Analytics]** para visualizá-los na interface do usuário do Adobe Analytics.
+Na etapa **[!UICONTROL Goals & Settings]**, escolha **[!UICONTROL Adobe Target]** como **[!UICONTROL Reporting Source]** para exibir os resultados da atividade na interface do usuário [!DNL Adobe Target], ou **[!UICONTROL Adobe Analytics]** para exibi-los na interface do usuário do Adobe Analytics.
 
-![imagem alt](assets/asset-reporting.png)
+![alt imagem](assets/asset-reporting.png)
 
 ## 8. Adicionar métricas para rastrear KPIs
 
-Escolha um **[!UICONTROL Métrica de objetivo]** para medir o teste A/B. Neste exemplo, uma conversão bem-sucedida se baseia no fato de o usuário chegar à parte inferior da página, indicando engajamento. Por conseguinte, **[!UICONTROL Conversão]** é determinado com base no fato de o usuário ter visualizado o local chamado de final da página.
+Escolha um **[!UICONTROL Goal Metric]** para medir o teste A/B. Neste exemplo, uma conversão bem-sucedida se baseia no fato de o usuário chegar à parte inferior da página, indicando engajamento. Portanto, **[!UICONTROL Conversion]** é determinado com base no fato de o usuário ter visualizado o local chamado fim da página.
 
 ## 9. Implemente o código para executar testes A/B com sinalizadores de recursos no aplicativo
 
@@ -167,4 +167,4 @@ String flag = attributes.getString("homepage", "feature-flag");
 
 ## 10. Ative o teste A/B com o sinalizador de recurso
 
-![imagem alt](assets/asset-activate.png)
+![alt imagem](assets/asset-activate.png)

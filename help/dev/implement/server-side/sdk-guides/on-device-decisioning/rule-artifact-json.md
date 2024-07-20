@@ -5,8 +5,8 @@ feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '291'
-ht-degree: 1%
+source-wordcount: '292'
+ht-degree: 0%
 
 ---
 
@@ -113,10 +113,10 @@ npm i @adobe/target-nodejs-sdk -P
    TargetClient targetClient = TargetClient.create(config);
    ```
 
-1. Tanto o cliente quanto `organizationId` pode ser recuperado de [!DNL Adobe Target]navegando até **[!UICONTROL Administração]** > **[!UICONTROL Implementação]**, como mostrado aqui.
+1. O cliente e `organizationId` podem ser recuperados de [!DNL Adobe Target] navegando até **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**, como mostrado aqui.
 
    &lt;!— Inserir image-client-code.png —>
-   ![imagem alt](assets/asset-rule-artifact-3.png)
+   ![alt imagem](assets/asset-rule-artifact-3.png)
 
 ## 3. Armazene e reinicie a carga JSON
 
@@ -162,7 +162,7 @@ TargetDeliveryResponse response = targetClient.getOffers(request);
 
 >[!NOTE]
 >
->Ao inicializar o [!DNL Adobe Target]do SDK por meio da carga JSON, seu servidor estará pronto para atender às solicitações imediatamente com atividades de decisão no dispositivo, já que o [!DNL Adobe Target]O SDK não precisa aguardar que o artefato da regra seja baixado.
+>Ao inicializar o [!DNL Adobe Target]SDK por meio da carga JSON, o servidor estará pronto para atender às solicitações imediatamente com atividades de decisão no dispositivo, já que o [!DNL Adobe Target]SDK não precisa aguardar o download do artefato da regra.
 
 Este é um exemplo demonstrando o recurso de inicialização de carga JSON.
 

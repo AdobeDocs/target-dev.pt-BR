@@ -1,13 +1,13 @@
 ---
 keywords: implementar, implementação, implementação, adobe launch, launch, raça, redirecionamento, platform launch de experiência, platform launch, tags, adobe platform, implement2
-description: Saiba como implementar o [!DNL Adobe Target] Biblioteca at.js usando [!DNL Adobe Experience Platform], o método preferido para implementar o Target.
+description: Saiba como implementar a biblioteca at.js do  [!DNL Adobe Target] usando o  [!DNL Adobe Experience Platform], o método preferido para implementar o Target.
 title: Como implementar o  [!DNL Target]  usando a  [!DNL Adobe Experience Platform]?
 feature: Implement Server-side
 exl-id: 0a325871-194a-479c-a3bf-294e3dde3e9a
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '434'
-ht-degree: 65%
+source-wordcount: '408'
+ht-degree: 59%
 
 ---
 
@@ -17,7 +17,7 @@ As tags na [!DNL Adobe Experience Platform] são a próxima geração de recurso
 
 >[!NOTE]
 >
->A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleção de dados na [!DNL Adobe Experience Platform]. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?) para obter uma referência consolidada das alterações de terminologia.
+>A Adobe Experience Platform Launch foi reformulada como um conjunto de tecnologias de coleção de dados no [!DNL Adobe Experience Platform]. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?) para obter uma referência consolidada das alterações de terminologia.
 
 A tabela a seguir lista as diversas fontes para obter mais informações:
 
@@ -29,12 +29,12 @@ A tabela a seguir lista as diversas fontes para obter mais informações:
 
 ## Vantagens de implementar a at.js utilizando a extensão do [!DNL Target]
 
-As seguintes vantagens se aplicam apenas se você usar tags na [!DNL Adobe Experience Platform] para implementar a at.js. Por isso, o Adobe recomenda que você use tags na [!DNL Adobe Experience Platform] em vez de uma implementação manual da at.js.
+As seguintes vantagens se aplicam apenas se você usar tags na [!DNL Adobe Experience Platform] para implementar a at.js. Por isso, a Adobe recomenda que você use tags no [!DNL Adobe Experience Platform], em vez de implementar manualmente a at.js.
 
 * **Soluciona a condição de corrida do [!DNL Adobe Analytics] e do [!DNL Target]:** visto que a chamada do [!DNL Analytics] pode ser disparada antes da chamada do [!DNL Target], a chamada do [!DNL Target] não é anexada à chamada do [!DNL Analytics]. Este sequenciamento pode levar a dados incorretos. A extensão do [!DNL Target] garante que a chamada de sinal do [!DNL Analytics] espere até que a chamada do [!DNL Target] seja concluída, com ou sem êxito. Usar tags na [!DNL Adobe Experience Platform] resolve a inconsistência de dados que pode ocorrer com os clientes ao implementar manualmente.
 
   >[!NOTE]
   >
-  >Use a ação Enviar sinal na extensão do [!DNL Adobe Analytics] para que a chamada do [!DNL Analytics] aguarde a chamada do [!DNL Target]. Se você chamar `s.t()` ou `s.tl()` diretamente, usando um código personalizado, as chamadas do [!DNL Analytics] não irão esperar até que as chamadas do [!DNL Target] sejam concluídas.
+  >Use a ação Enviar Sinal na extensão [!DNL Adobe Analytics] para que a chamada [!DNL Analytics] aguarde a chamada [!DNL Target]. Se você chamar `s.t()` ou `s.tl()` diretamente, usando um código personalizado, as chamadas do [!DNL Analytics] não irão esperar até que as chamadas do [!DNL Target] sejam concluídas.
 
-* **Impede o tratamento incorreto da oferta de redirecionamento:** Se você tiver [!DNL Target] e [!DNL Analytics] na página e houver uma oferta de redirecionamento executada pelo Target, você poderá se deparar com uma situação em que [!DNL Analytics] O rastreador do aciona uma solicitação quando não deveria (porque o usuário está sendo redirecionado para um URL diferente). Se você implementar [!DNL Target] e [!DNL Analytics] por meio de tags na [!DNL Adobe Experience Platform]Você não enfrentará esse problema. Ao usar tags na [!DNL Adobe Experience Platform], o [!DNL Target] instrui o [!DNL Analytics] a suspender a solicitação de sinal do [!DNL Analytics].
+* **Impede o tratamento incorreto da oferta de redirecionamento:** Se você tiver [!DNL Target] e [!DNL Analytics] na página e uma oferta de redirecionamento for executada pelo Target, você poderá se deparar com uma situação em que o rastreador [!DNL Analytics] dispara uma solicitação quando não deveria (porque o usuário está sendo redirecionado para uma URL diferente). Se você implementar o [!DNL Target] e o [!DNL Analytics] por meio de tags no [!DNL Adobe Experience Platform], você não experienciará esse problema. Ao usar tags na [!DNL Adobe Experience Platform], o [!DNL Target] instrui o [!DNL Analytics] a suspender a solicitação de sinal do [!DNL Analytics].

@@ -5,14 +5,14 @@ feature: APIs/SDKs
 exl-id: a5ae9826-7bb5-41de-8796-76edc4f5b281
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
 
-# Introdução ao [!DNL Target] SDKs
+# Introdução aos [!DNL Target] SDKs
 
-Para começar a usar o, recomendamos que você crie seu primeiro [decisão no dispositivo](../on-device-decisioning/overview.md) atividade do sinalizador de recursos no idioma de sua escolha:
+Para começar a usar o, recomendamos que você crie sua primeira atividade de sinalizador de recursos [decisão no dispositivo](../on-device-decisioning/overview.md) no idioma de sua escolha:
 
 * Node.js
 * Java
@@ -24,26 +24,26 @@ Para começar a usar o, recomendamos que você crie seu primeiro [decisão no di
 1. Ativar a decisão no dispositivo para sua organização
 1. Instalar o SDK
 1. Inicializar o SDK
-1. Configure os sinalizadores de recursos em um [!DNL Adobe Target] [!UICONTROL Teste A/B] atividade
+1. Configurar os sinalizadores de recursos em uma atividade [!DNL Adobe Target] [!UICONTROL A/B Test]
 1. Implementar e renderizar o recurso em seu aplicativo
 1. Implementar o rastreamento de eventos no aplicativo
-1. Ativar o [!UICONTROL Teste A/B] atividade
+1. Ativar a atividade [!UICONTROL A/B Test]
 
 ## 1. Ativar a decisão no dispositivo para sua organização
 
-A ativação da decisão no dispositivo garante uma [!UICONTROL Teste A/B] A atividade é executada com latência próxima a zero. Para ativar esse recurso, navegue até **[!UICONTROL Administração]** > **[!UICONTROL Implementação]** > **[!UICONTROL Detalhes da conta]** e habilite o **[!UICONTROL Decisão no dispositivo]** alternar.
+Habilitar a decisão no dispositivo garante que uma atividade [!UICONTROL A/B Test] seja executada com latência próxima a zero. Para habilitar este recurso, navegue até **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** e habilite a alternância **[!UICONTROL On-Device Decisioning]**.
 
-![imagem alt](assets/asset-odd-toggle.png)
+![alt imagem](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->Você deve ter o **[!UICONTROL Admin]** ou **[!UICONTROL Aprovador]** [função do usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para ativar ou desativar o **[!UICONTROL Decisão no dispositivo]** alternar.
+>Você deve ter a **[!UICONTROL Admin]** ou **[!UICONTROL Approver]** [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para habilitar ou desabilitar a alternância **[!UICONTROL On-Device Decisioning]**.
 
-Depois de ativar o **[!UICONTROL Decisão no dispositivo]** alternar, [!DNL Adobe Target] começa a gerar [artefatos de regra](../on-device-decisioning/rule-artifact-overview.md) para o seu cliente.
+Depois de habilitar a alternância **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] começa a gerar [artefatos de regra](../on-device-decisioning/rule-artifact-overview.md) para o seu cliente.
 
 ## 2. Instalar o SDK
 
-Para Node.js, Java e Python, execute o comando a seguir no diretório do projeto no terminal. Para .NET, adicione-o como uma dependência de [instalando do NuGet](https://www.nuget.org/packages/Adobe.Target.Client).
+Para Node.js, Java e Python, execute o comando a seguir no diretório do projeto no terminal. Para .NET, adicione-o como uma dependência [instalando do NuGet](https://www.nuget.org/packages/Adobe.Target.Client).
 
 >[!BEGINTABS]
 
@@ -146,31 +146,31 @@ target_client = TargetClient.create(CONFIG)
 
 >[!ENDTABS]
 
-## 4. Configure os sinalizadores de recursos em um [!DNL Adobe Target] [!UICONTROL Teste A/B] atividade
+## 4. Configure os sinalizadores de recursos em uma atividade [!DNL Adobe Target] [!UICONTROL A/B Test]
 
-1. Entrada [!DNL Target], navegue até o **[!UICONTROL Atividades]** e selecione **[!UICONTROL Criar atividade]** > **[!UICONTROL Teste A/B]**.
+1. Em [!DNL Target], navegue até a página **[!UICONTROL Activities]** e selecione **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**.
 
-   ![imagem alt](assets/asset-ab.png)
+   ![alt imagem](assets/asset-ab.png)
 
-1. No **[!UICONTROL Criar atividade de teste A/B]** modal, deixe a opção padrão da Web selecionada (1), selecione **[!UICONTROL Formulário]** como compositor de experiências (2), selecione **[!UICONTROL Espaço de trabalho padrão]** com **[!UICONTROL Sem restrições de propriedade]**(3) e clique em **[!UICONTROL Próxima]** (4).
+1. No modal **[!UICONTROL Create A/B Test Activity]**, deixe a opção padrão da Web selecionada (1), selecione **[!UICONTROL Form]** como compositor de experiência (2), selecione **[!UICONTROL Default Workspace]** com **[!UICONTROL No Property Restrictions]**(3) e clique em **[!UICONTROL Next]** (4).
 
-   ![imagem alt](assets/asset-form.png)
+   ![alt imagem](assets/asset-form.png)
 
-1. No **[!UICONTROL Experiências]** etapa de criação da atividade, forneça um nome para a atividade (1) e adicione uma segunda experiência, Experiência B, clicando em **[!UICONTROL Adicionar experiência]** (2). Digite o nome do local de sua escolha (3). Por exemplo, `ondevice-featureflag` ou `homepage-addtocart-featureflag` são nomes de localização que indicam os destinos para o teste de sinalizador de recursos.  No exemplo mostrado abaixo, `ondevice-featureflag` é o local definido para a Experiência B. Opcionalmente, é possível adicionar Refinamentos de público-alvo (4) para restringir a qualificação à atividade.
+1. Na etapa de criação da atividade **[!UICONTROL Experiences]**, forneça um nome para a atividade (1) e adicione uma segunda experiência, Experiência B, clicando em **[!UICONTROL Add Experience]** (2). Digite o nome do local de sua escolha (3). Por exemplo, `ondevice-featureflag` ou `homepage-addtocart-featureflag` são nomes de localização indicando os destinos para teste de sinalizador de recursos.  No exemplo mostrado abaixo, `ondevice-featureflag` é o local definido para a Experiência B. Como opção, você pode adicionar Refinamentos de público-alvo (4) para restringir a qualificação à atividade.
 
-   ![imagem alt](assets/asset-location.png)
+   ![alt imagem](assets/asset-location.png)
 
-1. No **[!UICONTROL CONTEÚDO]** na mesma página, selecione **[!UICONTROL Criar oferta JSON]** no menu suspenso (1), como mostrado.
+1. Na seção **[!UICONTROL CONTENT]** na mesma página, selecione **[!UICONTROL Create JSON Offer]** no menu suspenso (1), conforme mostrado.
 
-   ![imagem alt](assets/asset-offer.png)
+   ![alt imagem](assets/asset-offer.png)
 
-1. No **[!UICONTROL Dados JSON]** Na caixa de texto exibida, digite as variáveis do sinalizador de recurso para cada experiência (1), usando um objeto JSON válido (2).
+1. Na caixa de texto **[!UICONTROL JSON Data]** exibida, digite suas variáveis de sinalizador de recurso para cada experiência (1), usando um objeto JSON válido (2).
 
    Insira as variáveis de sinalizador de recurso para a Experiência A.
 
-   ![imagem alt](assets/asset-json_a.png)
+   ![alt imagem](assets/asset-json_a.png)
 
-   **(Amostra de JSON para a Experiência A acima)**
+   **(Exemplo de JSON para a Experiência A acima)**
 
    ```json {line-numbers="true"}
    {
@@ -181,9 +181,9 @@ target_client = TargetClient.create(CONFIG)
 
    Insira as variáveis de sinalizador de recurso para a Experiência B.
 
-   ![imagem alt](assets/asset-json_b.png)
+   ![alt imagem](assets/asset-json_b.png)
 
-   **(Amostra de JSON para a Experiência B acima)**
+   **(Amostra de JSON para a Experiência B, acima)**
 
    ```json {line-numbers="true"}
    {
@@ -192,21 +192,21 @@ target_client = TargetClient.create(CONFIG)
    }
    ```
 
-1. Clique em **[!UICONTROL Próxima]** (1) Avançar para o **[!UICONTROL Direcionamento]** etapa de criação da atividade.
+1. Clique em **[!UICONTROL Next]** (1) para avançar para a etapa **[!UICONTROL Targeting]** da criação da atividade.
 
-   ![imagem alt](assets/asset-next_2_t.png)
+   ![alt imagem](assets/asset-next_2_t.png)
 
-1. No **[!UICONTROL Direcionamento]** Exemplo de etapa mostrado abaixo, o Direcionamento de público-alvo (2) permanece no conjunto padrão de Todos os visitantes, para simplificar. Isso significa que a atividade não tem direcionamento. No entanto, observe que a Adobe recomenda que você sempre direcione os públicos-alvo para atividades de produção. Clique em **[!UICONTROL Próxima]** (3) para avançar para a **[!UICONTROL Metas e configurações]** etapa de criação da atividade.
+1. No exemplo de etapa **[!UICONTROL Targeting]** mostrado abaixo, o Direcionamento de público-alvo (2) permanece no conjunto padrão Todos os visitantes, para simplificar. Isso significa que a atividade não tem direcionamento. No entanto, observe que a Adobe recomenda que você sempre direcione os públicos-alvo para atividades de produção. Clique em **[!UICONTROL Next]** (3) para avançar para a etapa **[!UICONTROL Goals & Settings]** da criação da atividade.
 
-   ![imagem alt](assets/asset-next_2_g.png)
+   ![alt imagem](assets/asset-next_2_g.png)
 
-1. No **[!UICONTROL Metas e configurações]** etapa, definir **[!UICONTROL Fonte dos relatórios]** para **[!UICONTROL Adobe Target]** (1). Defina o **[!UICONTROL Métrica de objetivo]** as **[!UICONTROL Conversão]**, especificando os detalhes com base nas métricas de conversão do seu site (2). Clique em **[!UICONTROL Salvar e fechar]** (3) para salvar a atividade.
+1. Na etapa **[!UICONTROL Goals & Settings]**, defina **[!UICONTROL Reporting Source]** como **[!UICONTROL Adobe Target]** (1). Defina o **[!UICONTROL Goal Metric]** como **[!UICONTROL Conversion]**, especificando os detalhes com base nas métricas de conversão do site (2). Clique em **[!UICONTROL Save & Close]** (3) para salvar a atividade.
 
-   ![imagem alt](assets/asset-conv.png)
+   ![alt imagem](assets/asset-conv.png)
 
 ## 5. Implementar e renderizar o recurso em seu aplicativo
 
-Após configurar as variáveis de sinalizador de recurso no [!DNL Target], modifique o código do aplicativo para usá-los. Por exemplo, depois de obter o sinalizador de recurso no aplicativo, você pode usá-lo para ativar recursos e renderizar a experiência para a qual o visitante se qualificou.
+Depois de configurar as variáveis de sinalizador de recursos no [!DNL Target], modifique o código do aplicativo para usá-las. Por exemplo, depois de obter o sinalizador de recurso no aplicativo, você pode usá-lo para ativar recursos e renderizar a experiência para a qual o visitante se qualificou.
 
 >[!BEGINTABS]
 
@@ -382,12 +382,12 @@ target_client.send_notifications({
 
 >[!ENDTABS]
 
-## 7. Ative o [!UICONTROL Teste A/B] atividade
+## 7. Ative sua atividade [!UICONTROL A/B Test]
 
-1. Clique em **[!UICONTROL Ativar]** (1) para ativar o [!UICONTROL Teste A/B] atividade.
+1. Clique em **[!UICONTROL Activate]** (1) para ativar sua atividade [!UICONTROL A/B Test].
 
    >[!NOTE]
    >
-   >Você deve ter o **[!UICONTROL Aprovador]** ou **[!UICONTROL Editor]** [função do usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para executar esta etapa.
+   >Você deve ter **[!UICONTROL Approver]** ou **[!UICONTROL Publisher]** [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para executar esta etapa.
 
-   ![imagem alt](assets/asset-activate.png)
+   ![alt imagem](assets/asset-activate.png)

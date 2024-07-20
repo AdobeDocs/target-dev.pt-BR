@@ -4,7 +4,7 @@ description: Integração com o Experience Cloud
 keywords: api de entrega
 source-git-commit: f16903556954d2b1854acd429f60fbf6fc2920de
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '467'
 ht-degree: 7%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 7%
 
 # Integração com o Experience Cloud
 
-## Adobe Analytics para Target (A4T)
+## Adobe Analytics for Target (A4T)
 
 Quando uma chamada da API de entrega do Target é acionada no servidor, o Adobe Target retorna a experiência para esse usuário e, além disso, o Adobe Target retorna a carga do Adobe Analytics de volta para o chamador ou a encaminha automaticamente para o Adobe Analytics. Para enviar informações de atividade do Target para o Adobe Analytics no lado do servidor, há alguns pré-requisitos que precisam ser atendidos:
 
@@ -26,7 +26,7 @@ Quando uma chamada da API de entrega do Target é acionada no servidor, o Adobe 
 O Adobe Target pode encaminhar automaticamente a carga do Analytics para o Adobe Analytics por meio do lado do servidor se os seguintes identificadores forem fornecidos:
 
 1. `supplementalDataId` - A ID usada para compilar entre o Adobe Analytics e o Adobe Target
-1. `trackingServer` - O Adobe Analytics Server Para que o Adobe Target e o Adobe Analytics unam os dados corretamente, a mesma `supplementalDataId` precisam ser transmitidos para o Adobe Target e o Adobe Analytics.
+1. `trackingServer` - O servidor do Adobe Analytics Para que o Adobe Target e o Adobe Analytics compilem corretamente os dados, o mesmo `supplementalDataId` precisa ser passado para o Adobe Target e o Adobe Analytics.
 
 ```
 curl -X POST \
@@ -73,7 +73,7 @@ curl -X POST \
 
 ### Recuperar carga do Analytics do Adobe Target
 
-Os consumidores da API de entrega do Adobe Target podem recuperar a carga do Adobe Analytics para uma mbox correspondente, para que o consumidor possa enviar a carga para o Adobe Analytics por meio da [API de inserção de dados](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Quando uma chamada do Adobe Target do lado do servidor for disparada, passar `client_side` para o `logging` na solicitação. Isso retornará uma carga se a mbox estiver presente em uma atividade que usa o Analytics como fonte de relatórios.
+Os consumidores da API de entrega do Adobe Target podem recuperar a carga do Adobe Analytics para uma mbox correspondente, para que o consumidor possa enviar a carga para o Adobe Analytics por meio da [API de inserção de dados](https://github.com/AdobeDocs/analytics-1.4-apis/blob/master/docs/data-insertion-api/index.md). Quando uma chamada do Adobe Target do lado do servidor for disparada, passe `client_side` para o campo `logging` na solicitação. Isso retornará uma carga se a mbox estiver presente em uma atividade que usa o Analytics como fonte de relatórios.
 
 ```
 curl -X POST \
@@ -121,7 +121,7 @@ curl -X POST \
     }'
 ```
 
-Depois de especificar `logging` = `client_side`, você receberá a carga no `mbox` conforme mostrado abaixo.
+Depois de especificar `logging` = `client_side`, você receberá a carga no campo `mbox`, como mostrado abaixo.
 
 ```
 {
@@ -176,7 +176,7 @@ Depois de especificar `logging` = `client_side`, você receberá a carga no `mbo
 }
 ```
 
-Se a resposta do Target contiver qualquer informação no `analytics` -> `payload` propriedade, encaminhe-a como está para a Adobe Analytics. O Analytics sabe processar essa carga. Isso pode ser feito em uma solicitação GET usando o seguinte formato:
+Se a resposta do Target contiver qualquer item na propriedade `analytics` -> `payload`, encaminhe-a como está para a Adobe Analytics. O Analytics sabe processar essa carga. Isso pode ser feito em uma solicitação GET usando o seguinte formato:
 
 ```
 https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta={payload}&mid={mid}&vid={vid}&aid={aid}
@@ -188,7 +188,7 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | --- | --- | --- |
 | `rsid` | Sim | A ID do conjunto de relatórios |
 | `pe` | Sim | Evento de página. Sempre definida como `tnt` |
-| `tnta` | Sim | A carga do Analytics retornada pelo servidor do Target em `analytics` -> `payload` -> `tnta` |
+| `tnta` | Sim | Carga do Analytics retornada pelo servidor de Destino em `analytics` -> `payload` -> `tnta` |
 | `mid` | ID de visitante da Marketing Cloud |
 
 ### Valores de cabeçalho obrigatórios

@@ -1,25 +1,25 @@
 ---
 title: Entrega em lote ou única API de entrega do Adobe Target
-description: Como usar [!UICONTROL API de entrega do Adobe Target] Chamadas de entrega em lote ou únicas?
+description: Como faço para usar [!UICONTROL Adobe Target Delivery API] chamadas de Entrega em lote ou únicas?
 keywords: api de entrega
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '460'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---
 
 # Entrega única ou em lote
 
-A variável [!UICONTROL API de entrega do Adobe Target] O oferece suporte a uma chamada de entrega única ou em lote. Uma pessoa pode fazer uma solicitação de conteúdo do servidor para uma ou várias mboxes.
+O [!UICONTROL Adobe Target Delivery API] dá suporte a uma chamada de entrega única ou em lote. Uma pessoa pode fazer uma solicitação de conteúdo do servidor para uma ou várias mboxes.
 
 Avalie os custos de desempenho ao decidir fazer uma única chamada do em comparação com uma chamada em lote. Se você souber todo o conteúdo que precisa ser mostrado para um usuário, a prática recomendada é recuperar o conteúdo de todas as mboxes com uma única chamada de delivery em lote, a fim de evitar fazer várias chamadas de delivery únicas.
 
 ## Chamada de entrega única
 
-Você pode recuperar uma experiência para exibir ao usuário para uma mbox usando o [!UICONTROL API de entrega do Adobe Target]. Observe que, se você estiver fazendo uma única chamada de delivery, precisará iniciar outra chamada de servidor para recuperar conteúdo adicional de uma mbox para um usuário. Isso pode ficar muito caro ao longo do tempo, portanto, avalie sua abordagem ao usar a chamada única de API de entrega.
+Você pode recuperar uma experiência para exibir ao usuário para uma mbox por meio do [!UICONTROL Adobe Target Delivery API]. Observe que, se você estiver fazendo uma única chamada de delivery, precisará iniciar outra chamada de servidor para recuperar conteúdo adicional de uma mbox para um usuário. Isso pode ficar muito caro ao longo do tempo, portanto, avalie sua abordagem ao usar a chamada única de API de entrega.
 
 ```
 curl -X POST \
@@ -55,7 +55,7 @@ curl -X POST \
 }'
 ```
 
-No exemplo de chamada de entrega única acima, a experiência é recuperada para ser exibida ao usuário com `tntId`: `abcdefghijkl00023.1_1` para um `mbox`:`SummerOffer` no canal da web. Essa única chamada de delivery gerará a seguinte resposta:
+No exemplo de chamada de entrega única acima, a experiência é recuperada para ser exibida ao usuário com `tntId`: `abcdefghijkl00023.1_1` para um `mbox`:`SummerOffer` no canal da Web. Essa única chamada de delivery gerará a seguinte resposta:
 
 ```
 {
@@ -83,11 +83,11 @@ No exemplo de chamada de entrega única acima, a experiência é recuperada para
 }
 ```
 
-Na resposta, observe o seguinte: `content` contém o HTML que descreve a experiência a ser mostrada ao usuário para a web que corresponde à mbox SummerOffer.
+Na resposta, observe que o campo `content` contém o HTML que descreve a experiência a ser mostrada ao usuário para a Web que corresponde à mbox SummerOffer.
 
 ### Executar carregamento de página
 
-Se houver experiências que devem ser mostradas quando ocorrer um carregamento de página no canal da Web, como o teste AB das fontes localizadas no rodapé ou no cabeçalho, você pode especificar `pageLoad` no `execute` para recuperar todas as modificações que devem ser aplicadas.
+Se houver experiências que devem ser mostradas quando ocorrer um carregamento de página no canal da Web, como o teste AB das fontes localizadas no rodapé ou no cabeçalho, você poderá especificar `pageLoad` no campo `execute` para recuperar todas as modificações que devem ser aplicadas.
 
 ```
 curl -X POST \
@@ -117,7 +117,7 @@ curl -X POST \
 }'
 ```
 
-A chamada de exemplo acima recupera todas as experiências para mostrar a um usuário quando a página `https://target.enablementadobe.com/react/demo/#/` cargas.
+A chamada de exemplo acima recupera todas as experiências para mostrar a um usuário quando a página `https://target.enablementadobe.com/react/demo/#/` é carregada.
 
 ```
 {
@@ -155,7 +155,7 @@ A chamada de exemplo acima recupera todas as experiências para mostrar a um usu
   }
 ```
 
-No `content` , a modificação que precisa ser aplicada em um carregamento de página pode ser recuperada. No exemplo acima, observe que um link no cabeçalho precisa ser nomeado como *Início Modificado*.
+No campo `content`, a modificação que precisa ser aplicada em um carregamento de página pode ser recuperada. No exemplo acima, observe que um link no cabeçalho precisa ser nomeado como *Início Modificado*.
 
 ## Chamada de entrega em lote
 
@@ -203,7 +203,7 @@ curl -X POST \
 }'
 ```
 
-No exemplo de chamada de entrega em lote acima, as experiências são recuperadas para exibição ao usuário com `tntId`: `abcdefghijkl00023.1_1` para vários `mbox`:`SummerOffer`, `SummerShoesOffer`, e `SummerDressOffer`. Como sabemos que precisamos mostrar uma experiência para várias mboxes para esse usuário, podemos agrupar essas solicitações e fazer uma chamada de servidor, em vez de três chamadas de delivery individuais.
+No exemplo de chamada de entrega em lote acima, as experiências são recuperadas para exibição para o usuário com `tntId`: `abcdefghijkl00023.1_1` para vários `mbox`:`SummerOffer`, `SummerShoesOffer` e `SummerDressOffer`. Como sabemos que precisamos mostrar uma experiência para várias mboxes para esse usuário, podemos agrupar essas solicitações e fazer uma chamada de servidor, em vez de três chamadas de delivery individuais.
 
 ```
 {
@@ -252,4 +252,4 @@ No exemplo de chamada de entrega em lote acima, as experiências são recuperada
 }
 ```
 
-Na resposta acima, você pode ver que dentro do `content` de cada mbox, a representação HTML da experiência para mostrar ao usuário para cada mbox é recuperável.
+Na resposta acima, você pode ver que, no campo `content` de cada mbox, a representação HTML da experiência para mostrar ao usuário para cada mbox é recuperável.
