@@ -24,7 +24,7 @@ O SDK do .NET é distribuído por [NuGet](https://www.nuget.org/packages/Adobe.T
 Install-Package Adobe.Target.Client
 ```
 
->CLI [!TAB .NET]
+>[!TAB CLI .NET]
 
 ```csharp {line-numbers="true"}
 dotnet add package Adobe.Target.Client
