@@ -4,7 +4,7 @@ description: Saiba mais sobre o comportamento de cookies do Target (cookies pró
 title: Onde Posso Encontrar Informações Sobre Cookies Do Target?
 feature: at.js
 role: Developer
-source-git-commit: 34e8625798121e236a04646dfcf049f9c2b6f9d0
+source-git-commit: 39f390a0e5eedf8c6957333759d31d96ed11b321
 workflow-type: tm+mt
 source-wordcount: '1580'
 ht-degree: 53%
@@ -118,6 +118,7 @@ O cookie mantém vários valores para gerenciar a experiência dos visitantes na
 |--- |--- |
 | Domínios próprios | A implementação padrão para clientes do Target. Os cookies &quot;mbox&quot; são definidos no domínio do cliente. |
 | Rastreamento de terceiros | O rastreamento de terceiros é importante para anunciar e segmentar casos de uso no Target e no Adobe Audience Manager (AAM). O rastreamento de terceiros requer técnicas de script entre sites. O Target usa dois cookies, &quot;mboxSession&quot; e &quot;mboxPC&quot; configurados no domínio `clientcode.tt.omtrd.net`. |
+
 **Qual é a abordagem da Apple?**
 
 Da Apple:
