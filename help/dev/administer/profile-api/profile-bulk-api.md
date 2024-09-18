@@ -4,9 +4,9 @@ description: Saiba como usar o  [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 2934fbaa1dc3cd92bc5a434937e5db9a617009a9
+source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
 workflow-type: tm+mt
-source-wordcount: '828'
+source-wordcount: '829'
 ht-degree: 8%
 
 ---
@@ -64,7 +64,7 @@ Você faz referência a este arquivo na chamada de POST para [!DNL Target] servi
 * Se você estiver usando [!UICONTROL Bulk Profile Update API] v2, não precisará especificar todos os valores de parâmetro para cada `pcId`. Perfis são criados para qualquer `pcId` ou `mbox3rdPartyId` que não seja encontrado em [!DNL Target]. Se você estiver usando a v1, os perfis não serão criados para pcIds ou mbox3rdPartyIds ausentes.
 * O tamanho do arquivo em lote deve ser menor que 50 MB. Além disso, o número total de linhas não deve exceder 500 mil. Esse limite garante que os servidores não sejam inundados com muitas solicitações.
 * Você pode enviar vários arquivos. No entanto, a soma total das linhas de todos os arquivos enviados em um dia não deve exceder um milhão para cada cliente.
-* Não há limite para o número de atributos que você carrega. No entanto, o tamanho geral de um perfil, incluindo dados do sistema, não deve exceder 2000 KB. A [!DNL Adobe] recomenda que você use menos de 1000 KB de armazenamento para atributos de perfil.
+* Não há restrição quanto ao número de atributos que você pode fazer upload. No entanto, o tamanho total dos dados do perfil externo, que incluem Atributos do cliente, API do perfil, parâmetros de perfil na mbox e saída do script de perfil, não deve exceder 64 KB.
 * Os parâmetros e valores diferenciam maiúsculas de minúsculas.
 
 ## solicitação POST do HTTP

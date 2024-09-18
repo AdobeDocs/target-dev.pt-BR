@@ -4,10 +4,10 @@ description: Exiba os detalhes sobre as alterações em cada versão da bibliote
 title: O que está incluído em cada versão da at.js?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: 9999c1b5f603e6607bd81f6ad6a06a7f74e76acb
+source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
 workflow-type: tm+mt
-source-wordcount: '4904'
-ht-degree: 65%
+source-wordcount: '4967'
+ht-degree: 64%
 
 ---
 
@@ -25,7 +25,16 @@ Detalhes sobre alterações em cada versão da biblioteca at.js de JavaScript do
 >
 >Você deve atualizar para as versões mais recentes do 1.*x* ou 2.*x* para obter correções de erros e patches de segurança para problemas descobertos em qualquer versão secundária anterior da versão principal correspondente.
 
-As marcas no [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) são o método preferido para atualizar o at.js. Os desenvolvedores de extensão adicionam continuamente novos recursos a suas extensões e corrigem erros com frequência. Essas atualizações são colocadas em novas versões de uma extensão e disponibilizadas no catálogo da Adobe Experience Platform como atualizações. Para obter mais informações, consulte [Atualizações de extensão](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) no *Guia de visão geral de tags*.6+
+As marcas no [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) são o método preferido para atualizar o at.js. Os desenvolvedores de extensão adicionam continuamente novos recursos a suas extensões e corrigem erros com frequência. Essas atualizações são colocadas em novas versões de uma extensão e disponibilizadas no catálogo da Adobe Experience Platform como atualizações. Para obter mais informações, consulte [Atualizações de extensão](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) na *Visão geral das tags*.
+
+## at.js versão 2.11.6 (segunda-feira, 29 de setembro de 2024)
+
+* Correção de um problema que impedia o [!DNL Target] de operar corretamente com ofertas de redirecionamento no [!UICONTROL Visual Experience Composer] (VEC) ou [!UICONTROL Form-Based Experience Composer].
+
+## at.js versão 2.11.5 (quinta-feira, 14 de agosto de 2024)
+
+* Implementação do armazenamento em cache para operações de leitura e gravação de cookies, a fim de reduzir a sobrecarga de análise e manipulação de sequência repetida e dispendiosa.
+* Implementação da mais recente API de parâmetros de pesquisa de URL quando disponível, pois é mais rápida do que analisar e manipular cadeias de caracteres manualmente.
 
 ## Versão 2.11.4 da at.js (quinta-feira, 24 de janeiro de 2024)
 
