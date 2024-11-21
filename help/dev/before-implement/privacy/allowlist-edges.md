@@ -4,7 +4,7 @@ description: Incluir na lista de permissões Exiba uma lista de hosts para ajud�
 title: Como Faço Para Incluir na lista de permissões Nós Do Edge [!DNL Target] ?
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
-source-git-commit: 49b6572c0d414ab304712691c97794bb0b1e3781
+source-git-commit: 1583cfe8ea1009fd1df5c5a0e5f3f95f72daf2b9
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%
@@ -35,13 +35,13 @@ Lista de endereços IP de saída de [!DNL Target] bordas. [!DNL Target] Inclua n
 
 | Localização do Edge | Endereços IP de saída |
 | --- | --- |
-| Edge41 (Mumbai) | 3.6.2.221<br />13.235.112.4 <br />52.66.66.192 |
-| Edge42 (Tóquio) | 52.69.55.232<br />43.206.61.43 <br />13.113.73.214 |
-| Edge44 (Costa Leste dos EUA) | 54.164.192.223<br />52.86.86.203 <br />54.88.167.98 |
-| Edge45 (Costa Oeste dos EUA) | 52.40.124.129<br />54.148.219.69 <br />54.189.208.212 |
-| Edge46 (Sydney) | 54.253.144.4<br />54.66.198.142 <br />13.211.218.51 |
-| Edge47 (Irlanda) | 52.208.136.136<br />54.170.28.19 <br />99.80.111.82 |
-| Edge48 (Cingapura) | 3.1.141.36<br />18.143.112.116 <br />52.76.61.44 |
+| Edge41 (Mumbai) | 3.6.2.221<P>13.235.112.4 <P>52.66.66.192 |
+| Edge42 (Tóquio) | 52.69.55.232<P>43.206.61.43 <P>13.113.73.214 |
+| Edge44 (Costa Leste dos EUA) | 54 164 192 223<P>52.86.86.203 <P>54.88.167.98 |
+| Edge45 (Costa Oeste dos EUA) | 52.40.124.129<P>54 148 219 69 <P>54.189.208.212 |
+| Edge46 (Sydney) | 54.253.144.4<P>54.66.198.142 <P>13.211.218.51 |
+| Edge47 (Irlanda) | 52.208.136.136<P>54.170.28.19 <P>99.80.111.82 |
+| Edge48 (Cingapura) | 3.1.141.36<P>18 143 112 116 <P>52.76.61.44 |
 
 ## [!DNL Target] endereços IP de borda
 
@@ -52,12 +52,12 @@ Essa lista será alterada com frequência, à medida que os balanceadores de car
 | Localização do Edge | Domínio | Endereço IP |
 | --- | --- | --- |
 |  | `CLIENTCODE.tt.omtrdc.net`<br />(onde CLIENTCODE é a sua ID de cliente [!DNL Target]) |  |
-| Edge41 (Mumbai) | `mboxedge41.tt.omtrdc.net` | 15.206.104.6<br />3.109.14.178 <br />13.234.139.131 |
-| Edge42 (Tóquio) | `mboxedge42.tt.omtrdc.net` | 52.194.84.34<br />3.115.158.39 <br />18.180.123.21 |
-| Edge44 (Costa Leste dos EUA) | `mboxedge44.tt.omtrdc.net` | 54.205.210.54<br />23.20.189.8 <br />35.169.173.155 |
-| Edge45 (Costa Oeste dos EUA) | `mboxedge45.tt.omtrdc.net` | 35.161.163.45<br />44.230.114.101 <br />35.161.120.22 |
-| Edge46 (Sydney) | `mboxedge46.tt.omtrdc.net` | 3.104.142.61<br />52.62.4.152 <br />54.253.105.140 |
-| Edge47 (Irlanda) | `mboxedge47.tt.omtrdc.net` | 18.203.168.186<br />54.228.83.91 <br />54.217.181.83 |
-| Edge48 (Cingapura) | `mboxedge48.tt.omtrdc.net` | 54.179.6.70<br />13.215.150.94 <br />18.136.47.70 |
+| Edge41 (Mumbai) | `mboxedge41.tt.omtrdc.net` | 3.6.2.221<P>52.66.66.192<P>13.235.112.4 |
+| Edge42 (Tóquio) | `mboxedge42.tt.omtrdc.net` | 43.206.61.43<P>13.113.73.214<P>52.69.55.232 |
+| Edge44 (Costa Leste dos EUA) | `mboxedge44.tt.omtrdc.net` | 54.88.167.98<P>54 164 192 223<P>52.86.86.203 |
+| Edge45 (Costa Oeste dos EUA) | `mboxedge45.tt.omtrdc.net` | 52.40.124.129<P>54 148 219 69<P>54.189.208.212 |
+| Edge46 (Sydney) | `mboxedge46.tt.omtrdc.net` | 54.66.198.142<P>54.253.144.4<P>13.211.218.51 |
+| Edge47 (Irlanda) | `mboxedge47.tt.omtrdc.net` | 54.170.28.19<P>52.208.136.136<P>99.80.111.82 |
+| Edge48 (Cingapura) | `mboxedge48.tt.omtrdc.net` | 52.76.61.44<P>3.1.141.36<P>18 143 112 116 |
 
 À medida que os balanceadores de carga detectam alterações no perfil de tráfego, ele é dimensionado para cima ou para baixo. O tempo necessário para o Balanceamento de Carga Elástica ser dimensionado pode variar de 1 a 7 minutos, dependendo das alterações detectadas. Quando os balanceadores de carga são dimensionados, eles atualizam o registro DNS com a nova lista de endereços IP. Para garantir que você esteja aproveitando a capacidade aumentada, o Elastic Load Balancing usa uma configuração TTL no registro DNS de 60 segundos.
