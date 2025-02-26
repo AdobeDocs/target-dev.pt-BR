@@ -4,9 +4,9 @@ description: Exiba os detalhes sobre as alterações em cada versão da bibliote
 title: O que está incluído em cada versão da at.js?
 feature: at.js
 exl-id: 609dacba-2ab8-45e9-b189-928d59938c98
-source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
+source-git-commit: 3deeee2838d02d578bb653a4911313463b962050
 workflow-type: tm+mt
-source-wordcount: '4967'
+source-wordcount: '4994'
 ht-degree: 64%
 
 ---
@@ -26,6 +26,10 @@ Detalhes sobre alterações em cada versão da biblioteca at.js de JavaScript do
 >Você deve atualizar para as versões mais recentes do 1.*x* ou 2.*x* para obter correções de erros e patches de segurança para problemas descobertos em qualquer versão secundária anterior da versão principal correspondente.
 
 As marcas no [Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) são o método preferido para atualizar o at.js. Os desenvolvedores de extensão adicionam continuamente novos recursos a suas extensões e corrigem erros com frequência. Essas atualizações são colocadas em novas versões de uma extensão e disponibilizadas no catálogo da Adobe Experience Platform como atualizações. Para obter mais informações, consulte [Atualizações de extensão](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/extension-upgrade.html) na *Visão geral das tags*.
+
+## at.js versão 2.11.7 (26 de fevereiro de 2025)
+
+* Log de Telemetria Corrigida quando `localStorage` não está disponível. A telemetria estava causando um problema para alguns clientes que tinham o `localStorage` desativado nos navegadores.
 
 ## at.js versão 2.11.6 (segunda-feira, 29 de setembro de 2024)
 
@@ -115,7 +119,7 @@ Esta versão contém as seguintes alterações:
 * Os detalhes das métricas de clique do [!UICONTROL Analytics for Target] (A4T) são retornados corretamente ao usar solicitações `prefetch`.
 * A geração UUID não usa mais `Math.random()`, mas depende de `window.crypto`.
 * A expiração do cookie `sessionId` é estendida corretamente em cada chamada de rede.
-* A inicialização do cache de visualização do SPA (Aplicativo de página única) agora é manipulada corretamente e atende às configurações de `viewsEnabled`. A configuração de `viewsEnabled` para o valor `false` agora desabilita a função `triggerView()`. Consulte [Ordem das operações para o carregamento inicial da página](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order).
+* A inicialização do cache de visualização do Aplicativo de página única (SPA) agora é manipulada corretamente e atende às configurações de `viewsEnabled`. A configuração de `viewsEnabled` para o valor `false` agora desabilita a função `triggerView()`. Consulte [Ordem das operações para o carregamento inicial da página](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order).
 
 ## at.js 2.5.0 (13 de maio de 2021)
 
@@ -185,7 +189,7 @@ Essa versão do at.js é uma versão de manutenção e inclui os seguintes aprim
 Essa versão do at.js inclui os seguintes aprimoramentos e correções:
 
 * Correção de um problema no qual o rastreamento de cliques não relatava conversões no [!DNL Analytics for Target] (A4T) quando o código [!DNL Adobe Analytics] não estava presente nos elementos da página.
-* Desempenho aprimorado ao usar o Serviço de ID de Experience Cloud (ECID) v4.4 e a at.js 2.2 em suas páginas da Web.
+* Desempenho aprimorado ao usar o Serviço da Experience Cloud ID (ECID) v4.4 e a at.js 2.2 nas páginas da Web.
 * Anteriormente, a ECID fazia duas chamadas de bloqueio antes que a at.js pudesse buscar experiências. Isso foi reduzido a uma única chamada, o que melhora significativamente o desempenho.
 * Correção de um processamento de exibição pré-buscado incorreto, em que os tokens de evento de ofertas padrão não eram incluídos nas notificações enviadas.
 
@@ -193,13 +197,13 @@ Essa versão do at.js inclui os seguintes aprimoramentos e correções:
 >
 >Atualize sua extensão ECID para v4.4 para aproveitar esse aprimoramento de desempenho.
 
-* A at.js versão 2.2 também fornece uma nova configuração chamada `serverState`. Esta configuração pode ser usada para otimizar o desempenho da página quando uma integração híbrida do [!DNL Target] é implementada. A integração híbrida significa que você está usando a at.js v2.2+ no lado do cliente e a API de entrega ou um SDK do [!DNL Target] no lado do servidor para fornecer experiências. `serverState` fornece ao at.js v2.2+ a capacidade de aplicar experiências diretamente de conteúdo buscado no lado do servidor e retornado ao cliente como parte da página que está sendo veiculada. Para obter mais informações, consulte &quot;serverState&quot; em [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverstate).
+* A at.js versão 2.2 também fornece uma nova configuração chamada `serverState`. Esta configuração pode ser usada para otimizar o desempenho da página quando uma integração híbrida do [!DNL Target] é implementada. A integração híbrida significa que você está usando a at.js v2.2+ no lado do cliente e a API de entrega ou uma SDK do [!DNL Target] no lado do servidor para fornecer experiências. `serverState` fornece ao at.js v2.2+ a capacidade de aplicar experiências diretamente de conteúdo buscado no lado do servidor e retornado ao cliente como parte da página que está sendo veiculada. Para obter mais informações, consulte &quot;serverState&quot; em [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#serverstate).
 
 ## at.js versão 1.8.0 (sexta-feira, 10 de outubro de 2019)
 
 Essa versão do at.js inclui os seguintes aprimoramentos e correções:
 
-* Desempenho aprimorado ao usar o Serviço de ID de Experience Cloud (ECID) v4.4 e o at.js 1.8 nas páginas da Web.
+* Desempenho aprimorado ao usar o Serviço da Experience Cloud ID (ECID) v4.4 e a at.js 1.8 nas páginas da Web.
 * Anteriormente, a ECID fazia duas chamadas de bloqueio antes que a at.js pudesse buscar experiências. Isso foi reduzido a uma única chamada, o que melhora significativamente o desempenho.
 
 >[!NOTE]
