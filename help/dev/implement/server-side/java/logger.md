@@ -1,9 +1,9 @@
 ---
-title: Inicialize o SDK do Java  [!DNL Adobe Target]  para registrar solicitações
-description: Saiba como registrar solicitações no  [!DNL Adobe Target] SDK do Java.
+title: Inicialize o Java SDK  [!DNL Adobe Target]  para registrar solicitações
+description: Saiba como registrar solicitações no  [!DNL Adobe Target] Java SDK.
 feature: APIs/SDKs
 exl-id: 85d1a6ef-0b08-4948-8133-740b7d6141dd
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 526445fccee9b778b7ac0d7245338f235f11d333
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 4%
@@ -21,7 +21,7 @@ Ao [inicializar o SDK](initialize-sdk.md), há várias opções no objeto `Clien
 | `logRequests` | Registra todo o corpo da solicitação, bem como o corpo da resposta. |
 | `logRequestStatus` | Registra o URL da solicitação, o status e o tempo de resposta. |
 
-O SDK Java [!DNL Target] usa o log `slf4j`. Você precisa fornecer sua implementação do agente de log, como `java.util.logging`, `logback` e `log4j`. Consulte [http://www.slf4j.org/manual.html](http://www.slf4j.org/manual.html) para obter mais informações. Todos os logs serão impressos em `debug`.
+O Java SDK [!DNL Target] usa o log `slf4j`. Você precisa fornecer sua implementação do agente de log, como `java.util.logging`, `logback` e `log4j`. Consulte [https://www.slf4j.org/manual.html](https://www.slf4j.org/manual.html) para obter mais informações. Todos os logs serão impressos em `debug`.
 
 ## Exemplo
 
