@@ -4,10 +4,10 @@ description: Saiba quais navegadores de Internet  [!DNL Adobe Target] oferecem s
 title: Quais Navegadores O [!DNL Target] Suporta?
 feature: Implementation
 exl-id: 1d778e14-26b0-477b-ac28-d304db70a133
-source-git-commit: f194c6de43070443b78c9a69b4233c27d70b8858
+source-git-commit: 1b6dcb24d677b758ed1daf85dc0a7e9e5b42680d
 workflow-type: tm+mt
-source-wordcount: '380'
-ht-degree: 23%
+source-wordcount: '421'
+ht-degree: 20%
 
 ---
 
@@ -21,10 +21,24 @@ Para obter informações mais importantes sobre TLS, consulte [Alterações na c
 
 A interface [!DNL Target] oferece suporte aos seguintes navegadores e dispositivos:
 
+>[!NOTE]
+>
+>O Target suporta a versão mais recente de cada navegador listado e a versão mais recente menos 1.
+
+
 | Tipo de dispositivo | Versão do navegador |
 |--- |--- |
-| Windows | <ul><li>Microsoft Edge</li><li>Google Chrome (mais recente, mais recente menos 1)</li><li>Mozilla Firefox (mais recente, mais recente menos 1)</li></ul> |
-| Mac | <ul><li>Firefox (mais recente, mais recente menos 1)</li><li>Chrome (mais recente, mais recente menos 1)</li></ul> |
+| [!DNL Windows] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+| [!DNL Mac] | <ul><li>[!DNL Microsoft Edge]</li><li>[!DNL Google Chrome]</li><li>[!DNL Mozilla Firefox]</li></ul> |
+
+## Requisitos de edição visual
+
+Para abrir, criar e visualizar suas páginas da Web de maneira confiável no [!UICONTROL Visual Experience Composer] (VEC), você deve ter a [extensão de navegador da Adobe Experience Cloud Visual Editing Helper](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank} instalada no navegador da Web ou usar o [!UICONTROL Enhanced Experience Composer (EEC)].
+
+>[!NOTE]
+>
+>[!DNL Google Chrome] e [!DNL Microsoft Edge] são os únicos navegadores atualmente com suporte para edição visual de páginas da Web no [!DNL Adobe Target].
+
 
 ## Entrega de conteúdo
 
