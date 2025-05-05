@@ -68,6 +68,7 @@ A sintaxe da [API de Entrega](/help/dev/implement/delivery-api/overview.md) é:
    * os objetos **navegador** e **endereço** foram removidos do **Corpo**, pois não são necessários para casos de uso que não sejam da HTML
    * *api_charter* está listado como o nome do local neste exemplo
    * entity.id está especificada, pois esta recomendação se baseia na Similaridade de Conteúdo, que requer que uma chave de item atual seja passada para o Target.
+
      ![lado do servidor-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
 Lembre-se de configurar os parâmetros de consulta corretamente. Por exemplo, certifique-se de especificar `{{CLIENT_CODE}}` conforme necessário. &lt;!— P: Na sintaxe de chamada atualizada, entity.id é listado como um profileParameter em vez de um mboxParameter como nas versões mais antigas. —> &lt;!— P: Imagem antiga ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Texto de acompanhamento antigo: &quot;Observe que esta recomendação é baseada em Produtos de conteúdo semelhantes baseados em entity.id enviado via mboxParameters.&quot; —>
      ![código-cliente3](assets/client-code3.png)

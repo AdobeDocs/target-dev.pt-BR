@@ -130,7 +130,7 @@ O arquivo da at.js tem aproximadamente 109 KB quando baixado. No entanto, como a
 
 ## Por que o at.js é maior que o mbox.js?
 
-As implementações da at.js usam uma única biblioteca ( at.js), enquanto as implementações de mbox.js na verdade usam duas bibliotecas ( mbox.js e target.js). Por isso, uma comparação mais justa seria de at.js versus mbox.js *e* `target.js`. Comparação entre os tamanhos gzipped das duas versões, a at.js versão 1.2 tem 34 KB e a mbox.js versão 63 tem 26.2 KB. ``
+As implementações da at.js usam uma única biblioteca ( at.js), enquanto as implementações de mbox.js na verdade usam duas bibliotecas ( mbox.js e target.js). Por isso, uma comparação mais justa seria de at.js versus mbox.js *e* `target.js`. Comparação entre os tamanhos gzipped das duas versões, a at.js versão 1.2 tem 34 KB e a mbox.js versão 63 tem 26.2 KB. &grave;&grave;
 
 A at.js é maior, pois realiza muito mais análise de DOM em comparação à mbox.js. Isso é necessário porque a at.js recebe dados &quot;brutos&quot; na resposta JSON e precisa entender isso. A mbox.js usava o `document.write()` e todas as análises eram realizadas pelo navegador.
 

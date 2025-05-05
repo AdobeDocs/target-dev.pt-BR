@@ -19,7 +19,7 @@ Para que as notificações sejam desativadas para a mbox ou exibição correta, 
 
 ## Notificações para mboxes buscadas previamente
 
-Uma ou várias notificações podem ser enviadas por meio de uma única chamada de entrega. Determine se a métrica que precisa ser rastreada é um `click` ou `display` para cada mbox para que o `type` da notificação possa ser refletido corretamente. Além disso, forneça um `id` para cada notificação, para que seja possível determinar se uma notificação foi enviada corretamente através do [!UICONTROL  Adobe Target Delivery API]. O `timestamp` também é importante para ser encaminhado para [!DNL Target] para indicar quando o `click` ou `display` ocorreu para uma determinada mbox para fins de relatório.
+Uma ou várias notificações podem ser enviadas por meio de uma única chamada de entrega. Determine se a métrica que precisa ser rastreada é um `click` ou `display` para cada mbox para que o `type` da notificação possa ser refletido corretamente. Além disso, forneça um `id` para cada notificação, para que seja possível determinar se uma notificação foi enviada corretamente através do [!UICONTROL &#x200B; Adobe Target Delivery API]. O `timestamp` também é importante para ser encaminhado para [!DNL Target] para indicar quando o `click` ou `display` ocorreu para uma determinada mbox para fins de relatório.
 
 ```
 curl -X POST \
