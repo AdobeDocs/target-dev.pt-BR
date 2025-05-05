@@ -15,7 +15,7 @@ ht-degree: 62%
 
 Essa função aciona uma solicitação para relatar ações do usuário, como cliques e conversões. Não entrega atividades na resposta.
 
-Essa mbox de monitoramento de evento pode, então, ser usada para definir métricas em atividades. Para obter mais informações, consulte [Métricas de sucesso](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html) e [Conversões de rastreamento](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions).
+Essa mbox de monitoramento de evento pode, então, ser usada para definir métricas em atividades. Para obter mais informações, consulte [Métricas de sucesso](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=pt-BR) e [Conversões de rastreamento](../how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions).
 
 Veja os detalhes da API:
 

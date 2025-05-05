@@ -124,7 +124,7 @@ Na resposta, você vê o campo `content` que contém a experiência a ser mostra
 
 ## Buscar previamente mboxes com `clickTrack` métricas ao usar [!UICONTROL Analytics for Target] (A4T)
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) é uma integração entre soluções que permite criar atividades com base em [!DNL Analytics] métricas de conversão e segmentos de público-alvo.
+[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR){target=_blank} (A4T) é uma integração entre soluções que permite criar atividades com base em [!DNL Analytics] métricas de conversão e segmentos de público-alvo.
 
 O trecho de código a seguir é uma resposta de uma busca prévia de uma mbox contendo `clickTrack` métricas para notificar [!DNL Analytics] que uma oferta foi clicada:
 
@@ -169,7 +169,7 @@ O trecho de código a seguir é uma resposta de uma busca prévia de uma mbox co
 
 ## Visualizações de pré-busca
 
-As exibições são compatíveis com Aplicativos de página única (SPA) e aplicativos móveis com mais facilidade. As exibições podem ser vistas como um grupo lógico de elementos visuais que, juntos, constituem uma experiência de SPA ou móvel. Agora, por meio da API de Entrega, as atividades [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} e [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T criadas pelo VEC com modificações em [Exibições para SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) podem ser buscadas previamente.
+As exibições são compatíveis com Aplicativos de página única (SPA) e aplicativos móveis com mais facilidade. As exibições podem ser vistas como um grupo lógico de elementos visuais que, juntos, constituem uma experiência de SPA ou móvel. Agora, por meio da API de Entrega, as atividades [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=pt-BR){target=_blank} e [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=pt-BR){target=_blank} (X)T criadas pelo VEC com modificações em [Exibições para SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) podem ser buscadas previamente.
 
 ```shell  {line-numbers="true"}
 curl -X POST \

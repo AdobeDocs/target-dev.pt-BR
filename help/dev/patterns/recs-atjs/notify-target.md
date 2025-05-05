@@ -49,7 +49,7 @@ Não é necessário incluir os atributos de conversão de pedido nesta chamada. 
    * `orderTotal`: Total do pedido para a compra.
    * `orderId`: ID do pedido da compra.
 
-  A ilustração a seguir mostra uma [regra para [!DNL tags] em [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} que deve ser acionada somente na página [!UICONTROL Confirmation].
+  A ilustração a seguir mostra uma [regra para [!DNL tags] em [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=pt-BR){target=_blank} que deve ser acionada somente na página [!UICONTROL Confirmation].
 
   ![Página Configuração de ação](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -58,7 +58,7 @@ Não é necessário incluir os atributos de conversão de pedido nesta chamada. 
 **Leituras**
 
 * [método adobe.target.trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [cartIds para critérios baseados em carrinho](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
+* [cartIds para critérios baseados em carrinho](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=pt-BR#cart-based){target=_blank}
 
 **Ações**
 

@@ -1,7 +1,7 @@
 ---
 title: Permissões de usuário da API de entrega do Adobe Target
 description: Permissões de usuário da API de entrega do Adobe Target
-badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=en#premium newtab=true" tooltip="Consulte o que está incluído no Target Premium."
+badgePremium: label="Premium" type="Positive" url="https://experienceleague.adobe.com/docs/target/using/introduction/intro.html?lang=pt-BR#premium newtab=true" tooltip="Consulte o que está incluído no Target Premium."
 keywords: api de entrega
 exl-id: 332f90bd-4079-4653-aa38-b35837631c94
 feature: APIs/SDKs
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Permissões de usuário (Premium)
 
-O [!DNL Adobe] permite que os clientes gerenciem permissões para seus usuários ao usar o Adobe Target. Para fazer uma chamada [!UICONTROL Adobe Target Delivery API] bem-sucedida, um token com as permissões certas deve ser passado na chamada de API. Para saber mais sobre as permissões de usuário e como recuperar a visita ao token, [esta documentação](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
+O [!DNL Adobe] permite que os clientes gerenciem permissões para seus usuários ao usar o Adobe Target. Para fazer uma chamada [!UICONTROL Adobe Target Delivery API] bem-sucedida, um token com as permissões certas deve ser passado na chamada de API. Para saber mais sobre as permissões de usuário e como recuperar a visita ao token, [esta documentação](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=pt-BR).
 
 ```
 curl -X POST \

@@ -36,11 +36,11 @@ Para maior segurança, você pode exigir que a chamada da API de atualização e
 
    * Função de administrador ou ter pelo menos direitos de Aprovador
 
-     Para obter mais informações para clientes do Target Standard, consulte [Especificar funções e permissões](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html#roles-permissions) em *Usuários*. Para obter mais informações para clientes do [!DNL Target Premium], consulte [Configurar permissões corporativas](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
+     Para obter mais informações para clientes do Target Standard, consulte [Especificar funções e permissões](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/users/user-management.html?lang=pt-BR#roles-permissions) em *Usuários*. Para obter mais informações para clientes do [!DNL Target Premium], consulte [Configurar permissões corporativas](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=pt-BR).
 
    * Função de administrador no nível de espaço de trabalho/perfil de produto
 
-     Os espaços de trabalho estão disponíveis somente para clientes do [!DNL Target Premium]. Para obter mais informações, consulte [Configurar permissões corporativas](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html).
+     Os espaços de trabalho estão disponíveis somente para clientes do [!DNL Target Premium]. Para obter mais informações, consulte [Configurar permissões corporativas](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=pt-BR).
 
    * Direitos de administrador (permissão de Sysadmin) no nível do produto [!DNL Adobe Target]
 

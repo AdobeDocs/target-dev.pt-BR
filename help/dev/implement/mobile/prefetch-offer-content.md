@@ -26,7 +26,7 @@ Esse processo reduz o tempo de carregamento, previne várias chamadas de rede e 
 Considere as seguintes limitações ao usar o método de busca prévia com os SDKs móveis para iOS e Android:
 
 * O conteúdo da busca prévia não persiste entre inicializações. O conteúdo da busca prévia é armazenado em cache enquanto o aplicativo está em uso ou até o método `clearPrefetchCache()` ser chamado.
-* Não há suporte para a funcionalidade de busca prévia para os métodos de alocação de tráfego [!UICONTROL Auto-Allocate] e [!UICONTROL Auto-Target], para os tipos de atividade [!UICONTROL Automated Personalization] ou [!UICONTROL Recommendations] ou para as ofertas de [recomendações em uma atividade A/B ou XT](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html).
+* Não há suporte para a funcionalidade de busca prévia para os métodos de alocação de tráfego [!UICONTROL Auto-Allocate] e [!UICONTROL Auto-Target], para os tipos de atividade [!UICONTROL Automated Personalization] ou [!UICONTROL Recommendations] ou para as ofertas de [recomendações em uma atividade A/B ou XT](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html?lang=pt-BR).
 
 Para obter mais informações, incluindo métodos de busca prévia, classes públicas e exemplos de código, consulte:
 

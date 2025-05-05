@@ -14,7 +14,7 @@ ht-degree: 2%
 
 A API de modelos, também chamada de API de Inclui na lista de bloqueios, permite que os usuários visualizem e gerenciem a lista de recursos usados em modelos de aprendizado de máquina de atividades de [!UICONTROL Automated Personalization] (AP) e [!DNL Auto-Target] (AT). Se um usuário quiser excluir um recurso de ser usado pelos modelos para atividades de AP ou AT, ele poderá usar a API de modelos para adicionar esse recurso ao &quot;incluo na lista de bloqueios&quot;.
 
-Um **[!UICONTROL blocklist]** define o conjunto de recursos que será excluído por [!DNL Adobe Target] de seus modelos de aprendizado de máquina. Para obter mais informações sobre recursos, consulte [Dados usados por [!DNL Target] algoritmos de aprendizado de máquina](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html).
+Um **[!UICONTROL blocklist]** define o conjunto de recursos que será excluído por [!DNL Adobe Target] de seus modelos de aprendizado de máquina. Para obter mais informações sobre recursos, consulte [Dados usados por [!DNL Target] algoritmos de aprendizado de máquina](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=pt-BR).
 
 As Listas de bloqueios podem ser definidas por atividade (nível de atividade) ou para todas as atividades em uma conta [!DNL Target] (nível global).
 
@@ -100,7 +100,7 @@ No exemplo mostrado aqui, o usuário está verificando para ver a lista de recur
 >
 >Para encontrar a ID de atividade, navegue até a Lista de atividades na interface do usuário do [!DNL Target]. Clique na atividade de interesse. A ID da atividade será exibida no corpo da página Visão geral das atividades resultante, bem como no final do URL dessa página.
 
-O **[!UICONTROL externalName]** é um nome amigável para um recurso. Foi criado por [!DNL Target], e é possível que esse valor mude com o tempo. Os usuários podem exibir esses nomes amigáveis no [relatório do Personalization Insights](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html).
+O **[!UICONTROL externalName]** é um nome amigável para um recurso. Foi criado por [!DNL Target], e é possível que esse valor mude com o tempo. Os usuários podem exibir esses nomes amigáveis no [relatório do Personalization Insights](https://experienceleague.adobe.com/docs/target/using/reports/insights/personalization-insights-reports.html?lang=pt-BR).
 
 O **[!UICONTROL internalName]** é o identificador real do recurso. Ele também é criado por [!DNL Target], mas não pode ser alterado. Este é o valor que você precisará referenciar para identificar os recursos que gostaria de incluir na lista de bloqueios.
 

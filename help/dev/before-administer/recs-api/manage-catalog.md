@@ -149,7 +149,7 @@ Se você receber um erro informando que a entidade não foi encontrada, como mos
 
    >[!NOTE]
    >
-   >Se nenhum ambiente for especificado explicitamente, Obter Entidade tentará obter a entidade somente do seu [ambiente padrão](https://experienceleague.adobe.com/docs/target/using/administer/environments.html). Se quiser extrair de qualquer ambiente que não seja o ambiente padrão, especifique a ID do ambiente.
+   >Se nenhum ambiente for especificado explicitamente, Obter Entidade tentará obter a entidade somente do seu [ambiente padrão](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=pt-BR). Se quiser extrair de qualquer ambiente que não seja o ambiente padrão, especifique a ID do ambiente.
 
 1. Se necessário, adicione o parâmetro `environmentId` e reenvie a solicitação.
 

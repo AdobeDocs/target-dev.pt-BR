@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Visão geral da API do Target
 
-Este artigo descreve as diferentes APIs do Target em geral, antes de se concentrar nos requisitos específicos das APIs de administrador e perfil. Se você quiser administrar o Target por meio da interface, consulte a [seção de administração do *Guia do Usuário do Adobe Target Business*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
+Este artigo descreve as diferentes APIs do Target em geral, antes de se concentrar nos requisitos específicos das APIs de administrador e perfil. Se você quiser administrar o Target por meio da interface, consulte a [seção de administração do *Guia do Usuário do Adobe Target Business*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=pt-BR).
 
 ## Tipos de API
 

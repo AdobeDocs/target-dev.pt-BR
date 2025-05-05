@@ -15,4 +15,4 @@ ht-degree: 0%
 
 Veja o que a desativação futura de cookies de terceiros significa para a implementação da at.js do [!DNL Adobe Target].
 
-Para obter mais informações, consulte [O impacto da descontinuação de cookies de terceiros no Adobe Target (at.js)](https://experienceleaguecommunities.adobe.com/t5/adobe-target-blogs/the-impact-of-third-party-cookie-deprecation-on-adobe-target-at/ba-p/661615?search=Third%20Party%20Cookie%20Deprecation){target=_blank} na comunidade do Adobe Target.
+Para obter mais informações, consulte [O impacto da descontinuação de cookies de terceiros no Adobe Target (at.js)](https://experienceleaguecommunities.adobe.com/t5/adobe-target-blogs/the-impact-of-third-party-cookie-deprecation-on-adobe-target-at/ba-p/661615?profile.language=pt&search=Third%20Party%20Cookie%20Deprecation){target=_blank} na comunidade do Adobe Target.

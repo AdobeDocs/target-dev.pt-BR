@@ -19,7 +19,7 @@ deve seguir esse código. Denuncie comportamento inaceitável para
 
 ## Documentação do Guia do colaborador
 
-Consulte a [Guia do colaborador](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Consulte a [Guia do colaborador](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=pt-BR).
 
 ## Você tem uma pergunta?
 
@@ -56,4 +56,4 @@ entre em contato com os participantes existentes para conversar sobre isso.
 
 ## Problemas de segurança
 
-Problemas de segurança não devem ser denunciados neste rastreador de problemas. Em vez disso, [registre um problema junto aos nossos especialistas em segurança](https://helpx.adobe.com/security/alertus.html)
+Problemas de segurança não devem ser denunciados neste rastreador de problemas. Em vez disso, [registre um problema junto aos nossos especialistas em segurança](https://helpx.adobe.com/br/security/alertus.html)

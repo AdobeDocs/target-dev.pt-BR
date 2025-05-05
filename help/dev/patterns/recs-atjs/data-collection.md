@@ -71,11 +71,11 @@ Link para atributos de entidade para atualizar o catálogo de produtos para [!DN
 
 **Leituras**
 
-* [Atributos da entidade](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
+* [Atributos da entidade](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=pt-BR){target=_blank}
 
 **Considerações**
 
-* Uma maneira alternativa de transmitir atributos de entidade é atualizar o catálogo de produtos na interface do usuário do [!DNL Target] para usar os [feeds de produtos do Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}.
+* Uma maneira alternativa de transmitir atributos de entidade é atualizar o catálogo de produtos na interface do usuário do [!DNL Target] para usar os [feeds de produtos do Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=pt-BR){target=_blank}.
 * Transmitir atributos de entidade é aplicável somente em páginas em que os dados do catálogo de produtos estão disponíveis na camada de dados.
 * Passar o parâmetro `entity.event.detailsOnly=true` em qualquer chamada tem prioridade.
 

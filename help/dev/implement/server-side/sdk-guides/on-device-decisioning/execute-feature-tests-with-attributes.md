@@ -38,7 +38,7 @@ A ativação da decisão no dispositivo garante que uma atividade A/B seja execu
 
 >[!NOTE]
 >
->Você deve ter a [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) de Administrador ou Aprovador para habilitar ou desabilitar a **[!UICONTROL On-Device Decisioning]**.
+>Você deve ter a [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=pt-BR) de Administrador ou Aprovador para habilitar ou desabilitar a **[!UICONTROL On-Device Decisioning]**.
 
 Depois de habilitar a alternância **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] começa a gerar *artefatos de regra* para o seu cliente.
 

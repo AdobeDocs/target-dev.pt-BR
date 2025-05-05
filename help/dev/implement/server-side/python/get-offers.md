@@ -51,7 +51,7 @@ Retorna `TargetDeliveryResponse` se for chamado de forma síncrona (padrão), ou
 | target_location_hint_cookie | dict | Cookie de dica de localização [!DNL Target] |
 | analytics_details | list[AnalyticsResponse] | Carga do Analytics, em caso de uso do Analytics no lado do cliente |
 | trace | lista[dica] | Dados de rastreamento agregados para todas as mboxes/exibições de solicitação |
-| response_tokens | lista[dica] | Uma lista de &#x200B;[Tokens de Resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
+| response_tokens | lista[dica] | Uma lista de &#x200B;[Tokens de Resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=pt-BR) |
 | meta | dict | Metadados de decisão adicionais para uso com decisão no dispositivo |
 
 Os objetos `target_cookie` e `target_location_hint_cookie` usados para transmitir dados de volta ao navegador têm a seguinte estrutura:

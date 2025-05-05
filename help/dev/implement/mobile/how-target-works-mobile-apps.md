@@ -24,7 +24,7 @@ O [!DNL Adobe Mobile SDK] contata o servidor [!DNL Target] para obter o conteúd
 
 Um *local de destino* também é chamado de mbox. Uma localização identificada no aplicativo é ativada para teste ou personalização (por exemplo, mensagem de boas vindas na tela inicial). Essas localizações são identificadas durante o processo de criação de teste.
 
-Uma *[métrica de sucesso](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html)* é uma ação executada pelo usuário que identifica se uma atividade específica foi bem-sucedida (como se conectar, fazer uma compra, reservar uma passagem e assim por diante).
+Uma *[métrica de sucesso](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/success-metrics.html?lang=pt-BR)* é uma ação executada pelo usuário que identifica se uma atividade específica foi bem-sucedida (como se conectar, fazer uma compra, reservar uma passagem e assim por diante).
 
 ![alt imagem](assets/mobile-target-location.png)
 

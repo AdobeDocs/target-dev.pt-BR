@@ -17,7 +17,7 @@ Informações sobre o uso da extensão [!UICONTROL Adobe Experience Cloud Debugg
 
 Você pode visualizar rapidamente a configuração da biblioteca, examinar as solicitações para verificar se os parâmetros personalizados estão sendo passados corretamente, ativar o log do console e desabilitar todas as solicitações [!DNL Target]. Faça a autenticação no [!DNL Experience Cloud] e use a ferramenta Mbox Trace avançada para inspecionar as qualificações de atividade e público, bem como o perfil do visitante.
 
-Revise a [visão geral do Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html){target=_blank}.
+Revise a [visão geral do Adobe Experience Cloud Debugger](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=pt-BR){target=_blank}.
 
 ## Vídeos de treinamento
 

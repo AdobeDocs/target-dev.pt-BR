@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Às vezes, os algoritmos fornecidos pelo Recommendations não podem exibir itens específicos que você deseja promover. Nessa situação, os critérios personalizados fornecem uma maneira de distribuir um conjunto específico de itens recomendados para um determinado item ou categoria principal.
 
-Para criar critérios personalizados, defina e importe o mapeamento desejado entre o item ou categoria principal e os itens recomendados. Este processo está descrito na [documentação de critérios personalizados](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html). Conforme observado nessa documentação, você pode criar, editar e excluir critérios personalizados por meio da interface do usuário (UI) do Target. No entanto, o Target também fornece um conjunto de APIs de critérios personalizados que permitem o gerenciamento mais detalhado de seus critérios personalizados.
+Para criar critérios personalizados, defina e importe o mapeamento desejado entre o item ou categoria principal e os itens recomendados. Este processo está descrito na [documentação de critérios personalizados](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=pt-BR). Conforme observado nessa documentação, você pode criar, editar e excluir critérios personalizados por meio da interface do usuário (UI) do Target. No entanto, o Target também fornece um conjunto de APIs de critérios personalizados que permitem o gerenciamento mais detalhado de seus critérios personalizados.
 
 >[!WARNING]
 >
@@ -31,7 +31,7 @@ Para criar critérios personalizados usando a [Criar API de Critérios Personali
 
 >[!WARNING]
 >
->Critérios personalizados criados usando a API Criar critérios personalizados, conforme descrito neste exercício, aparecerão na interface do usuário, onde persistirão. Não será possível editá-los ou excluí-los da interface do. Você pode editá-los ou excluí-los **via API**, mas de qualquer forma, eles continuarão a aparecer na interface do usuário de destino. Para manter a opção de editar ou excluir da interface do usuário, crie os critérios personalizados usando a interface do usuário de acordo com a [documentação](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html), em vez de usar a API Criar critérios personalizados.
+>Critérios personalizados criados usando a API Criar critérios personalizados, conforme descrito neste exercício, aparecerão na interface do usuário, onde persistirão. Não será possível editá-los ou excluí-los da interface do. Você pode editá-los ou excluí-los **via API**, mas de qualquer forma, eles continuarão a aparecer na interface do usuário de destino. Para manter a opção de editar ou excluir da interface do usuário, crie os critérios personalizados usando a interface do usuário de acordo com a [documentação](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/recommendations-csv.html?lang=pt-BR), em vez de usar a API Criar critérios personalizados.
 
 Continue com as etapas a seguir somente após ler o aviso acima e familiarizar-se com a criação de novos critérios personalizados que não podem ser excluídos subsequentemente da interface do usuário.
 

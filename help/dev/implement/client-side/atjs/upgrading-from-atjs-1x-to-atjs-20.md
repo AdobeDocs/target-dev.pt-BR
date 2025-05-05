@@ -405,7 +405,7 @@ As tabelas a seguir explicam o at.js. 2.*x* compatibilidade com diferentes tipos
 
 ## Tokens de resposta
 
-at.js 2.*x*, como a at.js 1.*x*, usa o evento personalizado `at-request-succeeded` para acionar tokens de resposta. Para obter exemplos de código usando o evento personalizado do `at-request-succeeded`, consulte [Tokens de resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html).
+at.js 2.*x*, como a at.js 1.*x*, usa o evento personalizado `at-request-succeeded` para acionar tokens de resposta. Para obter exemplos de código usando o evento personalizado do `at-request-succeeded`, consulte [Tokens de resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=pt-BR).
 
 ## at.js 1.*x* parâmetros para at.js 2.Mapeamento de carga *x*
 
@@ -772,4 +772,4 @@ at.js 2.O *x* aprimora o suporte do Adobe [!DNL Target] para SPA e integra-se co
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-Consulte [Noções básicas sobre o at.js 2.*x* funciona](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html) para obter mais informações.
+Consulte [Noções básicas sobre o at.js 2.*x* funciona](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=pt-BR) para obter mais informações.
