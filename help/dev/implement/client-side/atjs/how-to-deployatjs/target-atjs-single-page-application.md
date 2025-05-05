@@ -315,12 +315,12 @@ Consulte [Noções básicas sobre o funcionamento da at.js 2.x](https://experien
 
 ### Implementar a at.js 2.x em um SPA
 
->[!VIDEO](https://video.tv.adobe.com/v/26248/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/34798/?quality=12&captions=por_br)
 
 Consulte [Implementar a at.js 2.x da Adobe Target em um aplicativo de página única (SPA)](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=pt-BR) para obter mais informações.
 
 ### Uso do VEC para SPA em [!DNL Adobe Target]
 
->[!VIDEO](https://video.tv.adobe.com/v/26249/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/34802/?quality=12&captions=por_br)
 
 Consulte [Uso do Visual Experience Composer para Single Page Application (SPA VEC) no Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=pt-BR) para obter mais informações.
