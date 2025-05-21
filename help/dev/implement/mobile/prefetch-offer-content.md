@@ -30,5 +30,5 @@ Considere as seguintes limitações ao usar o método de busca prévia com os SD
 
 Para obter mais informações, incluindo métodos de busca prévia, classes públicas e exemplos de código, consulte:
 
-* **iOS:** [Buscar previamente conteúdo da oferta no iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html) na *Ajuda do SDK iOS do Mobile Services*.
-* **Android:** [Buscar previamente conteúdo da oferta no Android](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html) na *Ajuda do SDK Android do Mobile Services*.
+* **iOS:** [Buscar previamente conteúdo da oferta no iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html?lang=pt-BR) na *Ajuda do SDK iOS do Mobile Services*.
+* **Android:** [Buscar previamente conteúdo da oferta no Android](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html?lang=pt-BR) na *Ajuda do SDK Android do Mobile Services*.
