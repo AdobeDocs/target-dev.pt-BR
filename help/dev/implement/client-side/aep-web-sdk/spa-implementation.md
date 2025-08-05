@@ -1,5 +1,5 @@
 ---
-title: Implementação de Aplicativo de Página Única para o [!DNL  Adobe Experience Platform Web SDK]
+title: Implementação de Aplicativo de Página Única para o [!DNL &#x200B; Adobe Experience Platform Web SDK]
 description: Saiba como criar uma implementação de aplicativo de página única (SPA) do [!DNL Adobe Experience Platform Web SDK]usando o [!DNL Target].
 keywords: destino;adobe destino;exibições xdm; exibições;aplicativos de página única;SPA;ciclo de vida SPA;lado do cliente;teste AB;Direcionamento de experiência;XT;VEC
 feature: AEP Web SDK
