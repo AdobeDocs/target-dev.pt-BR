@@ -1,9 +1,9 @@
 ---
-title: Implementação de Aplicativo de Página Única para o [!DNL &#x200B; Adobe Experience Platform Web SDK]
+title: Implementação de Aplicativo de Página Única para o [!DNL Adobe Experience Platform Web SDK]
 description: Saiba como criar uma implementação de aplicativo de página única (SPA) do [!DNL Adobe Experience Platform Web SDK]usando o [!DNL Target].
 keywords: destino;adobe destino;exibições xdm; exibições;aplicativos de página única;SPA;ciclo de vida SPA;lado do cliente;teste AB;Direcionamento de experiência;XT;VEC
 feature: AEP Web SDK
-source-git-commit: f4e0e1b202863eb9fddb40836cf53d2df7cdbebe
+source-git-commit: 9a2c35b2d150638fbda00be866f84d2a6faa4300
 workflow-type: tm+mt
 source-wordcount: '1680'
 ht-degree: 2%
@@ -61,7 +61,7 @@ O conceito de [!UICONTROL Views] pode ser estendido muito além deste cenário. 
 
 O [!UICONTROL XDM Views] pode ser aproveitado no [!DNL Target] para capacitar os profissionais de marketing a executar testes A/B e XT em SPAs por meio do [!UICONTROL Visual Experience Composer]. Para fazer isso, é necessário executar as seguintes etapas para concluir uma configuração de desenvolvedor única:
 
-1. Instale o [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/install/overview).
+1. Instale o [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview).
 2. Determine todos os [!UICONTROL XDM Views] no aplicativo de página única que deseja personalizar.
 3. Após definir o [!UICONTROL XDM Views], para fornecer atividades A/B ou XT do VEC, implemente a função `sendEvent()` com `renderDecisions` definida como `true` e o [!UICONTROL XDM View] correspondente no Aplicativo de página única. O [!UICONTROL XDM View] deve ser passado em `xdm.web.webPageDetails.viewName`. Esta etapa permite que os profissionais de marketing aproveitem o [!UICONTROL Visual Experience Composer] para iniciar testes A/B e XT para esses XDM.
 
@@ -221,7 +221,7 @@ Quando você terminar de definir seu [!UICONTROL XDM Views] e implementar o `sen
 
 >[!NOTE]
 >
->Para usar o VEC para SPA, instale e ative o [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou a [Extensão de assistente do Chrome VEC](https://experienceleague.adobe.com/pt-br/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
+>Para usar o VEC para SPA, instale e ative o [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou a [Extensão de assistente do Chrome VEC](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
 
 ### Painel [!UICONTROL Modifications]
 
