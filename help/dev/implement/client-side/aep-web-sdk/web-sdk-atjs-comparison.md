@@ -815,7 +815,7 @@ Quando essa opção é configurada, o formato da carga retornada é semelhante a
 }
 ```
 
-A carga pode ser encaminhada para [!DNL Analytics] por meio de [!DNL  Data Insertion API].
+A carga pode ser encaminhada para [!DNL Analytics] por meio de [!DNL &#x200B; Data Insertion API].
 
 Exemplo 2: configurando-o em cada função `getOffers`:
 
