@@ -2,10 +2,10 @@
 user-guide-title: Guia do desenvolvedor do Adobe Target
 breadcrumb-title: Guia do desenvolvedor do Target
 user-guide-description: Saiba como definir e personalizar a experiência de seus clientes para que você possa maximizar a receita em sites da Web e móveis, aplicativos, mídia social e outros canais digitais.
-source-git-commit: ac5531cfda1c47248160d18ffc501bf2e70c9d0e
+source-git-commit: 524eb6aea6141d69eb7f30795d6b16a3f07cccd9
 workflow-type: tm+mt
-source-wordcount: '765'
-ht-degree: 45%
+source-wordcount: '777'
+ht-degree: 44%
 
 ---
 
@@ -46,6 +46,8 @@ ht-degree: 45%
    + Implementação do Adobe Experience Platform Web SDK {#aep}
       + [Visão geral da implementação do Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md)
       + [Implementação de aplicativos de página única](/help/dev/implement/client-side/aep-web-sdk/spa-implementation.md)
+      + [Acesso aos tokens de resposta](/help/dev/implement/client-side/aep-web-sdk/accessing-response-tokens.md)
+      + [Comparação da biblioteca at.js com o Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/web-sdk-atjs-comparison.md)
    + Implementação da at.js {#at-js-implementation}
       + [Visão geral da at.js](implement/client-side/atjs/how-atjs-works/overview.md)
       + Como a at.js funciona {#at-js}
