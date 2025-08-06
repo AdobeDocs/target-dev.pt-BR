@@ -26,7 +26,7 @@ O [!DNL Adobe] permite que os clientes baixem a biblioteca diretamente da guia [
 
 A versão pré-criada está disponível em um CDN. Você pode fazer referência à biblioteca na CDN diretamente na sua página ou baixá-la e hospedá-la em sua própria infraestrutura. Ele está disponível em formatos minificados e não minificados. A versão não reduzida é útil para fins de depuração.
 
-Consulte [Instalar o Web SDK usando a biblioteca JavaScript](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/library) para obter mais informações.
+Consulte [Instalar o Web SDK usando a biblioteca JavaScript](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/install/library) para obter mais informações.
 
 ## Configuração das bibliotecas
 
@@ -72,7 +72,7 @@ window.adobe.target.init(window, document, {
 
 ### Configuração do Platform Web SDK
 
-A configuração da SDK é feita com o comando [`configure`](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview). O comando `configure` é *sempre* chamado primeiro.
+A configuração da SDK é feita com o comando [`configure`](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/commands/configure/overview). O comando `configure` é *sempre* chamado primeiro.
 
 ## Como solicitar e renderizar automaticamente ofertas de Carregamento de página [!DNL Target]
 
@@ -82,7 +82,7 @@ Usando a at.js 2.x, se você habilitar a configuração `pageLoadEnabled,`, a bi
 
 ### Usando o [!DNL PLatform Web SDK]
 
-O conteúdo criado no [!DNL Target] [Visual Experience Composer](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/visual-experience-composer) pode ser recuperado e renderizado automaticamente pelo SDK.
+O conteúdo criado no [!DNL Target] [Visual Experience Composer](https://experienceleague.adobe.com/pt-br/docs/target/using/experiences/vec/visual-experience-composer) pode ser recuperado e renderizado automaticamente pelo SDK.
 
 Para solicitar e renderizar automaticamente [!DNL Target] ofertas, use o comando `sendEvent` e defina a opção `renderDecisions` como `true.`. Isso força o SDK a renderizar automaticamente qualquer conteúdo personalizado que esteja qualificado para renderização automática.
 
@@ -182,7 +182,7 @@ alloy("sendEvent", {
 }
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[Saiba mais](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## Como solicitar e *NÃO* renderizar automaticamente as ofertas do Target de Carregamento de Página
 
@@ -214,7 +214,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions)
+[Saiba mais](https://experienceleague.adobe.com/pt-br/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -261,7 +261,7 @@ alloy("sendEvent", {
   });
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[Saiba mais](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## Como solicitar mboxes específicas do Target com base em formulário
 
@@ -297,7 +297,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions.html)
+[Saiba mais](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions.html?lang=pt-BR)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -418,7 +418,7 @@ alloy("sendEvent", {
 });
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
+[Saiba mais](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/personalization/rendering-personalization-content)
 
 ## Como aplicar as atividades de [!DNL Target]
 
@@ -435,7 +435,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-Saiba mais sobre o comando `applyOffers` na [documentação dedicada](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2).
+Saiba mais sobre o comando `applyOffers` na [documentação dedicada](https://experienceleague.adobe.com/pt-br/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2).
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -449,7 +449,7 @@ alloy("applyPropositions", {
 });
 ```
 
-Saiba mais sobre o comando `applyPropositions` na [documentação dedicada](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content).
+Saiba mais sobre o comando `applyPropositions` na [documentação dedicada](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/personalization/rendering-personalization-content).
 
 ## Como rastrear eventos
 
@@ -485,7 +485,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
+[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=pt-BR)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -603,7 +603,7 @@ alloy("sendEvent", {
 });
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
+[Saiba mais](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
 
 **Exemplo 3 - Rastrear um evento disparado após executar uma ação**
 
@@ -685,7 +685,7 @@ alloy("sendEvent", {
 
 ## Como aproveitar o [!UICONTROL Response Tokens]
 
-O conteúdo do Personalization retornado de [!DNL Target] inclui [tokens de resposta](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens). Os tokens de resposta são detalhes sobre a atividade, oferta, experiência, perfil do usuário, informações geográficas e muito mais. Esses detalhes podem ser compartilhados com ferramentas de terceiros ou usados para depuração. Os tokens de resposta podem ser configurados na interface do usuário [!DNL Target].
+O conteúdo do Personalization retornado de [!DNL Target] inclui [tokens de resposta](https://experienceleague.adobe.com/pt-br/docs/target/using/administer/response-tokens). Os tokens de resposta são detalhes sobre a atividade, oferta, experiência, perfil do usuário, informações geográficas e muito mais. Esses detalhes podem ser compartilhados com ferramentas de terceiros ou usados para depuração. Os tokens de resposta podem ser configurados na interface do usuário [!DNL Target].
 
 ### Uso da at.js
 
@@ -699,7 +699,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 }); 
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html)
+[Saiba mais](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=pt-BR)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -707,7 +707,7 @@ document.addEventListener(adobe.target.event.REQUEST_SUCCEEDED, function(e) {
 >
 >Verifique se você está usando o [!DNL Experience Platform Web SDK] versão 2.6.0 ou posterior.
 
-Os tokens de resposta são retornados como parte de `propositions`, que são expostos no resultado do comando `sendEvent`. Cada proposta contém uma matriz de `items,` e cada item tem um objeto `meta` preenchido com tokens de resposta se eles estiverem habilitados na interface do administrador [!DNL Target]. [Saiba mais](https://experienceleague.adobe.com/en/docs/target/using/administer/response-tokens)
+Os tokens de resposta são retornados como parte de `propositions`, que são expostos no resultado do comando `sendEvent`. Cada proposta contém uma matriz de `items,` e cada item tem um objeto `meta` preenchido com tokens de resposta se eles estiverem habilitados na interface do administrador [!DNL Target]. [Saiba mais](https://experienceleague.adobe.com/pt-br/docs/target/using/administer/response-tokens)
 
 **Exemplo**
 
@@ -878,7 +878,7 @@ Em seguida, os dados fluem da seguinte maneira:
 
 ![Diagrama mostrando o fluxo de trabalho do log do Analytics Server Side](/help/dev/implement/client-side/aep-web-sdk/assets/a4t-server-side-atjs.png)
 
-[Saiba Mais](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html)
+[Saiba Mais](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=pt-BR)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -960,7 +960,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
+[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=pt-BR)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -1060,7 +1060,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
+[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=pt-BR)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -1140,7 +1140,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
+[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=pt-BR)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -1260,5 +1260,5 @@ Você tem vários recursos de depuração ao usar o [!DNL Platform Web SDK]:
 * Usando o [Assurance](https://experienceleague.adobe.com/pt-br/docs/experience-platform/assurance/home)
 * [Depuração do Web SDK habilitada](https://experienceleague.adobe.com/pt-br/docs/experience-platform/assurance/home)
 * Usar [ganchos de monitoramento do Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* Usar [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)
+* Usar [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/pt-br/docs/experience-platform/debugger/home)
 * Rastreamento de destino
