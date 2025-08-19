@@ -4,10 +4,10 @@ description: Saiba como usar o  [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: bee8752dd212a14f8414879e03565867eb87f6b9
+source-git-commit: 39f0ab4a6b06d0b3415be850487552714f51b4a2
 workflow-type: tm+mt
-source-wordcount: '829'
-ht-degree: 8%
+source-wordcount: '929'
+ht-degree: 7%
 
 ---
 
@@ -24,9 +24,13 @@ Usando o [!UICONTROL Bulk Profile Update API], você pode enviar convenientement
 
 >[!NOTE]
 >
->A versão 2 (v2) de [!UICONTROL Bulk Profile Update API] é a versão atual. No entanto, [!DNL Target] ainda oferece suporte à versão 1 (v1).
+>A versão 2 (v2) de [!DNL Bulk Profile Update API] é a versão atual. No entanto, [!DNL Target] continua a oferecer suporte à versão 1 (v1).
+>
+>* **Implementações autônomas que não dependem do `PCID`, use a Versão 2**: se a sua implementação do [!DNL Target] usar o [!DNL Experience Cloud ID] (ECID) como um dos identificadores de perfil para visitantes anônimos, você não deverá usar `pcId` como a chave em um arquivo em lotes da Versão 2 (v2). O uso de `pcId` com a Versão 2 de [!DNL Bulk Profile Update API] destina-se a implementações [!DNL Target] independentes que não dependem de `ECID`.
+>
+>* **Implementações que dependem de `thirdPartID`, usam a Versão 1**: implementações que usam `ECID` para identificação de perfil devem usar a Versão 1 (v1) da API se você quiser usar `pcId` como chave no arquivo de lote. Se sua implementação usar `thirdPartyId` para identificação de perfil, a Versão 2 (v2) será recomendada com `thirdPartyId` como chave.
 
-## Benefícios da API de atualização do perfil em massa
+## Benefícios do [!UICONTROL Bulk Profile Update API]
 
 * Nenhum limite sobre o número de atributos de perfil.
 * Os atributos de perfil enviados pelo site podem ser atualizados por meio da API e do oposto.
@@ -43,19 +47,19 @@ Usando o [!UICONTROL Bulk Profile Update API], você pode enviar convenientement
 
 Para atualizar os dados do perfil em massa, crie um arquivo em lote. O arquivo de lote é um arquivo de texto com valores separados por vírgulas semelhante ao seguinte arquivo de amostra.
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
 >O parâmetro `batch=` é obrigatório e deve ser especificado no início do arquivo.
 
-Você faz referência a este arquivo na chamada de POST para [!DNL Target] servidores para processar o arquivo. Ao criar o arquivo de lote, considere o seguinte:
+Você faz referência a este arquivo na chamada POST para [!DNL Target] servidores para processar o arquivo. Ao criar o arquivo de lote, considere o seguinte:
 
 * A primeira linha do arquivo deve especificar cabeçalhos de coluna.
 * O primeiro cabeçalho deve ser um `pcId` ou `thirdPartyId`. Não há suporte para [!UICONTROL Marketing Cloud visitor ID]. [!UICONTROL pcId] é um visitorID gerado por [!DNL Target]. `thirdPartyId` é uma ID especificada pelo aplicativo cliente, que é passada para [!DNL Target] através de uma chamada de mbox como `mbox3rdPartyId`. Deve ser chamado aqui de `thirdPartyId`.
@@ -69,11 +73,11 @@ Você faz referência a este arquivo na chamada de POST para [!DNL Target] servi
 
 ## solicitação POST do HTTP
 
-Faça uma solicitação HTTP POST para [!DNL Target] servidores de borda para processar o arquivo. Este é um exemplo de solicitação HTTP POST para o arquivo batch.txt usando o comando curl:
+Faça uma solicitação POST HTTP para [!DNL Target] servidores de borda para processar o arquivo. Este é um exemplo de solicitação HTTP POST para o arquivo batch.txt usando o comando curl:
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 Em que:
 
@@ -81,7 +85,7 @@ BATCH.TXT é o nome do arquivo. CLIENTCODE é o código de cliente [!DNL Target]
 
 Se você não souber seu código de cliente, na interface de usuário do [!DNL Target], clique em **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**. O código de cliente é mostrado na seção [!UICONTROL Account Details].
 
-### Inspect a resposta
+### Inspecionar a resposta
 
 A API de perfis retorna o status de envio do lote para processamento, juntamente com um link em &quot;batchStatus&quot; para um URL diferente que mostra o status geral do trabalho em lote específico.
 
