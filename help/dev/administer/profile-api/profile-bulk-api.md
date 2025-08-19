@@ -4,9 +4,9 @@ description: Saiba como usar o  [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 8cab20a7842b0a05c5b2a845662a7ab5f60393bd
+source-git-commit: dae198fd8ef3fc8473ad31807c146802339b1832
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '917'
 ht-degree: 7%
 
 ---
@@ -26,9 +26,11 @@ Usando o [!UICONTROL Bulk Profile Update API], você pode enviar convenientement
 >
 >A versão 2 (v2) de [!DNL Bulk Profile Update API] é a versão atual. No entanto, [!DNL Target] continua a oferecer suporte à versão 1 (v1).
 >
->* **Implementações autônomas que não dependem do `ECID`, use a Versão 2**: se a sua implementação do [!DNL Target] usar o [!DNL Experience Cloud ID] (ECID) como um dos identificadores de perfil para visitantes anônimos, você não deverá usar `pcId` como a chave em um arquivo em lotes da Versão 2 (v2). O uso de `pcId` com a Versão 2 de [!DNL Bulk Profile Update API] destina-se a implementações [!DNL Target] independentes que não dependem de `ECID`.
+>* Se a sua implementação do [!DNL Target] usar [!DNL Experience Cloud ID] (ECID) como um dos identificadores de perfil para visitantes anônimos, não use `pcId` como a chave em um arquivo em lotes da Versão 2 (v2). O uso de `pcId` com v2 de [!DNL Bulk Profile Update API] destina-se apenas a implementações [!DNL Target] autônomas que não dependem da ECID.
 >
->* **Implementações que dependem de `thirdPartID`, usam a Versão 1**: implementações que usam `ECID` para identificação de perfil devem usar a Versão 1 (v1) da API se você quiser usar `pcId` como chave no arquivo de lote. Se sua implementação usar `thirdPartyId` para identificação de perfil, a Versão 2 (v2) será recomendada com `thirdPartyId` como chave.
+>* Se sua implementação usar ECID para identificação de perfil e você quiser usar `pcId` como a chave no arquivo de lote, use a Versão 1 (v1) da API.
+>
+>* Se sua implementação usar `thirdPartyId` para identificação de perfil, use a Versão 2 (v2) da API com `thirdPartyId` como a chave.
 
 ## Benefícios do [!UICONTROL Bulk Profile Update API]
 
@@ -47,13 +49,13 @@ Usando o [!UICONTROL Bulk Profile Update API], você pode enviar convenientement
 
 Para atualizar os dados do perfil em massa, crie um arquivo em lote. O arquivo de lote é um arquivo de texto com valores separados por vírgulas semelhante ao seguinte arquivo de amostra.
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -75,9 +77,9 @@ Você faz referência a este arquivo na chamada POST para [!DNL Target] servidor
 
 Faça uma solicitação POST HTTP para [!DNL Target] servidores de borda para processar o arquivo. Este é um exemplo de solicitação HTTP POST para o arquivo batch.txt usando o comando curl:
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 Em que:
 
