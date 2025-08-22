@@ -4,9 +4,9 @@ description: Trabalhe com [!UICONTROL Adobe Client Care] para implementar o supo
 title: Como usar CNAME no Target?
 feature: Privacy & Security
 exl-id: 5709df5b-6c21-4fea-b413-ca2e4912d6cb
-source-git-commit: f894122217529cb40369c003a3b4ed5419fb0505
+source-git-commit: 353597cbbd3478e9598bd42303619440b3b478fd
 workflow-type: tm+mt
-source-wordcount: '1582'
+source-wordcount: '1580'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Instruções para trabalhar com [!DNL Adobe Client Care] para implementar o supo
    >
    >A autoridade de certificação da Adobe, DigiCert, não pode emitir um certificado até que esta etapa seja concluída. Portanto, a Adobe não pode atender à sua solicitação para uma implementação CNAME até que essa etapa seja concluída.
 
-1. [Preencha este formulário](assets/FPC_Request_Form.xlsx) e inclua-o ao [abrir um tíquete de Atendimento ao Cliente do Adobe solicitando suporte para CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=pt-BR&#reference_ACA3391A00EF467B87930A450050077C):
+1. [Preencha este formulário](assets/FPC_Request_Form.xlsx) e inclua-o ao [abrir um tíquete de Atendimento ao Cliente do Adobe solicitando suporte para CNAME](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?#reference_ACA3391A00EF467B87930A450050077C):
 
    * Código de cliente [!DNL Adobe Target]:
    * Nomes de host do certificado SSL (exemplo: `target.example.com target.example.org`):
@@ -96,8 +96,6 @@ Todos os certificados são RSA SHA-256 e as chaves são RSA 2048-bit, por padrã
 Use o seguinte conjunto de comandos (no terminal de linha de comando macOS ou Linux, usando bash e curl >=7.49):
 
 1. Copie e cole esta função bash no terminal ou cole a função no arquivo de script de inicialização bash (geralmente `~/.bash_profile` ou `~/.bashrc`) para que a função esteja disponível nas sessões de terminal:
-
-   +++ Ver detalhes
 
    ```bash {line-numbers="true"}
     function adobeTargetCnameValidation {
@@ -243,15 +241,13 @@ Use o seguinte conjunto de comandos (no terminal de linha de comando macOS ou Li
    }
    ```
 
-   +++
-
 1. Cole este comando (substituindo `target.example.com` pelo seu nome de host):
 
    ```adobeTargetCnameValidation target.example.com```
 
 Se a implementação estiver pronta, você verá a saída como abaixo. A parte importante é que todas as linhas de status de validação mostram `✅` em vez de `🚫`. Cada fragmento CNAME da borda do Target deve mostrar `CN=target.example.com`, que corresponde ao nome de host principal no certificado solicitado (nomes de host SAN adicionais no certificado não são impressos nesta saída).
 
-    +++ Ver detalhes
+    ++ Ver detalhes
     
     &quot;bash {line-numbers=&quot;true&quot;}
     $ adobeTargetCnameValidation
@@ -267,7 +263,7 @@ Se a implementação estiver pronta, você verá a saída como abaixo. A parte i
     ✅ target.example.com passa na validação de fragmento para os 7 fragmentos de borda a seguir:==== ✅ target.example.com [fragmento de borda: IRL1-pool.data.adobedc.net] =====
     * Data de vencimento: 20 23 de fevereiro:59:59 2026 GMT
     * emissor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
-    * assunto: C=US; ST=Califórnia; L=San Jose; O=Adobe Systems Incorporated; CN=target.example&rbrace; [edge shard: IND1-pool.data.adobedc.net] =====✅* data de expiração: 20 de fevereiro de 23
+    * assunto: C=US; ST=Califórnia; L=San Jose; O=Adobe Systems Incorporated; CN=target.example} [edge shard: IND1-pool.data.adobedc.net] =====✅* data de expiração: 20 de fevereiro de 23
     59 de 2026 GMT:59:* emissor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
     * assunto: C=US; ST=Califórnia; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== 
      target.example.com [fragmento de borda: SIN-pool.data.adobedc.net] ====✅* data de expiração: 20 23 de fevereiro
