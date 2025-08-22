@@ -315,7 +315,7 @@ Use o seguinte conjunto de comandos (no terminal de linha de comando macOS ou Li
        🔎  DNS CNAME record:  https://whatsmydns.net/#CNAME/target.example.com 
    ```
 
-+++
+   +++
 
 >[!NOTE]
 >
