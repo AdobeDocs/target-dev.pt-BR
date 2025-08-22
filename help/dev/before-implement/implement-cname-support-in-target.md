@@ -247,7 +247,7 @@ Use o seguinte conjunto de comandos (no terminal de linha de comando macOS ou Li
 
 Se a implementação estiver pronta, você verá a saída como abaixo. A parte importante é que todas as linhas de status de validação mostram `✅` em vez de `🚫`. Cada fragmento CNAME da borda do Target deve mostrar `CN=target.example.com`, que corresponde ao nome de host principal no certificado solicitado (nomes de host SAN adicionais no certificado não são impressos nesta saída).
 
-    ++ Ver detalhes
+    +++ Ver detalhes
     
     &quot;bash {line-numbers=&quot;true&quot;}
     $ adobeTargetCnameValidation
@@ -263,7 +263,7 @@ Se a implementação estiver pronta, você verá a saída como abaixo. A parte i
     ✅ target.example.com passa na validação de fragmento para os 7 fragmentos de borda a seguir:==== ✅ target.example.com [fragmento de borda: IRL1-pool.data.adobedc.net] =====
     * Data de vencimento: 20 23 de fevereiro:59:59 2026 GMT
     * emissor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
-    * assunto: C=US; ST=Califórnia; L=San Jose; O=Adobe Systems Incorporated; CN=target.example} [edge shard: IND1-pool.data.adobedc.net] =====✅* data de expiração: 20 de fevereiro de 23
+    * assunto: C=US; ST=Califórnia; L=San Jose; O=Adobe Systems Incorporated; CN=target.example&rbrace; [edge shard: IND1-pool.data.adobedc.net] =====✅* data de expiração: 20 de fevereiro de 23
     59 de 2026 GMT:59:* emissor: C=US; O=DigiCert Inc; CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1
     * assunto: C=US; ST=Califórnia; L=San Jose; O=Adobe Systems Incorporated; CN=target.example.com===== 
      target.example.com [fragmento de borda: SIN-pool.data.adobedc.net] ====✅* data de expiração: 20 23 de fevereiro
