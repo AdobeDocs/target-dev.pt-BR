@@ -36,5 +36,5 @@ Para ler e entender a documentação de referência do SDK do .NET, comece em [I
 
 ## Arquivos Source
 
-* [ Repositório Github do SDK do .NET](https://github.com/adobe/target-dotnet-sdk)
+* [&#x200B; Repositório Github do SDK do .NET](https://github.com/adobe/target-dotnet-sdk)
 * [Versões](https://github.com/adobe/target-dotnet-sdk/releases)
