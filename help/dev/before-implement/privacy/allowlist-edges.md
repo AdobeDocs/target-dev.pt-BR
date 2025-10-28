@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Informações e uma lista atualizada de hosts para ajudá-lo a incluir na lista de permissões [!DNL Adobe Target] bordas.
 
-Uma borda é uma arquitetura de fornecimento distribuída geograficamente que garante tempos de resposta ideais para usuários finais que solicitem o conteúdo, independentemente de sua localização. Cada nó de borda tem todas as informações necessárias para responder à solicitação de conteúdo do usuário e rastrear os dados de análise dessa solicitação. As solicitações do usuário são roteadas para o nó de borda mais próximo. Para obter mais informações, consulte [A rede de borda](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
+Uma borda é uma arquitetura de fornecimento distribuída geograficamente que garante tempos de resposta ideais para usuários finais que solicitem o conteúdo, independentemente de sua localização. Cada nó de borda tem todas as informações necessárias para responder à solicitação de conteúdo do usuário e rastrear os dados de análise dessa solicitação. As solicitações do usuário são roteadas para o nó de borda mais próximo. Para obter mais informações, consulte [A rede de borda](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=pt-BR#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
 
 Você pode incluir na lista de permissões [!DNL Target] nós de borda, se desejar.
 
@@ -23,7 +23,7 @@ Você pode incluir na lista de permissões [!DNL Target] nós de borda, se desej
 >
 >Incluir na lista de permissões Além de converter os endereços IP NAT (Network Address Translation, tradução de endereço de rede) de [!DNL Target] bordas e [!DNL Target] endereços IP de borda discutidos no artigo, você também deve incluir na lista de permissões todos os [!DNL Adobe Analytics] blocos de endereço IP.
 >
->Para obter mais informações, consulte [Todos os blocos de endereço IP do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=en#all-adobe-analytics-ip-address-blocks){target=_blank} na documentação das *notas técnicas do Adobe Analytics*.
+>Para obter mais informações, consulte [Todos os blocos de endereço IP do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=pt-BR#all-adobe-analytics-ip-address-blocks){target=_blank} na documentação das *notas técnicas do Adobe Analytics*.
 >
 >A infraestrutura do [!DNL Adobe Target] está sendo atualizada e os clientes que desejam incluir na lista de permissões endereços devem usar ambos os conjuntos de IPs. Se isso não for feito, os clientes que usam implementações do lado do servidor ou híbridas nas quais as chamadas da API do Target para busca de experiências são originadas de uma rede atrás de um firewall configurado para usar um incluo na lista de permissões.
 
