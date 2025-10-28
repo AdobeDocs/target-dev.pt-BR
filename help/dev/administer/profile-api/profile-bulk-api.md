@@ -4,9 +4,9 @@ description: Saiba como usar o  [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 38ed32560170e5a8f472aa191bb5a24d4e13cde7
+source-git-commit: 76b4add132d3e98f241b887dbce4170c90445be2
 workflow-type: tm+mt
-source-wordcount: '1078'
+source-wordcount: '1076'
 ht-degree: 6%
 
 ---
@@ -49,13 +49,13 @@ Usando o [!UICONTROL Bulk Profile Update API], você pode enviar convenientement
 
 Para atualizar os dados do perfil em massa, crie um arquivo em lote. O arquivo de lote é um arquivo de texto com valores separados por vírgulas semelhante ao seguinte arquivo de amostra.
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -77,9 +77,9 @@ Você faz referência a este arquivo na chamada POST para [!DNL Target] servidor
 
 Faça uma solicitação POST HTTP para [!DNL Target] servidores de borda para processar o arquivo. Este é um exemplo de solicitação HTTP POST para o arquivo batch.txt usando o comando curl:
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 Em que:
 
@@ -145,7 +145,7 @@ http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473
 </response>
 ```
 
-## Esclarecimento sobre o tratamento de valores vazios no [!DNL Bulk Profile Update API]
+## Tratando valores vazios no [!DNL Bulk Profile Update API]
 
 Ao usar o [!DNL Target] [!DNL Bulk Profile Update API] (v1 ou v2), é importante entender como o sistema lida com valores de atributo ou parâmetro vazios.
 
@@ -153,7 +153,7 @@ Ao usar o [!DNL Target] [!DNL Bulk Profile Update API] (v1 ou v2), é importante
 
 Enviar valores vazios (&quot;&quot;, campos nulos ou ausentes) para parâmetros ou atributos existentes não redefine ou exclui esses valores no armazenamento de perfil. Isto é por design.
 
-Valores vazios são ignorados: a API filtra valores vazios durante o processamento para evitar atualizações desnecessárias ou sem sentido.
+**Valores vazios são ignorados**: a API filtra valores vazios durante o processamento para evitar atualizações desnecessárias ou sem sentido.
 
 **Sem limpeza de dados existentes**: se um parâmetro já tiver um valor, o envio de um valor vazio o deixará inalterado.
 
