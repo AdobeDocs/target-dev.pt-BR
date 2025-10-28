@@ -4,9 +4,9 @@ description: Saiba como usar o  [!DNL Adobe Target] [!UICONTROL Bulk Profile Upd
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-source-git-commit: 76b4add132d3e98f241b887dbce4170c90445be2
+source-git-commit: 892de7c241a165b55a5cf85ce8f472ad8e200ac3
 workflow-type: tm+mt
-source-wordcount: '1076'
+source-wordcount: '1086'
 ht-degree: 6%
 
 ---
@@ -49,13 +49,13 @@ Usando o [!UICONTROL Bulk Profile Update API], você pode enviar convenientement
 
 Para atualizar os dados do perfil em massa, crie um arquivo em lote. O arquivo de lote é um arquivo de texto com valores separados por vírgulas semelhante ao seguinte arquivo de amostra.
 
-``` ```
+``````
 batch=pcId,param1,param2,param3,param4
 123,value1
 124,value1,,,value4
 125,,value2
 126,value1,value2,value3,value4
-``` ```
+``````
 
 >[!NOTE]
 >
@@ -67,7 +67,7 @@ Você faz referência a este arquivo na chamada POST para [!DNL Target] servidor
 * O primeiro cabeçalho deve ser um `pcId` ou `thirdPartyId`. Não há suporte para [!UICONTROL Marketing Cloud visitor ID]. [!UICONTROL pcId] é um visitorID gerado por [!DNL Target]. `thirdPartyId` é uma ID especificada pelo aplicativo cliente, que é passada para [!DNL Target] através de uma chamada de mbox como `mbox3rdPartyId`. Deve ser chamado aqui de `thirdPartyId`.
 * Os parâmetros e valores especificados no arquivo de lote devem ser codificados por URL usando UTF-8 por motivos de segurança. Os parâmetros e valores podem ser encaminhados para outros nós de borda para processamento por meio de solicitações HTTP.
 * Os parâmetros devem estar somente no formato `paramName`. Os parâmetros são exibidos em [!DNL Target] como `profile.paramName`.
-* Se você estiver usando [!UICONTROL Bulk Profile Update API] v2, não precisará especificar todos os valores de parâmetro para cada `pcId`. Perfis são criados para qualquer `pcId` ou `mbox3rdPartyId` que não seja encontrado em [!DNL Target]. Se você estiver usando a v1, os perfis não serão criados para pcIds ou mbox3rdPartyIds ausentes.
+* Se você estiver usando [!UICONTROL Bulk Profile Update API] v2, não precisará especificar todos os valores de parâmetro para cada `pcId`. Perfis são criados para qualquer `pcId` ou `mbox3rdPartyId` que não seja encontrado em [!DNL Target]. Se você estiver usando a v1, os perfis não serão criados para pcIds ou mbox3rdPartyIds ausentes. Para obter mais informações, consulte [Manuseio de valores vazios no [!DNL Bulk Profile Update API]](#empty) abaixo.
 * O tamanho do arquivo em lote deve ser menor que 50 MB. Além disso, o número total de linhas não deve exceder 500 mil. Esse limite garante que os servidores não sejam inundados com muitas solicitações.
 * Você pode enviar vários arquivos. No entanto, a soma total das linhas de todos os arquivos enviados em um dia não deve exceder um milhão para cada cliente.
 * Não há restrição quanto ao número de atributos que você pode fazer upload. No entanto, o tamanho total dos dados do perfil externo, que incluem Atributos do cliente, API do perfil, parâmetros de perfil na mbox e saída do script de perfil, não deve exceder 64 KB.
@@ -77,9 +77,9 @@ Você faz referência a este arquivo na chamada POST para [!DNL Target] servidor
 
 Faça uma solicitação POST HTTP para [!DNL Target] servidores de borda para processar o arquivo. Este é um exemplo de solicitação HTTP POST para o arquivo batch.txt usando o comando curl:
 
-``` ```
+``````
 curl -X POST --data-binary @BATCH.TXT http://CLIENTCODE.tt.omtrdc.net/m2/CLIENTCODE/v2/profile/batchUpdate
-``` ```
+``````
 
 Em que:
 
@@ -145,7 +145,7 @@ http://mboxedge45.tt.omtrdc.net/m2/demo/profile/batchStatus?batchId=demo-1701473
 </response>
 ```
 
-## Tratando valores vazios no [!DNL Bulk Profile Update API]
+## Tratando valores vazios no [!DNL Bulk Profile Update API] {#empty}
 
 Ao usar o [!DNL Target] [!DNL Bulk Profile Update API] (v1 ou v2), é importante entender como o sistema lida com valores de atributo ou parâmetro vazios.
 
@@ -153,11 +153,11 @@ Ao usar o [!DNL Target] [!DNL Bulk Profile Update API] (v1 ou v2), é importante
 
 Enviar valores vazios (&quot;&quot;, campos nulos ou ausentes) para parâmetros ou atributos existentes não redefine ou exclui esses valores no armazenamento de perfil. Isto é por design.
 
-**Valores vazios são ignorados**: a API filtra valores vazios durante o processamento para evitar atualizações desnecessárias ou sem sentido.
+* **Valores vazios são ignorados**: a API filtra valores vazios durante o processamento para evitar atualizações desnecessárias ou sem sentido.
 
-**Sem limpeza de dados existentes**: se um parâmetro já tiver um valor, o envio de um valor vazio o deixará inalterado.
+* **Sem limpeza de dados existentes**: se um parâmetro já tiver um valor, o envio de um valor vazio o deixará inalterado.
 
-**Lotes somente vazios são ignorados**: se um lote contiver apenas valores vazios ou nulos, ele será totalmente ignorado e nenhuma atualização será aplicada.
+* **Lotes somente vazios são ignorados**: se um lote contiver apenas valores vazios ou nulos, ele será totalmente ignorado e nenhuma atualização será aplicada.
 
 ### Observações adicionais
 
