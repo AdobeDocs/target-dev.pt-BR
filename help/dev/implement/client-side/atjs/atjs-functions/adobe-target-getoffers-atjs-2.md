@@ -4,7 +4,7 @@ description: Use a função [!UICONTROL adobe.target.getOffers()] e suas opçõe
 title: Como faço para usar a função [!UICONTROL adobe.target.getOffers()]?
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '1317'
 ht-degree: 62%
@@ -35,7 +35,7 @@ Essa função permite que você recupere várias ofertas passando em várias mbo
 | Nome do campo | Obrigatório? | Limitações | Descrição |
 | --- | --- | --- | --- |
 | solicitação > id | Não |  | Um de `tntId`, `thirdPartyId` ou `marketingCloudVisitorId` é obrigatório. |
-| Solicitação > id > thirdPartyId | Não | Tamanho máximo = 128. |  |  |
+| Solicitação > id > thirdPartyId | Não | Tamanho máximo = 128. |  |
 | Request > experienceCloud | Não |  |  |
 | Request > experienceCloud > analytics | Não |  | Integração do Adobe Analytics |
 | Request > experienceCloud > analytics > logging | Não | O seguinte deve ser implementado na página:<ul><li>Serviço de ID de visitante</li><li>AppMeasurement.js</li></ul> | Os seguintes valores são suportados:<P>**client_side**: quando especificado, uma carga de análise será retornada ao chamador que deve ser usada para enviar a [!UICONTROL Adobe Analytics] por meio de [!UICONTROL Data Insertion API].<P>**server_side**: esse é o valor padrão em que o back-end do [!DNL Target] e do [!DNL Analytics] usará a SDID para unir as chamadas para fins de relatório. |
@@ -61,7 +61,7 @@ Essa função permite que você recupere várias ofertas passando em várias mbo
 | Solicitação > executar > pageLoad > ordem > total | Não | `>=` 0. | Recupere as ofertas com os totais da ordem especificados quando a página for carregada. |
 | Solicitação > executar > pageLoad > ordem > purchasedProductIds | Não | Nenhum valor em branco.<P>Comprimento máximo de cada valor: 50.<P>Concatenado e separado por vírgula.<P>Tamanho total das IDs de produto: `<=` 250. | Recupere as ofertas com as IDs do produto adquirido especificadas quando a página for carregada. |
 | Solicitação > executar > mboxes | Não | Tamanho máximo = 50.<P>Nenhum elemento nulo. |  |
-| Solicitação > executar > mboxes > mbox | Sim | Não deixar em branco.<P>Nenhum sufixo &#39;-clicado&#39;.<P>Tamanho máximo = 250.<P>Caracteres permitidos: `'-, ._\/=:;&!@#$%^&*()_+|?~[]{}'` | Nome da mbox. |
+| Solicitação > executar > mboxes > mbox | Sim | Não deixar em branco.<P>Nenhum sufixo &#39;-clicado&#39;.<P>Tamanho máximo = 250.<P>Caracteres permitidos: `'-, ._\/=:;&!@#$%^&*()_+|?~[]{}'`\|Nome da mbox. |
 | Solicitação > executar > mboxes > mbox > índice | Sim | Não nulo.<P>Exclusivo.<P>`>=` 0. | Observe que o índice não representa a ordem em que as mboxes serão processadas. Da mesma forma que em uma página da Web com diversas mboxes regionais, a ordem em que serão processadas não pode ser especificada. |
 | Solicitação > executar > mboxes > mbox > parâmetros | Não | Contagem máxima = 50.<P>Nome não vazio.<P>Comprimento do nome `<=` 128.<P>Aceita somente valores de string.<P>Comprimento do valor `<=` 5000.<P>O nome não deve começar com &quot;perfil&quot;.<P>Nomes não permitidos: &quot;orderId&quot;, &quot;orderTotal&quot;, &quot;productPurchasedId&quot;. | Recupere as ofertas de determinada mbox com os parâmetros especificados. |
 | Solicitação > executar > mboxes > mbox > profileParameters | Não | Contagem máxima = 50.<P>Nome não vazio.<P>Comprimento do nome `<=` 128.<P>Aceita somente valores de string.<P>Comprimento do valor `<=`256.<P>O nome não deve começar com &quot;perfil&quot;. | Recupere as ofertas de determinada mbox com os parâmetros do perfil especificados. |

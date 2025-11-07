@@ -1,9 +1,9 @@
 ---
-title: Inicialize o Python SDK usando o método de criação
-description: Saiba como usar o método de criação para inicializar o Python SDK e instanciar o [!UICONTROL TargetClient] para fazer chamadas para  [!DNL Adobe Target]  para experimentos e experiências personalizadas.
+title: Inicializar o Python SDK usando o método de criação
+description: Saiba como usar o método de criação para inicializar o Python SDK e instanciar o [!UICONTROL TargetClient] para fazer chamadas para  [!DNL Adobe Target] experiências e experiências personalizadas.
 feature: APIs/SDKs
 exl-id: 3e231e8e-696d-45c7-b733-79bf99da5bec
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '271'
 ht-degree: 17%
@@ -32,9 +32,9 @@ TargetClient.create(options)
 | cliente | str | Sim | None | [!UICONTROL Adobe Target client ID] |
 | organization_id | str | Sim | None | [!UICONTROL Experience Cloud Organization ID] |
 | timeout | int | Não | 3000 | Tempo limite em milissegundos |
-| server_domain | str | Não | `client.tt.omtrdc.net` |  | Substitui o nome de host padrão |
+| server_domain | str | Não | `client.tt.omtrdc.net` | Substitui o nome de host padrão |
 | seguro | bool | Não | true | Não definido para impor o esquema HTTP |
-| logger | objeto | Não | Agente de informações |  | Substitui o agente de log INFO padrão |
+| logger | objeto | Não | Agente de informações | Substitui o agente de log INFO padrão |
 | target_location_hint | str | Não | None | [!DNL Target] dica de localização |
 | property_token | str | Não | None | Token de propriedade [!DNL Target]. Se especificado aqui, todas as chamadas get_offers usarão esse valor. |
 | método_de_decisão | str | Não | lado do servidor | Determina qual método de decisão usar ([no dispositivo](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md), no lado do servidor, híbrido) |

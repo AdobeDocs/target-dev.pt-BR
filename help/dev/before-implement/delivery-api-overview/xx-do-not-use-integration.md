@@ -2,7 +2,7 @@
 title: Integração com o Experience Cloud
 description: Integração com o Experience Cloud
 keywords: api de entrega
-source-git-commit: f16903556954d2b1854acd429f60fbf6fc2920de
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 7%
@@ -26,7 +26,7 @@ Quando uma chamada da API de entrega do Target é acionada no servidor, o Adobe 
 O Adobe Target pode encaminhar automaticamente a carga do Analytics para o Adobe Analytics por meio do lado do servidor se os seguintes identificadores forem fornecidos:
 
 1. `supplementalDataId` - A ID usada para compilar entre o Adobe Analytics e o Adobe Target
-1. `trackingServer` - O servidor do Adobe Analytics Para que o Adobe Target e o Adobe Analytics compilem corretamente os dados, o mesmo `supplementalDataId` precisa ser passado para o Adobe Target e o Adobe Analytics.
+1. `trackingServer` - O Adobe Analytics Server Para que o Adobe Target e o Adobe Analytics compilem os dados corretamente, o mesmo `supplementalDataId` precisa ser passado para o Adobe Target e o Adobe Analytics.
 
 ```
 curl -X POST \
@@ -189,7 +189,7 @@ https://{datacollectionhost.sc.omtrdc.net}/b/ss/{rsid}/0/CODEVERSION?pe=tnt&tnta
 | `rsid` | Sim | A ID do conjunto de relatórios |
 | `pe` | Sim | Evento de página. Sempre definida como `tnt` |
 | `tnta` | Sim | Carga do Analytics retornada pelo servidor de Destino em `analytics` -> `payload` -> `tnta` |
-| `mid` | ID de visitante da Marketing Cloud |
+| `mid` | ID de visitante da Marketing Cloud |  |
 
 ### Valores de cabeçalho obrigatórios
 
@@ -209,9 +209,9 @@ Os segmentos do Adobe Audience Manager (AAM) também podem ser aproveitados por 
 
 | Nome do campo | Obrigatório | Descrição |
 | --- | --- | --- |
-| `locationHint` | Sim | A DCS Location Hint é usada para determinar qual terminal DCS AAM deve ser acessado para recuperar o perfil. Deve ser >= 1. |
+| `locationHint` | Sim | A DCS Location Hint é usada para determinar qual terminal DCS da AAM deve ser acessado para recuperar o perfil. Deve ser >= 1. |
 | `marketingCloudVisitorId` | Sim | ID de visitante da Marketing Cloud |
-| `blob` | Sim | AAM Blob é usado para enviar dados adicionais para o AAM. Não pode estar em branco e seu tamanho &lt;= 1024. |
+| `blob` | Sim | O AAM Blob é usado para enviar dados adicionais para o AAM. Não pode estar em branco e seu tamanho &lt;= 1024. |
 
 ```
 curl -X POST \

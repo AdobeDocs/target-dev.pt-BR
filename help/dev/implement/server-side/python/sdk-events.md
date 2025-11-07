@@ -3,14 +3,14 @@ title: Inscrever-se em eventos no  [!DNL Adobe Target] Python SDK
 description: Saiba como assinar vários eventos que ocorrem no Python SDK usando o objeto [!UICONTROL OnDeviceDecisioningHandler].
 feature: APIs/SDKs
 exl-id: 4e32e3b5-6072-4703-b09d-abb467aa1304
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '165'
 ht-degree: 3%
 
 ---
 
-# Eventos do SDK (Python)
+# Eventos da SDK (Python)
 
 ## Descrição
 
@@ -22,7 +22,7 @@ Quando a função `callback` é chamada, um objeto de evento é transmitido. Cad
 
 | Nome do evento (tipo) | Descrição | Propriedades adicionais do evento |
 | --- | --- | --- |
-| client_ready | Emitido quando o artefato é baixado e o SDK está pronto para chamadas get_offers. Recomendado ao usar | no dispositivo. | None |
+| client_ready | Emitido quando o artefato é baixado e o SDK está pronto para chamadas get_offers. Recomendado ao usar o método de decisão no dispositivo. | None |
 | artifact_download_succeeded | Emitido sempre que um novo artefato é baixado. | artifact_payload, artifact_location |
 | artifact_download_failed | Emitido sempre que ocorre falha no download de um artefato. | artifact_location, erro |
 

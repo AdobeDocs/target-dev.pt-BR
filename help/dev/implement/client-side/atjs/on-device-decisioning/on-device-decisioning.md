@@ -4,7 +4,7 @@ description: Saiba como executar o [!UICONTROL on-device decisioning] com a bibl
 title: Como a Decisão no dispositivo funciona com a biblioteca at.js de JavaScript?
 feature: at.js
 exl-id: bd0e062f-c259-46f3-adba-e380af058ac8
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '3478'
 ht-degree: 4%
@@ -13,7 +13,7 @@ ht-degree: 4%
 
 # [!UICONTROL On-device decisioning] para at.js
 
-A partir da versão 2.5.0, a at.js oferece [!UICONTROL on-device decisioning]. O [!UICONTROL On-device decisioning] permite que você armazene em cache suas atividades de [Teste A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=pt-BR) e [Direcionamento de experiência](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=pt-BR) (XT) no navegador para executar a decisão na memória sem uma solicitação de rede de bloqueio para o Edge Network [!DNL Adobe Target].
+A partir da versão 2.5.0, a at.js oferece [!UICONTROL on-device decisioning]. O [!UICONTROL On-device decisioning] permite que você armazene em cache suas atividades de [Teste A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html) e [Direcionamento de experiência](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html) (XT) no navegador para executar a decisão na memória sem uma solicitação de bloqueio de rede para o Edge Network [!DNL Adobe Target].
 
 >[!NOTE]
 >
@@ -28,7 +28,7 @@ Os benefícios do [!UICONTROL on-device decisioning] incluem:
 * **Proporcione decisões e experiências extremamente rápidas.** A classificação e a decisão são executadas na memória e no navegador para evitar o bloqueio de solicitações de rede.
 * **Aprimorar o desempenho do aplicativo.** Execute experimentos e forneça personalização aos seus clientes e usuários sem comprometer as experiências do usuário final.
 * **Melhore A Pontuação De Qualidade Do Site Do Google.** Com as decisões ocorrendo na memória, melhore a pontuação da Qualidade do Site do Google da sua empresa online para torná-la mais visível aos consumidores.
-* **Aprenda com a análise em tempo real.** Obtenha insights do desempenho da sua atividade em tempo real através dos relatórios do [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR) (A4T). O A4T permite que você mude sua estratégia em momentos críticos.
+* **Aprenda com a análise em tempo real.** Obtenha insights do desempenho da sua atividade em tempo real através dos relatórios do [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T). O A4T permite que você mude sua estratégia em momentos críticos.
 
 ## Recursos compatíveis
 
@@ -56,11 +56,11 @@ Com [!UICONTROL on-device decisioning], [!DNL Target] introduz uma nova configur
 
 Somente no lado do servidor é o método de decisão padrão definido imediatamente quando a at.js 2.5.0+ é implementada e implantada em suas propriedades da Web.
 
-Usar somente no lado do servidor como configuração padrão significa que todas as decisões são tomadas na rede de borda [!DNL Target], o que envolve uma chamada de servidor de bloqueio. Essa abordagem pode apresentar latência incremental, mas também oferece benefícios significativos, como a capacidade de aplicar os recursos de aprendizado de máquina do [!DNL Target], que incluem as atividades de [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=pt-BR), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=pt-BR) (AP) e [Direcionamento automático](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=pt-BR).
+Usar somente no lado do servidor como configuração padrão significa que todas as decisões são tomadas na rede de borda [!DNL Target], o que envolve uma chamada de servidor de bloqueio. Essa abordagem pode apresentar latência incremental, mas também oferece benefícios significativos, como a capacidade de aplicar os recursos de aprendizado de máquina do [!DNL Target], que incluem as atividades de [Recomendações](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) e [Direcionamento automático](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html).
 
 Além disso, aprimorar suas experiências personalizadas usando o perfil de usuário do [!DNL Target], que é mantido em sessões e canais, pode trazer resultados significativos para sua empresa.
 
-Por fim, somente no lado do servidor permite usar a Adobe Experience Cloud e refinar públicos-alvo que podem ser direcionados por meio de segmentos Audience Manager e Adobe Analytics.
+Por fim, somente no lado do servidor permite usar o Adobe Experience Cloud e refinar públicos-alvo que podem ser direcionados por meio de segmentos do Audience Manager e do Adobe Analytics.
 
 O diagrama a seguir ilustra a interação entre seu visitante, o navegador, a at.js 2.5.0+ e a rede Edge [!DNL Adobe Target]. Este diagrama de fluxo captura novos visitantes e visitantes recorrentes.
 
@@ -72,7 +72,7 @@ A lista a seguir corresponde aos números no diagrama:
 
 | Etapa | Descrição |
 | --- | --- |
-| 1 | A ID de visitante do Experience Cloud foi recuperada do [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR&). |
+| 1 | A ID de visitante da Experience Cloud foi recuperada do [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?). |
 | 2 | A biblioteca at.js é carregada de modo síncrono e oculta o corpo do documento.<br />   A biblioteca at.js também pode ser carregada de forma assíncrona com uma opção que oculta previamente o trecho implementado na página. |
 | 3 | A biblioteca at.js oculta o corpo para evitar cintilação. |
 | 4 | É feita uma solicitação de carregamento de página que inclui todos os parâmetros configurados, como (ECID, ID do cliente, Parâmetros personalizados, Perfil do usuário e assim por diante). |
@@ -111,7 +111,7 @@ A lista a seguir corresponde aos números no diagrama:
 
 | Etapa | Descrição |
 | --- | --- |
-| 1 | A ID de visitante do Experience Cloud foi recuperada do [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR). |
+| 1 | A ID de visitante da Experience Cloud foi recuperada do [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html). |
 | 2 | A biblioteca at.js é carregada de modo síncrono e oculta o corpo do documento.<br />A biblioteca at.js também pode ser carregada de forma assíncrona com uma opção que oculta previamente o trecho implementado na página. |
 | 3 | A biblioteca at.js oculta o corpo para evitar cintilação. |
 | 4 | A biblioteca at.js faz uma solicitação para recuperar o artefato de regra JSON do CDN Akamai mais próximo para o visitante. |
@@ -138,7 +138,7 @@ A lista a seguir corresponde aos números no diagrama:
 
 | Etapa | Descrição |
 | --- | --- |
-| 1 | A ID de visitante do Experience Cloud foi recuperada do [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR). |
+| 1 | A ID de visitante da Experience Cloud foi recuperada do [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html). |
 | 2 | A biblioteca at.js é carregada de modo síncrono e oculta o corpo do documento.<br />A biblioteca at.js também pode ser carregada de forma assíncrona com uma opção que oculta previamente o trecho implementado na página. |
 | 3 | A biblioteca at.js oculta o corpo para evitar cintilação. |
 | 4 | A biblioteca at.js interpreta o artefato da regra JSON e executa a decisão na memória para recuperar a experiência. |
@@ -157,7 +157,7 @@ Ao gerenciar atividades do [!UICONTROL on-device decisioning] e atividades do la
 
 O artefato de regras JSON inclui metadados para informar à at.js se uma mbox tem uma atividade do lado do servidor em execução ou uma atividade [!UICONTROL on-device decisioning]. Esse método de decisão garante que as atividades que você pretende entregar rapidamente sejam realizadas por meio do [!UICONTROL on-device decisioning] e, para atividades que exigem personalização mais avançada orientada por aprendizado de máquina, essas atividades são realizadas por meio da rede Edge [!DNL Adobe Target].
 
-O diagrama a seguir ilustra a interação entre seu visitante, o navegador, a at.js 2.5.0+, o Akamai CDN e o Edge Network [!DNL Adobe Target] para um novo visitante que visita sua página pela primeira vez. O argumento deste diagrama é que o artefato de regras JSON é baixado de forma assíncrona enquanto as decisões são tomadas por meio da rede Edge [!DNL Adobe Target].
+O diagrama a seguir ilustra a interação entre seu visitante, o navegador, a at.js 2.5.0+, o Akamai CDN e a Edge Network [!DNL Adobe Target] para um novo visitante que visita sua página pela primeira vez. O argumento deste diagrama é que o artefato de regras JSON é baixado de forma assíncrona enquanto as decisões são tomadas por meio da rede Edge [!DNL Adobe Target].
 
 Essa abordagem garante que o tamanho do artefato, que pode incluir muitas atividades, não influencie negativamente a latência da decisão. Baixar o artefato de regras JSON de forma síncrona e tomar a decisão posteriormente também pode ter efeitos adversos na latência e pode ser inconsistente. Portanto, o método de decisão híbrido é uma recomendação de prática recomendada para sempre fazer uma chamada do lado do servidor para a decisão de um novo visitante e, como o artefato de regras JSON, é armazenado em cache em paralelo. Para qualquer visita de página subsequente e visita de retorno, as decisões são tomadas a partir do cache e na memória por meio do artefato de regras JSON.
 
@@ -173,12 +173,12 @@ A lista a seguir corresponde aos números no diagrama:
 
 | Etapa | Descrição |
 | --- | --- |
-| 1 | A ID de visitante do Experience Cloud foi recuperada do [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR). |
+| 1 | A ID de visitante da Experience Cloud foi recuperada do [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html). |
 | 2 | A biblioteca at.js é carregada de modo síncrono e oculta o corpo do documento.<br />A biblioteca at.js também pode ser carregada de forma assíncrona com uma opção que oculta previamente o trecho implementado na página. |
 | 3 | A biblioteca at.js oculta o corpo para evitar cintilação. |
-| 4 | Uma solicitação de carregamento de página é feita ao Edge Network [!DNL Adobe Target], incluindo todos os parâmetros configurados, como (ECID, ID do cliente, Parâmetros personalizados, Perfil de usuário e assim por diante). |
+| 4 | Uma solicitação de carregamento de página é feita ao Edge Network [!DNL Adobe Target], incluindo todos os parâmetros configurados, como (ECID, ID do cliente, Parâmetros personalizados, Perfil do usuário e assim por diante). |
 | 5 | Em paralelo, a at.js faz uma solicitação para recuperar o artefato de regra JSON do CDN do Akamai mais próximo para o visitante. |
-| 6 | ([!DNL Adobe Target] Edge Network) Os scripts de perfil são executados e alimentados no Armazenamento de perfis. A Loja de perfis solicita públicos qualificados da Biblioteca de públicos-alvo (por exemplo, públicos-alvo compartilhados da Adobe Analytics, da Adobe Audience Manager e assim por diante). |
+| 6 | ([!DNL Adobe Target] Edge Network) Os scripts de perfil executam e, em seguida, fazem o feed no Repositório de Perfis. A Loja de perfis solicita públicos qualificados da Biblioteca de públicos-alvo (por exemplo, públicos-alvo compartilhados da Adobe Analytics, da Adobe Audience Manager e assim por diante). |
 | 7 | O Akamai CDN responde com o artefato de regra JSON. |
 | 8 | A Loja de perfis é usada para qualificação de público-alvo e classificação para filtrar atividades. |
 | 9 | O conteúdo resultante é selecionado depois que a experiência é determinada a partir das atividades [!DNL Target] ativas. |
@@ -203,7 +203,7 @@ A lista a seguir corresponde aos números no diagrama:
 
 | Etapa | Descrição |
 | --- | --- |
-| 1 | A ID de visitante do Experience Cloud foi recuperada do [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR). |
+| 1 | A ID de visitante da Experience Cloud foi recuperada do [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html). |
 | 2 | A biblioteca at.js é carregada de modo síncrono e oculta o corpo do documento.<br />A biblioteca at.js também pode ser carregada de forma assíncrona com uma opção que oculta previamente o trecho implementado na página. |
 | 3 | A biblioteca at.js oculta o corpo para evitar cintilação. |
 | 4 | Uma solicitação é feita para recuperar uma experiência. |
@@ -223,7 +223,7 @@ Para habilitar [!UICONTROL on-device decisioning]:
 
 >[!NOTE]
 >
->Você deve ter a [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=pt-BR) de Administrador ou Aprovador para habilitar ou desabilitar a opção On-Device Decisioning.
+>Você deve ter a [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) de Administrador ou Aprovador para habilitar ou desabilitar a opção On-Device Decisioning.
 
 1. Clique em **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]**.
 1. Em **[!UICONTROL Account details]**, deslize o botão **[!UICONTROL On-Device Decisioning]** para a posição &quot;ligado&quot;.
@@ -239,7 +239,7 @@ Depois de habilitar a opção Decisão no Dispositivo, o [!DNL Target] começa a
 
 >[!WARNING]
 >
->Habilite o botão de alternância antes de inicializar o SDK [!DNL Adobe Target] para usar [!UICONTROL on-device decisioning]. Os artefatos de regra precisam primeiro ser gerados e propagados para os CDNs do Akamai para que [!UICONTROL on-device decisioning] funcionem. A propagação pode levar de cinco a dez minutos para que o primeiro artefato de regra seja gerado e propagado para o CDN do Akamai.
+>Habilite o botão de alternância antes de inicializar o SDK [!DNL Adobe Target] para usar o [!UICONTROL on-device decisioning]. Os artefatos de regra precisam primeiro ser gerados e propagados para os CDNs do Akamai para que [!UICONTROL on-device decisioning] funcionem. A propagação pode levar de cinco a dez minutos para que o primeiro artefato de regra seja gerado e propagado para o CDN do Akamai.
 
 ## Como configurar o at.js 2.5.0+ para usar o [!UICONTROL on-device decisioning]?
 
@@ -334,6 +334,6 @@ Você pode filtrar todas as atividades que são [!UICONTROL on-device decisionin
 
    A primeira geração de artefatos de regras JSON pode levar até 10 minutos.
 
-1. Crie e ative um tipo de atividade [&#x200B; compatível com [!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) e verifique se ele é qualificado para [!UICONTROL on-device decisioning].
+1. Crie e ative um tipo de atividade [ compatível com [!UICONTROL on-device decisioning]](/help/dev/implement/client-side/atjs/on-device-decisioning/supported-features.md) e verifique se ele é qualificado para [!UICONTROL on-device decisioning].
 1. Defina o **[!UICONTROL Decisioning Method]** como **[!UICONTROL "Hybrid"]** ou **[!UICONTROL "On-device only"]** por meio da interface do usuário de configurações do at.js.
 1. Baixe e implante o At.js 2.5.0+ em suas páginas.

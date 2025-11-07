@@ -4,7 +4,7 @@ description: Saiba como o Adobe Target usa o user-agent e as Client Hints (Notas
 title: User Agent e Client Hints
 feature: at.js
 exl-id: e0d87d95-ee95-4ca9-8632-222ae1fb9a91
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 72%
@@ -136,7 +136,7 @@ Atualmente, os navegadores baseados em Chromium continuam a enviar o user-agent 
 
 Os seguintes casos de uso do Target requerem Client Hints:
 
-### Atributos do público
+### Atributos do público-alvo
 
 Se você usa públicos do Target e qualquer um dos atributos de público a seguir, o Target exige Client Hints para executar a segmentação correta:
 
@@ -175,7 +175,7 @@ As seções a seguir contêm mais informações sobre como enviar as Client Hint
 
 ### at.js versão 2.9.0 (ou posterior)
 
-A partir da at.js 2.9.0, as User Agent Client Hints serão coletadas automaticamente do navegador e enviadas para o Target quando `getOffer/getOffers()` for chamado. Por padrão, a at.js coleta apenas Client Hints de baixa entropia. Se estiver executando a segmentação de público ou usando scripts de perfil com base em dados da categoria de alta entropia descrita nas seções anteriores, será necessário configurar o at.js para coletar Client Hints de alta entropia do navegador em `targetGlobalSettings`.
+A partir da at.js 2.9.0, as User Agent Client Hints serão coletadas automaticamente do navegador e enviadas para o Target quando `getOffer/getOffers()` for chamado. Por padrão, a at.js coleta apenas Client Hints de baixa entropia. Se estiver executando a segmentação de público-alvo ou usando scripts de perfil com base em dados da categoria de alta entropia descrita nas seções anteriores, será necessário configurar o at.js para coletar Client Hints de alta entropia do navegador em `targetGlobalSettings`.
 
 ```
 window.targetGlobalSettings = { allowHighEntropyClientHints: true };

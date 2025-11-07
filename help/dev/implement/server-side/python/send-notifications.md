@@ -3,7 +3,7 @@ title: Enviar notificações de exibição ou clique para  [!DNL Adobe Target] u
 description: Saiba como usar sendNotifications() para enviar notificações de exibição ou clique em  [!DNL Adobe Target] para medição e relatórios.
 feature: APIs/SDKs
 exl-id: 03827b18-a546-4ec8-8762-391fcb3ac435
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '405'
 ht-degree: 8%
@@ -60,8 +60,8 @@ target_client.send_notifications(options)
 | target_cookie | dict | [!DNL Target] cookie |
 | target_location_hint_cookie | dict | Cookie de dica de localização [!DNL Target] |
 | analytics_details | list[AnalyticsResponse] | [!DNL Analytics] carga, em caso de uso de [!DNL Analytics] no lado do cliente |
-| trace |  | lista[dica] | Dados de rastreamento agregados para todas as mboxes/exibições de solicitação |
-| response_tokens | lista[dica] | Uma lista de [&#x200B; tokens &#x200B; resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=pt-BR) |
+| trace | lista[dica] | Dados de rastreamento agregados para todas as mboxes/exibições de solicitação |
+| response_tokens | lista[dica] | Uma lista de [ tokens &#x200B; resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
 | meta | dict | Metadados de decisão adicionais para uso com decisão no dispositivo |
 
 ## Exemplo

@@ -1,20 +1,20 @@
 ---
-title: Inicialize o SDK do .NET usando o método de criação
-description: Saiba como usar o método de criação para inicializar o SDK do Java e instanciar o [!UICONTROL TargetClient] para fazer chamadas para  [!DNL Adobe Target] experiências e experiências personalizadas.
+title: Inicializar o .NET SDK usando o método de criação
+description: Saiba como usar o método de criação para inicializar o Java SDK e instanciar o [!UICONTROL TargetClient] para fazer chamadas para  [!DNL Adobe Target] experiências e experiências personalizadas.
 feature: APIs/SDKs
 exl-id: 501010c3-22f4-49a8-b2ac-c7307232d180
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '350'
 ht-degree: 16%
 
 ---
 
-# Inicializar o SDK do .NET
+# Inicializar o .NET SDK
 
 ## Descrição
 
-Use o método `Create` para inicializar o SDK do .NET e instanciar o [!UICONTROL Target Client] para fazer chamadas para [!DNL Adobe Target] de experiências e experiências personalizadas.
+Use o método `Create` para inicializar o .NET SDK e instanciar o [!UICONTROL Target Client] para fazer chamadas para [!DNL Adobe Target] de experiências e experiências personalizadas.
 
 Ao usar a Injeção de Dependência .NET, basta adicionar o SDK na etapa de configuração do serviço, chamando `services.AddTargetLibrary()`; e inserir `ITargetClient targetClient` no construtor do aplicativo.
 
@@ -24,7 +24,8 @@ Depois disso, use o método `Initialize` do SDK para configurar o SDK, concluind
 
 `TargetClient` é criado usando `TargetClient.Create`.
 
-## C\#
+## C\
+#
 
 ```csharp {line-numbers="true"}
 TargetClient TargetClient.Create(TargetClientConfig clientConfig)
@@ -32,7 +33,8 @@ TargetClient TargetClient.Create(TargetClientConfig clientConfig)
 
 `ClientConfig` é criado usando ClientConfig.Builder.
 
-## C\#
+## C\
+#
 
 ```csharp {line-numbers="true"}
 TargetClientConfig.Builder TargetClientConfig.Builder()
@@ -47,7 +49,7 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 | Cliente | string | Sim | None | [!UICONTROL Target Client Id] |
 | OrganizationId | string | Sim | None | [!UICONTROL Experience Cloud Organization ID] |
 | Tempo limite | int | Não | 10000 | Tempo limite para todas as solicitações em milissegundos |
-| Proxy |  | WebProxy | Não | null | Proxy para todas as [!DNL Target] solicitações |
+| Proxy | WebProxy | Não | null | Proxy para todas as [!DNL Target] solicitações |
 | RetryPolicy | Política | Não | null | Tentar novamente a política para todas as solicitações [!DNL Target] |
 | AsyncRetryPolicy | AsyncPolicy | Não | null | Política de repetição assíncrona para todas as [!DNL Target] solicitações |
 | Logger | ILogger | Não | null | Usado para o log de depuração de [!DNL Target] solicitações e respostas |
@@ -66,7 +68,8 @@ TargetClientConfig.Builder TargetClientConfig.Builder()
 
 ## Exemplo
 
-## C\#
+## C\
+#
 
 ```csharp {line-numbers="true"}
 var targetClientConfig = new TargetClientConfig.Builder("acmeclient", "ABCDEF012345677890ABCDEF0@AdobeOrg")

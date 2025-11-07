@@ -4,7 +4,7 @@ description: Veja uma lista de funções que podem ser usadas com as versões 1.
 title: Quais funções posso usar com a at.js?
 feature: at.js
 exl-id: 1efed365-8a74-4c85-bdb1-8daaaf53d642
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '500'
 ht-degree: 58%
@@ -16,12 +16,12 @@ ht-degree: 58%
 Lista de funções que podem ser usadas com a biblioteca at.js de JavaScript do [!DNL Adobe Target]. Clique nos links na coluna Função para obter mais informações e exemplos.
 
 | Função | Detalhes |
-| --- | --- | 
+| --- | --- |
 | [[!UICONTROL adobe.target.getOffer(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffer.md) | Esta função envia uma solicitação para obter uma oferta [!DNL Target]. Use com `adobe.target.applyOffer()` para processar a resposta ou use sua própria manipulação de sucesso. |
 | [[!UICONTROL adobe.target.getOffers(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md)<P>(at.js 2.x) | Essa função permite que você recupere várias ofertas passando em várias mboxes. Além disso, várias ofertas podem ser recuperadas para todas as exibições em atividades ativas.<P>**Observação:** essa função foi introduzida com a at.js 2.x. Essa função não está disponível para a at.js versão 1.*x*. |
 | [[!UICONTROL adobe.target.applyOffer(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-applyoffer.md) | Esta função aplica o conteúdo de resposta. |
 | [[!UICONTROL adobe.target.applyOffers(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-applyoffers-atjs-2.md)<P>(at.js 2.x) | Essa função permite aplicar mais de uma oferta que foi recuperada por [!UICONTROL adobe.target.getOffers()].<P>**Observação:** essa função foi introduzida com a at.js 2.x. Essa função não está disponível para a at.js versão 1.*x*. |
-| [[!UICONTROL adobe.target.triggerView (viewName, options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)<P>(at.js 2.x) | Essa função pode ser chamada sempre que uma nova página é carregada ou quando um componente em uma página é renderizado novamente.<P> Esta função deve ser implementada para aplicativos de página única (SPA) para usar o [!UICONTROL Visual Experience Composer] (VEC) para criar atividades do [!UICONTROL A/B Test] e do [!UICONTROL Experience Targeting] (XT). |
+| [[!UICONTROL adobe.target.triggerView (viewName, options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)<P>(at.js 2.x) | Essa função pode ser chamada sempre que uma nova página é carregada ou quando um componente em uma página é renderizado novamente.<P> Esta função deve ser implementada para aplicativos de página única (SPAs) para usar o [!UICONTROL Visual Experience Composer] (VEC) para criar atividades do [!UICONTROL A/B Test] e do [!UICONTROL Experience Targeting] (XT). |
 | [[!UICONTROL adobe.target.trackEvent(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) | Essa função aciona uma solicitação para relatar ações do usuário, como cliques e conversões. Não entrega atividades na resposta. |
 | [[!UICONTROL mboxCreate(mbox,params)]](/help/dev/implement/client-side/atjs/atjs-functions/mboxcreate-atjs.md)<P>(at.js 1.x) | Executa uma solicitação e aplica a oferta ao DIV mais próximo com o nome de classe mboxDefault.<P>**Observação:** essa função está disponível para a at.js versão 1.somente *x*. Essa função foi descontinuada pelo lançamento da at.js 2.x. Ela retorna o conteúdo padrão se for usada com a 2.x. |
 | [[!UICONTROL mboxDefine(options)] e [!UICONTROL mboxUpdate(options)]](/help/dev/implement/client-side/atjs/atjs-functions/mboxdefine-mboxupdate-atjs-1x.md)<P>(at.js 1.x) | Defina e atualize um mbox.<P>**Observação:** essa função está disponível para a at.js versão 1.somente *x*. Essa função foi descontinuada pelo lançamento da at.js 2.x. Ela retorna o conteúdo padrão se for usada com a 2.x. |

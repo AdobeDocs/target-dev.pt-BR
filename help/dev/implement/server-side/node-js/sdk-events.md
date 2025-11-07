@@ -1,16 +1,16 @@
 ---
-title: Assinar eventos no  [!DNL Adobe Target] SDK do Node.js
-description: Saiba como assinar vários eventos que ocorrem no SDK do Node.js usando o objeto [!UICONTROL OnDeviceDecisioningHandler].
+title: Assinar eventos no  [!DNL Adobe Target] Node.js SDK
+description: Saiba como assinar vários eventos que ocorrem no SDK Node.js usando o objeto [!UICONTROL OnDeviceDecisioningHandler].
 feature: APIs/SDKs
 exl-id: 40c53840-a560-4819-ae04-f527c36b22fe
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 2%
 
 ---
 
-# Eventos do SDK (Node.js)
+# Eventos da SDK (Node.js)
 
 ## Descrição
 
@@ -22,7 +22,7 @@ Quando a função de retorno de chamada é chamada, um objeto de evento é trans
 
 | Nome do evento (tipo) | Descrição | Propriedades adicionais do evento |
 | --- | --- | --- |
-| clientReady | Emitido quando o artefato é baixado e o SDK está pronto para `getOffers` chamadas. Recomendado ao usar o método de decisão no dispositivo. |
+| clientReady | Emitido quando o artefato é baixado e o SDK está pronto para `getOffers` chamadas. Recomendado ao usar o método de decisão no dispositivo. |  |
 | artifactDownloadSucceeded | Emitido sempre que um novo artefato é baixado. | artifactPayload, artifactLocation |
 | artifactDownloadFailed | Emitido sempre que ocorre falha no download de um artefato. | artifactLocation, erro |
 
