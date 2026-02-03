@@ -35,7 +35,7 @@ Leia o [changelog](https://github.com/adobe/target-java-sdk/blob/main/CHANGELOG.
 
 ## .NET SDK
 
-Para obter mais informações, consulte [ visão geral do SDK.Net](/help/dev/implement/server-side/net/overview.md).
+Para obter mais informações, consulte [&#x200B; visão geral do SDK.Net](/help/dev/implement/server-side/net/overview.md).
 
 O [.NET SDK](https://github.com/adobe/target-dotnet-sdk) é de código aberto e mantido dentro do Github, onde você pode encontrar a documentação e as instruções de uso.
 
