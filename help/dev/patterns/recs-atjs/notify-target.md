@@ -5,10 +5,10 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+source-git-commit: 3301d88bc47208ab5439c1a9f7933e99c22a4521
 workflow-type: tm+mt
 source-wordcount: '346'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -39,6 +39,8 @@ Esta etapa ajuda a garantir que todos os eventos que devem ser enviados para [!D
 Você envia os atributos de conversão do pedido conforme mencionado na seção *Pré-requisitos* abaixo. O nome da mbox não importa, mas a conversão é usar `orderConfirmPage`.
 
 Não é necessário incluir os atributos de conversão de pedido nesta chamada. Essas chamadas registram, idealmente, métricas de sucesso que podem ser consideradas eventos de miniconversão antes dos eventos de conversão principais. `CardIds` deve ser incluído nas recomendações baseadas no carrinho com base no evento `Add to Cart`.
+
++++
 
 **Pré-requisitos**
 
