@@ -5,10 +5,10 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+source-git-commit: 3301d88bc47208ab5439c1a9f7933e99c22a4521
 workflow-type: tm+mt
 source-wordcount: '346'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -40,6 +40,8 @@ Você envia os atributos de conversão do pedido conforme mencionado na seção 
 
 Não é necessário incluir os atributos de conversão de pedido nesta chamada. Essas chamadas registram, idealmente, métricas de sucesso que podem ser consideradas eventos de miniconversão antes dos eventos de conversão principais. `CardIds` deve ser incluído nas recomendações baseadas no carrinho com base no evento `Add to Cart`.
 
++++
+
 **Pré-requisitos**
 
 * Encontre sua equipe de negócios para identificar todos os eventos que podem ser considerados métricas de conversão ou de sucesso. Você também deve identificar o evento de conversão que gera receita para que esses detalhes possam ser enviados para [!DNL Target] junto com os dados do evento.
@@ -49,7 +51,7 @@ Não é necessário incluir os atributos de conversão de pedido nesta chamada. 
    * `orderTotal`: Total do pedido para a compra.
    * `orderId`: ID do pedido da compra.
 
-  A ilustração a seguir mostra uma [regra para [!DNL tags] em [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=pt-BR){target=_blank} que deve ser acionada somente na página [!UICONTROL Confirmation].
+  A ilustração a seguir mostra uma [regra para [!DNL tags] em [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} que deve ser acionada somente na página [!UICONTROL Confirmation].
 
   ![Página Configuração de ação](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -58,7 +60,7 @@ Não é necessário incluir os atributos de conversão de pedido nesta chamada. 
 **Leituras**
 
 * [método adobe.target.trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [cartIds para critérios baseados em carrinho](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=pt-BR#cart-based){target=_blank}
+* [cartIds para critérios baseados em carrinho](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
 
 **Ações**
 
