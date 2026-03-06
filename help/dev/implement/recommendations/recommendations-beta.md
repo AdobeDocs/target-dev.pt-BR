@@ -3,13 +3,12 @@ keywords: Recommendations, configurações, preferências, vertical do setor, cr
 description: Saiba como implementar atividades do [!UICONTROL Recommendations] no  [!DNL Adobe Target].
 title: Como Implementar Atividades [!UICONTROL Recommendations]?
 feature: Recommendations
-hidefromtoc: true
 hide: true
 exl-id: 0a9c9649-195b-44e2-987e-d02eaf98cc54
-source-git-commit: aa032255222d92aeddd7238922eb450f1b6b93a0
+source-git-commit: d161a60be0e9acbdd217f1acde5987b839dd78de
 workflow-type: tm+mt
 source-wordcount: '1550'
-ht-degree: 20%
+ht-degree: 18%
 
 ---
 
@@ -30,11 +29,11 @@ Antes de configurar sua primeira atividade [!UICONTROL Recommendations] em [!DNL
 1. [Definir [!UICONTROL Recommendations] configurações](#configure-recommendations-settings).
 1. (Opcional) [Administrar [!UICONTROL Recommendations] usando APIs de Administrador](#administer-recommendations-using-admin-apis).
 
-## 1. Implementar [!UICONTROL Target]
+## &#x200B;1. Implementar [!UICONTROL Target]
 
 O [!DNL Target Recommendations] exige a implementação do [!DNL Adobe Experience Platform Web SDK] ou da at.js 0.9.2 (ou posterior). Consulte os [[!UICONTROL Target] guias de implementação do lado do cliente](../client-side/overview.md) para obter mais informações.
 
-## 2. Configure seu catálogo do [!UICONTROL Recommendations]
+## &#x200B;2. Configure seu catálogo do [!UICONTROL Recommendations]
 
 Para fornecer recomendações de alta qualidade, [!UICONTROL Target] deve conhecer os produtos ou conteúdo que você deseja recomendar. Os catálogos normalmente incluem três tipos de informações sobre itens recomendados. Suponha que você esteja recomendando filmes. Inclua o seguinte:
 
@@ -52,7 +51,7 @@ O [!UICONTROL Target] oferece várias opções de integração para preencher o 
 
 A maioria dos clientes deve implementar pelo menos um feed. Em seguida, você pode optar por complementar seu feed com atualizações para atributos ou itens alterados com frequência usando a API de entidades ou o método na página.
 
-## 3. Transmitir informações comportamentais e contexto
+## &#x200B;3. Transmitir informações comportamentais e contexto
 
 As informações comportamentais e o contexto que você deve passar para o [!UICONTROL Target] dependem da ação que seu visitante está executando, que geralmente está associada ao tipo de página com a qual seu visitante está interagindo.
 
@@ -129,11 +128,11 @@ function targetPageParams() {
 
 Quando ocorrer um evento de compra, transmitir a identidade do(s) item(ns) comprado(s). Consulte o artigo [Rastrear conversões](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md#track-conversions) em [Como implantar a at.js > Implementar o [!UICONTROL Target] sem um gerenciador de tags](../client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md).
 
-## 4. Configurar exclusões globais
+## &#x200B;4. Configurar exclusões globais
 
 Exclua todos os itens em um nível global que você nunca deseja recomendar a um visitante. Consulte [Exclusões](https://experienceleague.adobe.com/pt-br/docs/target/using/recommendations/entities/exclusions) no *[!DNL Adobe Target]Guia do profissional de negócios*.
 
-## 5. Definir configurações de [!UICONTROL Recommendations]
+## &#x200B;5. Definir configurações de [!UICONTROL Recommendations]
 
 Use as configurações para gerenciar a sua implementação do [!UICONTROL Recommendations].
 
@@ -190,7 +189,7 @@ Ative essa opção para mostrar apenas os critérios pelos quais a página selec
 
 Em geral, é melhor mostrar apenas critérios compatíveis. No entanto, se você quiser que critérios incompatíveis estejam disponíveis para a atividade, não ative essa opção.
 
-A Adobe recomenda desativar esta opção se estiver usando uma solução de gerenciamento de tags.
+A Adobe recomenda desativar essa opção se estiver usando uma solução de gerenciamento de tags.
 
 Para obter mais informações sobre esta opção, consulte as [[!UICONTROL Recommendations] Perguntas frequentes](https://experienceleague.adobe.com/pt-br/docs/target/using/recommendations/recommendations-faq/recommendations-faq){target=_blank} no *[!DNL Adobe Target]Guia do profissional de negócios*.
 
@@ -237,6 +236,6 @@ Baseie suas recomendações em um item armazenado no perfil do visitante. Por ex
 
 Clique em **[!UICONTROL Add]** para criar uma nova configuração, especifique um nome para a configuração, selecione o atributo de perfil desejado e clique em **[!UICONTROL Save]**.
 
-## 6. (Opcional) Administrar [!UICONTROL Recommendations] usando APIs de administrador
+## &#x200B;6. (Opcional) Administrar [!UICONTROL Recommendations] usando APIs de administrador
 
 Consulte o guia prático [Usar APIs do [!UICONTROL Recommendations]](../../before-administer/recs-api/overview.md) para saber como configurar e usar as APIs de administração e entrega do [!UICONTROL Target] para [!UICONTROL Recommendations].
