@@ -174,7 +174,7 @@ ht-degree: 41%
    + [Logon do lado do cliente para dados do A4T no Experience Platform Web SDK](/help/dev/implement/a4t/client-side-logging.md)
    + [Logon do lado do servidor para dados do A4T no Experience Platform Web SDK](/help/dev/implement/a4t/server-side-a4t.md)
 + [Implementação do Recommendations](implement/recommendations/recommendations.md)
-+ {hide-from-toc}[Implementação beta de recomendações](/help/dev/implement/recommendations/recommendations-beta.md)
++ [hide-from-tocImplementação beta de recomendações](/help/dev/implement/recommendations/recommendations-beta.md)
 + Implementação do aplicativo móvel {#mobile-apps}
    + [Visão geral do Target para aplicativos para dispositivos móveis](implement/mobile/overview.md)
    + [Visualização do Target Mobile](implement/mobile/target-mobile-preview.md)
