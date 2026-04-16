@@ -4,7 +4,7 @@ description: Saiba como atualizar do  [!DNL Adobe Target] at.js 1.x para o at.js
 title: Como atualizo da at.js versão 1.x para a versão 2.x?
 feature: at.js
 exl-id: fbfa5743-0fa5-44c6-89b3-fdee9b50e126
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 16132bc7a624ab4849651b183bde9b3064b4a676
 workflow-type: tm+mt
 source-wordcount: '2939'
 ht-degree: 57%
@@ -19,11 +19,11 @@ Estes são alguns benefícios de usar a at.js 2.*x* que não estão disponíveis
 
 * A capacidade de armazenar em cache todas as ofertas no carregamento da página para reduzir várias chamadas do servidor a uma única chamada de servidor.
 * Melhore bastante as experiências dos usuários finais em seu site, uma vez que as ofertas são exibidas imediatamente por meio do cache, sem o atraso imposto pelas chamadas tradicionais do servidor.
-* Uma linha de código simples e uma configuração de desenvolvedor única para permitir que seus profissionais de marketing criem e executem atividades do [!UICONTROL A/B Test] e do [!UICONTROL Experience Targeting] (XT) por meio do VEC no seu SPA.
+* Uma linha de código simples e uma configuração de desenvolvedor única para permitir que seus comerciantes criem e executem atividades do [!UICONTROL A/B Test] e do [!UICONTROL Experience Targeting] (XT) por meio do VEC em seus SPAs.
 
 ## at.js 2.Diagramas do sistema *x*
 
-Os diagramas a seguir ajudam a entender o fluxo de trabalho da at.js 2.*x* com Exibições e como isso melhora a integração do SPA. Para obter uma melhor introdução dos conceitos usados na at.js 2.*x*, consulte [Implementação de aplicativos de página única](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Os diagramas a seguir ajudam a entender o fluxo de trabalho da at.js 2.*x* com Exibições e como isso melhora a integração de SPA. Para obter uma melhor introdução dos conceitos usados na at.js 2.*x*, consulte [Implementação de aplicativos de página única](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 (Clique na imagem para expandir até a largura total.)
 
@@ -290,7 +290,7 @@ O rastreamento entre domínios possibilita unir visitantes em diferentes domíni
 
 Em [!DNL Target], o cookie de terceiros é armazenado em `<CLIENTCODE>.tt.omtrdc.net`. O cookie próprio é armazenado no `clientdomain.com`. A primeira solicitação retorna cabeçalhos de resposta HTTP que tentam instalar cookies de terceiros chamados `mboxSession` e `mboxPC`, enquanto uma solicitação de redirecionamento é enviada de volta com um parâmetro extra (`mboxXDomainCheck=true`). Se o navegador aceitar cookies de terceiros, a solicitação de redirecionamento vai inclui-los, e a experiência será retornada. Esse fluxo de trabalho é possível porque usamos o método HTTP GET.
 
-No entanto, na at.js 2.*x*, HTTP GET não é usado. Em vez disso, o HTTP POST é usado por meio do at.js 2.*x* para enviar cargas JSON para [!DNL Target] servidores Edge. Usar POST HTTP significa que a solicitação de redirecionamento para verificar se um navegador aceita cookies de terceiros será interrompida. Isso ocorre porque as solicitações HTTP GET são transações idempotentes, enquanto HTTP POST é não idempotente e não deve ser repetido arbitrariamente. Por isso, o rastreamento entre domínios no at.js 2.Não há suporte para *x* (anterior a 2.10) imediatamente. Somente o at.js 1.*x* tem suporte pronto para uso para rastreamento entre domínios.
+No entanto, na at.js 2.*x*, HTTP GET não é usado. Em vez disso, o HTTP POST é usado por meio da at.js 2.*x* para enviar cargas JSON para [!DNL Target] servidores Edge. Usar HTTP POST significa que a solicitação de redirecionamento para verificar se um navegador suporta cookies de terceiros será interrompida. Isso ocorre porque as solicitações HTTP GET são transações idempotentes, enquanto HTTP POST é não idempotente e não deve ser repetido arbitrariamente. Por isso, o rastreamento entre domínios no at.js 2.Não há suporte para *x* (anterior a 2.10) imediatamente. Somente o at.js 1.*x* tem suporte pronto para uso para rastreamento entre domínios.
 
 Para usar o rastreamento entre domínios para a at.js v2.10 ou posterior, você pode executar um dos seguintes procedimentos:
 
@@ -375,7 +375,7 @@ As tabelas a seguir explicam o at.js. 2.*x* compatibilidade com diferentes tipos
 | Depurador | Sim |
 | Auditor | As regras ainda não foram atualizadas para o at.js 2.*x*   |
 | Suporte de Opt-in para o [GDPR](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md) | Isto é suportado na [at.js versão 2.1.0](/help/dev/implement/client-side/atjs/target-atjs-versions.md#atjs-version-210-june-3-2019) ou posterior. |
-| Personalization aprimorado com AEM habilitado por [!DNL Adobe Target] | Não |
+| AEM Enhanced Personalization desenvolvido por [!DNL Adobe Target] | Não |
 
 ### Recursos
 
@@ -768,8 +768,9 @@ A versão é enviada como um parâmetro de sequência de consulta por meio do pa
 
 ## Vídeo de treinamento: at.js 2.*x* diagrama de arquitetura ![Selo de visão geral](../../assets/overview.png)
 
-at.js 2.O *x* aprimora o suporte do Adobe [!DNL Target] para SPA e integra-se com outras soluções de Experience Cloud. Este vídeo explica como tudo se une.
+at.js 2.O *x* aprimora o suporte do Adobe [!DNL Target] para SPAs e integra-se com outras soluções da Experience Cloud. Este vídeo explica como tudo se une.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
 Consulte [Noções básicas sobre o at.js 2.*x* funciona](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=pt-BR) para obter mais informações.
+

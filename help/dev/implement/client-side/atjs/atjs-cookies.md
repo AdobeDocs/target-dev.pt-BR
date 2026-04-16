@@ -1,10 +1,10 @@
 ---
 keywords: at.js, 2.0, 1.x, cookies
-description: Detalhes sobre como a at.js 2.x e a at.js 1.x lidam com cookies. [!DNL Adobe Target]
+description: 'Detalhes sobre como a at.js 2.x e a at.js 1.x lidam com cookies. [!DNL Adobe Target] '
 title: Cookies do at.js
 feature: at.js
 exl-id: 154a844a-6855-4af7-8aed-0719b4c389f5
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+source-git-commit: 16132bc7a624ab4849651b183bde9b3064b4a676
 workflow-type: tm+mt
 source-wordcount: '1716'
 ht-degree: 72%
@@ -21,7 +21,7 @@ Para a versão 2.x da at.js (até, mas não incluindo, a versão 2.10.0), *somen
 
 O at.js gera uma ID da sessão e a armazena no cookie. A primeira resposta contém informações de atividade, bem como a `TNT` ou`PC ID` gerada pelos [!DNL Target] servidores. O at.js grava o `TNT/PC ID` para o cookie.
 
-O cookie próprio `AMCV_###@AdobeOrg` sempre é definido pelo Serviço de ID de Experience Cloud, embora o `ECID` seja passado em [!DNL Target] solicitações.
+O cookie próprio `AMCV_###@AdobeOrg` sempre é definido pelo Serviço da Experience Cloud ID, embora o `ECID` seja passado em [!DNL Target] solicitações.
 
 >[!NOTE]
 >
@@ -60,7 +60,7 @@ Há três casos de uso principais de cookies:
    * Habilitar somente cookies de terceiros (muito raro, mas tem a vantagem de manter o cookie do at.js fora de seu domínio).
    * Permitir apenas cookies próprios e enviar o parâmetro `mboxSession` ao atravessar domínios.
 
-     O parâmetro `mboxSession` deve ser enviado para uma página inicial com uma referência ao at.js. Uma página intermediária de redirecionador não pode ser utilizada.
+     O parâmetro `mboxSession` deve ser enviado para uma página de destino com uma referência ao at.js. Uma página intermediária de redirecionador não pode ser utilizada.
 
 1. Você está utilizando apenas adboxes ou Flashboxes em um site de terceiros.
 
@@ -72,7 +72,7 @@ Há três casos de uso principais de cookies:
 
    * Habilitar somente cookies de terceiros.
 
-     Essa abordagem é apenas para casos raros em que as implementações AdBox são usadas sem definição de metas no site.
+     Essa abordagem é apenas para casos raros em que as implementações AdBox são usadas sem direcionamento no site.
 
 ### Comportamento do cookie próprio
 
@@ -82,7 +82,7 @@ O at.js gera um `mboxSession ID` e o armazena no cookie. A primeira resposta con
 
 >[!NOTE]
 >
->O cookie próprio `AMCV_###@AdobeOrg` sempre é definido com a ID do visitante do Experience Cloud.
+>O cookie próprio `AMCV_###@AdobeOrg` sempre é definido com a ID do visitante da Experience Cloud.
 
 ### Comportamento de cookie de terceiros
 
@@ -123,7 +123,7 @@ O cookie mantém uma série de valores para gerenciar a experiência de seus vis
 | session ID | ID único para a sessão do usuário. A duração padrão é de 30 minutos. |
 | pc ID | Um ID temporário para o navegador do visitante. Dura 14 dias. |
 | check | Um simples valor de teste utilizado para determinar se o navegador do visitante tem suporte a cookies. Definido sempre que o usuário solicita uma página. |
-| disable | Configurado se o tempo de carga do visitante exceder o tempo limite configurado no SDK da Web da Adobe Experience Platform ou no arquivo at.js. A duração padrão é de uma hora. |
+| disable | Configurado se o tempo de carga do visitante ultrapassar o tempo limite configurado no Adobe Experience Platform Web SDK ou no arquivo at.js. A duração padrão é de uma hora. |
 
 ## Impacto em [!DNL Target] para visitantes do Safari devido a alterações no rastreamento do Apple WebKit
 
@@ -154,5 +154,6 @@ Da Apple:
 
 | Funcionalidade afetada | Detalhes |
 |--- |--- |
-| Suporte para cancelamento | As alterações de rastreamento do WebKit da Apple interrompem o suporte ao cancelamento.<P>A opção de não participação de [!DNL Target] usa um cookie no domínio `clientcode.tt.omtrdc.net`. Para obter mais detalhes, consulte [Privacidade](/help/dev/before-implement/privacy/privacy.md).<P>[!DNL Target] aceita dois cancelamentos:<ul><li>Um por cliente (o cliente gerencia o link para opção de não participação).</li><li>Um via Adobe que exclui o usuário de todas as funcionalidades do [!DNL Target] para todos os clientes.</li></ul>Ambos os métodos usam o cookie de terceiros. |
+| Suporte para cancelamento | As alterações de rastreamento do WebKit da Apple interrompem o suporte ao cancelamento.<P>A opção de não participação de [!DNL Target] usa um cookie no domínio `clientcode.tt.omtrdc.net`. Para obter mais detalhes, consulte [Privacidade](/help/dev/before-implement/privacy/privacy.md).<P>[!DNL Target] aceita dois cancelamentos:<ul><li>Um por cliente (o cliente gerencia o link para opção de não participação).</li><li>Um por meio do Adobe que recusa a todos os usuários a funcionalidade do [!DNL Target] para todos os clientes.</li></ul>Ambos os métodos usam o cookie de terceiros. |
 | [!DNL Target] atividades | Os clientes podem escolher sua [duração do perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=pt-BR) para suas contas do [!DNL Target]: até 90 dias. A preocupação é que, se a duração do perfil da conta for superior a 30 dias, e o cookie próprio for limpo porque o domínio do cliente foi marcado como usuários de rastreamento entre sites, o comportamento dos visitantes do Safari será afetado nas seguintes áreas em [!DNL Target]:<P>**[!DNL Target]Relatórios**: se um usuário do Safari entrar em uma atividade, retornar após 30 dias e depois se converter, esse usuário contará como dois visitantes e uma conversão.<P>Esse comportamento é o mesmo para atividades que usam [!DNL Analytics] como fonte de relatórios (A4T).<P>**Associação de Perfil e Atividade**:<ul><li>Dados do perfil são apagados quando o cookie próprio expira.</li><li>Associação de atividade é apagada quando o cookie próprio expira.</li><li> [!DNL Target] não funciona no Safari para contas que usam uma implementação de cookies de terceiros ou uma implementação de cookies próprios e de terceiros. Observe que esse comportamento não é novo. O Safari não permite cookies de terceiros por algum tempo.</li></ul><P>**Sugestões**: se houver uma preocupação de que o domínio do cliente possa ser marcado como uma sessão cruzada de visitantes de rastreamento, é mais seguro definir a duração do perfil para 30 dias ou menos em [!DNL Target]. Isso garante que os usuários sejam rastreados de forma semelhante no Safari e em todos os outros navegadores. |
+
