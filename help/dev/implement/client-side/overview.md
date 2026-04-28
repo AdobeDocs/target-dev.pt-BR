@@ -4,16 +4,16 @@ description: Saiba como implementar o [!DNL Adobe Target] para Web no lado do cl
 title: Como implementar o  [!DNL Target] para Web no lado do cliente
 feature: at.js
 exl-id: b3a850ff-ace0-4eea-955a-aa71dfad256f
-source-git-commit: 7e2f1620c839393051432485192a45ddda2390a0
+source-git-commit: ca53593287a5a58e6e0b9fe02b6e8b28788f9ff9
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '233'
 ht-degree: 28%
 
 ---
 
 # Visão geral: implementar o [!DNL Target] para Web no lado do cliente
 
-Em uma implementação no lado do cliente do [!DNL Adobe Target], o [!DNL Target] fornece as experiências associadas a uma atividade diretamente para o navegador do cliente. O navegador decide qual experiência será exibida e realiza a ação. Com uma implementação no lado do cliente, você pode usar um editor WYSIWYG, o [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=pt-BR) (VEC) ou uma interface não visual, o [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=pt-BR), para criar experiências de atividade e personalização.
+Em uma implementação no lado do cliente do [!DNL Adobe Target], o [!DNL Target] fornece as experiências associadas a uma atividade diretamente para o navegador do cliente. O navegador decide qual experiência será exibida e realiza a ação. Com uma implementação no lado do cliente, você pode usar um editor WYSIWYG, o [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC) ou uma interface não visual, o [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), para criar experiências de atividade e personalização.
 
 Para implementar o [!DNL Target] no lado do cliente, você deve usar uma das seguintes bibliotecas JavaScript:
 
