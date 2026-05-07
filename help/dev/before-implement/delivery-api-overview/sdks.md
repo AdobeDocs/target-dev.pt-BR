@@ -49,4 +49,4 @@ O [SDK do Python](https://github.com/adobe/target-python-sdk) é de código aber
 
 Leia o [Changelog](https://github.com/adobe/target-python-sdk/blob/master/CHANGELOG.md) do SDK do Python.
 
-&lt;!--- Judy: remover ou modificar esta página? adequadamente cobertos em outros locais? Ou adicionar links para informações análogas para os SDKs do .NET e do Python? --->
+&lt;!-- Judy: remove or modify this page? adequadamente cobertos em outros locais? Ou adicionar links para informações análogas para os SDKs do .NET e do Python? -->
