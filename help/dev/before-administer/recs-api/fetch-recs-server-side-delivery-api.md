@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
 workflow-type: tm+mt
-source-wordcount: 1449
+source-wordcount: 1366
 ht-degree: 1%
 
 ---
@@ -48,7 +48,7 @@ Para usar a API de entrega para fornecer experiências do Target, incluindo reco
 1. Crie uma atividade do Target (A/B, XT, AP ou Recommendations) usando o Criador baseado em formulário (não o Visual Experience Composer).
 1. Use a API de entrega para obter uma resposta para as solicitações geradas pela atividade do Target que você acabou de criar.
 
-&lt;!—!— P: Por que ambas as etapas são necessárias para isso? Se você tiver uma recomendação baseada em formulário definida para uma mbox, qual é o ponto/benefício de TAMBÉM ter a etapa da API de entrega na para recuperar resultados? Por que você não pode apenas ter o Rec baseado em formulário entregar os resultados no dispositivo de destino...? R: Veja o caso de uso abaixo... é quando você deseja &quot;interceptar&quot; os resultados pendentes para fazer mais coisas antes de exibir os resultados. Coisas como comparações em tempo real com níveis de inventário. --->
+<!-- Q: Why are BOTH steps necessary for this? If you have a Form-based recommendation defined for an mbox, what's the point/benefit of ALSO having the Delivery API step in to retrieve results? Why can't you just have the Form-based Rec deliver the results in the destination device...?? A: See use case below... it's when you want to "intercept" the pending results in order to do more stuff prior to displaying the results. Things like real-time comparisons to inventory levels. -->
 
 ## Criar uma recomendação usando o Experience Composer baseado em formulário
 
