@@ -5,10 +5,23 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '908'
-ht-degree: 4%
+source-wordcount: 1060
+ht-degree: 3%
 
 ---
 
@@ -44,7 +57,7 @@ Clique nos links a seguir para navegar até as seções desejadas:
 * [3.6: Critérios personalizados](#custom)
 * [3.7: Fornecer atributos usados nas regras de inclusão](#inclusion)
 * [3.8: Fornecer excludedIds](#exclude)
-* [3.9: Fornecer atributos de entidade para atualizar o catálogo de produtos do Recommendations](#entity-attributes)
+* [3.9: Fornecer atributos de entidade para atualizar o catálogo de produtos para o Recommendations](#entity-attributes)
 * [3.10: Fornecer atributos de perfil usados como chaves para regras de inclusão](#keys)
 * [3.11: Acionar solicitação de carregamento de página](#fire)
 * [3.12: Acionar solicitação de localização regional](#location)
@@ -120,7 +133,7 @@ Faça recomendações com base na popularidade geral de um item em todo o site o
 
 **Leituras**
 
-* [Com base em popularidade](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=pt-BR#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Baseado em popularidade](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=pt-BR#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -203,7 +216,7 @@ Fazer recomendações com base em um arquivo personalizado que você carregou.
 
 **Leituras**
 
-* [Usar regras de inclusão estática e dinâmica](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=pt-BR){target=_blank}
+* [Uso das regras de inclusão estática e dinâmica](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=pt-BR){target=_blank}
 
 +++
 
@@ -239,7 +252,7 @@ Você também pode realizar esta etapa criando [feeds de produtos](https://exper
 
 ## 3.10: Fornecer atributos de perfil usados como chaves para regras de inclusão {#keys}
 
-Forneça os atributos de perfil usados como chaves para as regras de inclusão em qualquer critério da Recommendations mencionado acima.
+Forneça os atributos de perfil usados como chaves para as regras de inclusão em qualquer critério do Recommendations mencionado acima.
 
 +++ Ver detalhes
 

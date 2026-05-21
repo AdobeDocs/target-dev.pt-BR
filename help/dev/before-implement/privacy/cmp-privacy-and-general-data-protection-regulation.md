@@ -4,10 +4,26 @@ description: Saiba mais sobre o Target e o Regulamento Geral sobre a Proteção 
 title: Como o Target lida com privacidade e regulamentos de proteção de dados?
 feature: Privacy & Security
 exl-id: 40bac3c5-8e6f-4a90-ac0c-eddce1dbe6c0
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/W-aYBengoNH5uKTcFZNHARelgAFX3-QrZixh09n0FU0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2329'
-ht-degree: 62%
+source-wordcount: 2432
+ht-degree: 61%
 
 ---
 
@@ -15,7 +31,7 @@ ht-degree: 62%
 
 Informações sobre o Regulamento Geral de Proteção de Dados da União Europeia (RGPD), a Lei de Privacidade do Consumidor da Califórnia (CCPA) e outros requisitos internacionais de privacidade. Saiba como esses regulamentos afetam sua organização e a Adobe Target.
 
-## Visão geral de Privacidade e Regulamento Geral sobre a Proteção de Dados (RGPD) 
+## Visão geral de Privacidade e Regulamento Geral sobre a Proteção de Dados (RGPD)
 
 O RGPD da União Europeia entra em vigor em 25 de maio de 2018. Para obter mais informações sobre o que este regulamento significa para você, consulte [RGPD e seus negócios](https://business.adobe.com/pt/privacy/general-data-protection-regulation.html).
 
@@ -30,9 +46,9 @@ O Adobe Experience Cloud fornece APIs prontas para o GDPR para controladores de 
 
 Para obter mais informações, consulte:
 
-* [visão geral do Adobe Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=pt-BR)
-* [Guia de API do Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html?lang=pt-BR)
-* [Visão geral da interface do Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=pt-BR)
+* [Visão geral do Adobe Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=pt-BR)
+* [Guia da API do Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html?lang=pt-BR)
+* [Visão geral da interface do usuário do Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=pt-BR)
 
 ## Visão geral da California Consumer Privacy Act (CCPA)
 
@@ -200,7 +216,7 @@ Além dos requisitos do Privacy Service central, uma mensagem válida do GDPR ou
 }
 ```
 
-### Que tipos de respostas posso esperar do Target por meio da API do RGPD? 
+### Que tipos de respostas posso esperar do Target por meio da API do RGPD?
 
 | Status da solicitação | Mensagem de resposta do Target | Cenário |
 |--- |--- |--- |
@@ -292,7 +308,7 @@ A seguinte tabela apresenta descrições dos campos ilustrativos de JSON de perf
 >
 >Esta amostra de código é uma versão reduzida de um JSON de perfil do Target para ilustração. Vários campos do perfil do Target não são padrão. O que é retornado depende de quais informações estão nesse perfil do visitante específico.
 
-### O Target suporta ofuscação de IP? 
+### O Target suporta ofuscação de IP?
 
 O Target suporta ofuscação de IP se você optar por usá-lo como parte de sua estratégia de implementação do GDPR ou da CCPA. Para obter mais informações, consulte [Privacidade](privacy.md#replacement-of-last-octet-of-ip-addresses).
 

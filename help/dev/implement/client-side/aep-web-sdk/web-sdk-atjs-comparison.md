@@ -4,9 +4,26 @@ description: Saiba como os recursos da at.js se comparam com o  [!DNL Experience
 keywords: target;adobe target;activity.id;experience.id;renderDecisions;decisionScopes;ocultando previamente o trecho;vec;Criador de experiências baseado em formulário;xdm;públicos-alvo;decisões;escopo;esquema;diagrama do sistema;diagrama
 feature: AEP Web SDK
 exl-id: 31c9722b-5d92-4653-aa20-4183d166c097
-source-git-commit: 158c45b824df8d3bd565ac7c654b65f1fd631e2c
+TQID: https://experienceleague.adobe.com/Ly2ytp87gfQ5mCES-43K5tU4-4fhTjdcdk-OxRRL-II
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2006'
+source-wordcount: 2303
 ht-degree: 5%
 
 ---
@@ -215,7 +232,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/pt-br/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions)
+[Saiba mais](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -298,7 +315,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions.html?lang=pt-BR)
+[Saiba mais](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-functions.html)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -436,7 +453,7 @@ adobe.target.getOffers({...})
   .catch(error => console.log("Error", error));
 ```
 
-Saiba mais sobre o comando `applyOffers` na [documentação dedicada](https://experienceleague.adobe.com/pt-br/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2).
+Saiba mais sobre o comando `applyOffers` na [documentação dedicada](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffers-atjs-2).
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -486,7 +503,7 @@ adobe.target.sendNotifications({
 });
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=pt-BR)
+[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -604,7 +621,7 @@ alloy("sendEvent", {
 });
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
+[Saiba mais](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
 
 **Exemplo 3 - Rastrear um evento disparado após executar uma ação**
 
@@ -879,7 +896,7 @@ Em seguida, os dados fluem da seguinte maneira:
 
 ![Diagrama mostrando o fluxo de trabalho do log do Analytics Server Side](/help/dev/implement/client-side/aep-web-sdk/assets/a4t-server-side-atjs.png)
 
-[Saiba Mais](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=pt-BR)
+[Saiba mais](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4timplementation.html?lang=pt-BR)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -961,7 +978,7 @@ window.targetGlobalSettings = {
 };
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html?lang=pt-BR)
+[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetgobalsettings.html)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -1061,7 +1078,7 @@ adobe.target.getOffers({
 .catch(console.error);
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html?lang=pt-BR)
+[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/adobe-target-getoffers-atjs-2.html)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -1141,7 +1158,7 @@ window.targetPageParams = function() {
 };
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html?lang=pt-BR)
+[Saiba mais](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/at-js-implementation/functions-overview/targetpageparams.html)
 
 ### Usando o [!DNL Platform Web SDK]
 
@@ -1259,7 +1276,7 @@ A biblioteca at.js expõe estes recursos de depuração:
 Você tem vários recursos de depuração ao usar o [!DNL Platform Web SDK]:
 
 * Usando o [Assurance](https://experienceleague.adobe.com/pt-br/docs/experience-platform/assurance/home)
-* [Depuração do Web SDK habilitada](https://experienceleague.adobe.com/pt-br/docs/experience-platform/assurance/home)
+* [Depuração do Web SDK ativada](https://experienceleague.adobe.com/pt-br/docs/experience-platform/assurance/home)
 * Usar [ganchos de monitoramento do Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* Usar [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/pt-br/docs/experience-platform/debugger/home)
+* Usar [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)
 * Rastreamento de destino

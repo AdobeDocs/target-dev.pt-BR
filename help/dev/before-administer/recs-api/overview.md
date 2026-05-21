@@ -6,10 +6,18 @@ kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: 0d03c650-0b00-44b8-a794-10e5d738e42c
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/-bWsxWNZK7LXp0VvKZmsZc68jXcit57v7Wki9hR3wH4
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '330'
-ht-degree: 2%
+source-wordcount: 343
+ht-degree: 3%
 
 ---
 
@@ -18,7 +26,7 @@ ht-degree: 2%
 As APIs relevantes para o Recommendations incluem [APIs de administrador](../../before-administer/target-api-overview.md) que permitem:
 
 * Gerencie seu catálogo de produtos ou conteúdo recomendáveis
-* Gerencie algoritmos e atividades do Recommendations
+* Gerencie suas atividades e algoritmos do Recommendations
 
 Usando a [API de entrega](../../implement/delivery-api/overview.md) do Target com o Recommendations, você também pode:
 
@@ -26,19 +34,19 @@ Usando a [API de entrega](../../implement/delivery-api/overview.md) do Target co
 
 ## Descrição
 
-Este guia sobre as APIs do Recommendations orienta os desenvolvedores na prática usando as APIs do Recommendations para configurar e gerenciar catálogos do Recommendations e critérios personalizados, bem como usando a API de entrega para recuperar o conteúdo das recomendações. Ao final, você poderá:
+Este guia sobre as APIs do Recommendations orienta os desenvolvedores sobre práticas práticas usando as APIs do Recommendations para configurar e gerenciar catálogos e critérios personalizados do Recommendations, além de usar a API de entrega para recuperar o conteúdo das recomendações. Ao final, você poderá:
 
 * Configurar e gerenciar entidades usando a API do Recommendations
 * Configurar e gerenciar critérios personalizados usando a API do Recommendations
-* Entenda como usar o Recommendations com a API de entrega para usar os resultados das recomendações em dispositivos não HTML
+* Entenda como usar o Recommendations com a API de entrega para usar os resultados das recomendações em dispositivos que não sejam HTML
 
 ## Público-alvo
 
-Este guia destina-se a desenvolvedores novatos nas APIs do Target ou nas APIs do Recommendations.
+Este guia tem como objetivo desenvolvedores novatos nas APIs do Target ou nas APIs do Recommendations.
 
 ## Pré-requisitos {#prerequisites}
 
-As APIs de administrador do Target exigem [configuração de autenticação de Adobe](../configure-authentication.md). Verifique se isso está configurado antes de usar a API do Recommendations.
+As APIs de administrador do Target exigem [configuração de autenticação do Adobe](../configure-authentication.md). Verifique se isso está configurado antes de usar a API do Recommendations.
 
 ## Recursos
 

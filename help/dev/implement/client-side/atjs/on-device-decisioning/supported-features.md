@@ -4,10 +4,25 @@ description: Saiba quais recursos são compatíveis com o [!UICONTROL on-device 
 title: Quais recursos são compatíveis com a Decisão no dispositivo?
 feature: at.js
 exl-id: bdd65658-6c4a-41ae-a222-59c00a11bdac
-source-git-commit: 79ffa3f58d780f587fe1202b82d3860395504dfe
+TQID: https://experienceleague.adobe.com/ummFURb6WnrNCbiQNDtzWmtZq05am9CMn9UXL0SPaXo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '478'
-ht-degree: 12%
+source-wordcount: 720
+ht-degree: 8%
 
 ---
 
@@ -27,7 +42,7 @@ A tabela a seguir indica quais [tipos de atividade](https://experienceleague.ado
 | [Teste multivariado](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=pt-BR) (MVT) | Não |
 | [Direcionamento de experiência](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=pt-BR) (XT) | Sim |
 | [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=pt-BR) ![Premium](../../../assets/premium.png) | Não |
-| [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=pt-BR) ![Premium](../../../assets/premium.png) | Não |
+| [Recomendações](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=pt-BR) ![Premium](../../../assets/premium.png) | Não |
 | [Atividades usando o Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR&) (A4T) | Sim |
 
 ## Direcionamento de público
@@ -50,7 +65,7 @@ A tabela a seguir indica quais regras de público-alvo têm ou não suporte para
 
 ### Direcionamento geográfico para [!UICONTROL on-device decisioning]
 
-Para manter uma latência mínima para atividades [!UICONTROL on-device decisioning] com públicos baseados em localização geográfica, a Adobe recomenda que você mesmo forneça os valores geográficos na chamada para [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md). Defina o objeto Geo no contexto da solicitação. Isso significa no navegador uma maneira de determinar a localização de cada visitante. Por exemplo, você pode executar uma pesquisa de IP para Geo usando um serviço configurado por você. Alguns provedores de hospedagem, como a Google Cloud, fornecem essa funcionalidade por meio de cabeçalhos personalizados em cada `HttpServletRequest`.
+Para manter uma latência mínima para atividades de [!UICONTROL on-device decisioning] com públicos baseados em localização geográfica, a Adobe recomenda que você mesmo forneça os valores geográficos na chamada para [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md). Defina o objeto Geo no contexto da solicitação. Isso significa no navegador uma maneira de determinar a localização de cada visitante. Por exemplo, você pode executar uma pesquisa de IP para Geo usando um serviço configurado por você. Alguns provedores de hospedagem, como a Google Cloud, fornecem essa funcionalidade por meio de cabeçalhos personalizados em cada `HttpServletRequest`.
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 
@@ -72,7 +87,7 @@ window.adobe.target.getOffers({
 })
 ```
 
-No entanto, se você não conseguir realizar pesquisas de IP para Geografia no servidor, mas ainda quiser executar [!UICONTROL on-device decisioning] para solicitações de [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) que contêm públicos baseados em localização geográfica, isso também será suportado. A desvantagem dessa abordagem é que ela usa uma pesquisa remota de IP para Geo, o que adiciona latência a cada chamada `getOffers`. Essa latência deve ser menor que uma chamada `getOffers` com decisão do lado do servidor, pois atinge um CDN localizado próximo ao seu servidor. Forneça somente o campo &quot;ipAddress&quot; no objeto Geo no Contexto de sua solicitação para o SDK recuperar a localização geográfica do endereço IP do visitante. Se qualquer outro campo além de &quot;ipAddress&quot; for fornecido, o SDK [!DNL Target] não buscará os metadados de localização geográfica para resolução.
+No entanto, se você não conseguir realizar pesquisas de IP para Geografia no servidor, mas ainda quiser executar [!UICONTROL on-device decisioning] para solicitações de [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) que contêm públicos baseados em localização geográfica, isso também será suportado. A desvantagem dessa abordagem é que ela usa uma pesquisa remota de IP para Geo, o que adiciona latência a cada chamada `getOffers`. Essa latência deve ser menor que uma chamada `getOffers` com decisão do lado do servidor, pois atinge um CDN localizado próximo ao seu servidor. Forneça somente o campo &quot;ipAddress&quot; no objeto Geo no Contexto de sua solicitação para que o SDK recupere a localização geográfica do endereço IP do visitante. Se qualquer outro campo além de &quot;ipAddress&quot; for fornecido, o SDK [!DNL Target] não buscará os metadados de localização geográfica para resolução.
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 

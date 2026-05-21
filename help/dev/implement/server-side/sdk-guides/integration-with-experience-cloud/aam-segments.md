@@ -4,9 +4,19 @@ description: Integração com o Experience Cloud, integração com o Audience Ma
 keywords: api de entrega, lado do servidor, lado do servidor, integração, audience manager, aam
 exl-id: c21e0200-23ba-4a0b-adf4-38e03c087f00
 feature: Implement Server-side
-source-git-commit: e3f14e97fa48ffb1f07b29aca5711d16e75faa80
+TQID: https://experienceleague.adobe.com/mc55SxaUU8BJ81hKLji9xi0-OHCux3W4R0syuVoGrIo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '417'
+source-wordcount: 431
 ht-degree: 4%
 
 ---
@@ -17,13 +27,13 @@ ht-degree: 4%
 
 >[!NOTE]
 >
->Segmentos de AAM não são compatíveis com atividades de decisão no dispositivo.
+>Os segmentos do AAM não são compatíveis com atividades de decisão no dispositivo.
 
 | Nome do campo | Obrigatório | Descrição |
 | --- | --- | --- |
-| `locationHint` | Sim | A DCS Location Hint é usada para determinar qual terminal DCS AAM deve ser acessado para recuperar o perfil. Deve ser >= 1. |
+| `locationHint` | Sim | A DCS Location Hint é usada para determinar qual terminal DCS da AAM deve ser acessado para recuperar o perfil. Deve ser >= 1. |
 | `marketingCloudVisitorId` | Sim | ID de visitante da Marketing Cloud |
-| `blob` | Sim | AAM Blob é usado para enviar dados adicionais para o AAM. Não pode estar em branco e seu tamanho &lt;= 1024. |
+| `blob` | Sim | O AAM Blob é usado para enviar dados adicionais para o AAM. Não pode estar em branco e seu tamanho &lt;= 1024. |
 
 O SDK preencherá automaticamente esses campos para você ao fazer uma chamada do método `getOffers`, mas será necessário garantir que um cookie de visitante válido seja fornecido. Para obter esse cookie, você precisa implementar VisitorAPI.js no navegador.
 

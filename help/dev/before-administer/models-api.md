@@ -3,9 +3,20 @@ title: Visão geral da API de modelos do Adobe
 description: Visão geral da API de modelos, que os usuários podem usar para impedir a inclusão de recursos em modelos de aprendizado de máquina.
 exl-id: e34b9b03-670b-4f7c-a94e-0c3cb711d8e4
 feature: APIs/SDKs, Recommendations, Administration & Configuration
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/1Q28459Ct9BcEynSmD6oBPnGaEY2Hgnp9frKhWB4M-Q
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1288'
+source-wordcount: 1316
 ht-degree: 2%
 
 ---
@@ -133,17 +144,17 @@ GET https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 >[!ENDTABS]
 
-No exemplo mostrado aqui, o usuário está verificando a lista de recursos bloqueados para a atividade cuja ID de atividade é 260840. Incluir na lista de bloqueios Os resultados estão vazios, o que significa que essa atividade não tem nenhum recurso alterado no momento.
+No exemplo mostrado aqui, o usuário está verificando a lista de recursos bloqueados para a atividade cuja ID de atividade é 260840. Os resultados estão vazios, o que significa que essa atividade não tem nenhum recurso alterado no momento.
 
 ![Etapa 2](assets/models-api-step-2.png)
 
 >[!NOTE]
 >
->Você pode ver resultados vazios como este, na primeira vez que você verificar a inclui na lista de bloqueios completa, antes de adicionar qualquer recurso a ela. No entanto, depois de adicionar (e subsequentemente remover) recursos de um incluir na lista de bloqueios incluo na lista de bloqueios, você pode ver resultados ligeiramente diferentes, nos quais um storage de recursos vazio é retornado. Continue lendo para ver um exemplo disso em [Etapa 4](#step4).
+>Você pode ver resultados vazios como este, na primeira vez que você verificar a inclui na lista de bloqueios completa, antes de adicionar qualquer recurso a ela. No entanto, depois de adicionar (e subsequentemente remover) recursos de um incluo na lista de bloqueios, você pode ver resultados ligeiramente diferentes, nos quais um storage de recursos vazio é retornado. Continue lendo para ver um exemplo disso em [Etapa 4](#step4).
 
 ## Etapa 3: adicionar recursos ao incluo na lista de bloqueios da atividade µ {#step3}
 
-Para adicionar recursos à inclui na lista de bloqueios, altere a solicitação de GET para PUT e modifique o corpo da solicitação para especificar `blockedFeatureSources` ou `blockedFeatures` conforme desejado.
+Para adicionar recursos à inclui na lista de bloqueios, altere a solicitação de GET para PUT e modifique o corpo da solicitação para especificar o `blockedFeatureSources` ou `blockedFeatures` conforme desejado.
 
 * O corpo da solicitação requer `blockedFeatures` ou `blockedFeatureSources`. Ambos podem ser incluídos.
 * Popular `blockedFeatures` com valores identificados de `internalName`. Consulte [Etapa 1](#step1).
@@ -201,11 +212,11 @@ No exemplo mostrado aqui, o usuário está bloqueando dois recursos, `SES_PREVIO
 
 ![Etapa 3](assets/models-api-step-3.png)
 
-Observe que após o cancelamento de um recurso, é recomendável verificar a inclui na lista de bloqueios atualizada executando novamente a [Etapa 2](#step2) (GET incluir na lista de bloqueios a inclui na lista de bloqueios). Verifique se os resultados aparecem conforme esperado (verifique se os resultados incluem os recursos adicionados da solicitação mais recente do PUT).
+Observe que depois de incluir na lista de bloqueios um recurso, é recomendável verificar o arquivo atualizado executando novamente a [Etapa 2](#step2) (OBTENHA o arquivo). Verifique se os resultados aparecem como esperado (verifique se os resultados incluem os recursos adicionados da solicitação PUT mais recente).
 
 ## Etapa 4: (Opcional) Desbloquear {#step4}
 
-Incluir na lista de bloqueios Para desbloquear todos os recursos migrados, limpe os valores de `blockedFeatureSources` ou `blockedFeatures`.
+Para desbloquear todos os recursos migrados, limpe os valores de `blockedFeatureSources` ou `blockedFeatures`.
 
 >[!BEGINTABS]
 
@@ -235,17 +246,17 @@ No exemplo mostrado aqui, o usuário está limpando o incluo na lista de bloquei
 
 ![Etapa 4](assets/models-api-step-4.png)
 
-Como sempre, depois de modificar o arquivo de inclui na lista de bloqueios, recomenda-se executar novamente a [Etapa 2](#step2) (GET a inclui na lista de bloqueios para verificar se a lista inclui os recursos esperados). No exemplo mostrado aqui, o usuário está verificando se a inclui na lista de bloqueios correspondente agora está vazia.
+Como sempre, depois de modificar o arquivo de inclui na lista de bloqueios, é recomendável executar novamente a [Etapa 2](#step2) (OBTENHA o arquivo de verificação para verificar se a lista inclui os recursos esperados). No exemplo mostrado aqui, o usuário está verificando se a inclui na lista de bloqueios correspondente agora está vazia.
 
 ![Etapa 4b](assets/models-api-step-4b.png)
 
 Pergunta: Como posso excluir alguns, mas não todos, de um incluo na lista de bloqueios de navegação?
 
-Resposta: Para remover um subconjunto distinto de recursos de uma inclui na lista de bloqueios com vários recursos, os usuários podem simplesmente enviar a lista atualizada de recursos que gostariam de bloquear na [solicitação de incluir na lista de bloqueios incluir na lista de bloqueios inclui na lista de bloqueios](#step3), em vez de limpar toda a solicitação de pesquisa e adicionar novamente os recursos desejados. Em outras palavras, envie a lista de recursos atualizada (como mostrado na [Etapa 3](#step3)), certificando-se de excluir os recursos que você deseja &quot;excluir&quot; do incluo na lista de bloqueios.
+Resposta: Para remover um subconjunto distinto de recursos de uma inclui na lista de bloqueios com vários recursos, os usuários podem simplesmente enviar a lista atualizada de recursos que gostariam de bloquear na [solicitação de inclui na lista de bloqueios](#step3), em vez de limpar toda a solicitação de pesquisa e adicionar novamente os recursos desejados. Em outras palavras, envie a lista de recursos atualizada (como mostrado na [Etapa 3](#step3)), certificando-se de excluir os recursos que você deseja &quot;excluir&quot; do incluo na lista de bloqueios.
 
 ## Etapa 5: (opcional) gerenciar a inclui na lista de bloqueios global {#step5}
 
-Os exemplos acima estavam todos no contexto de uma única atividade. Você também pode bloquear recursos para todas as atividades em um determinado cliente (locatário), em vez de precisar especificar a inclui na lista de bloqueios para cada atividade individualmente. Incluir na lista de bloqueios Para executar uma pesquisa global, use a chamada `/blockList/global`, em vez de `blockList/<campaignId>`.
+Os exemplos acima estavam todos no contexto de uma única atividade. Você também pode bloquear recursos para todas as atividades em um determinado cliente (locatário), em vez de precisar especificar a inclui na lista de bloqueios para cada atividade individualmente. Para executar uma pesquisa global, use a chamada `/blockList/global`, em vez de `blockList/<campaignId>`.
 
 >[!BEGINTABS]
 

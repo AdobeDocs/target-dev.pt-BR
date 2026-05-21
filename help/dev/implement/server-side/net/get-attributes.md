@@ -1,12 +1,19 @@
 ---
-title: Usar getAttributes em  [!DNL Adobe Target]  com o SDK do .NET
+title: Usar getAttributes em  [!DNL Adobe Target] com o .NET SDK
 description: Saiba como usar getAttributes() para buscar experimentação e experiências personalizadas de [!DNL Target]  e extrair valores de atributo.
 feature: APIs/SDKs
 exl-id: 808da83d-3077-468b-a2ad-e35c25905f7d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/aflHPozCwJ-6fB7X-2jLaBvs42Ohz6OzwZ7AvkahCE8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '211'
-ht-degree: 9%
+source-wordcount: 209
+ht-degree: 10%
 
 ---
 
@@ -44,7 +51,7 @@ Um objeto `TargetAttributes` é retornado de `TargetClient.GetAttributes()` que 
 | GetString(mboxName, chave, defaultValue) | string | Retorna o valor de um nome de mbox e uma chave de atributo especificados |
 | GetInteger(mboxName, chave, defaultValue) | int | Retorna o valor de um nome de mbox e uma chave de atributo especificados |
 | GetDouble(mboxName, chave, defaultValue) | duplo | Retorna o valor de um nome de mbox e uma chave de atributo especificados |
-| GetValue(mboxName, chave, defaultValue) | T  | Retorna o valor de um nome de mbox e uma chave de atributo especificados |
+| GetValue(mboxName, chave, defaultValue) | T | Retorna o valor de um nome de mbox e uma chave de atributo especificados |
 
 ## Exemplo
 

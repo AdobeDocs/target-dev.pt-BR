@@ -4,10 +4,23 @@ description: Use a função [!UICONTROL adobe.target.getOffers()] e suas opçõe
 title: Como faço para usar a função [!UICONTROL adobe.target.getOffers()]?
 feature: at.js
 exl-id: b96a3018-93eb-49e7-9aed-b27bd9ae073a
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/jJXcWyQzJ48GNCNcOT165vxcO-CLExTj-t-3kbR2FZ0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1317'
-ht-degree: 62%
+source-wordcount: 1340
+ht-degree: 60%
 
 ---
 
@@ -17,14 +30,14 @@ Essa função permite que você recupere várias ofertas passando em várias mbo
 
 >[!NOTE]
 >
->Essa função foi introduzida com a at.js 2.x. Essa função não está disponível para a at.js versão 1.*x*.
+>Essa função foi introduzida com a at.js 2.x. Esta função não está disponível para a at.js versão 1.*x*.
 
 | Chave | Tipo | Obrigatório? | Descrição |
 | --- | --- | --- | --- |
 | `consumerId` | String | Não | O valor padrão é a mbox global do cliente se não for fornecida. Essa chave é usada para gerar a ID de dados complementares (SDID) usada para integração A4T.<P>Ao usar o `getOffers()`, cada chamada gera uma nova SDID. Se você tiver várias solicitações de mbox na mesma página e quiser preservar a SDID (para que corresponda à SDID da target-global-mbox e à SDID [!DNL Adobe Analytics]), use o parâmetro `consumerId`.<P>Se `getOffers()` incluir três mboxes (chamadas &quot;mbox1&quot;, &quot;mbox2&quot; e &quot;mbox3&quot;), inclua: `consumerId: "mbox1, mbox2, mbox3"` na chamada `getOffers()`. |
 | `decisioningMethod` | String | Não | &quot;lado do servidor&quot;, &quot;no dispositivo&quot;, &quot;híbrido&quot; |
 | `request` | Objeto | Sim | Consulte Tabela de solicitações abaixo. |
-| `timeout` | Número | Não | Tempo limite da solicitação. Se não for especificado, o tempo limite padrão da at.js será usado. |
+| `timeout` | Número | Não | Tempo-limite da solicitação. Se não for especificado, o tempo-limite padrão da at.js será usado. |
 
 ## Solicitação
 
@@ -70,8 +83,8 @@ Essa função permite que você recupere várias ofertas passando em várias mbo
 | Solicitação > executar > mboxes > mbox > produto > categoryId | Não | Não deixar em branco.<P>Tamanho máximo = 128. | Recupere as ofertas de determinada mbox com as IDs de categoria do produto especificadas. |
 | Solicitação > executar > mboxes > mbox > ordem | Não |  |  |
 | Solicitação > executar > mboxes > mbox > ordem > id | Não | Comprimento máximo = 250. | Recupere as ofertas de determinada mbox com as IDs da ordem especificadas. |
-| Solicitação > executar > mboxes > mbox > ordem > total | Não | `>=` 0. | Recupere as ofertas de determinada mbox com os totais da ordem especificados. |
-| Solicitação > executar > mboxes > mbox > ordem > purchasedProductIds | Não | Nenhum valor em branco.<P>Tamanho máximo de cada valor = 50.<P>Concatenado e separado por vírgula.<P>Tamanho total das IDs do produto: `<=` 250. | Recupere as ofertas de determinada mbox com as IDs do produto adquirido da ordem especificadas. |
+| Solicitação > executar > mboxes > mbox > ordem > total | Não | `>=` 0. | Recupere as ofertas de determinada mbox com os totais do pedido especificados. |
+| Solicitação > executar > mboxes > mbox > ordem > purchasedProductIds | Não | Nenhum valor em branco.<P>Tamanho máximo de cada valor = 50.<P>Concatenado e separado por vírgula.<P>Tamanho total das IDs do produto: `<=` 250. | Recupere as ofertas de determinada mbox com as IDs do produto adquirido do pedido especificadas. |
 
 ## Chamada [!UICONTROL getOffers()] para todas as exibições
 
@@ -287,7 +300,7 @@ Observe que este exemplo usa `prefetch > mboxes`, mas você também pode usar `e
 
 ## Chame [!UICONTROL getOffers()] para executar um pageLoad
 
-O exemplo a seguir mostra como executar um pageLoad usando o [!UICONTROL getOffers()] com a at.js 2.*x*  
+O exemplo a seguir mostra como executar um pageLoad usando [!UICONTROL getOffers()] com at.js 2.*x*
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffers({

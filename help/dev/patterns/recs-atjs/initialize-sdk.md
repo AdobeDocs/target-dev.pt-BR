@@ -5,16 +5,32 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 250a8382-1fdd-4a70-b712-a25af5adad71
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/PxAKvxntUCdacBLopvANAI7-8OWe-ELQqFRJu-n3RWo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1558'
-ht-degree: 5%
+source-wordcount: 1797
+ht-degree: 4%
 
 ---
 
 # Inicializar SDKs
 
-Siga as etapas do diagrama *Inicializar SDK* para garantir que todas as tarefas necessárias para carregar a biblioteca at.js de JavaScript [!DNL Adobe Target] sejam executadas na sequência correta.
+Siga as etapas do diagrama *Inicializar o SDK* para garantir que todas as tarefas necessárias para carregar a biblioteca at.js de JavaScript do [!DNL Adobe Target] sejam executadas na sequência correta.
 
 >[!TIP]
 >
@@ -32,7 +48,7 @@ Para aplicativos de várias páginas, esse fluxo ocorre sempre que a página é 
 
 Clique nos links a seguir para navegar até as seções desejadas:
 
-* [1.1: Carregar SDK da API do visitante](#load)
+* [1.1: Carregar API SDK do visitante](#load)
 * [1.2: Definir ID do cliente](#set)
 * [1.3: Configurar solicitação automática de carregamento de página](#automatic)
 * [1.4: Configurar o tratamento de cintilação](#flicker)
@@ -49,17 +65,17 @@ Clique nos links a seguir para navegar até as seções desejadas:
 * [1.15: Configurar mapeamento de dados remotos](#remote)
 * [1.16: Carregar at.js](#web)
 
-## 1.1: Carregar SDK da API do visitante {#load}
+## 1.1: Carregar API SDK do visitante {#load}
 
 Esta etapa ajuda a garantir que a biblioteca `VisitorAPI.js` seja carregada, configurada e inicializada corretamente.
 
 +++Ver detalhes
 
-![Carregar diagrama do SDK da API de Visitante](/help/dev/patterns/recs-atjs/assets/load-visitor-combined.png){width="400" zoomable="yes"}
+![Carregar diagrama SDK da API de Visitante](/help/dev/patterns/recs-atjs/assets/load-visitor-combined.png){width="400" zoomable="yes"}
 
 **Pré-requisitos**
 
-* Para usar a ID de visitante/API Service, sua empresa deve estar habilitada para o [!DNL Adobe Experience Cloud] e ter um [!UICONTROL Organization ID]. Para obter mais informações, consulte [Requisitos de Experience Cloud: ID da Organização](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=pt-BR&){target=_blank} no guia *Ajuda do Serviço de Identidade*.
+* Para usar a ID de visitante/API Service, sua empresa deve estar habilitada para o [!DNL Adobe Experience Cloud] e ter um [!UICONTROL Organization ID]. Para obter mais informações, consulte [Requisitos do Experience Cloud: ID da Organização](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=pt-BR&){target=_blank} no guia *Ajuda do Serviço de Identidade*.
 * Você precisa do arquivo `VisitorAPI.js`. Você já deve ter este arquivo se tiver o [!DNL Adobe Analytics] implementado. Este arquivo também pode ser adicionado por meio da [[!DNL Adobe Experience Platform] extensão de tags](https://experienceleague.adobe.com/docs/tags.html?lang=pt-BR){target=_blank} ou pode ser baixado do [Gerenciador de Códigos Adobe Analytics](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=pt-BR){target=_blank}.
 
 **Configurar e consultar VisitorAPI.js**
@@ -68,11 +84,11 @@ Para obter mais informações, consulte [Implementar o Serviço Experience Cloud
 
 **Leituras**
 
-* [visão geral do Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=pt-BR){target=_blank}
-* [Sobre o Serviço de ID](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html?lang=pt-BR){target=_blank}
-* [Cookies e o Serviço de Identidade Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=pt-BR){target=_blank}
-* [Como o Serviço de Identidade do Experience Cloud solicita e define IDs](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=pt-BR){target=_blank}
-* [Entendendo a sincronização de ID e as taxas de correspondência](https://experienceleague.adobe.com/docs/id-service/using/intro/match-rates.html?lang=pt-BR){target=_blank}
+* [Visão geral do serviço de identidade da Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/overview.html?lang=pt-BR){target=_blank}
+* [Sobre o serviço de ID](https://experienceleague.adobe.com/docs/id-service/using/intro/about-id-service.html?lang=pt-BR){target=_blank}
+* [Cookies e o serviço de identidade da Experience Cloud](https://experienceleague.adobe.com/docs/id-service/using/intro/cookies.html?lang=pt-BR){target=_blank}
+* [Como o serviço de identidade da Experience Cloud solicita e define IDs](https://experienceleague.adobe.com/docs/id-service/using/intro/id-request.html?lang=pt-BR){target=_blank}
+* [Como entender a sincronização de ID e as taxas de correspondência](https://experienceleague.adobe.com/docs/id-service/using/intro/match-rates.html?lang=pt-BR){target=_blank}
 
 **Ações**
 
@@ -97,7 +113,7 @@ Essa etapa ajuda a garantir que as IDs conhecidas dos seus visitantes (CRM ID, I
 
 * A ID conhecida dos visitantes deve estar disponível na camada de dados.
 
-**Definir ID do Cliente**
+**Definir ID do cliente**
 Para obter mais informações, consulte [setCustomerIDs](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/methods/setcustomerids.html?lang=pt-BR){target=_blank}.
 
 **Leituras**
@@ -200,8 +216,8 @@ Para obter mais informações, consulte [targetPageParams()](/help/dev/implement
 **Leituras**
 
 * [targetPageParams()](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md)
-* [Planejar e implementar o Recommendations](/help/dev/implement/recommendations/recommendations.md)
-* [Configurar o catálogo do Recommendations](/help/dev/implement/recommendations/recommendations.md)
+* [Planejar e implementar o Recomendações](/help/dev/implement/recommendations/recommendations.md)
+* [Configurar o catálogo de recomendações](/help/dev/implement/recommendations/recommendations.md)
 
 **Ações**
 
@@ -278,7 +294,7 @@ Faça recomendações com base na popularidade geral de um item em todo o site o
 
 **Leituras**
 
-* [Com base em popularidade](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=pt-BR#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Baseado em popularidade](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=pt-BR#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -360,7 +376,7 @@ Fazer recomendações com base em um arquivo personalizado que você carregou.
 
 **Leituras**
 
-* [Usar regras de inclusão estática e dinâmica](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=pt-BR){target=_blank}
+* [Uso das regras de inclusão estática e dinâmica](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=pt-BR){target=_blank}
 
 +++
 

@@ -3,10 +3,22 @@ title: Fornecer personalização usando SDKs da Adobe Target
 description: Saiba como fornecer personalização usando o [!UICONTROL on-device decisioning].
 feature: APIs/SDKs
 exl-id: bac64c78-0d3a-40d7-ae2b-afa0f1b8dc4f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/IufE4ByFgQ8WwHZ5YVHbbyvN6jBBNGCK4IC98m9zGsc
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 0%
+source-wordcount: 525
+ht-degree: 1%
 
 ---
 
@@ -26,7 +38,7 @@ ht-degree: 0%
 
 Suponha que você seja uma empresa de turismo. Você deseja entregar uma oferta personalizada com 25% de desconto em determinados pacotes de viagem. Para que a oferta repercuta com seus usuários, você decide mostrar um ponto de referência da cidade de destino. Além disso, verifique se a entrega de suas ofertas personalizadas tem latência próxima de zero para que não afete negativamente as experiências do usuário e distorça os resultados.
 
-## 1. Habilitar [!UICONTROL on-device decisioning] para sua organização
+## &#x200B;1. Habilitar [!UICONTROL on-device decisioning] para sua organização
 
 1. A ativação da decisão no dispositivo garante que uma atividade A/B seja executada com latência próxima a zero. Para habilitar este recurso, navegue até **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** em [!DNL Adobe Target] e habilite a alternância **[!UICONTROL On-Device Decisioning]**.
 
@@ -38,7 +50,7 @@ Suponha que você seja uma empresa de turismo. Você deseja entregar uma oferta 
 
    Depois de habilitar a alternância **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] começa a gerar *artefatos de regra* para o seu cliente.
 
-## 2. Criar uma atividade do [!UICONTROL Experience Targeting] (XT)
+## &#x200B;2. Criar uma atividade [!UICONTROL Experience Targeting] (XT)
 
 1. Em [!DNL Adobe Target], navegue até a página **[!UICONTROL Activities]** e selecione **[!UICONTROL Create Activity]** > **[!UICONTROL Experience Targeting]**.
 
@@ -48,7 +60,7 @@ Suponha que você seja uma empresa de turismo. Você deseja entregar uma oferta 
 
    ![alt imagem](assets/asset-xt-next.png)
 
-## 3. Definir uma experiência personalizada por público
+## &#x200B;3. Definir uma experiência personalizada por público
 
 1. Na etapa **[!UICONTROL Experiences]** da criação da atividade, clique em **[!UICONTROL Change Audience]** para criar um público-alvo para os visitantes que desejam viajar para São Francisco, Califórnia.
 
@@ -58,31 +70,31 @@ Suponha que você seja uma empresa de turismo. Você deseja entregar uma oferta 
 
    ![alt imagem](assets/asset-audience-sf.png)
 
-1. Ainda na etapa **[!UICONTROL Experiences]**, digite o nome do local (1) no aplicativo em que deseja renderizar uma oferta especial sobre o Golden Gate Bridge, mas apenas para aqueles que vão para São Francisco. No exemplo mostrado aqui, homepage é o local selecionado para a oferta HTML (2), que é definido na área **[!UICONTROL Content]**.
+1. Ainda na etapa **[!UICONTROL Experiences]**, digite o nome do local (1) no aplicativo em que deseja renderizar uma oferta especial sobre o Golden Gate Bridge, mas apenas para aqueles que vão para São Francisco. No exemplo mostrado aqui, homepage é o local selecionado para a oferta do HTML (2), que é definido na área **[!UICONTROL Content]**.
 
    ![alt imagem](assets/asset-content-sf.png)
 
-1. Adicione outro público-alvo de direcionamento clicando em **[!UICONTROL Add Experience Targeting]**. Desta vez, direcione a um público que gostaria de viajar para Nova York definindo uma regra de público em que `destinationCity = New York`. Defina o local no aplicativo onde deseja renderizar uma oferta especial sobre o Empire State Building. No exemplo mostrado aqui, `homepage` é o local selecionado para a oferta HTML (2), que é definido na área **[!UICONTROL Content]**.
+1. Adicione outro público-alvo de direcionamento clicando em **[!UICONTROL Add Experience Targeting]**. Desta vez, direcione a um público que gostaria de viajar para Nova York definindo uma regra de público em que `destinationCity = New York`. Defina o local no aplicativo onde deseja renderizar uma oferta especial sobre o Empire State Building. No exemplo mostrado aqui, `homepage` é o local selecionado para a oferta do HTML (2), que é definido na área **[!UICONTROL Content]**.
 
    ![alt imagem](assets/asset-content-ny.png)
 
-## 4. Verificar a experiência personalizada por público
+## &#x200B;4. Verificar experiência personalizada por público-alvo
 
 Na etapa **[!UICONTROL Targeting]**, verifique se você configurou a experiência personalizada desejada por público-alvo.
 
 ![alt imagem](assets/asset-verify-sf-ny.png)
 
-## 5. Configurar relatórios
+## &#x200B;5. Configurar relatórios
 
 Na etapa **[!UICONTROL Goals & Settings]**, escolha **[!UICONTROL Adobe Target]** como **[!UICONTROL Reporting Source]** para exibir os resultados da atividade na interface do usuário [!DNL Adobe Target], ou **[!UICONTROL Adobe Analytics]** para exibi-los na interface do usuário do Adobe Analytics.
 
 ![alt imagem](assets/asset-reporting-sf-ny.png)
 
-## 6. Adicionar métricas para rastrear KPIs
+## &#x200B;6. Adicionar métricas para KPIs de rastreamento
 
 Escolha um **[!UICONTROL Goal Metric]** para medir o sucesso da atividade. Neste exemplo, uma conversão bem-sucedida se baseia no fato de o usuário clicar na oferta de destino personalizada.
 
-## 7. Implemente suas ofertas personalizadas no aplicativo
+## &#x200B;7. Implementar ofertas personalizadas no aplicativo
 
 >[!BEGINTABS]
 
@@ -146,7 +158,7 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 >[!ENDTABS]
 
-## 8. Implementar código para rastrear eventos de conversão
+## &#x200B;8. Implementar código para rastrear eventos de conversão
 
 >[!BEGINTABS]
 
@@ -219,6 +231,6 @@ notificationDeliveryService.sendNotification(request);
 
 >[!ENDTABS]
 
-## 9. Ativar sua atividade de Direcionamento de experiência (XT)
+## &#x200B;9. Ativar a atividade de Direcionamento de experiência (XT)
 
 ![alt imagem](assets/asset-xt-activate.png)

@@ -4,9 +4,29 @@ description: Saiba como executar o [!UICONTROL on-device decisioning] com a bibl
 title: Como a Decisão no dispositivo funciona com a biblioteca at.js de JavaScript?
 feature: at.js
 exl-id: bd0e062f-c259-46f3-adba-e380af058ac8
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/5cYQQDwAwUbKanR3Wbt7ckKnGwHvz3arqn0zjdz6SBc
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '3478'
+source-wordcount: 3621
 ht-degree: 4%
 
 ---
@@ -25,16 +45,16 @@ O [!DNL Target] também oferece a flexibilidade de fornecer a experiência mais 
 
 Os benefícios do [!UICONTROL on-device decisioning] incluem:
 
-* **Proporcione decisões e experiências extremamente rápidas.** A classificação e a decisão são executadas na memória e no navegador para evitar o bloqueio de solicitações de rede.
+* **Proporcione decisões e experiências extremamente rápidas.** O particionamento e a decisão são executados na memória e no navegador para evitar o bloqueio de solicitações de rede.
 * **Aprimorar o desempenho do aplicativo.** Execute experimentos e forneça personalização aos seus clientes e usuários sem comprometer as experiências do usuário final.
-* **Melhore A Pontuação De Qualidade Do Site Do Google.** Com as decisões ocorrendo na memória, melhore a pontuação da Qualidade do Site do Google da sua empresa online para torná-la mais visível aos consumidores.
+* **Melhore A Pontuação De Qualidade Do Site Do Google.** Com as decisões sendo tomadas na memória, melhore a pontuação da Qualidade do site do Google em seu negócio online para torná-lo mais detectável pelos consumidores.
 * **Aprenda com a análise em tempo real.** Obtenha insights do desempenho da sua atividade em tempo real através dos relatórios do [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR) (A4T). O A4T permite que você mude sua estratégia em momentos críticos.
 
 ## Recursos compatíveis
 
 O SDK JS do [!DNL Adobe Target] oferece aos clientes flexibilidade para escolher entre desempenho e atualização de dados para decisões. Em outras palavras, se o fornecimento do conteúdo personalizado mais relevante e envolvente por meio do aprendizado de máquina for mais importante para você, uma chamada de servidor em tempo real deverá ser feita. Mas quando o desempenho é mais crítico, uma decisão no dispositivo e na memória deve ser tomada. Para que o [!UICONTROL on-device decisioning] funcione, consulte a lista de recursos compatíveis:
 
-* Tipos de atividades 
+* Tipos de atividades
 * Direcionamento de público
 * Método de alocação
 
@@ -73,10 +93,10 @@ A lista a seguir corresponde aos números no diagrama:
 | Etapa | Descrição |
 | --- | --- |
 | 1 | A ID de visitante da Experience Cloud foi recuperada do [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=pt-BR&). |
-| 2 | A biblioteca at.js é carregada de modo síncrono e oculta o corpo do documento.<br />   A biblioteca at.js também pode ser carregada de forma assíncrona com uma opção que oculta previamente o trecho implementado na página. |
+| 2 | A biblioteca at.js é carregada de forma síncrona e oculta o corpo do documento.<br />   A biblioteca at.js também pode ser carregada de forma assíncrona com uma opção que oculta previamente o trecho implementado na página. |
 | 3 | A biblioteca at.js oculta o corpo para evitar cintilação. |
 | 4 | É feita uma solicitação de carregamento de página que inclui todos os parâmetros configurados, como (ECID, ID do cliente, Parâmetros personalizados, Perfil do usuário e assim por diante). |
-| 5 | Os scripts de perfil executam e, em seguida, fazem o feed na Loja do perfil.<br />A Loja de Perfis solicita públicos qualificados da Biblioteca de Públicos (por exemplo, públicos compartilhados da Adobe Analytics, Adobe Audience Manager e assim por diante).<br />Os atributos do cliente são enviados à Loja de perfis em um processo em lote. |
+| 5 | Os scripts de perfil são executados e, em seguida, alimentados na Loja de Perfis.<br />A Loja de Perfis solicita públicos qualificados da Biblioteca de Públicos (por exemplo, públicos compartilhados da Adobe Analytics, Adobe Audience Manager e assim por diante).<br />Os atributos do cliente são enviados à Loja de Perfis em um processo em lote. |
 | 6 | A Loja de perfis é usada para qualificação de público-alvo e classificação para filtrar atividades. |
 | 7 | O conteúdo resultante é selecionado depois que a experiência é determinada a partir das atividades [!DNL Target] ativas. |
 | 8 | A biblioteca at.js oculta os elementos correspondentes na página que estão associados à experiência que deve ser renderizada. |
@@ -122,7 +142,7 @@ A lista a seguir corresponde aos números no diagrama:
 | 9 | A biblioteca at.js manipula o DOM para renderizar a experiência do artefato de regra JSON em cache. |
 | 10 | A experiência é renderizada para o visitante. |
 | 11 | A página da Web inteira é carregada. |
-| 12 | Os dados do Analytics são enviados para os servidores de Coleção de dados. Os dados direcionados correspondem aos dados do Analytics por meio da SDID e são processados no armazenamento de relatórios do Analytics. Em seguida, os dados do Analytics podem ser exibidos no Analytics e no [!DNL Target] pelos relatórios do [!UICONTROL Analytics for Target] (A4T). |
+| 12 | Os dados do Analytics são enviados ao servidores de Coleção de dados. Os dados direcionados correspondem aos dados do Analytics por meio da SDID e são processados no armazenamento de relatórios do Analytics. Em seguida, os dados do Analytics podem ser exibidos no Analytics e no [!DNL Target] pelos relatórios do [!UICONTROL Analytics for Target] (A4T). |
 
 O diagrama a seguir ilustra a interação entre seu visitante, o navegador, a at.js 2.5.0+ e o artefato de regra JSON em cache para a próxima ocorrência de página ou visita recorrente do visitante. Como o artefato de regras JSON já está armazenado em cache e disponível no navegador, a decisão é tomada imediatamente, sem uma chamada de rede de bloqueio. Este diagrama de fluxo captura a navegação de página subsequente ou os visitantes recorrentes.
 
@@ -147,7 +167,7 @@ A lista a seguir corresponde aos números no diagrama:
 | 7 | A biblioteca at.js manipula o DOM para renderizar a experiência do artefato de regra JSON em cache. |
 | 8 | A experiência é renderizada para o visitante. |
 | 9 | A página da Web inteira é carregada. |
-| 10 | Os dados do Analytics são enviados para os servidores de Coleção de dados. Os dados direcionados correspondem aos dados do Analytics por meio da SDID e são processados no armazenamento de relatórios do Analytics. Em seguida, os dados do Analytics podem ser exibidos no Analytics e no [!DNL Target] pelos relatórios do [!UICONTROL Analytics for Target] (A4T). |
+| 10 | Os dados do Analytics são enviados ao servidores de Coleção de dados. Os dados direcionados correspondem aos dados do Analytics por meio da SDID e são processados no armazenamento de relatórios do Analytics. Em seguida, os dados do Analytics podem ser exibidos no Analytics e no [!DNL Target] pelos relatórios do [!UICONTROL Analytics for Target] (A4T). |
 
 ### Híbrido
 
@@ -187,7 +207,7 @@ A lista a seguir corresponde aos números no diagrama:
 | 12 | A biblioteca at.js manipula o DOM para renderizar a experiência do Edge Network [!DNL Target]. |
 | 13 | A experiência é renderizada para o visitante. |
 | 14 | A página da Web inteira é carregada. |
-| 15 | Os dados do Analytics são enviados para os servidores de Coleção de dados. Os dados direcionados correspondem aos dados do Analytics por meio da SDID e são processados no armazenamento de relatórios do Analytics. Em seguida, os dados do Analytics podem ser exibidos no Analytics e no [!DNL Target] pelos relatórios do [!UICONTROL Analytics for Target] (A4T). |
+| 15 | Os dados do Analytics são enviados ao servidores de Coleção de dados. Os dados direcionados correspondem aos dados do Analytics por meio da SDID e são processados no armazenamento de relatórios do Analytics. Em seguida, os dados do Analytics podem ser exibidos no Analytics e no [!DNL Target] pelos relatórios do [!UICONTROL Analytics for Target] (A4T). |
 
 O diagrama a seguir ilustra a interação entre seu visitante, o navegador, a at.js 2.5.0+ e o artefato de regras JSON em cache para uma navegação de página subsequente ou uma visita de retorno. Neste diagrama, concentre-se somente no caso de uso em que uma decisão no dispositivo é tomada para a navegação da página subsequente ou para a visita de retorno. Lembre-se de que, dependendo de quais atividades estão ativas para determinadas páginas, uma chamada do lado do servidor pode ser feita para executar decisões do lado do servidor.
 
@@ -213,7 +233,7 @@ A lista a seguir corresponde aos números no diagrama:
 | 8 | A biblioteca at.js manipula o DOM para renderizar a experiência do artefato de regra JSON em cache. |
 | 9 | A experiência é renderizada para o visitante. |
 | 10 | A página da Web inteira é carregada. |
-| 11 | Os dados do Analytics são enviados para os servidores de Coleção de dados. Os dados direcionados correspondem aos dados do Analytics por meio da SDID e são processados no armazenamento de relatórios do Analytics. Em seguida, os dados do Analytics podem ser exibidos no Analytics e no [!DNL Target] pelos relatórios do [!UICONTROL Analytics for Target] (A4T). |
+| 11 | Os dados do Analytics são enviados ao servidores de Coleção de dados. Os dados direcionados correspondem aos dados do Analytics por meio da SDID e são processados no armazenamento de relatórios do Analytics. Em seguida, os dados do Analytics podem ser exibidos no Analytics e no [!DNL Target] pelos relatórios do [!UICONTROL Analytics for Target] (A4T). |
 
 ## Como habilitar o [!UICONTROL on-device decisioning]?
 

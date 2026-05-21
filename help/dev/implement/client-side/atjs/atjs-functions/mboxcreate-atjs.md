@@ -4,10 +4,21 @@ description: Use a função [!UICONTROL mboxCreate()] da biblioteca de JavaScrip
 title: Como faço para usar a função [!UICONTROL mboxCreate()]?
 feature: at.js
 exl-id: 86eba1fc-4e1d-4793-94e7-898bf81f8945
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/hCEKL9RPtqIbMVEouzObjU6dc7TKl1hBtKZ1jEdicRE
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '205'
-ht-degree: 56%
+source-wordcount: 211
+ht-degree: 41%
 
 ---
 
@@ -17,7 +28,7 @@ Executa uma solicitação e aplica a oferta ao DIV mais próximo com o nome de c
 
 >[!NOTE]
 >
->Essa função está disponível para a at.js versão 1.somente *x*. Essa função foi descontinuada pelo lançamento da at.js 2.x. Ela retorna o conteúdo padrão se for usada com a 2.x.
+>Esta função está disponível somente para a at.js versão 1.*x*. Essa função foi substituída pelo lançamento da at.js 2.x. Essa função retorna o conteúdo padrão se for usada com a at.js 2.x.
 
 Essa função está incorporada na at.js, principalmente para facilitar a transição da mbox.js (descontinuada) para a at.js. Uma alternativa mais nova para `[!UICONTROL mboxCreate()]` é `[!UICONTROL adobe.target.getOffer()]`/ `[!UICONTROL adobe.target.applyOffer()]` ou a diretiva Angular.
 

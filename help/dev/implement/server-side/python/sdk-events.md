@@ -3,9 +3,14 @@ title: Inscrever-se em eventos no  [!DNL Adobe Target] Python SDK
 description: Saiba como assinar vários eventos que ocorrem no Python SDK usando o objeto [!UICONTROL OnDeviceDecisioningHandler].
 feature: APIs/SDKs
 exl-id: 4e32e3b5-6072-4703-b09d-abb467aa1304
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/iFtlxw8Wlc9EMtDTndtXD7a2gu1TzGM6ijXire9gHPk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: 165
 ht-degree: 3%
 
 ---
@@ -18,7 +23,7 @@ Ao [inicializar o SDK](initialize-sdk.md), o dict `options["events"]` é um obje
 
 Quando a função `callback` é chamada, um objeto de evento é transmitido. Cada evento tem um `type` correspondente ao nome do evento, e alguns eventos incluem propriedades adicionais com informações pertinentes.
 
-## Eventos 
+## Eventos
 
 | Nome do evento (tipo) | Descrição | Propriedades adicionais do evento |
 | --- | --- | --- |

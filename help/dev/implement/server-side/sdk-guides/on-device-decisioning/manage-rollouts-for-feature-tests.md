@@ -3,10 +3,22 @@ title: Gerenciar implantações para testes de recursos
 description: Saiba como gerenciar implantações para testes de recursos usando o [!UICONTROL on-device decisioning].
 feature: APIs/SDKs
 exl-id: caa91728-6ac0-4583-a594-0c8fe616342d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/soG8leVV3R4Y4FSns5oIJ43oziIhtOb2zJ5bkFYxeo0
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '513'
-ht-degree: 0%
+source-wordcount: 525
+ht-degree: 1%
 
 ---
 
@@ -22,7 +34,7 @@ ht-degree: 0%
 1. Ativar atividade A/B
 1. Ajuste a implantação e a alocação de tráfego conforme necessário
 
-## 1. Habilitar [!UICONTROL on-device decisioning] para sua organização
+## &#x200B;1. Habilitar [!UICONTROL on-device decisioning] para sua organização
 
 A ativação da decisão no dispositivo garante que uma atividade A/B seja executada com latência próxima a zero. Para habilitar este recurso, navegue até **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** em [!DNL Adobe Target] e habilite a alternância **[!UICONTROL On-Device Decisioning]**.
 
@@ -34,7 +46,7 @@ A ativação da decisão no dispositivo garante que uma atividade A/B seja execu
 
 Depois de habilitar a alternância [!UICONTROL On-Device Decisioning], [!DNL Adobe Target] começa a gerar *artefatos de regra* para o seu cliente.
 
-## 2. Criar uma atividade [!UICONTROL A/B Test]
+## &#x200B;2. Criar uma atividade [!UICONTROL A/B Test]
 
 1. Em [!DNL Adobe Target], navegue até a página **[!UICONTROL Activities]** e selecione **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**.
 
@@ -44,7 +56,7 @@ Depois de habilitar a alternância [!UICONTROL On-Device Decisioning], [!DNL Ado
 
    ![alt imagem](assets/asset-form.png)
 
-## 3. Definir as configurações de recurso e implantação
+## &#x200B;3. Definir as configurações de recurso e implantação
 
 Na etapa **[!UICONTROL Experiences]** da criação da atividade, forneça um nome para a atividade (1). Digite o nome do local (2) no aplicativo onde deseja gerenciar implantações para o recurso. Por exemplo, `ondevice-rollout` ou `homepage-addtocart-rollout` são nomes de locais que indicam os destinos para o gerenciamento de implantações de recursos. No exemplo mostrado abaixo, `ondevice-rollout` é o local definido para a Experiência A. Opcionalmente, é possível adicionar refinamentos de Público-alvo (4) para restringir a qualificação à atividade.
 
@@ -74,7 +86,7 @@ Na etapa **[!UICONTROL Experiences]** da criação da atividade, forneça um nom
 
    ![alt imagem](assets/asset-conv-rollout.png)
 
-## 4. Implementar e renderizar o recurso em seu aplicativo
+## &#x200B;4. Implementar e renderizar o recurso em seu aplicativo
 
 >[!BEGINTABS]
 
@@ -103,7 +115,7 @@ targetClient.getAttributes(["ondevice-rollout"]).then(function(attributes) {
 
 >[!ENDTABS]
 
-## 5. Implementar o rastreamento de eventos no aplicativo
+## &#x200B;5. Implementar o rastreamento de eventos no aplicativo
 
 Depois de disponibilizar a variável do sinalizador de recurso no aplicativo, você pode usá-la para ativar qualquer recurso que já faça parte do aplicativo. Se um visitante não se qualificar para a atividade, significa que não foi incluído como parte do intervalo de 10% definido como o público-alvo.
 
@@ -155,11 +167,11 @@ else {
 
 >[!ENDTABS]
 
-## 6. Ativar a atividade de implantação
+## &#x200B;6. Ativar a atividade de implantação
 
 ![alt imagem](assets/asset-activate-rollout.png)
 
-## 7. Ajuste a implantação e a alocação de tráfego conforme necessário
+## &#x200B;7. Ajuste a implantação e a alocação de tráfego conforme necessário
 
 Depois de ativar sua atividade, edite-a a qualquer momento para aumentar ou diminuir a alocação de tráfego, conforme necessário.
 

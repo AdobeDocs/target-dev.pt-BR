@@ -4,10 +4,19 @@ description: Veja as perguntas frequentes e suas respostas sobre o  [!DNL Adobe 
 title: Quais são as perguntas frequentes [!DNL About Target] sobre aplicativos móveis?
 feature: Implement Mobile
 exl-id: 06cae3de-83a4-4018-a832-66fb292a1d0f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/DvyEuK-o-3qAJDKVI3tSe9ZirSQa0my6vbIhJQP9EU4
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 1%
+source-wordcount: 310
+ht-degree: 3%
 
 ---
 
@@ -15,7 +24,7 @@ ht-degree: 1%
 
 Lista de perguntas frequentes sobre [!DNL Target] para aplicativos móveis.
 
-## Devo usar tags no [!DNL Adobe Experience Platform] para implantar o SDK, ou posso implantar o SDK sem usar o Launch?
+## Devo usar tags no [!DNL Adobe Experience Platform] para implantar a SDK, ou posso implantar a SDK sem usar o Launch?
 
 O SDK está disponível no [Adobe Marketing Cloud git](https://github.com/Adobe-Marketing-Cloud/acp-sdks/){target=_blank}. Se você não usar [tags na Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=pt-BR){target=_blank}, deverá gerenciar seu próprio arquivo de configurações e gerenciá-lo no aplicativo.
 
@@ -37,4 +46,4 @@ Não. Para clientes do [!DNL Adobe Target Standard], você pode usar nossos SDKs
 
 ## Há uma integração de aplicativo móvel entre as atividades móveis de [!DNL Adobe Experience Manager] (AEM) e [!DNL Target]?
 
-Atualmente, você pode compartilhar JSON [Fragmentos de experiência](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=pt-BR){target=_blank} do AEM com [!DNL Target] e, em seguida, usá-los em uma atividade de aplicativo móvel.
+Atualmente, você pode compartilhar JSON [Fragmentos de experiência](https://experienceleague.adobe.com/docs/target/using/experiences/offers/aem-experience-fragments.html?lang=pt-BR){target=_blank} do AEM com o [!DNL Target] e, em seguida, usá-los em uma atividade de aplicativo móvel.

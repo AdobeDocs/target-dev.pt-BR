@@ -5,9 +5,20 @@ title: Implementar [!DNL Adobe Target] em um aplicativo móvel que usa código n
 feature: Implement Mobile
 role: Developer
 exl-id: 3dd2e1d7-c744-4ba8-aaa4-6c2fe64d01fa
-source-git-commit: 50ee7e66e30c0f8367763a63b6fde5977d30cfe7
+TQID: https://experienceleague.adobe.com/JrbjPpq3ds0sl4rkMnuzF9SYk2PI4r676hHqN-Pvn78
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '561'
+source-wordcount: 611
 ht-degree: 0%
 
 ---
@@ -43,7 +54,7 @@ Identity.appendTo(url: URL(string: url), completion: {appendedURL, error in
 });
 ```
 
-Para obter mais informações sobre o método `Identity.appendTo` e ver um exemplo de como usar o método, consulte [Swift > Exemplo](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/tabs/api-reference/){target=_blank} na *Documentação do SDK móvel*.
+Para obter mais informações sobre o método `Identity.appendTo` e ver um exemplo de como usar o método, consulte [Swift > Exemplo](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/tabs/api-reference/){target=_blank} na *Documentação do Mobile SDK*.
 
 Usando `Identity.appendTo`, esta URL:
 
@@ -63,7 +74,7 @@ Como você pode ver, há um parâmetro `adobe_mc` anexado à URL. Esse parâmetr
 * MCMID=69624092487065093697422606480535692677: O [!UICONTROL Experience Cloud ID] (ECID). Também conhecida como MID ou [!UICONTROL Marketing Cloud ID] necessária para a identificação de visitantes entre soluções de [!DNL Adobe].
 * MCORGID=EB9CAE8B56E003697F000101@AdobeOrg: O [!UICONTROL Adobe Organization ID].
 
-O `Identity.getUrlVariables` é um método [!DNL Adobe Experience Platform Mobile SDK] alternativo que retorna uma cadeia de caracteres devidamente formada que contém as variáveis de URL [!DNL Experience Cloud Identity Service]. Para obter mais informações, consulte [getUrlVariables](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank} na *Referência de API de identidade*.
+O `Identity.getUrlVariables` é um método [!DNL Adobe Experience Platform Mobile SDK] alternativo que retorna uma cadeia de caracteres devidamente formada que contém as variáveis de URL [!DNL Experience Cloud Identity Service]. Para obter mais informações, consulte [getUrlVariables](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#geturlvariables){target=_blank} na *Referência da API de identidade*.
 
 ## Passar a ID da sessão [!DNL Target] para a experiência da mesma sessão
 

@@ -4,10 +4,25 @@ description: Saiba mais sobre o  [!DNL Adobe Target] e o impacto da iniciativa A
 title: Como o  [!DNL Target] Lida com o Suporte ITP da Apple?
 feature: Privacy & Security
 exl-id: 6deee03b-df86-4d0d-999c-b11855ddfda5
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/AvrlwiLa-soHwrGT1QMa8KgsiIwfwKaF-0LBxMjb8cs
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '606'
-ht-degree: 30%
+source-wordcount: 681
+ht-degree: 28%
 
 ---
 
@@ -25,7 +40,7 @@ Essas versões da ITP incluem as seguintes restrições:
 
 ## Qual é o impacto para mim como cliente do [!DNL Target]?
 
-O Target fornece bibliotecas JavaScript para você implantar em suas páginas para que o [!DNL Target] possa oferecer personalização em tempo real aos seus visitantes. Há três [!DNL Target] bibliotecas JavaScript at.js 1.*x*, at.js 2.*x*, o [!DNL Adobe Experience Cloud Web SDK] que coloca cookies do lado do cliente [!DNL Target] nos navegadores de seus visitantes por meio da API `document.cookie`. Como resultado, os cookies [!DNL Target] são afetados pela ITP 2.1, 2.2 e 2.3 da Apple e expirarão após sete dias (com a ITP 2.1) e após um dia (com a ITP 2.2 e a ITP 2.3).
+O Target fornece bibliotecas JavaScript para você implantar em suas páginas para que o [!DNL Target] possa oferecer personalização em tempo real aos seus visitantes. Há três [!DNL Target] bibliotecas JavaScript at.js 1.*x*, at.js 2.*x*, o [!DNL Adobe Experience Cloud Web SDK] que colocam os cookies [!DNL Target] do lado do cliente nos navegadores de seus visitantes por meio da API `document.cookie`. Como resultado, os cookies [!DNL Target] são afetados pela ITP 2.1, 2.2 e 2.3 da Apple e expirarão após sete dias (com a ITP 2.1) e após um dia (com a ITP 2.2 e a ITP 2.3).
 
 O Apple ITP 2.x afeta [!DNL Target] nas seguintes áreas:
 

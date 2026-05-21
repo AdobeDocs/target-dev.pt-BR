@@ -4,10 +4,17 @@ description: Veja exemplos de código para ajudá-lo a saber como criar locais e
 title: Como criar [!DNL Target] Locais e Métricas de sucesso em um aplicativo do iOS?
 feature: Implement Mobile
 exl-id: 755c8b26-5c60-48fc-9e7e-5e97a25edb78
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/frolzqCgdL0iz5Z3E8OaJmP6yiVq7jEYiWn6LD4bocA
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+level_v2:
+  - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '442'
-ht-degree: 66%
+source-wordcount: 469
+ht-degree: 63%
 
 ---
 
@@ -17,11 +24,11 @@ Para usar o [!DNL Target] no seu aplicativo móvel, crie um local e métrica de 
 
 >[!IMPORTANT]
 >
->Suporte para o [!DNL Adobe Mobile] versão 4.Os SDKs do *x* terminaram em 31 de agosto de 2021 e não são mais recomendados para usuários móveis do [!DNL Adobe Target].
+>O suporte para os SDKs [!DNL Adobe Mobile] versão 4.*x* terminou a partir de 31 de agosto de 2021 e não é mais recomendado para usuários móveis [!DNL Adobe Target].
 >
 >O [Adobe Experience Platform SDK para Aplicativos para Dispositivos Móveis](https://developer.adobe.com/client-sdks/documentation/){target=_blank} é a solução recomendada para habilitar soluções e serviços do [!DNL Adobe Experience Cloud] em seus aplicativos para dispositivos móveis.
 
-Esta seção inclui amostras de código que podem ser usadas como molde para seu aplicativo. As amostras nesta seção contém código para o iOS. Os mesmos padrões se aplicam ao Android. Sintaxe específica para Android pode ser encontrada no [guia do Android SDK 4.x para Experience Cloud Solutions](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html?lang=pt-BR).
+Esta seção inclui amostras de código que podem ser usadas como molde para seu aplicativo. As amostras nesta seção contém código para o iOS. Os mesmos padrões se aplicam ao Android. Sintaxe específica para o Android pode ser encontrada no [guia do Android SDK 4.x para Soluções da Experience Cloud](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html?lang=pt-BR).
 
 >[!NOTE]
 >
@@ -64,7 +71,7 @@ Há dois métodos primários para criar um local do [!DNL Target] no seu aplicat
    |---|---|
    | `targetLoadRequest:myRequest` | Substitua `myRequest` com o nome de seu `targetLocation` no aplicativo. |
    | `NSString *content` | Substitua content com o conteúdo real retornando da Adobe. A cadeia de caracteres pode ser XML, JSON ou uma cadeia de caracteres simples. Use esta seção do código para definir variáveis, caminhos de imagem, ver fluxos de controlador, pontos de transação ou qualquer outra coisa que queira fazer. O Target irá retornar o conteúdo inserido na interface do usuário no exato mesmo formato. |
-   | `heroImage.image = [UIImage imageNamed:content];` | Por exemplo: obtém o conteúdo e define o caminho para a imagem herói. |
+   | `heroImage.image = [UIImage imageNamed:content];` | Por exemplo: obtém o conteúdo e define o caminho para a imagem hero. |
 
 1. Criar uma métrica de sucesso.
 

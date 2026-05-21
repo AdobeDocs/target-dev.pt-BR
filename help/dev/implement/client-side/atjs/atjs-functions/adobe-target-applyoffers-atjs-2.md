@@ -4,10 +4,22 @@ description: Use a função [!UICONTROL adobe.target.applyOffers()] da bibliotec
 title: Como faço para usar a função [!UICONTROL adobe.target.applyOffers()]?
 feature: at.js
 exl-id: c391e3f4-fdf1-4e33-8dcb-6bf46e390538
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/9WIJvPZIlrtLkv-vv-HRkctgwHn3nX-jrE4-4usXW0Y
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '808'
-ht-degree: 80%
+source-wordcount: 820
+ht-degree: 78%
 
 ---
 
@@ -17,12 +29,12 @@ Essa função permite aplicar mais de uma oferta que foi recuperada por `adobe.t
 
 >[!NOTE]
 >
->Essa função foi introduzida com o at.js 2.*x*. Essa função não está disponível para a at.js versão 1.*x*.
+>Esta função foi introduzida com a at.js 2.*x*. Esta função não está disponível para a at.js versão 1.*x*.
 
 | Chave | Tipo | Obrigatório? | Descrição |
 | --- | --- | --- | --- |
-| selector | String    | Não | Elemento HTML ou seletor CSS usado para identificar o elemento HTML, onde [!DNL Target] deve colocar o conteúdo da oferta. Se um seletor não for fornecido, [!DNL Target] presume que o elemento HTML a ser usado é HTML HEAD. |
-| Resposta | Objeto | Sim | Objeto response de `getOffers()`.<br />Consulte Tabela de solicitações abaixo. |
+| selector | String | Não | Elemento HTML ou seletor CSS usado para identificar o elemento HTML, onde [!DNL Target] deve colocar o conteúdo da oferta. Se nenhum seletor for fornecido, [!DNL Target] presumirá que o elemento HTML a ser usado é o HTML HEAD. |
+| Resposta | Objeto | Sim | Objeto de resposta de `getOffers()`.<br />Consulte a tabela Solicitações abaixo. |
 
 ## Resposta
 

@@ -4,10 +4,25 @@ description: Saiba como o  [!DNL Target] usa o protocolo TLS (Transport Layer Se
 title: Como o [!DNL Target] usa o TLS para fornecer segurança?
 feature: Privacy & Security
 exl-id: f5ea2272-27ab-49c9-b096-b15dd277d4e5
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/2Ka08Kp8jLd6u7-gtwbfU1rq7SGDxE-dwBTHWz1mS3E
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1197'
-ht-degree: 49%
+source-wordcount: 1231
+ht-degree: 45%
 
 ---
 
@@ -15,7 +30,7 @@ ht-degree: 49%
 
 Informações sobre alterações em como o [!DNL Adobe] e o [!DNL Adobe Target] usam a Segurança da Camada de Transporte (TLS) para manter os mais altos padrões de segurança e promover a segurança dos dados do cliente.
 
-A Segurança da camada de transporte (TLS) é o protocolo de segurança mais amplamente implantado usado atualmente em navegadores Web e outros aplicativos que exigem dados trocados de maneira segura por meio de uma rede. O Adobe tem padrões de conformidade em segurança que exigem o fim da vida útil de protocolos mais antigos e o uso do TLS 1.2 para ter a versão mais atualizada e segura em vigor.
+A Segurança da camada de transporte (TLS) é o protocolo de segurança mais amplamente implantado usado atualmente em navegadores Web e outros aplicativos que exigem dados trocados de maneira segura por meio de uma rede. A Adobe tem padrões de conformidade em segurança que exigem o fim da vida útil de protocolos mais antigos e que estão demandando o uso do TLS 1.2 para que se tenha a versão mais atualizada e segura em uso.
 
 >[!WARNING]
 >
@@ -27,11 +42,11 @@ Não esperamos que isso afete significativamente os dados ou relatórios do clie
 
 O TLS 1.2 é o padrão a partir de 1º de março de 2020, e o TLS 1.1 não será mais compatível.
 
-A Adobe estará movendo os clientes em fases para o TLS 1.2. Para aqueles cujos domínios já estão em conformidade com o TLS 1.2, nós os moveremos para o TLS 1.2 sem qualquer alteração necessária da sua parte. A maioria dos domínios do cliente já é compatível com TLS 1.2; no entanto, se o seu domínio não for compatível com TLS 1.2, manteremos esses domínios no TLS 1.1 como hoje (até março de 2020).
+A Adobe moverá os clientes em fases para o TLS 1.2. Para aqueles cujos domínios já são compatíveis com a versão 1.2, nós os moveremos para o TLS 1.2 sem nenhuma alteração necessária da sua parte. A maioria dos domínios do cliente já é compatível com TLS 1.2; no entanto, se o seu domínio não for compatível com TLS 1.2, manteremos esses domínios no TLS 1.1 como hoje (até março de 2020).
 
 Você não deve enfrentar qualquer problema durante essa fase de migração. Se o VEC interrompeu o carregamento de um site que estava funcionando anteriormente, [abra um tíquete de Atendimento ao Cliente](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=pt-BR&#reference_ACA3391A00EF467B87930A450050077C) e cite essa migração como uma causa possível.
 
-Se, no entanto, você é um desses clientes que usam o TLS 1.1 sem compatibilidade com o TLS 1.2, então você deve planejar a mudança dos seus domínios/infraestrutura para o TLS 1.2. Continuaremos a ser compatíveis com o protocolo TLS 1.1 até segunda-feira, 1 de março de 2020. A partir de 1º de março de 2020, o [!DNL Target] não oferecerá suporte ao protocolo TLS 1.1 a ser usado para o VEC por meio do recurso Enhanced Experience Composer.
+No entanto, se você for um desses clientes que estão no TSL 1.1 sem suporte ao TLS 1.2, deverá planejar a movimentação de seus domínios/infraestrutura para o TLS 1.2. Continuaremos a oferecer suporte ao protocolo TLS 1.1 até 1º de março de 2020. A partir de 1º de março de 2020, o [!DNL Target] não oferecerá suporte ao protocolo TLS 1.1 a ser usado para o VEC por meio do recurso Enhanced Experience Composer.
 
 Embora recomendemos fortemente a todos usar o TLS 1.2 de agora em diante, se você for um novo cliente, mas *NÃO* for compatível com o TLS 1.2, entre em contato com o Atendimento ao cliente e os informe de que você precisa usar o TLS 1.1 no Compositor de experiências avançadas. No entanto, planeje a mudança para o TLS 1.2 já que você também não terá mais compatibilidade após segunda-feira, 1 de março de 2020.
 
@@ -65,7 +80,7 @@ A partir de 1º de março de 2020, as APIs do [!DNL Target] não serão mais com
 * Os clientes de API que usam o Java 8 não deverão ser afetados, pois a configuração padrão é TLS 1.2.
 * Os clientes da API que usam outras estruturas precisarão entrar em contato com seus fornecedores para obterem detalhes sobre o suporte a TLS 1.2.
 
-## Acesso às interfaces das soluções Experience Cloud
+## Acesso às interfaces das soluções da Experience Cloud
 
 Como a interface do [!DNL Target] Standard/Premium já requer um [navegador moderno](supported-browsers.md), não prevemos problemas. Caso não seja possível se conectar ao Target, será necessário atualizar seu navegador para a versão mais recente.
 
@@ -109,5 +124,5 @@ Os públicos-alvo param de funcionar.
 
 | Implementação do JavaScript [!DNL Target] | Detalhes |
 |--- |--- |
-| Adobe Experience Platform Web SDK | O SDK da Platform não é compatível com versões do Internet Explorer anteriores à versão 10. |
+| Adobe Experience Platform Web SDK | A Platform SDK não é compatível com versões do Internet Explorer anteriores à versão 10. |
 | at.js | at.js não é compatível nas versões do Internet Explorer mais antigas que a versão 10. |

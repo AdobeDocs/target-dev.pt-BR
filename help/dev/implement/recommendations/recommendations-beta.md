@@ -5,9 +5,22 @@ title: Como Implementar Atividades [!UICONTROL Recommendations]?
 feature: Recommendations
 hide: true
 exl-id: 0a9c9649-195b-44e2-987e-d02eaf98cc54
-source-git-commit: 760e6425fc2a32ec5c405094d144f173de1b6c07
+TQID: https://experienceleague.adobe.com/A7j0oJbyO3oei-a2l02I58o9I0vCPrRcqWC-QgQUxBo
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: '1550'
+source-wordcount: 1644
 ht-degree: 18%
 
 ---
@@ -29,11 +42,11 @@ Antes de configurar sua primeira atividade [!UICONTROL Recommendations] em [!DNL
 1. [Definir [!UICONTROL Recommendations] configurações](#configure-recommendations-settings).
 1. (Opcional) [Administrar [!UICONTROL Recommendations] usando APIs de Administrador](#administer-recommendations-using-admin-apis).
 
-## &#x200B;1. Implementar [!UICONTROL Target]
+## &#x200B;1. Implementar o [!UICONTROL Target]
 
 O [!DNL Target Recommendations] exige a implementação do [!DNL Adobe Experience Platform Web SDK] ou da at.js 0.9.2 (ou posterior). Consulte os [[!UICONTROL Target] guias de implementação do lado do cliente](../client-side/overview.md) para obter mais informações.
 
-## &#x200B;2. Configure seu catálogo do [!UICONTROL Recommendations]
+## &#x200B;2. Configurar o catálogo do [!UICONTROL Recommendations]
 
 Para fornecer recomendações de alta qualidade, [!UICONTROL Target] deve conhecer os produtos ou conteúdo que você deseja recomendar. Os catálogos normalmente incluem três tipos de informações sobre itens recomendados. Suponha que você esteja recomendando filmes. Inclua o seguinte:
 
@@ -166,7 +179,7 @@ Para obter mais informações, consulte [Configurar autenticação para APIs do 
 
 Conhecer o setor vertical do seu site ajuda o Target a escolher os critérios para suas recomendações.
 
-Os critérios em [!DNL Recommendations] são regras que determinam quais produtos ou conteúdo recomendar com base em um conjunto predeterminado de comportamentos do visitante. Os critérios podem ser baseados em tendências populares, nos comportamentos atuais e anteriores de um visitante ou em produtos e conteúdo semelhantes. Você pode comparar vários tipos de recomendação por meio da adição de vários critérios.
+Os critérios em [!DNL Recommendations] são regras que determinam quais produtos ou conteúdo recomendar com base em um conjunto predeterminado de comportamentos do visitante. Os critérios podem ser baseados em tendências populares, nos comportamentos atuais e passados de um visitante ou em produtos e conteúdo semelhantes. Você pode comparar vários tipos de recomendação por meio da adição de vários critérios.
 
 Para obter mais informações, consulte [Critérios](https://experienceleague.adobe.com/pt-br/docs/target/using/recommendations/criteria/algorithms){target=_blank} no *Guia do Profissional de Negócios da Adobe Target.*
 
@@ -199,7 +212,7 @@ As seguintes opções estão disponíveis na seção [!UICONTROL Product Catalog
 
 #### [!UICONTROL Default Host Group]
 
-Selecione seu grupo de hosts padrão.
+Selecione o seu grupo de hosts padrão.
 
 O grupo de hosts pode ser usado para separar os itens disponíveis no catálogo para usos diferentes. Por exemplo, você pode usar grupos de hosts para os ambientes de Desenvolvimento e Produção, para diferentes marcas ou diferentes regiões. Por padrão, os resultados de visualização na Pesquisa no catálogo, nas Coleções e nas Exclusões estão baseados no grupo de hosts padrão. (Também é possível selecionar um grupo de hosts diferente para visualizar os resultados, usando o filtro Ambiente.) Por padrão, os itens recém adicionados ficam disponíveis em todos os grupos de hosts, a menos que uma ID de ambiente seja especificada ao criar ou atualizar o item. As recomendações entregues dependem do grupo de hosts especificado na solicitação.
 

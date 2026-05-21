@@ -4,10 +4,15 @@ description: Use os links de visualização móvel para realizar tarefas complet
 title: Como usar links de visualização móvel no  [!DNL Adobe Target] Mobile?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-source-git-commit: 15e42d0fb049f9243ff5468ff5f22a8e79c55c79
+TQID: https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '508'
-ht-degree: 23%
+source-wordcount: 552
+ht-degree: 18%
 
 ---
 
@@ -19,9 +24,9 @@ A funcionalidade de visualização móvel permite que você teste completamente 
 
 ## Pré-requisitos
 
-1. **Use uma versão do SDK com suporte:** O recurso de visualização móvel exige que você baixe e instale a versão apropriada do [!DNL Adobe Mobile SDK] nos aplicativos correspondentes.
+1. **Use uma versão da SDK com suporte:** O recurso de visualização móvel exige que você baixe e instale a versão apropriada do [!DNL Adobe Mobile SDK] nos aplicativos correspondentes.
 
-   Para obter instruções sobre como baixar o SDK apropriado, consulte [Versões atuais do SDK](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} na documentação *[!DNL Adobe Experience Platform Mobile SDK]*.
+   Para obter instruções sobre como baixar a SDK apropriada, consulte [Versões atuais do SDK](https://developer.adobe.com/client-sdks/documentation/current-sdk-versions/){target=_blank} na documentação de *[!DNL Adobe Experience Platform Mobile SDK]*.
 
 1. **Defina um esquema de URL:** o link de visualização usa um esquema de URL para abrir seu aplicativo. Especifique um esquema de URL exclusivo para a visualização.
 
@@ -30,7 +35,7 @@ A funcionalidade de visualização móvel permite que você teste completamente 
    Os links a seguir contêm mais informações:
 
    * **iOs**: Para obter mais informações sobre como configurar esquemas de URL para o iOS, consulte [Definindo um esquema de URL personalizado para seu aplicativo](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target=_blank} no site *Apple Developer*.
-   * **Android**: Para obter mais informações sobre como configurar esquemas de URL para o Android, consulte [Criar deep links para conteúdo do aplicativo](https://developer.android.com/training/app-links/deep-linking){target=_blank} no site *Desenvolvedores do Android*.
+   * **Android**: para obter mais informações sobre como configurar esquemas de URL para o Android, consulte [Criar deep links para conteúdo do aplicativo](https://developer.android.com/training/app-links/deep-linking){target=_blank} no site *Desenvolvedores do Android*.
 
 1. **Configurar a API `collectLaunchInfo` (somente i0S)**
 

@@ -1,11 +1,16 @@
 ---
-title: Como usar solicitações assíncronas no  [!DNL Adobe Target] SDK do Java
-description: Saiba como o  [!DNL Target] SDK do Java oferece suporte a solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
+title: Como usar solicitações assíncronas no  [!DNL Adobe Target] Java SDK
+description: Saiba como o  [!DNL Target] Java SDK oferece suporte a solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
 feature: APIs/SDKs
 exl-id: e11f8d16-76f6-4d39-822a-34a1cf7f623f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/Y9oTl8aU4-4HpMajdmy5KfvAwEFOpV0y9vUg7BdBRk8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: 130
 ht-degree: 3%
 
 ---
@@ -14,7 +19,7 @@ ht-degree: 3%
 
 ## Descrição
 
-Um benefício da integração do lado do servidor é que você pode aproveitar a grande largura de banda e os recursos de computação disponíveis no lado do servidor usando o paralelismo. O SDK do Java [!DNL Target] oferece suporte a solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
+Um benefício da integração do lado do servidor é que você pode aproveitar a grande largura de banda e os recursos de computação disponíveis no lado do servidor usando o paralelismo. [!DNL Target] O Java SDK é compatível com solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
 
 ## Métodos suportados
 

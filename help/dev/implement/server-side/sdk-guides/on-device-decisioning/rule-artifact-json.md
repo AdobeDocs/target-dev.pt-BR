@@ -1,18 +1,29 @@
 ---
 title: Baixar, armazenar e atualizar o artefato da regra de decisão no dispositivo por meio da carga JSON
-description: Essa abordagem é melhor se o aplicativo estiver estruturado de forma a exigir que o SDK seja inicializado em cada arquivo no qual ele usa métodos SDK.
+description: Essa abordagem é melhor se o aplicativo estiver estruturado de uma maneira que exija que o SDK seja inicializado em cada arquivo no qual ele usa os métodos do SDK.
 feature: APIs/SDKs
 exl-id: 4ccfb455-f813-4bdb-a9c1-d576a110a9bb
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/knFQFgPKL-DBOtBnWUIz2-7usi35DPtxd-FSINqHHhY
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: e7840a7b-a94f-4256-aed0-4e94b08e157b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '292'
-ht-degree: 0%
+source-wordcount: 298
+ht-degree: 1%
 
 ---
 
 # Baixar, armazenar e atualizar o artefato da regra por meio da carga JSON
 
-Essa abordagem é melhor se o aplicativo estiver estruturado de forma a exigir que o SDK seja inicializado em cada arquivo no qual ele usa métodos SDK. Antes que seu aplicativo da Web possa usar a carga JSON do artefato de regra durante a inicialização do SDK, você deve garantir que a carga JSON seja baixada e esteja disponível para uso pelo seu aplicativo.
+Essa abordagem é melhor se o aplicativo estiver estruturado de uma maneira que exija que o SDK seja inicializado em cada arquivo no qual ele usa os métodos do SDK. Antes que seu aplicativo da Web possa usar a carga JSON do artefato de regra durante a inicialização do SDK, você deve garantir que a carga JSON seja baixada e esteja disponível para uso pelo seu aplicativo.
 
 ## Resumo das etapas
 
@@ -20,7 +31,7 @@ Essa abordagem é melhor se o aplicativo estiver estruturado de forma a exigir q
 1. Inicializar o SDK
 1. Armazenar e usar a carga JSON
 
-## 1. Instalar o SDK
+## &#x200B;1. Instalar o SDK
 
 >[!BEGINTABS]
 
@@ -42,7 +53,7 @@ npm i @adobe/target-nodejs-sdk -P
 
 >[!ENDTABS]
 
-## 2. Inicializar o SDK
+## &#x200B;2. Inicializar o SDK
 
 1. Primeiro, importe o SDK. Importar para o mesmo arquivo a partir do qual você pode controlar a inicialização do servidor.
 
@@ -59,7 +70,7 @@ npm i @adobe/target-nodejs-sdk -P
    import com.adobe.target.edge.client.TargetClient;
    ```
 
-1. Para configurar o SDK, use o método de criação.
+1. Para configurar o SDK, use o método create.
 
    **Node.js**
 
@@ -115,10 +126,10 @@ npm i @adobe/target-nodejs-sdk -P
 
 1. O cliente e `organizationId` podem ser recuperados de [!DNL Adobe Target] navegando até **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**, como mostrado aqui.
 
-   &lt;!— Inserir image-client-code.png —>
+   &lt;!— Insira image-client-code.png —>
    ![alt imagem](assets/asset-rule-artifact-3.png)
 
-## 3. Armazene e reinicie a carga JSON
+## &#x200B;3. Armazene e reinicie a carga JSON
 
 O mecanismo usado para armazenar a carga JSON depende da arquitetura do sistema. Você pode usar um arquivo local, um banco de dados ou um sistema de cache de objetos de memória, como Memcached. Você precisa ler este JSON do seu aplicativo para consumo. Neste guia, usamos um arquivo local como armazenamento.
 

@@ -3,10 +3,22 @@ title: Introdução aos SDKs do Target
 description: Como usar os SDKs do Adobe Target?
 feature: APIs/SDKs
 exl-id: a5ae9826-7bb5-41de-8796-76edc4f5b281
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/oW9op2s6buvt5Jp18DYzrwh7aBXSNEPAikq9EPISaWQ
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '595'
-ht-degree: 0%
+source-wordcount: 622
+ht-degree: 1%
 
 ---
 
@@ -29,7 +41,7 @@ Para começar a usar o, recomendamos que você crie sua primeira atividade de si
 1. Implementar o rastreamento de eventos no aplicativo
 1. Ativar a atividade [!UICONTROL A/B Test]
 
-## 1. Ativar a decisão no dispositivo para sua organização
+## &#x200B;1. Ativar a decisão no dispositivo para sua organização
 
 Habilitar a decisão no dispositivo garante que uma atividade [!UICONTROL A/B Test] seja executada com latência próxima a zero. Para habilitar este recurso, navegue até **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** e habilite a alternância **[!UICONTROL On-Device Decisioning]**.
 
@@ -41,7 +53,7 @@ Habilitar a decisão no dispositivo garante que uma atividade [!UICONTROL A/B Te
 
 Depois de habilitar a alternância **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] começa a gerar [artefatos de regra](../on-device-decisioning/rule-artifact-overview.md) para o seu cliente.
 
-## 2. Instalar o SDK
+## &#x200B;2. Instalar o SDK
 
 Para Node.js, Java e Python, execute o comando a seguir no diretório do projeto no terminal. Para .NET, adicione-o como uma dependência [instalando do NuGet](https://www.nuget.org/packages/Adobe.Target.Client).
 
@@ -77,7 +89,7 @@ pip install target-python-sdk
 
 >[!ENDTABS]
 
-## 3. Inicializar o SDK
+## &#x200B;3. Inicializar o SDK
 
 O artefato da regra é baixado durante a etapa de inicialização do SDK. Você pode personalizar a etapa de inicialização para determinar como o artefato é baixado e usado.
 
@@ -146,7 +158,7 @@ target_client = TargetClient.create(CONFIG)
 
 >[!ENDTABS]
 
-## 4. Configure os sinalizadores de recursos em uma atividade [!DNL Adobe Target] [!UICONTROL A/B Test]
+## &#x200B;4. Configurar os sinalizadores de recursos em uma atividade [!DNL Adobe Target] [!UICONTROL A/B Test]
 
 1. Em [!DNL Target], navegue até a página **[!UICONTROL Activities]** e selecione **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**.
 
@@ -204,7 +216,7 @@ target_client = TargetClient.create(CONFIG)
 
    ![alt imagem](assets/asset-conv.png)
 
-## 5. Implementar e renderizar o recurso em seu aplicativo
+## &#x200B;5. Implementar e renderizar o recurso em seu aplicativo
 
 Depois de configurar as variáveis de sinalizador de recursos no [!DNL Target], modifique o código do aplicativo para usá-las. Por exemplo, depois de obter o sinalizador de recurso no aplicativo, você pode usá-lo para ativar recursos e renderizar a experiência para a qual o visitante se qualificou.
 
@@ -272,7 +284,7 @@ def target_client_ready():
 
 >[!ENDTABS]
 
-## 6. Implementar rastreamento adicional para eventos em seu aplicativo
+## &#x200B;6. Implementar rastreamento adicional para eventos em seu aplicativo
 
 Como opção, você pode enviar eventos adicionais para rastrear conversões usando a função sendNotification().
 
@@ -382,7 +394,7 @@ target_client.send_notifications({
 
 >[!ENDTABS]
 
-## 7. Ative sua atividade [!UICONTROL A/B Test]
+## &#x200B;7. Ativar a atividade [!UICONTROL A/B Test]
 
 1. Clique em **[!UICONTROL Activate]** (1) para ativar sua atividade [!UICONTROL A/B Test].
 

@@ -4,20 +4,36 @@ description: 'Detalhes sobre como a at.js 2.x e a at.js 1.x lidam com cookies. [
 title: Cookies do at.js
 feature: at.js
 exl-id: 154a844a-6855-4af7-8aed-0719b4c389f5
-source-git-commit: 16132bc7a624ab4849651b183bde9b3064b4a676
+TQID: https://experienceleague.adobe.com/BRauW1ppIMya4aX-vTJDGZFCv1fijYgDuxbHjXCI6D8
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2:
+  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d3cdead0-685a-4489-9250-4bb709942f66
+  - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
+  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: '1716'
-ht-degree: 72%
+source-wordcount: 1830
+ht-degree: 67%
 
 ---
 
 # Cookies do at.js
 
-Informações sobre a at.js 2.x e a at.js 1.*x* comportamento de cookie.
+Informações sobre at.js 2.x e at.js 1.*x* comportamento de cookies.
 
 ## Comportamento de cookie da at.js 2.x
 
-Para a versão 2.x da at.js (até, mas não incluindo, a versão 2.10.0), *somente os cookies primários são suportados*. Exatamente como no at.js 1.*x*, o cookie próprio, &quot;mbox&quot; está armazenado em `clientdomain.com`, onde `clientdomain` é seu domínio.
+Para a versão 2.x da at.js (até, mas não incluindo, a versão 2.10.0), *somente os cookies primários são suportados*. Assim como na at.js 1.*x*, o cookie próprio, &quot;mbox&quot;, é armazenado em `clientdomain.com`, onde `clientdomain` é seu domínio.
 
 O at.js gera uma ID da sessão e a armazena no cookie. A primeira resposta contém informações de atividade, bem como a `TNT` ou`PC ID` gerada pelos [!DNL Target] servidores. O at.js grava o `TNT/PC ID` para o cookie.
 
@@ -29,16 +45,16 @@ O cookie próprio `AMCV_###@AdobeOrg` sempre é definido pelo Serviço da Experi
 
 ### Suporte para cookies de terceiros e rastreamento entre domínios
 
-O rastreamento entre domínios possibilita visualizar sessões em dois sites relacionados, mas com domínios diferentes, como uma única sessão. Você poderia criar [!DNL Target] uma atividade que se expande `siteA.com` e `siteB.com` o visitante permaneceria na mesma experiência ao atravessar domínios. Essa funcionalidade se vincula ao at.js 1.*x* comportamento do cookie próprio e de terceiros.
+O rastreamento entre domínios possibilita visualizar sessões em dois sites relacionados, mas com domínios diferentes, como uma única sessão. Você poderia criar [!DNL Target] uma atividade que se expande `siteA.com` e `siteB.com` o visitante permaneceria na mesma experiência ao atravessar domínios. Esta funcionalidade se vincula ao comportamento de cookies de terceiros e próprios da at.js 1.*x*.
 
 >[!NOTE]
 >
 >Para as versões 2.10.0 e posteriores da at.js, há suporte para cookies de terceiros e rastreamento entre domínios.
 
 
-## at.js 1.Comportamento de cookie *x*
+## Comportamento de cookie da at.js 1.*x*
 
-Para versões do at.js 1.*x*, o comportamento de cookie depende de se é um cookie próprio, um cookie de terceiros com um cookie próprio ou um cookie de terceiros.
+Para as versões 1.*x* da at.js, o comportamento de cookies depende do tipo do cookie, podendo ser um cookie próprio, um cookie de terceiros com um cookie próprio ou um cookie de terceiros.
 
 ### Quando utilizar cookies próprios ou de terceiros
 

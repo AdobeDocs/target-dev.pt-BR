@@ -3,10 +3,21 @@ title: Executar testes de recursos com atributos
 description: Executar testes de recursos com atributos
 feature: APIs/SDKs
 exl-id: c89d337c-20a9-454c-930c-79d9217e23b6
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/y2Mwmnn2k91-LKBy1UmZ5a1s6dZeb5VMyHdyJc2lc34
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '877'
-ht-degree: 0%
+source-wordcount: 891
+ht-degree: 1%
 
 ---
 
@@ -30,7 +41,7 @@ ht-degree: 0%
 >
 >Suponha que você seja uma empresa de comércio eletrônico varejista. Você deseja aumentar a taxa de conversão quando os clientes navegarem e classificarem o catálogo de produtos. Você tem uma hipótese de que certos algoritmos de classificação e estratégias de paginação produzem resultados melhores do que outros. Para testar essa teoria, você decide executar um teste de recurso que envolve o redesign do widget de classificação usando diferentes opções de classificação para os usuários finais. Certifique-se de que esse teste de recurso seja executado com latência próxima de zero para que ele não afete negativamente as experiências do usuário e distorça os resultados.
 
-## 1. Habilitar [!UICONTROL on-device decisioning] para sua organização
+## &#x200B;1. Habilitar [!UICONTROL on-device decisioning] para sua organização
 
 A ativação da decisão no dispositivo garante que uma atividade A/B seja executada com latência próxima a zero. Para habilitar este recurso, navegue até **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** em [!DNL Adobe Target] e habilite a alternância **[!UICONTROL On-Device Decisioning]**.
 
@@ -42,7 +53,7 @@ A ativação da decisão no dispositivo garante que uma atividade A/B seja execu
 
 Depois de habilitar a alternância **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] começa a gerar *artefatos de regra* para o seu cliente.
 
-## 2. Criar uma atividade [!UICONTROL A/B Test]
+## &#x200B;2. Criar uma atividade [!UICONTROL A/B Test]
 
 1. Em [!DNL Adobe Target], navegue até a página **[!UICONTROL Activities]** e selecione **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**.
 
@@ -52,7 +63,7 @@ Depois de habilitar a alternância **[!UICONTROL On-Device Decisioning]**, [!DNL
 
    ![alt imagem](assets/asset-form.png)
 
-## 3. Defina seus A e B
+## &#x200B;3. Defina seus A e B
 
 1. Na etapa de criação da atividade **[!UICONTROL Experiences]**, forneça um nome para a atividade (1) e adicione uma segunda experiência, Experiência B, clicando no botão **[!UICONTROL Add Experience]** (2). Digite o nome do local (3) no aplicativo onde deseja executar o teste de recurso com atributos. No exemplo mostrado abaixo, `product-results-page` é o local definido para a Experiência A. (Também é o local definido para a Experiência B.)
 
@@ -88,35 +99,35 @@ Depois de habilitar a alternância **[!UICONTROL On-Device Decisioning]**, [!DNL
 
    ![alt imagem](assets/asset-sorting-b.png)
 
-## 4. Adicionar um público-alvo
+## &#x200B;4. Adicionar um público
 
 Na etapa **[!UICONTROL Targeting]**, mantenha o público-alvo **[!UICONTROL All Visitors]**. Isso permitirá entender o impacto do recurso de classificação, bem como qual algoritmo e número de itens influenciam melhor os resultados.
 
 ![alt imagem](assets/asset-audience-b.png)
 
-## 5. Definir a alocação de tráfego
+## &#x200B;5. Definir alocação de tráfego
 
 Defina a porcentagem de seus visitantes em relação à qual você deseja testar os algoritmos de classificação e a estratégia de paginação. Em outras palavras, para que porcentagem de seus usuários você deseja implantar esse teste? Neste exemplo, para implantar este teste para todos os usuários conectados, mantenha a alocação de tráfego em 100%.
 
 ![alt imagem](assets/asset-allocation-100.png)
 
-## 6. Definir a distribuição do tráfego para variações
+## &#x200B;6. Definir a distribuição do tráfego para variações
 
 Defina a porcentagem de seus visitantes que verão o algoritmo de classificação recomendado em comparação com os melhores vendedores, com um limite de 50 produtos por página. Neste exemplo, mantenha a distribuição do tráfego dividida em 50/50 entre as Experiências A e B.
 
 ![alt imagem](assets/asset-variations-50.png)
 
-## 7. Configurar relatórios
+## &#x200B;7. Configurar relatórios
 
 Na etapa **[!UICONTROL Goals & Settings]**, escolha **[!UICONTROL Adobe Target]** como **[!UICONTROL Reporting Source]** para exibir os resultados do teste A/B na interface do usuário [!DNL Adobe Target], ou **[!UICONTROL Adobe Analytics]** para exibi-los na interface do usuário do Adobe Analytics.
 
 ![alt imagem](assets/asset-reporting-b.png)
 
-## 8. Adicionar métricas para rastrear KPIs
+## &#x200B;8. Adicionar métricas para KPIs de rastreamento
 
 Escolha um **[!UICONTROL Goal Metric]** para medir o teste de recurso com atributos. Neste exemplo, o sucesso se baseia no fato de o usuário comprar um produto, dependendo do algoritmo de classificação e da estratégia de paginação mostrada.
 
-## 9. Implementar testes de recursos com atributos no aplicativo
+## &#x200B;9. Implementar testes de recursos com atributos no aplicativo
 
 >[!BEGINTABS]
 
@@ -173,7 +184,7 @@ String paginationLimit = attributes.getString("product-results-page", "paginatio
 
 >[!ENDTABS]
 
-## 10. Implementar código para rastrear eventos de conversão
+## &#x200B;10. Implementar código para rastrear eventos de conversão
 
 >[!BEGINTABS]
 
@@ -242,6 +253,6 @@ String paginationLimit = attributes.getString("product-results-page", "paginatio
 
 >[!ENDTABS]
 
-## 11. Ative seus testes de recursos com atributos
+## &#x200B;11. Ative seus testes de recursos com atributos
 
 ![alt imagem](assets/asset-activate.png)
