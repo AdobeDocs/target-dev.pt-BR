@@ -4,10 +4,16 @@ description: Leia respostas das perguntas frequentes sobre a biblioteca de JavaS
 title: Quais são as perguntas e respostas comuns sobre a at.js?
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
-source-git-commit: 448c43c0c10e22ad054f4ee98bfc282f8c96cdcb
+TQID: https://experienceleague.adobe.com/wOC67fpxKtZKP3-o-T86oA-HqySuPGebT9W5LUHuxSA
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2923'
-ht-degree: 67%
+source-wordcount: 2981
+ht-degree: 66%
 
 ---
 
@@ -45,27 +51,27 @@ As seções a seguir descrevem a sequência de ações para visitantes novos e r
 
 1. A API do visitante é carregada, analisada e executada.
 1. A at.js / mbox.js é carregada, analisada e executada.
-1. Se a criação automática da mbox global estiver acionada, a biblioteca JavaScript do [!DNL Target]:
+1. Se a criação automática da mbox global estiver habilitada, a biblioteca JavaScript do [!DNL Target]:
 
    * Iniciará o objeto do visitante.
-   * A biblioteca [!DNL Target] tenta recuperar os dados da ID de visitante do Experience Cloud.
+   * A biblioteca [!DNL Target] tenta recuperar os dados da ID de visitante da Experience Cloud.
    * Como esse é um novo visitante, a API de visitante irá disparar uma solicitação de domínio cruzado para demdex.net.
-   * Depois que os dados da ID de visitante do Experience Cloud forem recuperados, uma solicitação para [!DNL Target] será acionada.
+   * Depois que os dados da ID de visitante da Experience Cloud forem recuperados, uma solicitação para [!DNL Target] será acionada.
 
 ### Visitantes que retornam
 
 1. A API do visitante é carregada, analisada e executada.
 1. A at.js / mbox.js é carregada, analisada e executada.
-1. Se a criação automática da mbox global estiver acionada, a biblioteca JavaScript do [!DNL Target]:
+1. Se a criação automática da mbox global estiver habilitada, a biblioteca JavaScript do [!DNL Target]:
 
    * Iniciará o objeto do visitante.
-   * A biblioteca [!DNL Target] tenta recuperar os dados da ID de visitante do Experience Cloud.
+   * A biblioteca [!DNL Target] tenta recuperar os dados da ID de visitante da Experience Cloud.
    * A API de visitante recuperará os dados dos cookies.
-   * Depois que os dados da ID de visitante do Experience Cloud forem recuperados, uma solicitação para [!DNL Target] será acionada.
+   * Depois que os dados da ID de visitante da Experience Cloud forem recuperados, uma solicitação para [!DNL Target] será acionada.
 
 >[!NOTE]
 >
->Para novos visitantes, quando a API de visitante estiver presente, o [!DNL Target] precisará transmitir as informações várias vezes para garantir que as solicitações do [!DNL Target] contenham os dados da ID de visitante do Experience Cloud. Para os visitantes recorrentes, o [!DNL Target] transmitirá as informações apenas para o [!DNL Target] recuperar o conteúdo personalizado.
+>Para novos visitantes, quando a API de visitante estiver presente, o [!DNL Target] precisará transmitir as informações várias vezes para garantir que as solicitações do [!DNL Target] contenham os dados da ID de visitante da Experience Cloud. Para os visitantes recorrentes, o [!DNL Target] transmitirá as informações apenas para o [!DNL Target] recuperar o conteúdo personalizado.
 
 ## Por que parece que vejo tempos de resposta mais lentos após a atualização de uma versão anterior da at.js para a versão 1.0.0?
 
@@ -110,7 +116,7 @@ Carregar a at.js de forma assíncrona é uma ótima maneira de evitar o bloqueio
 
 Você pode evitar a cintilação usando um snippet de pré-ocultação que oculta a página (ou partes especificadas), exibindo-a após o carregamento completo da at.js e da solicitação global. O trecho deve ser adicionado antes de carregar a at.js.
 
-Se estiver implantando a at.js por meio de uma implementação assíncrona da [!UICONTROL Adobe Experience Platform], certifique-se de incluir o snippet de pré-ocultação diretamente nas páginas antes de implementar o [!DNL Target] usando o código de inserção da [!UICONTROL Adobe Experience Platform].
+Se estiver implantando a at.js por meio de uma implementação assíncrona da [!UICONTROL Adobe Experience Platform], certifique-se de incluir o snippet de pré-ocultação diretamente nas páginas antes de implementar o [!DNL Target] usando o código incorporado da [!UICONTROL Adobe Experience Platform].
 
 Se estiver implantando a at.js por meio de uma implementação DTM síncrona, o snippet de pré-ocultação pode ser adicionado por uma regra de Carregamento de página acionada na parte superior da página.
 
@@ -130,7 +136,7 @@ O arquivo da at.js tem aproximadamente 109 KB quando baixado. No entanto, como a
 
 ## Por que o at.js é maior que o mbox.js?
 
-As implementações da at.js usam uma única biblioteca ( at.js), enquanto as implementações de mbox.js na verdade usam duas bibliotecas ( mbox.js e target.js). Por isso, uma comparação mais justa seria de at.js versus mbox.js *e* `target.js`. Comparação entre os tamanhos gzipped das duas versões, a at.js versão 1.2 tem 34 KB e a mbox.js versão 63 tem 26.2 KB. &grave;&grave;
+As implementações da at.js usam uma única biblioteca ( at.js), enquanto as implementações de mbox.js na verdade usam duas bibliotecas ( mbox.js e target.js). Por isso, uma comparação mais justa seria de at.js versus mbox.js *e* `target.js`. Comparação entre os tamanhos gzipped das duas versões, a at.js versão 1.2 tem 34 KB e a mbox.js versão 63 tem 26.2 KB. &quot;
 
 A at.js é maior, pois realiza muito mais análise de DOM em comparação à mbox.js. Isso é necessário porque a at.js recebe dados &quot;brutos&quot; na resposta JSON e precisa entender isso. A mbox.js usava o `document.write()` e todas as análises eram realizadas pelo navegador.
 
@@ -148,7 +154,7 @@ Para auxiliar os visitantes do Safari, um Domínio X melhor seria &quot;desativa
 
 ## Posso usar o Target [!UICONTROL Visual Experience Composer] (VEC) nos meus aplicativos de página única?
 
-Sim, você pode usar o VEC para aplicativos de página única se utilizar a at.js 2.x. Para obter mais informações, consulte [Aplicativo de página única (SPA) no Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=pt-BR).
+Sim, você pode usar o VEC para SPA se usar a at.js 2.x. Para obter mais informações, consulte [Visual Experience Composer de Página Única (SPA)](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html).
 
 ## Posso usar o depurador da Adobe Experience Cloud com implementações da at.js?
 
@@ -194,7 +200,7 @@ if (/^123\.456\.78\..*/g.test(window.location.hostname)) {
 }
 ```
 
-## Por que vejo mensagens de aviso, como &quot;ações com seletores ausentes&quot;? 
+## Por que vejo mensagens de aviso, como &quot;ações com seletores ausentes&quot;?
 
 Essas mensagens não estão relacionadas à funcionalidade da at.js. A biblioteca at.js tenta informar tudo que não pode ser encontrado no DOM.
 
@@ -203,18 +209,18 @@ Caso veja esta mensagem de aviso, as possíveis causas raiz podem ser as seguint
 * A página está sendo criada dinamicamente e a at.js não consegue encontrar o elemento.
 * A página está sendo criada lentamente (devido a uma rede lenta) e a at.js não consegue encontrar o seletor no DOM.
 * A estrutura de página em que a atividade está sendo executada foi alterada. Se você reabrir a atividade no Visual Experience Composer (VEC), deverá receber uma mensagem de aviso. Atualize a atividade para que todos os elementos necessários possam ser encontrados.
-* A página subjacente faz parte de um Aplicativo de página única (SPA) ou a página contém elementos que são exibidos mais abaixo e o &quot;mecanismo de buscas do seletor&quot; da at.js não consegue encontrá-los. Aumentar o `selectorsPollingTimeout` pode ajudar. Para obter mais informações, consulte [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
+* A página subjacente faz parte de um Aplicativo de página única (SPA, Single Page Application) ou a página contém elementos que são exibidos mais abaixo e o &quot;mecanismo de buscas do seletor&quot; da at.js não consegue encontrá-los. Aumentar o `selectorsPollingTimeout` pode ajudar. Para obter mais informações, consulte [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 * Todas as métricas de rastreamento de cliques tentam se adicionar a cada página, independentemente do URL em que a métrica foi configurada. Embora inofensiva, essa situação faz com que muitas dessas mensagens sejam exibidas.
 
   Para obter melhores resultados, baixe e use a [versão mais recente da at.js](/help/dev/implement/client-side/atjs/target-atjs-versions.md). Para obter mais informações sobre como baixar a at.js, consulte o artigo [Baixar a at.js usando a  [!DNL Target] interface](how-to-deployatjs/implement-target-without-a-tag-manager.md#download-atjs-using-the-target-interface) em [*Como implantar a at.js* > *Implementar a [!DNL Target] sem um gerenciador de tags*](how-to-deployatjs/implement-target-without-a-tag-manager.md).
 
 ## O que é o domínio tt.omtrdc.net para o qual as chamadas de servidor do [!DNL Target] são direcionadas?
 
-tt.omtrdc.net é o nome de domínio para a rede Adobe EDGE, usada para receber todas as chamadas do servidor para [!DNL Target].
+tt.omtrdc.net é o nome de domínio da rede EDGE da Adobe, usado para receber todas as chamadas do servidor para [!DNL Target].
 
 ## Por que a at.js nem sempre usa os sinalizadores de cookies HttpOnly e Seguro?
 
-HttpOnly pode ser definido somente pelo código do lado do servidor. [!DNL Target]Os cookies do, como mbox, são criados e salvos pelo código JavaScript, para que o não possa usar o sinalizador de [!DNL Target] cookies HttpOnly. O [!DNL Target] usa o conjunto HttpOnly para cookies de terceiros definidos pelo lado do servidor quando o domínio cruzado está ativado.
+HttpOnly pode ser definido somente pelo código do lado do servidor. [!DNL Target]Os cookies do, como mbox, são criados e salvos pelo código JavaScript, para que o não possa usar o sinalizador de [!DNL Target] cookies HttpOnly. O [!DNL Target] usa o conjunto HttpOnly para cookies de terceiros definidos pelo lado do servidor quando o domínio cruzado está habilitado.
 
 Seguro pode ser definido somente por JavaScript, quando a página tiver sido carregada por HTTPS. Se a página inicialmente carregar por meio de HTTP, o JavaScript não poderá definir esse sinalizador. Além disso, se o sinalizador Seguro for usado, o cookie estará disponível somente nas páginas HTTPS. Para páginas carregadas por HTTPS, o [!DNL Target] define os atributos Secure e SameSite=None.
 
@@ -222,7 +228,7 @@ Para garantir que o [!DNL Target] possa rastrear os usuários adequadamente e, c
 
 ## Como a at.js lida com problemas de segurança como ataques XSS e MITM?
 
-A comunicação com a rede Adobe Edge, habilitada por at.js, ocorre somente por HTTPS, desde que a opção `secureOnly` esteja definida como verdadeira na função targetGlobalSettings() ([targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)), caso contrário, a at.js tem permissão para alternar entre HTTP e HTTPS com base no protocolo da página.
+A comunicação com a rede de borda da Adobe, habilitada por at.js, ocorre somente por HTTPS, desde que a opção `secureOnly` esteja definida como verdadeira na função targetGlobalSettings() ([targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md)), caso contrário, a at.js tem permissão para alternar entre HTTP e HTTPS com base no protocolo da página.
 
 Os seguintes cabeçalhos são aplicados por padrão:
 * HTTP Strict Transport Security (HSTS)
@@ -230,23 +236,23 @@ Os seguintes cabeçalhos são aplicados por padrão:
 * X Opções de Tipo de Conteúdo
 * Referenciador-Política
 
-Todos os cabeçalhos já usados nas páginas do cliente podem ser aplicados. Uma maneira comum de fazer isso é por meio da &quot;Autorização de cabeçalho de solicitação HTTP&quot;. O Atendimento ao cliente do Adobe pode fornecer mais recomendações sobre os melhores métodos e práticas.
+Todos os cabeçalhos já usados nas páginas do cliente podem ser aplicados. Uma maneira comum de fazer isso é por meio da &quot;Autorização de cabeçalho de solicitação HTTP&quot;. O Atendimento ao cliente da Adobe pode fornecer recomendações adicionais sobre os métodos e as práticas recomendadas.
 
-Além disso, as solicitações à Rede Adobe Edge são públicas (já que são projetadas para serem feitas a partir dos navegadores dos visitantes) e não contêm detalhes visíveis do visitante (contêm apenas uma ID do visitante). Essas solicitações fornecem experiências aos visitantes e contêm detalhes sobre o que um visitante deve ver na página.
+Além disso, as solicitações para a Rede de borda da Adobe são públicas (já que são projetadas para serem feitas a partir dos navegadores dos visitantes) e não contêm detalhes visíveis do visitante (contêm apenas uma ID de visitante). Essas solicitações fornecem experiências aos visitantes e contêm detalhes sobre o que um visitante deve ver na página.
 
 Observe que para tokens de resposta e IDs de sessão transmitidos nessas solicitações:
 
 * Eles rastreiam sessões de comunicação
 * Eles são compostos de caracteres aleatórios
 * As IDs de sessão são válidas por 30 minutos
-* Os tokens de resposta podem ser desabilitados ([Tokens de resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=pt-BR))
-* Eles são úteis somente no ambiente de soluções Adobe.
+* Os tokens de resposta podem ser desabilitados ([Tokens de resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html))
+* Elas são úteis somente no ambiente de soluções da Adobe.
 
-Espera-se ver o cabeçalho `Access-Control-Allow-Origin` com o valor &quot;*&quot; nas solicitações de at.js, pois são públicas, a autenticação não é necessária e a Rede Adobe Edge precisa ser acessada de qualquer domínio por meio de chamadas JavaScript.
+Espera-se ver o cabeçalho `Access-Control-Allow-Origin` com o valor &quot;*&quot; nas solicitações de at.js, pois são públicas, a autenticação não é necessária e a Rede de borda da Adobe precisa ser acessada de qualquer domínio por meio de chamadas JavaScript.
 
 No entanto, a Política de segurança de conteúdo (CSP) precisa ser aplicada na página. Para obter mais informações sobre os requisitos da CSP para o at.js, consulte [Política de segurança de conteúdo](/help/dev/before-implement/privacy/content-security-policy.md) e [targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
 
-## Com que frequência a at.js dispara uma solicitação de rede? 
+## Com que frequência a at.js dispara uma solicitação de rede?
 
 O [!DNL Target] executa todas as suas decisões no lado do servidor. Isso significa que a at.js dispara uma solicitação de rede sempre que a página é recarregada ou uma API pública da at.js é chamada.
 
@@ -254,7 +260,7 @@ O [!DNL Target] executa todas as suas decisões no lado do servidor. Isso signif
 
 A at.js tenta evitar pré-ocultar o HTML BODY ou outros elementos DOM por um longo período de tempo, mas isso depende das condições da rede e da configuração da atividade. O at.js fornece [configurações](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md) que você pode usar para personalizar o estilo CSS de ocultação do BODY, de modo que, em vez de esvaziar todo o HTML BODY, você possa pré-ocultar apenas algumas partes da página. A expectativa é que essas partes contenham elementos DOM que precisam ser &quot;personalizados&quot;.
 
-## Qual é a sequência de eventos em um cenário médio em que um usuário se qualifica para uma atividade? 
+## Qual é a sequência de eventos em um cenário médio em que um usuário se qualifica para uma atividade?
 
 A solicitação da at.js é uma `XMLHttpRequest` assíncrona, para a execução das seguintes etapas:
 
@@ -266,7 +272,7 @@ A solicitação da at.js é uma `XMLHttpRequest` assíncrona, para a execução 
 1. O HTML BODY que pré-oculta o STYLE é removido.
 1. O [!DNL Target] inicia a pesquisa de elementos DOM.
 1. Se um elemento DOM for encontrado, o [!DNL Target] aplicará as alterações do DOM e o STYLE que está pré-ocultando elementos será removido.
-1. Se os elementos DOM não forem encontrados, um tempo limite global volta a exibir os elementos para evitar uma página interrompida.
+1. Se os elementos DOM não forem encontrados, um tempo-limite global volta a exibir os elementos para evitar uma página interrompida.
 
 ## Com que frequência o conteúdo da página é totalmente carregado e visível quando a at.js finalmente exibe o elemento que a atividade está alterando?
 
@@ -274,19 +280,19 @@ Considerando o cenário acima, com que frequência o conteúdo da página é tot
 
 A at.js não bloqueia a renderização da página. Um usuário pode notar algumas regiões em branco na página, que representam elementos a serem personalizados pelo [!DNL Target]. Se o conteúdo a ser aplicado não tiver muitos recursos remotos, como SCRIPTs ou IMGs, tudo deverá ser renderizado rapidamente.
 
-## Como uma página totalmente armazenada em cache afetaria o cenário acima? Seria mais provável que o conteúdo da atividade se tornasse visível depois que o restante do conteúdo da página fosse carregado? 
+## Como uma página totalmente armazenada em cache afetaria o cenário acima? Seria mais provável que o conteúdo da atividade se tornasse visível depois que o restante do conteúdo da página fosse carregado?
 
 Se uma página for armazenada em cache em um CDN próximo à localização do usuário, mas não próximo à borda do [!DNL Target], esse usuário poderá ver alguns atrasos. As bordas do [!DNL Target] são bem distribuídas em todo o mundo, portanto, isso não é um problema na maioria das vezes.
 
-## É possível que uma imagem herói seja exibida e depois removida após um pequeno atraso? 
+## É possível que uma imagem hero seja exibida e depois removida após um pequeno atraso?
 
 Considere o seguinte cenário:
 
-O tempo limite do [!DNL Target] é de cinco segundos. Um usuário carrega uma página que possui uma atividade para personalizar uma imagem herói. A at.js envia a solicitação para determinar se há uma atividade a ser aplicada, mas não há resposta inicial. Suponha que o usuário veja o conteúdo regular da imagem principal, porque nenhuma resposta foi recebida do [!DNL Target] sobre alguma atividade associada. Após quatro segundos, o [!DNL Target] retorna uma resposta com o conteúdo da atividade.
+O tempo-limite do [!DNL Target] é de cinco segundos. Um usuário carrega uma página que possui uma atividade para personalizar uma imagem hero. A at.js envia a solicitação para determinar se há uma atividade a ser aplicada, mas não há resposta inicial. Suponha que o usuário veja o conteúdo regular da imagem hero, porque nenhuma resposta foi recebida do [!DNL Target] sobre alguma atividade associada. Após quatro segundos, o [!DNL Target] retorna uma resposta com o conteúdo da atividade.
 
-Nessa etapa, seria possível mostrar a versão alternativa? Então, depois de quatro segundos, a imagem herói pode ser removida e o usuário pode perceber essa troca de imagem?
+Nessa etapa, seria possível mostrar a versão alternativa? Então, depois de quatro segundos, a imagem hero pode ser removida e o usuário pode perceber essa troca de imagem?
 
-Inicialmente, o elemento DOM da imagem herói está oculto. Depois que uma resposta do [!DNL Target] é recebida, a at.js aplica as alterações do DOM, como a substituição do IMG e a exibição da imagem principal personalizada.
+Inicialmente, o elemento DOM da imagem herói está oculto. Depois que uma resposta do [!DNL Target] é recebida, a at.js aplica as alterações do DOM, como a substituição do IMG e a exibição da imagem hero personalizada.
 
 ## Qual doctype HTML é exigido pela at.js?
 

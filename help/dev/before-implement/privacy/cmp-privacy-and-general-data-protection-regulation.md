@@ -4,10 +4,16 @@ description: Saiba mais sobre o Target e o Regulamento Geral sobre a Proteção 
 title: Como o Target lida com privacidade e regulamentos de proteção de dados?
 feature: Privacy & Security
 exl-id: 40bac3c5-8e6f-4a90-ac0c-eddce1dbe6c0
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/W-aYBengoNH5uKTcFZNHARelgAFX3-QrZixh09n0FU0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: d3cdead0-685a-4489-9250-4bb709942f66id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2329'
-ht-degree: 62%
+source-wordcount: 2432
+ht-degree: 61%
 
 ---
 
@@ -15,7 +21,7 @@ ht-degree: 62%
 
 Informações sobre o Regulamento Geral de Proteção de Dados da União Europeia (RGPD), a Lei de Privacidade do Consumidor da Califórnia (CCPA) e outros requisitos internacionais de privacidade. Saiba como esses regulamentos afetam sua organização e a Adobe Target.
 
-## Visão geral de Privacidade e Regulamento Geral sobre a Proteção de Dados (RGPD) 
+## Visão geral de Privacidade e Regulamento Geral sobre a Proteção de Dados (RGPD)
 
 O RGPD da União Europeia entra em vigor em 25 de maio de 2018. Para obter mais informações sobre o que este regulamento significa para você, consulte [RGPD e seus negócios](https://business.adobe.com/pt/privacy/general-data-protection-regulation.html).
 
@@ -30,9 +36,9 @@ O Adobe Experience Cloud fornece APIs prontas para o GDPR para controladores de 
 
 Para obter mais informações, consulte:
 
-* [visão geral do Adobe Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=pt-BR)
-* [Guia de API do Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html?lang=pt-BR)
-* [Visão geral da interface do Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=pt-BR)
+* [Visão geral do Adobe Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=pt-BR)
+* [Guia da API do Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/api/overview.html?lang=pt-BR)
+* [Visão geral da interface do usuário do Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/ui/overview.html?lang=pt-BR)
 
 ## Visão geral da California Consumer Privacy Act (CCPA)
 
@@ -73,7 +79,7 @@ Há três cenários a serem considerados ao usar a inclusão:
 
 1. **A marca do Destino é pré-aprovada por meio da Adobe Experience Platform (ou pelo titular dos dados que aprovou o Destino anteriormente):** A marca do Destino não é mantida para consentimento e funciona conforme esperado.
 1. **A tag do Target NÃO é pré-aprovada e `bodyHidingEnabled` é FALSE:** A tag do Target é acionada somente após o consentimento ser coletado do cliente. Antes de o consentimento ser coletado, apenas o conteúdo padrão está disponível. Após o recebimento do consentimento, o Target é chamado e o conteúdo personalizado fica disponível para o titular dos dados (visitante). Como apenas o conteúdo padrão está disponível antes do consentimento, é importante utilizar uma estratégia apropriada, como uma página inicial que cubra qualquer parte da página ou conteúdo que possa ser personalizado. Esse processo garante que a experiência permaneça consistente para o titular dos dados (visitante).
-1. **A tag do Target NÃO é pré-aprovada e `bodyHidingEnabled` é TRUE:** A tag do Target é acionada somente após o consentimento ser coletado do cliente. Antes de o consentimento ser coletado, apenas o conteúdo padrão está disponível. No entanto, como `bodyHidingEnabled` é definido para verdadeiro, `bodyHiddenStyle` determina qual conteúdo na página fica oculto até que a tag do Target seja acionada (ou o titular dos dados recuse a inclusão, sendo que nesse caso o conteúdo padrão é exibido). Por padrão, o `bodyHiddenStyle` está configurado como `body { opacity:0;}`, o que oculta a tag do corpo HTML. A configuração de página recomendada da Adobe é apresentada abaixo para que todo o corpo da página, além da caixa de diálogo do gerenciador de consentimento, fique oculto, colocando o conteúdo da página em um contêiner e o diálogo do gerenciador de consentimento em um contêiner separado. Essa configuração define o Target para que ele apenas oculte o contêiner de conteúdo da página. Consulte a [Visão geral do Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=pt-BR&).
+1. **A tag do Target NÃO é pré-aprovada e `bodyHidingEnabled` é TRUE:** A tag do Target é acionada somente após o consentimento ser coletado do cliente. Antes de o consentimento ser coletado, apenas o conteúdo padrão está disponível. No entanto, como `bodyHidingEnabled` é definido para verdadeiro, `bodyHiddenStyle` determina qual conteúdo na página fica oculto até que a tag do Target seja acionada (ou o titular dos dados recuse a inclusão, sendo que nesse caso o conteúdo padrão é exibido). Por padrão, o `bodyHiddenStyle` está configurado como `body { opacity:0;}`, o que oculta a tag do corpo HTML. A configuração de página recomendada da Adobe é apresentada abaixo para que todo o corpo da página, além da caixa de diálogo do gerenciador de consentimento, fique oculto, colocando o conteúdo da página em um contêiner e o diálogo do gerenciador de consentimento em um contêiner separado. Essa configuração define o Target para que ele apenas oculte o contêiner de conteúdo da página. Consulte a [Visão geral do Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?).
 
    A configuração de página recomendada para o cenário 3 é:
 
@@ -119,7 +125,7 @@ Todas as solicitações do GDPR e da CCPA nas soluções da Experience Cloud, in
 
 ### Quais informações a Adobe permite que os clientes excluam em resposta a uma solicitação do usuário/titular dos dados?
 
-As informações relacionadas a um visitante individual dentro do Target são contidas no Perfil de visitante do Target. O Target permite que os clientes excluam todos os dados associados a uma ID em seus respectivos Perfis do visitante. Para obter exemplos dos dados de perfil armazenados pelo Target, consulte [Perfil do Visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=pt-BR).
+As informações relacionadas a um visitante individual dentro do Target são contidas no Perfil de visitante do Target. O Target permite que os clientes excluam todos os dados associados a uma ID em seus respectivos Perfis do visitante. Para obter exemplos dos dados de perfil armazenados pelo Target, consulte [Perfil do Visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html).
 
 Dados agregados ou anônimos (por exemplo, dados de relatórios) não usados para identificar uma certa pessoa, ou dados não relevantes a um pessoa específico (por exemplo, dados de conteúdo), não estão no escopo de uma solicitação de exclusão de usuário.
 
@@ -147,7 +153,7 @@ No momento, a Adobe não oferece uma solução de Administração de consentimen
 
 O Target oferece suporte a funcionalidade de aceitação por meio do Adobe Experience Platform, para apoiar a sua estratégia de gerenciamento de consentimento. A funcionalidade de inclusão permite que os clientes controlem como e quando a tag do Target é acionada. Também há uma opção por meio do Adobe Experience Platform para pré-aprovar a tag do Target. O uso do Adobe Experience Platform para gerenciar o opt-in é a abordagem recomendada. Existe ainda mais controle granular no Adobe Experience Platform para ocultar elementos selecionados da sua página, antes do acionamento do Target, que pode ser útil como parte de sua estratégia de consentimento.
 
-Para obter mais informações sobre GDPR, CCPA e Adobe Experience Platform, consulte [A Biblioteca JavaScript de Privacidade da Adobe e GDPR](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=pt-BR&). Além disso, consulte a seção *Aceitação do Adobe Target e da Adobe Experience Platform* acima.
+Para obter mais informações sobre GDPR, CCPA e Adobe Experience Platform, consulte [A Biblioteca JavaScript de Privacidade da Adobe e GDPR](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?). Além disso, consulte a seção *Aceitação do Adobe Target e da Adobe Experience Platform* acima.
 
 ### O `AdobePrivacy.js` envia informações para a API do RGPD?
 
@@ -200,7 +206,7 @@ Além dos requisitos do Privacy Service central, uma mensagem válida do GDPR ou
 }
 ```
 
-### Que tipos de respostas posso esperar do Target por meio da API do RGPD? 
+### Que tipos de respostas posso esperar do Target por meio da API do RGPD?
 
 | Status da solicitação | Mensagem de resposta do Target | Cenário |
 |--- |--- |--- |
@@ -286,13 +292,13 @@ A seguinte tabela apresenta descrições dos campos ilustrativos de JSON de perf
 | Sample_Parameter | Várias informações no perfil do Target são enviadas por upload ou fornecidas diretamente pelo Controlador de dados. Neste exemplo, um parâmetro foi enviado por upload para o perfil do Target usando a API de atualização de perfil. Para obter mais informações, consulte [Métodos para obter dados no Target](/help/dev/before-implement/methods-to-get-data-into-target/methods-to-get-data-into-target.md). |
 | user.ReturnTimeOfDay | Este campo padrão inclui o horário da visita de retorno mais recente de um usuário. |
 | firstSessionStart | Este campo padrão inclui o horário de início da primeira sessão do usuário. |
-| user.sessionCountScript | Várias informações no perfil do Target são enviadas por upload ou fornecidas diretamente pelo Controlador de dados. Neste exemplo, um script de perfil está incrementando o número de sessões que esse visitante fez no site do Controlador de dados. Para obter mais informações, consulte [Atributos de scripts de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=pt-BR). |
+| user.sessionCountScript | Várias informações no perfil do Target são enviadas por upload ou fornecidas diretamente pelo Controlador de dados. Neste exemplo, um script de perfil está incrementando o número de sessões que esse visitante fez no site do Controlador de dados. Para obter mais informações, consulte [Atributos de scripts de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html). |
 
 >[!NOTE]
 >
 >Esta amostra de código é uma versão reduzida de um JSON de perfil do Target para ilustração. Vários campos do perfil do Target não são padrão. O que é retornado depende de quais informações estão nesse perfil do visitante específico.
 
-### O Target suporta ofuscação de IP? 
+### O Target suporta ofuscação de IP?
 
 O Target suporta ofuscação de IP se você optar por usá-lo como parte de sua estratégia de implementação do GDPR ou da CCPA. Para obter mais informações, consulte [Privacidade](privacy.md#replacement-of-last-octet-of-ip-addresses).
 

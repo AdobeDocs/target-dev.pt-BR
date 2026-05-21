@@ -1,21 +1,25 @@
 ---
-title: Como gerenciar o catálogo do Recommendations usando APIs
-description: Etapas necessárias para usar APIs do Adobe Target para criar, atualizar, salvar, obter e excluir entidades no catálogo do Recommendations.
+title: Como gerenciar o catálogo de recomendações usando APIs
+description: Etapas necessárias para usar APIs do Adobe Target para criar, atualizar, salvar, obter e excluir entidades no catálogo de Recomendações.
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
 thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-source-git-commit: 2fba03b3882fd23a16342eaab9406ae4491c9044
+TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '857'
+source-wordcount: 905
 ht-degree: 0%
 
 ---
 
-# Gerencie seu catálogo do Recommendations usando APIs
+# Gerenciar o catálogo de recomendações usando APIs
 
-Ao garantir que você atenda aos [requisitos para usar a API de Recommendations](/help/dev/before-administer/recs-api/overview.md#prerequisites), você aprendeu a [gerar um token de acesso](/help/dev/before-administer/configure-authentication.md) usando o fluxo de autenticação JWT para usar as APIs de Administrador [!DNL Adobe Target] na [Adobe Developer Console](https://developer.adobe.com/console/home).
+Ao garantir que você atenda aos [requisitos para usar a API de Recomendações](/help/dev/before-administer/recs-api/overview.md#prerequisites), você aprendeu a [gerar um token de acesso](/help/dev/before-administer/configure-authentication.md) usando o fluxo de autenticação JWT para usar as APIs de Administrador [!DNL Adobe Target] na [Adobe Developer Console](https://developer.adobe.com/console/home).
 
 Agora você pode usar as [APIs do Recommendations](https://developer.adobe.com/target/administer/recommendations-api/) para adicionar, atualizar ou excluir itens do catálogo de recomendações. Assim como no restante das APIs de administrador do Adobe Target, as APIs do Recommendations exigem autenticação.
 
@@ -25,11 +29,11 @@ Agora você pode usar as [APIs do Recommendations](https://developer.adobe.com/t
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
-Antes de continuar, obtenha a [coleção do Recommendations Postman](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman).
+Antes de continuar, obtenha a [coleção de Postman do Recommendations](https://developer.adobe.com/target/administer/recommendations-api/#section/Postman).
 
 ## Criação e atualização de itens com a API Salvar entidades
 
-Para preencher o banco de dados de produtos do Recommendations usando a API em vez de um feed de produto CSV ou de solicitações do Target sendo acionadas nas páginas de produtos, use a [API Salvar Entidades](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities). Esta solicitação adiciona ou atualiza um item em um único ambiente do Target. A sintaxe é:
+Para preencher o banco de dados de produtos do Recommendations usando a API em vez de um feed de produto CSV ou solicitações do Target sendo acionadas nas páginas de produtos, use a [API Salvar entidades](https://developer.adobe.com/target/administer/recommendations-api/#operation/saveEntities). Esta solicitação adiciona ou atualiza um item em um único ambiente do Target. A sintaxe é:
 
 ```
 POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
@@ -149,7 +153,7 @@ Se você receber um erro informando que a entidade não foi encontrada, como mos
 
    >[!NOTE]
    >
-   >Se nenhum ambiente for especificado explicitamente, Obter Entidade tentará obter a entidade somente do seu [ambiente padrão](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=pt-BR). Se quiser extrair de qualquer ambiente que não seja o ambiente padrão, especifique a ID do ambiente.
+   >Se nenhum ambiente for especificado explicitamente, Obter Entidade tentará obter a entidade somente do seu [ambiente padrão](https://experienceleague.adobe.com/docs/target/using/administer/environments.html). Se quiser extrair de qualquer ambiente que não seja o ambiente padrão, especifique a ID do ambiente.
 
 1. Se necessário, adicione o parâmetro `environmentId` e reenvie a solicitação.
 
@@ -201,4 +205,4 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 
 Parabéns! Agora você pode usar as APIs do Recommendations para criar, atualizar, excluir e obter detalhes sobre as entidades no catálogo. Na próxima seção, você aprenderá a gerenciar critérios personalizados.
 
-&lt;!— [Próximo &quot;Gerenciar Critérios Personalizados&quot; >](manage-custom-criteria.md) —>
+&lt;!— [Próximo &quot;Gerenciar critérios personalizados&quot; >](manage-custom-criteria.md) —>

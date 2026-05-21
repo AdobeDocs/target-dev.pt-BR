@@ -4,9 +4,15 @@ description: Exiba uma lista de hosts para ajudá-lo a incluir na lista de permi
 title: Como Incluir na lista de permissões  [!DNL Target] Nós do Edge?
 feature: Privacy & Security
 exl-id: a7e5d2fc-da8e-414d-a3da-2441ea21503d
-source-git-commit: 662d415bc3c216bcd038f07dcaa0fd83f6518690
+TQID: https://experienceleague.adobe.com/-XCVJpuvQ1xV9vQBZbomDKU3F-60b5FS-LU8lIBp4GQ
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: a94ced60-8199-4549-b453-ede2acb4101e
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: 373
 ht-degree: 0%
 
 ---
@@ -15,15 +21,15 @@ ht-degree: 0%
 
 Informações e uma lista atualizada de hosts para ajudá-lo a incluir na lista de permissões [!DNL Adobe Target] bordas.
 
-Uma borda é uma arquitetura de fornecimento distribuída geograficamente que garante tempos de resposta ideais para usuários finais que solicitem o conteúdo, independentemente de sua localização. Cada nó de borda tem todas as informações necessárias para responder à solicitação de conteúdo do usuário e rastrear os dados de análise dessa solicitação. As solicitações do usuário são roteadas para o nó de borda mais próximo. Para obter mais informações, consulte [A rede de borda](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=pt-BR#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
+Uma borda é uma arquitetura de fornecimento distribuída geograficamente que garante tempos de resposta ideais para usuários finais que solicitem o conteúdo, independentemente de sua localização. Cada nó de borda tem todas as informações necessárias para responder à solicitação de conteúdo do usuário e rastrear os dados de análise dessa solicitação. As solicitações do usuário são roteadas para o nó de borda mais próximo. Para obter mais informações, consulte [A rede de borda](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html#concept_0AE2ED8E9DE64288A8B30FCBF1040934).
 
 Você pode incluir na lista de permissões [!DNL Target] nós de borda, se desejar.
 
 >[!IMPORTANT]
 >
->Incluir na lista de permissões Além de converter os endereços IP NAT (Network Address Translation, tradução de endereço de rede) de [!DNL Target] bordas e [!DNL Target] endereços IP de borda discutidos no artigo, você também deve incluir na lista de permissões todos os [!DNL Adobe Analytics] blocos de endereço IP.
+>Além de converter os endereços IP NAT (Network Address Translation, tradução de endereço de rede) de [!DNL Target] bordas e [!DNL Target] endereços IP de borda discutidos no artigo, você também deve incluir na lista de permissões todos os [!DNL Adobe Analytics] blocos de endereço IP.
 >
->Para obter mais informações, consulte [Todos os blocos de endereço IP do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=pt-BR#all-adobe-analytics-ip-address-blocks){target=_blank} na documentação das *notas técnicas do Adobe Analytics*.
+>Para obter mais informações, consulte [Todos os blocos de endereço IP do Adobe Analytics](https://experienceleague.adobe.com/docs/analytics/technotes/ip-addresses.html?lang=en#all-adobe-analytics-ip-address-blocks){target=_blank} na documentação das *notas técnicas do Adobe Analytics*.
 >
 >A infraestrutura do [!DNL Adobe Target] está sendo atualizada e os clientes que desejam incluir na lista de permissões endereços devem usar ambos os conjuntos de IPs. Se isso não for feito, os clientes que usam implementações do lado do servidor ou híbridas nas quais as chamadas da API do Target para busca de experiências são originadas de uma rede atrás de um firewall configurado para usar um incluo na lista de permissões.
 

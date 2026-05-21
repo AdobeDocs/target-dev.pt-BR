@@ -1,13 +1,19 @@
 ---
-keywords: serverstate, targetGlobalSettings, targetglobalsettings, globalSettings, globalsettings, configurações globais, at.js, funções, função, clientCode, clientcode, serverDomain, serverdomain, cookieDomain, serverstate5, serverstate6, serverstate7, serverstate8, serverstate9, targetGlobalSettings0, targetGlobalSettings1, targetGlobalSettings2, targetGlobalSettings3, targetGlobalSettings4, targetGlobalSettings5, cookiedomain, crossDomain, crossdomain, timeout, global MboxAutoCreate, visitorApiTimeout, defaultContentHiddenStyle, defaultContentVisibleStyle, bodyHiddenStyle, bodyHidingEnabled, imsOrgId, secureOnly, overrideMboxEdgeServer, overrideMboxEdgeServerTimeout, cookiedomain5, cookiedomain6, cookiedomain7, cookiedomain8, cookiedomain9, crossDomain0, crossDomain1, crossDomain2, crossDomain2 3, crossDomain4, crossDomain5, optoutEnabled, optout, opt out, seletoresPollingTimeout, dataProviders, Personalization híbrido, deviceIdLifetime
+keywords: serverstate, targetGlobalSettings, targetglobalsettings, globalSettings, globalsettings, configurações globais, at.js, funções, função, clientCode, clientcode, serverDomain, serverdomain, cookieDomain, serverstate5, serverstate6, serverstate7, serverstate8, serverstate9, targetGlobalSettings0, targetGlobalSettings1, targetGlobalSettings2, targetGlobalSettings3, targetGlobalSettings4, targetGlobalSettings5, cookiedomain, crossDomain, crossdomain, timeout, globalMboxAutoCreate, visitorApiTimeout, defaultContentHiddenStyle, defaultContentVisibleStyle, bodyHiddenStyle, bodyHidingEnabled, imsOrgId, secureOnly, overrideMboxEdgeServer, overrideMboxEdgeServerTimeout, cookiedomain5, cookiedomain6, cookiedomain7, cookiedomain8, cookiedomain9, crossDomain0, crossDomain1, crossDomain2, crossDomain3, crossDomain4, crossDomain5, optoutEnabled, optout, opt out, seletoresPollingTimeout, dataProviders, Personalization híbrido, deviceIdLifetime
 description: Use a função [!UICONTROL targetGlobalSettings()] da biblioteca JavaScript  [!DNL Adobe Target] at.js para substituir as configurações, em vez de usar a  [!DNL Target] IU ou as APIs REST.
 title: Como faço para usar a função [!UICONTROL targetGlobalSettings()]?
 feature: at.js
 exl-id: f6218313-6a70-448e-8555-b7b039e64b2c
-source-git-commit: 12cf430b65695d38d1651f2a97df418d82d231f3
+TQID: https://experienceleague.adobe.com/6IeQo7RCys6Qe6bPydmmtgaAERi7rnneBYFOzseaL2g
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dcid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '2565'
-ht-degree: 58%
+source-wordcount: 2702
+ht-degree: 56%
 
 ---
 
@@ -67,7 +73,7 @@ Você pode substituir as configurações na biblioteca at.js usando `[!UICONTROL
 
 * **Tipo**: String
 * **Valor padrão**: valor definido pela interface do usuário.
-* **Descrição**: indica se o rastreamento de domínio cruzado está ativado ou não. Os valores permitidos dependem da versão da at.js. Para at.js v1.*x*, especifique se os recursos entre domínios são `disabled` (navegadores definem cookies somente no seu domínio (cookies próprios)), `x only` (navegadores definem cookies somente no domínio de [!DNL Target]), ou ambos, selecionando `enabled` (navegadores definem cookies próprios e de terceiros). Para at.js v2.10 e posterior, especifique se os recursos entre domínios são `enabled` (os navegadores definem cookies próprios e de terceiros) ou `disabled` (os navegadores não definem cookies de terceiros).
+* **Descrição**: indica se o rastreamento de domínio cruzado está habilitado ou não. Os valores permitidos dependem da versão da at.js. Para at.js v1.*x*, especifique se os recursos entre domínios são `disabled` (navegadores definem cookies somente no seu domínio (cookies próprios)), `x only` (navegadores definem cookies somente no domínio de [!DNL Target]), ou ambos, selecionando `enabled` (navegadores definem cookies próprios e de terceiros). Para at.js v2.10 e posterior, especifique se os recursos entre domínios são `enabled` (os navegadores definem cookies próprios e de terceiros) ou `disabled` (os navegadores não definem cookies de terceiros).
 
 ### cspScriptNonce
 
@@ -102,11 +108,11 @@ Você pode substituir as configurações na biblioteca at.js usando `[!UICONTROL
 
   Somente no lado do servidor é o método de decisão padrão definido imediatamente quando a at.js 2.5+ é implementada e implantada em suas propriedades da Web.
 
-  Usar somente no lado do servidor como configuração padrão significa que todas as decisões são tomadas na rede de borda [!DNL Target], o que envolve uma chamada de servidor de bloqueio. Essa abordagem pode apresentar latência incremental, mas também oferece benefícios significativos, como a capacidade de aplicar os recursos de aprendizado de máquina do [!DNL Target], que incluem as atividades de [Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=pt-BR), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=pt-BR) (AP) e [Direcionamento automático](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html?lang=pt-BR).
+  Usar somente no lado do servidor como configuração padrão significa que todas as decisões são tomadas na rede de borda [!DNL Target], o que envolve uma chamada de servidor de bloqueio. Essa abordagem pode apresentar latência incremental, mas também oferece benefícios significativos, como a capacidade de aplicar os recursos de aprendizado de máquina do [!DNL Target], que incluem as atividades de [Recomendações](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html), [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html) (AP) e [Direcionamento automático](https://experienceleague.adobe.com/docs/target/using/activities/auto-target/auto-target-to-optimize.html).
 
   Além disso, aprimorar suas experiências personalizadas usando o perfil de usuário do [!DNL Target], que é mantido em sessões e canais, pode trazer resultados significativos para sua empresa.
 
-  Por fim, somente no lado do servidor permite usar a Adobe Experience Cloud e refinar públicos-alvo que podem ser direcionados por meio de segmentos Audience Manager e Adobe Analytics.
+  Por fim, somente no lado do servidor permite usar o Adobe Experience Cloud e refinar públicos-alvo que podem ser direcionados por meio de segmentos do Audience Manager e do Adobe Analytics.
 
   **Somente no dispositivo**:
 
@@ -148,7 +154,7 @@ Você pode substituir as configurações na biblioteca at.js usando `[!UICONTROL
 >
 >A configuração deviceIdLifetime pode ser substituída na versão 2.3.1 ou posterior da at.js.
 
-### ativado
+### habilitado
 
 * **Tipo**: Booleano
 * **Valor padrão**: verdadeiro
@@ -172,7 +178,7 @@ Você pode substituir as configurações na biblioteca at.js usando `[!UICONTROL
 
 * **Tipo**: Booleano
 * **Valor padrão**: falso
-* **Descrição**: o [!DNL Target] oferece suporte à funcionalidade de aceitação por meio da Adobe Experience Platform, para ajudar a apoiar sua estratégia de gerenciamento de consentimento. A funcionalidade de opt-in permite que os clientes controlem como e quando a tag do [!DNL Target] é acionada. Além disso, há uma opção por meio do Adobe Experience Platform para pré-aprovar a tag [!DNL Target]. Para ativar a capacidade de usar a aceitação na biblioteca at.js do [!DNL Target], você deve adicionar a configuração `optinEnabled=true`. No Adobe Experience Platform, você deve selecionar &quot;ativar&quot; na lista suspensa Aceitação de GDPR, na exibição de instalação da extensão. Consulte a [documentação da Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) para obter mais detalhes. Para obter mais informações sobre essa configuração, que está relacionada às regulamentações de privacidade e proteção de dados, incluindo o Regulamento Geral sobre a Proteção de Dados (GDPR) da União Europeia e a Lei de Privacidade do Consumidor da Califórnia (CCPA), consulte [Regulamentos sobre proteção de dados e privacidade](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md).
+* **Descrição**: o [!DNL Target] oferece suporte à funcionalidade de aceitação por meio da Adobe Experience Platform, para ajudar a apoiar sua estratégia de gerenciamento de consentimento. A funcionalidade de opt-in permite que os clientes controlem como e quando a tag do [!DNL Target] é acionada. Além disso, há uma opção por meio do Adobe Experience Platform para pré-aprovar a tag [!DNL Target]. Para habilitar a capacidade de usar a aceitação na biblioteca at.js do [!DNL Target], você deve adicionar a configuração `optinEnabled=true`. No Adobe Experience Platform, você deve selecionar &quot;ativar&quot; na lista suspensa Aceitação de GDPR, na exibição de instalação da extensão. Consulte a [documentação da Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) para obter mais detalhes. Para obter mais informações sobre essa configuração, que está relacionada às regulamentações de privacidade e proteção de dados, incluindo o Regulamento Geral sobre a Proteção de Dados (GDPR) da União Europeia e a Lei de Privacidade do Consumidor da Califórnia (CCPA), consulte [Regulamentos sobre proteção de dados e privacidade](/help/dev/before-implement/privacy/cmp-privacy-and-general-data-protection-regulation.md).
 
 ### optoutEnabled
 
@@ -198,7 +204,7 @@ Você pode substituir as configurações na biblioteca at.js usando `[!UICONTROL
 
 * **Tipo**: Booleano
 * **Valor padrão**: verdadeiro
-* **Descrição**: quando ativado, recupera automaticamente as experiências que devem ser retornadas ao carregar a página.
+* **Descrição**: quando habilitado, recupera automaticamente as experiências que devem ser retornadas ao carregar a página.
 
 ### pollingInterval
 
@@ -238,19 +244,19 @@ Você pode substituir as configurações na biblioteca at.js usando `[!UICONTROL
 
 * **Tipo**: Booleano
 * **Valor padrão**: verdadeiro
-* **Descrição**: quando habilitado, o Adobe coleta dados de uso de recursos do SDK e de telemetria de desempenho. Os dados pessoais não são coletados.
+* **Descrição**: quando habilitada, a Adobe coleta dados de uso de recursos e de telemetria de desempenho do SDK. Os dados pessoais não são coletados.
 
 ### timeout
 
 * **Tipo**: número
 * **Valor padrão**: valor definido pela interface do usuário.
-* **Descrição**: representa o tempo limite da solicitação da borda do [!DNL Target].
+* **Descrição**: representa o tempo-limite da solicitação da borda do [!DNL Target].
 
 ### viewsEnabled {#viewsenabled}
 
 * **Tipo**: Booleano
 * **Valor padrão**: verdadeiro
-* **Descrição**: quando habilitadas, as exibições são recuperadas automaticamente quando a página é carregada. Quando `triggerView` é chamado, as exibições aplicáveis são exibidas no navegador. Se esta opção estiver desabilitada, as exibições não serão recuperadas no momento do carregamento da página e `triggerView` não fará nada. As exibições são compatíveis com a at.js 2.somente *x.*
+* **Descrição**: quando habilitadas, as exibições são recuperadas automaticamente quando a página é carregada. Quando `triggerView` é chamado, as exibições aplicáveis são exibidas no navegador. Se esta opção estiver desabilitada, as exibições não serão recuperadas no momento do carregamento da página e `triggerView` não fará nada. As exibições são suportadas somente na at.js 2.*x*.
 
 ### visitorApiTimeout
 
@@ -284,8 +290,8 @@ Os seguintes vídeos contêm mais informações:
 
 | Vídeo | Descrição |
 |--- |--- |
-| [Uso de provedores de dados do Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html?lang=pt-BR) | Os provedores de dados são uma função que permite passar dados de terceiros facilmente para o Target. Um terceiro pode ser um serviço de clima, um DMP ou até mesmo o seu próprio serviço Web. É possível então usar esses dados para criar públicos-alvo, conteúdo de direcionamento e enriquecer o perfil do visitante. |
-| [Implementação de provedores de dados no Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html?lang=pt-BR) | Detalhes de implementação e exemplos de como usar o recurso dataProviders do Adobe [!DNL Target] para recuperar dados de provedores de dados de terceiros e passá-los na solicitação [!DNL Target]. |
+| [Uso de provedores de dados do Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html) | Os provedores de dados são uma função que permite passar dados de terceiros facilmente para o Target. Um terceiro pode ser um serviço de clima, um DMP ou até mesmo o seu próprio serviço Web. É possível então usar esses dados para criar públicos-alvo, conteúdo de direcionamento e enriquecer o perfil do visitante. |
+| [Implementação de provedores de dados no Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html) | Detalhes de implementação e exemplos de como usar o recurso dataProviders do Adobe [!DNL Target] para recuperar dados de provedores de dados de terceiros e passá-los na solicitação [!DNL Target]. |
 
 A configuração `window.targetGlobalSettings.dataProviders` é uma matriz de provedores de dados.
 
@@ -295,7 +301,7 @@ Cada provedor de dados tem a seguinte estrutura:
 |--- |--- |--- |
 | name | String | Nome do provedor. |
 | version | String | Versão do provedor. Essa tecla será usada para evolução do provedor. |
-| timeout | Número | Representa o tempo limite do provedor se essa for uma solicitação de rede.  Essa tecla é opcional. |
+| timeout | Número | Representa o tempo-limite do provedor se essa for uma solicitação de rede.  Essa tecla é opcional. |
 | provider | Função | A função que contém a lógica de obtenção de dados do provedor.<p>A função tem um único parâmetro obrigatório: `callback`. O parâmetro retorno de chamada é uma função que só deve ser invocada quando os dados forem obtidos com êxito ou houver um erro.<p>O retorno de chamada espera dois parâmetros:<ul><li>error: Indica que ocorreu um erro. Se tudo estiver OK, este parâmetro deve ser definido como nulo.</li><li>params: um objeto JSON, representando os parâmetros que serão enviados em uma solicitação [!DNL Target].</li></ul> |
 
 O exemplo a seguir mostra onde o provedor de dados está usando a execução sincrônica:
@@ -414,7 +420,7 @@ Depois que as configurações `cspScriptNonce` e `cspStyleNonce` são especifica
 
 ## Personalização híbrida
 
-O `serverState` é uma configuração disponível na at.js v2.2+ que pode ser usada para otimizar o desempenho da página quando uma integração híbrida do [!DNL Target] é implementada. A integração híbrida significa que você está usando a at.js v2.2+ no lado do cliente e a API de entrega ou um SDK do [!DNL Target] no lado do servidor para fornecer experiências. O `serverState` fornece ao at.js v2.2+ a capacidade de aplicar experiências diretamente de conteúdo buscado no lado do servidor e retornado ao cliente como parte da página que está sendo veiculada.
+O `serverState` é uma configuração disponível na at.js v2.2+ que pode ser usada para otimizar o desempenho da página quando uma integração híbrida do [!DNL Target] é implementada. A integração híbrida significa que você está usando a at.js v2.2+ no lado do cliente e a API de entrega ou uma SDK do [!DNL Target] no lado do servidor para fornecer experiências. O `serverState` fornece ao at.js v2.2+ a capacidade de aplicar experiências diretamente de conteúdo buscado no lado do servidor e retornado ao cliente como parte da página que está sendo veiculada.
 
 ### Pré-requisitos
 
@@ -537,7 +543,7 @@ Considere o seguinte ao usar `serverState`:
    * Atividades criadas pelo VEC que são executadas no carregamento da página.
    * Exibições pré-buscadas.
 
-     No caso de SPA usar [!DNL Target] Exibições e `triggerView()` na API da at.js, a at.js v2.2 armazena em cache o conteúdo de todas as Exibições pré-buscadas no lado do servidor e as aplica assim que cada Exibição é acionada por meio de `triggerView()`, novamente sem disparar chamadas adicionais de busca de conteúdo para [!DNL Target].
+     No caso de aplicativos de página única que usam [!DNL Target] Exibições e `triggerView()` na API da at.js, a at.js v2.2 armazena em cache o conteúdo de todas as Exibições pré-buscadas no lado do servidor e as aplica assim que cada Exibição é acionada por meio de `triggerView()`, novamente sem disparar chamadas adicionais de busca de conteúdo para [!DNL Target].
 
    * **Observação**: Atualmente, as mboxes recuperadas no lado do servidor não são compatíveis com o `serverState`.
 
@@ -545,7 +551,7 @@ Considere o seguinte ao usar `serverState`:
 
   Para ativar essas configurações, habilite a alternância em **Administração > Implementação > Edição > Carregamento de Página Habilitado**.
 
-  ![Configurações do carregamento de página ativado](../../assets/page-load-enabled-setting.png)
+  ![Configurações do carregamento de página habilitado](../../assets/page-load-enabled-setting.png)
 
 * Se estiver usando `serverState` e tags de `<script>` no conteúdo retornado, certifique-se que o conteúdo HTML usa `<\/script>` em vez de `</script>`. Se usar `</script>`, o navegador interpretará `</script>` como o final de um SCRIPT inline e poderá quebrar a página HTML.
 

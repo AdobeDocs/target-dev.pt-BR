@@ -3,10 +3,14 @@ title: Identificação e segmentação do usuário
 description: Identificação e segmentação do usuário
 exl-id: 4fcf235b-6a58-442c-ae13-9d05ec1033fc
 feature: Implement Server-side
-source-git-commit: 09a50aa67ccd5c687244a85caad24df56c0d78f5
+TQID: https://experienceleague.adobe.com/V9hK5oj7F-SV2wou2sz-Ve3RVJ1EMsFJDmcNF4ctV5o
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1130'
-ht-degree: 3%
+source-wordcount: 1172
+ht-degree: 4%
 
 ---
 
@@ -20,8 +24,8 @@ Há várias maneiras pelas quais um usuário pode ser identificado dentro de [!D
 | --- | --- |
 | `tntID` | O `tntId` é o identificador principal em [!DNL Target] de um usuário. Você pode fornecer essa ID, ou [!DNL Target] irá gerá-la automaticamente se a solicitação não contiver uma. |
 | `thirdPartyId` | O `thirdPartyId` é o identificador de sua empresa para o usuário, que você pode enviar com cada chamada. Quando um usuário faz logon no site de uma empresa, a empresa normalmente cria uma ID vinculada à conta, ao cartão de fidelidade, ao número de associado ou a outros identificadores aplicáveis do visitante dessa empresa. |
-| `marketingCloudVisitorId` | O `marketingCloudVisitorId` é usado para mesclar e compartilhar dados entre diferentes soluções de Adobe. O marketingCloudVisitorId é necessário para integrações com o Adobe Analytics e o Adobe Audience Manager. |
-| `customerIds` | Juntamente com a ID de visitante do Experience Cloud, também podem ser utilizadas [IDs adicionais do cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=pt-BR) e um status autenticado para cada visitante. |
+| `marketingCloudVisitorId` | O `marketingCloudVisitorId` é usado para mesclar e compartilhar dados entre diferentes soluções da Adobe. O marketingCloudVisitorId é necessário para integrações com o Adobe Analytics e o Adobe Audience Manager. |
+| `customerIds` | Juntamente com a ID de visitante da Experience Cloud, [IDs adicionais do cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) e um status autenticado para cada visitante também podem ser utilizados. |
 
 ## [!DNL Target] ID (tntID)
 
@@ -56,7 +60,7 @@ targetClient.getOffers({
 .catch(console.error);
 ```
 
->[!TAB SDK Java]
+>[!TAB Java SDK]
 
 ```java {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -135,7 +139,7 @@ targetClient.getOffers({
 .catch(console.error);
 ```
 
->[!TAB SDK Java]
+>[!TAB Java SDK]
 
 ```java {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -165,11 +169,11 @@ TargetDeliveryResponse offers = targetClient.getOffers(request);
 
 Neste cenário, [!DNL Adobe Target] gerará um `tntId` já que não foi passado para a chamada original, que será mapeada para o `thirdPartyId` fornecido.
 
-## ID de visitante do Marketing Cloud (marketingCloudVisitorId)
+## ID de visitante da Marketing Cloud (marketingCloudVisitorId)
 
-O `marketingCloudVisitorId` é uma ID persistente e universal que identifica os visitantes em todas as soluções da Adobe Experience Cloud. Quando sua organização implementa o serviço de ID, essa ID permite identificar o mesmo visitante do site e seus dados em diferentes soluções de Experience Cloud, incluindo o [!DNL Adobe Target], o Adobe Analytics e o Adobe Audience Manager. Observe que `marketingCloudVisitorId` é necessário ao integrar [!DNL Target] a [!DNL Adobe Analytics] e [!DNL Adobe Audience Manager].
+O `marketingCloudVisitorId` é uma ID persistente e universal que identifica os visitantes em todas as soluções da Adobe Experience Cloud. Quando sua organização implementa o serviço de ID, essa ID permite identificar o mesmo visitante do site e seus dados em diferentes soluções da Experience Cloud, incluindo o [!DNL Adobe Target], o Adobe Analytics e o Adobe Audience Manager. Observe que `marketingCloudVisitorId` é necessário ao integrar [!DNL Target] a [!DNL Adobe Analytics] e [!DNL Adobe Audience Manager].
 
-A chamada de exemplo a seguir demonstra como um `marketingCloudVisitorId` que foi recuperado do Serviço de ID de Experience Cloud é passado para [!DNL Target].
+O exemplo de chamada a seguir demonstra como um `marketingCloudVisitorId` que foi recuperado do Serviço da Experience Cloud ID é passado para [!DNL Target].
 
 >[!BEGINTABS]
 
@@ -201,7 +205,7 @@ targetClient.getOffers({
 .catch(console.error);
 ```
 
->[!TAB SDK Java]
+>[!TAB Java SDK]
 
 ```java {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -233,7 +237,7 @@ Neste cenário, [!DNL Target] gerará um `tntId` já que não foi passado para a
 
 ## ID do cliente (customerIds)
 
-[As IDs do cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=pt-BR) podem ser adicionadas a uma ID de visitante do Experience Cloud ou associadas a ela. Ao enviar `customerIds`, `marketingCloudVisitorId` também deve ser fornecido. Além disso, um status de autenticação pode ser fornecido com cada `customerId` para cada visitante. Os seguintes status de autenticação podem ser usados:
+[As IDs do cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) podem ser adicionadas a uma ID de visitante da Experience Cloud ou associadas a ela. Ao enviar `customerIds`, `marketingCloudVisitorId` também deve ser fornecido. Além disso, um status de autenticação pode ser fornecido com cada `customerId` para cada visitante. Os seguintes status de autenticação podem ser usados:
 
 | Status de autenticação | Status do usuário |
 | --- | --- |
@@ -278,7 +282,7 @@ targetClient.getOffers({
 .catch(console.error);
 ```
 
->[!TAB SDK Java]
+>[!TAB Java SDK]
 
 ```java {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()
@@ -315,7 +319,7 @@ O exemplo acima demonstra como enviar um `customerId` com um `authenticatedState
 
 ## Perfil mesclado
 
-Você pode combinar `tntId`, `thirdPartyID` e `marketingCloudVisitorId` na mesma solicitação. Neste cenário, [!DNL Adobe Target] manterá o mapeamento de todas essas IDs e as fixará a um visitante. Saiba como os perfis são [mesclados e sincronizados em tempo real](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=pt-BR) usando identificadores diferentes.
+Você pode combinar `tntId`, `thirdPartyID` e `marketingCloudVisitorId` na mesma solicitação. Neste cenário, [!DNL Adobe Target] manterá o mapeamento de todas essas IDs e as fixará a um visitante. Saiba como os perfis são [mesclados e sincronizados em tempo real](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html) usando identificadores diferentes.
 
 >[!BEGINTABS]
 
@@ -349,7 +353,7 @@ targetClient.getOffers({
 .catch(console.error);
 ```
 
->[!TAB SDK Java]
+>[!TAB Java SDK]
 
 ```java {line-numbers="true"}
 ClientConfig config = ClientConfig.builder()

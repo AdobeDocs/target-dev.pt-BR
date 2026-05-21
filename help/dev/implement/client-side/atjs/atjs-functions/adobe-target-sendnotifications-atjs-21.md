@@ -4,9 +4,15 @@ description: Use o [!UICONTROL adobe.target.sendNotifications()] for at.js para 
 title: Como usar a função adobe.target.sendNotifications()?
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/QprkTK-0WGq-fzJ9e3FUSAZAandaZFiUY62-zQ6ajY8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '640'
+source-wordcount: 638
 ht-degree: 83%
 
 ---
@@ -23,7 +29,7 @@ Esta função envia uma notificação para a borda [!DNL Target] quando uma expe
 | --- | --- | --- | --- |
 | consumerId | String | Não | O valor padrão é a mbox global do cliente se não for fornecida. Essa chave é usada para gerar a ID de dados complementares usada para integração A4T. |
 | Solicitação | Objeto | Sim | Consulte Tabela de solicitações abaixo. |
-| timeout | Número | Não | Tempo limite da solicitação. Se não for especificado, o tempo limite padrão da at.js será usado. |
+| timeout | Número | Não | Tempo-limite da solicitação. Se não for especificado, o tempo-limite padrão da at.js será usado. |
 
 ## Solicitação
 
@@ -38,7 +44,7 @@ Esta função envia uma notificação para a borda [!DNL Target] quando uma expe
 | Request > notifications > order | Objeto | Não |  | Objeto que descreve os detalhes da ordem. |
 | Request > notifications > order > id | String | Não | `<=` 250 caracteres. | ID do pedido. |
 | Request > notifications > order > total | String | Não | `>=` 0 | Total do pedido. |
-| Request > notifications > order > purchasedProductIds | Matriz de string | Não | <ul><li>Valores em branco não são permitidos.</li><li>Comprimento máx. da ID de produto: 50.</li><li>IDs de produto, separadas por vírgulas e concatenadas, o comprimento total não pode exceder 250.</li></ul> | Identificações de produto da ordem. |
+| Request > notifications > order > purchasedProductIds | Matriz de string | Não | <ul><li>Valores em branco não são permitidos.</li><li>Comprimento máx. da ID de produto: 50.</li><li>IDs de produto, separadas por vírgulas e concatenadas, o comprimento total não pode exceder 250.</li></ul> | Identificações de produto do pedido. |
 | Request > notifications > product | Objeto | Não |  |  |
 | Request > notifications > product > id | String | Não | `<=` 128 caracteres; não pode ficar em branco. | Identificação do produto. |
 | Request > notifications > product > categoryId | String | Não | `<=` 128 caracteres; não pode ficar em branco. | Identificação da categoria. |

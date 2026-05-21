@@ -3,9 +3,12 @@ title: Como usar solicitações assíncronas no  [!DNL Adobe Target] Python SDK
 description: Saiba como o  [!DNL Target] Python SDK oferece suporte a solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
 feature: APIs/SDKs
 exl-id: 44ab74e5-3c1a-49cf-9fff-fe523b0c2592
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/ZWRw2OlSbuEHorY0MXPOaBw3uePIW5dzpsuqho0Jtqk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '133'
+source-wordcount: 142
 ht-degree: 4%
 
 ---
@@ -14,7 +17,7 @@ ht-degree: 4%
 
 ## Descrição
 
-Um benefício da integração do lado do servidor é que você pode aproveitar a grande largura de banda e os recursos de computação disponíveis no lado do servidor usando o paralelismo. O SDK do Python [!DNL Target] é compatível com solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
+Um benefício da integração do lado do servidor é que você pode aproveitar a grande largura de banda e os recursos de computação disponíveis no lado do servidor usando o paralelismo. [!DNL Target] O Python SDK é compatível com solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
 
 ## Métodos suportados
 

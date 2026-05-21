@@ -1,12 +1,15 @@
 ---
-title: Usar [!UICONTROL getOffers()] em [!DNL Adobe Target] ao usar o SDK do Node.js
+title: Usar [!UICONTROL getOffers()] em [!DNL Adobe Target] ao usar o SDK Node.js
 description: Saiba como usar o [!UICONTROL getOffers()] para executar uma decisão e recuperar uma experiência do  [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '313'
-ht-degree: 22%
+source-wordcount: 326
+ht-degree: 21%
 
 ---
 
@@ -52,10 +55,10 @@ O objeto `options` tem a seguinte estrutura:
 | targetCookie | Objeto | [!DNL Target] cookie |
 | targetLocationHintCookie | Objeto | Cookie de dica de localização [!DNL Target] |
 | analyticsDetails | Matriz | Carga do Analytics, em caso de uso do Analytics no lado do cliente |
-| responseTokens | Matriz | Uma lista de [tokens de resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=pt-BR&). |
+| responseTokens | Matriz | Uma lista de [tokens de resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?). |
 | trace | Matriz | Dados de rastreamento agregados para todas as mboxes/exibições de solicitação |
 | status | Objeto | Um objeto que contém o status da resposta. |
-| decisioningMethod | String    | Determina qual método de decisão usar ([no dispositivo](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md), no lado do servidor, híbrido) |
+| decisioningMethod | String | Determina qual método de decisão usar ([no dispositivo](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md), no lado do servidor, híbrido) |
 
 Os objetos `targetCookie` e `targetLocationHintCookie` usados para transmitir dados de volta ao navegador têm a seguinte estrutura:
 

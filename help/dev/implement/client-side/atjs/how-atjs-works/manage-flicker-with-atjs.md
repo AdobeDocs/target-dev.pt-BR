@@ -4,9 +4,15 @@ description: Saiba como a at.js e o  [!DNL Target] evitam a cintilação (o cont
 title: Como a at.js gerencia a cintilação?
 feature: at.js
 exl-id: 8aacf254-ec3d-4831-89bb-db7f163b3869
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/r8uyzkf1gSHmppyDHPOcn5jrH86Hedb4ArMmtigq93w
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ceid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: 717
 ht-degree: 57%
 
 ---
@@ -19,15 +25,15 @@ A cintilação ocorre quando o conteúdo padrão é exibido momentaneamente aos 
 
 ## Uso de uma mbox global criada automaticamente
 
-Se você ativar a configuração [Criar mbox global automaticamente](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) ao configurar o at.js, o at.js gerenciará a cintilação alterando a configuração de opacidade, à medida que a página é carregada. Quando o at.js for carregado, a configuração de opacidade do elemento `<body>` será alterada para &quot;0&quot;, tornando a página invisível inicialmente para os visitantes. Após receber uma resposta de [!DNL Target], ou se for detectado um erro com a solicitação [!DNL Target], a at.js redefine a opacidade para &quot;1&quot;. Isso garante que o visitante veja a página somente depois que o conteúdo de suas atividades for aplicado.
+Se você habilitar a configuração [Criar mbox global automaticamente](/help/dev/implement/client-side/atjs/global-mbox/customize-global-mbox.md) ao configurar o at.js, o at.js gerenciará a cintilação alterando a configuração de opacidade, à medida que a página é carregada. Quando o at.js for carregado, a configuração de opacidade do elemento `<body>` será alterada para &quot;0&quot;, tornando a página invisível inicialmente para os visitantes. Após receber uma resposta de [!DNL Target], ou se for detectado um erro com a solicitação [!DNL Target], a at.js redefine a opacidade para &quot;1&quot;. Isso garante que o visitante veja a página somente depois que o conteúdo de suas atividades for aplicado.
 
-Se a configuração for ativada ao definir a at.js, a at.js definirá a opacidade do estilo HTML BODY para 0. Após receber uma resposta de [!DNL Target], a at.js redefine a opacidade de HTML para 1.
+Se a configuração for habilitada ao definir a at.js, a at.js definirá a opacidade do estilo HTML BODY para 0. Após receber uma resposta de [!DNL Target], a at.js redefine a opacidade do HTML BODY para 1.
 
 A opacidade definida para 0 mantém o conteúdo da página oculto para evitar cintilação, mas o navegador ainda renderiza a página e carrega todos os recursos necessários, como CSS, imagens, etc.
 
 Se o `opacity: 0` não funcionar na sua implementação, você também poderá gerenciar a cintilação personalizando o `bodyHiddenStyle` e definindo-a como `body {visibility:hidden !important}`. Você pode usar `body {opacity:0 !important}` ou `body {visibility:hidden !important}`, o que funcionar melhor para a circunstância específica.
 
-A ilustração a seguir mostra as chamadas Ocultar corpo e Mostrar corpo no at.js 1.*x* e at.js 2.x.
+A ilustração a seguir mostra as chamadas Ocultar corpo e Mostrar corpo nas versões 1.*x* e 2.x da at.js.
 
 **at.js 2.x**
 
@@ -35,7 +41,7 @@ A ilustração a seguir mostra as chamadas Ocultar corpo e Mostrar corpo no at.j
 
 ![Fluxo do Target: Solicitação de carregamento de página da at.js](/help/dev/implement/client-side/assets/atjs-20-flow-page-load-request.png "Fluxo do Target: Solicitação de carregamento de página da at.js"){zoomable="yes"}
 
-**at.js 1.*x***  
+**at.js 1.*x***
 
 (Clique na imagem para expandir até a largura total.)
 
@@ -47,7 +53,7 @@ Para obter mais informações sobre `bodyHiddenStyle` a substituição, consulte
 
 Carregar a at.js de forma assíncrona é uma ótima maneira de evitar o bloqueio de renderização do navegador. No entanto, essa técnica pode levar à cintilação na página da Web.
 
-Você pode evitar a cintilação usando um trecho oculto previamente, que ficará visível após a personalização dos elementos de HTML relevantes pelo Target.
+Você pode evitar a cintilação usando um trecho oculto previamente, que ficará visível após a personalização dos elementos HTML relevantes pelo Target.
 
 A at.js pode ser carregada de forma assíncrona, diretamente incorporada à página ou por meio de um gerenciador de tags (por exemplo, Adobe Experience Platform Launch).
 
@@ -115,7 +121,7 @@ Ao usar `triggerView()` para mostrar o conteúdo direcionado em seu SPA, o geren
 
 ## Gerenciar cintilação com getOffer() e applyOffer()
 
-Como `getOffer()` e `applyOffer()` são APIs de baixo nível, não há controle de cintilação incorporado. É possível passar um seletor ou elemento HTML como opção `applyOffer()`, nesse caso, `applyOffer()` adiciona o conteúdo da atividade a este elemento específico; no entanto, verifique se o elemento está pré-oculto corretamente antes de chamar `getOffer()` e `applyOffer()`.
+Como `getOffer()` e `applyOffer()` são APIs de baixo nível, não há controle de cintilação integrado. É possível passar um seletor ou elemento HTML como opção `applyOffer()`, nesse caso, `applyOffer()` adiciona o conteúdo da atividade a este elemento específico; no entanto, verifique se o elemento está pré-oculto corretamente antes de chamar `getOffer()` e `applyOffer()`.
 
 ```
 document.documentElement.style.opacity = "0";

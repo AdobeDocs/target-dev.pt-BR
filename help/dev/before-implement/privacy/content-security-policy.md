@@ -4,9 +4,15 @@ description: Saiba mais sobre as diretivas de Política de Segurança de Conteú
 title: Como o  [!DNL Target]  lida com as Políticas de segurança de conteúdo (CSP)?
 feature: Privacy & Security
 exl-id: ec6942e5-36d8-4f88-b3d6-47f9eaca03a8
-source-git-commit: c43c79b29768694eac534e22047b5ee6a3d0ccd5
+TQID: https://experienceleague.adobe.com/gGNgYyblw6-D-RiHBtzAtrOOdhVOsIzYQ-HhkhCtyuI
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: 610
 ht-degree: 28%
 
 ---
@@ -31,13 +37,13 @@ No entanto, em uma implementação [!DNL Target], essas políticas não devem re
 
 “adobe.tt.omtrdc.net” é um domínio de propriedade da Adobe. O [!DNL Adobe Target] é uma ferramenta de teste e personalização e espera-se que o [!DNL Target] possa receber e processar solicitações de qualquer lugar sem exigir autenticação. Essas solicitações contêm pares de chave/valor usados para testes A/B, recomendações ou personalização de conteúdo.
 
-O Adobe não armazena informações pessoais identificáveis (PII) ou outras informações confidenciais nos servidores de borda do [!DNL Adobe Target], para os quais &quot;adobe.tt.omtrdc.net&quot; aponta.
+A Adobe não armazena informações pessoais identificáveis (PII) ou outras informações confidenciais em servidores de borda do [!DNL Adobe Target], para os quais &quot;adobe.tt.omtrdc.net&quot; aponta.
 
 Espera-se que o [!DNL Target] possa ser acessado de qualquer domínio por meio de chamadas JavaScript. A única maneira de permitir esse acesso é aplicando &quot;Access-Control-Allow-Origin&quot; com um curinga.
 
 ### Como permitir ou impedir que meu site seja incorporado como um iFrame em domínios estrangeiros?
 
-Para permitir que o [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=pt-BR){target=_blank} (VEC) incorpore seu site em um iFrame, o CSP (se definido) deve ser alterado na configuração do servidor Web. [!DNL Adobe] domínios devem estar na lista de permissões e configurados.
+Para permitir que o [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC) incorpore o site em um iFrame, a CSP (se definida) deverá ser alterada na configuração do servidor Web. [!DNL Adobe] domínios devem estar na lista de permissões e configurados.
 
 Por motivos de segurança, talvez você queira impedir que seu site seja incorporado como um iFrame em domínios estrangeiros.
 

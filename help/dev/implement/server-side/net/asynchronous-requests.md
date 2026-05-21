@@ -1,11 +1,14 @@
 ---
-title: Como usar solicitações assíncronas no SDK do  [!DNL Adobe Target] .NET
-description: Saiba como o  [!DNL Target] SDK do Java oferece suporte a solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
+title: Como usar solicitações assíncronas no  [!DNL Adobe Target] .NET SDK
+description: Saiba como o  [!DNL Target] Java SDK oferece suporte a solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
 feature: APIs/SDKs
 exl-id: fd36cc7b-a884-4e57-93c2-8aff8256109a
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/E9rNmPdXe7HYg7XlIffpC4opGM9X6fFoHK-u0oLI-XE
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '91'
+source-wordcount: 91
 ht-degree: 4%
 
 ---
@@ -14,7 +17,7 @@ ht-degree: 4%
 
 ## Descrição
 
-Uma vantagem da integração do lado do servidor é que é possível aproveitar a grande largura de banda e os recursos de computação disponíveis no lado do servidor usando o paralelismo. O SDK do .NET [!DNL Target] dá suporte a solicitações assíncronas, facilitando a integração do [!DNL Target] ao fluxo de trabalho assíncrono existente de um aplicativo.
+Uma vantagem da integração do lado do servidor é que é possível aproveitar a grande largura de banda e os recursos de computação disponíveis no lado do servidor usando o paralelismo. [!DNL Target] O .NET SDK dá suporte a solicitações assíncronas, facilitando a integração do [!DNL Target] ao fluxo de trabalho assíncrono existente de um aplicativo.
 
 ## Métodos suportados
 
@@ -28,7 +31,7 @@ Task<TargetAttributes> GetAttributesAsync(TargetDeliveryRequest request, params 
 
 ## Exemplo
 
-Um exemplo de uso da API do SDK assíncrono pode ser exibido da seguinte maneira:
+Um exemplo de uso da API assíncrona do SDK pode ser exibido da seguinte maneira:
 
 ### \.NET
 
@@ -53,4 +56,4 @@ var notificationRequest = new TargetDeliveryRequest.Builder()
 var notificationResponse = await this.targetClient.SendNotificationsAsync(notificationRequest);
 ```
 
-Este exemplo supõe que você tenha [inicializado o SDK](initialize-sdk.md).
+Este exemplo supõe que você tenha [inicializado a SDK](initialize-sdk.md).

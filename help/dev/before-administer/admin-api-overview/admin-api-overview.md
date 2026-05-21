@@ -3,9 +3,14 @@ title: Visão geral da API de administração do Adobe Target
 description: Visão geral do  [!DNL Adobe Target Admin API]
 exl-id: 1168d376-c95b-4c5a-b7a2-c7815799a787
 feature: APIs/SDKs
-source-git-commit: 67cc93cf697f8d5bca6fedb3ae974e4012347a0b
+TQID: https://experienceleague.adobe.com/pJIaDbvs5sAFD8KPsnaNAMQAoq-lowmLs-B0zRAGzDY
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: 1400
 ht-degree: 2%
 
 ---
@@ -16,11 +21,11 @@ Este artigo fornece uma visão geral das informações de referência necessári
 
 >[!NOTE]
 >
->Se você deseja administrar [!DNL Target] por meio da interface, consulte a [seção de administração do *Guia do Profissional de Negócios do Adobe Target*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=pt-BR).
+>Se você deseja administrar [!DNL Target] por meio da interface, consulte a [seção de administração do *Guia do Profissional de Negócios do Adobe Target*](https://experienceleague.adobe.com/docs/target/using/administer/administrating-target.html?lang=en).
 >
 >As APIs de administrador e APIs de perfil geralmente são mencionadas coletivamente (&quot;APIs de administrador e perfil&quot;), mas também podem ser mencionadas separadamente (&quot;APIs de administrador&quot; e &quot;APIs de perfil&quot;). A API do Recommendations é uma implementação específica de uma API de administração [!DNL Target].
 
-## Antes de começar 
+## Antes de começar
 
 Em todos os exemplos de código fornecidos para as [APIs de administrador](../../administer/admin-api/admin-api-overview-new.md), substitua {tenant} pelo seu valor de locatário, `your-bearer-token` pelo token de acesso gerado com seu JWT e `your-api-key` pela sua chave de API da [Adobe Developer Console](https://developer.adobe.com/console/home). Para obter mais informações sobre locatários e JWTs, consulte o artigo sobre como [configurar a autenticação](../configure-authentication.md) para APIs de administrador [!DNL Target] do Adobe.
 
@@ -28,7 +33,7 @@ Em todos os exemplos de código fornecidos para as [APIs de administrador](../..
 
 Todas as APIs têm uma versão associada. É importante fornecer a versão correta da API que você deseja usar.
 
-Se a solicitação tiver uma carga (POST ou PUT), o cabeçalho `Content-Type` da solicitação será usado para especificar a versão.
+Se a solicitação contiver uma carga (POST ou PUT), o cabeçalho `Content-Type` da solicitação será usado para especificar a versão.
 
 Se a solicitação não contiver uma carga (GET, DELETE ou OPTIONS), o cabeçalho `Accept` será usado para especificar a versão.
 
@@ -74,11 +79,11 @@ Estes são os códigos de resposta comuns para as APIs de administrador do Targe
 
 Uma atividade permite testar ou personalizar o conteúdo para seus usuários. As atividades podem ser de um dos seguintes tipos:
 
-* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=pt-BR)
-* [Direcionamento de experiência (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=pt-BR)
-* [Recommendations](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html?lang=pt-BR)
-* [Personalização automatizada](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=pt-BR)
-* [Teste multivariado (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=pt-BR)
+* [A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [Direcionamento de experiência (XT)](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html)
+* [Recomendações](https://experienceleague.adobe.com/docs/target/using/activities/recommendations-activity.html)
+* [Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [Teste multivariado (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
 
 ## Atualizações em lote
 
@@ -115,7 +120,7 @@ O processamento em lote é concluído quando todas as operações são concluíd
 | cabeçalhos | matriz de cabeçalhos de valor-chave a serem enviados com uma operação específica. Caso a autenticação para a API em lote tenha sido executada por meio do cabeçalho de Autorização, ela também será copiada para operações individuais. | o número máximo de cabeçalhos na matriz permitida é 50 | Tipo de conteúdo: application/json |
 | cabeçalhos->nome | nome do cabeçalho | deve ser exclusivo entre outros nomes de cabeçalho. os cabeçalhos não diferenciam maiúsculas de minúsculas por rfc, caso contrário, os valores se substituirão. |  |
 | cabeçalhos->valor | valor do cabeçalho | N/A | cadeia de caracteres vazia |
-| método | Método HTTP a ser usado. Opções disponíveis: GET, POST, PUT, PATCH, DELETE | somente os métodos GET, POST, PUT, PATCH, DELETE são permitidos |  |
+| método | Método HTTP a ser usado. Opções disponíveis: GET, POST, PUT, PATCH, DELETE | Somente os métodos GET, POST, PUT, PATCH e DELETE são permitidos |  |
 | operationId | ID da operação usada para identificar uma operação entre outras operações para respostas e resultados de referência. | exclusivo entre outras operações; valores de 0 a 255 |  |
 | operações | lista de operações a serem executadas em um lote. não é pertinente. | são permitidas no máximo 256 operações |  |
 | relativeUrl | URL relativo da API rest do administrador, a parte após &quot;/admin/rest/&quot;. Pode conter parâmetros da sequência de consulta como: &quot;/v2/campaigns?limit=10&amp;offset=10&quot;. pode se referir a URLs com IDs de ações em lote anteriores, por exemplo: &quot;/v1/offers/{operationIdResponse:0}&quot;. Caso os parâmetros de consulta sejam enviados, eles devem ser codificados por URL. | deve começar com / (ser relativo); somente novas APIs JSON válidas são compatíveis; no caso de relativeURL inválido, uma resposta 404 para uma operação específica será retornada; no caso de fazer referência a uma operationIdResponse, a resposta da operationId referenciada deve ser uma ID válida e o método nessa ação deve ser POST |  |

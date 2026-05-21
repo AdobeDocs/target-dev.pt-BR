@@ -1,18 +1,21 @@
 ---
-title: Introdução ao SDK do  [!DNL Adobe Target] .NET
-description: Saiba como [!DNL Adobe Target] os clientes podem instalar, inicializar e usar o SDK do .NET.
+title: Introdução ao SDK  [!DNL Adobe Target] .NET
+description: Saiba como [!DNL Adobe Target] os clientes podem instalar, inicializar e usar o .NET SDK.
 feature: APIs/SDKs
 exl-id: 618e9320-f001-4ab4-befc-c7b12bbe7b5f
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/FWbHAWmYHTVTKdfk0mRek1U6ymrmZ7ioB7plWmnndSk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '105'
-ht-degree: 3%
+source-wordcount: 140
+ht-degree: 12%
 
 ---
 
-# Visão geral do SDK do .NET
+# Visão geral do .NET SDK
 
-Este guia de referência mostra como os clientes do [!DNL Adobe Target] podem instalar, inicializar e usar o SDK do .NET.
+Este guia de referência mostra como [!DNL Adobe Target] clientes podem instalar, inicializar e usar o .NET SDK.
 
 ## Pré-requisitos
 
@@ -32,9 +35,9 @@ Unidade de teste the.NET SDK:
 
 ### Referência
 
-Para ler e entender a documentação de referência do SDK do .NET, comece em [Instalar SDK](install-sdk.md).
+Para ler e entender a documentação de referência do .NET SDK, comece em [Instalar o SDK](install-sdk.md).
 
 ## Arquivos Source
 
-* [&#x200B; Repositório Github do SDK do .NET](https://github.com/adobe/target-dotnet-sdk)
+* [Repositório GitHub do .NET SDK](https://github.com/adobe/target-dotnet-sdk)
 * [Versões](https://github.com/adobe/target-dotnet-sdk/releases)

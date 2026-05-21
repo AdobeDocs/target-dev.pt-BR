@@ -4,10 +4,15 @@ description: Saiba como [!DNL Adobe Target] está em conformidade com as leis de
 title: Como o Target lida com problemas de privacidade, incluindo PII?
 feature: Privacy & Security
 exl-id: 4330e034-2483-4a25-9c87-48dbef6fc9de
-source-git-commit: 88bde40aa6dfb96e1d53e4db6ba5547d38dbbb99
+TQID: https://experienceleague.adobe.com/lEllQscRLJ1I-5mu3r2TyoxYfaOb2nLHVQzG9YnL0ig
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d095671a-1355-40aa-8b5f-06c33c68080bid: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '771'
-ht-degree: 43%
+source-wordcount: 799
+ht-degree: 44%
 
 ---
 
@@ -25,7 +30,7 @@ O endereço IP de um visitante do seu site é transmitido para um Centro de proc
 
 ## Substituição do último octeto de endereços IP
 
-O Adobe desenvolveu uma configuração de &quot;privacidade por design&quot; que os usuários podem habilitar para o Adobe [!DNL Target]. Quando habilitado, o Adobe [!DNL Target] ofusca imediatamente o último octeto (a última parte) do endereço IP no momento em que o endereço IP é coletado. Essa anonimização é realizada antes de qualquer processamento do endereço IP, inclusive antes de uma consulta geográfica opcional do endereço IP.
+A Adobe desenvolveu uma configuração de &quot;privacidade por design&quot; que os usuários podem habilitar para o Adobe [!DNL Target]. Quando habilitado, o Adobe [!DNL Target] ofusca imediatamente o último octeto (a última parte) do endereço IP no momento em que ele é coletado. Essa anonimização é realizada antes de qualquer processamento do endereço IP, inclusive antes de uma consulta geográfica opcional do endereço IP.
 
 Quando esse recurso é ativado, o endereço IP fica anônimo de forma que não seja mais identificado como informações pessoais. Como resultado, o [!DNL Target] pode ser usado em conformidade com as leis de privacidade de dados em países que não permitem a coleta de informações pessoais. A obtenção de informações do nível da cidade provavelmente será muito afeta pela ofuscação do endereço IP. A obtenção de informações do nível da região e do país será pouco afetada.
 
@@ -45,7 +50,7 @@ Ao usar o [!DNL Platform Web SDK] (versão 23.4 ou posterior), a configuração 
 
 Para obter mais informações, consulte [!UICONTROL IP Obfuscation] em [Configurar uma sequência de dados](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=pt-BR){target=_blank} no *[!DNL Adobe Experience Platfrom]Guia de Sequências de Dados*.
 
-## GeoSegmentation 
+## GeoSegmentation
 
 Se você habilitar a substituição do último octeto do endereço IP, os valores restantes do endereço IP poderão ser analisados usando os relatórios em [!DNL Target]. Se o último octeto do endereço IP não tiver sido ofuscado, o endereço IP completo poderá ser analisado em [!DNL Target]. Você pode usar o recurso GeoSegmentation para mapear o local do visitante por área geográfica. Os dados de GeoSegmentation são granulares somente no nível da cidade ou no nível de código postal, e não no nível individual.
 
@@ -74,6 +79,6 @@ Consulte [Regulamentos de proteção de dados e privacidade](/help/dev/before-im
 
 ## Coleta de dados de uso de recursos
 
-Os dados de uso de recursos individuais são coletados para fins de Adobe interno para identificar se os recursos do [!DNL Target] estão funcionando como pretendido ou para identificar os recursos que estão sendo subutilizados. Várias medidas de latência são coletadas para ajudar a resolver problemas de desempenho. Os dados pessoais não são coletados.
+Os dados de uso de recursos individuais são coletados para fins internos do Adobe para identificar se os recursos do [!DNL Target] estão funcionando como pretendido ou para identificar os recursos que estão sendo subutilizados. Várias medidas de latência são coletadas para ajudar a resolver problemas de desempenho. Os dados pessoais não são coletados.
 
 Você pode recusar o relatório de dados de uso em nossos SDKs definindo `telemetryEnabled` como falso nas opções de inicialização do cliente. Para mais informações, consulte [telemetryEnabled em targetGlobalSettings](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#telemetryenabled).

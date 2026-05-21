@@ -4,9 +4,12 @@ description: Como faço para usar [!UICONTROL Adobe Target Delivery API] chamada
 keywords: api de entrega
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/NMNCubmUyiVOWfq2MnkONSrQCZRqNEh0VJTfFBGptOk
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '448'
+source-wordcount: 448
 ht-degree: 0%
 
 ---
@@ -83,7 +86,7 @@ No exemplo de chamada de entrega única acima, a experiência é recuperada para
 }
 ```
 
-Na resposta, observe que o campo `content` contém o HTML que descreve a experiência a ser mostrada ao usuário para a Web que corresponde à mbox SummerOffer.
+Na resposta, observe que o campo `content` contém a HTML que descreve a experiência a ser mostrada ao usuário para a Web que corresponde à mbox SummerOffer.
 
 ### Executar carregamento de página
 
@@ -252,4 +255,4 @@ No exemplo de chamada de entrega em lote acima, as experiências são recuperada
 }
 ```
 
-Na resposta acima, você pode ver que, no campo `content` de cada mbox, a representação HTML da experiência para mostrar ao usuário para cada mbox é recuperável.
+Na resposta acima, você pode ver que, no campo `content` de cada mbox, a representação da HTML da experiência para mostrar ao usuário para cada mbox é recuperável.

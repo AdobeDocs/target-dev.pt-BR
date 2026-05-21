@@ -1,23 +1,29 @@
 ---
 keywords: adobe.target.triggerView, triggerView, triggerview, acionar exibição, at.js, funções, função, viewName, viewname, nome da exibição, adobe.target.triggerView1
-description: Use a função adobe.target.triggerView() da biblioteca de JavaScript do  [!DNL Adobe Target] at.js para usar em Aplicativos de página única (SPA). (at.js 2.x)
+description: Use a função adobe.target.triggerView() da biblioteca de JavaScript do  [!DNL Adobe Target] at.js para usar em Aplicativos de página única (SPAs). (at.js 2.x)
 title: Como usar a função adobe.target.triggerView()?
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
-source-git-commit: fe4e607173c760f782035a10f52936d96e9db300
+TQID: https://experienceleague.adobe.com/pBC1GRKG0mxeaZ1hfaByKv2tu-XScrSJfm7lUw-3yKw
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 21%
+source-wordcount: 423
+ht-degree: 20%
 
 ---
 
 # adobe.target.triggerView (viewName, options) - at.js 2.x
 
-Essa função pode ser chamada sempre que uma nova página é carregada ou quando um componente em uma página é renderizado novamente. `adobe.target.triggerView()` deve ser implementado para aplicativos de página única (SPA) para usar o [!UICONTROL Visual Experience Composer] (VEC) para criar atividades do [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting] (XT). Se `[!UICONTROL adobe.target.triggerView()]` não estiver implementado no site, o VEC não poderá ser usado para SPA. Para obter mais informações, consulte [Implementação do aplicativo de página única](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Essa função pode ser chamada sempre que uma nova página é carregada ou quando um componente em uma página é renderizado novamente. `adobe.target.triggerView()` deve ser implementado para aplicativos de página única (SPAs) para usar o [!UICONTROL Visual Experience Composer] (VEC) para criar atividades do [!UICONTROL A/B Test] e do [!UICONTROL Experience Targeting] (XT). Se `[!UICONTROL adobe.target.triggerView()]` não estiver implementado no site, o VEC não poderá ser usado para SPAs. Para obter mais informações, consulte [Implementação do aplicativo de página única](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 >[!NOTE]
 >
->Essa função foi introduzida com o at.js 2.*x*. Essa função não está disponível para a at.js versão 1.*x*.
+>Esta função foi introduzida com a at.js 2.*x*. Esta função não está disponível para a at.js versão 1.*x*.
 
 | Parâmetro | Tipo | Obrigatório? | Descrição |
 | --- | --- | --- | --- |
@@ -72,7 +78,7 @@ adobe.target.getOffers({
 
 ## Exemplo: Melhor compatibilidade de `triggerView()` com [!UICONTROL Adobe Visual Editing Helper extension]
 
-Considere o seguinte ao usar a [extensão Auxiliar de Edição Visual do Adobe](https://experienceleague.adobe.com/pt-br/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}:
+Considere o seguinte ao usar a [extensão Auxiliar de edição visual do Adobe](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}:
 
 Devido às novas políticas de Manifesto V3 do [!DNL Googl]e para extensões do [!DNL Chrome], o [!UICONTROL Visual Editing Helper extension] deve aguardar o evento `DOMContentLoaded` antes de carregar as bibliotecas do [!DNL Target] no VEC. Esse atraso pode fazer com que as páginas da Web acionem a chamada `triggerView()` antes que as bibliotecas de criação estejam prontas, resultando no preenchimento da exibição ao carregar.
 

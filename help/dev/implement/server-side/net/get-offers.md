@@ -1,11 +1,16 @@
 ---
-title: Usar getOffers() em [!DNL Adobe Target] ao usar o SDK do .NET
+title: Usar getOffers() em [!DNL Adobe Target] ao usar o .NET SDK
 description: Saiba como usar getOffers() para executar uma decisão e recuperar uma experiência do  [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 4d1d1cbd-c7e5-4146-9fea-08e01923874d
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/T-oUyDgCJZ8hqQZgCb3-Z-d9WeMaffwq8krMHhGvYlI
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '569'
+source-wordcount: 572
 ht-degree: 13%
 
 ---
@@ -59,7 +64,7 @@ O objeto `TargetDeliveryRequest.Builder` tem a seguinte estrutura:
 | id | VisitorId | Não | Objeto que contém os identificadores do visitante. P. ex. tntId, thirdParyId, mcId, customerIds. |
 | experienceCloud | Experience Cloud | Não | Especifica integrações com o Audience Manager e o Analytics. Preenchido automaticamente usando cookies, se não fornecido. |
 | tntId | String | Não | Identificador principal em [!DNL Target] de um usuário. Obtido de targetCookies. Gerado automaticamente se não fornecido. |
-| mcId | String | Não | Usado para mesclar e compartilhar dados entre diferentes soluções de Adobe (ECID). Obtido de targetCookies. Gerado automaticamente se não fornecido. |
+| mcId | String | Não | Usado para unir e compartilhar dados entre diferentes soluções da Adobe (ECID). Obtido de targetCookies. Gerado automaticamente se não fornecido. |
 | trackingServer | String | Não | O Servidor do Adobe Analytics para que [!DNL Adobe Target] e [!DNL Adobe Analytics] unam corretamente os dados. |
 | trackingServerSecure | String | Não | O [!UICONTROL Adobe Analytics Secure Server] para que [!DNL Adobe Target] e [!DNL Adobe Analytics] unam corretamente os dados. |
 | decisioningMethod | DecisioningMethod | Não | Pode ser usado para definir explicitamente o método de decisão ON_DEVICE ou HYBRID para a decisão no dispositivo |
@@ -88,7 +93,7 @@ O objeto `TargetCookie` usado para salvar dados para a sessão de usuário tem a
 | Valor | string | Valor do cookie |
 | MaxAge | int | A opção `MaxAge` é uma conveniência para definir Expira em relação ao tempo atual em segundos |
 
-Você não precisa se preocupar em expirar os cookies. [!DNL Target] manipula `MaxAge` dentro do SDK.
+Você não precisa se preocupar em expirar os cookies. [!DNL Target] manipula `MaxAge` dentro da SDK.
 
 ## Exemplo
 

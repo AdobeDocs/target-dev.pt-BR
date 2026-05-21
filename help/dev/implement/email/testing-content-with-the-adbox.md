@@ -4,10 +4,16 @@ description: Use uma AdBox para fornecer imagens em uma implementação externa 
 title: Como criar uma AdBox para uma imagem?
 feature: Implement Email
 exl-id: ad1eb6c4-7a16-4054-ae76-57971261e931
-source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
+TQID: https://experienceleague.adobe.com/OPo9T2Eb7afF8Ir8PAlY62OX83zhxtruUMKWCfUthxY
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 71%
+source-wordcount: 335
+ht-degree: 68%
 
 ---
 
@@ -37,9 +43,9 @@ Para obter ajuda para selecionar a configuração correta, consulte [Implementa�
 
    * Onde `http%3A%2F%2Fwww%2Eyourcompany%2Ecom%2Fimg%2Flogo%2Egif` é o conteúdo padrão da mbox. Isso deve ser uma imagem.
 
-     Isso deve ser codificado no URL e uma referência absoluta. Você pode usar a [Referência de Codificação de URL do HTML](https://www.w3schools.com/tags/ref_urlencode.asp) para codificar rapidamente suas URLs.
+     Isso deve ser codificado no URL e uma referência absoluta. Você pode usar a [Referência de codificação de URL do HTML](https://www.w3schools.com/tags/ref_urlencode.asp) para codificar rapidamente suas URLs.
 
-1. Crie [Ofertas de redirecionamento](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=pt-BR) para cada imagem alternativa.
+1. Crie [Ofertas de redirecionamento](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html) para cada imagem alternativa.
 
    >[!NOTE]
    >
