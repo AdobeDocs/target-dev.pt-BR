@@ -50,7 +50,7 @@ Para obter ajuda para selecionar a configuração correta, consulte [Implementa�
 
      Isso deve ser codificado no URL e uma referência absoluta. Você pode usar a [Referência de codificação de URL do HTML](https://www.w3schools.com/tags/ref_urlencode.asp) para codificar rapidamente suas URLs.
 
-1. Crie [Ofertas de redirecionamento](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html) para cada imagem alternativa.
+1. Crie [Ofertas de redirecionamento](https://experienceleague.adobe.com/docs/target/using/experiences/offers/offer-redirect.html?lang=pt-BR) para cada imagem alternativa.
 
    >[!NOTE]
    >
