@@ -621,7 +621,7 @@ alloy("sendEvent", {
 });
 ```
 
-[Saiba mais](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
+[Saiba mais](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/personalization/rendering-personalization-content#manual)
 
 **Exemplo 3 - Rastrear um evento disparado após executar uma ação**
 
@@ -1278,5 +1278,5 @@ Você tem vários recursos de depuração ao usar o [!DNL Platform Web SDK]:
 * Usando o [Assurance](https://experienceleague.adobe.com/pt-br/docs/experience-platform/assurance/home)
 * [Depuração do Web SDK ativada](https://experienceleague.adobe.com/pt-br/docs/experience-platform/assurance/home)
 * Usar [ganchos de monitoramento do Web SDK](https://github.com/adobe/alloy/wiki/Monitoring-Hooks)
-* Usar [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/en/docs/experience-platform/debugger/home)
+* Usar [Adobe Experience Platform Debugger](https://experienceleague.adobe.com/pt-br/docs/experience-platform/debugger/home)
 * Rastreamento de destino
