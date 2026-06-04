@@ -14,7 +14,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: f6df325aff4a2eb9321b86778d102737493e63bb
 workflow-type: tm+mt
 source-wordcount: 397
 ht-degree: 31%
@@ -56,7 +56,7 @@ Os dados são enviados para [!DNL Target] em tempo real e podem ser usados na me
 
   Além dos caracteres mencionados no site do IETF, [!DNL Target] permite os seguintes caracteres nas cadeias de caracteres de consulta:
 
-  ```< > # % " { } | \ ^ [ ] ` ``` {line-numbers="true"}
+  `< > # % " { } | \ ^ [ ] `
 
   O restante deve ser codificado em url. O padrão especifica o seguinte formato ( [https://www.ietf.org/rfc/rfc1738.txt](https://www.ietf.org/rfc/rfc1738.txt) ), conforme ilustrado abaixo:
 
