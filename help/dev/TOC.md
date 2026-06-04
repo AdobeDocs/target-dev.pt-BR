@@ -200,7 +200,7 @@ ht-degree: 41%
       + [Entrega única ou em lote](/help/dev/before-implement/delivery-api-overview/single-or-batch.md)
       + [Pré-busca](/help/dev/before-implement/delivery-api-overview/prefetch.md)
       + [Notificações](/help/dev/before-implement/delivery-api-overview/notifications.md)
-      + [Integração com o Experience Cloud](before-implement/delivery-api-overview/integration.md)
+      + [Integração com a Experience Cloud](before-implement/delivery-api-overview/integration.md)
       + [Considerações e limitações conhecidas](/help/dev/before-implement/delivery-api-overview/known-limitations.md)
       + [Client Hints](/help/dev/before-implement/delivery-api-overview/client-hints.md)
       + [API de entrega](/help/dev/implement/delivery-api/delivery-api.md)

@@ -7,15 +7,12 @@ thumbnail: null
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
 TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 0fe52344f654f22d1ff7aaace0ba5a99e92d036d
 workflow-type: tm+mt
-source-wordcount: 901
+source-wordcount: 930
 ht-degree: 0%
 
 ---
@@ -28,7 +25,7 @@ Agora você pode usar as [APIs do Recommendations](https://developer.adobe.com/t
 
 >[!NOTE]
 >
->Envie a solicitação **[!UICONTROL IMS: JWT Generate + Auth via User Token]** sempre que precisar atualizar o token de acesso para autenticação, pois ela expira após 24 horas. Consulte [Configurar a autenticação da API do Adobe](../configure-authentication.md) para obter instruções.
+>Envie a solicitação **[!UICONTROL IMS: JWT Generate + Auth via User Token]** sempre que precisar atualizar seu token de acesso para autenticação, pois ele expira após 24 horas. Consulte [Configurar a autenticação da API do Adobe](../configure-authentication.md) para obter instruções.
 
 ![JWT3ff](assets/configure-io-target-jwt3ff.png)
 
@@ -44,7 +41,7 @@ POST https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities
 
 Por exemplo, Salvar Entidades pode ser usado para atualizar itens sempre que certos limites forem atingidos - como limites para estoque ou preço - para sinalizar esses itens e evitar que eles sejam recomendados.
 
-1. Navegue até **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL CONTROL Environments]** para obter a ID de Ambiente de Destino na qual você deseja adicionar ou atualizar um item.
+1. Navegue até **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL CONTROL Ambientes]** para obter a ID de Ambiente de Destino na qual você deseja adicionar ou atualizar um item.
 
    ![SaveEntities1](assets/SaveEntities01.png)
 
@@ -79,7 +76,7 @@ Por exemplo, Salvar Entidades pode ser usado para atualizar itens sempre que cer
        }
    ```
 
-1. Clique em **[!UICONTROL Send]**. Você deve receber a seguinte resposta.
+1. Clique em **[!UICONTROL Enviar]**. Você deve receber a seguinte resposta.
 
    ![SaveEntities5.png](assets/SaveEntities05.png)
 
@@ -123,11 +120,11 @@ Por exemplo, Salvar Entidades pode ser usado para atualizar itens sempre que cer
        }
    ```
 
-1. Agora é a sua vez! Use a API **[!UICONTROL Save Entities]** para adicionar os seguintes itens ao catálogo. Use a amostra JSON acima como ponto de partida. (Será necessário estender o JSON para incluir entidades adicionais.)
+1. Agora é a sua vez! Use a API **[!UICONTROL Salvar Entidades]** para adicionar os seguintes itens ao catálogo. Use a amostra JSON acima como ponto de partida. (Será necessário estender o JSON para incluir entidades adicionais.)
 
    ![SaveEntities6.png](assets/SaveEntities06.png)
 
-Parece que esses dois últimos itens não pertencem. Vamos inspecioná-los usando a API **[!UICONTROL Get Entity]** e, se necessário, excluí-los usando a API **[!UICONTROL Delete Entities]**.
+Parece que esses dois últimos itens não pertencem. Vamos inspecioná-los usando a API **[!UICONTROL Obter Entidade]** e, se necessário, excluí-los usando a API **[!UICONTROL Excluir Entidades]**.
 
 ## Obter detalhes do item com a API Obter entidade
 
@@ -156,7 +153,7 @@ Se você receber um erro informando que a entidade não foi encontrada, como mos
 
    >[!NOTE]
    >
-   >Se nenhum ambiente for especificado explicitamente, Obter Entidade tentará obter a entidade somente do seu [ambiente padrão](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=pt-BR). Se quiser extrair de qualquer ambiente que não seja o ambiente padrão, especifique a ID do ambiente.
+   >Se nenhum ambiente for especificado explicitamente, Obter Entidade tentará obter a entidade somente do seu [ambiente padrão](https://experienceleague.adobe.com/docs/target/using/administer/environments.html). Se quiser extrair de qualquer ambiente que não seja o ambiente padrão, especifique a ID do ambiente.
 
 1. Se necessário, adicione o parâmetro `environmentId` e reenvie a solicitação.
 
@@ -166,7 +163,7 @@ Se você receber um erro informando que a entidade não foi encontrada, como mos
 
    ![GetEntity5](assets/GetEntity5.png)
 
-Suponha que você decida que essas entidades precisam ser removidas do catálogo. Vamos usar a API **[!UICONTROL Delete Entities]**.
+Suponha que você decida que essas entidades precisam ser removidas do catálogo. Vamos usar a API **[!UICONTROL Excluir Entidades]**.
 
 ## Exclusão de itens com a API Excluir entidades
 
@@ -180,7 +177,7 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 >
 >A API Excluir entidades exclui entidades referenciadas pelas IDs especificadas. Se nenhuma ID de entidade for fornecida, todas as entidades em um determinado ambiente serão excluídas. Se nenhuma ID de ambiente for fornecida, as entidades serão excluídas de todos os ambientes. Use isso com cuidado!
 
-1. Navegue até **[!UICONTROL Target]** > **[!UICONTROL Setup]** > **[!UICONTROL Hosts]** > **[!UICONTROL Environments]** para obter a ID de Ambiente de Destino da qual deseja excluir itens.
+1. Navegue até **[!UICONTROL Destino]** > **[!UICONTROL Configuração]** > **[!UICONTROL Hosts]** > **[!UICONTROL Ambientes]** para obter a ID de Ambiente de Destino da qual deseja excluir itens.
 
    ![ExcluirEntidades1](assets/SaveEntities01.png)
 
@@ -200,7 +197,7 @@ DELETE https://mc.adobe.io/{{TENANT_ID}}/target/recs/entities?ids=[comma-delimit
 
    ![ExcluirEntidades5](assets/DeleteEntities5.png)
 
-1. Verifique os resultados usando **[!UICONTROL Get Entity]**, que agora deve indicar que as entidades excluídas não foram encontradas.
+1. Verifique os resultados usando **[!UICONTROL Obter Entidade]**, que agora deve indicar que as entidades excluídas não foram encontradas.
 
    ![ExcluirEntidades6](assets/DeleteEntities6.png)
 

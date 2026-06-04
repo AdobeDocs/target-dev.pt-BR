@@ -5,16 +5,12 @@ keywords: api de entrega
 exl-id: 5b8c28aa-caad-44a9-880a-3c5f844e47b2
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/ciTxaPn8odyuyHzrnqhPWzdmpcU2bknOATGCt-ZtAZw
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: f7c7de77-382f-4f48-8b36-61a170f06d3d
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 789
+source-wordcount: 797
 ht-degree: 9%
 
 ---
@@ -30,7 +26,7 @@ O Target usa três identificadores:
 | `tntId` | O `tntId` é o identificador principal em [!DNL Target] de um usuário. Você pode fornecer essa ID ou [!DNL Target] irá gerá-la automaticamente se a solicitação não contiver uma. |
 | `thirdPartyId` | O `thirdPartyId` é o identificador de sua empresa para o usuário que você pode enviar com cada chamada. Quando um usuário faz logon no site de uma empresa, a empresa normalmente cria uma ID vinculada à conta, ao cartão de fidelidade, ao número de associado ou a outros identificadores aplicáveis do visitante dessa empresa. |
 | `marketingCloudVisitorId` | O `marketingCloudVisitorId` é usado para mesclar e compartilhar dados entre diferentes soluções da Adobe. O `marketingCloudVisitorId` é necessário para integrações com o Adobe Analytics e o Adobe Audience Manager. |
-| `customerIds` | Juntamente com a ID de visitante da Experience Cloud, podem ser utilizadas [IDs adicionais do cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=pt-BR) e um status autenticado para cada visitante. |
+| `customerIds` | Juntamente com a ID de visitante da Experience Cloud, podem ser utilizadas [IDs adicionais do cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) e um status autenticado para cada visitante. |
 
 ## [!DNL Target] ID
 
@@ -81,11 +77,11 @@ O exemplo de chamada acima demonstra que um `tntId` não precisa ser passado. Ne
 }
 ```
 
-O `tntId` gerado é `10abf6304b2714215b1fd39a870f01afc.28_20`. Observe que este `tntId` precisa ser usado quando você chamar [!UICONTROL Adobe Target Delivery API] para o mesmo usuário em várias sessões.
+O `tntId` gerado é `10abf6304b2714215b1fd39a870f01afc.28_20`. Observe que este `tntId` precisa ser usado ao chamar a [!UICONTROL API de Entrega do Adobe Target] para o mesmo usuário em todas as sessões.
 
 ## ID de visitante da Marketing Cloud
 
-O `marketingCloudVisitorId` é uma ID persistente e universal que identifica os visitantes em todas as soluções da Experience Cloud. Quando sua organização implementa o serviço de ID, essa ID permite identificar o mesmo visitante do site e seus dados em diferentes soluções da Experience Cloud, como Adobe Target, Adobe Analytics ou Adobe Audience Manager. Observe que o `marketingCloudVisitorId` é necessário ao aproveitar e integrar com o Analytics e o Audience Manager.
+O `marketingCloudVisitorId` é uma ID persistente e universal que identifica os visitantes em todas as soluções na Experience Cloud. Quando sua organização implementa o serviço de ID, essa ID permite identificar o mesmo visitante do site e seus dados em diferentes soluções da Experience Cloud, como Adobe Target, Adobe Analytics ou Adobe Audience Manager. Observe que o `marketingCloudVisitorId` é necessário ao aproveitar e integrar com o Analytics e o Audience Manager.
 
 ```
 curl -X POST \
@@ -124,7 +120,7 @@ O exemplo de chamada acima demonstra como um `marketingCloudVisitorId` que foi r
 
 ## ID de terceiros
 
-Se sua organização usar uma ID para identificar o visitante, você poderá usar o `thirdPartyID` para fornecer conteúdo. No entanto, você deve fornecer o `thirdPartyID` para cada chamada do [!UICONTROL Adobe Target Delivery API] feita.
+Se sua organização usar uma ID para identificar o visitante, você poderá usar o `thirdPartyID` para fornecer conteúdo. No entanto, você deve fornecer o `thirdPartyID` para cada chamada da [!UICONTROL API de Entrega do Adobe Target] que você fizer.
 
 ```
 curl -X POST \
@@ -177,7 +173,7 @@ O exemplo de chamada acima mostra um `thirdPartyId`, que é uma ID persistente q
 
 ## Customer ID
 
-[As IDs do cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=pt-BR) podem ser adicionadas e associadas a uma ID de visitante da Experience Cloud. Sempre que enviar `customerIds`, `marketingCloudVisitorId` também deve ser fornecido. Além disso, um status de autenticação pode ser fornecido com cada `customerId` para cada visitante. O seguinte status de autenticação pode ser levado em consideração:
+[As IDs do cliente](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) podem ser adicionadas e associadas a uma ID de visitante da Experience Cloud. Sempre que enviar `customerIds`, `marketingCloudVisitorId` também deve ser fornecido. Além disso, um status de autenticação pode ser fornecido com cada `customerId` para cada visitante. O seguinte status de autenticação pode ser levado em consideração:
 
 | Status de autenticação | Status do usuário |
 | --- | --- |
@@ -232,7 +228,7 @@ O exemplo de chamada acima demonstra como enviar um `customerId` com um `authent
 
 ## Perfil mesclado
 
-Você pode combinar `tntId`, `thirdPartyID` e `marketingCloudVisitorId` na mesma solicitação. Nesse cenário, o Adobe Target manterá o mapeamento de todas essas IDs e o fixará a um visitante. Saiba como os perfis são [mesclados e sincronizados em tempo real](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html?lang=pt-BR) usando identificadores diferentes.
+Você pode combinar `tntId`, `thirdPartyID` e `marketingCloudVisitorId` na mesma solicitação. Nesse cenário, o Adobe Target manterá o mapeamento de todas essas IDs e o fixará a um visitante. Saiba como os perfis são [mesclados e sincronizados em tempo real](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html) usando identificadores diferentes.
 
 ```
 curl -X POST \

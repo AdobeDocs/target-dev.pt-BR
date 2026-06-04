@@ -2,33 +2,34 @@
 title: Use [!DNL Adobe Target] com [!DNL Web SDK] para personalização.
 description: Saiba como renderizar conteúdo personalizado com o [!DNL Experience Platform Web SDK] usando [!DNL Adobe Target].
 feature: AEP Web SDK
-source-git-commit: 1fe6adc25604612ed9fa090f1f68c18b9c0bdf63
+exl-id: 31c00779-20a8-4d18-9ee4-0430e5e9a84c
+source-git-commit: 925a150c06057f5830a1370eee65b5984f81a72d
 workflow-type: tm+mt
-source-wordcount: '1342'
+source-wordcount: '1560'
 ht-degree: 5%
 
 ---
 
 # Usar [!DNL Adobe Target] e [!DNL Web SDK] para personalização
 
-O [!DNL Adobe Experience Platform] [!DNL Web SDK] pode entregar e renderizar experiências personalizadas gerenciadas no [!DNL Adobe Target] para o canal da Web. Você pode usar um editor do WYSIWYG, chamado de [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=pt-BR) (VEC), ou uma interface não visual, o [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=pt-BR), para criar, ativar e entregar suas atividades e experiências de personalização.
+O [!DNL Adobe Experience Platform] [!DNL Web SDK] pode entregar e renderizar experiências personalizadas gerenciadas no [!DNL Adobe Target] para o canal da Web. Você pode usar um editor do WYSIWYG, chamado de [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html) (VEC), ou uma interface não visual, o [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html), para criar, ativar e entregar suas atividades e experiências de personalização.
 
 >[!IMPORTANT]
 >
 >Saiba como migrar sua implementação do [!DNL Target] para o [!DNL Experience Platform Web SDK] com o tutorial [Migrar o Target da at.js 2.x para o Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html?lang=pt-BR).
 >
->Saiba como implementar o [!DNL Target] pela primeira vez com o tutorial [Implementar o Adobe Experience Cloud com Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=pt-BR). Para obter informações específicas do [!DNL Target], consulte a seção de tutorial intitulada [Configurar o Target com o Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=pt-BR).
+>Saiba como implementar o [!DNL Target] pela primeira vez com o tutorial [Implementar a Adobe Experience Cloud com o Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=pt-BR). Para obter informações específicas do [!DNL Target], consulte a seção de tutorial intitulada [Configurar o Target com o Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html).
 
 Os seguintes recursos foram testados e atualmente têm suporte no [!DNL Target]:
 
-* [Testes A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=pt-BR)
-* [Relatórios de impressão e conversão do A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR)
-* [Atividades do Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=pt-BR)
-* [Atividades de Direcionamento de experiência](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=pt-BR)
-* [Testes multivariados (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=pt-BR)
-* [Atividades do Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html?lang=pt-BR)
-* [Relatórios de impressão e conversão do Target nativo](https://experienceleague.adobe.com/docs/target/using/reports/reports.html?lang=pt-BR)
-* [Suporte do VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=pt-BR)
+* [Testes A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html)
+* [Relatórios de impressão e conversão do A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
+* [Atividades do Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [Atividades de direcionamento de experiência](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html)
+* [Testes multivariados (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html)
+* [Atividades do Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations.html)
+* [Relatórios de impressão e conversão do Target nativo](https://experienceleague.adobe.com/docs/target/using/reports/reports.html)
+* [Suporte do VEC](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html)
 
 ## Diagrama do sistema [!DNL Web SDK]
 
@@ -41,37 +42,37 @@ O diagrama a seguir ajuda você a entender o fluxo de trabalho da decisão de bo
 | 1 | O dispositivo carrega o [!DNL Web SDK]. O [!DNL Web SDK] envia uma solicitação à Edge Network com dados XDM, a ID de ambiente dos fluxos de dados, parâmetros transmitidos e a ID do cliente (opcional). A página (ou containers) é pré-oculta. |
 | 2 | O Edge Network envia a solicitação aos serviços de borda para enriquecê-la com a ID do visitante, o consentimento e outras informações de contexto do visitante, como geolocalização e nomes amigáveis ao dispositivo. |
 | 3 | O Edge Network envia a solicitação de personalização enriquecida para a borda [!DNL Target] com a ID do visitante e os parâmetros de entrada. |
-| 4 | Os scripts de perfil executam e, em seguida, fazem o feed em [!DNL Target] armazenamento de perfil. O armazenamento de perfil busca segmentos do [!UICONTROL Audience Library] (por exemplo, segmentos compartilhados de [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], o [!DNL Adobe Experience Platform]). |
+| 4 | Os scripts de perfil executam e, em seguida, fazem o feed em [!DNL Target] armazenamento de perfil. O armazenamento de perfil busca segmentos da [!UICONTROL Biblioteca de público-alvo] (por exemplo, segmentos compartilhados de [!DNL Adobe Analytics], [!DNL Adobe Audience Manager], [!DNL Adobe Experience Platform]). |
 | 5 | Com base nos parâmetros de solicitação de URL e dados de perfil, [!DNL Target] determina quais atividades e experiências serão exibidas para o visitante na exibição de página atual e para exibições futuras buscadas previamente. [!DNL Target] então envia isso de volta para a Edge Network. |
-| 6 | a. O Edge Network envia a resposta de personalização de volta para a página, incluindo, opcionalmente, valores de perfil para personalização adicional. O conteúdo personalizado na página atual é revelado o mais rápido possível sem cintilação do conteúdo padrão.<br>b. O conteúdo personalizado para exibições que são mostradas como resultado das ações do usuário em um Aplicativo de página única (SPA) é armazenado em cache para que possa ser aplicado instantaneamente, sem uma chamada de servidor adicional, quando as exibições forem acionadas. <br>c O Edge Network envia a ID do visitante e outros valores em cookies, como consentimento, ID da sessão, identidade, verificação de cookie e personalização. |
+| 6 | a. O Edge Network envia a resposta de personalização de volta para a página, incluindo, opcionalmente, valores de perfil para personalização adicional. O conteúdo personalizado na página atual é revelado o mais rápido possível sem cintilação do conteúdo padrão.<br>b. O conteúdo personalizado para exibições que são mostradas como resultado das ações do usuário em um Aplicativo de página única (SPA) é armazenado em cache para que possa ser aplicado instantaneamente, sem uma chamada de servidor adicional, quando as exibições forem acionadas. <br>c. O Edge Network envia a ID do visitante e outros valores em cookies, como consentimento, ID da sessão, identidade, verificação de cookie e personalização. |
 | 7 | O Web SDK envia a notificação do dispositivo para a Edge Network. |
-| 8 | O Edge Network encaminha [!UICONTROL Analytics for Target] (A4T) detalhes (metadados de atividade, experiência e conversão) para a borda [!DNL Analytics]. |
+| 8 | O Edge Network encaminha os detalhes do [!UICONTROL Analytics for Target] (A4T) (metadados de atividade, experiência e conversão) para a borda do [!DNL Analytics]. |
 
 ## Habilitando [!DNL Adobe Target]
 
 Para habilitar [!DNL Target], faça o seguinte:
 
-1. Habilite [!DNL Target] na sua [sequência de dados](https://experienceleague.adobe.com/pt-br/docs/experience-platform/datastreams/overview) com o código de cliente apropriado.
+1. Habilite [!DNL Target] na sua [sequência de dados](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview) com o código de cliente apropriado.
 1. Adicione a opção `renderDecisions` aos seus eventos.
 
 Em seguida, opcionalmente, você também pode adicionar as seguintes opções:
 
 * **`decisionScopes`**: recupere atividades específicas (úteis para atividades criadas com o compositor baseado em formulário) adicionando esta opção aos seus eventos.
-* **[Ocultar previamente o trecho](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/personalization/manage-flicker)**: oculta apenas determinadas partes da página.
+* **[Ocultar previamente o trecho](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/manage-flicker)**: oculta apenas determinadas partes da página.
 
-## Uso do VEC [!UICONTROL Adobe Target]
+## Usar o VEC [!UICONTROL Adobe Target]
 
-Para usar o VEC com uma implementação do [!DNL Web SDK], instale e ative o [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou a Extensão auxiliar do VEC do [Chrome](https://experienceleague.adobe.com/pt-br/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
+Para usar o VEC com uma implementação do [!DNL Web SDK], instale e ative o [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou a Extensão auxiliar do VEC do [Chrome](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
 
-Para obter mais informações, consulte a [extensão auxiliar do Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=pt-BR) no *guia do Adobe Target*.
+Para obter mais informações, consulte a [extensão auxiliar do Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) no *guia do Adobe Target*.
 
 ## Renderização de conteúdo personalizado
 
-Consulte [Renderização do conteúdo de personalização](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) para obter mais informações.
+Consulte [Renderização do conteúdo de personalização](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/rendering-personalization-content) para obter mais informações.
 
 ## Públicos-alvo no XDM
 
-Ao definir públicos para suas atividades do [!DNL Target] que são entregues por meio do [!DNL Web SDK], o [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=pt-BR) deve ser definido e usado. Depois de definir esquemas XDM, classes e grupos de campos de esquema, você pode criar uma regra de público-alvo [!DNL Target] definida pelos dados XDM para direcionamento. No [!DNL Target], os dados XDM são exibidos no [!UICONTROL Audience Builder] como um parâmetro personalizado. O XDM é serializado usando a notação de pontos (por exemplo, `web.webPageDetails.name`).
+Ao definir públicos para suas atividades do [!DNL Target] que são entregues por meio do [!DNL Web SDK], o [XDM](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html) deve ser definido e usado. Depois de definir esquemas XDM, classes e grupos de campos de esquema, você pode criar uma regra de público-alvo [!DNL Target] definida pelos dados XDM para direcionamento. No [!DNL Target], os dados XDM são exibidos no [!UICONTROL Construtor de público-alvo] como um parâmetro personalizado. O XDM é serializado usando a notação de pontos (por exemplo, `web.webPageDetails.name`).
 
 Se você tiver [!DNL Target] atividades com públicos-alvo predefinidos que usam parâmetros personalizados ou um perfil de usuário, elas não serão entregues corretamente por meio da SDK. Em vez de usar parâmetros personalizados ou o perfil do usuário, você deve usar o XDM. No entanto, há campos de direcionamento de público prontos para uso com suporte pelo [!DNL Web SDK] que não exigem o XDM. Estes campos estão disponíveis na interface do usuário do [!DNL Target] e não exigem XDM:
 
@@ -84,7 +85,7 @@ Se você tiver [!DNL Target] atividades com públicos-alvo predefinidos que usam
 * Fontes de tráfego
 * Intervalo de tempo
 
-Para obter mais informações, consulte [Categorias para públicos-alvo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html?lang=pt-BR) no *guia do Adobe Target*.
+Para obter mais informações, consulte [Categorias para públicos-alvo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/target-rules.html) no *guia do Adobe Target*.
 
 ### Tokens de resposta
 
@@ -287,7 +288,7 @@ alloy("sendEvent", {
 
 ## Depuração
 
-mboxTrace e mboxDebug foram descontinuados. Em vez disso, use um método de [depuração do Web SDK](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/use-cases/debugging).
+mboxTrace e mboxDebug foram descontinuados. Em vez disso, use um método de [depuração do Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/use-cases/debugging).
 
 ## Terminologia
 

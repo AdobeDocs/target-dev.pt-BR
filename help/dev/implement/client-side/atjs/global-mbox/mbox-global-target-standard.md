@@ -5,22 +5,15 @@ title: Posso usar uma mbox global de uma implementação existente?
 feature: at.js
 exl-id: fe608b5e-ff66-4ba2-a622-d4f7307a9ca9
 TQID: https://experienceleague.adobe.com/BCubNDwB8gxZ9bpuCNhxcnFnjB1xQK8ZRkLveinPj4w
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 285
-ht-degree: 20%
+source-wordcount: 304
+ht-degree: 19%
 
 ---
 
@@ -34,15 +27,15 @@ Por padrão, [!DNL Target] cria uma mbox global chamada target-global-mbox, que 
 
 Para usar sua mbox global existente no [!DNL Target] e em sua implementação existente, você deve definir alguns parâmetros.
 
-1. Vá para [!DNL Target] e clique em **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**.
+1. Vá para [!DNL Target] e clique em **[!UICONTROL Administração]** > **[!UICONTROL Implementação]**.
 
-   Por padrão, **[!UICONTROL Page load enabled (Auto-create global mbox]** está habilitado, e a mbox global personalizada é chamada `target-global-mbox`.
+   Por padrão, **[!UICONTROL Carregamento de página habilitado (a mbox global de criação automática]** está habilitada, e a mbox global personalizada é chamada `target-global-mbox`.
 
-1. Se quiser usar uma mbox existente, desabilite **[!UICONTROL Page load enabled (Auto-create global mbox]** e especifique o nome de uma mbox global criada anteriormente no campo **[!UICONTROL Global Mbox]**.
+1. Se quiser usar uma mbox existente, desative a **[!UICONTROL Mbox global]** para carregamento de página (Criação automática de mbox global) e especifique o nome da mbox global criada anteriormente no campo **[!UICONTROL Mbox global]**.
 
    A lista suspensa Mbox global lista todas as mboxes na sua conta. Se você quiser usar uma mbox que ainda não existe, crie a mbox.
 
-1. Clique em **[!UICONTROL Save]**.
+1. Clique em **[!UICONTROL Salvar]**.
 
    As configurações da sua conta são atualizadas.
 

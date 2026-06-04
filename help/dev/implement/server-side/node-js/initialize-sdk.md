@@ -4,18 +4,13 @@ description: Saiba como usar o método de criação para inicializar o SDK Node.
 feature: APIs/SDKs
 exl-id: 71516e44-508a-4d8d-9f2b-7c54243e9c60
 TQID: https://experienceleague.adobe.com/uawle0-l5bcv-FuXMLkPc8kIf8DvbkRqAYelr-ehNLk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 321
+source-wordcount: 332
 ht-degree: 18%
 
 ---
@@ -24,7 +19,7 @@ ht-degree: 18%
 
 ## Descrição
 
-Use o método `create` para inicializar o SDK Node.js e instanciar o cliente [!UICONTROL Target] para fazer chamadas para [!DNL Adobe Target] de experimentos e experiências personalizadas.
+Use o método `create` para inicializar o SDK Node.js e instanciar o cliente [!UICONTROL Target] para fazer chamadas para [!DNL Adobe Target] de experiências e experiências personalizadas.
 
 ## Método
 
@@ -40,9 +35,9 @@ TargetClient.create(options: Object): TargetClient
 
 | Nome | Tipo | Obrigatório | Padrão | Descrição |
 | --- | --- | --- | --- | --- |
-| cliente | String | Sim | None | [!UICONTROL Adobe Target Client ID] |
-| organizationId | String | Sim | None | [!UICONTROL Experience Cloud Organization ID] |
-| ambiente | String | Não | produção | Nome do ambiente de destino. Na interface do usuário do [!DNL Target], [!UICONTROL Administration] > [!UICONTROL Environments]. |
+| cliente | String | Sim | None | [!UICONTROL ID do Adobe Target Client] |
+| organizationId | String | Sim | None | [!UICONTROL ID da organização da Experience Cloud] |
+| ambiente | String | Não | produção | Nome do ambiente de destino. Na interface do usuário do [!DNL Target], [!UICONTROL Administração] > [!UICONTROL Ambientes]. |
 | timeout | Número | Não | 3000 | Tempo limite em milissegundos |
 | serverDomain | String | Não | `*client*.tt.omtrdc.net` | Substitui o nome de host padrão |
 | seguro | Booleano | Não | true | Não definido para impor o esquema HTTP |

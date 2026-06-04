@@ -5,26 +5,14 @@ title: Posso implementar o [!DNL Target] para Aplicativos de Página Única (SPA
 feature: Implement Server-side
 exl-id: d59d7683-0a63-47a9-bbb5-0fe4a5bb7766
 TQID: https://experienceleague.adobe.com/zFYKCYv740tA3UXvJfJx-eiNst-r0xYlj3RP-LbCcOo
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
-  - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bcc5edb5-84c3-4940-9f84-ed88b6c16274id: c2be0313-b3ae-45e0-b454-d20bf54b23f2id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2848
+source-wordcount: 2851
 ht-degree: 53%
 
 ---
@@ -87,7 +75,7 @@ Agora que cobrimos o que são Exibições do [!DNL Adobe Target], podemos aprove
 
    Primeiro, precisamos instalar o at.js 2.*x*. Essa versão da at.js foi desenvolvida para SPAs. As versões anteriores da at.js não oferecem suporte a [!DNL Adobe Target] Exibições e ao VEC para SPAs.
 
-   Baixe a at.js 2.*x* pela interface do usuário do [!DNL Adobe Target] localizada em **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**. O at.js 2.*x* também pode ser implantado por meio de tags no [!DNL Adobe Experience Platform].
+   Baixe a at.js 2.*x* pela interface do usuário [!DNL Adobe Target] localizada em **[!UICONTROL Administração]** > **[!UICONTROL Implementação]**. O at.js 2.*x* também pode ser implantado por meio de tags no [!DNL Adobe Experience Platform].
 
 1. Implemente a função at.js 2.*x*, `[triggerView()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)` em seus sites.
 
@@ -101,7 +89,7 @@ Agora que cobrimos o que são Exibições do [!DNL Adobe Target], podemos aprove
 
    | Parâmetro | Tipo | Obrigatório? | Validação | Descrição |
    | --- | --- | --- | --- | --- |
-   | viewName | String | Sim | &#x200B;1. Não há espaços à direita.<br />2. Não pode ficar em branco.<br />3. O nome da exibição deve ser exclusivo para todas as páginas.<br />4. **Aviso**: O nome da Exibição não deve iniciar ou terminar com &#39;`/`&#39;. Isso ocorre porque o cliente normalmente extrai o nome da Exibição do caminho do URL. Para nós, &quot;inicial&quot; e &quot;`/home`&quot; são diferentes.<br />5. **Aviso**: A mesma exibição não deve ser acionada consecutivamente várias vezes com a opção `{page: true}`. | Transmita qualquer nome como um tipo de sequência de caracteres que você deseja representar sua exibição. Esse nome de exibição é mostrado no painel **[!UICONTROL Modifications]** do VEC para que os profissionais de marketing criem ações e executem suas atividades A/B e XT. |
+   | viewName | String | Sim | &#x200B;1. Não há espaços à direita.<br />2. Não pode ficar em branco.<br />3. O nome da exibição deve ser exclusivo para todas as páginas.<br />4. **Aviso**: O nome da Exibição não deve iniciar ou terminar com &#39;`/`&#39;. Isso ocorre porque o cliente normalmente extrai o nome da Exibição do caminho do URL. Para nós, &quot;inicial&quot; e &quot;`/home`&quot; são diferentes.<br />5. **Aviso**: A mesma exibição não deve ser acionada consecutivamente várias vezes com a opção `{page: true}`. | Transmita qualquer nome como um tipo de sequência de caracteres que você deseja representar sua exibição. Esse nome Exibição é mostrado no painel **[!UICONTROL Modificações]** do VEC para que os profissionais de marketing criem ações e executem suas atividades A/B e XT. |
    | opções | Objeto | Não |  |  |
    | opções > página | Booleano | Não |  | **TRUE**: O valor padrão da página é true. Quando `page=true`, as notificações serão enviadas aos servidores Edge para aumentar a contagem de impressões.<br />**FALSE**: quando `page=false`, as notificações não serão enviadas para aumentar a contagem de impressões. Isso deve ser usado quando você deseja apenas renderizar novamente um componente em uma página com uma oferta. |
 
@@ -238,7 +226,7 @@ Agora, onde quer `triggerView()` que seja implementada em seu SPA, as Exibiçõe
 
 ## Aplicativo de página única no Visual Experience Composer
 
-Após concluir a instalação da at.js 2.x e adicionar `triggerView()` ao seu site, use o VEC para executar atividades A/B e XT. Para obter mais informações, consulte [Aplicativo de página única (SPA) Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=pt-BR).
+Após concluir a instalação da at.js 2.x e adicionar `triggerView()` ao seu site, use o VEC para executar atividades A/B e XT. Para obter mais informações, consulte [Aplicativo de página única (SPA) Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html).
 
 >[!NOTE]
 >
@@ -246,7 +234,7 @@ Após concluir a instalação da at.js 2.x e adicionar `triggerView()` ao seu si
 
 ## Use o TriggerView para garantir que o A4T funcione corretamente com at.js 2.x e SPAs
 
-Para garantir que o [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR) (A4T) funcione corretamente com a at.js 2.x, certifique-se de enviar a mesma SDID na solicitação [!DNL Target] e na solicitação [!DNL Analytics].
+Para garantir que o [Analytics for Target](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) (A4T) funcione corretamente com a at.js 2.x, certifique-se de enviar a mesma SDID na solicitação [!DNL Target] e na solicitação [!DNL Analytics].
 
 Como práticas recomendadas relacionadas a SPAs:
 
@@ -329,16 +317,16 @@ Os seguintes vídeos contêm mais informações:
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 
-Consulte [Noções básicas sobre o funcionamento da at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=pt-BR) para obter mais informações.
+Consulte [Noções básicas sobre o funcionamento da at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html) para obter mais informações.
 
 ### Implementar a at.js 2.x em um SPA
 
->[!VIDEO](https://video.tv.adobe.com/v/34798/?captions=por_br&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/26248/?quality=12)
 
-Consulte [Implementar a at.js 2.x da Adobe Target em um aplicativo de página única (SPA)](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=pt-BR) para obter mais informações.
+Consulte [Implementar a at.js 2.x da Adobe Target em um aplicativo de página única (SPA)](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html) para obter mais informações.
 
 ### Uso do VEC para SPAs no [!DNL Adobe Target]
 
->[!VIDEO](https://video.tv.adobe.com/v/34802/?captions=por_br&quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/26249/?quality=12)
 
-Consulte [Uso do Visual Experience Composer para Single Page Application (SPA VEC) no Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=pt-BR) para obter mais informações.
+Consulte [Uso do Visual Experience Composer para Single Page Application (SPA VEC) no Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html) para obter mais informações.

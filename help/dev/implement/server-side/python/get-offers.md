@@ -4,15 +4,12 @@ description: Saiba como usar getOffers() para executar uma decisão e recuperar 
 feature: APIs/SDKs
 exl-id: 9539b806-e070-430e-80cf-cf632ce3f207
 TQID: https://experienceleague.adobe.com/b7t1NfE5Gcsj86w4u3Cfl5-Eb7a6HG1Hg8vi6-ViQFg
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 357
+source-wordcount: 366
 ht-degree: 12%
 
 ---
@@ -53,12 +50,12 @@ Retorna `TargetDeliveryResponse` se for chamado de forma síncrona (padrão), ou
 
 | Nome | Tipo | Descrição |
 | --- | --- | --- |
-| resposta | DeliveryResponse | Está em conformidade com a resposta [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) |
+| resposta | DeliveryResponse | Está em conformidade com a resposta da [[!UICONTROL API de entrega do Target]](/help/dev/implement/delivery-api/overview.md) |
 | target_cookie | dict | [!DNL Target] cookie |
 | target_location_hint_cookie | dict | Cookie de dica de localização [!DNL Target] |
 | analytics_details | list[AnalyticsResponse] | Carga do Analytics, em caso de uso do Analytics no lado do cliente |
 | trace | lista[dica] | Dados de rastreamento agregados para todas as mboxes/exibições de solicitação |
-| response_tokens | lista[dica] | Uma lista de &#x200B;[Tokens de Resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=pt-BR) |
+| response_tokens | lista[dica] | Uma lista de &#x200B;[Tokens de Resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) |
 | meta | dict | Metadados de decisão adicionais para uso com decisão no dispositivo |
 
 Os objetos `target_cookie` e `target_location_hint_cookie` usados para transmitir dados de volta ao navegador têm a seguinte estrutura:
@@ -74,8 +71,8 @@ O objeto `meta` usado para indicar o status da resposta de destino tem a seguint
 | Nome | Tipo | Descrição |
 | --- | --- | --- |
 | método_de_decisão | str | Qual método de decisão foi usado: no dispositivo ou no servidor |
-| remote_mboxes | lista`[str]` | Quando o Método de Decisão é `on-device`, uma matriz de nomes de mbox que não puderam ser totalmente decididos no dispositivo é fornecida. Em outras palavras, uma solicitação [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) é necessária. |
-| remote_views | lista`[str]` | Quando o método de decisão é no dispositivo, uma matriz de nomes de visualização que não puderam ser totalmente decididos no dispositivo é fornecida. Em outras palavras, uma solicitação [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) é necessária. |
+| remote_mboxes | lista`[str]` | Quando o Método de Decisão é `on-device`, uma matriz de nomes de mbox que não puderam ser totalmente decididos no dispositivo é fornecida. Em outras palavras, é necessária uma solicitação de [[!UICONTROL API de entrega do Target]](/help/dev/implement/delivery-api/overview.md). |
+| remote_views | lista`[str]` | Quando o método de decisão é no dispositivo, uma matriz de nomes de visualização que não puderam ser totalmente decididos no dispositivo é fornecida. Em outras palavras, é necessária uma solicitação de [[!UICONTROL API de entrega do Target]](/help/dev/implement/delivery-api/overview.md). |
 
 ## Exemplo
 

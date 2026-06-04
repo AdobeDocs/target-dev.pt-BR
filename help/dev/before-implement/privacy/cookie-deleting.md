@@ -5,22 +5,15 @@ title: Como excluir o cookie  [!DNL Target] ?
 feature: Privacy & Security
 exl-id: c975c47f-8d81-4abe-aa89-f65275a73002
 TQID: https://experienceleague.adobe.com/t4ieDzmphu8NHTM9eGnaZMoeXk-Y1G05E4K6spdSs6Y
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 352
-ht-degree: 3%
+source-wordcount: 424
+ht-degree: 1%
 
 ---
 
@@ -38,10 +31,10 @@ Se não houver nenhum cookie [!DNL Target] (mbox), você será considerado um no
 
 Versão 84.0.4147,105
 
-1. Clique no menu **[!UICONTROL Chrome]** > **[!UICONTROL Preferences]**.
-1. Clique na guia **[!UICONTROL Privacy and Security]**.
-1. Clique em **[!UICONTROL Cookies and other site data]**.
-1. Clique em **[!UICONTROL See all cookies and site data]**.
+1. Clique no menu **[!UICONTROL Chrome]** > **[!UICONTROL Preferências]**.
+1. Clique na guia **[!UICONTROL Privacidade e segurança]**.
+1. Clique em **[!UICONTROL Cookies e outros dados do site]**.
+1. Clique em **[!UICONTROL Ver todos os cookies e dados do site]**.
 1. Expanda a seção `adobe.com`, selecione o cookie **mbox** e clique no ícone excluir (X).
 
 ## Exclua o cookie [!DNL Target] do Mozilla Firefox
@@ -50,10 +43,10 @@ Versão 79.0
 
 ### Excluir todos os cookies associados a `adobe.com`
 
-1. Clique no menu **[!UICONTROL Firefox]** > **[!UICONTROL Preferences]**.
-1. Clique na guia **[!UICONTROL Privacy and Security]**.
-1. Em **&#x200B; Cookies e Dados do Site*, clique em &#x200B;** [!UICONTROL Manage Data]**.
-1. Selecione o site `adobe.com` e clique em **[!UICONTROL Remove Selected]**.
+1. Clique no menu **[!UICONTROL Firefox]** > **[!UICONTROL Preferências]**.
+1. Clique na guia **[!UICONTROL Privacidade e segurança]**.
+1. Em ** Cookies e Dados do Site*, clique em **[!UICONTROL Gerenciar Dados]**.
+1. Selecione o site `adobe.com` e clique em **[!UICONTROL Remover Selecionado]**.
 
 >[!WARNING]
 >
@@ -61,20 +54,20 @@ Versão 79.0
 
 ### Excluir um cookie individual (mbox)
 
-1. No Firefo, clique em **[!UICONTROL Tools]** > **[!UICONTROL Web Developer]** > **[!UICONTROL Storage Inspector]**.
-1. Clique na guia **[!UICONTROL Advanced]**.
+1. No Firefo, clique em **[!UICONTROL Ferramentas]** > **[!UICONTROL Desenvolvedor da Web]** > **[!UICONTROL Inspetor de Armazenamento]**.
+1. Clique na guia **[!UICONTROL Avançado]**.
 1. Navegue até a página da Web que contém o cookie que deseja excluir.
 1. Expanda a seção **[!UICONTROL Cookies]** e clique em `https://experience.adobe.com`.
-1. Clique com o botão direito do mouse no cookie **[!UICONTROL mbox]** e depois clique em **[!UICONTROL Delete]**.
+1. Clique com o botão direito do mouse no cookie **[!UICONTROL mbox]** e clique em **[!UICONTROL Excluir]**.
 
 ## Exclua o cookie [!DNL Target] do Microsoft Edge
 
 Versão 84.0.522.52
 
-1. Clique no menu **[!UICONTROL Microsoft Edge]** > **[!UICONTROL Preferences]**.
-1. Clique na guia **[!UICONTROL Site Permissions]**.
-1. Clique em **[!UICONTROL Cookies and site data]**.
-1. Clique em **[!UICONTROL See all cookies and site data]**.
+1. Clique no menu **[!UICONTROL Microsoft Edge]** > **[!UICONTROL Preferências]**.
+1. Clique na guia **[!UICONTROL Permissões do site]**.
+1. Clique em **[!UICONTROL Cookies e dados do site]**.
+1. Clique em **[!UICONTROL Ver todos os cookies e dados do site]**.
 1. Expanda a seção `adobe.com`, selecione o cookie **mbox** e clique no ícone excluir (X).
 
 ## Exclua o cookie [!DNL Target] do Apple Safari
@@ -83,10 +76,10 @@ Versão 13.1.2
 
 ### Excluir todos os cookies associados a `adobe.com`
 
-1. Clique no menu **[!UICONTROL Safari]** > **[!UICONTROL Preferences]**.
-1. Clique na guia **[!UICONTROL Privacy]**.
-1. Clique em **[!UICONTROL Manage Website Data]**.
-1. Selecione os sites dos cookies que você deseja excluir e clique em **[!UICONTROL Remove]**.
+1. Clique no menu **[!UICONTROL Safari]** > **[!UICONTROL Preferências]**.
+1. Clique na guia **[!UICONTROL Privacidade]**.
+1. Clique em **[!UICONTROL Gerenciar Dados do Site]**.
+1. Selecione os sites dos cookies que você deseja excluir e clique em **[!UICONTROL Remover]**.
 
 >[!WARNING]
 >
@@ -94,11 +87,11 @@ Versão 13.1.2
 
 ### Excluir um cookie individual (mbox)
 
-1. Clique no menu **[!UICONTROL Safari]** > **[!UICONTROL Preferences]**.
-1. Clique na guia **[!UICONTROL Advanced]**.
-1. Selecione a opção **[!UICONTROL Show Develop menu in menu bar]**.
+1. Clique no menu **[!UICONTROL Safari]** > **[!UICONTROL Preferências]**.
+1. Clique na guia **[!UICONTROL Avançado]**.
+1. Selecione a opção **[!UICONTROL Mostrar menu Desenvolver na barra de menus]**.
 1. Navegue até a página da Web que contém o cookie que deseja excluir.
-1. Clique no menu **[!UICONTROL Develop]** > **[!UICONTROL Show Web Inspector]**.
-1. Clique na guia **[!UICONTROL Storage]**.
+1. Clique no menu **[!UICONTROL Desenvolver]** > **[!UICONTROL Mostrar Inspetor Web]**.
+1. Clique na guia **[!UICONTROL Armazenamento]**.
 1. Expanda a seção **[!UICONTROL Cookies]** e clique em `www.adobe.com`.
-1. Clique com o botão direito do mouse no cookie **mbox** e clique em **[!UICONTROL Delete]**.
+1. Clique com o botão direito do mouse no cookie **mbox** e clique em **[!UICONTROL Excluir]**.

@@ -5,20 +5,11 @@ title: Como o  [!DNL Target] Lida com o Suporte ITP da Apple?
 feature: Privacy & Security
 exl-id: 6deee03b-df86-4d0d-999c-b11855ddfda5
 TQID: https://experienceleague.adobe.com/AvrlwiLa-soHwrGT1QMa8KgsiIwfwKaF-0LBxMjb8cs
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: adee20bd-51f4-461d-b9db-d215f8756eeb
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: adee20bd-51f4-461d-b9db-d215f8756eebid: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: d095671a-1355-40aa-8b5f-06c33c68080bid: e0eb8757-182f-49f3-94a4-1587d16f5094id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 681
@@ -48,8 +39,8 @@ O Apple ITP 2.x afeta [!DNL Target] nas seguintes áreas:
 | --- | --- |
 | Aumento potencial das contagens de visitantes únicos | Como a janela de expiração está sendo definida como sete dias (com a ITP 2.1) e um dia (com a ITP 2.2 e a ITP 2.3), você pode ver um aumento de visitantes únicos vindos dos navegadores do Safari. Se os visitantes revisitarem seu domínio após sete dias (ITP 2.1) ou um dia (ITP 2.2 e ITP 2.3), o [!DNL Target] será forçado a colocar um novo cookie [!DNL Target] em seu domínio, no lugar do cookie expirado. O novo [!DNL Target] cookie indica um novo visitante único, mesmo que o usuário seja o mesmo. |
 | Redução nos períodos de pesquisa para [!DNL Target] atividades | Os perfis de visitante para [!DNL Target] atividades podem ter um período de lookback reduzido para a tomada de decisão. Os [!DNL Target] cookies são usados para identificar um visitante e armazenar atributos de perfil do usuário para personalização. Considerando que os cookies do [!DNL Target] podem ser expirados no Safari após sete dias (ITP 2.1) ou um dia (ITP 2.2 e 2.3), os dados de perfil do usuário vinculados ao cookie [!DNL Target] removido não podem ser usados para a tomada de decisão. |
-| Scripts de perfil com base em 3rdPartyID | Como a janela de expiração está sendo definida como sete dias (com ITP 2.1) e um dia (com ITP 2.2 e ITP 2.3), os [scripts de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=pt-BR) baseados no cookie 3rdPartyID deixarão de funcionar após a expiração. |
-| URLs de controle de qualidade/visualização em dispositivos iOS | Como a janela de expiração está sendo definida como sete dias (com ITP 2.1) e um dia (com ITP 2.2 e ITP 2.3), os [URLs de controle de qualidade/visualização](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=pt-BR) deixarão de funcionar após a expiração porque os URLs são baseados no cookie 3rdPartyID. |
+| Scripts de perfil com base em 3rdPartyID | Como a janela de expiração está sendo definida como sete dias (com ITP 2.1) e um dia (com ITP 2.2 e ITP 2.3), os [scripts de perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html) baseados no cookie 3rdPartyID deixarão de funcionar após a expiração. |
+| URLs de controle de qualidade/visualização em dispositivos iOS | Como a janela de expiração está sendo definida como sete dias (com ITP 2.1) e um dia (com ITP 2.2 e ITP 2.3), os [URLs de controle de qualidade/visualização](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html) deixarão de funcionar após a expiração porque os URLs são baseados no cookie 3rdPartyID. |
 
 ## Minha implementação atual do [!DNL Target] será afetada?
 

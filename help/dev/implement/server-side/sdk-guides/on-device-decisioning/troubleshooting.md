@@ -1,27 +1,21 @@
 ---
 title: Solução de problemas da decisão no dispositivo
-description: Saiba como solucionar problemas do [!UICONTROL on-device decisioning]
+description: Saiba como solucionar problemas da [!UICONTROL decisão no dispositivo]
 exl-id: e76f95ce-afae-48e0-9dbb-2097133574dc
 feature: APIs/SDKs
 TQID: https://experienceleague.adobe.com/Fp25tLDtuk-CqqcbofshX2-0MzQzayE2xN8OvNT3zVo
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1158
+source-wordcount: 1188
 ht-degree: 0%
 
 ---
 
-# Solução de problemas [!UICONTROL on-device decisioning]
+# Solução de problemas da [!UICONTROL decisão no dispositivo]
 
 ## Validando configuração
 
@@ -29,8 +23,8 @@ ht-degree: 0%
 
 1. Verifique se o `logger` está configurado
 1. Verifique se os rastreamentos de [!DNL Target] estão habilitados
-1. Verifique se o [!UICONTROL on-device decisioning] *artefato de regra* foi recuperado e armazenado em cache de acordo com o intervalo de sondagem definido.
-1. Valide a entrega de conteúdo por meio do artefato de regra em cache criando uma atividade de teste [!UICONTROL on-device decisioning] por meio do Experience Composer baseado em formulário.
+1. Verifique se o [!UICONTROL artefato de regra *da* decisão no dispositivo] foi recuperado e armazenado em cache de acordo com o intervalo de sondagem definido.
+1. Valide a entrega de conteúdo por meio do artefato de regra em cache criando uma atividade de teste [!UICONTROL decisão no dispositivo] por meio do Experience Composer baseado em formulário.
 1. Inspecionar erros de notificação de envio
 
 ## &#x200B;1. Verifique se o agente de log está configurado
@@ -75,7 +69,7 @@ A habilitação de rastreamentos resultará em informações adicionais de [!DNL
 
    ![alt imagem](assets/asset-target-ui-1.png)
 
-1. Navegue até **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** e clique em **[!UICONTROL Generate New Authorization Token]**.
+1. Navegue até **[!UICONTROL Administração]** > **[!UICONTROL Implementação]** e clique em **[!UICONTROL Gerar novo token de autorização]**.
 
    ![alt imagem](assets/asset-target-ui-2.png)
 
@@ -124,7 +118,7 @@ A habilitação de rastreamentos resultará em informações adicionais de [!DNL
      AT: LD.ArtifactProvider artifact received - status=200
    ```
 
-## &#x200B;3. Verifique se o [!UICONTROL on-device decisioning] *artefato de regra* foi recuperado e armazenado em cache de acordo com o intervalo de sondagem definido.
+## &#x200B;3. Verifique se o [!UICONTROL artefato de regra *da* decisão no dispositivo] foi recuperado e armazenado em cache de acordo com o intervalo de sondagem definido.
 
 1. Aguarde a duração do intervalo de pesquisa (o padrão é 20 minutos) e verifique se o artefato está sendo buscado pela SDK. Os mesmos logs de terminal serão gerados.
 
@@ -146,7 +140,7 @@ A habilitação de rastreamentos resultará em informações adicionais de [!DNL
      },
    ```
 
-## &#x200B;4. Valide a entrega de conteúdo por meio do artefato de regra em cache criando uma atividade de teste [!UICONTROL on-device decisioning] por meio do Experience Composer baseado em formulário
+## &#x200B;4. Valide a entrega de conteúdo por meio do artefato de regra em cache criando uma atividade de teste [!UICONTROL decisão no dispositivo] por meio do Experience Composer baseado em formulário
 
 1. Navegue até a [!DNL Target]interface do usuário no Experience Cloud
 
@@ -250,11 +244,11 @@ client = TargetClient.create({
 
 ## Cenários comuns de solução de problemas
 
-Certifique-se de revisar os [recursos com suporte](supported-features.md) para [!UICONTROL on-device decisioning] quando estiver com problemas.
+Certifique-se de revisar os [recursos com suporte](supported-features.md) para a [!UICONTROL decisão no dispositivo] quando estiver com problemas.
 
 ### As atividades de decisão no dispositivo não são executadas devido a público-alvo ou atividade não compatível
 
-Um problema comum que pode ocorrer são [!UICONTROL on-device decisioning] atividades não executadas devido ao público-alvo em uso ou o tipo de atividade não suportado.
+Um problema comum que pode ocorrer é a não execução de [!UICONTROL atividades de decisão no dispositivo] devido ao público-alvo em uso ou ao tipo de atividade sem suporte.
 
 (1) Usando a saída do agente de log, revise as entradas na propriedade trace no objeto de resposta. Identifique especificamente a propriedade das campanhas:
 
