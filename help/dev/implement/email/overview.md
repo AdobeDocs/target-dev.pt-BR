@@ -42,7 +42,7 @@ Anúncios AdBox e Redirecionador podem ser usados com qualquer tipo de atividade
 
 ## Práticas recomendadas de segurança
 
-Observe que, com o Redirecionador, você pode ser exposto a um risco de vulnerabilidade de redirecionamento aberto. Para evitar o uso não autorizado de links redirecionadores por terceiros, recomendamos que você use &quot;hosts autorizados&quot; para incluir na lista de permissões os domínios de URL de redirecionamento padrão. [!DNL Target] usa hosts para incluir na lista de permissões domínios aos quais você deseja permitir redirecionamentos. Para obter mais informações, consulte [Criar Incluis na lista de permissões que especificam hosts autorizados a enviar chamadas de mbox para  [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) em *Hosts*.
+Observe que, com o Redirecionador, você pode ser exposto a um risco de vulnerabilidade de redirecionamento aberto. Para evitar o uso não autorizado de links redirecionadores por terceiros, recomendamos que você use &quot;hosts autorizados&quot; para incluir na lista de permissões os domínios de URL de redirecionamento padrão. [!DNL Target] usa hosts para incluir na lista de permissões domínios aos quais você deseja permitir redirecionamentos. Para obter mais informações, consulte [Criar Incluis na lista de permissões que especificam hosts autorizados a enviar chamadas de mbox para  [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=pt-BR#allowlist) em *Hosts*.
 
 ## Limitações
 

@@ -49,7 +49,7 @@ A habilitação da decisão no dispositivo garante que uma atividade de [!UICONT
 
 >[!NOTE]
 >
->Você deve ter a **[!UICONTROL função de Administrador]** ou **[!UICONTROL Aprovador]** [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para habilitar ou desabilitar a opção **[!UICONTROL Decisão no Dispositivo]**.
+>Você deve ter a **[!UICONTROL função de Administrador]** ou **[!UICONTROL Aprovador]** [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=pt-BR) para habilitar ou desabilitar a opção **[!UICONTROL Decisão no Dispositivo]**.
 
 Depois de habilitar a opção **[!UICONTROL Decisão no Dispositivo]**, o [!DNL Adobe Target] começa a gerar [artefatos de regra](../on-device-decisioning/rule-artifact-overview.md) para o seu cliente.
 
@@ -400,6 +400,6 @@ target_client.send_notifications({
 
    >[!NOTE]
    >
-   >Você deve ter a **[!UICONTROL função de aprovador]** ou **[!UICONTROL editor]** [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para executar esta etapa.
+   >Você deve ter a **[!UICONTROL função de aprovador]** ou **[!UICONTROL editor]** [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=pt-BR) para executar esta etapa.
 
    ![alt imagem](assets/asset-activate.png)

@@ -27,4 +27,4 @@ ht-degree: 7%
 
 O [!DNL Adobe Target] oferece um modelo exclusivo de implantação híbrida para personalização, mesclando implementações do lado do cliente e do lado do servidor. Esse modelo híbrido permite que usuários não técnicos criem uma atividade de experimento ou personalização usando o [!UICONTROL Visual Experience Composer] (VEC) do WYSIWYG e que a experiência seja executada, entregue e renderizada pelo lado do servidor para oferecer um delivery de alto desempenho.
 
-Para obter mais informações, consulte [Implantação Híbrida do Adobe](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html) em [Tutoriais do Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=pt-BR).
+Para obter mais informações, consulte [Implantação Híbrida do Adobe](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/hybrid-deployment.html?lang=pt-BR) em [Tutoriais do Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/overview.html?lang=pt-BR).

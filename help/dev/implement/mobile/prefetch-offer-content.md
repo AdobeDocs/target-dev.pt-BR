@@ -26,9 +26,9 @@ Esse processo reduz o tempo de carregamento, previne várias chamadas de rede e 
 Considere as seguintes limitações ao usar o método de busca prévia com os SDKs móveis para iOS e Android:
 
 * O conteúdo da busca prévia não persiste entre inicializações. O conteúdo da busca prévia é armazenado em cache enquanto o aplicativo está em uso ou até o método `clearPrefetchCache()` ser chamado.
-* Não há suporte para a funcionalidade de busca prévia para os métodos de alocação de tráfego de [!UICONTROL Alocação automática] e [!UICONTROL Direcionamento automático], para os tipos de atividade de [!UICONTROL Automated Personalization] ou [!UICONTROL Recommendations] ou para as ofertas de [recomendações em uma atividade A/B ou XT](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html).
+* Não há suporte para a funcionalidade de busca prévia para os métodos de alocação de tráfego de [!UICONTROL Alocação automática] e [!UICONTROL Direcionamento automático], para os tipos de atividade de [!UICONTROL Automated Personalization] ou [!UICONTROL Recommendations] ou para as ofertas de [recomendações em uma atividade A/B ou XT](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-as-an-offer.html?lang=pt-BR).
 
 Para obter mais informações, incluindo métodos de busca prévia, classes públicas e exemplos de código, consulte:
 
-* **iOS:** [Buscar previamente conteúdo da oferta no iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html) na *Ajuda do iOS SDK do Mobile Services*.
-* **Android:** [Buscar previamente conteúdo da oferta no Android](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html) na *Ajuda do Android SDK do Mobile Services*.
+* **iOS:** [Buscar previamente conteúdo da oferta no iOS](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-mob-target-prefetch-ios.html?lang=pt-BR) na *Ajuda do iOS SDK do Mobile Services*.
+* **Android:** [Buscar previamente conteúdo da oferta no Android](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/c-mob-target-prefetch-android.html?lang=pt-BR) na *Ajuda do Android SDK do Mobile Services*.
