@@ -13,7 +13,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 6fac79420aef0a73c109b2c19f363266c1f8027a
 workflow-type: tm+mt
 source-wordcount: 361
 ht-degree: 4%
@@ -46,15 +46,15 @@ Especifique os parâmetros do perfil no formato `profile.paramName=value`.
 
 Para atualizar o perfil de `pcId`, use:
 
-``````
+```
 https://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mboxPC=1368007744041-575948.01_00&profile.attr=0&profile.attr2=1...
-``````
+```
 
 Para atualizar o perfil de um `mbox3rdPartyId`, use:
 
-``````
+```
 shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
-``````
+```
 
 O [!UICONTROL Single Profile Update API] é somente para atualizações. Se nada for encontrado, um perfil não será criado.
 
