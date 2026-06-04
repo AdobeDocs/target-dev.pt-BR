@@ -1,6 +1,6 @@
 ---
 title: Pré-busca da API de entrega do Adobe Target
-description: Como usar a pré-busca no [!UICONTROL Adobe Target Delivery API]?
+description: Como faço para usar a pré-busca na [!UICONTROL API de entrega do Adobe Target]?
 keywords: api de entrega
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
@@ -18,7 +18,7 @@ topic_v2:
   - id: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 548
+source-wordcount: 578
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Ao usar a busca prévia, é importante se familiarizar com os seguintes termos:
 
 ## Buscar previamente mboxes
 
-Os clientes, como aplicativos e servidores móveis, podem realizar a busca prévia de várias mboxes para um determinado visitante em uma sessão e armazená-las em cache para evitar várias chamadas para o [!UICONTROL Adobe Target Delivery API].
+Os clientes, como aplicativos e servidores móveis, podem realizar a busca prévia de várias mboxes para um determinado visitante em uma sessão e armazená-las em cache para evitar várias chamadas para a [!UICONTROL API de Entrega do Adobe Target].
 
 ```shell shell-session
 curl -X POST \
@@ -132,11 +132,11 @@ No campo `prefetch`, adicione um ou mais `mboxes` que você deseja buscar previa
 }
 ```
 
-Na resposta, você vê o campo `content` que contém a experiência a ser mostrada ao visitante para uma `mbox` específica. Isso é muito útil quando armazenado em cache no servidor, para que, quando um visitante interagir com o aplicativo da Web ou móvel em uma sessão e visitar um `mbox` em qualquer página específica do aplicativo, a experiência possa ser entregue do cache em vez de fazer outra chamada [!UICONTROL Adobe Target Delivery API]. No entanto, quando uma experiência é entregue ao visitante do `mbox`, um `notification` é enviado por meio de uma chamada da API de entrega para que ocorra o registro de impressões. Isso ocorre porque a resposta das chamadas de `prefetch` é armazenada em cache, o que significa que o visitante não viu as experiências no momento em que a chamada de `prefetch` acontece. Para saber mais sobre o processo `notification`, consulte [Notificações](notifications.md).
+Na resposta, você vê o campo `content` que contém a experiência a ser mostrada ao visitante para uma `mbox` específica. Isso é muito útil quando armazenado em cache no servidor, para que, quando um visitante interagir com seu aplicativo da Web ou móvel em uma sessão e visitar um `mbox` em qualquer página específica do seu aplicativo, a experiência possa ser entregue do cache em vez de fazer outra chamada da [!UICONTROL API de entrega do Adobe Target]. No entanto, quando uma experiência é entregue ao visitante do `mbox`, um `notification` é enviado por meio de uma chamada da API de entrega para que ocorra o registro de impressões. Isso ocorre porque a resposta das chamadas de `prefetch` é armazenada em cache, o que significa que o visitante não viu as experiências no momento em que a chamada de `prefetch` acontece. Para saber mais sobre o processo `notification`, consulte [Notificações](notifications.md).
 
 ## Buscar previamente mboxes com `clickTrack` métricas ao usar [!UICONTROL Analytics for Target] (A4T)
 
-[[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR){target=_blank} (A4T) é uma integração entre soluções que permite criar atividades com base em [!DNL Analytics] métricas de conversão e segmentos de público-alvo.
+O [[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR){target=_blank} (A4T) é uma integração entre soluções que permite criar atividades com base em [!DNL Analytics] métricas de conversão e segmentos de público-alvo.
 
 O trecho de código a seguir é uma resposta de uma busca prévia de uma mbox contendo `clickTrack` métricas para notificar [!DNL Analytics] que uma oferta foi clicada:
 
@@ -181,7 +181,7 @@ O trecho de código a seguir é uma resposta de uma busca prévia de uma mbox co
 
 ## Visualizações de pré-busca
 
-As exibições são compatíveis com Aplicativos de página única (SPA) e aplicativos móveis com mais facilidade. As exibições podem ser vistas como um grupo lógico de elementos visuais que, juntos, constituem uma experiência de SPA ou móvel. Agora, por meio da API de Entrega, as atividades [[!UICONTROL A/B Test]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=pt-BR){target=_blank} e [[!UICONTROL Experience Targeting]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=pt-BR){target=_blank} (X)T criadas pelo VEC com modificações em [Exibições para SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) podem ser buscadas previamente.
+As exibições são compatíveis com Aplicativos de página única (SPA) e aplicativos móveis com mais facilidade. As exibições podem ser vistas como um grupo lógico de elementos visuais que, juntos, constituem uma experiência de SPA ou móvel. Agora, por meio da API de Entrega, as atividades de [[!UICONTROL Teste A/B]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=pt-BR){target=_blank} e [[!UICONTROL Direcionamento de experiência]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=pt-BR){target=_blank} (X)T criadas pelo VEC com modificações em [Exibições para SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) agora podem ser buscadas previamente.
 
 ```shell  {line-numbers="true"}
 curl -X POST \
@@ -211,7 +211,7 @@ curl -X POST \
 }'
 ```
 
-A chamada de exemplo acima busca previamente todas as Exibições criadas pelo SPA VEC para [!UICONTROL A/B Test] e atividades XT para serem exibidas na Web `channel`. Observe que a chamada busca previamente todos os Modos de Exibição das atividades de [!UICONTROL A/B Test] ou XT para os quais um visitante com `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` que está visitando `url`:`https://target.enablementadobe.com/react/demo/#/` se qualifica.
+A chamada de exemplo acima busca previamente todas as Exibições criadas pelo SPA VEC para [!UICONTROL Teste A/B] e atividades XT para serem exibidas para a Web `channel`. Observe que a chamada busca previamente todas as Exibições das [!UICONTROL atividades de Teste A/B] ou XT para as quais um visitante com `tntId`:`84e8d0e211054f18af365d65f45e902b.28_131` que está visitando `url`:`https://target.enablementadobe.com/react/demo/#/` está qualificado.
 
 ```JSON  {line-numbers="true"}
 {

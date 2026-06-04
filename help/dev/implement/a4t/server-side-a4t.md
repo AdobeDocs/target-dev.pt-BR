@@ -17,14 +17,14 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 153
+source-wordcount: 161
 ht-degree: 0%
 
 ---
 
 # Logon do lado do servidor para dados A4T em [!DNL Experience Platform Web SDK]
 
-O [!DNL Adobe Experience Platform Web SDK] permite implementar a funcionalidade [!UICONTROL Adobe Analytics for Target] (A4T) em [!UICONTROL Experience Platform Edge Network]. Quando o registro em log do lado do servidor estiver habilitado, todas as [!DNL Analytics] ocorrências enviadas pelo Edge Network serão aumentadas com [!DNL Target] detalhes no lado do servidor, sem precisar passar pelo processo de compilação de ocorrências.
+O [!DNL Adobe Experience Platform Web SDK] permite implementar a funcionalidade [!UICONTROL Adobe Analytics for Target] (A4T) no [!UICONTROL Experience Platform Edge Network]. Quando o registro em log do lado do servidor estiver habilitado, todas as [!DNL Analytics] ocorrências enviadas pelo Edge Network serão aumentadas com [!DNL Target] detalhes no lado do servidor, sem precisar passar pelo processo de compilação de ocorrências.
 
 O log do lado do servidor para [!DNL Analytics] está habilitado quando [!DNL Analytics] está habilitado na configuração da sequência de dados:
 

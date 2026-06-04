@@ -1,7 +1,7 @@
 ---
 keywords: adobe.target.getOffer, getOffer, getoffer, obter oferta, at.js, funções, função, $8
-description: Use a função [!UICONTROL adobe.target.getOffer()] e suas opções para a biblioteca at.js  [!DNL Adobe Target]  para acionar solicitações para obter uma oferta  [!DNL Target] .
-title: Como faço para usar a função [!UICONTROL adobe.target.getOffer()]?
+description: Use a função [!UICONTROL adobe.target.getOffer()] e suas opções da biblioteca [!DNL Adobe Target] at.js para acionar solicitações para obter uma oferta [!DNL Target] a.
+title: Como usar a função [!UICONTROL adobe.target.getOffer()]?
 feature: at.js
 exl-id: 7b917d42-06e8-4838-a09d-0c4872c9beaa
 TQID: https://experienceleague.adobe.com/GcXVIt-42-PV0j4Q4oe5uePTZAn7PDIMicIAULDXz-s
@@ -19,8 +19,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 463
-ht-degree: 72%
+source-wordcount: 472
+ht-degree: 71%
 
 ---
 
@@ -36,11 +36,11 @@ Use com `[!UICONTROL adobe.target.applyOffer()]` para processar a resposta ou us
 | params | Objeto | Não | Parâmetros de mbox. Um objeto de pares de valores-chave que tem a seguinte estrutura:<P>`{ "param1": "value1", "param2": "value2"}` |
 | success | Função | Sim | Retorno de chamada para execução quando recebemos uma resposta do servidor. A função de retorno de chamada bem-sucedida receberá um único parâmetro que represente uma variedade de objetos em oferta. Este é um exemplo de retorno de chamada:<P>`function handleSuccess(response){......}`<P>Veja as respostas abaixo para obter mais informações. |
 | error | Função | Sim | Retorno de chamada para execução quando recebemos um erro. Há alguns casos que são considerados errôneos:<ul><li>Código do status de HTTP diferente de 200 OK</li><li>Não foi possível analisar a resposta. Por exemplo, nós mal construímos JSON ou HTML ao invés de JSON.</li><li>A resposta contém a tecla &quot;erro&quot;. Por exemplo, uma exceção foi lançada no Edge e não foi possível processar a solicitação apropriadamente. Podemos receber um erro quando uma mbox está bloqueada e não é possível recuperar o conteúdo dela, etc. A função de retorno de chamada de erro receberá dois parâmetros: status e erro. Este é um exemplo de retorno de chamada: `function handleError(status, error){......}`</li></ul>Veja as respostas com erro abaixo para obter mais informações. |
-| timeout | Número | Não | Tempo limite em milissegundos. Se não especificado, o tempo-limite padrão em at.js será utilizado.<P>O tempo limite padrão pode ser definido na interface do usuário do [!DNL Target] em [!UICONTROL Administration] > [!UICONTROL Implementation]. |
+| timeout | Número | Não | Tempo limite em milissegundos. Se não especificado, o tempo-limite padrão em at.js será utilizado.<P>O tempo limite padrão pode ser definido na interface do usuário do [!DNL Target] em [!UICONTROL Administração] > [!UICONTROL Implementação]. |
 
 ## Exemplos
 
-Adicionando parâmetros com [!UICONTROL getOffer()] e usando [!UICONTROL applyOffer()] para manipulação com sucesso:
+Adicionando parâmetros com [!UICONTROL getOffer()] e usando [!UICONTROL applyOffer()] para manipulação com êxito:
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   
@@ -61,7 +61,7 @@ adobe.target.getOffer({
 });
 ```
 
-Adicionando parâmetros e parâmetros de perfil com [!UICONTROL getOffer()] e usando [!UICONTROL applyOffer()] para manipulação com sucesso:
+Adicionando parâmetros e parâmetros de perfil com [!UICONTROL getOffer()] e usando [!UICONTROL applyOffer()] para tratamento bem-sucedido:
 
 ```javascript {line-numbers="true"}
 adobe.target.getOffer({   

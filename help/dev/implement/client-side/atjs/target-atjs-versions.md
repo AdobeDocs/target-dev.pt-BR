@@ -27,7 +27,7 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: 5144
+source-wordcount: 5174
 ht-degree: 61%
 
 ---
@@ -58,7 +58,7 @@ As marcas no [Adobe Experience Platform](/help/dev/implement/client-side/atjs/ho
 
 ## at.js versão 2.11.6 (segunda-feira, 29 de setembro de 2024)
 
-* Correção de um problema que impedia o [!DNL Target] de operar corretamente com ofertas de redirecionamento no [!UICONTROL Visual Experience Composer] (VEC) ou [!UICONTROL Form-Based Experience Composer].
+* Correção de um problema que impedia o [!DNL Target] de operar corretamente com ofertas de redirecionamento no [!UICONTROL Visual Experience Composer] (VEC) ou [!UICONTROL Experience Composer baseado em formulário].
 
 ## at.js versão 2.11.5 (quinta-feira, 14 de agosto de 2024)
 
@@ -141,7 +141,7 @@ Esta versão contém as seguintes alterações:
 * Adição do atributo seguro aos cookies sempre que as configurações `secureOnly` da at.js estiverem definidas como `true`.
 * Os tokens de resposta agora estão disponíveis ao usar o `triggerView()`.
 * Correção de um problema relacionado ao evento `CONTENT_RENDERING_NO_OFFERS`. Agora, esse evento é acionado corretamente sempre que não há conteúdo retornado do [!DNL Target].
-* Os detalhes das métricas de clique do [!UICONTROL Analytics for Target] (A4T) são retornados corretamente ao usar solicitações `prefetch`.
+* Os detalhes das métricas de clique do [!UICONTROL Analytics for Target] (A4T) são retornados corretamente ao serem usadas solicitações `prefetch`.
 * A geração UUID não usa mais `Math.random()`, mas depende de `window.crypto`.
 * A expiração do cookie `sessionId` é estendida corretamente em cada chamada de rede.
 * A inicialização do cache de visualização do Aplicativo de página única (SPA) agora é manipulada corretamente e atende às configurações de `viewsEnabled`. A configuração de `viewsEnabled` para o valor `false` agora desabilita a função `triggerView()`. Consulte [Ordem das operações para o carregamento inicial da página](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md#order).
@@ -369,7 +369,7 @@ Aqui estão as melhorias e correções incluídas na at.js versão 1.6.1:
 
 Aqui estão as melhorias e correções incluídas na at.js versão 1.6.0:
 
-* As ofertas de redirecionamento agora são automaticamente compatíveis na integração do [!UICONTROL Analytics for Target] (A4T). A solução alternativa do lado do cliente foi removida. (TNT-30247)
+* As ofertas de redirecionamento agora têm suporte automático na integração do [!UICONTROL Analytics for Target] (A4T). A solução alternativa do lado do cliente foi removida. (TNT-30247)
 * O roteamento de borda do lado do cliente agora está habilitado por padrão. (TNT-30261)
 * Corrigido um problema com a renderização de ação do Visual Experience Composer (VEC) quando há dependências entre as ações. (TNT-30248)
 
@@ -447,7 +447,7 @@ A at.js versão 1.2 já está disponível como uma versão de manutenção que c
 * Correção de um problema no rastreamento de cliques em que um link com `target="_blank"` impedia [!DNL Target] de abrir o link em uma nova guia. (TNT-28072)
 * Endereços IP podem ser usados como domínios de cookies. (TNT-28002)
 * Correção de um problema que causava cintilação nas ofertas de redirecionamento com uma mbox global ou outras mboxes regionais. (TNT-27978)
-* Correção de um problema que causava falha na configuração da atividade [!UICONTROL Experience Targeting] no VEC ao alternar entre Procurar e Compor. (TNT-27942)
+* Correção de um problema de falha na configuração da atividade de [!UICONTROL Direcionamento de experiência] no VEC ao alternar entre Procurar e Compor. (TNT-27942)
 * Correção de tratamento incorreto em classes de estilo de cintilação para elementos de rastreamento de cliques. (TNT-27896)
 * Correção de um problema que fazia com que os parâmetros globais da mbox se misturassem com todos os parâmetros da mbox. (TNT-27846)
 * Alterações feitas para garantir que o Handlebars, o Mustache e outras bibliotecas de modelos do lado do cliente sejam manipuladas adequadamente pela at.js. (TNT-27831)
@@ -494,7 +494,7 @@ Os seguintes aprimoramentos e correções estão incluídos na at.js versão 0.9
 
 Os seguintes aprimoramentos e correções estão incluídos na at.js versão 0.9.6:
 
-* Suporte à oferta de redirecionamento para A4T. Depois de baixar e instalar a at.js versão 0.9.6, poderá usar as ofertas de redirecionamento nas atividades que usam o [!UICONTROL Adobe Analytics as the Reporting Source for Target] (A4T). Além da at.js versão 0.9.6, há outros requisitos mínimos que sua implementação deve atender para usar as ofertas de redirecionamento e o A4T. Para obter mais informações e outras informações importantes que você deveria saber, consulte [Perguntas frequentes das Ofertas de redirecionamento - A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=pt-BR).
+* Suporte à oferta de redirecionamento para A4T. Depois de baixar e instalar a at.js versão 0.9.6, poderá usar as ofertas de redirecionamento nas atividades que usam o [!UICONTROL Adobe Analytics como Source de Relatórios para o Target] (A4T). Além da at.js versão 0.9.6, há outros requisitos mínimos que sua implementação deve atender para usar as ofertas de redirecionamento e o A4T. Para obter mais informações e outras informações importantes que você deveria saber, consulte [Perguntas frequentes das Ofertas de redirecionamento - A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t-faq/a4t-faq-redirect-offers.html?lang=pt-BR).
 * Antes da at.js 0.9.6, quando a API de visitante estava presente na página e a configuração `visitorApiTimeout` era muito agressiva, [!DNL Target] poderia se deparar com uma situação em que nenhum dado MCID era enviado na solicitação [!DNL Target]. Isso pode levar a problemas como ocorrências não corrigidas no [!DNL Analytics] ao usar o A4T.
 
   Este comportamento foi alterado na at.js 0.9.6, mesmo que `visitorApiTimeout` seja definido para 1 ms, [!DNL Target] tentará coletar dados de SDID, servidores de rastreamento e IDs do cliente e enviá-los na solicitação [!DNL Target].
@@ -583,7 +583,7 @@ A at.js contém os componentes que foram incluídos em target.js; portanto, targ
 Ao implementar a at.js, esteja ciente do seguinte:
 
 * As versões do Internet Explorer anteriores à 8 não são suportadas.
-* A implementação assíncrona significa que integrações legadas como o plug-in [!UICONTROL Test&Target to SiteCatalyst] podem não funcionar.
+* A implementação assíncrona significa que integrações herdadas, como [!UICONTROL Test&amp;Target para o plug-in SiteCatalyst], podem não funcionar.
 * [!DNL Target] plug-ins que referenciam objetos e métodos da mbox.js não são suportados.
 * Todas as chamadas ao [!DNL Target] são feitas por XMLHTTPRequest e o conteúdo é retornado por JSON.
 

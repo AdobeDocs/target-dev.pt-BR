@@ -14,7 +14,7 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 411
+source-wordcount: 420
 ht-degree: 8%
 
 ---
@@ -50,7 +50,7 @@ target_client.send_notifications(options)
 
 | Nome | Tipo | Obrigatório | Padrão | Descrição |
 | --- | --- | --- | --- | --- |
-| solicitação | DeliveryRequest | Sim | None | Está em conformidade com a solicitação [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) |
+| solicitação | DeliveryRequest | Sim | None | Está em conformidade com a solicitação da [[!UICONTROL API de entrega do Target]](/help/dev/implement/delivery-api/overview.md) |
 | target_cookie | str | não | None | [!DNL Target] cookie |
 | target_location_hint | str | não | None | [!DNL Target] dica de localização |
 | consumer_id | str | não | None | Ao compilar várias chamadas, IDs de consumidor diferentes devem ser fornecidas |
@@ -75,7 +75,7 @@ target_client.send_notifications(options)
 
 ## Exemplo
 
-Primeiro, vamos criar a solicitação [!UICONTROL Target Delivery API] de busca prévia de conteúdo para as mboxes `home` e `product1`.
+Primeiro, vamos compilar a solicitação da [!UICONTROL API de Entrega do Target] para pré-busca de conteúdo para as mboxes `home` e `product1`.
 
 ### Python
 
@@ -89,7 +89,7 @@ delivery_request = DeliveryRequest(prefetch=prefetch)
 response = target_client.get_offers({ "request": delivery_request })
 ```
 
-Uma resposta bem-sucedida conterá um objeto de resposta [!UICONTROL Target Delivery API], que contém conteúdo previamente buscado para as mboxes solicitadas. Um objeto de amostra `target_response["response"]` (formatado como um diretório) pode aparecer da seguinte maneira:
+Uma resposta bem-sucedida conterá um objeto de resposta [!UICONTROL API de Entrega de Destino], que contém conteúdo previamente buscado para as mboxes solicitadas. Um objeto de amostra `target_response["response"]` (formatado como um diretório) pode aparecer da seguinte maneira:
 
 ### Python
 

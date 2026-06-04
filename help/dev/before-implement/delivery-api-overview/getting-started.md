@@ -1,6 +1,6 @@
 ---
 title: Introdução à API de entrega do Adobe Target
-description: Como usar o [!UICONTROL Adobe Target Delivery API]?
+description: Como usar a [!UICONTROL API de entrega do Adobe Target]?
 keywords: api de entrega
 exl-id: 142ec3be-b017-4cdc-9079-b1cc173a710a
 feature: APIs/SDKs
@@ -16,14 +16,14 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 116
+source-wordcount: 132
 ht-degree: 1%
 
 ---
 
-# Introdução ao [!UICONTROL Adobe Target Delivery API]
+# Introdução à [!UICONTROL API de entrega do Adobe Target]
 
-Uma chamada de [!UICONTROL Target Delivery API] tem esta aparência:
+Uma chamada da [!UICONTROL API de Entrega do Target] tem esta aparência:
 
 ```
 curl -X POST \
@@ -55,9 +55,9 @@ curl -X POST \
     }'
 ```
 
-O `clientCode` pode ser recuperado da interface do usuário do [!DNL Target] navegando até **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**.
+O `clientCode` pode ser recuperado da interface do usuário [!DNL Target] navegando até **[!UICONTROL Administração]** > **[!UICONTROL Implementação]**.
 
-Antes de fazer uma chamada [!UICONTROL Target Delivery API], siga estas etapas para garantir que uma resposta contenha a experiência relevante para mostrar aos usuários finais:
+Antes de fazer uma chamada da [!UICONTROL API de entrega do Target], siga estas etapas para garantir que uma resposta contenha a experiência relevante para mostrar aos usuários finais:
 
 1. Crie uma atividade [!DNL Target] (A/B, XT, AP ou Recommendations) usando o [Criador baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=pt-BR) ou o [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=pt-BR).
 1. Use a API de Entrega para obter uma resposta para as mboxes usadas na atividade [!DNL Target] criada na Etapa 2.

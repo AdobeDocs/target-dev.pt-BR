@@ -12,7 +12,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 357
+source-wordcount: 366
 ht-degree: 12%
 
 ---
@@ -53,7 +53,7 @@ Retorna `TargetDeliveryResponse` se for chamado de forma síncrona (padrão), ou
 
 | Nome | Tipo | Descrição |
 | --- | --- | --- |
-| resposta | DeliveryResponse | Está em conformidade com a resposta [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) |
+| resposta | DeliveryResponse | Está em conformidade com a resposta da [[!UICONTROL API de entrega do Target]](/help/dev/implement/delivery-api/overview.md) |
 | target_cookie | dict | [!DNL Target] cookie |
 | target_location_hint_cookie | dict | Cookie de dica de localização [!DNL Target] |
 | analytics_details | list[AnalyticsResponse] | Carga do Analytics, em caso de uso do Analytics no lado do cliente |
@@ -74,8 +74,8 @@ O objeto `meta` usado para indicar o status da resposta de destino tem a seguint
 | Nome | Tipo | Descrição |
 | --- | --- | --- |
 | método_de_decisão | str | Qual método de decisão foi usado: no dispositivo ou no servidor |
-| remote_mboxes | lista`[str]` | Quando o Método de Decisão é `on-device`, uma matriz de nomes de mbox que não puderam ser totalmente decididos no dispositivo é fornecida. Em outras palavras, uma solicitação [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) é necessária. |
-| remote_views | lista`[str]` | Quando o método de decisão é no dispositivo, uma matriz de nomes de visualização que não puderam ser totalmente decididos no dispositivo é fornecida. Em outras palavras, uma solicitação [[!UICONTROL Target Delivery API]](/help/dev/implement/delivery-api/overview.md) é necessária. |
+| remote_mboxes | lista`[str]` | Quando o Método de Decisão é `on-device`, uma matriz de nomes de mbox que não puderam ser totalmente decididos no dispositivo é fornecida. Em outras palavras, é necessária uma solicitação de [[!UICONTROL API de entrega do Target]](/help/dev/implement/delivery-api/overview.md). |
+| remote_views | lista`[str]` | Quando o método de decisão é no dispositivo, uma matriz de nomes de visualização que não puderam ser totalmente decididos no dispositivo é fornecida. Em outras palavras, é necessária uma solicitação de [[!UICONTROL API de entrega do Target]](/help/dev/implement/delivery-api/overview.md). |
 
 ## Exemplo
 

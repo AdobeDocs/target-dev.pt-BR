@@ -24,7 +24,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2848
+source-wordcount: 2851
 ht-degree: 53%
 
 ---
@@ -87,7 +87,7 @@ Agora que cobrimos o que são Exibições do [!DNL Adobe Target], podemos aprove
 
    Primeiro, precisamos instalar o at.js 2.*x*. Essa versão da at.js foi desenvolvida para SPAs. As versões anteriores da at.js não oferecem suporte a [!DNL Adobe Target] Exibições e ao VEC para SPAs.
 
-   Baixe a at.js 2.*x* pela interface do usuário do [!DNL Adobe Target] localizada em **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**. O at.js 2.*x* também pode ser implantado por meio de tags no [!DNL Adobe Experience Platform].
+   Baixe a at.js 2.*x* pela interface do usuário [!DNL Adobe Target] localizada em **[!UICONTROL Administração]** > **[!UICONTROL Implementação]**. O at.js 2.*x* também pode ser implantado por meio de tags no [!DNL Adobe Experience Platform].
 
 1. Implemente a função at.js 2.*x*, `[triggerView()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-triggerview-atjs-2.md)` em seus sites.
 
@@ -101,7 +101,7 @@ Agora que cobrimos o que são Exibições do [!DNL Adobe Target], podemos aprove
 
    | Parâmetro | Tipo | Obrigatório? | Validação | Descrição |
    | --- | --- | --- | --- | --- |
-   | viewName | String | Sim | &#x200B;1. Não há espaços à direita.<br />2. Não pode ficar em branco.<br />3. O nome da exibição deve ser exclusivo para todas as páginas.<br />4. **Aviso**: O nome da Exibição não deve iniciar ou terminar com &#39;`/`&#39;. Isso ocorre porque o cliente normalmente extrai o nome da Exibição do caminho do URL. Para nós, &quot;inicial&quot; e &quot;`/home`&quot; são diferentes.<br />5. **Aviso**: A mesma exibição não deve ser acionada consecutivamente várias vezes com a opção `{page: true}`. | Transmita qualquer nome como um tipo de sequência de caracteres que você deseja representar sua exibição. Esse nome de exibição é mostrado no painel **[!UICONTROL Modifications]** do VEC para que os profissionais de marketing criem ações e executem suas atividades A/B e XT. |
+   | viewName | String | Sim | &#x200B;1. Não há espaços à direita.<br />2. Não pode ficar em branco.<br />3. O nome da exibição deve ser exclusivo para todas as páginas.<br />4. **Aviso**: O nome da Exibição não deve iniciar ou terminar com &#39;`/`&#39;. Isso ocorre porque o cliente normalmente extrai o nome da Exibição do caminho do URL. Para nós, &quot;inicial&quot; e &quot;`/home`&quot; são diferentes.<br />5. **Aviso**: A mesma exibição não deve ser acionada consecutivamente várias vezes com a opção `{page: true}`. | Transmita qualquer nome como um tipo de sequência de caracteres que você deseja representar sua exibição. Esse nome Exibição é mostrado no painel **[!UICONTROL Modificações]** do VEC para que os profissionais de marketing criem ações e executem suas atividades A/B e XT. |
    | opções | Objeto | Não |  |  |
    | opções > página | Booleano | Não |  | **TRUE**: O valor padrão da página é true. Quando `page=true`, as notificações serão enviadas aos servidores Edge para aumentar a contagem de impressões.<br />**FALSE**: quando `page=false`, as notificações não serão enviadas para aumentar a contagem de impressões. Isso deve ser usado quando você deseja apenas renderizar novamente um componente em uma página com uma oferta. |
 

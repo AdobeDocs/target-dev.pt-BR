@@ -17,7 +17,7 @@ topic_v2:
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
 source-wordcount: 1069
-ht-degree: 18%
+ht-degree: 17%
 
 ---
 
@@ -47,7 +47,7 @@ Para obter mais informações, consulte [[!DNL Target] Biblioteca](https://exper
 
 ### Geografia
 
-Para obter mais informações, consulte [Geográfico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=pt-BR).
+Para obter mais informações, consulte [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=pt-BR).
 &#x200B;
 * País/Região
 * Estado
@@ -218,7 +218,7 @@ A tabela a seguir indica quais regras de público-alvo são ou não compatíveis
 | [Perfil do visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=pt-BR) | Não |
 | [Fontes de Tráfego](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=pt-BR) | Não |
 | [Intervalo de tempo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=pt-BR) | Sim |
-| [Públicos-alvo do Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=pt-BR) (públicos-alvo da Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager | Não |
+| [Públicos-alvo da Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=pt-BR) (públicos-alvo da Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager) | Não |
 
 ### Direcionamento geográfico para decisão no dispositivo
 
@@ -345,4 +345,4 @@ A tabela a seguir indica quais regras de público-alvo são ou não compatíveis
 | [Perfil do visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=pt-BR) | Sim |
 | [Fontes de Tráfego](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/traffic-sources.html?lang=pt-BR) | Sim |
 | [Intervalo de tempo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=pt-BR) | Sim |
-| [Públicos-alvo do Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=pt-BR) (públicos-alvo da Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager | Sim |
+| [Públicos-alvo da Experience Cloud](https://experienceleague.adobe.com/docs/target/using/integrate/mmp.html?lang=pt-BR) (públicos-alvo da Adobe Audience Manager, Adobe Analytics e Adobe Experience Manager) | Sim |

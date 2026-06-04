@@ -34,7 +34,7 @@ O comportamento de cookies depende do tipo do cookie, podendo ser um cookie pró
 
 >[!NOTE]
 >
->Para obter informações detalhadas sobre os diferentes cookies usados pelo [!DNL Target], consulte [[!DNL Adobe Target] cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-target.html?lang=pt-BR){target=_blank} no *Guia de Componentes da Interface Central do Experience Cloud*.
+>Para obter informações detalhadas sobre os diferentes cookies usados pelo [!DNL Target], consulte [[!DNL Adobe Target] cookies](https://experienceleague.adobe.com/docs/core-services/interface/administration/ec-cookies/cookies-target.html?lang=pt-BR){target=_blank} no *Guia de componentes da interface central da Experience Cloud*.
 >
 >Este tópico contém informações sobre `mboxSession` e `mboxPC`. As práticas recomendadas de implementação recomendam que você não vincule nem armazene informações confidenciais com os dados do cookie: `mboxSession` ou `mboxPC`.
 
@@ -82,7 +82,7 @@ A biblioteca do JavaScript gera um `mboxSession ID` e o armazena no cookie [!DNL
 
 >[!NOTE]
 >
->O cookie próprio AMCV_###@AdobeOrg sempre é definido com a ID de visitante da Experience Cloud.
+>O cookie próprio AMCV_###@AdobeOrg sempre é definido com a ID do visitante da Experience Cloud.
 
 ## Comportamento de cookie de terceiros
 

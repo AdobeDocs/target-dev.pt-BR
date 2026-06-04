@@ -33,7 +33,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 501
+source-wordcount: 510
 ht-degree: 11%
 
 ---
@@ -60,7 +60,7 @@ Este *[!DNL Adobe Target]Guia do Desenvolvedor* fornece recursos e guias para de
 
 ## Implementação do lado do cliente
 
-[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md): o [!DNL Adobe Experience Platform Web SDK] permite que você interaja com os vários serviços no [!DNL Experience Cloud] (incluindo o [!DNL Target]) até o [!UICONTROL Adobe Experience Edge Network].
+[**Adobe Experience Platform Web SDK**](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md): o [!DNL Adobe Experience Platform Web SDK] permite que você interaja com os vários serviços no [!DNL Experience Cloud] (incluindo o [!DNL Target]) por meio da [!UICONTROL Adobe Experience Edge Network].
 
 [**Biblioteca de JavaScript at.js do Target**](/help/dev/implement/client-side/overview.md): a biblioteca de JavaScript at.js melhora os tempos de carregamento de página de implementações da Web, melhora a segurança e fornece opções de implementações melhores para aplicativos de página única.
 
@@ -104,7 +104,7 @@ Este *[!DNL Adobe Target]Guia do Desenvolvedor* fornece recursos e guias para de
 
 [**[!DNL Target Profile API]**](/help/dev/administer/profile-api/profiles-api.md): Recuperar informações de perfil de usuário [!DNL Adobe Target].
 
-[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): Recuperar [!UICONTROL A/B Test] e [!UICONTROL Automated Personalization] dados do relatório de atividades.
+[**[!DNL Target Reporting API]**](https://developer.adobe.com/target/administer/admin-api/#tag/Reports): Recuperar dados do relatório de atividades de [!UICONTROL Teste A/B] e [!UICONTROL Automated Personalization].
 
 [**[!DNL Target Recommendations API]**](https://developer.adobe.com/target/administer/recommendations-api/): Use a API [!DNL Target Recommendations].
 

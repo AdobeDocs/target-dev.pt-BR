@@ -17,14 +17,14 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 423
-ht-degree: 20%
+source-wordcount: 446
+ht-degree: 19%
 
 ---
 
 # adobe.target.triggerView (viewName, options) - at.js 2.x
 
-Essa função pode ser chamada sempre que uma nova página é carregada ou quando um componente em uma página é renderizado novamente. `adobe.target.triggerView()` deve ser implementado para aplicativos de página única (SPAs) para usar o [!UICONTROL Visual Experience Composer] (VEC) para criar atividades do [!UICONTROL A/B Test] e do [!UICONTROL Experience Targeting] (XT). Se `[!UICONTROL adobe.target.triggerView()]` não estiver implementado no site, o VEC não poderá ser usado para SPAs. Para obter mais informações, consulte [Implementação do aplicativo de página única](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Essa função pode ser chamada sempre que uma nova página é carregada ou quando um componente em uma página é renderizado novamente. `adobe.target.triggerView()` deve ser implementado para aplicativos de página única (SPAs) para usar o [!UICONTROL Visual Experience Composer] (VEC) para criar atividades de [!UICONTROL Teste A/B] e [!UICONTROL Direcionamento de experiência] (XT). Se `[!UICONTROL adobe.target.triggerView()]` não estiver implementado no site, o VEC não poderá ser usado para SPAs. Para obter mais informações, consulte [Implementação do aplicativo de página única](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Essa função pode ser chamada sempre que uma nova página é carregada ou quand
 
 | Parâmetro | Tipo | Obrigatório? | Descrição |
 | --- | --- | --- | --- |
-| viewName | String | Sim | Transmita qualquer nome como um tipo de sequência de caracteres que você deseja representar sua exibição. Esse nome de exibição aparece no painel [!UICONTROL Modifications] do VEC para que os profissionais de marketing criem ações e executem suas atividades de XT [!UICONTROL A/B Test] e [!UICONTROL Experience Targeting]. |
+| viewName | String | Sim | Transmita qualquer nome como um tipo de sequência de caracteres que você deseja representar sua exibição. Este nome de exibição aparece no painel [!UICONTROL Modificações] do VEC para que os profissionais de marketing criem ações e executem suas atividades de [!UICONTROL Teste A/B] e [!UICONTROL Direcionamento de experiência] XT. |
 | opções | Objeto | Não |  |
 | opções > página | Booleano | Não | **TRUE:** O valor padrão da página é true. Quando page=true, as notificações são enviadas ao [!DNL Target] backend para aumentar a contagem de impressões.<P>Uma notificação é sempre enviada por padrão quando um `[!UICONTROL triggerView]` é chamado, exceto quando options > page é definido como false.<P>**FALSE:** quando page=false, as notificações não são enviadas para aumentar a contagem de impressões. Essa abordagem deve ser usada quando você deseja apenas renderizar novamente um componente em uma página com uma oferta.<P>**Observação**: as ofertas de código personalizado no VEC não são renderizadas novamente quando `[!UICONTROL triggerView()]` é chamado com `{page: false}` como a opção. |
 
@@ -81,11 +81,11 @@ adobe.target.getOffers({
 });
 ```
 
-## Exemplo: Melhor compatibilidade de `triggerView()` com [!UICONTROL Adobe Visual Editing Helper extension]
+## Exemplo: Melhor compatibilidade de `triggerView()` com a [!UICONTROL extensão do Auxiliar de edição visual do Adobe]
 
 Considere o seguinte ao usar a [extensão Auxiliar de edição visual do Adobe](https://experienceleague.adobe.com/pt-br/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}:
 
-Devido às novas políticas de Manifesto V3 do [!DNL Googl]e para extensões do [!DNL Chrome], o [!UICONTROL Visual Editing Helper extension] deve aguardar o evento `DOMContentLoaded` antes de carregar as bibliotecas do [!DNL Target] no VEC. Esse atraso pode fazer com que as páginas da Web acionem a chamada `triggerView()` antes que as bibliotecas de criação estejam prontas, resultando no preenchimento da exibição ao carregar.
+Devido às novas políticas de Manifesto V3 do [!DNL Googl]e para [!DNL Chrome] extensões, a [!UICONTROL extensão Auxiliar de Edição Visual] deve aguardar o evento `DOMContentLoaded` antes de carregar as bibliotecas [!DNL Target] no VEC. Esse atraso pode fazer com que as páginas da Web acionem a chamada `triggerView()` antes que as bibliotecas de criação estejam prontas, resultando no preenchimento da exibição ao carregar.
 
 Para atenuar esse problema, use um ouvinte para o evento de página `load`.
 

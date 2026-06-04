@@ -19,8 +19,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 285
-ht-degree: 20%
+source-wordcount: 304
+ht-degree: 19%
 
 ---
 
@@ -34,15 +34,15 @@ Por padrão, [!DNL Target] cria uma mbox global chamada target-global-mbox, que 
 
 Para usar sua mbox global existente no [!DNL Target] e em sua implementação existente, você deve definir alguns parâmetros.
 
-1. Vá para [!DNL Target] e clique em **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**.
+1. Vá para [!DNL Target] e clique em **[!UICONTROL Administração]** > **[!UICONTROL Implementação]**.
 
-   Por padrão, **[!UICONTROL Page load enabled (Auto-create global mbox]** está habilitado, e a mbox global personalizada é chamada `target-global-mbox`.
+   Por padrão, **[!UICONTROL Carregamento de página habilitado (a mbox global de criação automática]** está habilitada, e a mbox global personalizada é chamada `target-global-mbox`.
 
-1. Se quiser usar uma mbox existente, desabilite **[!UICONTROL Page load enabled (Auto-create global mbox]** e especifique o nome de uma mbox global criada anteriormente no campo **[!UICONTROL Global Mbox]**.
+1. Se quiser usar uma mbox existente, desative a **[!UICONTROL Mbox global]** para carregamento de página (Criação automática de mbox global) e especifique o nome da mbox global criada anteriormente no campo **[!UICONTROL Mbox global]**.
 
    A lista suspensa Mbox global lista todas as mboxes na sua conta. Se você quiser usar uma mbox que ainda não existe, crie a mbox.
 
-1. Clique em **[!UICONTROL Save]**.
+1. Clique em **[!UICONTROL Salvar]**.
 
    As configurações da sua conta são atualizadas.
 

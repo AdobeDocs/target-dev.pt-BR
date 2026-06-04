@@ -28,7 +28,7 @@ Para usar o [!DNL Target] no seu aplicativo móvel, crie um local e métrica de 
 >
 >O [Adobe Experience Platform SDK para Aplicativos para Dispositivos Móveis](https://developer.adobe.com/client-sdks/documentation/){target=_blank} é a solução recomendada para habilitar soluções e serviços do [!DNL Adobe Experience Cloud] em seus aplicativos para dispositivos móveis.
 
-Esta seção inclui amostras de código que podem ser usadas como molde para seu aplicativo. As amostras nesta seção contém código para o iOS. Os mesmos padrões se aplicam ao Android. Sintaxe específica para o Android pode ser encontrada no [guia do Android SDK 4.x para Soluções da Experience Cloud](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html?lang=pt-BR).
+Esta seção inclui amostras de código que podem ser usadas como molde para seu aplicativo. As amostras nesta seção contém código para o iOS. Os mesmos padrões se aplicam ao Android. Sintaxe específica para o Android pode ser encontrada no guia [Android SDK 4.x para Soluções da Experience Cloud](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html?lang=pt-BR).
 
 >[!NOTE]
 >

@@ -23,7 +23,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1797
+source-wordcount: 1879
 ht-degree: 4%
 
 ---
@@ -75,12 +75,12 @@ Esta etapa ajuda a garantir que a biblioteca `VisitorAPI.js` seja carregada, con
 
 **Pré-requisitos**
 
-* Para usar a ID de visitante/API Service, sua empresa deve estar habilitada para o [!DNL Adobe Experience Cloud] e ter um [!UICONTROL Organization ID]. Para obter mais informações, consulte [Requisitos do Experience Cloud: ID da Organização](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=pt-BR&){target=_blank} no guia *Ajuda do Serviço de Identidade*.
+* Para usar a ID de visitante/API Service, sua empresa deve estar habilitada para o [!DNL Adobe Experience Cloud] e ter uma [!UICONTROL ID da organização]. Para obter mais informações, consulte [Requisitos da Experience Cloud: ID da Organização](https://experienceleague.adobe.com/docs/id-service/using/reference/requirements.html?lang=pt-BR&){target=_blank} no guia *Ajuda do Serviço de Identidade*.
 * Você precisa do arquivo `VisitorAPI.js`. Você já deve ter este arquivo se tiver o [!DNL Adobe Analytics] implementado. Este arquivo também pode ser adicionado por meio da [[!DNL Adobe Experience Platform] extensão de tags](https://experienceleague.adobe.com/docs/tags.html?lang=pt-BR){target=_blank} ou pode ser baixado do [Gerenciador de Códigos Adobe Analytics](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-analytics.html?lang=pt-BR){target=_blank}.
 
 **Configurar e consultar VisitorAPI.js**
 
-Para obter mais informações, consulte [Implementar o Serviço Experience Cloud para Target](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=pt-BR){target=_blank}.
+Para obter mais informações, consulte [Implementar o Serviço da Experience Cloud para Target](https://experienceleague.adobe.com/docs/id-service/using/implementation/setup-target.html?lang=pt-BR){target=_blank}.
 
 **Leituras**
 
@@ -255,9 +255,9 @@ Faça recomendações com base no conteúdo do carrinho do usuário.
 
 **Critérios disponíveis**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL Pessoas que os visualizaram, visualizaram]
+* [!UICONTROL Pessoas que os viram, compraram]
+* [!UICONTROL Pessoas que Compraram Estes, Compraram Aqueles]
 
 **Parâmetros de entidade necessários**
 
@@ -279,13 +279,13 @@ Faça recomendações com base na popularidade geral de um item em todo o site o
 
 **Critérios disponíveis**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* [!UICONTROL Mais visualizados em todo o site]
+* [!UICONTROL Mais Visualizados por Categoria]
+* [!UICONTROL Mais Visualizados pelo Atributo de Item]
+* [!UICONTROL Mais vendidos em todo o site]
+* [!UICONTROL Mais vendidos por categoria]
+* [!UICONTROL Mais vendidos por atributo de item]
+* [!UICONTROL Métrica Top by Analytics]
 
 **Parâmetros de entidade necessários**
 
@@ -308,10 +308,10 @@ Fazer recomendações com base na localização de itens semelhantes a um item q
 
 **Critérios disponíveis**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL Pessoas Que Visualizaram Isto, Visualizaram Aquilo]
+* [!UICONTROL Pessoas que Visualizaram Isto, Compraram Aquilo]
+* [!UICONTROL Pessoas que Compraram Isto, Compraram Aquilo]
+* [!UICONTROL Itens com Atributos Semelhantes]
 
 **Parâmetros de entidade necessários**
 
@@ -333,8 +333,8 @@ Faça recomendações com base no comportamento do usuário.
 
 **Critérios disponíveis**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL Itens visualizados recentemente]
+* [!UICONTROL Recomendado para você]
 
 **Parâmetros de entidade necessários**
 
@@ -356,7 +356,7 @@ Fazer recomendações com base em um arquivo personalizado que você carregou.
 
 **Critérios disponíveis**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL Algoritmo personalizado]
 
 **Parâmetros de entidade necessários**
 

@@ -20,7 +20,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1060
+source-wordcount: 1144
 ht-degree: 3%
 
 ---
@@ -39,7 +39,7 @@ Siga as etapas do diagrama *Renderizar experiências* para garantir que todas as
 
 ## Renderizar diagrama de experiências {#diagram}
 
-O tratamento automático de cintilação pronto para uso disponível com a at.js só faz sentido quando o [!UICONTROL Automatic Page Load Request] está habilitado. Esta opção oculta todo o corpo do HTML ao buscar as experiências de [!DNL Target]. Nesse caso, é sua responsabilidade lidar com a cintilação. Procure por padrões de implementação disponíveis para tratamento de cintilação para obter orientação.
+A cintilação automática pronta para uso disponível com a at.js só faz sentido quando a [!UICONTROL Solicitação automática de carregamento de página] está habilitada. Esta opção oculta todo o corpo do HTML ao buscar as experiências de [!DNL Target]. Nesse caso, é sua responsabilidade lidar com a cintilação. Procure por padrões de implementação disponíveis para tratamento de cintilação para obter orientação.
 
 >[!NOTE]
 >
@@ -94,9 +94,9 @@ Faça recomendações com base no conteúdo do carrinho do usuário.
 
 **Critérios disponíveis**
 
-* [!UICONTROL People Who Viewed These, Viewed Those]
-* [!UICONTROL People Who Viewed These, Bought Those]
-* [!UICONTROL People Who Bought These, Bought Those]
+* [!UICONTROL Pessoas que os visualizaram, visualizaram]
+* [!UICONTROL Pessoas que os viram, compraram]
+* [!UICONTROL Pessoas que Compraram Estes, Compraram Aqueles]
 
 **Parâmetros de entidade necessários**
 
@@ -118,13 +118,13 @@ Faça recomendações com base na popularidade geral de um item em todo o site o
 
 **Critérios disponíveis**
 
-* [!UICONTROL Most Viewed Across the Site]
-* [!UICONTROL Most Viewed by Category]
-* [!UICONTROL Most Viewed by Item Attribute]
-* [!UICONTROL Top Sellers Across the Site]
-* [!UICONTROL Top Sellers by Category]
-* [!UICONTROL Top Sellers by Item Attribute]
-* [!UICONTROL Top by Analytics Metric]
+* [!UICONTROL Mais visualizados em todo o site]
+* [!UICONTROL Mais Visualizados por Categoria]
+* [!UICONTROL Mais Visualizados pelo Atributo de Item]
+* [!UICONTROL Mais vendidos em todo o site]
+* [!UICONTROL Mais vendidos por categoria]
+* [!UICONTROL Mais vendidos por atributo de item]
+* [!UICONTROL Métrica Top by Analytics]
 
 **Parâmetros de entidade necessários**
 
@@ -147,10 +147,10 @@ Fazer recomendações com base na localização de itens semelhantes a um item q
 
 **Critérios disponíveis**
 
-* [!UICONTROL People Who Viewed This, Viewed That]
-* [!UICONTROL People Who Viewed This, Bought That]
-* [!UICONTROL People Who Bought This, Bought That]
-* [!UICONTROL Items with Similar Attributes]
+* [!UICONTROL Pessoas Que Visualizaram Isto, Visualizaram Aquilo]
+* [!UICONTROL Pessoas que Visualizaram Isto, Compraram Aquilo]
+* [!UICONTROL Pessoas que Compraram Isto, Compraram Aquilo]
+* [!UICONTROL Itens com Atributos Semelhantes]
 
 **Parâmetros de entidade necessários**
 
@@ -173,8 +173,8 @@ Faça recomendações com base no comportamento do usuário.
 
 **Critérios disponíveis**
 
-* [!UICONTROL Recently Viewed Items]
-* [!UICONTROL Recommended for You]
+* [!UICONTROL Itens visualizados recentemente]
+* [!UICONTROL Recomendado para você]
 
 **Parâmetros de entidade necessários**
 
@@ -196,7 +196,7 @@ Fazer recomendações com base em um arquivo personalizado que você carregou.
 
 **Critérios disponíveis**
 
-* [!UICONTROL Custom algorithm]
+* [!UICONTROL Algoritmo personalizado]
 
 **Parâmetros de entidade necessários**
 

@@ -1,7 +1,7 @@
 ---
 keywords: adobe.target.applyOffers, applyOffers, applyoffers, aplicar ofertas, at.js, funções, função,
-description: Use a função [!UICONTROL adobe.target.applyOffers()] da biblioteca JavaScript do at.js  [!DNL Adobe Target]  para aplicar várias ofertas na resposta. (at.js 2.x)
-title: Como faço para usar a função [!UICONTROL adobe.target.applyOffers()]?
+description: Use a função [!UICONTROL adobe.target.applyOffers()] da biblioteca de JavaScript [!DNL Adobe Target] at.js para aplicar várias ofertas na resposta. (at.js 2.x)
+title: Como usar a função [!UICONTROL adobe.target.applyOffers()]?
 feature: at.js
 exl-id: c391e3f4-fdf1-4e33-8dcb-6bf46e390538
 TQID: https://experienceleague.adobe.com/9WIJvPZIlrtLkv-vv-HRkctgwHn3nX-jrE4-4usXW0Y
@@ -18,7 +18,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 820
+source-wordcount: 825
 ht-degree: 78%
 
 ---
@@ -33,7 +33,7 @@ Essa função permite aplicar mais de uma oferta que foi recuperada por `adobe.t
 
 | Chave | Tipo | Obrigatório? | Descrição |
 | --- | --- | --- | --- |
-| selector | String | Não | Elemento HTML ou seletor CSS usado para identificar o elemento HTML, onde [!DNL Target] deve colocar o conteúdo da oferta. Se nenhum seletor for fornecido, [!DNL Target] presumirá que o elemento HTML a ser usado é o HTML HEAD. |
+| selector | String | Não | Elemento HTML ou seletor CSS usado para identificar o elemento HTML, onde [!DNL Target] deve colocar o conteúdo da oferta. Se nenhum seletor for fornecido, [!DNL Target] presume que o elemento HTML a ser usado é HTML HEAD. |
 | Resposta | Objeto | Sim | Objeto de resposta de `getOffers()`.<br />Consulte a tabela Solicitações abaixo. |
 
 ## Resposta
@@ -82,7 +82,7 @@ Essa função permite aplicar mais de uma oferta que foi recuperada por `adobe.t
 | resposta > executar > carga > rastreamento | O objeto que contém todos os dados de rastreamento da solicitação de carga. |
 | resposta > executar > carga > analytics > carga | A carga [!DNL Analytics] para integração no lado do cliente que deve ser enviada para [!DNL Analytics] após a aplicação do conteúdo de carregamento da página. (Consulte a seção Campanhas habilitadas para A4T.) |
 
-## Exemplo de chamada [!UICONTROL applyOffers()]
+## Chamada de exemplo [!UICONTROL applyOffers()]
 
 ```javascript {line-numbers="true"}
 adobe.target.applyOffers({response:{

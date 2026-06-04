@@ -39,7 +39,7 @@ Quando a Adobe oferece software e serviços para uma empresa, ela age como um Pr
 
 Como o Controlador de dados, você determinará os dados pessoais que a Adobe processa e armazena em seu nome. Se você usa as soluções da Adobe Experience Cloud, a Adobe pode hospedar dados pessoais, dependendo das soluções usadas e das informações que você escolher enviar para a sua conta da Adobe Experience Cloud. Para obter uma lista detalhada de exemplos, consulte [Privacidade na Adobe Experience Cloud](https://www.adobe.com/pt/privacy/experience-cloud.html#collect).
 
-O Adobe Experience Cloud fornece APIs prontas para o GDPR para controladores de dados que permitem que eles concluam as seguintes tarefas:
+A Adobe Experience Cloud fornece APIs prontas para o GDPR para controladores de dados que permitem que eles concluam as seguintes tarefas:
 
 * Acessar informações do titular de dados armazenadas no Target
 * Excluir informações do titular de dados armazenadas no Target
@@ -131,7 +131,7 @@ A Adobe já atende às obrigações como um Processador de dados ou está fazend
 
 Não, a Adobe oferece uma maneira central para ajudar Controladores de dados a atender aos requisitos do GDPR e da CCPA. Os Controladores de dados não precisam acessar diretamente cada solução.
 
-Todas as solicitações do GDPR e da CCPA nas soluções da Experience Cloud, incluindo o Target, são feitas por meio de uma API central da Adobe, atualmente denominada API do GDPR. A API conclui a solicitação no conjunto de soluções da Experience Cloud do Controlador de dados.
+Todas as solicitações do GDPR e da CCPA nas soluções da Experience Cloud, incluindo o Target, são feitas por meio de uma API central do Adobe, atualmente denominada API do GDPR. A API conclui a solicitação no conjunto de soluções da Experience Cloud do Controlador de dados.
 
 ### Quais informações a Adobe permite que os clientes excluam em resposta a uma solicitação do usuário/titular dos dados?
 
@@ -147,7 +147,7 @@ O Target é compatível com os seguintes tipos de ID para localizar um perfil de
 
 | ID de usuário | Tipo de ID de namespace | ID de namespace | Definição |
 |--- |--- |--- |--- |
-| Experience Cloud ID (ECID) | Padrão | 4 | Adobe Experience Cloud ID, anteriormente conhecida como ID de visitante ou Experience Cloud ID. É possível usar a API do JavaScript para localizar esta ID (veja os detalhes abaixo). |
+| Experience Cloud ID (ECID) | Padrão | 4 | Adobe Experience Cloud ID, antes conhecida como ID de visitante ou Experience Cloud ID. É possível usar a API do JavaScript para localizar esta ID (veja os detalhes abaixo). |
 | ID TnT / ID de cookie(TNTID) | Padrão | 9 | Identificador de direcionamento definido como cookie no navegador do visitante. É possível usar a API do JavaScript para localizar esta ID (veja os detalhes abaixo). |
 | ID de terceiros / ID de CRM (THIRDPARTYID) | Específico do Target | N/A | Se você fornecer seu CRM ao Target ou qualquer outra informação de identificador exclusivo referente a seus clientes. |
 

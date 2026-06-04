@@ -19,8 +19,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 2981
-ht-degree: 66%
+source-wordcount: 2994
+ht-degree: 64%
 
 ---
 
@@ -63,7 +63,7 @@ As seções a seguir descrevem a sequência de ações para visitantes novos e r
    * Iniciará o objeto do visitante.
    * A biblioteca [!DNL Target] tenta recuperar os dados da ID de visitante da Experience Cloud.
    * Como esse é um novo visitante, a API de visitante irá disparar uma solicitação de domínio cruzado para demdex.net.
-   * Depois que os dados da ID de visitante da Experience Cloud forem recuperados, uma solicitação para [!DNL Target] será acionada.
+   * Depois que os dados de ID de visitante da Experience Cloud forem recuperados, uma solicitação para [!DNL Target] será acionada.
 
 ### Visitantes que retornam
 
@@ -74,11 +74,11 @@ As seções a seguir descrevem a sequência de ações para visitantes novos e r
    * Iniciará o objeto do visitante.
    * A biblioteca [!DNL Target] tenta recuperar os dados da ID de visitante da Experience Cloud.
    * A API de visitante recuperará os dados dos cookies.
-   * Depois que os dados da ID de visitante da Experience Cloud forem recuperados, uma solicitação para [!DNL Target] será acionada.
+   * Depois que os dados de ID de visitante da Experience Cloud forem recuperados, uma solicitação para [!DNL Target] será acionada.
 
 >[!NOTE]
 >
->Para novos visitantes, quando a API de visitante estiver presente, o [!DNL Target] precisará transmitir as informações várias vezes para garantir que as solicitações do [!DNL Target] contenham os dados da ID de visitante da Experience Cloud. Para os visitantes recorrentes, o [!DNL Target] transmitirá as informações apenas para o [!DNL Target] recuperar o conteúdo personalizado.
+>Para novos visitantes, quando a API de visitante estiver presente, o [!DNL Target] precisará transmitir as informações várias vezes para garantir que [!DNL Target] solicitações contenham os dados da ID de visitante da Experience Cloud. Para os visitantes recorrentes, o [!DNL Target] transmitirá as informações apenas para o [!DNL Target] recuperar o conteúdo personalizado.
 
 ## Por que parece que vejo tempos de resposta mais lentos após a atualização de uma versão anterior da at.js para a versão 1.0.0?
 
@@ -123,7 +123,7 @@ Carregar a at.js de forma assíncrona é uma ótima maneira de evitar o bloqueio
 
 Você pode evitar a cintilação usando um snippet de pré-ocultação que oculta a página (ou partes especificadas), exibindo-a após o carregamento completo da at.js e da solicitação global. O trecho deve ser adicionado antes de carregar a at.js.
 
-Se estiver implantando a at.js por meio de uma implementação assíncrona da [!UICONTROL Adobe Experience Platform], certifique-se de incluir o snippet de pré-ocultação diretamente nas páginas antes de implementar o [!DNL Target] usando o código incorporado da [!UICONTROL Adobe Experience Platform].
+Se estiver implantando a at.js por meio de uma implementação assíncrona do [!UICONTROL Adobe Experience Platform], certifique-se de incluir o trecho oculto previamente diretamente nas suas páginas antes de implementar o [!DNL Target] usando o código de inserção do [!UICONTROL Adobe Experience Platform].
 
 Se estiver implantando a at.js por meio de uma implementação DTM síncrona, o snippet de pré-ocultação pode ser adicionado por uma regra de Carregamento de página acionada na parte superior da página.
 
@@ -131,7 +131,7 @@ Para obter mais informações, consulte [Como o at.js gerencia a cintilação](/
 
 ## A at.js é compatível com a integração do [!DNL Adobe Experience Manager] (Experience Manager)?
 
-O [!DNL Adobe Experience Manager] 6.2 com FP-11577 (ou posterior) agora é compatível com implementações da at.js com sua integração [!UICONTROL Adobe Target Cloud Services].
+O [!DNL Adobe Experience Manager] 6.2 com FP-11577 (ou posterior) agora é compatível com as implementações da at.js com a integração do [!UICONTROL Adobe Target Cloud Services].
 
 ## Como posso evitar a cintilação de carregamento de página usando a at.js?
 
@@ -159,7 +159,7 @@ Não, se o domínio cruzado estiver definido como somente x e o Safari tiver coo
 
 Para auxiliar os visitantes do Safari, um Domínio X melhor seria &quot;desativado&quot; (define apenas um cookie primário) ou &quot;ativado&quot; (define apenas um cookie primário no Safari, enquanto define cookies primários e de terceiros em outros navegadores).
 
-## Posso usar o Target [!UICONTROL Visual Experience Composer] (VEC) nos meus aplicativos de página única?
+## Posso usar o [!UICONTROL Visual Experience Composer] (VEC) do Target nos meus aplicativos de página única?
 
 Sim, você pode usar o VEC para SPA se usar a at.js 2.x. Para obter mais informações, consulte [Visual Experience Composer de Página Única (SPA)](https://experienceleague.adobe.com/docs/target/using/experiences/spa-visual-experience-composer.html?lang=pt-BR).
 

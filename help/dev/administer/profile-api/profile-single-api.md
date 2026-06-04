@@ -1,6 +1,6 @@
 ---
 title: API de atualização de perfil único do Adobe Target
-description: Saiba como usar o  [!DNL Adobe Target] [!UICONTROL Single Profile Update API] para enviar dados de perfil de um único visitante para o  [!DNL Target].
+description: Saiba como usar a [!DNL Adobe Target] [!UICONTROL API de Atualização de Perfil Único] para enviar dados de perfil de um único visitante para o [!DNL Target].
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 4e022db3-215f-461b-9222-38ce2f2dbc28
@@ -15,30 +15,30 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 6fac79420aef0a73c109b2c19f363266c1f8027a
 workflow-type: tm+mt
-source-wordcount: 361
+source-wordcount: 396
 ht-degree: 4%
 
 ---
 
 # [!DNL Adobe Target Single Profile Update API]
 
-O [!DNL Adobe Target] [!UICONTROL Single Profile Update API] permite enviar uma atualização de perfil para um único usuário. O [!UICONTROL Single Profile Update API] é quase idêntico ao [!UICONTROL Bulk Profile Update API], mas um perfil de visitante é atualizado de cada vez, em linha com a chamada de API em vez de com um arquivo .cvs.
+A [!DNL Adobe Target] [!UICONTROL API de Atualização de Perfil Único] permite enviar uma atualização de perfil para um único usuário. A [!UICONTROL API de Atualização de Perfil Único] é quase idêntica à [!UICONTROL API de Atualização de Perfil em Massa], mas um perfil de visitante é atualizado de cada vez, em linha com a chamada de API em vez de com um arquivo .cvs.
 
-O [!UICONTROL Single Profile Update API] e geralmente é usado quando uma atualização deve ocorrer em relação a uma transação que ocorre em um canal que não implementou o [!DNL Target]. Por exemplo, você deseja atualizar o perfil de um único visitante que executa alguma ação offline. As ações podem incluir alcançar uma central de atendimento, um empréstimo é financiado, usar um cartão de fidelidade na loja, acessar um quiosque e assim por diante.
+A [!UICONTROL API de Atualização de Perfil Único] e geralmente é usada quando uma atualização deve ocorrer em relação a uma transação que ocorre em um canal que não implementou o [!DNL Target]. Por exemplo, você deseja atualizar o perfil de um único visitante que executa alguma ação offline. As ações podem incluir alcançar uma central de atendimento, um empréstimo é financiado, usar um cartão de fidelidade na loja, acessar um quiosque e assim por diante.
 
-Os benefícios da [!UICONTROL Single Profile Update API] incluem:
+Os benefícios da [!UICONTROL API de Atualização de Perfil Único] incluem:
 
 * Nenhum limite sobre o número de atributos de perfil.
 * Os atributos de perfil enviados pelo site podem ser atualizados por meio da API e do oposto.
 
 ## Avisos
 
-* O [!UICONTROL Single Profile Update API] está limitado a executar 1 milhão de atualizações em qualquer período contínuo de 24 horas.
+* A [!UICONTROL API de Atualização de Perfil Único] está limitada a executar 1 milhão de atualizações em qualquer período contínuo de 24 horas.
 * As atualizações geralmente ocorrem em menos de uma hora, mas podem levar até 24 horas para serem refletidas.
 
   Se você precisar enviar mais atualizações ou solicitar que elas sejam processadas em prazos mais curtos, considere enviar atualizações de perfil transacional por atualização do lado do cliente (preferencial) ou pela [!DNL Adobe Target] [API de entrega](/help/dev/implement/delivery-api/overview.md) do lado do servidor.
 
-* O [!UICONTROL Single Profile Update API] é uma API de servidor para servidor e não foi projetado para funcionar em uma página da Web. Para atualizar um perfil de visitante na sua página da Web, você pode usar a função [trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) ou a [API de Entrega](/help/dev/implement/delivery-api/overview.md).
+* A [!UICONTROL API de Atualização de Perfil Único] é uma API de servidor para servidor e não foi projetada para funcionar em uma página da Web. Para atualizar um perfil de visitante na sua página da Web, você pode usar a função [trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md) ou a [API de Entrega](/help/dev/implement/delivery-api/overview.md).
 
 ## Formato
 
@@ -56,7 +56,7 @@ Para atualizar o perfil de um `mbox3rdPartyId`, use:
 shell http://<your-client-code>.tt.omtrdc.net/m2/client/profile/update?mbox3rdPartyId=123456&profile.attr=0&profile.attr2=1...
 ```
 
-O [!UICONTROL Single Profile Update API] é somente para atualizações. Se nada for encontrado, um perfil não será criado.
+A [!UICONTROL API de Atualização de Perfil Único] é somente para atualizações. Se nada for encontrado, um perfil não será criado.
 
 ## Notas
 

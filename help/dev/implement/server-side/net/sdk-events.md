@@ -10,7 +10,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 120
+source-wordcount: 133
 ht-degree: 5%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 5%
 
 ## Descrição
 
-Ao [inicializar o SDK](initialize-sdk.md), um representante `OnDeviceDecisioningReady` opcional pode ser fornecido no objeto `TargetClientConfig`, que será chamado quando o SDK estiver pronto para chamadas de método no dispositivo. Há também alguns outros representantes disponíveis para lidar com o download de artefatos do [!UICONTROL on-device decisioning].
+Ao [inicializar o SDK](initialize-sdk.md), um representante `OnDeviceDecisioningReady` opcional pode ser fornecido no objeto `TargetClientConfig`, que será chamado quando o SDK estiver pronto para chamadas de método no dispositivo. Há também alguns outros representantes disponíveis para lidar com o download de artefatos da [!UICONTROL decisão no dispositivo].
 
 ## Eventos
 
@@ -27,9 +27,9 @@ Os seguintes delegados podem ser configurados para determinados eventos:
 
 | Nome | Argumentos | Descrição |
 | --- | --- | --- |
-| OnDeviceDecisioningReady | None | Chamado apenas uma vez na primeira vez que o cliente estiver pronto para [!UICONTROL on-device decisioning] |
-| ArtifactDownloadSucceeded | conteúdo da string do arquivo de artefato | Chamado sempre que um artefato [!UICONTROL on-device decisioning] é baixado |
-| ArtifactDownloadFailed | Exceção | Chamado sempre que há uma falha ao baixar um artefato [!UICONTROL on-device decisioning] |
+| OnDeviceDecisioningReady | None | Chamado apenas uma vez na primeira vez que o cliente estiver pronto para a [!UICONTROL decisão no dispositivo] |
+| ArtifactDownloadSucceeded | conteúdo da string do arquivo de artefato | Chamado sempre que um artefato [!UICONTROL de decisão no dispositivo] é baixado |
+| ArtifactDownloadFailed | Exceção | Chamado sempre que há uma falha ao baixar um artefato [!UICONTROL de decisão no dispositivo] |
 
 ## Exemplo
 

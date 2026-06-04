@@ -1,7 +1,7 @@
 ---
-keywords: at.js, depurar at.js, adobe Experience Cloud debugger, experience cloud debugger, mbox trace, mbox highlight, depurar, depuração, $9
+keywords: at.js, depurar at.js, depurador da adobe Experience Cloud, depurador da experience cloud, rastreamento de mbox, realce da mbox, depurar, depuração, $9
 description: Use o [!UICONTROL Adobe Experience Cloud Debugger] para exibir a configuração da biblioteca, examinar solicitações, ativar o log do console, desabilitar [!DNL Target] solicitações de chamada e muito mais.
-title: Como depurar na.Js com [!UICONTROL Adobe Experience Cloud Debugger]?
+title: Como depurar na.Js com o [!UICONTROL Adobe Experience Cloud Debugger]?
 feature: at.js
 exl-id: ac215560-3f6f-4269-947c-961e7a43c9e1
 TQID: https://experienceleague.adobe.com/pZtiohItxWcjKFJTCXX8JtvOpEjFMsG1SJdp9ANalOE
@@ -17,14 +17,14 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 162
+source-wordcount: 178
 ht-degree: 6%
 
 ---
 
 # Depurar a at.js usando o [!UICONTROL Adobe Experience Cloud Debugger]
 
-Informações sobre o uso da extensão [!UICONTROL Adobe Experience Cloud Debugger], que agiliza e facilita a compreensão da implementação do [!DNL Target].
+Informações sobre o uso da extensão do [!UICONTROL Adobe Experience Cloud Debugger], que agiliza e facilita a compreensão da implementação do [!DNL Target].
 
 Você pode visualizar rapidamente a configuração da biblioteca, examinar as solicitações para verificar se os parâmetros personalizados estão sendo passados corretamente, ativar o log do console e desabilitar todas as solicitações [!DNL Target]. Faça a autenticação no [!DNL Experience Cloud] e use a ferramenta Mbox Trace avançada para inspecionar as qualificações de atividade e público, bem como o perfil do visitante.
 

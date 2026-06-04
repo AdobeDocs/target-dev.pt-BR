@@ -16,16 +16,16 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1316
+source-wordcount: 1321
 ht-degree: 2%
 
 ---
 
 # Visão geral da API de modelos
 
-A API de modelos, também chamada de API de Inclui na lista de bloqueios, permite que os usuários visualizem e gerenciem a lista de recursos usados em modelos de aprendizado de máquina de atividades de [!UICONTROL Automated Personalization] (AP) e [!DNL Auto-Target] (AT). Se um usuário quiser excluir um recurso de ser usado pelos modelos para atividades de AP ou AT, ele poderá usar a API de modelos para adicionar esse recurso ao &quot;incluo na lista de bloqueios&quot;.
+A API de Modelos, também chamada de API de Inclui na lista de bloqueios, permite que os usuários visualizem e gerenciem a lista de recursos usados em modelos de aprendizado de máquina de atividades de [!UICONTROL Automated Personalization] (AP) e [!DNL Auto-Target] (AT). Se um usuário quiser excluir um recurso de ser usado pelos modelos para atividades de AP ou AT, ele poderá usar a API de modelos para adicionar esse recurso ao &quot;incluo na lista de bloqueios&quot;.
 
-Um **[!UICONTROL blocklist]** define o conjunto de recursos que será excluído por [!DNL Adobe Target] de seus modelos de aprendizado de máquina. Para obter mais informações sobre recursos, consulte [Dados usados por [!DNL Target] algoritmos de aprendizado de máquina](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=pt-BR).
+Uma **[!UICONTROL inclui na lista de bloqueios]** define o conjunto de recursos que será excluído por [!DNL Adobe Target] de seus modelos de aprendizado de máquina. Para obter mais informações sobre recursos, consulte [Dados usados por [!DNL Target] algoritmos de aprendizado de máquina](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/ap-data.html?lang=pt-BR).
 
 As Listas de bloqueios podem ser definidas por atividade (nível de atividade) ou para todas as atividades em uma conta [!DNL Target] (nível global).
 
@@ -173,7 +173,7 @@ Observe que `blockedFeatureSources` indica de onde veio um recurso. Para fins de
 | GEO | Localização geográfica |
 | PRO | Personalizado - Perfil |
 | SEG | Personalizado - Segmento de relatórios |
-| AAM | Personalizado - Segmento do Experience Cloud |
+| AAM | Personalizado - Segmento da Experience Cloud |
 | MOB | Dispositivo móvel |
 | CRS | Personalizado - Atributos do cliente |
 | UPA | Personalizado - Atributo de perfil RT-CDP |
@@ -208,7 +208,7 @@ PUT https://mc.adobe.io/<tenant>/target/models/features/blockList/<campaignId>
 
 >[!ENDTABS]
 
-No exemplo mostrado aqui, o usuário está bloqueando dois recursos, `SES_PREVIOUS_VISIT_COUNT` e `SES_TOTAL_SESSIONS`, que foram identificados anteriormente por meio de uma consulta à lista completa de recursos da atividade cuja Activity ID é 260480, conforme descrito na [Etapa 1](#step1). Eles também estão bloqueando todos os recursos provenientes de Segmentos do Experience Cloud, o que é obtido ao bloquear recursos com o prefixo &quot;AAM&quot;, conforme descrito na [tabela](#table) acima.
+No exemplo mostrado aqui, o usuário está bloqueando dois recursos, `SES_PREVIOUS_VISIT_COUNT` e `SES_TOTAL_SESSIONS`, que foram identificados anteriormente por meio de uma consulta à lista completa de recursos da atividade cuja Activity ID é 260480, conforme descrito na [Etapa 1](#step1). Eles também estão bloqueando todos os recursos provenientes de Segmentos da Experience Cloud, o que é obtido ao bloquear recursos com o prefixo &quot;AAM&quot;, conforme descrito na [tabela](#table) acima.
 
 ![Etapa 3](assets/models-api-step-3.png)
 
@@ -293,7 +293,7 @@ Na Solicitação de exemplo mostrada acima, o usuário está bloqueando dois rec
 
 Pergunta: a amostra de código acima não é redundante?
 
-Resposta: Sim. É redundante bloquear recursos com valores que começam com &quot;AAM&quot;, além de bloquear todos os recursos cuja origem é &quot;AAM&quot;. O resultado líquido é que todos os recursos provenientes do AAM (Segmentos do Experience Cloud) serão bloqueados. Portanto, se o objetivo for bloquear todos os recursos dos Segmentos do Experience Cloud, não é necessário especificar individualmente determinados recursos que começam com &quot;AAM&quot;, no exemplo acima.
+Resposta: Sim. É redundante bloquear recursos com valores que começam com &quot;AAM&quot;, além de bloquear todos os recursos cuja origem é &quot;AAM&quot;. O resultado líquido é que todos os recursos provenientes do AAM (Segmentos da Experience Cloud) serão bloqueados. Portanto, se o objetivo for bloquear todos os recursos dos Segmentos do Experience Cloud, não é necessário especificar individualmente determinados recursos que começam com &quot;AAM&quot;, no exemplo acima.
 
 Etapa final: seja na atividade ou no nível global, é recomendável verificar sua inclui na lista de bloqueios depois de modificá-la, para garantir que ela contenha os valores esperados. Faça isso mudando o `PUT` para `GET`.
 

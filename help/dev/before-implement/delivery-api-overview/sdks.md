@@ -11,14 +11,14 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: 262
-ht-degree: 100%
+source-wordcount: 265
+ht-degree: 91%
 
 ---
 
 # SDKs
 
-O [!DNL Adobe Target] oferece [SDKs do lado do servidor](../../implement/server-side/server-side-overview.md) para interagir com a [!DNL Target Delivery API] e ajudar a facilitar a integração do [!UICONTROL Target] com outras soluções da [!DNL Adobe Experience Cloud], como o [!UICONTROL Adobe Analytics] e o [!DNL Adobe Audience Manager].
+[!DNL Adobe Target] oferece [SDKs do lado do servidor](../../implement/server-side/server-side-overview.md) para interagir com o [!DNL Target Delivery API] e ajudar a facilitar a integração do [!UICONTROL Target] com outras soluções do [!DNL Adobe Experience Cloud], como o [!UICONTROL Adobe Analytics] e o [!DNL Adobe Audience Manager].
 
 Os SDKs ajudam a seguir as práticas recomendadas no gerenciamento de sessões e cookies. É altamente recomendável usar uma SDK para suavizar qualquer complexidade e evitar a utilização incorreta da API.
 

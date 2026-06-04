@@ -13,13 +13,13 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 52
+source-wordcount: 57
 ht-degree: 0%
 
 ---
 
 # APIs do Adobe Admin Console
 
-Gerencie usuários e direitos de produto por meio do [!UICONTROL Adobe User Management] e [!UICONTROL User Sync API]s.
+Gerencie usuários e direitos de produto por meio do [!UICONTROL Gerenciamento de usuários do Adobe] e da [!UICONTROL API de sincronização de usuários]s.
 
 Para obter mais informações, consulte [Gerenciar Usuários e Direitos de Produto, o caminho da API](https://developer.adobe.com/umapi/){target=_blank} no site do *Adobe Developer*.

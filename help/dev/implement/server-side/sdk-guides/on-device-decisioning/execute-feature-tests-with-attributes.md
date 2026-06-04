@@ -16,7 +16,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 891
+source-wordcount: 960
 ht-degree: 1%
 
 ---
@@ -25,8 +25,8 @@ ht-degree: 1%
 
 ## Resumo das etapas
 
-1. Habilitar [!UICONTROL on-device decisioning] para sua organização
-1. Criar uma atividade [!UICONTROL A/B Test]
+1. Habilitar a [!UICONTROL decisão no dispositivo] para sua organização
+1. Criar uma atividade [!UICONTROL Teste A/B]
 1. Defina seus A e B
 1. Adicionar um público
 1. Definir alocação de tráfego
@@ -41,41 +41,41 @@ ht-degree: 1%
 >
 >Suponha que você seja uma empresa de comércio eletrônico varejista. Você deseja aumentar a taxa de conversão quando os clientes navegarem e classificarem o catálogo de produtos. Você tem uma hipótese de que certos algoritmos de classificação e estratégias de paginação produzem resultados melhores do que outros. Para testar essa teoria, você decide executar um teste de recurso que envolve o redesign do widget de classificação usando diferentes opções de classificação para os usuários finais. Certifique-se de que esse teste de recurso seja executado com latência próxima de zero para que ele não afete negativamente as experiências do usuário e distorça os resultados.
 
-## &#x200B;1. Habilitar [!UICONTROL on-device decisioning] para sua organização
+## &#x200B;1. Habilitar a [!UICONTROL decisão no dispositivo] para sua organização
 
-A ativação da decisão no dispositivo garante que uma atividade A/B seja executada com latência próxima a zero. Para habilitar este recurso, navegue até **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Account details]** em [!DNL Adobe Target] e habilite a alternância **[!UICONTROL On-Device Decisioning]**.
+A ativação da decisão no dispositivo garante que uma atividade A/B seja executada com latência próxima a zero. Para habilitar este recurso, navegue até **[!UICONTROL Administração]** > **[!UICONTROL Implementação]** > **[!UICONTROL Detalhes da conta]** em [!DNL Adobe Target] e habilite a opção **[!UICONTROL Decisão no Dispositivo]**.
 
 ![alt imagem](assets/asset-odd-toggle.png)
 
 >[!NOTE]
 >
->Você deve ter a [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=pt-BR) de Administrador ou Aprovador para habilitar ou desabilitar a **[!UICONTROL On-Device Decisioning]**.
+>Você deve ter a [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=pt-BR) de Administrador ou Aprovador para habilitar ou desabilitar a **[!UICONTROL Decisão no Dispositivo]**.
 
-Depois de habilitar a alternância **[!UICONTROL On-Device Decisioning]**, [!DNL Adobe Target] começa a gerar *artefatos de regra* para o seu cliente.
+Depois de habilitar a opção **[!UICONTROL Decisão no Dispositivo]**, o [!DNL Adobe Target] começa a gerar *artefatos de regra* para o seu cliente.
 
-## &#x200B;2. Criar uma atividade [!UICONTROL A/B Test]
+## &#x200B;2. Criar uma atividade [!UICONTROL Teste A/B]
 
-1. Em [!DNL Adobe Target], navegue até a página **[!UICONTROL Activities]** e selecione **[!UICONTROL Create Activity]** > **[!UICONTROL A/B test]**.
+1. Em [!DNL Adobe Target], navegue até a página **[!UICONTROL Atividades]** e selecione **[!UICONTROL Criar atividade]** > **[!UICONTROL Teste A/B]**.
 
    ![alt imagem](assets/asset-ab.png)
 
-1. No modal **[!UICONTROL Create A/B Test Activity]**, deixe a opção padrão **[!UICONTROL Web]** selecionada (1), selecione **[!UICONTROL Form]** como compositor de experiência (2), selecione **[!UICONTROL Default Workspace]** com **[!UICONTROL No Property Restrictions]** (3) e clique em **[!UICONTROL Next]** (4).
+1. No modal **[!UICONTROL Criar Atividade de Teste A/B]**, deixe a opção padrão **[!UICONTROL Web]** selecionada (1), selecione **[!UICONTROL Formulário]** como compositor de experiência (2), selecione **[!UICONTROL Workspace Padrão]** com **[!UICONTROL Sem Restrições de Propriedade]** (3) e clique em **[!UICONTROL Avançar]** (4).
 
    ![alt imagem](assets/asset-form.png)
 
 ## &#x200B;3. Defina seus A e B
 
-1. Na etapa de criação da atividade **[!UICONTROL Experiences]**, forneça um nome para a atividade (1) e adicione uma segunda experiência, Experiência B, clicando no botão **[!UICONTROL Add Experience]** (2). Digite o nome do local (3) no aplicativo onde deseja executar o teste de recurso com atributos. No exemplo mostrado abaixo, `product-results-page` é o local definido para a Experiência A. (Também é o local definido para a Experiência B.)
+1. Na etapa de criação da atividade **[!UICONTROL Experiências]**, forneça um nome para a atividade (1) e adicione uma segunda experiência, Experiência B, clicando no botão **[!UICONTROL Adicionar Experiência]** (2). Digite o nome do local (3) no aplicativo onde deseja executar o teste de recurso com atributos. No exemplo mostrado abaixo, `product-results-page` é o local definido para a Experiência A. (Também é o local definido para a Experiência B.)
 
    ![alt imagem](assets/asset-location.png)
 
-   **[!UICONTROL Experience A]** conterá o JSON que sinaliza à sua lógica comercial o seguinte:
+   **[!UICONTROL A Experiência A]** conterá o JSON que sinaliza à sua lógica comercial o seguinte:
 
    * Iniciar o recurso de algoritmo de classificação por meio do sinalizador de recurso `test_sorting`
    * Executar o algoritmo de classificação recomendado definido no `sorting_algorithm _**_attribute`
    * Retorne 50 produtos por página, conforme definido pela estratégia de paginação definida no `pagination_limit`
 
-1. Na Experiência A, clique para alterar o conteúdo de **[!UICONTROL Default Content]** para JSON ao selecionar **[!UICONTROL Create JSON Offer]** conforme mostrado abaixo (1).
+1. Na Experiência A, clique em para alterar o conteúdo de **[!UICONTROL Conteúdo Padrão]** para JSON ao selecionar **[!UICONTROL Criar Oferta JSON]**, conforme mostrado abaixo (1).
 
    ![alt imagem](assets/asset-offer.png)
 
@@ -87,7 +87,7 @@ Depois de habilitar a alternância **[!UICONTROL On-Device Decisioning]**, [!DNL
 
    ![alt imagem](assets/asset-sorting.png)
 
-   O **[!UICONTROL Experience B]** definirá o JSON que sinaliza à sua lógica comercial o seguinte:
+   A **[!UICONTROL Experiência B]** definirá o JSON que sinaliza à sua lógica comercial o seguinte:
 
    * Iniciar o recurso de algoritmo de classificação por meio do sinalizador de recurso test_sorting
    * Executar o algoritmo de classificação `best_sellers` definido em `sorting_algorithm _**_attribute`
@@ -101,7 +101,7 @@ Depois de habilitar a alternância **[!UICONTROL On-Device Decisioning]**, [!DNL
 
 ## &#x200B;4. Adicionar um público
 
-Na etapa **[!UICONTROL Targeting]**, mantenha o público-alvo **[!UICONTROL All Visitors]**. Isso permitirá entender o impacto do recurso de classificação, bem como qual algoritmo e número de itens influenciam melhor os resultados.
+Na etapa **[!UICONTROL Direcionamento]**, mantenha o público-alvo de **[!UICONTROL Todos os visitantes]**. Isso permitirá entender o impacto do recurso de classificação, bem como qual algoritmo e número de itens influenciam melhor os resultados.
 
 ![alt imagem](assets/asset-audience-b.png)
 
@@ -119,13 +119,13 @@ Defina a porcentagem de seus visitantes que verão o algoritmo de classificaçã
 
 ## &#x200B;7. Configurar relatórios
 
-Na etapa **[!UICONTROL Goals & Settings]**, escolha **[!UICONTROL Adobe Target]** como **[!UICONTROL Reporting Source]** para exibir os resultados do teste A/B na interface do usuário [!DNL Adobe Target], ou **[!UICONTROL Adobe Analytics]** para exibi-los na interface do usuário do Adobe Analytics.
+Na etapa **[!UICONTROL Metas e Configurações]**, escolha **[!UICONTROL Adobe Target]** como a **[!UICONTROL Source de Relatórios]** para exibir os resultados do teste A/B na interface do usuário do [!DNL Adobe Target], ou escolha **[!UICONTROL Adobe Analytics]** para exibi-los na interface do usuário do Adobe Analytics.
 
 ![alt imagem](assets/asset-reporting-b.png)
 
 ## &#x200B;8. Adicionar métricas para KPIs de rastreamento
 
-Escolha um **[!UICONTROL Goal Metric]** para medir o teste de recurso com atributos. Neste exemplo, o sucesso se baseia no fato de o usuário comprar um produto, dependendo do algoritmo de classificação e da estratégia de paginação mostrada.
+Escolha uma **[!UICONTROL Métrica de meta]** para medir o teste de recurso com atributos. Neste exemplo, o sucesso se baseia no fato de o usuário comprar um produto, dependendo do algoritmo de classificação e da estratégia de paginação mostrada.
 
 ## &#x200B;9. Implementar testes de recursos com atributos no aplicativo
 

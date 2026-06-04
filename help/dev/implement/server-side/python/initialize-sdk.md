@@ -1,6 +1,6 @@
 ---
 title: Inicializar o Python SDK usando o método de criação
-description: Saiba como usar o método de criação para inicializar o Python SDK e instanciar o [!UICONTROL TargetClient] para fazer chamadas para  [!DNL Adobe Target] experiências e experiências personalizadas.
+description: Saiba como usar o método de criação para inicializar o Python SDK e instanciar o [!UICONTROL TargetClient] para fazer chamadas [!DNL Adobe Target] para experimentos e experiências personalizadas.
 feature: APIs/SDKs
 exl-id: 3e231e8e-696d-45c7-b733-79bf99da5bec
 TQID: https://experienceleague.adobe.com/la4hiAeSKSTgV7-WPLuW-MudsVJAm3qbq1vT7rnzymQ
@@ -10,15 +10,15 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 276
-ht-degree: 17%
+source-wordcount: 287
+ht-degree: 16%
 
 ---
 
 # Inicializar o Python SDK
 
 Descrição
-Use o método `create` para inicializar o Python SDK e instanciar o [!UICONTROL Target Client] para fazer chamadas a [!DNL Adobe Target] para experiências e experiências personalizadas.
+Use o método `create` para inicializar o Python SDK e instanciar o [!UICONTROL Target Client] para fazer chamadas para [!DNL Adobe Target] a fim de experiências e experiências personalizadas.
 
 ## Método
 
@@ -34,8 +34,8 @@ TargetClient.create(options)
 
 | Nome | Tipo | Obrigatório | Padrão | Descrição |
 | --- | --- | --- | --- | --- |
-| cliente | str | Sim | None | [!UICONTROL Adobe Target client ID] |
-| organization_id | str | Sim | None | [!UICONTROL Experience Cloud Organization ID] |
+| cliente | str | Sim | None | [!UICONTROL ID do cliente Adobe Target] |
+| organization_id | str | Sim | None | [!UICONTROL ID da organização da Experience Cloud] |
 | timeout | int | Não | 3000 | Tempo limite em milissegundos |
 | server_domain | str | Não | `client.tt.omtrdc.net` | Substitui o nome de host padrão |
 | seguro | bool | Não | true | Não definido para impor o esquema HTTP |

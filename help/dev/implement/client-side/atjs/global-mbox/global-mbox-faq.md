@@ -19,8 +19,8 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 309
-ht-degree: 32%
+source-wordcount: 316
+ht-degree: 31%
 
 ---
 
@@ -34,7 +34,7 @@ Somente uma mbox global é suportada na sua conta.
 
 Você pode limitar o local de execução das atividades, ao adicionar as regras de URL às suas atividades. Para obter mais informações, consulte [Incluir a mesma experiência em páginas semelhantes](https://experienceleague.adobe.com/docs/target/using/experiences/vec/temtest.html?lang=pt-BR).
 
-Você também pode passar um parâmetro para a página usando [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) e depois selecionar esses parâmetros na seção &quot;configurar URL&quot; no [!UICONTROL Visual Experience Composer] (VEC) ou adicionar os parâmetros como &quot;refinamentos&quot; no [!UICONTROL Form-Based Experience Composer].
+Você também pode passar um parâmetro para a página usando [targetPageParams](/help/dev/implement/client-side/atjs/atjs-functions/targetpageparams.md) e depois selecionar esses parâmetros na seção &quot;configurar URL&quot; no [!UICONTROL Visual Experience Composer] (VEC) ou adicionar os parâmetros como &quot;refinamentos&quot; no [!UICONTROL Experience Composer baseado em formulário].
 
 ## Como transfiro os dados de receita em uma mbox global [!DNL Target]?
 

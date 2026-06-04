@@ -25,8 +25,8 @@ topic_v2:
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
 source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
 workflow-type: tm+mt
-source-wordcount: 3037
-ht-degree: 48%
+source-wordcount: 3100
+ht-degree: 47%
 
 ---
 
@@ -38,7 +38,7 @@ Estes são alguns benefícios do uso de at.js 2.*x* que não estão disponíveis
 
 * A capacidade de armazenar em cache todas as ofertas no carregamento da página para reduzir várias chamadas do servidor a uma única chamada de servidor.
 * Melhore bastante as experiências dos usuários finais em seu site, uma vez que as ofertas são exibidas imediatamente por meio do cache, sem o atraso imposto pelas chamadas tradicionais do servidor.
-* Uma linha de código simples e uma configuração de desenvolvedor única para permitir que seus comerciantes criem e executem atividades do [!UICONTROL A/B Test] e do [!UICONTROL Experience Targeting] (XT) por meio do VEC em seus SPAs.
+* Uma linha de código simples e uma configuração de desenvolvedor única para permitir que seus comerciantes criem e executem atividades de [!UICONTROL Teste A/B] e [!UICONTROL Direcionamento de experiência] (XT) por meio do VEC em seus SPAs.
 
 ## Diagramas do sistema at.js 2.*x*
 
@@ -50,14 +50,14 @@ Os diagramas a seguir ajudam a entender o fluxo de trabalho da at.js 2.*x* com E
 
 | Chama | Detalhes |
 | --- | --- |
-| 1 | A chamada retorna o [!UICONTROL Experience Cloud ID] caso o usuário seja autenticado; outra chamada sincroniza a ID do cliente. |
+| 1 | A chamada retornará a [!UICONTROL Experience Cloud ID] se o usuário estiver autenticado; outra chamada sincroniza a ID do cliente. |
 | 2 | A biblioteca at.js é carregada de modo síncrono e oculta o corpo do documento.<P>O at.js também pode ser carregado de forma assíncrona com uma opção que oculta previamente o trecho implementado na página. |
 | 3 | Uma solicitação de carregamento de página é feita, incluindo todos os parâmetros configurados (MCID, SDID e ID do cliente). |
 | 4 | Os scripts de perfil executam e, em seguida, fazem o feed na Loja do perfil. A Loja solicita públicos qualificados da Biblioteca de Público-Alvo (por exemplo, públicos-alvo compartilhados de [!DNL Adobe Analytics], [!DNL Audience Manager], etc.).<P>Os atributos do cliente são enviados à Loja de perfis em um processo em lote. |
 | 5 | Com base nos parâmetros de solicitação de URL e dados de perfil, [!DNL Target] decide quais atividades e experiências retornarão ao visitante para a página atual e para as exibições futuras. |
 | 6 | O conteúdo direcionado é enviado de volta para a página, incluindo, opcionalmente, valores de perfil para personalização adicional.<P>O conteúdo direcionado na página atual é revelado o mais rápido possível sem cintilação do conteúdo padrão.<P>Conteúdo direcionado para exibições que são mostradas como resultado das ações do usuário em um SPA que é armazenado em cache no navegador para que ele possa ser aplicado instantaneamente, sem uma chamada de servidor adicional, quando as exibições forem acionadas por meio de `triggerView()`. |
 | 7 | Os dados do [!UICONTROL Analytics] são enviados ao servidores de Coleção de dados. |
-| 8 | Os dados de destino correspondem aos dados de [!UICONTROL Analytics] por meio da SDID e são processados no armazenamento de relatórios [!UICONTROL Analytics].<P>Os dados do [!UICONTROL Analytics] podem ser exibidos em [!UICONTROL Analytics] e [!DNL Target] pelos relatórios do [!UICONTROL Analytics for Target] (A4T). |
+| 8 | Os dados de destino correspondem aos dados do [!UICONTROL Analytics] por meio da SDID e são processados no armazenamento de relatórios do [!UICONTROL Analytics].<P>Os dados do [!UICONTROL Analytics] podem ser exibidos no [!UICONTROL Analytics] e no [!DNL Target] pelos relatórios do [!UICONTROL Analytics for Target] (A4T). |
 
 Agora, onde quer `triggerView()` que seja implementada em seu SPA, as Exibições e as ações são recuperadas do cache e mostradas ao usuário, sem uma chamada de servidor. `triggerView()` também faz uma solicitação de notificações ao [!DNL Target] backend para aumentar e registrar contagens de impressão.
 
@@ -71,8 +71,8 @@ Agora, onde quer `triggerView()` que seja implementada em seu SPA, as Exibiçõe
 | 2 | O conteúdo direcionado para a exibição é lido do cache. |
 | 3 | O conteúdo direcionado é revelado o mais rápido possível sem oscilação do conteúdo padrão. |
 | 4 | A solicitação de notificação é enviada para a [!DNL Target] Loja de perfil para contar o visitante nas métricas de atividade e incremento. |
-| 5 | [!UICONTROL Analytics] dados enviados aos Servidores de Coleta de Dados. |
-| 6 | Os dados do [!DNL Target] são correspondidos aos dados do [!UICONTROL Analytics] por meio da SDID e processados no armazenamento de relatórios do [!UICONTROL Analytics]. Os dados do [!UICONTROL Analytics] podem ser exibidos em [!UICONTROL Analytics] e [!DNL Target] pelos relatórios do A4T. |
+| 5 | Dados do [!UICONTROL Analytics] enviados para os Servidores de Coleta de Dados. |
+| 6 | Os dados do [!DNL Target] são correspondidos aos dados do [!UICONTROL Analytics] pela SDID e processados no armazenamento de relatórios do [!UICONTROL Analytics]. Os dados do [!UICONTROL Analytics] podem ser exibidos no [!UICONTROL Analytics] e no [!DNL Target] pelos relatórios do A4T. |
 
 ## Implantar at.js 2.*x*
 
@@ -271,7 +271,7 @@ Basicamente, o conceito global de mbox foi apresentado para [!DNL Target] inform
 
 ### O nome da mbox global no at.js não importa mais?
 
-Os clientes podem especificar um nome de mbox global via **[!UICONTROL Target]** > **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit at.js Settings]**. Essa configuração é usada pelos servidores de borda [!DNL Target] para traduzir execute > pageLoad para o nome da mbox global que aparece na interface do [!DNL Target]. Isso permite que os clientes continuem a usar APIs do lado do servidor, o compositor baseado em formulário, scripts de perfil e criar públicos-alvo usando o nome global da mbox. Recomendamos que você também verifique se o mesmo nome global da mbox está configurado na página **[!UICONTROL Administration]** > **[!UICONTROL Visual Experience Composer]**, caso ainda tenha páginas que usam o at.js 1.*x*, conforme mostrado nas ilustrações a seguir.
+Os clientes podem especificar um nome de mbox global por meio de **[!UICONTROL Target]** > **[!UICONTROL Administração]** > **[!UICONTROL Implementação]** > **[!UICONTROL Editar configurações da at.js]**. Essa configuração é usada pelos servidores de borda [!DNL Target] para traduzir execute > pageLoad para o nome da mbox global que aparece na interface do [!DNL Target]. Isso permite que os clientes continuem a usar APIs do lado do servidor, o compositor baseado em formulário, scripts de perfil e criar públicos-alvo usando o nome global da mbox. Recomendamos que você também verifique se o mesmo nome global da mbox está configurado na página **[!UICONTROL Administração]** > **[!UICONTROL Visual Experience Composer]**, caso ainda tenha páginas que usam o at.js 1.*x*, conforme mostrado nas ilustrações a seguir.
 
 ![Modificar caixa de diálogo da at.js](../assets/modify-atjs.png)
 
@@ -315,7 +315,7 @@ Para usar o rastreamento entre domínios para a at.js v2.10 ou posterior, você 
 
 1. Instale a [biblioteca da ECID v4.3.0+](https://experienceleague.adobe.com/docs/id-service/using/release-notes/release-notes.html?lang=pt-BR) juntamente com o at.js 2.*x*. A biblioteca da ECID existe para gerenciar IDs persistentes usadas para identificar um visitante, mesmo entre domínios. Depois de instalar a biblioteca da ECID v4.3.0+ e o at.js 2.*x*, você poderá criar atividades que abrangem domínios exclusivos e rastrear usuários. É importante observar que essa funcionalidade funciona somente após a sessão expirar.
 
-1. Em vez de instalar a biblioteca ECID, se o at.js v2.10 ou posterior estiver instalado, você poderá habilitar a configuração Entre domínios na interface do usuário do [!DNL Target] em **[!UICONTROL Administration]** > **[!UICONTROL Implementation]**. (Como alternativa, você pode definir a opção _crossDomain_ como _enabled_ no código at.js.)
+1. Em vez de instalar a biblioteca ECID, se você tiver o at.js v2.10 ou posterior, poderá habilitar a configuração Entre Domínios na interface do usuário [!DNL Target] em **[!UICONTROL Administração]** > **[!UICONTROL Implementação]**. (Como alternativa, você pode definir a opção _crossDomain_ como _enabled_ no código at.js.)
 
 Para usar o rastreamento entre domínios para versões do at.js v2.*x* anteriores a 2.10, você pode implementar a opção #1 acima (instalar a biblioteca ECID).
 
@@ -325,7 +325,7 @@ Esta configuração informa à at.js 2.*x* para disparar uma solicitação nos s
 
 ### O nome da mbox global é compatível
 
-Os clientes podem especificar um nome de mbox global via **[!UICONTROL Target]** > **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]**. Essa configuração é usada pelos [!DNL Target] servidores de borda para traduzir executar > carga para o nome da mbox global inserido. Isso permite que os clientes continuem a usar APIs do lado do servidor, o compositor baseado em formulário, scripts de perfil e criar públicos-alvo que direcionem a mbox global.
+Os clientes podem especificar um nome de mbox global por meio de **[!UICONTROL Target]** > **[!UICONTROL Administração]** > **[!UICONTROL Implementação]** > **[!UICONTROL Edição]**. Essa configuração é usada pelos [!DNL Target] servidores de borda para traduzir executar > carga para o nome da mbox global inserido. Isso permite que os clientes continuem a usar APIs do lado do servidor, o compositor baseado em formulário, scripts de perfil e criar públicos-alvo que direcionem a mbox global.
 
 ### Os eventos personalizados da at.js abaixo são aplicáveis a `triggerView()` ou são somente para `applyOffer()` ou `applyOffers()`?
 
@@ -370,17 +370,17 @@ As tabelas a seguir explicam o at.js. 2.*x* compatibilidade com diferentes tipos
 
 | Tipo | Suportado? |
 | --- | --- |
-| [!UICONTROL A/B Test] | Sim |
-| [!UICONTROL Auto-Allocate] | Sim |
-| [!UICONTROL Auto-Target] | Sim |
-| [!UICONTROL Experience Targeting] | Sim |
-| [!UICONTROL Multivariate Test] | Sim |
-| [!UICONTROL Automated Personalization] | Sim |
+| [!UICONTROL Teste A/B] | Sim |
+| [!UICONTROL Alocação automática] | Sim |
+| [!UICONTROL Direcionamento automático] | Sim |
+| [!UICONTROL Direcionamento de experiência] | Sim |
+| [!UICONTROL Teste multivariado] | Sim |
+| [!UICONTROL Personalização automatizada] | Sim |
 | [!DNL Recommendations] | Sim |
 
 >[!NOTE]
 >
->Há suporte para [!UICONTROL Auto-Target] atividades por meio da at.js 2.*x* e do VEC quando todas as modificações são aplicadas ao `Page Load Event`. Quando as modificações são adicionadas a exibições específicas, somente as atividades [!UICONTROL A/B Test], [!UICONTROL Auto-Allocate] e [!UICONTROL Experience Targeting] (XT) são suportadas.
+>As atividades de [!UICONTROL Direcionamento automático] são compatíveis por meio da at.js 2.*x* e do VEC quando todas as modificações são aplicadas ao `Page Load Event`. Quando modificações são adicionadas a exibições específicas, somente as atividades de [!UICONTROL Teste A/B], [!UICONTROL Alocação automática] e [!UICONTROL Direcionamento de experiência] (XT) são suportadas.
 
 ### Integrações
 
@@ -707,7 +707,7 @@ Carga JSON do at.js 2.*x*:
 
 (parâmetro da at.js 1.*x*)
 
-Servidor de rastreamento de [!UICONTROL Analytics]. Deve ser passado para `experienceCloud > analytics > trackingServer`.
+Servidor de rastreamento do [!UICONTROL Analytics]. Deve ser passado para `experienceCloud > analytics > trackingServer`.
 
 Carga JSON do at.js 2.*x*:
 
@@ -787,7 +787,7 @@ A versão é enviada como um parâmetro de sequência de consulta por meio do pa
 
 ## Vídeo de treinamento: at.js 2.*x* diagrama de arquitetura ![Selo de visão geral](../../assets/overview.png)
 
-O at.js 2.*x* aprimora o suporte do Adobe [!DNL Target] para SPAs e integra-se com outras soluções da Experience Cloud. Este vídeo explica como tudo se une.
+A at.js 2.*x* aprimora o suporte do Adobe [!DNL Target] para SPAs e integra-se com outras soluções da Experience Cloud. Este vídeo explica como tudo se une.
 
 >[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
 

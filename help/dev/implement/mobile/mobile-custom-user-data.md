@@ -6,7 +6,7 @@ feature: Implement Mobile
 exl-id: 9cf8e8fd-1898-43b1-b339-d7a21cb35d57
 source-git-commit: e5bae1ac9485c3e1d7c55e6386f332755196ffab
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '417'
 ht-degree: 55%
 
 ---
@@ -17,7 +17,7 @@ Você pode enviar informações adicionais sobre a localização ou o usuário p
 
 >[!IMPORTANT]
 >
->Suporte para o [!DNL Adobe Mobile] versão 4.Os SDKs do *x* terminaram em 31 de agosto de 2021 e não são mais recomendados para usuários móveis do [!DNL Adobe Target].
+>O suporte para os SDKs [!DNL Adobe Mobile] versão 4.*x* terminou a partir de 31 de agosto de 2021 e não é mais recomendado para usuários móveis [!DNL Adobe Target].
 >
 >O [Adobe Experience Platform SDK para Aplicativos para Dispositivos Móveis](https://developer.adobe.com/client-sdks/documentation/){target=_blank} é a solução recomendada para habilitar soluções e serviços do [!DNL Adobe Experience Cloud] em seus aplicativos para dispositivos móveis.
 
@@ -52,7 +52,7 @@ Embora algumas chaves são reservadas, tanto os parâmetros de perfil e de mbox 
 
      Estes atributos e perfil podem ser usados entre diferentes atividades e canais.
 
-   * Chaves que não possuem nenhum perfil (por exemplo, `userMiles`) são parâmetros mbox.
+   * Chaves que não possuem nenhum prefixo (por exemplo, `userMiles`) são parâmetros mbox.
 
      Estes parâmetros só estão disponíveis durante a sessão.
 

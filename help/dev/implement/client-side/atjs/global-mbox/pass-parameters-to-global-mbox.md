@@ -1,6 +1,6 @@
 ---
 keywords: parâmetros de mbox global, targetPageParams, sequência de consulta, matriz, json, dtm
-description: Saiba como usar a função [!UICONTROL targetPageParams] para passar informações adicionais de direcionamento ou contexto para a mbox global [!DNL Adobe Target] .
+description: Saiba como usar a função [!UICONTROL targetPageParams] para transmitir informações adicionais de direcionamento ou contexto para a mbox global [!DNL Adobe Target] .
 title: Como transfiro parâmetros para uma mbox global?
 feature: at.js
 exl-id: 2a6be3e4-a618-4812-9e87-b01789705c40
@@ -17,8 +17,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 377
-ht-degree: 61%
+source-wordcount: 378
+ht-degree: 60%
 
 ---
 

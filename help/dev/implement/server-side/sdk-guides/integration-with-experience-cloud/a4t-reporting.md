@@ -1,6 +1,6 @@
 ---
 title: Integração com os relatórios do Experience Cloud A4T
-description: Integração com o Experience Cloud, Relatórios do A4T, Integração do Analytics for Target
+description: Integração com a Experience Cloud, Relatórios do A4T, Integração do Analytics for Target
 keywords: api de entrega, lado do servidor, lado do servidor, integração, a4t
 exl-id: 0d09d7a1-528d-4e6a-bc6c-f7ccd61f5b75
 feature: Implement Server-side
@@ -14,7 +14,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 392
+source-wordcount: 399
 ht-degree: 6%
 
 ---
@@ -33,7 +33,7 @@ O [!DNL Adobe Target] oferece suporte aos relatórios do A4T para atividades de 
 ## Pré-requisitos
 
 1. Configure a atividade na interface do usuário do [!DNL Adobe Target] com [!DNL Adobe Analytics] como fonte de relatórios e verifique se as contas estão habilitadas para A4T.
-1. O usuário da API gera a Adobe [!UICONTROL Marketing Cloud Visitor ID] e garante que essa ID esteja disponível quando a solicitação [!DNL Target] for executada.
+1. O usuário da API gera a [!UICONTROL ID de visitante do Marketing Cloud] do Adobe e garante que essa ID esteja disponível quando a solicitação [!DNL Target] for executada.
 
 ## [!DNL Adobe Target] encaminha automaticamente a carga [!DNL Analytics]
 

@@ -1,6 +1,6 @@
 ---
 title: Notificações da API de entrega do Adobe Target
-description: Como acionar notificações usando o [!UICONTROL Adobe Target Delivery API]?
+description: Como acionar notificações usando a [!UICONTROL API de entrega do Adobe Target]?
 keywords: api de entrega
 exl-id: 711388fd-2c1f-4ca4-939f-c56dc4bdc04a
 feature: APIs/SDKs
@@ -13,7 +13,7 @@ topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 414
+source-wordcount: 426
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Para que as notificações sejam desativadas para a mbox ou exibição correta, 
 
 ## Notificações para mboxes buscadas previamente
 
-Uma ou várias notificações podem ser enviadas por meio de uma única chamada de entrega. Determine se a métrica que precisa ser rastreada é um `click` ou `display` para cada mbox para que o `type` da notificação possa ser refletido corretamente. Além disso, forneça um `id` para cada notificação, para que seja possível determinar se uma notificação foi enviada corretamente através do [!UICONTROL &#x200B; Adobe Target Delivery API]. O `timestamp` também é importante para ser encaminhado para [!DNL Target] para indicar quando o `click` ou `display` ocorreu para uma determinada mbox para fins de relatório.
+Uma ou várias notificações podem ser enviadas por meio de uma única chamada de entrega. Determine se a métrica que precisa ser rastreada é um `click` ou `display` para cada mbox para que o `type` da notificação possa ser refletido corretamente. Além disso, transmita um `id` para cada notificação para que seja possível determinar se uma notificação foi enviada corretamente por meio da [!UICONTROL &#x200B; API de Entrega do Adobe Target]. O `timestamp` também é importante para ser encaminhado para [!DNL Target] para indicar quando o `click` ou `display` ocorreu para uma determinada mbox para fins de relatório.
 
 ```
 curl -X POST \
@@ -117,7 +117,7 @@ Se todos os `notifications` enviados para [!DNL Target] forem processados corret
 
 ## Notificações para Exibições Pré-buscadas
 
-Uma ou várias notificações podem ser enviadas por meio de uma única chamada de entrega. Determine se a métrica que precisa ser rastreada é um `click` ou `display` para cada mbox para que o tipo de notificação possa ser refletido corretamente. Além disso, transmita um `id` para cada notificação para que seja possível determinar se uma notificação foi enviada corretamente através do [!UICONTROL Adobe Target Delivery API]. O carimbo de data/hora também é importante para ser encaminhado a [!DNL Target] para indicar quando o `click` ou `display` ocorreu para uma determinada exibição para fins de relatório.
+Uma ou várias notificações podem ser enviadas por meio de uma única chamada de entrega. Determine se a métrica que precisa ser rastreada é um `click` ou `display` para cada mbox para que o tipo de notificação possa ser refletido corretamente. Além disso, transmita um `id` para cada notificação para que seja possível determinar se uma notificação foi enviada corretamente por meio da [!UICONTROL API de Entrega do Adobe Target]. O carimbo de data/hora também é importante para ser encaminhado a [!DNL Target] para indicar quando o `click` ou `display` ocorreu para uma determinada exibição para fins de relatório.
 
 ```
 curl -X POST \

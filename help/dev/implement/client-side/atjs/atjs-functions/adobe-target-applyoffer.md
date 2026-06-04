@@ -1,7 +1,7 @@
 ---
 keywords: adobe.target.applyOffer, applyOffer, applyoffer, aplicar oferta, at.js, funções, função, $8
-description: Use a função [!UICONTROL adobe.target.applyOffer()] da biblioteca de JavaScript  [!DNL Adobe Target] at.js do para aplicar o conteúdo da resposta.
-title: Como faço para usar a função [!UICONTROL adobe.target.applyOffer()]?
+description: Use a função [!UICONTROL adobe.target.applyOffer()] da biblioteca de JavaScript [!DNL Adobe Target] at.js para aplicar o conteúdo da resposta.
+title: Como usar a função [!UICONTROL adobe.target.applyOffer()]?
 feature: at.js
 exl-id: 957bbe92-8012-4bd5-95d6-1ae38b72bb16
 TQID: https://experienceleague.adobe.com/lrjsIl-gKu1SnrZapxYcoDObvUCGG2ht58QtWbQkYts
@@ -17,8 +17,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 169
-ht-degree: 67%
+source-wordcount: 173
+ht-degree: 65%
 
 ---
 
@@ -35,7 +35,7 @@ O parâmetro de opções é obrigatório e tem a seguinte estrutura:
 | Chave | Tipo | Obrigatório | Descrição |
 |--- |--- |--- |--- |
 | mbox | String | Sim | Nome da mbox<br />Com a at.js 1.3.0 (e posteriores), o Target exige que a tecla mbox seja usada. Essa chave era exigida anteriormente, mas o Target agora a aplica para garantir que tenha a validação adequada e que os clientes estejam usando a função corretamente. |
-| selector | String ou elemento DOM | Não | Elemento HTML ou seletor CSS usado para identificar o elemento HTML onde o Target deve posicionar o conteúdo da oferta. Se o seletor não for fornecido, o Target presume que o elemento HTML deve usar o HTML HEAD. |
+| selector | String ou elemento DOM | Não | Elemento HTML ou seletor CSS usado para identificar o elemento HTML onde o Target deve posicionar o conteúdo da oferta. Se o seletor não for fornecido, o Target presume que o elemento HTML deve usar HTML HEAD. |
 | Oferta | Matriz | Sim | Uma ação de matriz que deve ser aplicada ao elemento. |
 
 ## Exemplo

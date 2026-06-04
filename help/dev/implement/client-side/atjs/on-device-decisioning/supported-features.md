@@ -1,6 +1,6 @@
 ---
 keywords: implementação, biblioteca javascript, js, atjs, decisão no dispositivo, decisão no dispositivo, recursos compatíveis, $8
-description: Saiba quais recursos são compatíveis com o [!UICONTROL on-device decisioning].
+description: Saiba quais recursos são compatíveis com a [!UICONTROL decisão no dispositivo].
 title: Quais recursos são compatíveis com a Decisão no dispositivo?
 feature: at.js
 exl-id: bdd65658-6c4a-41ae-a222-59c00a11bdac
@@ -21,18 +21,18 @@ topic_v2:
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 720
+source-wordcount: 747
 ht-degree: 8%
 
 ---
 
-# Recursos com suporte para [!UICONTROL on-device decisioning]
+# Recursos com suporte para [!UICONTROL decisão no dispositivo]
 
-O SDK JS do [!DNL Adobe Target] oferece aos clientes flexibilidade para escolher entre desempenho e atualização de dados para decisões. Em outras palavras, se o fornecimento do conteúdo personalizado mais relevante e envolvente por meio do aprendizado de máquina for mais importante para você, uma chamada de servidor em tempo real deverá ser feita. Mas quando o desempenho é mais crítico, uma decisão no dispositivo e na memória deve ser tomada. Para que o [!UICONTROL on-device decisioning] funcione, consulte as seções a seguir, que listam os recursos compatíveis.
+O SDK JS do [!DNL Adobe Target] oferece aos clientes flexibilidade para escolher entre desempenho e atualização de dados para decisões. Em outras palavras, se o fornecimento do conteúdo personalizado mais relevante e envolvente por meio do aprendizado de máquina for mais importante para você, uma chamada de servidor em tempo real deverá ser feita. Mas quando o desempenho é mais crítico, uma decisão no dispositivo e na memória deve ser tomada. Para que a [!UICONTROL decisão no dispositivo] funcione, consulte as seções a seguir, que listam os recursos compatíveis.
 
 ## Tipos de atividades aceitas
 
-A tabela a seguir indica quais [tipos de atividade](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=pt-BR) criados pelo [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=pt-BR) ou pelo [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=pt-BR) (VEC) têm ou não suporte para [!UICONTROL on-device decisioning].
+A tabela a seguir indica quais [tipos de atividade](https://experienceleague.adobe.com/docs/target/using/activities/target-activities-guide.html?lang=pt-BR) criados pelo [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=pt-BR) ou pelo [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=pt-BR) (VEC) têm ou não suporte para a [!UICONTROL decisão no dispositivo].
 
 | Tipo de atividade | Suportado? |
 | --- | --- |
@@ -47,7 +47,7 @@ A tabela a seguir indica quais [tipos de atividade](https://experienceleague.ado
 
 ## Direcionamento de público
 
-A tabela a seguir indica quais regras de público-alvo têm ou não suporte para [!UICONTROL on-device decisioning].
+A tabela a seguir indica quais regras de público-alvo são suportadas ou não para a [!UICONTROL decisão no dispositivo].
 
 | Regra de público | Suportado? |
 | --- | --- |
@@ -63,9 +63,9 @@ A tabela a seguir indica quais regras de público-alvo têm ou não suporte para
 | [Intervalo de tempo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/time-frame.html?lang=pt-BR) | Sim |
 | Públicos da Adobe Experience Cloud<P>([!DNL Audiences from Adobe Analytics], [!DNL Adobe Audience Manager] e [!DNL Adobe Experience Manager]) | Não |
 
-### Direcionamento geográfico para [!UICONTROL on-device decisioning]
+### Direcionamento geográfico para [!UICONTROL decisão no dispositivo]
 
-Para manter uma latência mínima para atividades de [!UICONTROL on-device decisioning] com públicos baseados em localização geográfica, a Adobe recomenda que você mesmo forneça os valores geográficos na chamada para [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md). Defina o objeto Geo no contexto da solicitação. Isso significa no navegador uma maneira de determinar a localização de cada visitante. Por exemplo, você pode executar uma pesquisa de IP para Geo usando um serviço configurado por você. Alguns provedores de hospedagem, como a Google Cloud, fornecem essa funcionalidade por meio de cabeçalhos personalizados em cada `HttpServletRequest`.
+Para manter uma latência mínima para [!UICONTROL atividades de decisão no dispositivo] com públicos baseados em localização geográfica, a Adobe recomenda que você mesmo forneça os valores geográficos na chamada para [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md). Defina o objeto Geo no contexto da solicitação. Isso significa no navegador uma maneira de determinar a localização de cada visitante. Por exemplo, você pode executar uma pesquisa de IP para Geo usando um serviço configurado por você. Alguns provedores de hospedagem, como a Google Cloud, fornecem essa funcionalidade por meio de cabeçalhos personalizados em cada `HttpServletRequest`.
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 
@@ -87,7 +87,7 @@ window.adobe.target.getOffers({
 })
 ```
 
-No entanto, se você não conseguir realizar pesquisas de IP para Geografia no servidor, mas ainda quiser executar [!UICONTROL on-device decisioning] para solicitações de [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) que contêm públicos baseados em localização geográfica, isso também será suportado. A desvantagem dessa abordagem é que ela usa uma pesquisa remota de IP para Geo, o que adiciona latência a cada chamada `getOffers`. Essa latência deve ser menor que uma chamada `getOffers` com decisão do lado do servidor, pois atinge um CDN localizado próximo ao seu servidor. Forneça somente o campo &quot;ipAddress&quot; no objeto Geo no Contexto de sua solicitação para que o SDK recupere a localização geográfica do endereço IP do visitante. Se qualquer outro campo além de &quot;ipAddress&quot; for fornecido, o SDK [!DNL Target] não buscará os metadados de localização geográfica para resolução.
+No entanto, se você não conseguir realizar pesquisas de IP para Geografia no servidor, mas ainda quiser executar a [!UICONTROL decisão no dispositivo] para solicitações de [getOffers](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-getoffers-atjs-2.md) que contêm públicos baseados em localização geográfica, isso também será suportado. A desvantagem dessa abordagem é que ela usa uma pesquisa remota de IP para Geo, o que adiciona latência a cada chamada `getOffers`. Essa latência deve ser menor que uma chamada `getOffers` com decisão do lado do servidor, pois atinge um CDN localizado próximo ao seu servidor. Forneça somente o campo &quot;ipAddress&quot; no objeto Geo no Contexto de sua solicitação para que o SDK recupere a localização geográfica do endereço IP do visitante. Se qualquer outro campo além de &quot;ipAddress&quot; for fornecido, o SDK [!DNL Target] não buscará os metadados de localização geográfica para resolução.
 
 ```javascript {line-numbers="true"}
 window.adobe.target.getOffers({ 
@@ -107,7 +107,7 @@ window.adobe.target.getOffers({
 
 ### Método de alocação
 
-A tabela a seguir indica quais métodos de alocação têm ou não suporte para [!UICONTROL on-device decisioning].
+A tabela a seguir indica quais métodos de alocação têm ou não suporte para a [!UICONTROL decisão no dispositivo].
 
 | Método de alocação | Suportado? |
 | --- | --- |

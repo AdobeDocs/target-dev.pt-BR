@@ -1,6 +1,6 @@
 ---
 title: 'Integração com a visão geral do  [!DNL Experience Cloud] '
-description: Os SDKs do lado do servidor do Adobe [!DNL Target]  oferecem suporte a uma integração perfeita com o Adobe Analytics e o Adobe Audience Manager para que você possa aproveitar o potencial do Adobe Experience Cloud.
+description: Os SDKs do lado do servidor do Adobe [!DNL Target]  oferecem suporte a uma integração perfeita com o Adobe Analytics e o Adobe Audience Manager, para que você possa aproveitar o potencial da Adobe Experience Cloud.
 exl-id: 3645114e-320f-4cee-93ec-d75ae25d2c9b
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/dKR2224IPWCqivRDs-B--Q6eaqo1VgNLTZsoozSsPEg

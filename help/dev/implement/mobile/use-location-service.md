@@ -11,12 +11,12 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 175
-ht-degree: 4%
+source-wordcount: 180
+ht-degree: 3%
 
 ---
 
-# Use [!UICONTROL Location Service]
+# Usar [!UICONTROL Serviço de localização]
 
 A localização é um contexto importante para entender e se envolver com os usuários de dispositivos móveis. Ao usar esse contexto, os desenvolvedores de aplicativos móveis podem aprimorar o design do aplicativo e torná-lo uma experiência mais personalizada e envolvente.
 
@@ -24,4 +24,4 @@ A localização é um contexto importante para entender e se envolver com os usu
 
 Você pode usar o [!DNL Location Service] com [!DNL Target] para aproveitar as regras com [marcas no Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=pt-BR) para anexar os dados do [!UICONTROL Places] aos eventos do SDK [!DNL Adobe Target].
 
-Para obter mais informações, consulte [Usar [!UICONTROL Location Service] com [!DNL Adobe Target]](https://experienceleague.adobe.com/docs/places/using/use-places-with-other-solutions/places-target/places-target.html?lang=pt-BR) no [guia de Serviço de Localização da Adobe Experience Platform](https://experienceleague.adobe.com/docs/places/using/home.html?lang=pt-BR).
+Para obter mais informações, consulte [Usar o [!UICONTROL Serviço de Localização] com [!DNL Adobe Target]](https://experienceleague.adobe.com/docs/places/using/use-places-with-other-solutions/places-target/places-target.html?lang=pt-BR) no [guia do Serviço de Localização do Adobe Experience Platform](https://experienceleague.adobe.com/docs/places/using/home.html?lang=pt-BR).

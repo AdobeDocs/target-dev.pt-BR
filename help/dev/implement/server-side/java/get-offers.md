@@ -14,7 +14,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 652
+source-wordcount: 664
 ht-degree: 13%
 
 ---
@@ -72,10 +72,10 @@ O objeto `[!UICONTROL TargetDeliveryRequestBuilder]` tem a seguinte estrutura:
 | tntId | String | Não | Identificador principal em [!DNL Target] de um usuário. Obtido de targetCookies. Gerado automaticamente se não fornecido. |
 | mcId | String | Não | Usado para mesclar e compartilhar dados entre diferentes soluções do [!DNL Adobe] (ECID). Obtido de targetCookies. Gerado automaticamente se não fornecido. |
 | trackingServer | String | Não | O Servidor do Adobe Analytics para que [!DNL Adobe Target] e [!DNL Adobe Analytics] unam corretamente os dados. |
-| trackingServerSecure | String | Não | O [!UICONTROL Adobe Analytics Secure Server] para que [!DNL Adobe Target] e [!DNL Adobe Analytics] unam corretamente os dados. |
+| trackingServerSecure | String | Não | O [!UICONTROL Adobe Analytics Secure Server] para que o [!DNL Adobe Target] e o [!DNL Adobe Analytics] unam os dados corretamente. |
 | decisioningMethod | DecisioningMethod | Não | Pode ser usado para definir explicitamente o método de decisão ON_DEVICE ou HYBRID para a decisão no dispositivo |
 
-Os valores de cada campo devem estar em conformidade com a especificação de solicitação *[!UICONTROL Target View Delivery API]*. Para saber mais sobre o *[!UICONTROL Target View Delivery API]*, consulte [http://developers.adobetarget.com/api/#view-delivery-overview](http://developers.adobetarget.com/api/#view-delivery-overview)
+Os valores de cada campo devem estar em conformidade com a especificação de solicitação da *[!UICONTROL API de entrega de exibição do Target]*. Para saber mais sobre a *[!UICONTROL API de Entrega de Exibição do Target]*, consulte [http://developers.adobetarget.com/api/#view-delivery-overview](http://developers.adobetarget.com/api/#view-delivery-overview)
 
 
 ## Resposta

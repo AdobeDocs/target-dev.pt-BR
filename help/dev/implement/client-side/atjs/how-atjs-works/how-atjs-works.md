@@ -21,8 +21,8 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 1190
-ht-degree: 56%
+source-wordcount: 1220
+ht-degree: 54%
 
 ---
 
@@ -38,7 +38,7 @@ A biblioteca at.js é a biblioteca de implementação para implementação no la
 
 Para obter mais informações, consulte [Bibliotecas de JavaScript do Target](https://experienceleague.adobe.com/docs/target/using/introduction/how-target-works.html?lang=pt-BR#libraries).
 
-Na implementação [!DNL Target] ilustrada abaixo, as seguintes soluções da Adobe Experience Cloud são implementadas: [!DNL Analytics], Target e [!DNL Audience Manager]. Além disso, os seguintes [!DNL Experience Cloud] serviços principais estão implementados: [!DNL Adobe Experience Platform], [!UICONTROL Audiences] e [!UICONTROL Visitor ID Service].
+Na [!DNL Target]implementação ilustrada abaixo, as seguintes soluções da Adobe Experience Cloud são implementadas: [!DNL Analytics], Target e [!DNL Audience Manager]. Além disso, os seguintes [!DNL Experience Cloud] serviços principais são implementados: [!DNL Adobe Experience Platform], [!UICONTROL Públicos-alvo] e [!UICONTROL Serviço de ID do Visitante].
 
 ## Qual é a diferença entre os diagramas de fluxo de trabalho de at.js 1.*x* e at.js 2.x?
 
@@ -47,11 +47,11 @@ Consulte [Atualização da at.js 1.x para at.js 2.x](/help/dev/implement/client-
 A partir de uma exibição de alto nível, há algumas diferenças entre as duas versões:
 
 * A at.js 2.x não tem um conceito global de solicitação de mbox, mas sim uma solicitação de carregamento de página. Uma solicitação de carregamento de página pode ser visualizada como uma solicitação para recuperar o conteúdo que deve ser aplicado no carregamento da página inicial do site.
-* A at.js 2.x gerencia conceitos chamados [!UICONTROL Views], que são usados para Aplicativos de página única (SPAs). O at.js 1.*x* não está ciente deste conceito.
+* A at.js 2.x gerencia os conceitos chamados [!UICONTROL Exibições], que são usados para Aplicativos de página única (SPAs). O at.js 1.*x* não está ciente deste conceito.
 
 ## diagramas at.js 2.x
 
-Os diagramas a seguir ajudam a entender o fluxo de trabalho da at.js 2.x com o [!UICONTROL Views] e como isso melhora a integração de SPA. Para obter uma mais detalhes sobre os conceitos usados na Noções básicas sobre o funcionamento da at.js 2.x, consulte [Implementação de aplicativos de página única](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Os diagramas a seguir ajudam a entender o fluxo de trabalho da at.js 2.x com [!UICONTROL Exibições] e como isso melhora a integração de SPA. Para obter uma mais detalhes sobre os conceitos usados na Noções básicas sobre o funcionamento da at.js 2.x, consulte [Implementação de aplicativos de página única](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 (Clique na imagem para expandir até a largura total.)
 
@@ -59,16 +59,16 @@ Os diagramas a seguir ajudam a entender o fluxo de trabalho da at.js 2.x com o [
 
 | Etapa | Detalhes |
 | --- | --- |
-| 1 | A chamada retorna o [!UICONTROL Experience Cloud ID] caso o usuário seja autenticado; outra chamada sincroniza a ID do cliente. |
+| 1 | A chamada retornará a [!UICONTROL Experience Cloud ID] se o usuário estiver autenticado; outra chamada sincroniza a ID do cliente. |
 | 2 | A biblioteca at.js é carregada de forma síncrona e oculta o corpo do documento.<br />A at.js também pode ser carregada de forma assíncrona com uma opção que oculta previamente o trecho implementado na página. |
 | 3 | Uma solicitação de carregamento de página é feita, incluindo todos os parâmetros configurados (MCID, SDID e ID do cliente). |
-| 4 | Os scripts de perfil executam e, em seguida, fazem o feed na [!UICONTROL Profile Store]. O Store solicita públicos qualificados do [!UICONTROL Audience Library] (por exemplo, públicos compartilhados de [!DNL Adobe Analytics], [!DNL Audience Manager], etc.).<br />Os atributos do cliente são enviados ao [!UICONTROL Profile Store] em um processo em lote. |
+| 4 | Os scripts de perfil executam e, em seguida, fazem o feed no [!UICONTROL Repositório de Perfis]. O Store solicita públicos qualificados da [!UICONTROL Biblioteca de público-alvo] (por exemplo, públicos-alvo compartilhados de [!DNL Adobe Analytics], [!DNL Audience Manager] etc.).<br />Os atributos do cliente são enviados para a [!UICONTROL Loja de Perfil] em um processo em lote. |
 | 5 | Com base nos parâmetros de solicitação de URL e dados de perfil, [!DNL Target] decide quais atividades e experiências retornarão ao visitante para a página atual e para as exibições futuras. |
 | 6 | O conteúdo direcionado é enviado de volta para a página, incluindo, opcionalmente, valores de perfil para personalização adicional.<br />O conteúdo direcionado na página atual é revelado o mais rápido possível sem cintilação do conteúdo padrão.<br />Conteúdo direcionado para exibições que são mostradas como resultado das ações do usuário em um SPA, que é armazenado em cache no navegador para que possa ser aplicado instantaneamente, sem uma chamada de servidor adicional, quando as exibições forem acionadas por meio do `triggerView()`. |
-| 7 | Os dados do Analytics são enviados para [!UICONTROL Data Collection] servidores. |
+| 7 | Os dados do Analytics são enviados para os servidores da [!UICONTROL Coleção de dados]. |
 | 8 | Os dados de destino correspondem aos dados do Analytics por meio da SDID e são processados no [!DNL Analytics] armazenamento de relatórios.<br />[!DNL Analytics] os dados podem ser exibidos no [!DNL Analytics] e no [!DNL Target] pelos relatórios do (A4T). |
 
-Agora, onde quer que `triggerView()` seja implementado em seu SPA, o [!UICONTROL Views] e as ações são recuperados do cache e mostrados ao usuário sem uma chamada de servidor. `triggerView()` também faz uma solicitação de notificações ao backend [!DNL Target] para aumentar e registrar contagens de impressão. Para obter mais informações sobre o at.js para SPAs com Exibições, consulte [Implementação de aplicativos de página única](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
+Agora, onde quer que `triggerView()` seja implementada em seu SPA, as [!UICONTROL Exibições] e as ações serão recuperadas do cache e mostradas ao usuário sem uma chamada de servidor. `triggerView()` também faz uma solicitação de notificações ao backend [!DNL Target] para aumentar e registrar contagens de impressão. Para obter mais informações sobre o at.js para SPAs com Exibições, consulte [Implementação de aplicativos de página única](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
 
 (Clique na imagem para expandir até a largura total.)
 
@@ -76,11 +76,11 @@ Agora, onde quer que `triggerView()` seja implementado em seu SPA, o [!UICONTROL
 
 | Etapa | Detalhes |
 | --- | --- |
-| 1 | `triggerView()` é chamado no SPA para renderizar o [!UICONTROL View] e aplicar ações para modificar elementos visuais. |
+| 1 | `triggerView()` é chamado no SPA para renderizar a [!UICONTROL Exibição] e aplicar ações para modificar elementos visuais. |
 | 2 | O conteúdo direcionado para a exibição é lido do cache. |
 | 3 | O conteúdo direcionado é revelado o mais rápido possível sem oscilação do conteúdo padrão. |
-| 4 | A solicitação de notificação é enviada para [!DNL Target] [!UICONTROL Profile Store] para contar o visitante nas métricas de atividade e incremento. |
-| 5 | [!DNL Analytics] dados enviados para [!UICONTROL Data Collection Servers]. |
+| 4 | A solicitação de notificação é enviada para o [!DNL Target] [!UICONTROL Armazenamento de perfis] para contar o visitante nas métricas de atividade e incremento. |
+| 5 | [!DNL Analytics] dados enviados para [!UICONTROL Servidores de Coleta de Dados]. |
 | 6 | Os dados do [!DNL Target] são correspondidos aos dados do [!DNL Analytics] por meio da SDID e processados no armazenamento de relatórios do [!DNL Analytics]. Os dados do [!DNL Analytics] podem ser exibidos em [!DNL Analytics] e [!DNL Target] pelos relatórios do A4T. |
 
 ### Vídeo - diagrama de arquitetura da at.js 2.x
@@ -108,7 +108,7 @@ Os diagramas a seguir ajudam a entender o fluxo de trabalho da at.js 1.x.
 
 ### Vídeo - Horário comercial: dicas e visão geral da at.js (26 de junho de 2019)
 
-Este vídeo é uma gravação de &quot;No expediente&quot;, uma iniciativa da equipe [!UICONTROL Adobe Customer Care].
+Este vídeo é uma gravação de &quot;No expediente&quot;, uma iniciativa da equipe de [!UICONTROL Atendimento ao cliente da Adobe].
 
 * Os benefícios da utilização da at.js
 * As configurações da at.js

@@ -22,7 +22,7 @@ topic_v2:
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 262
+source-wordcount: 265
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Se você estiver usando os relatórios do [!DNL Analytics], o [!DNL Target] prec
 * Qual experiência eles já viram?
 * Qual conversão foi alcançada
 
-O [!DNL Adobe Experience Platform Web SDK] dá suporte a dois tipos de log de [!DNL Analytics] para casos de uso de [!UICONTROL Analytics for Target] (A4T):
+O [!DNL Adobe Experience Platform Web SDK] dá suporte a dois tipos de log de [!DNL Analytics] para casos de uso do [!UICONTROL Analytics for Target] (A4T):
 
 | Método de registro | Descrição |
 | --- | --- |

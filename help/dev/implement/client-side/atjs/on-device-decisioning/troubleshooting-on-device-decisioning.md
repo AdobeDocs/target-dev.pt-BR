@@ -1,6 +1,6 @@
 ---
 keywords: implementação, biblioteca javascript, js, atjs, decisão no dispositivo, decisão no dispositivo, at.js, no dispositivo, no dispositivo, solução de problemas, solução de problemas, implementação2
-description: Saiba como solucionar problemas do [!UICONTROL on-device decisioning] com a biblioteca at.js do.
+description: Saiba como solucionar problemas da [!UICONTROL decisão no dispositivo] com a biblioteca at.js.
 title: Como solucionar problemas da decisão no dispositivo com a biblioteca at.js de JavaScript?
 feature: at.js
 exl-id: b9530cc7-5e83-4fdf-bde9-b2492e0861ff
@@ -18,14 +18,14 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 267
+source-wordcount: 281
 ht-degree: 0%
 
 ---
 
-# Solução de problemas do [!UICONTROL on-device decisioning] para at.js
+# Solução de problemas da [!UICONTROL decisão no dispositivo] para at.js
 
-Conclua as etapas a seguir para solucionar problemas do [!UICONTROL on-device decisioning] em [!UICONTROL Adobe Target] com a biblioteca de JavaScript at.js do:
+Conclua as seguintes etapas para solucionar problemas da [!UICONTROL decisão no dispositivo] no [!UICONTROL Adobe Target] com a biblioteca at.js de JavaScript:
 
 ## Etapa 1: ativar o log do console para at.js
 
@@ -60,7 +60,7 @@ Por exemplo, para abrir DevTools no Google Chrome:
 
 ## Etapa 3: verificar o download de artefato de regra usando eventos personalizados at.js
 
-A biblioteca at.js despacha dois novos eventos personalizados para dar suporte a [!UICONTROL on-device decisioning].
+A biblioteca at.js despacha dois novos eventos personalizados para suportar a [!UICONTROL decisão no dispositivo].
 
 * `adobe.target.event.ARTIFACT_DOWNLOAD_SUCCEEDED`
 * `adobe.target.event.ARTIFACT_DOWNLOAD_FAILED`

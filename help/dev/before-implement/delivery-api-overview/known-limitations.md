@@ -1,6 +1,6 @@
 ---
 title: Considerações sobre a API de entrega do Adobe Target e limitações conhecidas
-description: Quais considerações e limitações conhecidas devo considerar ao usar o [!UICONTROL Adobe Target Delivery API]?
+description: Quais considerações e limitações conhecidas devo considerar ao usar a [!UICONTROL API de entrega do Adobe Target]?
 keywords: api de entrega
 exl-id: 49fe13b0-efcb-4b1c-a4cb-03b64fbd9214
 feature: APIs/SDKs
@@ -11,8 +11,8 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 154
-ht-degree: 7%
+source-wordcount: 158
+ht-degree: 6%
 
 ---
 

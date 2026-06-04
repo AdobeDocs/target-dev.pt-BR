@@ -16,7 +16,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 368
+source-wordcount: 369
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Não é necessário incluir os atributos de conversão de pedido nesta chamada. 
    * `orderTotal`: Total do pedido para a compra.
    * `orderId`: ID do pedido da compra.
 
-  A ilustração a seguir mostra uma [regra para [!DNL tags] em [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=pt-BR){target=_blank} que deve ser acionada somente na página [!UICONTROL Confirmation].
+  A ilustração a seguir mostra uma [regra para [!DNL tags] em [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=pt-BR){target=_blank} que deve ser acionada somente na página [!UICONTROL Confirmação].
 
   ![Página Configuração de ação](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 

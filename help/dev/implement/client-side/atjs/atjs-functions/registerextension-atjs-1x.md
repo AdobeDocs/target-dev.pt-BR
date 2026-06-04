@@ -1,7 +1,7 @@
 ---
 keywords: registerExtension, registerextension, extensão de registro, at.js, funções, função, clientCode, serverDomain, globalMboxName, globalMboxAutoCreate, tempo limite, registerExtension2
-description: Use a função [!UICONTROL registerExtension()] da biblioteca JavaScript at.js  [!DNL Adobe Target]  para registrar uma extensão específica. (at.js 1.x)
-title: Como faço para usar a função [!UICONTROL registerExtension()]?
+description: Use a função [!UICONTROL registerExtension()] da biblioteca JavaScript do  [!DNL Adobe Target] at.js para registrar uma extensão específica. (at.js 1.x)
+title: Como usar a função [!UICONTROL registerExtension()]?
 feature: at.js
 exl-id: 71decf00-84c5-4914-b0cd-bb061fa6265f
 TQID: https://experienceleague.adobe.com/qTWubp0dNesN-8vsooz8pdbjfSw1W1ktm-0bG6YRzJw
@@ -17,8 +17,8 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 274
-ht-degree: 63%
+source-wordcount: 277
+ht-degree: 62%
 
 ---
 

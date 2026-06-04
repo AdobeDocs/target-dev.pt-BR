@@ -1,6 +1,6 @@
 ---
 title: Entrega em lote ou única API de entrega do Adobe Target
-description: Como faço para usar [!UICONTROL Adobe Target Delivery API] chamadas de Entrega em lote ou únicas?
+description: Como usar chamadas de Entrega em lote ou únicas da [!UICONTROL API de Entrega do Adobe Target]?
 keywords: api de entrega
 exl-id: 525cd1f2-616a-486c-8f49-8117615500bb
 feature: APIs/SDKs
@@ -11,20 +11,20 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 448
+source-wordcount: 460
 ht-degree: 0%
 
 ---
 
 # Entrega única ou em lote
 
-O [!UICONTROL Adobe Target Delivery API] dá suporte a uma chamada de entrega única ou em lote. Uma pessoa pode fazer uma solicitação de conteúdo do servidor para uma ou várias mboxes.
+A [!UICONTROL API de Entrega do Adobe Target] dá suporte a uma chamada de entrega em lote ou única. Uma pessoa pode fazer uma solicitação de conteúdo do servidor para uma ou várias mboxes.
 
 Avalie os custos de desempenho ao decidir fazer uma única chamada do em comparação com uma chamada em lote. Se você souber todo o conteúdo que precisa ser mostrado para um usuário, a prática recomendada é recuperar o conteúdo de todas as mboxes com uma única chamada de delivery em lote, a fim de evitar fazer várias chamadas de delivery únicas.
 
 ## Chamada de entrega única
 
-Você pode recuperar uma experiência para exibir ao usuário para uma mbox por meio do [!UICONTROL Adobe Target Delivery API]. Observe que, se você estiver fazendo uma única chamada de delivery, precisará iniciar outra chamada de servidor para recuperar conteúdo adicional de uma mbox para um usuário. Isso pode ficar muito caro ao longo do tempo, portanto, avalie sua abordagem ao usar a chamada única de API de entrega.
+Você pode recuperar uma experiência para exibir ao usuário para uma mbox por meio da [!UICONTROL API de entrega do Adobe Target]. Observe que, se você estiver fazendo uma única chamada de delivery, precisará iniciar outra chamada de servidor para recuperar conteúdo adicional de uma mbox para um usuário. Isso pode ficar muito caro ao longo do tempo, portanto, avalie sua abordagem ao usar a chamada única de API de entrega.
 
 ```
 curl -X POST \

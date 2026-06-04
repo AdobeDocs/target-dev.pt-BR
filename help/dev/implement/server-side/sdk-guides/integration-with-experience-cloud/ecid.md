@@ -1,6 +1,6 @@
 ---
 title: Serviço da Experience Cloud ID (ECID)
-description: Embora o uso dos  [!DNL Target] SDKs para buscar conteúdo de [!DNL Target]  possa ser eficiente, o valor agregado do uso do [!UICONTROL Experience Cloud ID] (ECID) para rastreamento de usuários se estende além dos produtos e recursos do Adobe [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] , como relatórios do A4T e segmentos do  [!DNL Adobe Audience Manager] (AAM).
+description: Embora o uso dos  [!DNL Target] SDKs para buscar conteúdo de  [!DNL Target]  possa ser eficiente, o valor agregado do uso da [!UICONTROL Experience Cloud ID] (ECID) para rastreamento de usuários se estende além dos produtos e recursos do Adobe [!DNL Target]. The ECID enables you to leverage [!DNL Adobe Experience Cloud] , como relatórios do A4T e segmentos do  [!DNL Adobe Audience Manager] (AAM).
 exl-id: fd7e5c3e-51c1-4965-ab6a-f50a6b0c910b
 feature: Implement Server-side
 TQID: https://experienceleague.adobe.com/751nWT-fW5Ct1rZ2DgnTz2Pkt9W7-JfcusQ6eqrDp1A
@@ -17,16 +17,16 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 261
+source-wordcount: 273
 ht-degree: 0%
 
 ---
 
-# Serviço [!UICONTROL Experience Cloud ID] (ECID)
+# [!UICONTROL Serviço da Experience Cloud ID] (ECID)
 
-## Integração do [!UICONTROL Experience Cloud ID] (ECID)
+## Integração da [!UICONTROL Experience Cloud ID] (ECID)
 
-Embora o uso dos SDKs do [!DNL Target] para buscar conteúdo de [!DNL Target] possa ser poderoso, o valor agregado do uso do [!UICONTROL Experience Cloud ID] (ECID) para rastreamento de usuários se estende além de [!DNL Adobe Target]. A ECID permite que você aproveite [!DNL Adobe Experience Cloud] produtos e recursos, como os relatórios A4T e os segmentos [!DNL Adobe Audience Manager] (AAM).
+Embora o uso dos [!DNL Target] SDKs para busca de conteúdo de [!DNL Target] possa ser eficiente, o valor agregado do uso da [!UICONTROL Experience Cloud ID] (ECID) para rastreamento de usuários se estende além de [!DNL Adobe Target]. A ECID permite que você aproveite [!DNL Adobe Experience Cloud] produtos e recursos, como os relatórios A4T e os segmentos [!DNL Adobe Audience Manager] (AAM).
 
 A ECID é gerada e mantida por `visitor.js`, que mantém seu próprio estado. O arquivo `visitor.js` cria um cookie chamado `AMCV_{organizationId}`, que é usado por [!DNL Target] SDKs para integração com a ECID. Quando a resposta [!DNL Target] é retornada, você precisa atualizar a instância de Visitante no lado do cliente com `thevisitorState` retornado pelos [!DNL Target] SDKs.
 

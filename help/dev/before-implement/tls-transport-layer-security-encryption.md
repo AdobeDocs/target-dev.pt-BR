@@ -80,7 +80,7 @@ A partir de 1º de março de 2020, as APIs do [!DNL Target] não serão mais com
 * Os clientes de API que usam o Java 8 não deverão ser afetados, pois a configuração padrão é TLS 1.2.
 * Os clientes da API que usam outras estruturas precisarão entrar em contato com seus fornecedores para obterem detalhes sobre o suporte a TLS 1.2.
 
-## Acesso às interfaces das soluções da Experience Cloud
+## Acesso às interfaces das Soluções da Experience Cloud
 
 Como a interface do [!DNL Target] Standard/Premium já requer um [navegador moderno](supported-browsers.md), não prevemos problemas. Caso não seja possível se conectar ao Target, será necessário atualizar seu navegador para a versão mais recente.
 

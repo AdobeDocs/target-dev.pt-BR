@@ -13,7 +13,7 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 230
+source-wordcount: 233
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ TargetDeliveryResponse TargetClient.SendNotifications(TargetDeliveryRequest requ
 
 ## Exemplo
 
-Primeiro, vamos criar a solicitação [!UICONTROL Target Delivery API] de busca prévia de conteúdo para as mboxes `home` e `product1`.
+Primeiro, vamos compilar a solicitação da [!UICONTROL API de Entrega do Target] para pré-busca de conteúdo para as mboxes `home` e `product1`.
 
 ### \.NET
 

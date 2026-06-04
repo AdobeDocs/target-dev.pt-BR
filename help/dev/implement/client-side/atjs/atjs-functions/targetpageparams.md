@@ -1,7 +1,7 @@
 ---
 keywords: targetPageParams, targetpageparams, pageParams, pageparams, parâmetros da página, parâmetros da página, at.js, funções, função, targetPageParams0
-description: Use a função [!UICONTROL targetPageParams()] da biblioteca JavaScript do  [!DNL Adobe Target] at.js para anexar parâmetros à mbox global de fora do código da solicitação.
-title: Como faço para usar a função [!UICONTROL targetPageParams()]?
+description: Use a função [!UICONTROL targetPageParams()] da biblioteca de JavaScript [!DNL Adobe Target] at.js para anexar parâmetros à mbox global de fora do código de solicitação.
+title: Como usar a função [!UICONTROL targetPageParams()]?
 feature: at.js
 exl-id: 274e4d1f-843a-443b-ad98-7139dc4a13f8
 TQID: https://experienceleague.adobe.com/xaSxd1biZ8G-LmgYN4YW9BZ2lDyjZyPHOOlfnbXC2jU
@@ -18,8 +18,8 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 162
-ht-degree: 69%
+source-wordcount: 170
+ht-degree: 66%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 69%
 
 Este método permite anexar parâmetros ao mbox global de fora do código da solicitação.
 
-Esta função é muito útil para incluir o mesmo conjunto de parâmetros em múltiplas chamadas da mbox. A função precisa ser definida pelo cliente. Ela deve retornar uma matriz de parâmetros que serão transmitidos apenas à solicitação global da mbox. Esta função pode ser definida antes que a at.js seja carregada ou em **[!UICONTROL Administration]** > **[!UICONTROL Implementation]** > **[!UICONTROL Edit]** > **[!UICONTROL Library Header]**.
+Esta função é muito útil para incluir o mesmo conjunto de parâmetros em múltiplas chamadas da mbox. A função precisa ser definida pelo cliente. Ela deve retornar uma matriz de parâmetros que serão transmitidos apenas à solicitação global da mbox. Esta função pode ser definida antes que a at.js seja carregada ou em **[!UICONTROL Administração]** > **[!UICONTROL Implementação]** > **[!UICONTROL Edição]** > **[!UICONTROL Cabeçalho da biblioteca]**.
 
 Você pode transmitir parâmetros para target-global-mbox usando a função `[!UICONTROL targetPageParams()]` de qualquer uma das seguintes maneiras:
 

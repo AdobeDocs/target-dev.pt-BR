@@ -28,7 +28,7 @@ Os clientes da Target Standard podem aplicar cinco atributos, [!DNL Target Premi
 
 ## Formato
 
-Um arquivo .csv com [!DNL Experience Cloud] IDs (ECIDs) e pares de nome/valor do atributo é carregado via FTP ou manualmente na interface do usuário do Experience Cloud.
+Um arquivo .csv com [!DNL Experience Cloud] IDs (ECIDs) e pares de nome/valor do atributo é carregado via FTP ou manualmente na interface do usuário da Experience Cloud.
 
 ## Exemplo de casos de uso
 

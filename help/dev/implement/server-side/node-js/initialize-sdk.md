@@ -15,7 +15,7 @@ topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 321
+source-wordcount: 332
 ht-degree: 18%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 18%
 
 ## Descrição
 
-Use o método `create` para inicializar o SDK Node.js e instanciar o cliente [!UICONTROL Target] para fazer chamadas para [!DNL Adobe Target] de experimentos e experiências personalizadas.
+Use o método `create` para inicializar o SDK Node.js e instanciar o cliente [!UICONTROL Target] para fazer chamadas para [!DNL Adobe Target] de experiências e experiências personalizadas.
 
 ## Método
 
@@ -40,9 +40,9 @@ TargetClient.create(options: Object): TargetClient
 
 | Nome | Tipo | Obrigatório | Padrão | Descrição |
 | --- | --- | --- | --- | --- |
-| cliente | String | Sim | None | [!UICONTROL Adobe Target Client ID] |
-| organizationId | String | Sim | None | [!UICONTROL Experience Cloud Organization ID] |
-| ambiente | String | Não | produção | Nome do ambiente de destino. Na interface do usuário do [!DNL Target], [!UICONTROL Administration] > [!UICONTROL Environments]. |
+| cliente | String | Sim | None | [!UICONTROL ID do Adobe Target Client] |
+| organizationId | String | Sim | None | [!UICONTROL ID da organização da Experience Cloud] |
+| ambiente | String | Não | produção | Nome do ambiente de destino. Na interface do usuário do [!DNL Target], [!UICONTROL Administração] > [!UICONTROL Ambientes]. |
 | timeout | Número | Não | 3000 | Tempo limite em milissegundos |
 | serverDomain | String | Não | `*client*.tt.omtrdc.net` | Substitui o nome de host padrão |
 | seguro | Booleano | Não | true | Não definido para impor o esquema HTTP |
