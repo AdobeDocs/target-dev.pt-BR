@@ -5,17 +5,12 @@ title: Como usar a função adobe.target.sendNotifications()?
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
 TQID: https://experienceleague.adobe.com/QprkTK-0WGq-fzJ9e3FUSAZAandaZFiUY62-zQ6ajY8
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 642
 ht-degree: 83%
@@ -130,3 +125,4 @@ adobe.target.getOffers({
 >[!NOTE]
 >
 >Se você estiver usando [!DNL Adobe Analytics], `[!UICONTROL getOffers()]` com busca prévia somente e `[!UICONTROL sendNotifications()]`, a solicitação [!DNL Analytics] deverá ser disparada após a execução de `[!UICONTROL sendNotifications()]`. A finalidade disso é garantir que a SDID gerada por `[!UICONTROL sendNotifications()]` corresponda à SDID enviada para [!DNL Analytics] e [!DNL Target].
+
