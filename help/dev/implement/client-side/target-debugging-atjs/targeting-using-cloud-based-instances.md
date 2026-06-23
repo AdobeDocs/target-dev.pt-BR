@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 929e1f10bc5dd0741f0fe28cd46435e680a4a308
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 203
 ht-degree: 46%
@@ -37,4 +37,5 @@ Esses domínios e muitos outros fazem parte da [Lista de sufixos públicos](http
 A biblioteca JavaScript da at.js usa cookies para rastrear usuários, para garantir que o [!DNL [!DNL Target]] sempre apresente uma experiência consistente. Se a biblioteca JavaScript do [!DNL Target] não puder salvar cookies, as solicitações do Target serão desabilitadas.
 
 **Solução:** como prática recomendada, se você pretende usar instâncias baseadas em nuvem com domínios incluídos na Lista de sufixos públicos, certifique-se de personalizar a configuração do `cookieDomain`. Para obter mais informações, consulte [targetGlobalSettings()](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md).
+
 

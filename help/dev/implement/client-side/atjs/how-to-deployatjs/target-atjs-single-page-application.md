@@ -22,7 +22,7 @@ topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
 workflow-type: tm+mt
 source-wordcount: 2851
 ht-degree: 53%
@@ -342,3 +342,4 @@ Consulte [Implementar a at.js 2.x da Adobe Target em um aplicativo de página ú
 >[!VIDEO](https://video.tv.adobe.com/v/34802/?captions=por_br&quality=12)
 
 Consulte [Uso do Visual Experience Composer para Single Page Application (SPA VEC) no Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer-for-single-page-applications.html?lang=pt-BR) para obter mais informações.
+
