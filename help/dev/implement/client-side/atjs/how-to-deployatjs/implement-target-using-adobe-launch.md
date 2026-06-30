@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 446
 ht-degree: 61%
@@ -51,4 +51,5 @@ As seguintes vantagens se aplicam apenas se você usar tags na [!DNL Adobe Exper
   >Use a ação Enviar Sinal na extensão [!DNL Adobe Analytics] para que a chamada [!DNL Analytics] aguarde a chamada [!DNL Target]. Se você chamar `s.t()` ou `s.tl()` diretamente, usando um código personalizado, as chamadas do [!DNL Analytics] não irão esperar até que as chamadas do [!DNL Target] sejam concluídas.
 
 * **Impede o tratamento incorreto da oferta de redirecionamento:** Se você tiver [!DNL Target] e [!DNL Analytics] na página e uma oferta de redirecionamento for executada pelo Target, você poderá se deparar com uma situação em que o rastreador [!DNL Analytics] dispara uma solicitação quando não deveria (porque o usuário está sendo redirecionado para uma URL diferente). Se você implementar o [!DNL Target] e o [!DNL Analytics] por meio de tags no [!DNL Adobe Experience Platform], você não experienciará esse problema. Ao usar tags na [!DNL Adobe Experience Platform], o [!DNL Target] instrui o [!DNL Analytics] a suspender a solicitação de sinal do [!DNL Analytics].
+
 

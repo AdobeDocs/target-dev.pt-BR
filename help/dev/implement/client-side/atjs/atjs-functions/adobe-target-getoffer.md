@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 472
 ht-degree: 71%
@@ -141,4 +141,5 @@ Os parâmetros &quot;status&quot; e &quot;erro&quot; passados para o retorno de 
 |--- |--- |--- |
 | status | String | Representa o status do erro. Este parâmetro pode ter os seguintes valores:<ul><li>timeout: Indica que o tempo limite da solicitação expirou.</li><li>parseerror: Indica que a resposta não pôde ser analisada, por exemplo, se recebermos um texto HTML ou sem formatação em vez de JSON.</li><li>error: Indica um erro geral, como o recebimento do status HTTP diferente de 200 OK</li></ul> |
 | error | String | Contém dados adicionais, como mensagem de exceção ou qualquer outra coisa que possa ser útil para solução de problemas. |
+
 

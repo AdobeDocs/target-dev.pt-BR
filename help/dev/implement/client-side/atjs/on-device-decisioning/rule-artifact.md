@@ -17,7 +17,7 @@ topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 125
 ht-degree: 0%
@@ -30,4 +30,5 @@ O artefato da regra é uma representação JSON das suas atividades de [!DNL Ado
 
 * Clique [aqui](../../../../implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-overview.md) para obter mais informações sobre o artefato de regra.
 * Clique [aqui](../../../../implement/server-side/sdk-guides/on-device-decisioning/rule-artifact-example.md) para exibir um exemplo de artefato de regra JSON.
+
 
