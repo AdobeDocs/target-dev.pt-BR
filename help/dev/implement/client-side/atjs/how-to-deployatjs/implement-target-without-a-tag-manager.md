@@ -5,23 +5,12 @@ title: Posso implementar o  [!DNL Target] sem um Gerenciador de tags?
 feature: Implement Server-side
 exl-id: f675ae21-105d-4aa3-9926-59291f1136b5
 TQID: https://experienceleague.adobe.com/UkFhxuka6uds6NVcJlZqo7soQlg4kqr7Z-rvuJPuRKk
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-  - id: d3cdead0-685a-4489-9250-4bb709942f66
-  - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 4d0e7f9f2887db71229061fa64b2633a84c6d054
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: bce87dde-a4ab-44c9-8a18-ad66e4ddb377id: d3cdead0-685a-4489-9250-4bb709942f66id: e0eb8757-182f-49f3-94a4-1587d16f5094id: eddd9b14-83bd-4ff4-9072-54a4a484abb7id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
 workflow-type: tm+mt
 source-wordcount: 1785
 ht-degree: 32%
@@ -76,7 +65,7 @@ As seguintes configurações podem ser definidas no painel Métodos de implement
 | [!UICONTROL Carregamento de página habilitado (mbox global de criação automática)] | Selecione se a chamada mbox global no arquivo at.js deve ser acionada automaticamente em cada carregamento de página. |
 | [!UICONTROL Mbox global] | Selecione um nome para a mbox global. Como padrão, esse nome é target-global-mbox.<p>Caracteres especiais, incluindo o sinal gráfico (&amp;), podem ser usados em nomes de mbox com a at.js. |
 | [!UICONTROL Tempo limite (segundos)] | Se o [!DNL Target] não responder ao conteúdo no período definido, o tempo limite da chamada do servidor acaba e o conteúdo padrão é exibido. Ainda há tentativas de chamadas adicionais durante a sessão do visitante. O limite padrão é de 5 segundos.<p>A biblioteca at.js usa a configuração de tempo limite em `XMLHttpRequest`. O tempo limite começa quando a solicitação é acionada e para quando [!DNL Target] recebe uma resposta do servidor. Para obter mais informações, consulte [XMLHttpRequest.timeout](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/timeout) no Mozilla Developer Network.<p>Se o tempo limite especificado ocorrer antes de receber uma resposta, o conteúdo padrão é mostrado e o visitante pode ser contabilizado como um participante em uma atividade, pois toda a coleta de dados acontece na borda [!DNL Target]. Se a solicitação alcançar a borda [!DNL Target], o visitante será contado.<p>Leve em consideração o seguinte ao configurar o tempo limite:<ul><li>Se o valor for muito baixo, os usuários podem visualizar o conteúdo padrão na maioria das vezes, embora o visitante possa ser contabilizado como participante na atividade.</li><li>Se o valor for muito alto, os visitantes podem ver regiões em branco na sua página da Web, ou páginas em branco se você ocultar o corpo por períodos prolongados.</li></ul>Para obter uma compreensão melhor dos tempos de resposta do mbox, olhe a guia Rede nas Ferramentas de desenvolvedor do navegador. Você também pode usar ferramentas de monitoramento de desempenho na Web de terceiros, como Catchpoint.<p>**Observação**: a configuração [visitorApiTimeout](/help/dev/implement/client-side/atjs/atjs-functions/targetglobalsettings.md#visitorapitimeout) garante que [!DNL Target] não espere a resposta da API do visitante por muito tempo. Essa configuração e a configuração de Tempo-limite para at.js descrita aqui não são conflitantes. |
-| [!UICONTROL Duração do Perfil] | Essa configuração determina a duração de armazenamento do perfil do visitante. Por padrão, os perfis são armazenados por duas semanas. Essa configuração pode ser aumentada para até 90 dias.<p>Para alterar a configuração Tempo de Vida do Perfil, contate o [Atendimento ao Cliente](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=pt-BR#reference_ACA3391A00EF467B87930A450050077C). |
+| [!UICONTROL Duração do Perfil] | Essa configuração determina a duração de armazenamento do perfil do visitante. Por padrão, os perfis são armazenados por duas semanas. Essa configuração pode ser aumentada para até 90 dias.<p>Para alterar a configuração Tempo de Vida do Perfil, contate o [Atendimento ao Cliente](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C). |
 
 ### Principal método de implementação
 
@@ -90,7 +79,7 @@ Para editar a configuração do at.js, clique em **[!UICONTROL Editar]** ao lado
 
 >[!WARNING]
 >
->Antes de alterar essas configurações padrão, consulte o [Atendimento ao cliente](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html?lang=pt-BR#reference_ACA3391A00EF467B87930A450050077C) para não afetar a implementação atual.
+>Antes de alterar essas configurações padrão, consulte o [Atendimento ao cliente](https://experienceleague.adobe.com/docs/target/using/cmp-resources-and-contact-information.html#reference_ACA3391A00EF467B87930A450050077C) para não afetar a implementação atual.
 
 Além das configurações explicadas acima, as seguintes configurações específicas da at.js também estão disponíveis:
 
@@ -295,4 +284,5 @@ A mbox de confirmação de pedido utiliza os seguintes parâmetros:
 | orderId | Valor único para identificar um pedido de contagem de conversão.<p>O `orderId` deve ser exclusivo. Pedidos duplicados são ignorados em relatórios. |
 | orderTotal | Valor monetário para a compra.<p>Não transmita o símbolo de moeda. Use um ponto (não uma vírgula) para indicar valores decimais. |
 | productPurchasedId (Opcional) | Lista separada por vírgula de IDs de produtos comprados no pedido.<p>Essas IDs de produto são exibidas no relatório de auditoria para oferecer suporte às análises de relatório adicionais. |
+
 
