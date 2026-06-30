@@ -83,7 +83,7 @@ adobe.target.getOffers({
 
 ## Exemplo: Melhor compatibilidade de `triggerView()` com a [!UICONTROL extensão do Auxiliar de edição visual do Adobe]
 
-Considere o seguinte ao usar a [extensão Auxiliar de edição visual do Adobe](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}:
+Considere o seguinte ao usar a [extensão Auxiliar de edição visual do Adobe](https://experienceleague.adobe.com/pt-br/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension){target=_blank}:
 
 Devido às novas políticas de Manifesto V3 do [!DNL Googl]e para [!DNL Chrome] extensões, a [!UICONTROL extensão Auxiliar de Edição Visual] deve aguardar o evento `DOMContentLoaded` antes de carregar as bibliotecas [!DNL Target] no VEC. Esse atraso pode fazer com que as páginas da Web acionem a chamada `triggerView()` antes que as bibliotecas de criação estejam prontas, resultando no preenchimento da exibição ao carregar.
 
