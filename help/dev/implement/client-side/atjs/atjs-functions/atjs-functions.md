@@ -5,18 +5,12 @@ title: Quais funções posso usar com a at.js?
 feature: at.js
 exl-id: 1efed365-8a74-4c85-bdb1-8daaaf53d642
 TQID: https://experienceleague.adobe.com/7uABK1rDaMpA7a0skEo3g1KxTnoc-gif-uHMkMnE8QE
-product_v2:
-  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
-feature_v2:
-  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
-subfeature_v2:
-  - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+product_v2: id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+feature_v2: id: c93393a4-e558-47e1-992e-c91ed4d480ce
+subfeature_v2: id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
 source-wordcount: 557
 ht-degree: 38%
@@ -43,5 +37,6 @@ Lista de funções que podem ser usadas com a biblioteca at.js de JavaScript do 
 | [[!UICONTROL registerExtension(options)]](/help/dev/implement/client-side/atjs/atjs-functions/registerextension-atjs-1x.md)<P>(at.js 1.x) | Fornece uma forma padrão de registrar uma extensão específica.<P>**Observação:** essa função está disponível somente para a at.js versão 1.*x*. Essa função foi substituída pelo lançamento da at.js 2.x. Essa função retorna o conteúdo padrão se for usada com a at.js 2.x. |
 | [[!UICONTROL Eventos personalizados da at.js]](/help/dev/implement/client-side/atjs/atjs-functions/atjs-custom-events.md) | Os eventos personalizados da at.js informam quando uma solicitação de mbox ou oferta falha ou é bem-sucedida. |
 | [[!UICONTROL adobe.target.sendNotifications(options)]](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21.md)<P>(at.js 2.1.0) | Esta função envia uma notificação para a borda [!DNL Target] quando uma experiência é renderizada sem usar `[!UICONTROL adobe.target.applyOffer()]` ou `[!UICONTROL adobe.target.applyOffers()]`.<P>**Observação**: esta função foi introduzida na at.js 2.1.0 e estará disponível em todas as versões a partir da 2.1.0. |
+
 
 
