@@ -17,7 +17,7 @@ topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
 source-wordcount: 2994
 ht-degree: 64%
@@ -314,6 +314,7 @@ O doctype HTML 5 garante que a página carregue no modo padrão. Ao carregar no 
 ## A at.js funciona em um ambiente de aplicativo Iônico.
 
 Essa implementação nunca foi testada, pois a at.js não tinha a intenção de funcionar em um ambiente que não fosse da Web. A [!DNL Adobe] recomenda seus [SDKs para implementações móveis](/help/dev/implement/mobile/overview.md).
+
 
 
 

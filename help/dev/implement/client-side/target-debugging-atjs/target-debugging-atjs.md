@@ -15,7 +15,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d851e2344279caeae25e4823ca86b9c17efd63
+source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
 source-wordcount: 178
 ht-degree: 6%
@@ -45,5 +45,6 @@ Os vídeos a seguir o orientam pelo processo de depuração:
 ### Mbox Trace ![Selo de visão geral](../../assets/overview.png)
 
 >[!VIDEO](https://video.tv.adobe.com/v/33345/?captions=por_br&quality=12)
+
 
 
