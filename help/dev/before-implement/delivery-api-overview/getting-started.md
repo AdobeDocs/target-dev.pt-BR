@@ -63,6 +63,6 @@ O `clientCode` pode ser recuperado da interface do usuário [!DNL Target] navega
 
 Antes de fazer uma chamada da [!UICONTROL API de entrega do Target], siga estas etapas para garantir que uma resposta contenha a experiência relevante para mostrar aos usuários finais:
 
-1. Crie uma atividade [!DNL Target] (A/B, XT, AP ou Recommendations) usando o [Criador baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=en) ou o [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html).
+1. Crie uma atividade [!DNL Target] (A/B, XT, AP ou Recommendations) usando o [Criador baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=pt-BR) ou o [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=pt-BR).
 1. Use a API de Entrega para obter uma resposta para as mboxes usadas na atividade [!DNL Target] criada na Etapa 2.
 1. Apresente a experiência ao visitante.

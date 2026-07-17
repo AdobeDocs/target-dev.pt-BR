@@ -35,7 +35,7 @@ Informações sobre [!DNL Adobe Target] APIs de entrega do lado do servidor, SDK
 >
 >Se sua implementação usa at.js e [!DNL AppMeasurement] no lado do cliente, você deve usar a [!UICONTROL API de entrega do Target] e os SDKs do lado do servidor discutidos abaixo.
 >
->Se sua implementação usa a [!UICONTROL Adobe Experience Platform Web SDK], você deve usar a [[!UICONTROL Adobe Experience Platform] [!UICONTROL API do Edge Network Server]](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
+>Se sua implementação usa a [!UICONTROL Adobe Experience Platform Web SDK], você deve usar a [[!UICONTROL Adobe Experience Platform] [!UICONTROL API do Edge Network Server]](https://experienceleague.adobe.com/pt-br/docs/experience-platform/edge-network-server-api/overview){target=_blank}.
 
 O processo a seguir ocorre em uma implementação do lado do servidor do [!DNL Target]:
 
@@ -104,7 +104,7 @@ Para chamadas de API do Interact que não sejam da SDK, observe os seguintes req
 
 Quando [!DNL Target] classifica uma solicitação como tráfego de bot, a personalização pode falhar ou parecer intermitente porque a pesquisa de perfil, a avaliação de segmento e o conteúdo personalizado de atividades como [!UICONTROL Recomendações] e [!UICONTROL Direcionamento automático] são suprimidos, conforme descrito abaixo.
 
-Saiba mais sobre como implementar o com a SDK na [[!DNL Adobe Experience Platform Web SDK] visão geral](https://experienceleague.adobe.com/en/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}.
+Saiba mais sobre como implementar o com a SDK na [[!DNL Adobe Experience Platform Web SDK] visão geral](https://experienceleague.adobe.com/pt-br/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}.
 
 **Exemplo de solicitação de API Interact (os cabeçalhos devem incluir `User-Agent`):**
 
