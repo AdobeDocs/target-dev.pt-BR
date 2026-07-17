@@ -14,14 +14,18 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+source-git-commit: b6b447ccb88925a8efb6ff6a80ae475c8780dbc8
 workflow-type: tm+mt
-source-wordcount: 132
+source-wordcount: 180
 ht-degree: 1%
 
 ---
 
 # Introdução à [!UICONTROL API de entrega do Adobe Target]
+
+>[!IMPORTANT]
+>
+>Este guia se aplica a [!DNL at.js] e implementações diretas do lado do servidor que chamam a [!UICONTROL API de Entrega do Target] diretamente. Se você estiver implementando o [!DNL Target] usando o [!UICONTROL Adobe Experience Platform Web SDK], use o comando Interact API (`sendEvent` sobre o [!UICONTROL Experience Platform Edge Network]). Consulte [Adobe Experience Platform Web SDK](/help/dev/implement/client-side/aep-web-sdk/aep-web-sdk-overview.md) para obter mais informações.
 
 Uma chamada da [!UICONTROL API de Entrega do Target] tem esta aparência:
 
