@@ -20,9 +20,9 @@ topic_v2:
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: eb30f47f-d87a-400f-8f78-63ce7979ff56
-source-git-commit: 45af56b5ac64eb1db67c1bfdfecd6887dce990ff
+source-git-commit: 7a393cc6a3f30a276a256cdabb5b42fe08f3c505
 workflow-type: tm+mt
-source-wordcount: 825
+source-wordcount: 820
 ht-degree: 9%
 
 ---
@@ -94,19 +94,19 @@ As APIs do Recommendations permitem interagir programaticamente com [!DNL Target
 
 ## [!DNL Platform Edge Network] chamadas de API sem um SDK {#platform-edge-api-user-agent}
 
-O [!UICONTROL Adobe Experience Platform Web SDK] e outras integrações do SDK com suporte incluem um valor `User-Agent` semelhante a um navegador nos cabeçalhos de solicitação HTTP ao chamar o [!DNL Experience Platform Edge Network]. As integrações do lado do servidor que usam a [API de Interação](https://experienceleague.adobe.com/en/docs/experience-platform/edge-network/server-api/interact){target=_blank} pública sem uma SDK devem fornecer explicitamente esse cabeçalho.
+O [!UICONTROL Adobe Experience Platform Web SDK] e outras integrações do SDK com suporte incluem um valor `User-Agent` semelhante a um navegador nos cabeçalhos de solicitação HTTP ao chamar o [!DNL Experience Platform Edge Network]. As integrações do lado do servidor que usam a [API do Edge](https://developer.adobe.com/data-collection-apis/docs/getting-started/personalization){target=_blank} pública sem uma SDK devem fornecer explicitamente esse cabeçalho.
 
-Para chamadas de API do Interact que não sejam da SDK, observe os seguintes requisitos:
+Para chamadas de API do Edge que não sejam da SDK, observe os seguintes requisitos:
 
 * Inclua um `User-Agent` válido, semelhante a um navegador, nos cabeçalhos de solicitação HTTP. Um valor de visitante ou agente-usuário no corpo da solicitação JSON não atende aos requisitos de detecção de bot para esse padrão de integração.
 * Não use valores de espaço reservado ou valores que não sejam do navegador, por exemplo, `MyApp/1.0`, esses valores podem resultar na classificação de bot.
 * Um nome ou versão do SDK não é necessário para chamadas públicas de API do Edge. Para este cenário, um cabeçalho HTTP `User-Agent` válido é o elemento necessário.
 
-Quando [!DNL Target] classifica uma solicitação como tráfego de bot, a personalização pode falhar ou parecer intermitente porque a pesquisa de perfil, a avaliação de segmento e o conteúdo personalizado de atividades como [!UICONTROL Recomendações] e [!UICONTROL Direcionamento automático] são suprimidos, conforme descrito abaixo.
+Quando [!DNL Target] classifica uma solicitação como tráfego de bot, a personalização pode falhar ou parecer intermitente porque a pesquisa de perfil, a avaliação de segmento e o conteúdo personalizado de atividades como [!UICONTROL Recomendações] e [!UICONTROL Direcionamento automático] foram suprimidos.
 
 Saiba mais sobre como implementar o com a SDK na [[!DNL Adobe Experience Platform Web SDK] visão geral](https://experienceleague.adobe.com/pt-br/docs/target-dev/developer/client-side/aep/aep-web-sdk-overview){target=_blank}.
 
-**Exemplo de solicitação de API Interact (os cabeçalhos devem incluir `User-Agent`):**
+**Exemplo de solicitação de API do Edge (os cabeçalhos devem incluir `User-Agent`):**
 
 ```http
 POST https://edge.adobedc.net/ee/v2/interact?dataStreamId=YOUR_DATASTREAM_ID&requestId=YOUR_REQUEST_ID
