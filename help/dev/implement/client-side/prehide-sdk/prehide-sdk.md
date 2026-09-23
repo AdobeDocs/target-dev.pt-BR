@@ -1,16 +1,13 @@
 ---
 keywords: pré-ocultar SDK, cintilação, anti-cintilação, pré-ocultação, pré-ocultação, liga, at.js, implementação, consentimento, CMP, posicionamento de script, em linha, externo, seleção de SDK
-description: Saiba como integrar o  [!DNL Adobe Target] Pré-ocultar SDK para eliminar o flash de conteúdo não personalizado (cintilação) durante o carregamento da página. O SDK funciona com o Adobe Alloy (Web SDK) e a at.js.
+description: Saiba como integrar a SDK de pré-ocultação [!DNL Adobe Target] para eliminar o flash de conteúdo não personalizado (cintilação) durante o carregamento da página. O SDK funciona com o Adobe Alloy (Web SDK) e a at.js.
 title: Pré-ocultar Guia de integração do SDK
 feature: Implementation
-hide: true
-source-git-commit: bb3c2906a52daecca03cf29331d9bec5e2955d2e
+source-git-commit: 35ac4480ead5069169a2c55d35b43d3c1a81d78a
 workflow-type: tm+mt
-source-wordcount: '1007'
-ht-degree: 0%
-
+source-wordcount: '1066'
+ht-degree: 1%
 ---
-
 
 # Pré-ocultar guia de integração do SDK
 
@@ -63,7 +60,8 @@ Uma pequena biblioteca síncrona de JavaScript que impede a cintilação visual 
 >[!IMPORTANT]
 >
 >O SDK Prehide deve ser executado antes de Alloy/at.js. Se o Alloy for carregado primeiro, a página renderiza o conteúdo não personalizado e, em seguida, renderiza novamente. Essa é a cintilação exata que esse SDK foi projetado para evitar.
-></br>>Não adicione `async` ou `defer` à marca de script Prehide do SDK. A execução síncrona é necessária para que a regra de ocultação seja inserida antes que o navegador comece a dispor a página.
+></br>
+>Não adicione `async` ou `defer` à tag de script Prehide do SDK. A execução síncrona é necessária para que a regra de ocultação seja inserida antes que o navegador comece a dispor a página.
 
 O SDK Pré-oculto deve aparecer anteriormente no documento em relação ao SDK [!DNL Adobe Target] que faz a limpeza depois dele. A ordem de carga é não negociável:
 
