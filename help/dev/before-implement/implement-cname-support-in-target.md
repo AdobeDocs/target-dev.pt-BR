@@ -1,30 +1,39 @@
 ---
 keywords: atendimento ao cliente;cname;programa de certificado;nome canônico;cookies;certificado;amc;certificado gerenciado pela adobe;digicert;validação de controle de domínio;dcv
-description: Trabalhe com o  [!DNL Adobe] Client Care para implementar o suporte CNAME (Canonical Name) no  [!DNL Adobe Target] para lidar com problemas de bloqueio de anúncios.
+description: Trabalhe com o Atendimento ao Cliente do [!DNL Adobe] para implementar o suporte CNAME (Canonical Name) no [!DNL Adobe Target] para lidar com problemas de bloqueio de anúncios.
 title: Como usar CNAME no Target?
 feature: Privacy & Security
 role: Developer
 exl-id: bf533771-6d46-48ba-964c-3ad9ce9f7352
-TQID: https://experienceleague.adobe.com/gTS60hypD2WGc2fJh-sUkq2-pkzt2KnM4CzSQ050L40
+TQID: 'https://experienceleague.adobe.com/gTS60hypD2WGc2fJh-sUkq2-pkzt2KnM4CzSQ050L40'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: f599e456-545c-47e5-8e50-b7dfe3579517
+    internal-label: Governance and control
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
+  - id: ee6498fb-34b1-4925-be4a-9ec7a38e8dab
+    internal-label: Privacy and security
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Privacy
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1255
+source-wordcount: '1326'
 ht-degree: 1%
-
 ---
-
 # CNAME e [!DNL Target]
 
 Instruções para trabalhar com o Atendimento ao Cliente do [!DNL Adobe] para implementar o suporte CNAME (Canonical Name) no [!DNL Adobe Target]. Use o CNAME para lidar com problemas de bloqueio de anúncios ou com políticas de cookies relacionadas a ITP (Intelligent Tracking Prevention). Com o CNAME, as chamadas são feitas para um domínio pertencente ao cliente, em vez de para um domínio pertencente a [!DNL Adobe].
@@ -39,11 +48,11 @@ Instruções para trabalhar com o Atendimento ao Cliente do [!DNL Adobe] para im
    * Comprador de certificado SSL ([!DNL Adobe] é altamente recomendado, consulte Perguntas frequentes): Adobe/customer
    * Se o cliente estiver adquirindo o certificado, também conhecido como &quot;Traga seu próprio certificado&quot; (BYOC), preencha estes detalhes adicionais:
 
-      * Organização do certificado (exemplo: Example Company Inc):
-      * Unidade organizacional do certificado (opcional, por exemplo: Marketing):
-      * País do certificado (exemplo: EUA):
-      * Estado/região do certificado (exemplo: Califórnia):
-      * Cidade do certificado (exemplo: San Jose):
+     * Organização do certificado (exemplo: Example Company Inc):
+     * Unidade organizacional do certificado (opcional, por exemplo: Marketing):
+     * País do certificado (exemplo: EUA):
+     * Estado/região do certificado (exemplo: Califórnia):
+     * Cidade do certificado (exemplo: San Jose):
 
 1. Para cada solicitação de nome de host, o Adobe criará a implementação e voltará com um nome de registro CNAME para você criar, que conterá uma sequência aleatória com o sufixo `tt.omtrdc.net`
 

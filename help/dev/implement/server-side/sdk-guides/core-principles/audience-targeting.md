@@ -1,26 +1,32 @@
 ---
 title: Direcionamento de público
-description: Os públicos-alvo podem ser usados para direcionar suas atividades de experimentação e personalização. [!DNL Adobe Target] o oferece suporte a vários recursos avançados de direcionamento de público-alvo prontos para uso.
+description: Os públicos podem ser usados para direcionar suas atividades de experimentação e personalização. O [!DNL Adobe Target] oferece suporte a uma variedade de recursos avançados de direcionamento de público pronto para uso.
 exl-id: df1bd856-e848-452c-90a0-abf29e7a2313
 feature: Implement Server-side
-TQID: https://experienceleague.adobe.com/BmKrCmWIkEkNHiipZ-DqDlhzOT7bVmKHl9de5uXhJQU
+TQID: 'https://experienceleague.adobe.com/BmKrCmWIkEkNHiipZ-DqDlhzOT7bVmKHl9de5uXhJQU'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1069
-ht-degree: 17%
-
+source-wordcount: '1070'
+ht-degree: 18%
 ---
-
 # Direcionamento de público
 
 ## Visão geral
@@ -47,8 +53,8 @@ Para obter mais informações, consulte [[!DNL Target] Biblioteca](https://exper
 
 ### Geografia
 
-Para obter mais informações, consulte [Geo](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=pt-BR).
-&#x200B;
+Para obter mais informações, consulte [Geográfico](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/geo.html?lang=pt-BR).
+&#x200B;&#x200B;
 * País/Região
 * Estado
 * Cidade

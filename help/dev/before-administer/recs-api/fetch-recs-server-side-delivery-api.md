@@ -3,26 +3,38 @@ title: Como buscar recomendações com a API de entrega
 description: Este artigo orienta os desenvolvedores sobre as etapas necessárias para buscar conteúdo das recomendações usando a API de entrega do Adobe Target.
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: 9b391f42-2922-48e0-ad7e-10edd6125be6
-TQID: https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk
+TQID: 'https://experienceleague.adobe.com/K94vITD8ZSDXLkC42Vm02eC5RmHudBvukXNcdPFVjzk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 129298289889a3b133eb07d0caeade2fd0b5568e
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1284
+source-wordcount: '1380'
 ht-degree: 1%
-
 ---
-
 # Busca de recomendações com a API de entrega
 
 As APIs do Adobe Target e do Adobe Target Recommendations podem ser usadas para fornecer respostas a páginas da Web, mas também podem ser usadas em experiências que não sejam baseadas no HTML, incluindo aplicativos, telas, consoles, emails, quiosques e outros dispositivos de exibição. Em outras palavras, quando as bibliotecas do Target e o JavaScript não podem ser usados, a [API de entrega do Target](/help/dev/implement/delivery-api/overview.md) ainda habilita o acesso à gama completa de funcionalidades do Target, para oferecer experiências personalizadas.
@@ -54,7 +66,7 @@ Para usar a API de entrega para fornecer experiências do Target, incluindo reco
 
 Para criar recomendações que podem ser usadas com a API de entrega, use o [Criador baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=pt-BR).
 
-1. Primeiro, crie e salve um design baseado em JSON para usar em sua recomendação. Para obter informações de JSON de exemplo, além de informações de plano de fundo sobre como as respostas JSON podem ser retornadas ao configurar uma atividade baseada em formulário, consulte a documentação em [Criação de Designs de Recomendação](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=pt-BR). Neste exemplo, o nome do design é *Simple JSON.*
+1. Primeiro, crie e salve um design baseado em JSON para usar em sua recomendação. Para obter informações de JSON de exemplo, além de informações de plano de fundo sobre como as respostas JSON podem ser retornadas ao configurar uma atividade baseada em formulário, consulte a documentação em [Criação de Designs de Recomendação](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-design/create-design.html?lang=pt-BR). Neste exemplo, o design é nomeado como *JSON simples.*
    ![server-side-create-recs-json-design.png](assets/server-side-create-recs-json-design.png)
 
 1. No Destino, navegue até **[!UICONTROL Atividades]** > **[!UICONTROL Criar Atividade]** > **[!UICONTROL Recomendações]** e selecione **[!UICONTROL Formulário]**.
@@ -62,7 +74,7 @@ Para criar recomendações que podem ser usadas com a API de entrega, use o [Cri
    ![server-side-create-recs.png](assets/server-side-create-recs.png)
 
 1. Selecione uma Propriedade e clique em **[!UICONTROL Avançar]**.
-1. Defina o local em que você deseja que os usuários recebam a resposta da recomendação. O exemplo abaixo usa um local denominado *api_charter*. Selecione seu design baseado em JSON, criado anteriormente, chamado *JSON Simples.*
+1. Defina o local em que você deseja que os usuários recebam a resposta da recomendação. O exemplo abaixo usa um local denominado *api_charter*. Selecione seu design baseado em JSON, criado anteriormente, chamado *JSON simples.*
    ![server-side-create-recs-form.png](assets/server-side-create-recs-form1.png)
 1. Salve e ative a recomendação. Ele gerará resultados. [Quando os resultados estiverem prontos](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/previewing-and-launching-your-recommendations-activity.html?lang=pt-BR), você poderá usar a API de Entrega para recuperá-los.
 
@@ -72,19 +84,19 @@ A sintaxe da [API de Entrega](/help/dev/implement/delivery-api/overview.md) é:
 
 `POST https://{{CLIENT_CODE}}.tt.omtrdc.net/rest/v1/delivery`
 
-1. Observe que o código de cliente é obrigatório. Lembrando que o código de cliente pode ser encontrado na Adobe Target navegando até **[!UICONTROL Recommendations]** > **[!UICONTROL Configurações]**. Observe o valor **Código do cliente** na seção **Token de API do Recommendation**.
+1. Observe que o código de cliente é obrigatório. Lembrando que o código de cliente pode ser encontrado na Adobe Target navegando até **[!UICONTROL Recommendations]** > **[!UICONTROL Configurações]**. Anote o valor de **Código do cliente** na seção **Token de API do Recommendation**.
    ![client-code.png](assets/client-code.png)
 1. Depois de ter o código de cliente, crie a chamada da API de entrega. O exemplo abaixo começa com a **[!UICONTROL Chamada da API de Entrega de Mboxes em Lote da Web]** fornecida na [coleção do Postman da API de Entrega](../../implement/delivery-api/overview.md#section/Getting-Started/Postman-Collection), fazendo modificações relevantes. Por exemplo:
    * os objetos **navegador** e **endereço** foram removidos do **Corpo**, pois não são necessários para casos de uso que não sejam da HTML
    * *api_charter* está listado como o nome do local neste exemplo
    * entity.id está especificada, pois esta recomendação se baseia na Similaridade de Conteúdo, que requer que uma chave de item atual seja passada para o Target.
-     ![lado do servidor-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
+     ![server-side-Delivery-API-call.png](assets/server-side-delivery-api-call2.png)
 Lembre-se de configurar os parâmetros de consulta corretamente. Por exemplo, certifique-se de especificar `{{CLIENT_CODE}}` conforme necessário. <!-- Q: In the updated call syntax, entity.id is listed as a profileParameter instead of an mboxParameter as in older versions. Q: Old image ![server-side-create-recs-post.png](assets/server-side-create-recs-post.png) Old accompanying text: "Note this recommendation is based on Content Similar products based on the entity.id sent via mboxParameters." -->
      ![código-cliente3](assets/client-code3.png)
 1. Envie a solicitação. Isso é executado com base no local *api_charter*, que tem uma recomendação ativa em execução, definido com seu design JSON que gerará uma lista de entidades recomendadas.
 1. Receba uma resposta com base no design JSON.
    ![server-side-create-recs-json-response2.png](assets/server-side-create-recs-json-response2.png)
-A resposta inclui a ID de chave, bem como as IDs de entidade das entidades recomendadas.
+   A resposta inclui a ID de chave, bem como as IDs de entidade das entidades recomendadas.
 
 Usar a API de entrega com o Recommendations dessa maneira permite executar etapas adicionais antes de exibir recomendações para o visitante em um dispositivo que não seja da HTML. Por exemplo, você pode obter a resposta da API de entrega para executar uma pesquisa adicional em tempo real dos detalhes do atributo da entidade (inventário, preço, classificação e assim por diante) de outro sistema (como um CMS, PIM ou plataforma de comércio eletrônico), antes de exibir os resultados finais.
 

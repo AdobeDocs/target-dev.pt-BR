@@ -1,15 +1,25 @@
 ---
 title: Use [!DNL Adobe Target] com [!DNL Web SDK] para personalização.
-description: Saiba como renderizar conteúdo personalizado com o [!DNL Experience Platform Web SDK] usando [!DNL Adobe Target].
+description: Saiba como renderizar conteúdo personalizado com o [!DNL Experience Platform Web SDK] usando o [!DNL Adobe Target].
 feature: AEP Web SDK
 exl-id: 31c00779-20a8-4d18-9ee4-0430e5e9a84c
-source-git-commit: 925a150c06057f5830a1370eee65b5984f81a72d
+product_v2:
+  - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: '1560'
+source-wordcount: '1563'
 ht-degree: 5%
-
 ---
-
 # Usar [!DNL Adobe Target] e [!DNL Web SDK] para personalização
 
 O [!DNL Adobe Experience Platform] [!DNL Web SDK] pode entregar e renderizar experiências personalizadas gerenciadas no [!DNL Adobe Target] para o canal da Web. Você pode usar um editor do WYSIWYG, chamado de [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=pt-BR) (VEC), ou uma interface não visual, o [Experience Composer baseado em formulário](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html?lang=pt-BR), para criar, ativar e entregar suas atividades e experiências de personalização.
@@ -23,7 +33,7 @@ O [!DNL Adobe Experience Platform] [!DNL Web SDK] pode entregar e renderizar exp
 Os seguintes recursos foram testados e atualmente têm suporte no [!DNL Target]:
 
 * [Testes A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=pt-BR)
-* [Relatórios de impressão e conversão do A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR)
+* [Relatórios de impressão e conversão do A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
 * [Atividades do Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=pt-BR)
 * [Atividades de direcionamento de experiência](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=pt-BR)
 * [Testes multivariados (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=pt-BR)
@@ -58,7 +68,7 @@ Para habilitar [!DNL Target], faça o seguinte:
 Em seguida, opcionalmente, você também pode adicionar as seguintes opções:
 
 * **`decisionScopes`**: recupere atividades específicas (úteis para atividades criadas com o compositor baseado em formulário) adicionando esta opção aos seus eventos.
-* **[Ocultar previamente o trecho](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/personalization/manage-flicker)**: oculta apenas determinadas partes da página.
+* **[Ocultar previamente o trecho](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/manage-flicker)**: oculta apenas determinadas partes da página.
 
 ## Usar o VEC [!UICONTROL Adobe Target]
 
