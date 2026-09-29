@@ -1,23 +1,30 @@
 ---
 keywords: aplicativo móvel, local de aplicativo móvel, aplicativo móvel target, métricas de sucesso no aplicativo móvel
 description: Veja exemplos de código para ajudá-lo a saber como criar locais e métricas de sucesso em aplicativos iOS para que você possa usar o [!DNL Adobe Target] para personalizar e otimizar seu aplicativo.
-title: Como criar [!DNL Target] Locais e Métricas de sucesso em um aplicativo do iOS?
+title: Como criar locais e métricas de sucesso do [!DNL Target] em um aplicativo iOS?
 feature: Implement Mobile
 exl-id: 755c8b26-5c60-48fc-9e7e-5e97a25edb78
-TQID: https://experienceleague.adobe.com/frolzqCgdL0iz5Z3E8OaJmP6yiVq7jEYiWn6LD4bocA
+TQID: 'https://experienceleague.adobe.com/frolzqCgdL0iz5Z3E8OaJmP6yiVq7jEYiWn6LD4bocA'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 level_v2:
   - id: e8ccd51f-da0d-4e3b-939b-e30d5ebb1ea5
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Beginner
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 469
-ht-degree: 63%
-
+source-wordcount: '471'
+ht-degree: 62%
 ---
-
 # iOS - Criar um local e métrica de sucesso [!DNL Target]
 
 Para usar o [!DNL Target] no seu aplicativo móvel, crie um local e métrica de sucesso.
@@ -28,11 +35,11 @@ Para usar o [!DNL Target] no seu aplicativo móvel, crie um local e métrica de 
 >
 >O [Adobe Experience Platform SDK para Aplicativos para Dispositivos Móveis](https://developer.adobe.com/client-sdks/documentation/){target=_blank} é a solução recomendada para habilitar soluções e serviços do [!DNL Adobe Experience Cloud] em seus aplicativos para dispositivos móveis.
 
-Esta seção inclui amostras de código que podem ser usadas como molde para seu aplicativo. As amostras nesta seção contém código para o iOS. Os mesmos padrões se aplicam ao Android. Sintaxe específica para o Android pode ser encontrada no guia [Android SDK 4.x para Soluções da Experience Cloud](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html?lang=pt-BR).
+Esta seção inclui amostras de código que podem ser usadas como molde para seu aplicativo. As amostras nesta seção contém código para o iOS. Os mesmos padrões se aplicam ao Android. Sintaxe específica para o Android pode ser encontrada no guia [Android SDK 4.x para Soluções da Experience Cloud](https://experienceleague.adobe.com/docs/mobile-services/android/target-android/target-main.html).
 
 >[!NOTE]
 >
->Consulte a [Documentação móvel](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html?lang=pt-BR) para obter uma lista de todos os métodos [!DNL Target] disponíveis.
+>Consulte a [Documentação móvel](https://experienceleague.adobe.com/docs/mobile-services/ios/target-ios/c-target-methods.html) para obter uma lista de todos os métodos [!DNL Target] disponíveis.
 
 Há dois métodos primários para criar um local do [!DNL Target] no seu aplicativo e fazer uma solicitação:
 

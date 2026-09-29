@@ -3,18 +3,21 @@ title: Usar [!UICONTROL getOffers()] em [!DNL Adobe Target] ao usar o SDK Node.j
 description: Saiba como usar [!UICONTROL getOffers()] para executar uma decisão e recuperar uma experiência de [!DNL Adobe Target].
 feature: APIs/SDKs
 exl-id: 3c4125ea-68d4-405e-9b9a-5fa832743153
-TQID: https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4
+TQID: 'https://experienceleague.adobe.com/WRGy74F1kUobRl1Pakse0VnXt3cT3-ntCljm4bHtiZ4'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 342
+source-wordcount: '343'
 ht-degree: 20%
-
 ---
-
 # [!UICONTROL Obter Ofertas] (Node.js)
 
 ## Descrição
@@ -57,7 +60,7 @@ O objeto `options` tem a seguinte estrutura:
 | targetCookie | Objeto | [!DNL Target] cookie |
 | targetLocationHintCookie | Objeto | Cookie de dica de localização [!DNL Target] |
 | analyticsDetails | Matriz | Carga do Analytics, em caso de uso do Analytics no lado do cliente |
-| responseTokens | Matriz | Uma lista de [tokens de resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=pt-BR&). |
+| responseTokens | Matriz | Uma lista de [tokens de resposta](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?). |
 | trace | Matriz | Dados de rastreamento agregados para todas as mboxes/exibições de solicitação |
 | status | Objeto | Um objeto que contém o status da resposta. |
 | decisioningMethod | String | Determina qual método de decisão usar ([no dispositivo](/help/dev/implement/server-side/sdk-guides/on-device-decisioning/overview.md), no lado do servidor, híbrido) |

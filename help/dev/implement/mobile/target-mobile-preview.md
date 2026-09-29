@@ -1,21 +1,27 @@
 ---
 keywords: controle de qualidade, visualização, link de visualização, dispositivo móvel, visualização móvel
 description: Use os links de visualização móvel para realizar tarefas completas de controle da qualidade para atividades de aplicativos móveis.
-title: Como usar links de visualização móvel no  [!DNL Adobe Target] Mobile?
+title: Como usar os Links de visualização móvel no [!DNL Adobe Target] Mobile?
 feature: Implement Mobile
 exl-id: c0c4237a-de1f-4231-b085-f8f1e96afc13
-TQID: https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk
+TQID: 'https://experienceleague.adobe.com/ISZJ4lc8hhsQc3a-Mwz07US4fuEHobuvzCciFhmxEJk'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+subfeature_v2:
+  - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 578
+source-wordcount: '579'
 ht-degree: 24%
-
 ---
-
 # Visualização móvel de [!DNL Target]
 
 Use os links de visualização móvel para realizar facilmente tarefas completas de controle da qualidade e participar de experiências diferentes usando seu dispositivo sem dispositivos de teste especiais.
@@ -80,7 +86,7 @@ Abra o link em um navegador móvel em um dispositivo onde você tem seu aplicati
 1. Selecione a combinação de experiências que deseja ver e clique em **[!UICONTROL Executar experiências]**.
 
    |![visualização móvel 1](assets/mobile-preview-experience-selection-1.png)|![visualização móvel 2](assets/mobile-preview-experience-result-1-france.png)|![visualização móvel 3](assets/mobile-preview-experience-result-1-shipfree.png)|
-|![visualização móvel 4](assets/mobile-preview-experience-selection-2.png)|![visualização móvel 5](assets/mobile-preview-experience-result-2-aus.png)|![visualização móvel 6](assets/mobile-preview-experience-result-2-10off.png)|
+   |![visualização móvel 4](assets/mobile-preview-experience-selection-2.png)|![visualização móvel 5](assets/mobile-preview-experience-result-2-aus.png)|![visualização móvel 6](assets/mobile-preview-experience-result-2-10off.png)|
 
 ## Limitações
 

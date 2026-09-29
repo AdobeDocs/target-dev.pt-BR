@@ -4,25 +4,32 @@ description: Como faço para usar a pré-busca na [!UICONTROL API de entrega do 
 keywords: api de entrega
 exl-id: eab88e3a-442c-440b-a83d-f4512fc73e75
 feature: APIs/SDKs
-TQID: https://experienceleague.adobe.com/gthn2vJrIjEkmQdpsf4J818OrzFiLpeRvXXRAUp2SiY
+TQID: 'https://experienceleague.adobe.com/gthn2vJrIjEkmQdpsf4J818OrzFiLpeRvXXRAUp2SiY'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: a004cc84-67b9-4a33-a3a7-8ec7273ef4dc
+    internal-label: Metadata
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c18d9e03-ac7d-4811-9c92-3e92ddc70ade
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Mobile experience
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 578
+source-wordcount: '578'
 ht-degree: 0%
-
 ---
-
 # Pré-busca
 
 A pré-busca permite que clientes como aplicativos e servidores móveis busquem conteúdo para várias mboxes ou exibições em uma solicitação, armazenem em cache localmente e depois notifiquem [!DNL Target] quando o visitante visitar essas mboxes ou exibições.
@@ -136,7 +143,7 @@ Na resposta, você vê o campo `content` que contém a experiência a ser mostra
 
 ## Buscar previamente mboxes com `clickTrack` métricas ao usar [!UICONTROL Analytics for Target] (A4T)
 
-O [[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR){target=_blank} (A4T) é uma integração entre soluções que permite criar atividades com base em [!DNL Analytics] métricas de conversão e segmentos de público-alvo.
+O [[!UICONTROL Adobe Analytics for Target]](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html){target=_blank} (A4T) é uma integração entre soluções que permite criar atividades com base em [!DNL Analytics] métricas de conversão e segmentos de público-alvo.
 
 O trecho de código a seguir é uma resposta de uma busca prévia de uma mbox contendo `clickTrack` métricas para notificar [!DNL Analytics] que uma oferta foi clicada:
 
@@ -181,7 +188,7 @@ O trecho de código a seguir é uma resposta de uma busca prévia de uma mbox co
 
 ## Visualizações de pré-busca
 
-As exibições são compatíveis com Aplicativos de página única (SPA) e aplicativos móveis com mais facilidade. As exibições podem ser vistas como um grupo lógico de elementos visuais que, juntos, constituem uma experiência de SPA ou móvel. Agora, por meio da API de Entrega, as atividades de [[!UICONTROL Teste A/B]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=pt-BR){target=_blank} e [[!UICONTROL Direcionamento de experiência]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html?lang=pt-BR){target=_blank} (X)T criadas pelo VEC com modificações em [Exibições para SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) agora podem ser buscadas previamente.
+As exibições são compatíveis com Aplicativos de página única (SPA) e aplicativos móveis com mais facilidade. As exibições podem ser vistas como um grupo lógico de elementos visuais que, juntos, constituem uma experiência de SPA ou móvel. Agora, por meio da API de Entrega, as atividades de [[!UICONTROL Teste A/B]](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html){target=_blank} e [[!UICONTROL Direcionamento de experiência]](https://experienceleague.adobe.com/docs/target/using/activities/experience-targeting/experience-target.html){target=_blank} (X)T criadas pelo VEC com modificações em [Exibições para SPA](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md) agora podem ser buscadas previamente.
 
 ```shell  {line-numbers="true"}
 curl -X POST \

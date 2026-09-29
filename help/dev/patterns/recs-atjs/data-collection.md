@@ -5,23 +5,31 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 66e0f18d-c78c-463b-8c47-132ef6332927
-TQID: https://experienceleague.adobe.com/fg3xJnwYAVyz-N-xzT5Piu35Ajd2UMEvuTvTQs2wj3c
+TQID: 'https://experienceleague.adobe.com/fg3xJnwYAVyz-N-xzT5Piu35Ajd2UMEvuTvTQs2wj3c'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Data collection
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 401
+source-wordcount: '401'
 ht-degree: 1%
-
 ---
-
 # Configurar coleção de dados
 
 Siga as etapas do diagrama *Coleta de Dados* para garantir que todas as tarefas necessárias para a coleta de dados sejam executadas na sequência correta.
@@ -81,11 +89,11 @@ Link para atributos de entidade para atualizar o catálogo de produtos para [!DN
 
 **Leituras**
 
-* [Atributos da entidade](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=pt-BR){target=_blank}
+* [Atributos da entidade](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **Considerações**
 
-* Uma maneira alternativa de transmitir atributos de entidade é atualizar o catálogo de produtos na interface do usuário do [!DNL Target] para usar os [feeds de produto do Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=pt-BR){target=_blank}.
+* Uma maneira alternativa de transmitir atributos de entidade é atualizar o catálogo de produtos na interface do usuário do [!DNL Target] para usar os [feeds de produto do Recommendations](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank}.
 * Transmitir atributos de entidade é aplicável somente em páginas em que os dados do catálogo de produtos estão disponíveis na camada de dados.
 * Passar o parâmetro `entity.event.detailsOnly=true` em qualquer chamada tem prioridade.
 

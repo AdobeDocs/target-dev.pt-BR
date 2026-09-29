@@ -1,20 +1,23 @@
 ---
-title: Como usar solicitações assíncronas no  [!DNL Adobe Target] .NET SDK
-description: Saiba como o  [!DNL Target] Java SDK oferece suporte a solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
+title: Como usar solicitações assíncronas no [!DNL Adobe Target] .NET SDK
+description: Saiba como o Java SDK [!DNL Target] oferece suporte a solicitações assíncronas, o que pode reduzir o tempo de destino efetivo para zero.
 feature: APIs/SDKs
 exl-id: fd36cc7b-a884-4e57-93c2-8aff8256109a
-TQID: https://experienceleague.adobe.com/E9rNmPdXe7HYg7XlIffpC4opGM9X6fFoHK-u0oLI-XE
+TQID: 'https://experienceleague.adobe.com/E9rNmPdXe7HYg7XlIffpC4opGM9X6fFoHK-u0oLI-XE'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Developer
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 91
+source-wordcount: '93'
 ht-degree: 4%
-
 ---
-
 # Solicitações Assíncronas (.NET)
 
 ## Descrição

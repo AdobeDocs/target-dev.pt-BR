@@ -1,26 +1,33 @@
 ---
 title: Notificar Destino
-description: Verifique se todos os eventos que precisam ser rastreados por  [!DNL Target] são enviados usando o método trackEvent.
+description: Verifique se todos os eventos que precisam ser rastreados por [!DNL Target] são enviados usando o método trackEvent.
 feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: efccadab-d139-4423-8613-c2743d87b3a0
-TQID: https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc
+TQID: 'https://experienceleague.adobe.com/u-RPLXjG8UBI7bDu2HgPFFnNBU--Yr0UydVX-Q-dcTc'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Implementation
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 369
+source-wordcount: '370'
 ht-degree: 0%
-
 ---
-
 # Notificar [!DNL Target]
 
 A conclusão desta etapa garante que todos os eventos que devem ser enviados para [!DNL Adobe Target] sejam enviados usando o método `trackEvent`.
@@ -56,11 +63,11 @@ Não é necessário incluir os atributos de conversão de pedido nesta chamada. 
 * Encontre sua equipe de negócios para identificar todos os eventos que podem ser considerados métricas de conversão ou de sucesso. Você também deve identificar o evento de conversão que gera receita para que esses detalhes possam ser enviados para [!DNL Target] junto com os dados do evento.
 * Verifique se os seguintes atributos estão disponíveis na camada de dados para que você possa enviá-los com o evento de conversão. O evento de conversão gera receita, como uma compra de produto ou um evento Adicionar ao carrinho.
 
-   * `productPurchaseId`: IDs de produto que foram compradas como parte do pedido. Separe vários produtos usando vírgulas.
-   * `orderTotal`: Total do pedido para a compra.
-   * `orderId`: ID do pedido da compra.
+  * `productPurchaseId`: IDs de produto que foram compradas como parte do pedido. Separe vários produtos usando vírgulas.
+  * `orderTotal`: Total do pedido para a compra.
+  * `orderId`: ID do pedido da compra.
 
-  A ilustração a seguir mostra uma [regra para [!DNL tags] em [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html?lang=pt-BR){target=_blank} que deve ser acionada somente na página [!UICONTROL Confirmação].
+  A ilustração a seguir mostra uma [regra para [!DNL tags] em [!DNL Experience Platform]](https://experienceleague.adobe.com/docs/tags.html){target=_blank} que deve ser acionada somente na página [!UICONTROL Confirmação].
 
   ![Página Configuração de ação](/help/dev/patterns/recs-atjs/assets/action-configuration.png){width="400" zoomable="yes"}
 
@@ -69,7 +76,7 @@ Não é necessário incluir os atributos de conversão de pedido nesta chamada. 
 **Leituras**
 
 * [método adobe.target.trackEvent()](/help/dev/implement/client-side/atjs/atjs-functions/adobe-target-trackevent.md)
-* [cartIds para critérios baseados em carrinho](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=pt-BR#cart-based){target=_blank}
+* [cartIds para critérios baseados em carrinho](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/base-the-recommendation-on-a-recommendation-key.html?lang=en#cart-based){target=_blank}
 
 **Ações**
 

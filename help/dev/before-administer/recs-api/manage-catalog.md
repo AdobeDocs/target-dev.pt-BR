@@ -3,23 +3,34 @@ title: Como gerenciar o catálogo de recomendações usando APIs
 description: Etapas necessárias para usar APIs do Adobe Target para criar, atualizar, salvar, obter e excluir entidades no catálogo de Recomendações.
 feature: APIs/SDKs, Recommendations, Administration & Configuration
 kt: 3815
-thumbnail: null
+thumbnail:
 author: Judy Kim
 exl-id: aea82607-cde4-456a-8dfb-2967badce455
-TQID: https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU
+TQID: 'https://experienceleague.adobe.com/9uKu-mX9xzz-sG4-peyfzrwogo27nF8TZ4zFXBi6TaU'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
+feature_v2:
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
+  - id: dfc8a233-f2b5-4811-bf63-b4262aebc5a5
+    internal-label: Administration and configuration
+  - id: f69bc5f1-ebdb-4306-a281-f2e77daf734c
+    internal-label: Activities and tests
+subfeature_v2:
+  - id: ed58f4a1-16eb-4c8c-b505-be9da766a9ec
+    internal-label: Recommendations
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 0fe52344f654f22d1ff7aaace0ba5a99e92d036d
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 930
+source-wordcount: '930'
 ht-degree: 0%
-
 ---
-
 # Gerenciar o catálogo de recomendações usando APIs
 
 Ao garantir que você atenda aos [requisitos para usar a API de Recomendações](/help/dev/before-administer/recs-api/overview.md#prerequisites), você aprendeu a [gerar um token de acesso](/help/dev/before-administer/configure-authentication.md) usando o fluxo de autenticação JWT para usar as APIs de Administrador [!DNL Adobe Target] na [Adobe Developer Console](https://developer.adobe.com/console/home).
@@ -150,13 +161,13 @@ Os detalhes da entidade só podem ser recuperados para uma única entidade de ca
 1. Envie a solicitação.
 
    ![GetEntity3](assets/GetEntity3.png)
-Se você receber um erro informando que a entidade não foi encontrada, como mostrado no exemplo acima, verifique se está enviando a solicitação para o ambiente correto do Target.
+   Se você receber um erro informando que a entidade não foi encontrada, como mostrado no exemplo acima, verifique se está enviando a solicitação para o ambiente correto do Target.
 
 
 
    >[!NOTE]
    >
-   >Se nenhum ambiente for especificado explicitamente, Obter Entidade tentará obter a entidade somente do seu [ambiente padrão](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=pt-BR). Se quiser extrair de qualquer ambiente que não seja o ambiente padrão, especifique a ID do ambiente.
+   >Se nenhum ambiente for especificado explicitamente, Obter Entidade tentará obter a entidade somente do seu [ambiente padrão](https://experienceleague.adobe.com/docs/target/using/administer/environments.html). Se quiser extrair de qualquer ambiente que não seja o ambiente padrão, especifique a ID do ambiente.
 
 1. Se necessário, adicione o parâmetro `environmentId` e reenvie a solicitação.
 

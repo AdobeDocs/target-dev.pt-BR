@@ -4,24 +4,33 @@ description: Saiba como criar uma implementação de aplicativo de página únic
 keywords: destino;adobe destino;exibições xdm; exibições;aplicativos de página única;SPA;ciclo de vida SPA;lado do cliente;teste AB;Direcionamento de experiência;XT;VEC
 feature: AEP Web SDK
 exl-id: 17e71e47-c7cc-421a-bc9c-53f45f587449
-TQID: https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ
+TQID: 'https://experienceleague.adobe.com/Kp5fxEhLaXUNi6GOXXnET-1ueGQVLC0tPFhYzShk0cQ'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: b050e0cd-2ddd-42cd-a71b-5d9e1fdf75e0
+    internal-label: APIs and SDKs
+subfeature_v2:
+  - id: a1f3c920-a3a8-4506-8067-53189547b5e6
+    internal-label: AEP Web SDK
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bcc5edb5-84c3-4940-9f84-ed88b6c16274
+    internal-label: Experimentation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Personalization
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1836
+source-wordcount: '1837'
 ht-degree: 2%
-
 ---
-
 # Implementação de aplicativos de página única
 
 O [!DNL Adobe Experience Platform Web SDK] fornece recursos avançados para sua empresa personalizar tecnologias de próxima geração no lado do cliente, como aplicativos de página única (SPAs).
@@ -72,7 +81,7 @@ O conceito de [!UICONTROL Exibições] pode ser estendido muito além deste cen�
 
 As [!UICONTROL Exibições XDM] podem ser usadas no [!DNL Target] para permitir que profissionais de marketing executem testes A/B e XT em SPAs por meio do [!UICONTROL Visual Experience Composer]. Para fazer isso, é necessário executar as seguintes etapas para concluir uma configuração de desenvolvedor única:
 
-1. Instale o [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/install/overview).
+1. Instale o [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/install/overview).
 2. Determine todas as [!UICONTROL Exibições XDM] no aplicativo de página única que deseja personalizar.
 3. Após definir as [!UICONTROL Exibições XDM], para entregar atividades A/B ou XT do VEC, implemente a função `sendEvent()` com `renderDecisions` definida como `true` e a [!UICONTROL Exibição XDM] correspondente no Aplicativo de página única. A [!UICONTROL Exibição XDM] deve ser passada em `xdm.web.webPageDetails.viewName`. Esta etapa permite que os profissionais de marketing aproveitem o [!UICONTROL Visual Experience Composer] para iniciar testes A/B e XT para esses XDM.
 
@@ -232,7 +241,7 @@ Quando você terminar de definir suas [!UICONTROL Exibições XDM] e implementar
 
 >[!NOTE]
 >
->Para usar o VEC para SPA, instale e ative o [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou a [Extensão de assistente do Chrome VEC](https://experienceleague.adobe.com/pt-br/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
+>Para usar o VEC para SPA, instale e ative o [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-target-vec-helper/) ou a [Extensão de assistente do Chrome VEC](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension).
 
 ### Painel [!UICONTROL Modificações]
 

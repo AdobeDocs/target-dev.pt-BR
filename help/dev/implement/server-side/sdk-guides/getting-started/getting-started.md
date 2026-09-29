@@ -3,25 +3,32 @@ title: Introdução aos SDKs do Target
 description: Como usar os SDKs do Adobe Target?
 feature: APIs/SDKs
 exl-id: a5ae9826-7bb5-41de-8796-76edc4f5b281
-TQID: https://experienceleague.adobe.com/oW9op2s6buvt5Jp18DYzrwh7aBXSNEPAikq9EPISaWQ
+TQID: 'https://experienceleague.adobe.com/oW9op2s6buvt5Jp18DYzrwh7aBXSNEPAikq9EPISaWQ'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 702
+source-wordcount: '702'
 ht-degree: 1%
-
 ---
-
 # Introdução aos [!DNL Target] SDKs
 
 Para começar a usar o, recomendamos que você crie sua primeira atividade de sinalizador de recursos [decisão no dispositivo](../on-device-decisioning/overview.md) no idioma de sua escolha:
@@ -49,7 +56,7 @@ A habilitação da decisão no dispositivo garante que uma atividade de [!UICONT
 
 >[!NOTE]
 >
->Você deve ter a **[!UICONTROL função de Administrador]** ou **[!UICONTROL Aprovador]** [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=pt-BR) para habilitar ou desabilitar a opção **[!UICONTROL Decisão no Dispositivo]**.
+>Você deve ter a **[!UICONTROL função de Administrador]** ou **[!UICONTROL Aprovador]** [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para habilitar ou desabilitar a opção **[!UICONTROL Decisão no Dispositivo]**.
 
 Depois de habilitar a opção **[!UICONTROL Decisão no Dispositivo]**, o [!DNL Adobe Target] começa a gerar [artefatos de regra](../on-device-decisioning/rule-artifact-overview.md) para o seu cliente.
 
@@ -400,6 +407,6 @@ target_client.send_notifications({
 
    >[!NOTE]
    >
-   >Você deve ter a **[!UICONTROL função de aprovador]** ou **[!UICONTROL editor]** [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html?lang=pt-BR) para executar esta etapa.
+   >Você deve ter a **[!UICONTROL função de aprovador]** ou **[!UICONTROL editor]** [função de usuário](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/user-management.html) para executar esta etapa.
 
    ![alt imagem](assets/asset-activate.png)

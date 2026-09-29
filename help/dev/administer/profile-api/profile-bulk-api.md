@@ -1,28 +1,35 @@
 ---
 title: API de atualização de perfil em massa do Adobe Target
-description: Saiba como usar a [!DNL Adobe Target] [!UICONTROL API de Atualização de Perfil em Massa] para enviar os dados de perfil de vários visitantes para o [!DNL Target] para uso no direcionamento.
+description: Saiba como usar a [!DNL Adobe Target] [!UICONTROL API de Atualização de Perfil em Massa] para enviar os dados de perfil de vários visitantes para [!DNL Target] para uso no direcionamento.
 feature: APIs/SDKs
 contributors: https://github.com/icaraps
 exl-id: 0f38d109-5273-4f73-9488-80eca115d44d
-TQID: https://experienceleague.adobe.com/EVlP71oFI-NIFoTe9fyx2Xzsr9v-sZq0JGdpti1XI64
+TQID: 'https://experienceleague.adobe.com/EVlP71oFI-NIFoTe9fyx2Xzsr9v-sZq0JGdpti1XI64'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
-source-git-commit: 64d250010899c671e73045b23b8e0c79cefaa2d6
+    internal-label: Administration
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1311
+source-wordcount: '1313'
 ht-degree: 6%
-
 ---
-
 # [!DNL Adobe Target Bulk Profile Update API]
 
 A [!DNL Adobe Target] [!UICONTROL API de Atualização de Perfil em Massa] permite atualizar perfis de usuário para vários visitantes de um site em massa usando um arquivo em lote.
@@ -90,7 +97,7 @@ Você faz referência a este arquivo na chamada POST para [!DNL Target] servidor
 >
 >Todos os nomes e valores de parâmetros devem ser codificados por URL (UTF-8) antes de você enviar o lote, enviado com `Content-Type: application/x-www-form-urlencoded`, com o corpo começando com `batch=`. Os caracteres reservados não codificados são lidos como sintaxe de solicitação em vez de dados, o que pode fazer com que o lote seja rejeitado, truncado ou corrompido.
 >
->Se você receber uma resposta de &quot;Erro inesperado&quot; sem nenhum `batchId` emitido, consulte [A API de Atualização de Perfil em Massa retorna &quot;Erro inesperado&quot;](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-kcs/kbarticles/ka-24281) para obter etapas de solução de problemas.
+>Se você receber uma resposta de &quot;Erro inesperado&quot; sem nenhum `batchId` emitido, consulte [A API de Atualização de Perfil em Massa retorna &quot;Erro inesperado&quot;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281) para obter etapas de solução de problemas.
 
 Os caracteres a seguir geralmente estão presentes em valores de perfil, mas têm significado especial nos dados de `application/x-www-form-urlencoded`. Se você os enviar sem codificação, a solicitação falhará ou os dados serão corrompidos sem um erro óbvio:
 

@@ -5,26 +5,36 @@ feature: APIs/SDKs
 level: Experienced
 role: Developer
 exl-id: 7cf0c70b-a4bc-46f4-9b33-099bdb7dd9a9
-TQID: https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg
+TQID: 'https://experienceleague.adobe.com/uHFbc8JEhjjGYIulJUvhkH7cXXht6Rht9rY43HjuNqg'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
+  - id: a19e8738-9679-599a-b83b-5f2f15f8e4d6
+    internal-label: APIs/SDKs
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
+level_v2:
+  - id: d378ca77-2da1-4f39-ad92-1917fe974a38
+    internal-label: Experienced
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
+    internal-label: Data collection
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 1144
+source-wordcount: '1144'
 ht-degree: 3%
-
 ---
-
 # Renderizar experiências
 
 Siga as etapas do diagrama *Renderizar experiências* para garantir que todas as tarefas necessárias para renderizar experiências sejam executadas na sequência correta.
@@ -71,8 +81,8 @@ Adicione itens promovidos e controle seu posicionamento no design de recomendaç
 **Opções disponíveis**
 
 * Promover por IDs
-* [Promover por coleção](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html?lang=pt-BR){target=_blank}
-* [Promover por atributo](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=pt-BR){target=_blank}
+* [Promover por coleção](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/collections.html){target=_blank}
+* [Promover por atributo](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
 **Parâmetros de entidade necessários**
 
@@ -80,7 +90,7 @@ Adicione itens promovidos e controle seu posicionamento no design de recomendaç
 
 **Leituras**
 
-* [Adicionar promoções](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html?lang=pt-BR){target=_blank}
+* [Adicionar promoções](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-activity/adding-promotions.html){target=_blank}
 
 +++
 
@@ -104,7 +114,7 @@ Faça recomendações com base no conteúdo do carrinho do usuário.
 
 **Leituras**
 
-* [Baseado em carrinho](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=pt-BR#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Baseado em carrinho](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -133,7 +143,7 @@ Faça recomendações com base na popularidade geral de um item em todo o site o
 
 **Leituras**
 
-* [Baseado em popularidade](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=pt-BR#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Baseado em popularidade](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -159,7 +169,7 @@ Fazer recomendações com base na localização de itens semelhantes a um item q
 
 **Leituras**
 
-* [Baseado em item](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=pt-BR#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Baseado em item](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -182,7 +192,7 @@ Faça recomendações com base no comportamento do usuário.
 
 **Leituras**
 
-* [Baseado em usuário](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=pt-BR#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Baseado em usuário](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -204,7 +214,7 @@ Fazer recomendações com base em um arquivo personalizado que você carregou.
 
 **Leituras**
 
-* [Critérios personalizados](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=pt-BR#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
+* [Critérios personalizados](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/algorithms.html?lang=en#section_885B3BB1B43048A88A8926F6B76FC482){target=_blank}
 
 +++
 
@@ -216,7 +226,7 @@ Fazer recomendações com base em um arquivo personalizado que você carregou.
 
 **Leituras**
 
-* [Uso das regras de inclusão estática e dinâmica](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html?lang=pt-BR){target=_blank}
+* [Uso das regras de inclusão estática e dinâmica](https://experienceleague.adobe.com/docs/target/using/recommendations/criteria/dynamic-static/use-dynamic-and-static-inclusion-rules.html){target=_blank}
 
 +++
 
@@ -230,7 +240,7 @@ Transmita IDs de entidade para entidades que você deseja excluir de suas recome
 
 **Leituras**
 
-* [Posso excluir dinamicamente uma entidade?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=pt-BR#exclude){target=_blank}
+* [Posso excluir dinamicamente uma entidade?](https://experienceleague.adobe.com/docs/target/using/recommendations/recommendations-faq/recommendations-faq.html?lang=en#exclude){target=_blank}
 
 +++
 
@@ -242,9 +252,9 @@ Transmita IDs de entidade para entidades que você deseja excluir de suas recome
 
 **Leituras**
 
-* [Atributos da entidade](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html?lang=pt-BR){target=_blank}
+* [Atributos da entidade](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html){target=_blank}
 
-Você também pode realizar esta etapa criando [feeds de produtos](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html?lang=pt-BR){target=_blank} usando a interface do usuário [!DNL Target] para atualizar o catálogo de produtos para [!DNL Recommendations].
+Você também pode realizar esta etapa criando [feeds de produtos](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/feeds.html){target=_blank} usando a interface do usuário [!DNL Target] para atualizar o catálogo de produtos para [!DNL Recommendations].
 
 +++
 
@@ -258,7 +268,7 @@ Forneça os atributos de perfil usados como chaves para as regras de inclusão e
 
 **Leituras**
 
-* [Atributos do perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=pt-BR){target=_blank}
+* [Atributos do perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html){target=_blank}
 
 +++
 
@@ -266,7 +276,7 @@ Forneça os atributos de perfil usados como chaves para as regras de inclusão e
 
 ## 3.11: Acionar solicitação de carregamento de página {#fire}
 
-Esta etapa aciona uma chamada [!DNL Delivery API] com carga `execute` > `pageLoad` na solicitação. O método `getOffers()` busca a experiência e `applyOffers()` renderiza a experiência na página. A solicitação `pageLoad` é necessária para renderizar experiências criadas no [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html?lang=pt-BR){target=_blank} (VEC).
+Esta etapa aciona uma chamada [!DNL Delivery API] com carga `execute` > `pageLoad` na solicitação. O método `getOffers()` busca a experiência e `applyOffers()` renderiza a experiência na página. A solicitação `pageLoad` é necessária para renderizar experiências criadas no [Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/visual-experience-composer.html){target=_blank} (VEC).
 
 +++Ver detalhes
 

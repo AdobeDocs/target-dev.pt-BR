@@ -1,30 +1,38 @@
 ---
 keywords: implementar, at.js, biblioteca do JavaScript
-description: Saiba como implantar a biblioteca at.js de JavaScript do  [!DNL Adobe Target]  usando tags no  [!DNL Adobe Experience Platform] ou sem um gerenciador de tags.
+description: Saiba como implantar a biblioteca at.js de JavaScript do [!DNL Adobe Target] usando tags no [!DNL Adobe Experience Platform] ou sem um gerenciador de tags.
 title: Como implantar a at.js?
 feature: Implement Server-side
 exl-id: e62cb27e-ea80-462b-90f8-0a033b128031
-TQID: https://experienceleague.adobe.com/V80R3Ds7eaUkkJazzCLK-tIePgqund6rMfQfLBZZvRQ
+TQID: 'https://experienceleague.adobe.com/V80R3Ds7eaUkkJazzCLK-tIePgqund6rMfQfLBZZvRQ'
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
   - id: f7c7de77-382f-4f48-8b36-61a170f06d3d
+    internal-label: Integrations
+  - id: a8a69496-b9ae-554a-b68e-e92a87809fc5
+    internal-label: Implement Server-side
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+    internal-label: Customer experience
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: ca4254966a337a0215d66bd28506128b9751d0e0
+    internal-label: Data collection
+source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
 workflow-type: tm+mt
-source-wordcount: 287
+source-wordcount: '288'
 ht-degree: 27%
-
 ---
-
 # Como implantar a at.js
 
 Informações sobre como implantar a biblioteca JavaScript do [!DNL Adobe Target], o at.js, usando tags no [!DNL Adobe Experience Platform] ou sem um gerenciador de tags.
@@ -35,17 +43,17 @@ Você pode implantar a at.js usando os seguintes métodos:
 
 >[!NOTE]
 >
-> O [!DNL Adobe Experience Platform Launch] foi reformulado como um conjunto de tecnologias de coleção de dados na [!DNL Adobe Experience Platform]. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=pt-BR) para obter uma referência consolidada das alterações de terminologia.
+> O [!DNL Adobe Experience Platform Launch] foi reformulado como um conjunto de tecnologias de coleção de dados na [!DNL Adobe Experience Platform]. Como resultado, várias alterações de terminologia foram implementadas na documentação do produto. Consulte o seguinte [documento](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) para obter uma referência consolidada das alterações de terminologia.
 
 * **[Implementar [!DNL Target] sem um Gerenciador de Marcas](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)**: você pode implementar o [!DNL Target] sem usar um gerenciador de marcas (por exemplo, marcas no [!DNL Adobe Experience Platform]).
-* **Implementar [!DNL Target] usando um gerenciador de tags de terceiros**: [As tags na Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) são o método preferido para implementar o [!DNL Target]; no entanto, você também pode implementar o [!DNL Target] usando um gerenciador de tags de terceiros, incluindo Tealium, Ensighten e Google Tag. Para obter uma lista dos benefícios de usar o Launch, consulte [Vantagens de implementar a at.js usando a extensão [!DNL Adobe Target] &#x200B;](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md#advantages-of-implementing-atjs-using-the-target-extension).
+* **Implementar [!DNL Target] usando um gerenciador de tags de terceiros**: [As tags na Adobe Experience Platform](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md) são o método preferido para implementar o [!DNL Target]; no entanto, você também pode implementar o [!DNL Target] usando um gerenciador de tags de terceiros, incluindo Tealium, Ensighten e Google Tag. Para obter uma lista dos benefícios de usar o Launch, consulte [Vantagens de implementar a at.js usando a extensão [!DNL Adobe Target] ](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-using-adobe-launch.md#advantages-of-implementing-atjs-using-the-target-extension).
 
   No entanto, se você souber como implementar o [!DNL Target] sem um gerenciador de tags, será possível implementá-lo facilmente com um gerenciador de tags de terceiros, em vez de codificar a at.js no código do site.
 
   Estes são dois tópicos relevantes que ajudarão você a implementar o [!DNL Target] com um gerenciador de tags de terceiros:
 
-   * [Antes da implementação](/help/dev/before-implement/prepare-to-implement-target.md)
-   * [Implementar o  [!DNL Target]  sem um gerenciador de tags](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
+  * [Antes da implementação](/help/dev/before-implement/prepare-to-implement-target.md)
+  * [Implementar o  [!DNL Target]  sem um gerenciador de tags](/help/dev/implement/client-side/atjs/how-to-deployatjs/implement-target-without-a-tag-manager.md)
 
   Verifique a documentação do gerenciador de tags de terceiros para obter mais informações.
 
