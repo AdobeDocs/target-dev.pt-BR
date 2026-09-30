@@ -29,7 +29,7 @@ topic_v2:
     internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
     internal-label: Privacy
-source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
+source-git-commit: 78ca638b097a9d3f3028353c80f4929e036e2f49
 workflow-type: tm+mt
 source-wordcount: '1326'
 ht-degree: 1%
