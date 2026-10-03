@@ -33,7 +33,7 @@ O [!DNL Adobe Experience Platform] [!DNL Web SDK] pode entregar e renderizar exp
 Os seguintes recursos foram testados e atualmente têm suporte no [!DNL Target]:
 
 * [Testes A/B](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=pt-BR)
-* [Relatórios de impressão e conversão do A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html)
+* [Relatórios de impressão e conversão do A4T](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=pt-BR)
 * [Atividades do Automated Personalization](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=pt-BR)
 * [Atividades de direcionamento de experiência](https://experienceleague.adobe.com/docs/target/using/activities/automated-personalization/automated-personalization.html?lang=pt-BR)
 * [Testes multivariados (MVT)](https://experienceleague.adobe.com/docs/target/using/activities/multivariate-test/multivariate-testing.html?lang=pt-BR)
@@ -68,7 +68,7 @@ Para habilitar [!DNL Target], faça o seguinte:
 Em seguida, opcionalmente, você também pode adicionar as seguintes opções:
 
 * **`decisionScopes`**: recupere atividades específicas (úteis para atividades criadas com o compositor baseado em formulário) adicionando esta opção aos seus eventos.
-* **[Ocultar previamente o trecho](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/personalization/manage-flicker)**: oculta apenas determinadas partes da página.
+* **[Ocultar previamente o trecho](https://experienceleague.adobe.com/pt-br/docs/experience-platform/web-sdk/personalization/manage-flicker)**: oculta apenas determinadas partes da página.
 
 ## Usar o VEC [!UICONTROL Adobe Target]
 
