@@ -25,9 +25,9 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 5d119ccf18b09b3ba864a69642458597f65c754f
+source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1336'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
@@ -97,7 +97,7 @@ Você faz referência a este arquivo na chamada POST para [!DNL Target] servidor
 >
 >Todos os nomes e valores de parâmetros devem ser codificados por URL (UTF-8) antes de você enviar o lote, enviado com `Content-Type: application/x-www-form-urlencoded`, com o corpo começando com `batch=`. Os caracteres reservados não codificados são lidos como sintaxe de solicitação em vez de dados, o que pode fazer com que o lote seja rejeitado, truncado ou corrompido.
 >
->Se você receber uma resposta de &quot;Erro inesperado&quot; sem nenhum `batchId` emitido, consulte [A API de Atualização de Perfil em Massa retorna &quot;Erro inesperado&quot;](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-kcs/kbarticles/ka-24281) para obter etapas de solução de problemas.
+>Se você receber uma resposta de &quot;Erro inesperado&quot; sem nenhum `batchId` emitido, consulte [A API de Atualização de Perfil em Massa retorna &quot;Erro inesperado&quot;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281) para obter etapas de solução de problemas.
 
 Os caracteres a seguir geralmente estão presentes em valores de perfil, mas têm significado especial nos dados de `application/x-www-form-urlencoded`. Se você os enviar sem codificação, a solicitação falhará ou os dados serão corrompidos sem um erro óbvio:
 
@@ -156,9 +156,9 @@ Os valores esperados para os campos de status são:
 
 | Status | Detalhes |
 | --- | --- |
-| [!UICONTROL complete] | A solicitação de atualização do lote de perfis foi concluída com êxito. |
-| [!UICONTROL incompleto] | A solicitação de atualização do lote de perfis ainda está sendo processada e não foi concluída. |
-| [!UICONTROL paralisado] | A solicitação de atualização do lote de perfis está paralisada e não pôde ser concluída. |
+| [!UICONTROL complete] | A solicitação de atualização do lote de perfis foi concluída com êxito. Nenhuma ação necessária. |
+| [!UICONTROL incompleto] | A solicitação de atualização do lote de perfis ainda está sendo processada e não foi concluída. Nenhuma ação necessária. |
+| [!UICONTROL paralisado] | A solicitação de atualização do lote de perfis está paralisada e não pôde ser concluída. Se um lote permanecer paralisado mesmo após 24 horas do upload, você deverá carregá-lo novamente. |
 
 ### Resposta detalhada do URL de status do lote
 
