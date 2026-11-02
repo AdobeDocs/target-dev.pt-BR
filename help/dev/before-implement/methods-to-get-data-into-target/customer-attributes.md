@@ -1,25 +1,27 @@
 ---
 keywords: implementar, implementar, configurar, configurar, atributos do cliente
-description: Obter dados em  [!DNL Target] usando atributos do cliente.
-title: Como obtenho dados no  [!DNL Target] usando atributos do cliente?
+description: Obtenha dados em [!DNL Target] usando atributos do cliente.
+title: Como posso obter dados no [!DNL Target] usando atributos do cliente?
 feature: Implementation
 exl-id: d05cdd38-ba7c-4f29-a0ef-ae68619e7617
 TQID: https://experienceleague.adobe.com/bzK915y7fvjfZjTkSK2QWHDzmIN9SdAQiEguiUlc-r8
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 216
+source-wordcount: '218'
 ht-degree: 13%
-
 ---
-
 # Atributos do cliente
 
 Os atributos do cliente permitem carregar dados de perfil do visitante via FTP para o [!DNL Adobe Experience Cloud]. Depois de carregado, use os dados em [!DNL Adobe Analytics] e [!DNL Adobe Target].
@@ -52,8 +54,8 @@ Requer a implementação da Experience Cloud ID (ECID).
 
 ## Exemplos de código
 
-Detalhes podem ser encontrados em [Criar uma fonte de atributo do cliente e carregar o arquivo de dados](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html?lang=pt-BR).
+Detalhes podem ser encontrados em [Criar uma fonte de atributo do cliente e carregar o arquivo de dados](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html).
 
 ### Links para informações relevantes
 
-[Crie uma fonte de atributo do cliente e carrega o arquivo de dados](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html?lang=pt-BR).
+[Crie uma fonte de atributo do cliente e carrega o arquivo de dados](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html).

@@ -1,27 +1,30 @@
 ---
 keywords: instâncias de nuvem, lista de sufixos públicos, sufixo público, cookie, cookie próprio, cookie próprio, cookie próprio, azurewebsites.net, cloudapp.net, amazonaws.com, cloudfront.net, herokuapp.com, firebaseapp.com,, targetGlobalSettings, cookieDomain, instâncias de nuvem5, instâncias de nuvem6, instâncias de nuvem7, instâncias de nuvem8, instâncias de nuvem9, lista de sufixos públicos0, lista de sufixos públicos1, lista de sufixos públicos2, lista de sufixos públicos3, lista de sufixos públicos4, lista de sufixos públicos5
 description: Explore os problemas (com soluções) que os clientes enfrentam ao usar as instâncias baseadas em nuvem para testar o [!DNL Adobe Target] ou para fins de prova de conceito.
-title: Posso usar  [!DNL Target]  com instâncias baseadas em nuvem?
+title: Posso usar [!DNL Target] com instâncias baseadas em nuvem?
 feature: at.js
 exl-id: 4b24fdc0-6c74-4b29-bbf9-7a761d4564a2
 TQID: https://experienceleague.adobe.com/df63sTQxukCfa4pYc1X6FRvxV3cY2UG-ixk5v9Fqh-c
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
-source-wordcount: 203
+source-wordcount: '205'
 ht-degree: 46%
-
 ---
-
 # Usar instâncias baseadas em nuvem com [!DNL Target]
 
 Informações sobre problemas que os clientes enfrentam ao usar as instâncias baseadas em nuvem para testar o [!DNL Adobe Target].

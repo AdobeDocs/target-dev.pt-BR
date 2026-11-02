@@ -1,27 +1,31 @@
 ---
 keywords: implementar, implementar, configurar, configurar, parâmetro de página
-description: Obter dados no  [!DNL Target] usando atributos de perfil na página.
-title: Como Obter Dados No  [!DNL Target] Usando Atributos De Perfil Na Página?
+description: Obter dados em [!DNL Target] usando atributos de perfil na página.
+title: Como Obter Dados No [!DNL Target] Usando Atributos De Perfil Na Página?
 feature: Implementation
 exl-id: c19fd746-21a2-4eb5-8c2a-c24806e09324
 TQID: https://experienceleague.adobe.com/jXWNNl7HfrR03tEoMz7KApX3onc1Zc44IAuXy4QF2tU
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: adee20bd-51f4-461d-b9db-d215f8756eeb
+    internal-label: Audiences
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: e0eb8757-182f-49f3-94a4-1587d16f5094
+    internal-label: Personalization
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 311
+source-wordcount: '313'
 ht-degree: 40%
-
 ---
-
 # Atributos de perfil na página
 
 Os atributos de perfil na página em [!DNL Adobe Target] (também chamados &quot;atributos de perfil in-mbox&quot;) são pares de nome/valor transmitidos diretamente pelo código da página e armazenados no perfil do visitante para uso futuro.
@@ -71,6 +75,6 @@ Atributos no código mboxCreate:
 
 ## Links para informações relevantes
 
-[Atributos do perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=pt-BR)
+[Atributos do perfil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html)
 
-[Perfil do visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html?lang=pt-BR)
+[Perfil do visitante](https://experienceleague.adobe.com/docs/target/using/audiences/create-audiences/categories-audiences/visitor-profile.html)

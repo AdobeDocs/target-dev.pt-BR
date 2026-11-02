@@ -1,29 +1,34 @@
 ---
 keywords: Implementação, mbox.js sem JavaScript, redirecionador, custos por clique, receita por clique
-description: Saiba como usar Redirecionadores em implementações de email, de forma semelhante a como você usa uma mbox em suas atividades de  [!DNL Adobe Target] .
+description: Saiba como usar Redirecionadores em implementações de email, de forma semelhante a como você usa uma mbox em suas atividades do [!DNL Adobe Target].
 title: Como trabalho com redirecionadores?
 feature: Implement Email
 exl-id: 072368ff-9f17-4709-ac2d-c9e1f0d888bb
 TQID: https://experienceleague.adobe.com/3SUsZl1y9tk97sWgdB3iB7wrAXNb2LfN3hObJM14caE
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+    internal-label: Implement email
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 697
+source-wordcount: '698'
 ht-degree: 62%
-
 ---
-
 # Trabalhar com redirecionadores
 
 Utilize o Redirecionador de forma similar a uma mbox em seus testes.
@@ -69,13 +74,13 @@ Antes de utilizar um redirecionador, você deve criá-lo.
 
    >[!WARNING]
    >
-   >Observe que, com o Redirecionador, você pode ser exposto ao risco de uma vulnerabilidade de redirecionamento aberto. Para evitar o uso não autorizado de links redirecionadores por terceiros, a Adobe recomenda que você use &quot;hosts autorizados&quot; para incluir na lista de permissões os domínios de URL de redirecionamento padrão. [!DNL Target] usa hosts para incluir na lista de permissões domínios aos quais você deseja permitir redirecionamentos. Para obter mais informações, consulte [Criar Incluis na lista de permissões que especificam hosts autorizados a enviar chamadas de mbox para  [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=pt-BR#allowlist) em *Hosts*.
+   >Observe que, com o Redirecionador, você pode ser exposto ao risco de uma vulnerabilidade de redirecionamento aberto. Para evitar o uso não autorizado de links redirecionadores por terceiros, a Adobe recomenda que você use &quot;hosts autorizados&quot; para incluir na lista de permissões os domínios de URL de redirecionamento padrão. [!DNL Target] usa hosts para incluir na lista de permissões domínios aos quais você deseja permitir redirecionamentos. Para obter mais informações, consulte [Criar Incluis na lista de permissões que especificam hosts autorizados a enviar chamadas de mbox para  [!DNL Target]](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html#allowlist) em *Hosts*.
 
 1. Valide o redirecionador.
    1. *Prática recomendada de segurança*: certifique-se de que o domínio usado no Redirecionador seja ativado, conforme indicado acima. Se você usar um domínio que não esteja classificado, a Adobe bloqueará qualquer chamada para esse domínio a fim de impedir que agentes mal-intencionados usem o Redirecionador para redirecionar para domínios potencialmente mal-intencionados.
    2. Insira o URL do redirecionador no navegador e atualize a página.
    3. Efetue logon em sua conta, atualize a lista de mbox e verifique se o novo redirecionador está indicado como uma mbox.
-1. Se você vai testar destinos diferentes para um anúncio, crie [Ofertas de redirecionamento](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html?lang=pt-BR) para cada versão.
+1. Se você vai testar destinos diferentes para um anúncio, crie [Ofertas de redirecionamento](https://experienceleague.adobe.com/docs/target/using/experiences/vec/redirect-offer.html) para cada versão.
 1. Crie uma campanha.
 
    Consulte [Implementações não baseadas em JavaScript](/help/dev/implement/email/overview.md) para a configuração correta para atingir seus objetivos.
