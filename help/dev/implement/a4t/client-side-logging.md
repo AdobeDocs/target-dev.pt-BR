@@ -241,7 +241,7 @@ Todos os valores de `scopeDetails.characteristics.analyticsToken`, bem como `sco
 
 As subseções a seguir demonstram como implementar o log do lado do cliente do [!DNL Analytics] para casos de uso comuns.
 
-### [!UICONTROL Atividades do Experience Composer ] baseadas em formulário {#form-based-composer}
+### [!UICONTROL Atividades do Experience Composer &#x200B;] baseadas em formulário {#form-based-composer}
 
 Você pode usar o [!DNL Platform Web SDK] para controlar a execução de apresentações de [atividades do Adobe Target Form-Based Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/form-experience-composer.html).
 

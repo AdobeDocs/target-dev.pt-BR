@@ -1,6 +1,6 @@
 ---
 keywords: adobe.target.sendNotifications, sendNotifications, sendnotifications, enviar notificações, notificações, at.js, funções, função, $9
-description: Use [!UICONTROL adobe.target.sendNotifications()] para que at.js envie notificações para a borda do [!DNL Target] quando uma experiência for renderizada sem usar [!UICONTROL applyOffer](s). (at.js.2.1 +)
+description: Use [!UICONTROL adobe.target.sendNotifications()] para que at.js envie notificações para a borda do [!DNL Target] quando uma experiência for renderizada sem usar [!UICONTROL applyOffer] (s). (at.js.2.1 +)
 title: Como usar a função adobe.target.sendNotifications()?
 feature: at.js
 exl-id: 1a08da10-31a0-4b0b-af7d-91ed7d32c308
