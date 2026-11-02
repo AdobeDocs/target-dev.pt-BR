@@ -1,29 +1,34 @@
 ---
 keywords: Implementação, mbox.js sem JavaScript, redirecionador, custos por clique, receita por clique
-description: Saiba como usar Redirecionadores em implementações de email, de forma semelhante a como você usa uma mbox em suas atividades de  [!DNL Adobe Target] .
+description: Saiba como usar Redirecionadores em implementações de email, de forma semelhante a como você usa uma mbox em suas atividades do [!DNL Adobe Target].
 title: Como trabalho com redirecionadores?
 feature: Implement Email
 exl-id: 072368ff-9f17-4709-ac2d-c9e1f0d888bb
 TQID: https://experienceleague.adobe.com/3SUsZl1y9tk97sWgdB3iB7wrAXNb2LfN3hObJM14caE
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: c94a34eb-b51c-4dd1-a6a4-46b0d84ccccd
+    internal-label: Implement email
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 697
+source-wordcount: '698'
 ht-degree: 62%
-
 ---
-
 # Trabalhar com redirecionadores
 
 Utilize o Redirecionador de forma similar a uma mbox em seus testes.

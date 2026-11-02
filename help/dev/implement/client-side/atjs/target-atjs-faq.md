@@ -1,29 +1,34 @@
 ---
 keywords: perguntas frequentes da at.js, perguntas frequentes da at.js, perguntas frequentes, cintilação, carregador, carregador de página, domínio cruzado, tamanho do arquivo, tamanho do arquivo, domínio x, at.js e mbox.js, somente x, domínio cruzado, safari, aplicativo de página única, seletores ausentes, seletores, aplicativo de página única, tt.omtrdc.net, spa, Adobe Experience Manager, AEM, endereço ip, httponly, HttpOnly, seguro, ip, cookie domínio
-description: Leia respostas das perguntas frequentes sobre a biblioteca de JavaScript at.js do  [!DNL Adobe Target] .
+description: Leia respostas das perguntas frequentes sobre a biblioteca de JavaScript at.js do [!DNL Adobe Target].
 title: Quais são as perguntas e respostas comuns sobre a at.js?
 feature: at.js
 exl-id: 362ccc5b-8731-46c0-bc52-3e55c273e216
 TQID: https://experienceleague.adobe.com/wOC67fpxKtZKP3-o-T86oA-HqySuPGebT9W5LUHuxSA
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
+    internal-label: Security
   - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+    internal-label: Privacy
 source-git-commit: 235baadf4059d2c363368408012630d6619aef99
 workflow-type: tm+mt
-source-wordcount: 2994
+source-wordcount: '2995'
 ht-degree: 64%
-
 ---
-
 # Perguntas frequentes sobre at.js
 
 Respostas às perguntas frequentes sobre a biblioteca de JavaScript at.js do [!DNL Adobe Target].

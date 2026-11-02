@@ -1,28 +1,32 @@
 ---
 keywords: at.js, funções, biblioteca javascript
-description: Veja uma lista de funções que podem ser usadas com as versões 1.x e 2.x da biblioteca at.js de JavaScript no [!DNL Adobe Target].
+description: Veja uma lista de funções que podem ser usadas com as versões 1.x e 2.x da biblioteca at.js de JavaScript em [!DNL Adobe Target].
 title: Quais funções posso usar com a at.js?
 feature: at.js
 exl-id: 1efed365-8a74-4c85-bdb1-8daaaf53d642
 TQID: https://experienceleague.adobe.com/7uABK1rDaMpA7a0skEo3g1KxTnoc-gif-uHMkMnE8QE
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 557
+source-wordcount: '557'
 ht-degree: 38%
-
 ---
-
 # Funções da at.js
 
 Lista de funções que podem ser usadas com a biblioteca at.js de JavaScript do [!DNL Adobe Target]. Clique nos links na coluna Função para obter mais informações e exemplos.

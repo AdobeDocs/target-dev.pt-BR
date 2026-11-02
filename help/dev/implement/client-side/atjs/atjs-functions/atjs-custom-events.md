@@ -1,28 +1,32 @@
 ---
 keywords: eventos personalizados, at.js, falha de solicitação, solicitação com êxito, falha na renderização de conteúdo, renderização de conteúdo com êxito, biblioteca carregada, início da solicitação, início da renderização de conteúdo, renderização de conteúdo não há ofertas, redirecionamento de renderização de conteúdo, eventos personalizados2
-description: Use eventos personalizados para que a biblioteca de JavaScript da at.js [!DNL Adobe Target] seja notificada quando uma solicitação de mbox ou oferta falhar ou for bem-sucedida.
+description: Use eventos personalizados para que a biblioteca de JavaScript at.js do [!DNL Adobe Target] seja notificada quando uma solicitação ou oferta de mbox falhar ou for bem-sucedida.
 title: Como usar os eventos personalizados da at.js?
 feature: at.js
 exl-id: a4baed9a-9eb8-4343-9834-709b03e44ca2
 TQID: https://experienceleague.adobe.com/gCjLJ-XBlMe-GE-gaTJ2wHkn1jmal6Ftbs1GDb0zURA
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c2be0313-b3ae-45e0-b454-d20bf54b23f2
+    internal-label: Measurement
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 661
+source-wordcount: '662'
 ht-degree: 70%
-
 ---
-
 # Eventos personalizados da at.js
 
 Informações sobre `at.js custom events`, que informam quando uma solicitação ou oferta de mbox falha ou é bem-sucedida.

@@ -1,28 +1,31 @@
 ---
 keywords: aplicativo móvel,sdk aep,aplicativo nativo,exibições da web,nativo;swift,sdk móvel da adobe experience platform,sdk móvel,código nativo
 description: Saiba como implementar o [!DNL Adobe Target] com o [!DNL AEP Mobile SDK] em um aplicativo nativo com exibições da Web.
-title: Implementar [!DNL Adobe Target] em um aplicativo móvel que usa código nativo com exibições da Web
+title: Implementar o [!DNL Adobe Target] em um aplicativo móvel que use código nativo com visualizações da Web
 feature: Implement Mobile
 role: Developer
 exl-id: 3dd2e1d7-c744-4ba8-aaa4-6c2fe64d01fa
 TQID: https://experienceleague.adobe.com/JrbjPpq3ds0sl4rkMnuzF9SYk2PI4r676hHqN-Pvn78
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: d051910f-2bda-47ea-a969-6ade9fcd71f1
+    internal-label: Implement mobile
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 624
+source-wordcount: '627'
 ht-degree: 0%
-
 ---
-
 # Implementar o [!DNL Target] com o [!DNL AEP Mobile SDK] em um aplicativo nativo com exibições da Web
 
 Este artigo compartilha as práticas recomendadas para implementação do [!DNL Adobe Target] em um aplicativo móvel que usa código nativo com exibições da Web usando o [!DNL Adobe Experience Platform Mobile SDK].

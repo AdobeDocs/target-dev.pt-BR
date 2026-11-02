@@ -1,29 +1,34 @@
 ---
 keywords: mbox global, target classic, usar mbox global do target classic
-description: Saiba como usar uma mbox global herdada para suas atividades do  [!DNL Adobe Target]  se você já criou uma mbox global em suas páginas para as implementações herdadas.
+description: Saiba como usar uma mbox global herdada para suas atividades do [!DNL Adobe Target], se você já tiver criado uma mbox global em suas páginas para as implementações herdadas.
 title: Posso usar uma mbox global de uma implementação existente?
 feature: at.js
 exl-id: fe608b5e-ff66-4ba2-a622-d4f7307a9ca9
 TQID: https://experienceleague.adobe.com/BCubNDwB8gxZ9bpuCNhxcnFnjB1xQK8ZRkLveinPj4w
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+    internal-label: Administration
 source-git-commit: 07d73101a14b986fa9b016350c1ddeac0df4fdc2
 workflow-type: tm+mt
-source-wordcount: 304
+source-wordcount: '305'
 ht-degree: 19%
-
 ---
-
 # Usar uma mbox global por meio de uma implementação herdada
 
 Por padrão, [!DNL Target] cria uma mbox global chamada target-global-mbox, que é usada para executar atividades criadas em [!DNL Target]. No entanto, se já tiver criado uma mbox global em suas páginas para as implementações herdadas, você poderá usar essa mbox para suas atividades do [!DNL Target].

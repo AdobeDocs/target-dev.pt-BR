@@ -1,27 +1,30 @@
 ---
 keywords: adobe.target.triggerView, triggerView, triggerview, acionar exibição, at.js, funções, função, viewName, viewname, nome da exibição, adobe.target.triggerView1
-description: Use a função adobe.target.triggerView() da biblioteca de JavaScript do  [!DNL Adobe Target] at.js para usar em Aplicativos de página única (SPAs). (at.js 2.x)
+description: Use a função adobe.target.triggerView() da biblioteca at.js de JavaScript do [!DNL Adobe Target] para usar em Aplicativos de página única (SPAs). (at.js 2.x)
 title: Como usar a função adobe.target.triggerView()?
 feature: at.js
 exl-id: d6130c56-4e77-4668-ad21-a5b335f8b234
 TQID: https://experienceleague.adobe.com/pBC1GRKG0mxeaZ1hfaByKv2tu-XScrSJfm7lUw-3yKw
 product_v2:
   - id: e43347a8-f2c5-4aa4-8623-6f13875d7e3a
+    internal-label: Target
 feature_v2:
   - id: c93393a4-e558-47e1-992e-c91ed4d480ce
+    internal-label: Implementation
 subfeature_v2:
   - id: fd0ff162-b6d3-4a11-8aeb-e165a01c0f0a
+    internal-label: at.js
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
 source-git-commit: a1af9d2c909d9b3d506dd4875d1bd75149dbf636
 workflow-type: tm+mt
-source-wordcount: 446
+source-wordcount: '447'
 ht-degree: 19%
-
 ---
-
 # adobe.target.triggerView (viewName, options) - at.js 2.x
 
 Essa função pode ser chamada sempre que uma nova página é carregada ou quando um componente em uma página é renderizado novamente. `adobe.target.triggerView()` deve ser implementado para aplicativos de página única (SPAs) para usar o [!UICONTROL Visual Experience Composer] (VEC) para criar atividades de [!UICONTROL Teste A/B] e [!UICONTROL Direcionamento de experiência] (XT). Se `[!UICONTROL adobe.target.triggerView()]` não estiver implementado no site, o VEC não poderá ser usado para SPAs. Para obter mais informações, consulte [Implementação do aplicativo de página única](/help/dev/implement/client-side/atjs/how-to-deployatjs/target-atjs-single-page-application.md).
