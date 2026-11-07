@@ -800,6 +800,6 @@ A versão é enviada como um parâmetro de sequência de consulta por meio do pa
 
 A at.js 2.*x* aprimora o suporte do Adobe [!DNL Target] para SPAs e integra-se com outras soluções da Experience Cloud. Este vídeo explica como tudo se une.
 
->[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3507929/?captions=por_br&quality=12)
 
 Consulte [Noções básicas sobre o funcionamento do at.js 2.*x*](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=pt-BR) para obter mais informações.
