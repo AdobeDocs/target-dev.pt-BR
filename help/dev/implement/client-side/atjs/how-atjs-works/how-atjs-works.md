@@ -94,7 +94,7 @@ Agora, onde quer que `triggerView()` seja implementada em seu SPA, as [!UICONTRO
 
 A at.js 2.x aprimora o suporte do Adobe Target para SPAs e integra-se com outras soluções da Experience Cloud. Este vídeo explica como tudo se une.
 
->[!VIDEO](https://video.tv.adobe.com/v/26250/?quality=12)
+>[!VIDEO](https://video.tv.adobe.com/v/3507929/?captions=por_br&quality=12)
 
 Consulte [Noções básicas sobre o funcionamento da at.js 2.x](https://experienceleague.adobe.com/docs/target-learn/tutorials/implementation/understanding-how-atjs-20-works.html?lang=pt-BR) para obter mais informações.
 
