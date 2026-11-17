@@ -25,9 +25,9 @@ topic_v2:
     internal-label: Security
   - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
     internal-label: Administration
-source-git-commit: 3a1674348a1cb39351051addf8e063efbf0dc9e9
+source-git-commit: 78a2ba4a9668cee9813788f03c81eb68f3a6af07
 workflow-type: tm+mt
-source-wordcount: '1336'
+source-wordcount: '1316'
 ht-degree: 6%
 ---
 # [!DNL Adobe Target Bulk Profile Update API]
@@ -97,7 +97,7 @@ Você faz referência a este arquivo na chamada POST para [!DNL Target] servidor
 >
 >Todos os nomes e valores de parâmetros devem ser codificados por URL (UTF-8) antes de você enviar o lote, enviado com `Content-Type: application/x-www-form-urlencoded`, com o corpo começando com `batch=`. Os caracteres reservados não codificados são lidos como sintaxe de solicitação em vez de dados, o que pode fazer com que o lote seja rejeitado, truncado ou corrompido.
 >
->Se você receber uma resposta de &quot;Erro inesperado&quot; sem nenhum `batchId` emitido, consulte [A API de Atualização de Perfil em Massa retorna &quot;Erro inesperado&quot;](https://experienceleague.adobe.com/pt-br/docs/experience-cloud-kcs/kbarticles/ka-24281) para obter etapas de solução de problemas.
+>Se você receber uma resposta de &quot;Erro inesperado&quot; sem nenhum `batchId` emitido, consulte [A API de Atualização de Perfil em Massa retorna &quot;Erro inesperado&quot;](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-24281) para obter etapas de solução de problemas.
 
 Os caracteres a seguir geralmente estão presentes em valores de perfil, mas têm significado especial nos dados de `application/x-www-form-urlencoded`. Se você os enviar sem codificação, a solicitação falhará ou os dados serão corrompidos sem um erro óbvio:
 
@@ -203,5 +203,3 @@ Enviar valores vazios (&quot;&quot;, campos nulos ou ausentes) para parâmetros 
 Esse comportamento se aplica às versões v1 e v2 de [!DNL Bulk Profile Update API].
 
 Tentar limpar ou remover um atributo enviando um valor vazio não tem efeito.
-
-A compatibilidade com a remoção explícita de atributo está planejada para uma versão futura (v3) da API, mas não está disponível no momento.
